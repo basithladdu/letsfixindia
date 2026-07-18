@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>India Dossier | 2014-2026 Public Record</title>
+    <title>LetsFixIndia | 2014-2026 Public Record</title>
     <meta name="description" content="A mobile-first, source-led timeline of major Indian public record events from 2014 to 2026.">
     <meta name="theme-color" content="#fbfaf5">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="India Dossier | 2014-2026 Public Record">
+    <meta property="og:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta property="og:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
-    <meta property="og:url" content="https://india-dossier.pages.dev/">
+    <meta property="og:url" content="https://letsfixindia.com/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="India Dossier | 2014-2026 Public Record">
+    <meta name="twitter:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta name="twitter:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
     <link rel="icon" type="image/svg+xml" href="assets/india-flag-icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <header class="topbar">
       <a class="brand" href="/" data-link aria-label="India 2014 to 2026 public record home">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name"><span class="brand-full">India Dossier</span><span class="brand-short">Dossier</span></span>
+        <span class="brand-name"><span class="brand-full">LetsFixIndia</span><span class="brand-short">FixIndia</span></span>
       </a>
       <nav class="topnav" aria-label="Main navigation">
         <a href="/" data-link>Timeline</a>
@@ -35,13 +35,44 @@
         <a href="/faq" data-link>FAQ</a>
         <a href="/about" data-link>About</a>
       </nav>
+      <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </header>
+
+    <!-- Mobile Side Drawer -->
+    <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+    <nav id="sideDrawer" class="side-drawer" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="drawer-header">
+        <span class="drawer-title">Menu</span>
+        <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-links">
+        <a href="/" data-link>Timeline</a>
+        <a href="/statistics" data-link>Stats</a>
+        <a href="/voices" data-link>Voices</a>
+        <a href="/submit" data-link>Submit</a>
+        <a href="/sources" data-link>Sources</a>
+        <a href="/methodology" data-link>Method</a>
+        <a href="/faq" data-link>FAQ</a>
+        <a href="/about" data-link>About</a>
+      </div>
+    </nav>
 
     <main id="top">
       <section class="hero route-page" data-page="timeline">
         <div class="hero-copy">
           <p class="eyebrow">India under BJP / Modi administrations</p>
-          <h1>India Dossier 2014-2026</h1>
+          <h1>LetsFixIndia 2014-2026</h1>
           <p class="lede">A critical, sourced record of governance shocks, rights concerns, mass protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry is tagged by evidence status.</p>
           <div class="hero-actions">
             <a href="#filters">Open timeline</a>
@@ -270,7 +301,7 @@
         <div class="section-head">
           <p class="eyebrow">About / Support</p>
           <h2>Who maintains this record</h2>
-          <p>India Dossier is maintained by Basith and built to become a sourced public-record project. The point is not volume by itself; it is traceable claims, corrected weak entries, and a clear line between verified records and live leads.</p>
+          <p>LetsFixIndia is maintained by Basith and built to become a sourced public-record project. The point is not volume by itself; it is traceable claims, corrected weak entries, and a clear line between verified records and live leads.</p>
         </div>
         <div class="support-grid">
           <article>
@@ -345,7 +376,7 @@
         </div>
         <div class="faq-list">
           <details class="faq-item">
-            <summary>What is India Dossier?</summary>
+            <summary>What is LetsFixIndia?</summary>
             <p>A sourced public-record timeline of major governance, rights, press-freedom, and institutional events in India from 2014 to 2026, during the BJP/Modi administrations. Every entry carries a named source and a visible evidence status.</p>
           </details>
           <details class="faq-item">
@@ -358,7 +389,7 @@
           </details>
           <details class="faq-item">
             <summary>Why does the timeline start at 2014?</summary>
-            <p>The record covers the Modi prime-ministerial period, which began on 26 May 2014. Earlier context — including the 2002 Gujarat violence — is archived in the data files but kept off the main timeline so the scope stays clean.</p>
+            <p>Because even a project has to start somewhere, and 26 May 2014 is when the current management took over. The decades before it — 2002 included — are not being spared; they are simply waiting their turn. Pre-2014 records are already archived in the data files and will be added as a proper section. Patience: the file is growing.</p>
           </details>
           <details class="faq-item">
             <summary>Why are some entries sourced to Wikipedia?</summary>
@@ -393,11 +424,11 @@
     </div>
 
     <footer class="footer">
-      <span>India Dossier</span>
+      <span>LetsFixIndia</span>
       <span id="footerDate">Updated 18 July 2026</span>
     </footer>
 
-    <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use India Dossier fully.</p></noscript>
+    <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use LetsFixIndia fully.</p></noscript>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-# India Dossier
+# LetsFixIndia
 
 Mobile-first static website for a sourced timeline of major governance crises, rights concerns, scandals, public protests, sexual-violence cases involving political actors, terror attacks, and exam-integrity failures during the BJP/Modi period.
 

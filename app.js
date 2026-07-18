@@ -36,9 +36,9 @@ const voiceIssueFilter = document.querySelector("#voiceIssueFilter");
 
 const voiceState = { field: "all", stance: "all", issue: "all" };
 
-const TIMELINE_LAST_SCROLL_KEY = "indiaDossier.timeline.lastY";
-const TIMELINE_RETURN_SCROLL_KEY = "indiaDossier.timeline.returnY";
-const TIMELINE_JUMP_ORIGIN_KEY = "indiaDossier.timeline.jumpOrigin";
+const TIMELINE_LAST_SCROLL_KEY = "letsFixIndia.timeline.lastY";
+const TIMELINE_RETURN_SCROLL_KEY = "letsFixIndia.timeline.returnY";
+const TIMELINE_JUMP_ORIGIN_KEY = "letsFixIndia.timeline.jumpOrigin";
 let scrollSaveQueued = false;
 let filtersWideState = null;
 
@@ -556,6 +556,7 @@ function renderVoices() {
     return;
   }
 
+  let voiceIndex = 0;
   voicesGrid.innerHTML = filtered.map((voice) => {
     const stancesHtml = voice.stances.map((s) => {
       const srcHtml = s.sources.length ? `<span class="voice-src">${sourceLinks(s.sources)}</span>` : "";
@@ -582,27 +583,39 @@ function renderVoices() {
     const spokeCount = voice.stances.filter((s) => s.position === "spoke-out").length;
     const silentCnt = voice.stances.filter((s) => s.position === "silent").length;
     const govtCnt = voice.stances.filter((s) => s.position === "supported-govt").length;
+    const otherCnt = voice.stances.length - spokeCount - silentCnt - govtCnt;
+    const total = voice.stances.length || 1;
 
     let dominantClass = "voice-neutral";
     if (spokeCount > 0 && spokeCount >= govtCnt) dominantClass = "voice-spoke";
     else if (govtCnt > 0) dominantClass = "voice-govt";
     else if (silentCnt === voice.stances.length) dominantClass = "voice-silent";
 
+    const initials = voice.name.split(" ").map((part) => part.charAt(0)).slice(0, 2).join("");
+    const ratioSeg = (count, cls, label) => count
+      ? `<span class="ratio-seg ${cls}" style="flex-grow:${count}" title="${label}: ${count} of ${total}"></span>`
+      : "";
+    const tallyLine = [
+      spokeCount ? `<span class="tally-label spoke-out">${spokeCount} spoke out</span>` : "",
+      govtCnt ? `<span class="tally-label supported-govt">${govtCnt} backed govt</span>` : "",
+      silentCnt ? `<span class="tally-label silent">${silentCnt} silent</span>` : "",
+      otherCnt ? `<span class="tally-label ambiguous">${otherCnt} ambiguous</span>` : ""
+    ].filter(Boolean).join("");
+
     return `
-      <article class="voice-card ${dominantClass}">
+      <article class="voice-card ${dominantClass}" style="--i:${voiceIndex++ % 9}">
         <div class="voice-header">
-          <div class="voice-avatar">${esc(voice.name.charAt(0))}</div>
-          <div>
+          <div class="voice-avatar">${esc(initials)}</div>
+          <div class="voice-id">
             <h3 class="voice-name">${esc(voice.name)}</h3>
             <div class="voice-fields">${fieldChips}</div>
           </div>
         </div>
         <p class="voice-desc">${esc(voice.description)}</p>
-        <div class="voice-tally">
-          <span class="tally spoke-out" title="Spoke out">${spokeCount}</span>
-          <span class="tally supported-govt" title="Supported govt">${govtCnt}</span>
-          <span class="tally silent" title="Silent">${silentCnt}</span>
+        <div class="voice-ratio" role="img" aria-label="Stance breakdown across ${total} tracked issues">
+          ${ratioSeg(spokeCount, "spoke-out", "Spoke out")}${ratioSeg(govtCnt, "supported-govt", "Supported govt")}${ratioSeg(otherCnt, "ambiguous", "Ambiguous")}${ratioSeg(silentCnt, "silent", "Silent")}
         </div>
+        <div class="voice-tally">${tallyLine}</div>
         <div class="voice-stances">
           ${stancesHtml}
         </div>
@@ -744,6 +757,44 @@ function bindEvents() {
     drafts.splice(index, 1);
     saveDrafts(drafts);
     renderSubmissions();
+  });
+
+  // Mobile Side Drawer Logic
+  const hamburgerBtn = document.querySelector("#hamburgerBtn");
+  const drawerCloseBtn = document.querySelector("#drawerCloseBtn");
+  const sideDrawer = document.querySelector("#sideDrawer");
+  const drawerOverlay = document.querySelector("#drawerOverlay");
+
+  function openDrawer() {
+    if (sideDrawer && drawerOverlay) {
+      sideDrawer.classList.add("is-open");
+      drawerOverlay.classList.add("is-visible");
+      hamburgerBtn?.setAttribute("aria-expanded", "true");
+      sideDrawer.setAttribute("aria-hidden", "false");
+      drawerOverlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeDrawer() {
+    if (sideDrawer && drawerOverlay) {
+      sideDrawer.classList.remove("is-open");
+      drawerOverlay.classList.remove("is-visible");
+      hamburgerBtn?.setAttribute("aria-expanded", "false");
+      sideDrawer.setAttribute("aria-hidden", "true");
+      drawerOverlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+  }
+
+  hamburgerBtn?.addEventListener("click", openDrawer);
+  drawerCloseBtn?.addEventListener("click", closeDrawer);
+  drawerOverlay?.addEventListener("click", closeDrawer);
+
+  sideDrawer?.addEventListener("click", (e) => {
+    if (e.target.closest("a[data-link]")) {
+      closeDrawer();
+    }
   });
 }
 
