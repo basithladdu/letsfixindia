@@ -1,6 +1,7 @@
 let events = [];
 let sources = {};
 let indicators = [];
+let voices = [];
 
 const state = {
   query: "",
@@ -27,6 +28,13 @@ const recordView = document.querySelector("#recordView");
 const routePages = Array.from(document.querySelectorAll("[data-page]"));
 const advancedFilters = document.querySelector("#advancedFilters");
 const scrollDock = document.querySelector("#scrollDock");
+const voicesGrid = document.querySelector("#voicesGrid");
+const voicesSummary = document.querySelector("#voicesSummary");
+const voiceFieldFilter = document.querySelector("#voiceFieldFilter");
+const voiceStanceFilter = document.querySelector("#voiceStanceFilter");
+const voiceIssueFilter = document.querySelector("#voiceIssueFilter");
+
+const voiceState = { field: "all", stance: "all", issue: "all" };
 
 const TIMELINE_LAST_SCROLL_KEY = "indiaDossier.timeline.lastY";
 const TIMELINE_RETURN_SCROLL_KEY = "indiaDossier.timeline.returnY";
@@ -205,8 +213,8 @@ function renderTimeline() {
         <b>${yearEvents.length} records</b>
       </div>
       <div class="year-records">
-        ${yearEvents.map((event) => `
-          <article class="event-card ${String(event.severity || "").toLowerCase()}">
+        ${yearEvents.map((event, index) => `
+          <article class="event-card ${String(event.severity || "").toLowerCase()}" style="--i:${index}">
             <div class="event-body">
               <div class="event-meta">
                 <span>${event.date}</span>
@@ -256,10 +264,10 @@ function renderIndicators() {
         </div>
         <p>${indicator.detail}</p>
         <div class="bars" aria-label="${indicator.title} bar chart">
-          ${indicator.chart.map((item) => `
+          ${indicator.chart.map((item, index) => `
             <div class="bar-row">
               <span>${item.label}</span>
-              <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, (item.value / max) * 100)}%"></div></div>
+              <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, (item.value / max) * 100)}%;--i:${index}"></div></div>
               <b>${item.value.toLocaleString("en-IN")}</b>
             </div>
           `).join("")}
@@ -328,6 +336,7 @@ function routeFromPath(pathname) {
   }
   if (path === "/timeline") return { page: "timeline" };
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
+  if (path === "/voices") return { page: "voices" };
   if (path === "/submit") return { page: "submit" };
   if (path === "/sources") return { page: "sources" };
   if (path === "/methodology") return { page: "methodology" };
@@ -358,6 +367,9 @@ function renderRoute(options = {}) {
   setActiveNav(route.page);
   if (route.page === "record") {
     renderRecord(route.id);
+  }
+  if (route.page === "voices") {
+    renderVoices();
   }
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
   requestAnimationFrame(() => {
@@ -475,6 +487,129 @@ function renderSubmissions() {
   `;
 }
 
+function stanceLabel(position) {
+  switch (position) {
+    case "spoke-out": return "Spoke out";
+    case "supported-govt": return "Supported govt";
+    case "silent": return "Silent";
+    case "ambiguous": return "Ambiguous";
+    default: return position;
+  }
+}
+
+function stanceIcon(position) {
+  switch (position) {
+    case "spoke-out": return "\u25CF";
+    case "supported-govt": return "\u25CF";
+    case "silent": return "\u25CB";
+    case "ambiguous": return "\u25D1";
+    default: return "";
+  }
+}
+
+function populateVoiceIssues() {
+  if (!voiceIssueFilter) return;
+  const issues = new Set();
+  voices.forEach((v) => v.stances.forEach((s) => issues.add(s.issue)));
+  const sorted = Array.from(issues).sort();
+  voiceIssueFilter.innerHTML = `<option value="all">All issues</option>` +
+    sorted.map((i) => `<option value="${esc(i)}">${esc(i)}</option>`).join("");
+}
+
+function voiceMatchesFilters(voice) {
+  const { field, stance, issue } = voiceState;
+  if (field !== "all" && !voice.field.includes(field)) return false;
+  if (stance !== "all" || issue !== "all") {
+    const matchingStances = voice.stances.filter((s) => {
+      const stanceMatch = stance === "all" || s.position === stance;
+      const issueMatch = issue === "all" || s.issue === issue;
+      return stanceMatch && issueMatch;
+    });
+    if (matchingStances.length === 0) return false;
+  }
+  return true;
+}
+
+function renderVoices() {
+  if (!voicesGrid || !voices.length) return;
+
+  const filtered = voices.filter(voiceMatchesFilters);
+
+  // Summary stats
+  const totalPeople = voices.length;
+  const spokeOutCount = voices.filter((v) => v.stances.some((s) => s.position === "spoke-out")).length;
+  const silentCount = voices.filter((v) => v.stances.every((s) => s.position === "silent")).length;
+  const proGovtCount = voices.filter((v) => v.stances.some((s) => s.position === "supported-govt") && !v.stances.some((s) => s.position === "spoke-out")).length;
+
+  if (voicesSummary) {
+    voicesSummary.innerHTML = `
+      <div class="voice-stat"><strong>${totalPeople}</strong><span>figures tracked</span></div>
+      <div class="voice-stat spoke-out"><strong>${spokeOutCount}</strong><span>spoke out on \u2265 1 issue</span></div>
+      <div class="voice-stat silent"><strong>${silentCount}</strong><span>silent on all tracked issues</span></div>
+      <div class="voice-stat supported-govt"><strong>${proGovtCount}</strong><span>supported govt (never spoke out)</span></div>
+    `;
+  }
+
+  if (!filtered.length) {
+    voicesGrid.innerHTML = `<div class="empty-state">No figures match the current filters.</div>`;
+    return;
+  }
+
+  voicesGrid.innerHTML = filtered.map((voice) => {
+    const stancesHtml = voice.stances.map((s) => {
+      const srcHtml = s.sources.length ? `<span class="voice-src">${sourceLinks(s.sources)}</span>` : "";
+      const quoteHtml = s.quote ? `<blockquote class="voice-quote">${esc(s.quote)}</blockquote>` : "";
+      return `
+        <details class="stance-detail">
+          <summary>
+            <span class="stance-pill ${s.position}">${stanceIcon(s.position)} ${stanceLabel(s.position)}</span>
+            <span class="stance-issue">${esc(s.issue)}</span>
+          </summary>
+          <div class="stance-body">
+            <p>${esc(s.summary)}</p>
+            ${quoteHtml}
+            ${s.date ? `<span class="stance-date">${esc(s.date)}</span>` : ""}
+            ${srcHtml}
+          </div>
+        </details>
+      `;
+    }).join("");
+
+    const fieldParts = voice.field.split(" / ");
+    const fieldChips = fieldParts.map((f) => `<span class="voice-field-chip">${esc(f.trim())}</span>`).join("");
+
+    const spokeCount = voice.stances.filter((s) => s.position === "spoke-out").length;
+    const silentCnt = voice.stances.filter((s) => s.position === "silent").length;
+    const govtCnt = voice.stances.filter((s) => s.position === "supported-govt").length;
+
+    let dominantClass = "voice-neutral";
+    if (spokeCount > 0 && spokeCount >= govtCnt) dominantClass = "voice-spoke";
+    else if (govtCnt > 0) dominantClass = "voice-govt";
+    else if (silentCnt === voice.stances.length) dominantClass = "voice-silent";
+
+    return `
+      <article class="voice-card ${dominantClass}">
+        <div class="voice-header">
+          <div class="voice-avatar">${esc(voice.name.charAt(0))}</div>
+          <div>
+            <h3 class="voice-name">${esc(voice.name)}</h3>
+            <div class="voice-fields">${fieldChips}</div>
+          </div>
+        </div>
+        <p class="voice-desc">${esc(voice.description)}</p>
+        <div class="voice-tally">
+          <span class="tally spoke-out" title="Spoke out">${spokeCount}</span>
+          <span class="tally supported-govt" title="Supported govt">${govtCnt}</span>
+          <span class="tally silent" title="Silent">${silentCnt}</span>
+        </div>
+        <div class="voice-stances">
+          ${stancesHtml}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
 function bindEvents() {
   syncFilterDisclosure();
 
@@ -585,6 +720,21 @@ function bindEvents() {
     renderSubmissions();
   });
 
+  voiceFieldFilter?.addEventListener("change", (event) => {
+    voiceState.field = event.target.value;
+    renderVoices();
+  });
+
+  voiceStanceFilter?.addEventListener("change", (event) => {
+    voiceState.stance = event.target.value;
+    renderVoices();
+  });
+
+  voiceIssueFilter?.addEventListener("change", (event) => {
+    voiceState.issue = event.target.value;
+    renderVoices();
+  });
+
   submissionQueue.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-remove-draft]");
     if (!button) return;
@@ -606,18 +756,23 @@ async function loadJson(path) {
 
 async function init() {
   try {
-    [sources, indicators, events] = await Promise.all([
+    let voicesData;
+    [sources, indicators, events, voicesData] = await Promise.all([
       loadJson("data/sources.json"),
       loadJson("data/indicators.json"),
-      loadJson("data/events.json")
+      loadJson("data/events.json"),
+      loadJson("data/voices.json").catch(() => [])
     ]);
+    voices = voicesData || [];
     renderOptions();
     renderIndicators();
     renderSources();
     renderHomeRecent();
+    populateVoiceIssues();
     calculateTenure();
     bindEvents();
     renderTimeline();
+    renderVoices();
     renderSubmissions();
     if (!history.state) {
       history.replaceState({ restoreTimeline: false }, "", window.location.pathname);

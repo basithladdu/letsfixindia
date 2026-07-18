@@ -1,0 +1,1210 @@
+[
+  {
+    "id": "shah-rukh-khan",
+    "name": "Shah Rukh Khan",
+    "field": "Bollywood",
+    "description": "Actor, producer — among India's most recognised global figures",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Said there was 'extreme intolerance' in India and 'religious extremism and negativity' were making people 'scared'; faced massive backlash and boycott calls.",
+        "quote": "Religious extremism and intolerance is being taken to a new level... I sometimes feel scared.",
+        "date": "2015-11",
+        "sources": ["src-v-srk-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found during the nationwide CAA-NRC protests.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found during the year-long farmers' agitation.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found on the ethnic violence in Manipur.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "virat-kohli",
+    "name": "Virat Kohli",
+    "field": "Cricket",
+    "description": "Former India cricket captain — one of the most followed Indians globally",
+    "stances": [
+      {
+        "issue": "Pulwama / Balakot (2019)",
+        "position": "supported-govt",
+        "summary": "Expressed support for the Indian armed forces after the Pulwama attack and Balakot airstrike.",
+        "quote": null,
+        "date": "2019-02",
+        "sources": ["src-v-kohli-pulwama"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found during the CAA-NRC protests.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found during the farmers' agitation.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found on ethnic violence in Manipur.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "silent",
+        "summary": "No public statement found when Olympic-medal-winning wrestlers protested against BJP MP Brij Bhushan Singh.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "sachin-tendulkar",
+    "name": "Sachin Tendulkar",
+    "field": "Cricket",
+    "description": "Former cricketer, Rajya Sabha MP (nominated), Bharat Ratna recipient",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "supported-govt",
+        "summary": "Tweeted 'India's sovereignty cannot be compromised... Let's remain united as a nation' after Rihanna's tweet, using the #IndiaTogether and #IndiaAgainstPropaganda hashtags aligned with the government's messaging.",
+        "quote": "India's sovereignty cannot be compromised. External forces can be spectators but not participants... Let's remain united as a nation. #IndiaTogether #IndiaAgainstPropaganda",
+        "date": "2021-02-03",
+        "sources": ["src-v-sachin-farmers"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "aamir-khan",
+    "name": "Aamir Khan",
+    "field": "Bollywood",
+    "description": "Actor, filmmaker — known for socially conscious cinema and Satyamev Jayate",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Said his wife Kiran Rao had suggested leaving India due to growing intolerance. Faced severe backlash, boycott campaigns, and lost brand endorsements.",
+        "quote": "Kiran and I have lived all our lives in India. For the first time, she said, should we move out of India?",
+        "date": "2015-11",
+        "sources": ["src-v-aamir-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found during CAA protests despite earlier intolerance remarks.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "amitabh-bachchan",
+    "name": "Amitabh Bachchan",
+    "field": "Bollywood",
+    "description": "Actor — among the most influential figures in Indian cinema history",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "silent",
+        "summary": "Did not make any public statement during the intolerance debate despite being asked repeatedly.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "akshay-kumar",
+    "name": "Akshay Kumar",
+    "field": "Bollywood",
+    "description": "Actor — conducted a non-political interview with PM Modi before 2019 elections",
+    "stances": [
+      {
+        "issue": "Modi interview (2019)",
+        "position": "supported-govt",
+        "summary": "Conducted a widely criticised 'non-political' interview with PM Modi before the 2019 general elections, asking about mangoes and childhood rather than policy.",
+        "quote": null,
+        "date": "2019-04",
+        "sources": ["src-v-akshay-modi-interview"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Tweeted in support of CAA: 'Proud of the government for not letting go of the persecuted minorities from our neighbouring countries.'",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-akshay-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found during the farmers' agitation.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "kangana-ranaut",
+    "name": "Kangana Ranaut",
+    "field": "Bollywood / Politics",
+    "description": "Actor turned BJP MP — elected to Lok Sabha from Mandi, Himachal Pradesh in 2024",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "supported-govt",
+        "summary": "Called protesting farmers 'terrorists' and Khalistanis on social media. Had her Twitter account permanently suspended for repeated violations.",
+        "quote": null,
+        "date": "2021-02",
+        "sources": ["src-v-kangana-farmers"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Publicly supported CAA and criticised protesters, called Shaheen Bagh protesters 'anti-national'.",
+        "quote": null,
+        "date": "2020-01",
+        "sources": ["src-v-kangana-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement condemning the ethnic violence despite being a BJP-aligned public figure. Later faced controversy for a slap on her security detail.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "supported-govt",
+        "summary": "Criticised the protesting wrestlers and questioned their motives.",
+        "quote": null,
+        "date": "2023-05",
+        "sources": ["src-v-kangana-wrestlers"]
+      }
+    ]
+  },
+  {
+    "id": "deepika-padukone",
+    "name": "Deepika Padukone",
+    "field": "Bollywood",
+    "description": "Actor — one of the highest-paid actors in Indian cinema",
+    "stances": [
+      {
+        "issue": "CAA-NRC / JNU attack (2020)",
+        "position": "spoke-out",
+        "summary": "Visited JNU on 7 January 2020 to stand in solidarity with students attacked by masked assailants. Did not make a speech but her presence was widely seen as a statement. Faced massive boycott campaigns against her film Chhapaak.",
+        "quote": null,
+        "date": "2020-01-07",
+        "sources": ["src-v-deepika-jnu"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "priyanka-chopra",
+    "name": "Priyanka Chopra Jonas",
+    "field": "Bollywood / International",
+    "description": "Actor, UN Goodwill Ambassador — one of India's most globally recognised figures",
+    "stances": [
+      {
+        "issue": "Balakot airstrike (2019)",
+        "position": "supported-govt",
+        "summary": "Tweeted 'Jai Hind #IndianArmedForces' after the Balakot airstrike. Later confronted at a public event by a Pakistani woman who called her a 'hypocrite' for supporting military action while being a UNICEF peace ambassador.",
+        "quote": "Jai Hind #IndianArmedForces",
+        "date": "2019-02",
+        "sources": ["src-v-priyanka-balakot"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "ambiguous",
+        "summary": "Liked an Instagram post supporting CAA protests but did not make a direct statement.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "salman-khan",
+    "name": "Salman Khan",
+    "field": "Bollywood",
+    "description": "Actor — one of the highest-grossing Hindi film stars",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "silent",
+        "summary": "Did not participate in the intolerance debate.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "ajay-devgn",
+    "name": "Ajay Devgn",
+    "field": "Bollywood",
+    "description": "Actor, filmmaker",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "supported-govt",
+        "summary": "Tweeted 'Don't fall for any false propaganda against India or Indian policies' with #IndiaTogether and #IndiaAgainstPropaganda after Rihanna's tweet, echoing government messaging.",
+        "quote": "Don't fall for any satisfying propaganda against India or Indian policies. #IndiaTogether #IndiaAgainstPropaganda",
+        "date": "2021-02-03",
+        "sources": ["src-v-ajay-farmers"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "anupam-kher",
+    "name": "Anupam Kher",
+    "field": "Bollywood",
+    "description": "Actor — outspoken supporter of BJP and PM Modi",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "supported-govt",
+        "summary": "Led a counter-march titled 'March for India' against the intolerance narrative. Called returning-award writers 'anti-national'.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-anupam-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Actively campaigned in support of CAA, visited protest sites to counter anti-CAA protesters.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-anupam-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "supported-govt",
+        "summary": "Criticised the farmers' protests and questioned the protesters' motives.",
+        "quote": null,
+        "date": "2021-01",
+        "sources": ["src-v-anupam-farmers"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found condemning the ethnic violence in Manipur.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "swara-bhasker",
+    "name": "Swara Bhasker",
+    "field": "Bollywood",
+    "description": "Actor — one of the most consistently vocal critics of BJP policies",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Participated in multiple anti-CAA protests including at Shaheen Bagh. Faced sustained online abuse and boycott campaigns.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-swara-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Openly supported the farmers' protests, visited protest sites at Delhi borders.",
+        "quote": null,
+        "date": "2020-12",
+        "sources": ["src-v-swara-farmers"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the ethnic violence and criticised PM Modi's initial silence on the viral sexual assault video.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-swara-manipur"]
+      },
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "spoke-out",
+        "summary": "Spoke out in support of protesting wrestlers against BJP MP Brij Bhushan Sharan Singh.",
+        "quote": null,
+        "date": "2023-05",
+        "sources": ["src-v-swara-wrestlers"]
+      },
+      {
+        "issue": "Hathras case (2020)",
+        "position": "spoke-out",
+        "summary": "Condemned the gang rape and the UP government's handling of the case, including the midnight cremation.",
+        "quote": null,
+        "date": "2020-09",
+        "sources": ["src-v-swara-hathras"]
+      }
+    ]
+  },
+  {
+    "id": "naseeruddin-shah",
+    "name": "Naseeruddin Shah",
+    "field": "Bollywood",
+    "description": "Veteran actor — National Award winner and Padma Bhushan recipient",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Spoke about growing atmosphere of intolerance and fear in India.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-naseer-intolerance"]
+      },
+      {
+        "issue": "Mob lynching / Bulandshahr (2018)",
+        "position": "spoke-out",
+        "summary": "Released a video expressing concern about mob violence and the Bulandshahr cow-related violence. Said he feared for his children's safety.",
+        "quote": "In many areas we are witnessing that the weights of a cow is more than that of a police officer's.",
+        "date": "2018-12",
+        "sources": ["src-v-naseer-bulandshahr"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Criticised CAA and spoke against the government's response to student protesters.",
+        "quote": null,
+        "date": "2020-01",
+        "sources": ["src-v-naseer-caa"]
+      }
+    ]
+  },
+  {
+    "id": "javed-akhtar",
+    "name": "Javed Akhtar",
+    "field": "Bollywood",
+    "description": "Poet, lyricist, screenwriter — Padma Shri, Padma Bhushan recipient",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Spoke against rising intolerance and compared RSS to the Taliban.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-javed-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Criticised the Citizenship Amendment Act and supported the student protests.",
+        "quote": null,
+        "date": "2020-01",
+        "sources": ["src-v-javed-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the ethnic violence in Manipur and criticised PM Modi's silence.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-javed-manipur"]
+      }
+    ]
+  },
+  {
+    "id": "anurag-kashyap",
+    "name": "Anurag Kashyap",
+    "field": "Bollywood",
+    "description": "Filmmaker — returned his National Award in protest against intolerance",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Returned his National Award over rising intolerance and the Dadri lynching. One of the most prominent voices in the 'award wapsi' movement.",
+        "quote": null,
+        "date": "2015-10",
+        "sources": ["src-v-anurag-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Actively criticised CAA on social media and called the government authoritarian.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-anurag-caa"]
+      },
+      {
+        "issue": "Kashmir / Article 370 (2019)",
+        "position": "spoke-out",
+        "summary": "Criticised the communication blackout in Kashmir after Article 370 abrogation.",
+        "quote": null,
+        "date": "2019-08",
+        "sources": ["src-v-anurag-kashmir"]
+      }
+    ]
+  },
+  {
+    "id": "farhan-akhtar",
+    "name": "Farhan Akhtar",
+    "field": "Bollywood",
+    "description": "Actor, filmmaker, singer — co-founded MARD foundation against gender violence",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Participated in an anti-CAA rally at Mumbai's August Kranti Maidan. One of the few A-list Bollywood figures to physically attend a protest.",
+        "quote": "Every person, be it a man or woman, has the right to choose who they worship, what they eat and what they wear.",
+        "date": "2019-12-19",
+        "sources": ["src-v-farhan-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the violence and the viral video of two women being paraded naked.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-farhan-manipur"]
+      }
+    ]
+  },
+  {
+    "id": "prakash-raj",
+    "name": "Prakash Raj",
+    "field": "Bollywood / South Cinema",
+    "description": "Actor — contested 2019 Lok Sabha elections as an independent against BJP",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Was among the most vocal critics. Criticised the government persistently on social media.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-prakash-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Participated in anti-CAA protests and criticised the government.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-prakash-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Supported farmers' protests and visited protest sites.",
+        "quote": null,
+        "date": "2021-01",
+        "sources": ["src-v-prakash-farmers"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the violence and called out the PM's silence.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-prakash-manipur"]
+      }
+    ]
+  },
+  {
+    "id": "vishal-dadlani",
+    "name": "Vishal Dadlani",
+    "field": "Music",
+    "description": "Music composer, singer — known for vocal political commentary",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Actively spoke out against CAA on social media and supported the student protests.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-vishal-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Expressed solidarity with protesting farmers on social media.",
+        "quote": null,
+        "date": "2020-12",
+        "sources": ["src-v-vishal-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "taapsee-pannu",
+    "name": "Taapsee Pannu",
+    "field": "Bollywood",
+    "description": "Actor — known for her roles in socially relevant films",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Tweeted support for farmers using the hashtag #FarmersProtest. Faced IT raids on her properties which were widely seen as retaliatory.",
+        "quote": null,
+        "date": "2021-02",
+        "sources": ["src-v-taapsee-farmers"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Expressed concern about CAA on social media.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-taapsee-caa"]
+      }
+    ]
+  },
+  {
+    "id": "dia-mirza",
+    "name": "Dia Mirza",
+    "field": "Bollywood",
+    "description": "Actor, UN Environment Goodwill Ambassador",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Participated in protests against CAA and expressed solidarity with students at Jamia Millia Islamia.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-dia-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Expressed support for farmers' rights.",
+        "quote": null,
+        "date": "2021-01",
+        "sources": ["src-v-dia-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "konkona-sen-sharma",
+    "name": "Konkona Sen Sharma",
+    "field": "Bollywood",
+    "description": "Actor, filmmaker — National Award winner",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Participated in anti-CAA protests in Mumbai and signed an open letter by filmmakers against CAA.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-konkona-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the violence on social media.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-konkona-manipur"]
+      }
+    ]
+  },
+  {
+    "id": "richa-chadha",
+    "name": "Richa Chadha",
+    "field": "Bollywood",
+    "description": "Actor — vocal on social issues",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Spoke out against CAA and participated in protests.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-richa-caa"]
+      },
+      {
+        "issue": "Galwan Valley clash (2022)",
+        "position": "ambiguous",
+        "summary": "Tweeted 'Galwan says hi' which was interpreted as mocking the Indian soldiers killed in the 2020 Galwan clash. Apologised and deleted the tweet.",
+        "quote": null,
+        "date": "2022-11",
+        "sources": ["src-v-richa-galwan"]
+      }
+    ]
+  },
+  {
+    "id": "vivek-agnihotri",
+    "name": "Vivek Agnihotri",
+    "field": "Bollywood",
+    "description": "Filmmaker — directed The Kashmir Files, a government-endorsed film on Kashmiri Pandits",
+    "stances": [
+      {
+        "issue": "Kashmir / Kashmiri Pandits",
+        "position": "supported-govt",
+        "summary": "Directed The Kashmir Files (2022) depicting the exodus of Kashmiri Pandits. The film was actively promoted by PM Modi and BJP leaders, made tax-free in BJP-ruled states.",
+        "quote": null,
+        "date": "2022-03",
+        "sources": ["src-v-vivek-tkf"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Actively supported CAA and criticised anti-CAA protesters.",
+        "quote": null,
+        "date": "2020-01",
+        "sources": ["src-v-vivek-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found condemning the ethnic violence.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "sonam-kapoor",
+    "name": "Sonam Kapoor",
+    "field": "Bollywood",
+    "description": "Actor",
+    "stances": [
+      {
+        "issue": "CAA-NRC / JNU (2020)",
+        "position": "spoke-out",
+        "summary": "Tweeted condemning the attack on JNU students. Called it 'horrifying'.",
+        "quote": null,
+        "date": "2020-01",
+        "sources": ["src-v-sonam-jnu"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "ms-dhoni",
+    "name": "MS Dhoni",
+    "field": "Cricket",
+    "description": "Former India cricket captain — among the most popular Indian sportspeople",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "rohit-sharma",
+    "name": "Rohit Sharma",
+    "field": "Cricket",
+    "description": "Current India cricket captain",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "silent",
+        "summary": "No public statement found when Olympic wrestlers protested against BJP MP.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "mukesh-ambani",
+    "name": "Mukesh Ambani",
+    "field": "Business",
+    "description": "Chairman of Reliance Industries — India's richest person",
+    "stances": [
+      {
+        "issue": "Demonetisation (2016)",
+        "position": "supported-govt",
+        "summary": "Praised demonetisation and said it would bring benefits to the Indian economy. Reliance Jio's digital payments push was seen as benefiting from the cash crunch.",
+        "quote": null,
+        "date": "2016-11",
+        "sources": ["src-v-ambani-demon"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found. Reliance towers were targeted by protesting farmers who saw corporate agriculture as a threat. Ambani did not comment publicly.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "gautam-adani",
+    "name": "Gautam Adani",
+    "field": "Business",
+    "description": "Chairman of Adani Group — business ties with government extensively documented",
+    "stances": [
+      {
+        "issue": "Hindenburg Report (2023)",
+        "position": "supported-govt",
+        "summary": "Called the Hindenburg short-seller report a 'calculated attack on India' and framed it as an attack on the nation rather than on his business. Opposition demands for a JPC probe were rejected.",
+        "quote": null,
+        "date": "2023-01",
+        "sources": ["src-v-adani-hindenburg"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found. Adani-owned grain storage facilities were targeted by protesting farmers.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "ratan-tata",
+    "name": "Ratan Tata",
+    "field": "Business",
+    "description": "Chairman Emeritus of Tata Sons (d. 2024) — India's most respected industrialist",
+    "stances": [
+      {
+        "issue": "Demonetisation (2016)",
+        "position": "supported-govt",
+        "summary": "Publicly supported demonetisation, calling it a 'bold and visionary step'.",
+        "quote": null,
+        "date": "2016-11",
+        "sources": ["src-v-tata-demon"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "ambiguous",
+        "summary": "Expressed concern about the violence during protests but did not take a clear stance on the law itself.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-tata-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "rihanna",
+    "name": "Rihanna",
+    "field": "International",
+    "description": "Singer, businesswoman — one of the world's most followed people on social media",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Tweeted a CNN article about the internet shutdown at farmer protest sites with the comment 'why aren't we talking about this?!' to her 100M+ followers. Triggered a massive international spotlight and a coordinated government/celebrity counter-response.",
+        "quote": "why aren't we talking about this?! #FarmersProtest",
+        "date": "2021-02-02",
+        "sources": ["src-v-rihanna-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "greta-thunberg",
+    "name": "Greta Thunberg",
+    "field": "International",
+    "description": "Climate activist",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Shared a 'toolkit' document to support the farmers' protests. Indian police filed an FIR over the toolkit, and activist Disha Ravi was arrested in connection.",
+        "quote": "Here's an updated toolkit by people on the ground in India if you want to help.",
+        "date": "2021-02-03",
+        "sources": ["src-v-greta-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "meena-harris",
+    "name": "Meena Harris",
+    "field": "International",
+    "description": "Lawyer, author — niece of US Vice President Kamala Harris",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Tweeted support for the farmers' protests, calling them 'the largest protest in human history'. The Indian government objected to foreign commentary on internal matters.",
+        "quote": null,
+        "date": "2021-02",
+        "sources": ["src-v-meena-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "shabana-azmi",
+    "name": "Shabana Azmi",
+    "field": "Bollywood",
+    "description": "Actor, activist — five-time National Award winner, former Rajya Sabha MP",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "spoke-out",
+        "summary": "Spoke about growing intolerance and said she was 'alarmed' by the atmosphere.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-shabana-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Spoke against CAA and participated in protests. Signed open letters with other filmmakers.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-shabana-caa"]
+      }
+    ]
+  },
+  {
+    "id": "ar-rahman",
+    "name": "AR Rahman",
+    "field": "Music",
+    "description": "Oscar-winning music composer — India's most internationally acclaimed musician",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "hansal-mehta",
+    "name": "Hansal Mehta",
+    "field": "Bollywood",
+    "description": "Filmmaker — known for socially conscious films like Aligarh, Shahid",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Actively spoke out on social media against CAA and police brutality on students.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-hansal-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Supported the farmers' protests on social media.",
+        "quote": null,
+        "date": "2021-01",
+        "sources": ["src-v-hansal-farmers"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Condemned the violence and the government's response.",
+        "quote": null,
+        "date": "2023-07",
+        "sources": ["src-v-hansal-manipur"]
+      }
+    ]
+  },
+  {
+    "id": "siddharth",
+    "name": "Siddharth",
+    "field": "South Cinema",
+    "description": "Actor — known for outspoken political commentary",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Actively participated in anti-CAA protests in Chennai and was vocal on social media.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-siddharth-caa"]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Supported farmers' protests openly on social media.",
+        "quote": null,
+        "date": "2021-01",
+        "sources": ["src-v-siddharth-farmers"]
+      }
+    ]
+  },
+  {
+    "id": "nana-patekar",
+    "name": "Nana Patekar",
+    "field": "Bollywood",
+    "description": "Actor — known for philanthropy through Naam Foundation",
+    "stances": [
+      {
+        "issue": "Intolerance debate (2015)",
+        "position": "supported-govt",
+        "summary": "Dismissed the intolerance debate, saying it was manufactured and that India was a tolerant country.",
+        "quote": null,
+        "date": "2015-11",
+        "sources": ["src-v-nana-intolerance"]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "kailash-satyarthi",
+    "name": "Kailash Satyarthi",
+    "field": "Activism",
+    "description": "Nobel Peace Prize laureate (2014) — child rights activist",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Expressed concern about the impact of NRC and CAA on India's most vulnerable populations, especially children.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-satyarthi-caa"]
+      }
+    ]
+  },
+  {
+    "id": "mary-kom",
+    "name": "Mary Kom",
+    "field": "Sports",
+    "description": "Olympic boxing medallist — six-time World Amateur Boxing champion, former Rajya Sabha MP",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Expressed support for CAA, saying it would not affect any Indian citizen.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": ["src-v-mary-caa"]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Being from Manipur, urged for peace and expressed anguish over the ethnic violence in her home state.",
+        "quote": null,
+        "date": "2023-05",
+        "sources": ["src-v-mary-manipur"]
+      }
+    ]
+  }
+]

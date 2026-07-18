@@ -28,6 +28,7 @@
       <nav class="topnav" aria-label="Main navigation">
         <a href="/timeline" data-link>Timeline</a>
         <a href="/statistics" data-link>Stats</a>
+        <a href="/voices" data-link>Voices</a>
         <a href="/submit" data-link>Submit</a>
         <a href="/sources" data-link>Sources</a>
         <a href="/methodology" data-link>Method</a>
@@ -98,7 +99,7 @@
         <div class="toolbar">
           <label class="search-wrap">
             <span>Search records</span>
-            <input id="searchInput" type="search" placeholder="Search Manipur, NEET, press, rape, bonds">
+            <input id="searchInput" type="search" placeholder="Search records, names, places">
           </label>
           <details id="advancedFilters" class="advanced-filters">
             <summary>Filters</summary>
@@ -279,8 +280,8 @@
           <article>
             <span>GitHub</span>
             <h3>Repository link</h3>
-            <p>No public Git remote is connected in this local folder yet. When the repo is created, this card should point to the public repository for issues, corrections, and transparent data review.</p>
-            <a class="text-button" href="https://github.com/new" target="_blank" rel="noopener">Create public repo</a>
+            <p>The full codebase, data files, and research notes are available on GitHub for transparent review, corrections, and contributions.</p>
+            <a class="text-button" href="https://github.com/basithladdu/theindiafiles" target="_blank" rel="noopener">View on GitHub</a>
           </article>
           <article>
             <span>Support</span>
@@ -289,6 +290,50 @@
             <a class="text-button" href="/submit" data-link>Submit a sourced record</a>
           </article>
         </div>
+      </section>
+
+      <section id="voices" class="section voices-section route-page" data-page="voices">
+        <div class="section-head">
+          <p class="eyebrow">Public Voices</p>
+          <h2>Who spoke, who stayed silent</h2>
+          <p>Tracking documented public statements — or documented silence — by India's most influential figures on major Modi-era controversies. Silence is not proof of support; it is recorded as "no public statement found."</p>
+        </div>
+        <div class="voices-toolbar">
+          <div class="voices-summary" id="voicesSummary"></div>
+          <div class="voices-filter-bar">
+            <label>
+              <span>Field</span>
+              <select id="voiceFieldFilter">
+                <option value="all">All fields</option>
+                <option value="Bollywood">Bollywood</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Business">Business</option>
+                <option value="Music">Music</option>
+                <option value="South Cinema">South Cinema</option>
+                <option value="Sports">Sports</option>
+                <option value="International">International</option>
+                <option value="Activism">Activism</option>
+              </select>
+            </label>
+            <label>
+              <span>Stance</span>
+              <select id="voiceStanceFilter">
+                <option value="all">All stances</option>
+                <option value="spoke-out">Spoke out</option>
+                <option value="supported-govt">Supported govt</option>
+                <option value="silent">Silent</option>
+                <option value="ambiguous">Ambiguous</option>
+              </select>
+            </label>
+            <label>
+              <span>Issue</span>
+              <select id="voiceIssueFilter">
+                <option value="all">All issues</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="voicesGrid" class="voices-grid" aria-live="polite"></div>
       </section>
 
       <section id="recordView" class="section record-view route-page" data-page="record"></section>
@@ -307,6 +352,5 @@
 
     <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use India Dossier fully.</p></noscript>
     <script src="app.js"></script>
-    <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
