@@ -1370,6 +1370,53 @@ button,
   animation: card-in 0.32s ease both;
 }
 
+/* ── FAQ ─────────────────────────────────────────────────── */
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+  max-width: 780px;
+}
+
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  animation: card-in 0.32s ease both;
+}
+
+.faq-item summary {
+  padding: 15px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.35;
+  list-style-position: inside;
+  transition: color 0.18s ease;
+}
+
+.faq-item summary:hover {
+  color: var(--bjp);
+}
+
+.faq-item[open] summary {
+  color: var(--rss);
+  border-bottom: 1px solid #ece6dc;
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 13px 16px 16px;
+  color: #37312c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq-item p strong {
+  color: var(--ink);
+}
+
 :focus-visible {
   outline: 2px solid var(--bjp);
   outline-offset: 2px;

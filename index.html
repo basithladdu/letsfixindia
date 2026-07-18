@@ -26,24 +26,25 @@
         <span class="brand-name"><span class="brand-full">India Dossier</span><span class="brand-short">Dossier</span></span>
       </a>
       <nav class="topnav" aria-label="Main navigation">
-        <a href="/timeline" data-link>Timeline</a>
+        <a href="/" data-link>Timeline</a>
         <a href="/statistics" data-link>Stats</a>
         <a href="/voices" data-link>Voices</a>
         <a href="/submit" data-link>Submit</a>
         <a href="/sources" data-link>Sources</a>
         <a href="/methodology" data-link>Method</a>
+        <a href="/faq" data-link>FAQ</a>
         <a href="/about" data-link>About</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero route-page" data-page="home">
+      <section class="hero route-page" data-page="timeline">
         <div class="hero-copy">
           <p class="eyebrow">India under BJP / Modi administrations</p>
           <h1>India Dossier 2014-2026</h1>
           <p class="lede">A critical, sourced record of governance shocks, rights concerns, mass protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry is tagged by evidence status.</p>
           <div class="hero-actions">
-            <a href="/timeline" data-link>Open timeline</a>
+            <a href="#filters">Open timeline</a>
             <a href="/methodology" data-link>Review method</a>
           </div>
         </div>
@@ -86,7 +87,7 @@
         </section>
       </section>
 
-      <section class="route-page home-recent" data-page="home">
+      <section class="route-page home-recent" data-page="home-unused" style="display: none;">
         <div class="section-head">
           <p class="eyebrow">Latest records</p>
           <h2>Newest entries in the file</h2>
@@ -95,7 +96,7 @@
         <div id="homeRecentList" class="home-recent-list"></div>
       </section>
 
-      <section class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
+      <section id="filters" class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
         <div class="toolbar">
           <label class="search-wrap">
             <span>Search records</span>
@@ -334,6 +335,52 @@
           </div>
         </div>
         <div id="voicesGrid" class="voices-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="faq" class="section faq-section route-page" data-page="faq">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+          <p>How this record is built, what it does and does not claim, and how to challenge an entry.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is India Dossier?</summary>
+            <p>A sourced public-record timeline of major governance, rights, press-freedom, and institutional events in India from 2014 to 2026, during the BJP/Modi administrations. Every entry carries a named source and a visible evidence status.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this an anti-BJP site?</summary>
+            <p>It is a critical record, and it says so openly. But criticism is bound by evidence rules: opposition claims are labelled as claims, allegations are not written as convictions, and indicators that improved under this government — GDP per capita, inflation, internet access, PLFS unemployment — are shown on the Stats page alongside the ones that worsened.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What do the evidence labels mean?</summary>
+            <p><strong>Official</strong> — government, court, or regulator record. <strong>Court-tested</strong> — litigated, charged, convicted, or dismissed in court. <strong>Reported</strong> — credible newswire, rights group, or established publication. <strong>Alleged</strong> — serious public allegation without a settled legal finding. <strong>Opposition claim</strong> — political claim kept with attribution, not treated as proof. The full rules are on the Method page.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why does the timeline start at 2014?</summary>
+            <p>The record covers the Modi prime-ministerial period, which began on 26 May 2014. Earlier context — including the 2002 Gujarat violence — is archived in the data files but kept off the main timeline so the scope stays clean.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why are some entries sourced to Wikipedia?</summary>
+            <p>Wikipedia is used only as a lead list, never as final proof. Entries that still rest on a Wikipedia citation are being upgraded to primary or newswire sources, and weak leads are held in a research backlog rather than promoted to the timeline.</p>
+          </details>
+          <details class="faq-item">
+            <summary>An entry about me or my organisation is wrong. How do I get it corrected?</summary>
+            <p>Use the Submit page and mark the record as a correction, with source links. Corrections backed by stronger evidence than the current entry override it — that is a standing rule of the project, not a favour.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is the "BJP at centre" number calculated?</summary>
+            <p>It sums three periods of BJP-led central government: Vajpayee's 16-day term in 1996, the Vajpayee governments from 19 March 1998 to 22 May 2004, and the Modi period from 26 May 2014 to today. It recalculates live on every visit.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who is behind this, and can I contribute?</summary>
+            <p>The project is maintained independently — see the About page. Contributions are welcome through the Submit page: missing events, court-status updates, stronger sources for weak entries, and flags on wording that claims more than the evidence supports.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does the site track me?</summary>
+            <p>No analytics, no cookies, no accounts. Submission drafts and your timeline reading position are stored only in your own browser's local storage and never leave your device.</p>
+          </details>
+        </div>
       </section>
 
       <section id="recordView" class="section record-view route-page" data-page="record"></section>

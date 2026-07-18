@@ -299,7 +299,7 @@ function renderRecord(id) {
         <p class="eyebrow">Record not found</p>
         <h2>No matching entry</h2>
         <p>The requested record does not exist in the current JSON file.</p>
-        <a class="text-button" href="/timeline" data-link>Back to timeline</a>
+        <a class="text-button" href="/" data-link>Back to timeline</a>
       </div>
     `;
     return;
@@ -307,7 +307,7 @@ function renderRecord(id) {
 
   recordView.innerHTML = `
     <div class="record-shell">
-      <a class="text-button" href="/timeline" data-link>Back to timeline</a>
+      <a class="text-button" href="/" data-link>Back to timeline</a>
       <div class="record-kicker">${event.year} - ${event.date} - ${event.status}</div>
       <h1>${event.title}</h1>
       <div class="chips">
@@ -334,14 +334,15 @@ function routeFromPath(pathname) {
   if (path.startsWith("/record/")) {
     return { page: "record", id: decodeURIComponent(path.slice("/record/".length)) };
   }
-  if (path === "/timeline") return { page: "timeline" };
+  if (path === "/" || path === "/timeline") return { page: "timeline" };
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
   if (path === "/voices") return { page: "voices" };
   if (path === "/submit") return { page: "submit" };
   if (path === "/sources") return { page: "sources" };
   if (path === "/methodology") return { page: "methodology" };
+  if (path === "/faq") return { page: "faq" };
   if (path === "/about") return { page: "about" };
-  return { page: "home" };
+  return { page: "timeline" };
 }
 
 function resolveRoute() {
@@ -351,7 +352,7 @@ function resolveRoute() {
 function setActiveNav(page) {
   document.querySelectorAll("[data-link]").forEach((link) => {
     const href = link.getAttribute("href") || "";
-    const active = (page === "home" && href === "/") || href === `/${page}`;
+    const active = (page === "timeline" && href === "/") || href === `/${page}`;
     link.classList.toggle("active-route", active);
     if (active) {
       link.setAttribute("aria-current", "page");
@@ -624,7 +625,7 @@ function bindEvents() {
       saveTimelineScroll(true);
     }
     event.preventDefault();
-    const restoreTimeline = toRoute.page === "timeline" && fromRoute.page !== "home";
+    const restoreTimeline = toRoute.page === "timeline" && fromRoute.page === "record";
     history.pushState({ restoreTimeline }, "", url.pathname);
     renderRoute({ restoreTimeline });
   });
