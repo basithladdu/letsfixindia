@@ -1549,5 +1549,135 @@
     "url": "",
     "type": "Pending source",
     "status": "pending"
+  },
+  "apCjp2026": {
+    "title": "Cockroach Janta Party launches youth protest campaign over exam irregularities",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/988e205b0859ac2c5fbc8af9ad4925af",
+    "type": "News report",
+    "status": "verified"
+  },
+  "ieCjpPradhan2026": {
+    "title": "CJP founder Abhijeet Dipke to launch protest seeking Education Minister's resignation",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/cjp-founder-abhijeet-dipke-to-return-to-india-on-june-6-launch-protest-seeking-dharmendra-pradhans-resignation-10717982/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "ieCjpSpokespersons2026": {
+    "title": "CJP spokespersons call for protest over CBSE, NEET and CUET irregularities",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/cockroach-cjp-spokespersons-saurav-das-abhijeet-dipke-jantar-mantar-protest-10722635/lite/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "htCjpSpokesperson2026": {
+    "title": "CJP founder Abhijeet Dipke responds to questions about the movement's spokespersons",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/india-news/why-cockroach-janta-party-has-no-woman-spokesperson-abhijeet-dipke-answers-saurav-das-vijeta-dahiya-ashutosh-ranka-101780491434274.html",
+    "type": "News report",
+    "status": "verified"
+  },
+  "hrwKashmirComms2019": {
+    "title": "India: Restore Kashmir's Internet, Phones",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2019/08/28/india-restore-kashmirs-internet-phones",
+    "type": "Rights report"
+  },
+  "hrwShutdowns2023": {
+    "title": "No Internet Means No Work, No Pay, No Food: Internet Shutdowns Deny Access to Basic Rights in Digital India",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/report/2023/06/14/no-internet-means-no-work-no-pay-no-food/internet-shutdowns-deny-access-basic",
+    "type": "Rights report"
+  },
+  "scAyodhya2019": {
+    "title": "M Siddiq (D) Thr Lrs v. Mahant Suresh Das & Ors — Ayodhya title suit judgment (9 November 2019)",
+    "publisher": "Supreme Court of India (Digital SCR)",
+    "url": "https://digiscr.sci.gov.in/view_judgment?id=MjE3MjA=",
+    "type": "Court coverage"
+  },
+  "ieAyodhya2019": {
+    "title": "Ayodhya Verdict: Full Text",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/ayodhya-verdict-full-text-supreme-court-6111349/",
+    "type": "News report"
+  },
+  "prsTripleTalaq2019": {
+    "title": "The Muslim Women (Protection of Rights on Marriage) Bill, 2019",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-muslim-women-protection-of-rights-on-marriage-bill-2019",
+    "type": "Official report"
+  },
+  "pibTripleTalaq2019": {
+    "title": "The Muslim Women (Protection of Rights on Marriage) Act, 2019 — Factsheet",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/FactsheetDetails.aspx?Id=148565",
+    "type": "Official release"
+  },
+  "hinduGalwan2020": {
+    "title": "Indian Army says 20 soldiers killed in clash with Chinese troops in the Galwan area",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/indian-army-says-20-soldiers-killed-in-clash-with-chinese-troops-in-the-galwan-area/article61668218.ece",
+    "type": "News report"
+  },
+  "reutersGalwan2020": {
+    "title": "India, China troops clash at Himalayan border, casualties on both sides",
+    "publisher": "Reuters",
+    "url": "https://www.reuters.com/article/world/india-china-troops-clash-at-himalayan-border-casualties-on-both-sides-idUSKBN23N0ZC/",
+    "type": "News wire"
+  },
+  "hrwCowVigilantesNews2019": {
+    "title": "India: Vigilante 'Cow Protection' Groups Attack Minorities",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2019/02/19/india-vigilante-cow-protection-groups-attack-minorities",
+    "type": "Rights report"
+  },
+  "hrwKashmirRights2019": {
+    "title": "India: Ensure Rights Protections in Kashmir",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2019/08/19/india-ensure-rights-protections-kashmir",
+    "type": "Rights report"
+  },
+  "eciBiharSir2025": {
+    "title": "Bihar Special Intensive Revision of Electoral Rolls: final roll press note",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzIC5IR1A3V88Anuk8RlyPGe5wAx9KElz%2FMrntZbUSdw4Bx5SvVNRoI9UBA77hlBw0pIBUAIIvl27RVB1LxrL5Mw%3D%3D",
+    "type": "Official election record"
+  },
+  "ieBiharSirDraft2025": {
+    "title": "EC publishes draft electoral rolls in Bihar; objections allowed until September 1",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/election-commission-bihar-electoral-rolls-10163613/",
+    "type": "News report"
+  },
+  "ieBiharSirCourt2025": {
+    "title": "Supreme Court directs publication of names deleted from Bihar draft voter list",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/supreme-court-ec-list-names-deleted-bihar-voter-list-deletion-65-lakh-names-10195280/",
+    "type": "Court report"
+  },
+  "apBiharSir2025": {
+    "title": "India opposition protests controversial Bihar voter-list revision",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/6aa2366999fde2598bb0603c3d1a69db",
+    "type": "News report"
+  },
+  "pibCasteCensus2025": {
+    "title": "Cabinet approves caste enumeration in the upcoming Census",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2125526&lang=2&reg=3",
+    "type": "Official release"
+  },
+  "apCasteCensus2025": {
+    "title": "India to include citizens' castes in its next population census",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/08ffeef4d1fb6bc3b4159495c6124851",
+    "type": "News report"
+  },
+  "ieCasteCensus2025": {
+    "title": "Government announces caste count in next census",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/cabinet-approves-caste-census-in-upcoming-population-census-9974708/",
+    "type": "News report"
   }
 }

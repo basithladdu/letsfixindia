@@ -10,7 +10,6 @@ Mobile-first static website for a sourced timeline of major governance crises, r
 - `data/sources.json` - source ledger.
 - `data/indicators.json` - numeric indicators.
 - `app.js` - filters, search, timeline rendering, and local submission queue.
-- `raw/` - raw user notes and source index.
 - `tools/expand-json-data.mjs` - repeatable data updater used to append newly researched entries.
 
 ## Local Run

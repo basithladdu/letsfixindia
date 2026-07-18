@@ -27,7 +27,6 @@ const submissionQueue = document.querySelector("#submissionQueue");
 const tenureValue = document.querySelector("#tenureValue");
 const homeRecentList = document.querySelector("#homeRecentList");
 const recordView = document.querySelector("#recordView");
-const archiveList = document.querySelector("#archiveList");
 const defaultTitle = document.title;
 const defaultDescription = document.querySelector('meta[name="description"]');
 const defaultDescriptionText = defaultDescription?.content || "";
@@ -78,6 +77,29 @@ function chipClass(value) {
   return "chip";
 }
 
+function statusClass(status) {
+  const normalized = String(status || "").toLowerCase();
+  if (normalized.includes("convict") || normalized.includes("court")) return "status-pill court";
+  if (normalized.includes("official")) return "status-pill official";
+  if (normalized.includes("alleged") || normalized.includes("opposition")) return "status-pill alleged";
+  if (normalized.includes("investigat") || normalized.includes("charged")) return "status-pill probe";
+  if (normalized.includes("index") || normalized.includes("affidavit")) return "status-pill index";
+  return "status-pill";
+}
+
+function pulseResultCount() {
+  if (!resultCount) return;
+  resultCount.classList.remove("is-updating");
+  void resultCount.offsetWidth;
+  resultCount.classList.add("is-updating");
+}
+
+function markTimelineRefreshing() {
+  if (!timelineList) return;
+  timelineList.classList.add("is-refreshing");
+  window.setTimeout(() => timelineList.classList.remove("is-refreshing"), 220);
+}
+
 function sourceLinks(ids) {
   return Array.from(new Set(ids))
     .map((id) => {
@@ -90,10 +112,11 @@ function sourceLinks(ids) {
         .replace("Amnesty International", "Amnesty")
         .replace("Election Commission of India", "ECI")
         .replace("National Testing Agency", "NTA");
+      const title = esc(sources[id].title);
       if (!sources[id].url) {
-        return `<span class="source-pending" title="${sources[id].title}">${label}</span>`;
+        return `<span class="source-pending" title="${title}">${esc(label)}</span>`;
       }
-      return `<a href="${sources[id].url}" target="_blank" rel="noopener" title="${sources[id].title}">${label}</a>`;
+      return `<a href="${sources[id].url}" target="_blank" rel="noopener" title="${title}" aria-label="Open source: ${esc(label)} — ${title}">${esc(label)}</a>`;
     })
     .filter(Boolean)
     .join("");
@@ -146,9 +169,11 @@ function updateScrollDock() {
     if (jumpOrigin > 24) {
       middleButton.textContent = "Continue";
       middleButton.disabled = false;
+      middleButton.classList.add("is-continue");
     } else {
       middleButton.textContent = "Saved spot";
       middleButton.disabled = timelineSavedY() < 24;
+      middleButton.classList.remove("is-continue");
     }
   }
 }
@@ -170,7 +195,7 @@ function eventUrl(event) {
 }
 
 function renderOptions() {
-  const active = events.filter((e) => !e.archived);
+  const active = events;
   const categories = uniqueSorted(active.map((e) => e.category));
   const actors = uniqueSorted(active.flatMap((e) => e.actors));
   const statuses = uniqueSorted(active.map((e) => e.status));
@@ -189,7 +214,6 @@ function renderOptions() {
 }
 
 function matches(event) {
-  if (event.archived) return false;
   const query = state.query.trim().toLowerCase();
   const searchText = [event.title, event.summary, event.outcome, event.category, event.status, event.actors.join(" "), event.year, event.date].join(" ").toLowerCase();
   return (
@@ -203,10 +227,16 @@ function matches(event) {
 
 function renderTimeline() {
   const filtered = events.filter(matches).sort(byTimeline);
-  const activeTotal = events.filter((e) => !e.archived).length;
+  const activeTotal = events.length;
   resultCount.textContent = `${filtered.length} records shown from ${activeTotal} total`;
+  pulseResultCount();
+  markTimelineRefreshing();
   if (!filtered.length) {
-    timelineList.innerHTML = `<div class="empty-state">No records match the current filters.</div>`;
+    timelineList.innerHTML = `<div class="empty-state">
+      <strong>No matching records</strong>
+      <p>Clear search text or set filters back to All to widen the timeline.</p>
+      <button type="button" class="text-button" data-clear-filters>Clear filters</button>
+    </div>`;
     return;
   }
 
@@ -228,22 +258,22 @@ function renderTimeline() {
           <article class="event-card ${String(event.severity || "").toLowerCase()}" style="--i:${index}">
             <div class="event-body">
               <div class="event-meta">
-                <span>${event.date}</span>
-                <span>${event.status}</span>
+                <span>${esc(event.date)}</span>
+                <span class="${statusClass(event.status)}">${esc(event.status)}</span>
               </div>
               <div class="event-title-row">
-                <a class="event-title-link" href="${eventUrl(event)}" data-link>${event.title}</a>
-                <div class="source-links source-inline" aria-label="Sources for ${event.title}">
+                <a class="event-title-link" href="${eventUrl(event)}" data-link>${esc(event.title)}</a>
+                <div class="source-links source-inline" aria-label="Sources for ${esc(event.title)}">
                   <span>Sources</span>
                   ${sourceLinks(event.sources)}
                 </div>
               </div>
               <div class="chips">
-                <span class="${chipClass(event.category)}">${event.category}</span>
-                ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${actor}</span>`).join("")}
+                <span class="${chipClass(event.category)}">${esc(event.category)}</span>
+                ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${esc(actor)}</span>`).join("")}
               </div>
-              <p>${event.summary}</p>
-              <p class="outcome">${event.outcome}</p>
+              <p>${esc(event.summary)}</p>
+              <p class="outcome">${esc(event.outcome)}</p>
             </div>
           </article>
         `).join("")}
@@ -252,25 +282,6 @@ function renderTimeline() {
   `).join("");
 }
 
-function renderArchive() {
-  if (!archiveList) return;
-  const archived = events.filter((event) => event.archived).sort(byTimeline);
-  archiveList.innerHTML = archived.length
-    ? archived.map((event) => `
-      <article class="archive-card ${String(event.severity || "").toLowerCase()}">
-        <div class="event-meta"><span>${event.date}</span><span>${event.status}</span></div>
-        <h3>${event.title}</h3>
-        <div class="chips">
-          <span class="${chipClass(event.category)}">${event.category}</span>
-          ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${actor}</span>`).join("")}
-        </div>
-        <p>${event.summary}</p>
-        <p class="outcome">${event.outcome}</p>
-        <div class="source-links source-inline" aria-label="Sources for ${event.title}">${sourceLinks(event.sources)}</div>
-      </article>
-    `).join("")
-    : `<div class="empty-state">No archived context records are currently available.</div>`;
-}
 
 function renderHomeRecent() {
   const recent = [...events].sort(byTimeline).slice(0, 6);
@@ -284,20 +295,31 @@ function renderHomeRecent() {
 }
 
 function renderIndicators() {
-  indicatorGrid.innerHTML = indicators.map((indicator) => {
+  indicatorGrid.innerHTML = indicators.map((indicator, cardIndex) => {
     const max = Math.max(...indicator.chart.map((item) => item.value));
+    const directionTone = String(indicator.direction || "").toLowerCase().includes("worse")
+      || String(indicator.direction || "").toLowerCase().includes("higher")
+      || String(indicator.direction || "").toLowerCase().includes("red flag")
+      || String(indicator.direction || "").toLowerCase().includes("pressure")
+      || String(indicator.direction || "").toLowerCase().includes("wealth")
+      ? "tone-worse"
+      : String(indicator.direction || "").toLowerCase().includes("better")
+        || String(indicator.direction || "").toLowerCase().includes("lower")
+        || String(indicator.direction || "").toLowerCase().includes("improved")
+        ? "tone-better"
+        : "tone-flat";
     return `
-      <article class="indicator">
+      <article class="indicator ${directionTone}" style="--i:${cardIndex}">
         <div class="indicator-head">
-          <span>${indicator.direction}</span>
-          <h3>${indicator.title}</h3>
-          <strong>${indicator.value}</strong>
+          <span class="direction-pill ${directionTone}">${esc(indicator.direction)}</span>
+          <h3>${esc(indicator.title)}</h3>
+          <strong>${esc(indicator.value)}</strong>
         </div>
-        <p>${indicator.detail}</p>
-        <div class="bars" aria-label="${indicator.title} bar chart">
+        <p>${esc(indicator.detail)}</p>
+        <div class="bars" aria-label="${esc(indicator.title)} bar chart">
           ${indicator.chart.map((item, index) => `
             <div class="bar-row">
-              <span>${item.label}</span>
+              <span>${esc(item.label)}</span>
               <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, (item.value / max) * 100)}%;--i:${index}"></div></div>
               <b>${item.value.toLocaleString("en-IN")}</b>
             </div>
@@ -318,6 +340,10 @@ function renderSources() {
   const pending = filtered.filter(([, source]) => !source.url).length;
   if (sourceSummary) {
     sourceSummary.textContent = `${filtered.length} of ${entries.length} source records shown; ${pending} awaiting URL verification.`;
+  }
+  if (!filtered.length) {
+    sourceList.innerHTML = `<div class="empty-state"><strong>No sources match</strong><p>Try a shorter publisher or title fragment.</p></div>`;
+    return;
   }
   sourceList.innerHTML = filtered.map(([id, source]) => `
     <article class="source-item">
@@ -350,17 +376,18 @@ function renderRecord(id) {
   recordView.innerHTML = `
     <div class="record-shell">
       <a class="text-button" href="/" data-link>Back to timeline</a>
-      <div class="record-kicker">${event.year} - ${event.date} - ${event.status}</div>
-      <h1>${event.title}</h1>
+      <div class="record-kicker">${esc(event.year)} · ${esc(event.date)} · <span class="${statusClass(event.status)}">${esc(event.status)}</span></div>
+      <h1>${esc(event.title)}</h1>
       <div class="chips">
-        <span class="${chipClass(event.category)}">${event.category}</span>
-        ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${actor}</span>`).join("")}
+        <span class="${chipClass(event.category)}">${esc(event.category)}</span>
+        ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${esc(actor)}</span>`).join("")}
       </div>
       <div class="record-columns">
         <article>
-          <h2>Record</h2>
-          <p>${event.summary}</p>
-          <p>${event.outcome}</p>
+          <h2>Summary</h2>
+          <p>${esc(event.summary)}</p>
+          <h2 class="record-outcome-heading">Outcome</h2>
+          <p class="outcome">${esc(event.outcome)}</p>
         </article>
         <aside>
           <h2>Sources</h2>
@@ -380,9 +407,6 @@ function updatePageMeta(route) {
   } else if (route.page === "faq") {
     title = "FAQ | LetsFixIndia";
     description = "How LetsFixIndia classifies evidence, handles corrections, and separates public records from unresolved leads.";
-  } else if (route.page === "archive") {
-    title = "Pre-2014 Archive | LetsFixIndia";
-    description = "Historical context records kept outside the 2014-2026 LetsFixIndia timeline scope.";
   } else if (route.page === "record") {
     const event = events.find((item) => item.id === route.id);
     if (event) {
@@ -398,6 +422,18 @@ function updatePageMeta(route) {
   } else if (route.page === "sources") {
     title = "Sources | LetsFixIndia";
     description = "The source ledger behind LetsFixIndia public-record entries and research queue.";
+  } else if (route.page === "methodology") {
+    title = "Methodology | LetsFixIndia";
+    description = "Evidence tiers used by LetsFixIndia: official records, court outcomes, reporting, allegations, indexes, and opposition claims.";
+  } else if (route.page === "submit") {
+    title = "Submit a record | LetsFixIndia";
+    description = "Propose a sourced public-record entry. Drafts stay local in your browser until an editor reviews them.";
+  } else if (route.page === "about") {
+    title = "About | LetsFixIndia";
+    description = "Who maintains LetsFixIndia, how to support sourced corrections, and where the public repository lives.";
+  } else if (route.page === "timeline") {
+    title = defaultTitle;
+    description = defaultDescriptionText;
   }
   document.title = title;
   if (defaultDescription) defaultDescription.content = description;
@@ -416,7 +452,6 @@ function routeFromPath(pathname) {
   if (path === "/methodology") return { page: "methodology" };
   if (path === "/faq") return { page: "faq" };
   if (path === "/about") return { page: "about" };
-  if (path === "/archive") return { page: "archive" };
   return { page: "timeline" };
 }
 
@@ -447,10 +482,6 @@ function renderRoute(options = {}) {
   }
   if (route.page === "voices") {
     renderVoices();
-  }
-  if (route.page === "archive") {
-    renderArchive();
-  }
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
   requestAnimationFrame(() => {
     if (shouldRestoreTimeline) {
@@ -532,16 +563,51 @@ function calculateTenure() {
     `Vajpayee 1996; 1998-2004 (${Math.round(vajpayee2Days / 365.25 * 10) / 10} yrs); Modi 2014-present`;
 }
 
+const DRAFTS_KEY = "letsFixIndia.publicRecordDrafts";
+const DRAFTS_LEGACY_KEY = "publicRecordDrafts";
+
 function getDrafts() {
   try {
-    return JSON.parse(localStorage.getItem("publicRecordDrafts") || "[]");
+    const current = localStorage.getItem(DRAFTS_KEY);
+    if (current) return JSON.parse(current);
+    const legacy = localStorage.getItem(DRAFTS_LEGACY_KEY);
+    if (legacy) {
+      localStorage.setItem(DRAFTS_KEY, legacy);
+      localStorage.removeItem(DRAFTS_LEGACY_KEY);
+      return JSON.parse(legacy);
+    }
+    return [];
   } catch {
     return [];
   }
 }
 
 function saveDrafts(drafts) {
-  localStorage.setItem("publicRecordDrafts", JSON.stringify(drafts));
+  localStorage.setItem(DRAFTS_KEY, JSON.stringify(drafts));
+}
+
+function clearTimelineFilters() {
+  state.query = "";
+  state.category = "all";
+  state.actor = "all";
+  state.status = "all";
+  state.year = "all";
+  if (searchInput) searchInput.value = "";
+  if (categoryFilter) categoryFilter.value = "all";
+  if (actorFilter) actorFilter.value = "all";
+  if (statusFilter) statusFilter.value = "all";
+  yearRail?.querySelectorAll(".year-pill").forEach((pill) => {
+    pill.classList.toggle("active", pill.dataset.year === "all");
+  });
+  renderTimeline();
+  updateScrollDock();
+}
+
+function setSubmitFeedback(message) {
+  const el = document.querySelector("#submitFeedback");
+  if (!el) return;
+  el.textContent = message;
+  el.classList.toggle("is-visible", Boolean(message));
 }
 
 function renderSubmissions() {
@@ -633,7 +699,7 @@ function renderVoices() {
   }
 
   if (!filtered.length) {
-    voicesGrid.innerHTML = `<div class="empty-state">No figures match the current filters.</div>`;
+    voicesGrid.innerHTML = `<div class="empty-state"><strong>No figures match</strong><p>Widen field, stance, issue, or search filters.</p></div>`;
     return;
   }
 
@@ -797,6 +863,28 @@ function bindEvents() {
     }
   });
 
+  window.addEventListener("keydown", (event) => {
+    if (resolveRoute().page !== "timeline" || scrollDock?.hidden) return;
+    const tag = (event.target?.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "textarea" || tag === "select" || event.target?.isContentEditable) return;
+    if (event.key === "Home" && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      scrollDock.querySelector("[data-scroll-action='top']")?.click();
+    } else if (event.key === "End" && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      scrollDock.querySelector("[data-scroll-action='bottom']")?.click();
+    } else if (event.key === "." && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      scrollDock.querySelector("[data-scroll-action='saved']")?.click();
+    }
+  });
+
+  timelineList?.addEventListener("click", (event) => {
+    if (event.target.closest("[data-clear-filters]")) {
+      clearTimelineFilters();
+    }
+  });
+
   searchInput.addEventListener("input", (event) => {
     state.query = event.target.value;
     renderTimeline();
@@ -841,6 +929,8 @@ function bindEvents() {
     saveDrafts(drafts);
     submissionForm.reset();
     renderSubmissions();
+    setSubmitFeedback("Draft saved in this browser. It is not published until an editor promotes it.");
+    window.setTimeout(() => setSubmitFeedback(""), 5000);
   });
 
   voiceFieldFilter?.addEventListener("change", (event) => {

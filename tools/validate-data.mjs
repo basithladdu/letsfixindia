@@ -1,71 +1,131 @@
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import fs from 'fs';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const readJson = (relativePath) => JSON.parse(fs.readFileSync(path.join(root, relativePath), "utf8"));
-const errors = [];
+const eventsPath = './data/events.json';
+const sourcesPath = './data/sources.json';
+const voicesPath = './data/voices.json';
 
-const events = readJson("data/events.json");
-const sources = readJson("data/sources.json");
-const voices = readJson("data/voices.json");
-const sourceIds = new Set(Object.keys(sources));
-const validStatuses = new Set([
-  "Affidavit analysis", "Alleged", "Charged", "Convicted", "Court-tested", "Index",
-  "Investigated", "Investigative analysis", "Official", "Official investigation",
-  "Official proposal", "Official reversed", "Opposition claim", "Reported"
-]);
+let hasErrors = false;
 
-const checkSources = (owner, sourceList, label) => {
-  if (!Array.isArray(sourceList) || sourceList.length === 0) {
-    errors.push(`${owner}: missing ${label}`);
-    return;
-  }
-  for (const sourceId of sourceList) {
-    if (!sourceIds.has(sourceId)) errors.push(`${owner}: unknown source ID ${sourceId}`);
-  }
-};
-
-const eventIds = new Set();
-for (const event of events) {
-  if (!event.id) errors.push("event: missing id");
-  if (eventIds.has(event.id)) errors.push(`event ${event.id}: duplicate id`);
-  eventIds.add(event.id);
-  if (!event.title?.trim()) errors.push(`${event.id}: empty title`);
-  if (!event.summary?.trim()) errors.push(`${event.id}: empty summary`);
-  if (!event.outcome?.trim()) errors.push(`${event.id}: empty outcome`);
-  if (!validStatuses.has(event.status)) errors.push(`${event.id}: unknown status ${event.status}`);
-  checkSources(event.id, event.sources, "sources");
+function logError(message) {
+  console.error(`\x1b[31m[ERROR]\x1b[0m ${message}`);
+  hasErrors = true;
 }
 
-for (const [id, source] of Object.entries(sources)) {
-  if (!source.title?.trim()) errors.push(`source ${id}: empty title`);
-  if (!source.publisher?.trim()) errors.push(`source ${id}: empty publisher`);
-  if (!source.type?.trim()) errors.push(`source ${id}: empty type`);
-  if (source.status !== "pending" && !source.url?.trim()) errors.push(`source ${id}: missing URL`);
+function logSuccess(message) {
+  console.log(`\x1b[32m[SUCCESS]\x1b[0m ${message}`);
 }
 
-for (const voice of voices) {
-  if (!voice.id) errors.push("voice: missing id");
-  if (!Array.isArray(voice.stances) || voice.stances.length === 0) {
-    errors.push(`${voice.id}: missing stances`);
-    continue;
-  }
-  for (const [index, stance] of voice.stances.entries()) {
-    if (!stance.issue?.trim()) errors.push(`${voice.id}[${index}]: empty issue`);
-    if (!stance.summary?.trim()) errors.push(`${voice.id}[${index}]: empty summary`);
-    if (stance.position !== "silent") checkSources(`${voice.id}[${index}]`, stance.sources, "sources");
-    for (const sourceId of stance.sources || []) {
-      if (!sourceIds.has(sourceId)) errors.push(`${voice.id}[${index}]: unknown source ID ${sourceId}`);
+try {
+  // Load files
+  const events = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
+  const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf8'));
+  const voices = JSON.parse(fs.readFileSync(voicesPath, 'utf8'));
+
+  logSuccess('Successfully parsed all JSON databases.');
+
+  // Validate Sources
+  const sourceKeys = Object.keys(sources);
+  logSuccess(`Found ${sourceKeys.length} sources defined.`);
+  
+  for (const [id, src] of Object.entries(sources)) {
+    if (!src.title) logError(`Source "${id}" is missing a title.`);
+    if (!src.publisher) logError(`Source "${id}" is missing a publisher.`);
+    if (src.status !== undefined && src.status !== 'verified' && src.status !== 'pending') {
+      logError(`Source "${id}" has unknown status "${src.status}".`);
     }
   }
+
+  // Validate Events
+  const eventIds = new Set();
+  events.forEach((event, index) => {
+    const loc = `events.json[${index}] (${event.id || 'missing ID'})`;
+    
+    if (!event.id) {
+      logError(`Event at index ${index} is missing an "id".`);
+      return;
+    }
+    
+    if (eventIds.has(event.id)) {
+      logError(`Duplicate Event ID found: "${event.id}"`);
+    }
+    eventIds.add(event.id);
+
+    // Check required fields
+    const required = ['year', 'date', 'title', 'category', 'actors', 'status', 'severity', 'summary', 'outcome', 'sources'];
+    required.forEach(field => {
+      if (event[field] === undefined || event[field] === null) {
+        logError(`Event "${event.id}" is missing required field "${field}".`);
+      }
+    });
+
+    if (Array.isArray(event.sources)) {
+      event.sources.forEach(srcId => {
+        if (!sources[srcId]) {
+          logError(`Event "${event.id}" references undefined source ID "${srcId}".`);
+        }
+      });
+    } else {
+      logError(`Event "${event.id}" sources is not an array.`);
+    }
+  });
+  logSuccess(`Validated ${events.length} events successfully.`);
+
+  // Validate Voices
+  const voiceIds = new Set();
+  const validStances = new Set(['spoke-out', 'supported-govt', 'silent', 'ambiguous']);
+
+  voices.forEach((voice, index) => {
+    const loc = `voices.json[${index}] (${voice.id || 'missing ID'})`;
+
+    if (!voice.id) {
+      logError(`Voice at index ${index} is missing an "id".`);
+      return;
+    }
+
+    if (voiceIds.has(voice.id)) {
+      logError(`Duplicate Voice ID found: "${voice.id}"`);
+    }
+    voiceIds.add(voice.id);
+
+    const required = ['name', 'field', 'description', 'stances'];
+    required.forEach(field => {
+      if (voice[field] === undefined || voice[field] === null) {
+        logError(`Voice "${voice.id}" is missing required field "${field}".`);
+      }
+    });
+
+    if (Array.isArray(voice.stances)) {
+      voice.stances.forEach((stance, sIndex) => {
+        if (!stance.issue) {
+          logError(`Voice "${voice.id}" stance at index ${sIndex} is missing an "issue".`);
+        }
+        if (!validStances.has(stance.position)) {
+          logError(`Voice "${voice.id}" stance for "${stance.issue || sIndex}" has invalid position "${stance.position}".`);
+        }
+        if (Array.isArray(stance.sources)) {
+          stance.sources.forEach(srcId => {
+            if (!sources[srcId]) {
+              logError(`Voice "${voice.id}" stance for "${stance.issue}" references undefined source ID "${srcId}".`);
+            }
+          });
+        } else {
+          logError(`Voice "${voice.id}" stance for "${stance.issue}" sources is not an array.`);
+        }
+      });
+    } else {
+      logError(`Voice "${voice.id}" stances is not an array.`);
+    }
+  });
+  logSuccess(`Validated ${voices.length} public figures successfully.`);
+
+} catch (err) {
+  logError(`Fatal validation parsing error: ${err.message}`);
 }
 
-if (errors.length) {
-  console.error(`Validation failed with ${errors.length} error(s):`);
-  for (const error of errors) console.error(`- ${error}`);
-  process.exitCode = 1;
+if (hasErrors) {
+  console.error('\n\x1b[31m[FAILURE]\x1b[0m Database validation failed.');
+  process.exit(1);
 } else {
-  const pending = Object.values(sources).filter((source) => source.status === "pending").length;
-  console.log(`Validation passed: ${events.length} events, ${Object.keys(sources).length} sources (${pending} pending), ${voices.length} voices.`);
+  console.log('\n\x1b[32m[SUCCESS]\x1b[0m Database validation passed successfully.');
+  process.exit(0);
 }

@@ -2,7 +2,7 @@
   {
     "title": "Press freedom rank",
     "value": "140/180 to 157/180",
-    "detail": "India ranked 140 in RSF's 2014 index and 157 in the 2026 index. RSF scores fell from 59.66 to 31.96, but methodology changes mean the trend should be read carefully.",
+    "detail": "India ranked 140 in RSF's 2014 index, 159 in 2024, 151 in 2025, and 157 in 2026. RSF scores fell from 59.66 (2014) to 31.96 (2026), but methodology changes mean ranks and scores should be read carefully rather than as a single unbroken series.",
     "direction": "Worse",
     "sources": [
       "rsf2014",
@@ -12,6 +12,10 @@
       {
         "label": "2014",
         "value": 140
+      },
+      {
+        "label": "2024",
+        "value": 159
       },
       {
         "label": "2025",
@@ -46,7 +50,7 @@
   {
     "title": "Reported rape cases",
     "value": "36,735 to 29,670",
-    "detail": "The official reported rape-case count was 36,735 in 2014 and 29,670 in 2023. The dataset should not falsely claim an increase where NCRB does not show one.",
+    "detail": "Official NCRB reported rape cases fell from 36,735 in 2014 to 29,670 in 2023. Year-to-year comparisons remain sensitive to reporting rates and classification changes.",
     "direction": "Lower reported volume",
     "sources": [
       "ncrb2014",
@@ -105,7 +109,7 @@
   {
     "title": "GDP per capita",
     "value": "$1,553.9 to $2,702.5",
-    "detail": "World Bank current-dollar GDP per capita rose from 2014 to 2025. This is a real improvement, though current-dollar values are affected by exchange rates and inflation.",
+    "detail": "World Bank current-dollar GDP per capita rose from $1,553.9 in 2014 to $2,702.5 in 2025. This is a real income-level improvement on that series, though current-dollar values move with exchange rates and inflation and do not by themselves measure distributional fairness or democratic quality.",
     "direction": "Higher",
     "sources": [
       "worldBankGdpPc"
@@ -143,7 +147,7 @@
   {
     "title": "Internet users",
     "value": "16.5% to 70.0%",
-    "detail": "World Bank data shows internet usage rising sharply from the earliest comparable 2016 value to 2025.",
+    "detail": "World Bank data shows individuals using the internet rising from 16.5% in 2016 to 70.0% in 2025. Higher connectivity coexists with rising shutdown counts; the two series measure different things and should not be collapsed into a single 'digital freedom' claim.",
     "direction": "Higher",
     "sources": [
       "worldBankInternet"
@@ -162,7 +166,7 @@
   {
     "title": "Unemployment rate",
     "value": "6.0% to 3.1%",
-    "detail": "PLFS usual-status unemployment fell from 2017-18 to 2025. Treat the comparison carefully because the PLFS series and 2025 sampling differ from older employment measures.",
+    "detail": "PLFS usual-status unemployment fell from 6.0% in 2017-18 to 3.1% in 2025 on the cited PIB releases. Treat the comparison carefully: PLFS sampling and definitions differ from older employment measures, and a lower unemployment rate is not the same as secure formal work.",
     "direction": "Lower",
     "sources": [
       "pibPlfs2017",
@@ -286,13 +290,21 @@
   {
     "title": "Freedom House status",
     "value": "Free to Partly Free",
-    "detail": "Freedom House assessed India as Free in 2014 under its older rating scale and Partly Free with a 62/100 score in 2026. The scales are not directly numeric-comparable.",
+    "detail": "Freedom House assessed India as Free in Freedom in the World 2014 (Political Rights 2, Civil Liberties 3 on the old 1–7 scale) and Partly Free with a 62/100 aggregate score in 2026. The rating systems are not directly numeric-comparable; the status change is the comparable claim.",
     "direction": "Worse",
     "sources": [
       "freedomHouse2014",
       "freedomHouse2026"
     ],
     "chart": [
+      {
+        "label": "2014 PR",
+        "value": 2
+      },
+      {
+        "label": "2014 CL",
+        "value": 3
+      },
       {
         "label": "2026 score",
         "value": 62
@@ -302,10 +314,11 @@
   {
     "title": "Internet shutdowns",
     "value": "6 to 54",
-    "detail": "SFLC's India shutdown tracker lists 6 shutdowns in 2014 and 54 in 2025, with 2026 still incomplete at 21 YTD in the captured research note.",
+    "detail": "SFLC's India shutdown tracker lists 6 shutdowns in 2014 and 54 in 2025, with 2026 still incomplete at 21 YTD in the captured research note. HRW separately documented the human-cost pattern, including Kashmir's 213-day internet blackout after August 2019.",
     "direction": "Worse",
     "sources": [
-      "sflcShutdowns"
+      "sflcShutdowns",
+      "hrwShutdowns2023"
     ],
     "chart": [
       {
@@ -345,7 +358,7 @@
   {
     "title": "World Happiness Report rank",
     "value": "126/143 to 118/147",
-    "detail": "India ranked 126th of 143 countries in the 2024 World Happiness Report and 118th of 147 in the 2025 report. The rank improved, but the country count and report year changed, so this should not be read as a direct measure of a government-caused change in happiness.",
+    "detail": "India ranked 126th of 143 countries in the 2024 World Happiness Report and 118th of 147 in the 2025 report. The rank improved, but the country count and report year changed, so this is not a direct measure of government-caused happiness change.",
     "direction": "Higher rank, limited comparison",
     "sources": [
       "worldHappiness2025"
@@ -358,6 +371,50 @@
       {
         "label": "2025",
         "value": 118
+      }
+    ]
+  },
+  {
+    "title": "Cow-vigilante killings (HRW tally)",
+    "value": "44 killed (36 Muslim)",
+    "detail": "HRW counted at least 44 people killed in cow-protection vigilante attacks from May 2015 to December 2018, including 36 Muslims, with about 280 injured across more than 100 incidents. This is a rights-group tally for a defined window, not an official NCRB series.",
+    "direction": "Severe rights harm",
+    "sources": [
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
+    ],
+    "chart": [
+      {
+        "label": "Killed",
+        "value": 44
+      },
+      {
+        "label": "Muslim victims",
+        "value": 36
+      },
+      {
+        "label": "Injured ~",
+        "value": 280
+      }
+    ]
+  },
+  {
+    "title": "Kashmir internet blackout days",
+    "value": "213 days (internet) / 550 days (4G curb)",
+    "detail": "HRW reported that the Jammu and Kashmir internet shutdown beginning August 2019 lasted 213 days until March 2020, while mobile 4G access remained restricted for 550 days. These are duration measures for one extreme episode, not annual nationwide shutdown counts.",
+    "direction": "Severe rights harm",
+    "sources": [
+      "hrwShutdowns2023",
+      "hrwKashmirComms2019"
+    ],
+    "chart": [
+      {
+        "label": "Internet days",
+        "value": 213
+      },
+      {
+        "label": "4G curb days",
+        "value": 550
       }
     ]
   }

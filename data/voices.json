@@ -3060,5 +3060,69 @@
         ]
       }
     ]
+  },
+  {
+    "id": "abhijeet-dipke",
+    "name": "Abhijeet Dipke",
+    "field": "Youth movement / CJP",
+    "description": "Founder of the Cockroach Janta Party, a satirical youth movement that became a public campaign around exam irregularities, unemployment, and government accountability.",
+    "stances": [
+      {
+        "issue": "NEET, CBSE and CUET exam irregularities (2026)",
+        "position": "spoke-out",
+        "summary": "Called for protests and demanded accountability from the education ministry over reported examination irregularities and paper-leak concerns.",
+        "quote": null,
+        "date": "2026-06",
+        "sources": ["ieCjpPradhan2026", "apCjp2026"]
+      }
+    ]
+  },
+  {
+    "id": "saurav-das",
+    "name": "Saurav Das",
+    "field": "Journalism / CJP",
+    "description": "Journalist reported as chief spokesperson for the Cockroach Janta Party youth campaign.",
+    "stances": [
+      {
+        "issue": "NEET, CBSE and CUET exam irregularities (2026)",
+        "position": "spoke-out",
+        "summary": "Addressed the campaign's public call for accountability and dialogue over education-sector irregularities.",
+        "quote": null,
+        "date": "2026-06",
+        "sources": ["ieCjpSpokespersons2026"]
+      }
+    ]
+  },
+  {
+    "id": "ashutosh-ranka",
+    "name": "Ashutosh Ranka",
+    "field": "Political research / CJP",
+    "description": "Reported spokesperson for the Cockroach Janta Party youth campaign.",
+    "stances": [
+      {
+        "issue": "NEET, CBSE and CUET exam irregularities (2026)",
+        "position": "spoke-out",
+        "summary": "Participated in public communications around the campaign's examination-integrity and youth-accountability demands.",
+        "quote": null,
+        "date": "2026-06",
+        "sources": ["ieCjpSpokespersons2026", "htCjpSpokesperson2026"]
+      }
+    ]
+  },
+  {
+    "id": "vijeta-dahiya",
+    "name": "Vijeta Dahiya",
+    "field": "Political research / CJP",
+    "description": "Reported spokesperson for the Cockroach Janta Party youth campaign.",
+    "stances": [
+      {
+        "issue": "NEET, CBSE and CUET exam irregularities (2026)",
+        "position": "spoke-out",
+        "summary": "Was identified in reporting as part of the movement's spokesperson team addressing youth and education concerns.",
+        "quote": null,
+        "date": "2026-06",
+        "sources": ["htCjpSpokesperson2026"]
+      }
+    ]
   }
 ]

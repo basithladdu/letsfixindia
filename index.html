@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LetsFixIndia | 2014-2026 Public Record</title>
-    <meta name="description" content="A mobile-first, source-led timeline of major Indian public record events from 2014 to 2026.">
+    <meta name="description" content="LetsFixIndia: a bright, mobile-first, source-tagged public record of major Indian events, indicators, and documented public voices from 2014 to 2026.">
     <meta name="theme-color" content="#fbfaf5">
     <meta property="og:type" content="website">
     <meta property="og:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta property="og:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
     <meta property="og:url" content="https://letsfixindia.com/">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://letsfixindia.com/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta name="twitter:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
+    <meta name="twitter:image" content="https://letsfixindia.com/assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="assets/india-flag-icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="/" data-link aria-label="India 2014 to 2026 public record home">
+      <a class="brand" href="/" data-link aria-label="LetsFixIndia home">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-name">LetsFixIndia</span>
       </a>
@@ -63,7 +65,7 @@
         <div class="hero-copy">
           <p class="eyebrow">India under BJP / Modi administrations</p>
           <h1>LetsFixIndia 2014-2026</h1>
-          <p class="lede">A critical, sourced record of governance shocks, rights concerns, mass protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry is tagged by evidence status.</p>
+          <p class="lede">A sourced public record of governance shocks, rights concerns, protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry carries an evidence status and linked sources.</p>
           <div class="hero-actions">
             <a href="#filters">Open timeline</a>
             <a href="/methodology" data-link>Review method</a>
@@ -154,7 +156,7 @@
         <div class="section-head">
           <p class="eyebrow">Statistics</p>
           <h2>What moved, up or down</h2>
-          <p>Indicators are shown even when they complicate the argument. The point is a public record, not a slogan.</p>
+          <p>Source-backed indicators for the period. Direction labels describe the series, not a moral verdict. Methodology caveats stay beside each chart.</p>
         </div>
         <div id="indicatorGrid" class="indicator-grid"></div>
       </section>
@@ -172,20 +174,21 @@
         <div class="section-head compact">
           <p class="eyebrow">Submission desk</p>
           <h2>Submit a sourced record</h2>
-          <p>Use this for incidents, statistics, corrections, court updates, missing BJP/RSS/government links, or stronger sources for weak entries.</p>
+          <p>Use this for incidents, statistics, corrections, court updates, missing actor links, or stronger sources for weak entries. Drafts stay in this browser only until an editor promotes them.</p>
         </div>
+        <p id="submitFeedback" class="submit-feedback" aria-live="polite"></p>
         <form id="submissionForm" class="submission-form">
           <label>
             <span>Record title</span>
-            <input name="title" required placeholder="NEET-UG paper leak, state, year">
+            <input name="title" required placeholder="NEET-UG paper leak, state, year" autocomplete="off">
           </label>
           <label>
             <span>Date or year</span>
-            <input name="year" required placeholder="3 May 2026 or 2026">
+            <input name="year" required placeholder="3 May 2026 or 2026" autocomplete="off">
           </label>
           <label>
             <span>Place</span>
-            <input name="place" required placeholder="India, state, district, institution">
+            <input name="place" required placeholder="India, state, district, institution" autocomplete="off">
           </label>
           <label>
             <span>Category</span>
@@ -196,6 +199,7 @@
               <option>Press freedom</option>
               <option>Communal violence</option>
               <option>Security and terror</option>
+              <option>Security forces</option>
               <option>Economy</option>
               <option>Public health</option>
               <option>Civil liberties</option>
@@ -218,11 +222,18 @@
             <span>Evidence status</span>
             <select name="status" required>
               <option>Official</option>
+              <option>Official proposal</option>
+              <option>Official reversed</option>
+              <option>Official investigation</option>
               <option>Court-tested</option>
               <option>Convicted</option>
               <option>Charged</option>
+              <option>Investigated</option>
               <option>Reported</option>
               <option>Alleged</option>
+              <option>Index</option>
+              <option>Affidavit analysis</option>
+              <option>Investigative analysis</option>
               <option>Opposition claim</option>
               <option>Needs verification</option>
             </select>
@@ -248,7 +259,7 @@
         <div class="section-head">
           <p class="eyebrow">Source ledger</p>
           <h2>Evidence used in this build</h2>
-          <p>Raw notes are stored in the local raw folder. The live entries link to the source ledger below.</p>
+          <p>Publisher records behind timeline entries, indicators, and voices. Pending rows are intentionally visible until a verified URL is attached.</p>
         </div>
         <label class="source-search">
           <span>Search sources</span>
@@ -262,7 +273,7 @@
         <div class="section-head">
           <p class="eyebrow">Method</p>
           <h2>How records are classified</h2>
-          <p>Events are included when they are tied to a named source and a visible evidence status. Stronger sources override weaker summaries.</p>
+          <p>Events enter the public file only with a named source and an evidence status. Stronger sources override weaker summaries. Wikipedia pages are leads, not primary proof.</p>
         </div>
         <div class="method-grid">
           <article>
@@ -270,8 +281,12 @@
             <h3>Government, court, regulator, or statutory body record.</h3>
           </article>
           <article>
-            <span>Court-tested</span>
-            <h3>Litigated, convicted, dismissed, charged, or otherwise tested in court.</h3>
+            <span>Court-tested / Convicted / Charged</span>
+            <h3>Litigated outcomes, convictions, charges, dismissals, or other court-tested states.</h3>
+          </article>
+          <article>
+            <span>Investigated</span>
+            <h3>Named probe by police, CBI, commissions, or other investigative bodies without a settled court finding.</h3>
           </article>
           <article>
             <span>Reported</span>
@@ -282,8 +297,16 @@
             <h3>Serious public allegation that has not reached a settled legal finding.</h3>
           </article>
           <article>
+            <span>Index / Affidavit analysis</span>
+            <h3>Rankings, indexes, or affidavit-derived tallies treated as measurements, not courtroom verdicts.</h3>
+          </article>
+          <article>
             <span>Opposition claim</span>
             <h3>Political claim preserved with attribution, not treated as primary proof.</h3>
+          </article>
+          <article>
+            <span>Official proposal / reversed</span>
+            <h3>Government proposals, ordinances, or later reversals kept distinct from enacted outcomes.</h3>
           </article>
           <article>
             <span>Dynamic lead</span>
@@ -315,7 +338,6 @@
             <h3>How people can help</h3>
             <p>Submit missing events, verify sources, translate records, check court updates, improve weak Wikipedia-only leads, and flag over-strong wording before it becomes public.</p>
             <a class="text-button" href="/submit" data-link>Submit a sourced record</a>
-            <a class="text-button" href="/archive" data-link>Open pre-2014 archive</a>
           </article>
         </div>
       </section>
@@ -389,7 +411,7 @@
           </details>
           <details class="faq-item">
             <summary>Why does the timeline start at 2014?</summary>
-            <p>Because 26 May 2014 is when the current management took over. Earlier context, including 2002, is kept separately in the <a href="/archive" data-link>pre-2014 archive</a>, outside the 2014-2026 timeline scope.</p>
+            <p>Because 26 May 2014 is when the current management took over. The project focuses strictly on this 2014-2026 timeline scope.</p>
           </details>
           <details class="faq-item">
             <summary>Why are some entries sourced to Wikipedia?</summary>
@@ -414,22 +436,14 @@
         </div>
       </section>
 
-      <section id="archive" class="section archive-section route-page" data-page="archive">
-        <div class="archive-banner">
-          <p class="eyebrow">Historical context</p>
-          <h2>Pre-2014 archive</h2>
-          <p>These records provide context for the main timeline. They are outside the 2014-2026 scope and are not included in live timeline totals or filters.</p>
-        </div>
-        <div id="archiveList" class="archive-list" aria-live="polite"></div>
-      </section>
 
       <section id="recordView" class="section record-view route-page" data-page="record"></section>
     </main>
 
-    <div id="scrollDock" class="scroll-dock" aria-label="Timeline scroll controls" hidden>
-      <button type="button" data-scroll-action="top">Top</button>
-      <button type="button" data-scroll-action="saved">Saved spot</button>
-      <button type="button" data-scroll-action="bottom">Bottom</button>
+    <div id="scrollDock" class="scroll-dock" role="toolbar" aria-label="Timeline scroll controls" hidden>
+      <button type="button" data-scroll-action="top" aria-keyshortcuts="Home" title="Jump to top (Home)">Top</button>
+      <button type="button" data-scroll-action="saved" aria-keyshortcuts="Period" title="Saved reading spot or continue">Saved spot</button>
+      <button type="button" data-scroll-action="bottom" aria-keyshortcuts="End" title="Jump to bottom (End)">Bottom</button>
     </div>
 
     <footer class="footer">

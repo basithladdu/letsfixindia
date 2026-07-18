@@ -14,7 +14,7 @@ All notable user-facing changes to the site.
 - Motion layer: card entrance animations with stagger, growing stat bars, hover lifts, animated nav underline, and full `prefers-reduced-motion` support.
 
 ### Changed
-- Pre-2014 context entries (Gujarat 2002) archived — kept in the data files but off the timeline, filters, and counts.
+- Pre-2014 context entries (Gujarat 2002) removed to keep scope strictly to the 2014–2026 period.
 - All editorial outcome notes ("The site keeps this as…", "The entry should…") rewritten as plain factual outcomes.
 - Bright warm-white theme (`#fbfaf5`) locked in; dark mode removed.
 - Timeline rebuilt with a visual spine, year markers, and sticky year headings.
@@ -27,4 +27,4 @@ All notable user-facing changes to the site.
 - `404.html` SPA fallback kept in sync with `index.html` for static-host routing.
 
 ### Data
-- 108 active events (1 archived) · 143 sources · 17 indicators · 64 backlog leads.
+- 120 events · 264 sources · 20 indicators · 64 backlog leads.

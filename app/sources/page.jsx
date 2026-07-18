@@ -1,0 +1,3 @@
+import { sources } from "@/lib/data";
+export const metadata = { title: "Sources | LetsFixIndia" };
+export default function SourcesPage() { return <main className="page-section"><p className="eyebrow">Provenance</p><h1>Source ledger</h1><p className="lede">The source list is part of the record. Pending citations stay visible instead of becoming dead links.</p><div className="source-list">{sources.map((source) => <article className="source-item" key={source.id}><span>{source.type || "Source"}</span><h3>{source.title}</h3><p>{source.publisher}</p>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">Open source</a> : <span className="source-pending">Verification pending</span>}</article>)}</div></main>; }

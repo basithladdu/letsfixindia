@@ -1,0 +1,3 @@
+import { indicators } from "@/lib/data";
+export const metadata = { title: "Statistics | LetsFixIndia" };
+export default function StatisticsPage() { return <main className="page-section"><p className="eyebrow">Measures and limits</p><h1>Statistics</h1><p className="lede">Indicators are shown with their period, definition, and source. A change is not automatically a verdict.</p><div className="indicator-grid">{indicators.map((indicator) => <article className="indicator" key={indicator.id || indicator.name}><h3>{indicator.name || indicator.title}</h3><strong>{indicator.value || indicator.latest || "Recorded"}</strong><p>{indicator.note || indicator.description || "See the linked source for the definition and methodology."}</p></article>)}</div></main>; }

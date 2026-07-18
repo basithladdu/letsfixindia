@@ -34,7 +34,8 @@
     "outcome": "The Supreme Court intervened to stay demolitions in Jahangirpuri in April 2022. Multiple high courts criticised the demolitions as unconstitutional. The practice continued in BJP-governed states in 2023 and 2024; the Supreme Court issued broader guidelines in October 2024 restricting demolitions without due process.",
     "sources": [
       "hrwBulldozers2022",
-      "hrw2024"
+      "hrw2024",
+      "hrw2026"
     ]
   },
   {
@@ -89,7 +90,8 @@
     "summary": "Pehlu Khan, a dairy farmer from Haryana, was beaten to death by a mob in Alwar, Rajasthan while transporting cattle he had purchased legally. His sons and companions were also beaten. The attackers were identified by witnesses and survivors. HRW documented the case as part of a broader pattern of cow-vigilante violence enabled by official inaction.",
     "outcome": "Police initially filed charges against Pehlu Khan himself and his companions for alleged illegal transport. Charges against six named vigilante accused were dropped after a lower court found insufficient evidence; a higher court later challenged the discharge. No conviction had been secured as of 2026.",
     "sources": [
-      "hrwCowVigilantes2019"
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
     ]
   },
   {
@@ -107,7 +109,9 @@
     "summary": "Sixteen-year-old Junaid Khan was stabbed to death on a train near Ballabhgarh, Haryana, by a mob that targeted him and his brothers with slurs about beef and their Muslim identity. His brothers were also injured. The attack occurred during Eid shopping. The case drew national protests under the #NotInMyName movement.",
     "outcome": "Naresh Kumar was convicted of culpable homicide not amounting to murder and sentenced; he appealed. Other accused were acquitted at trial level. Police handling was criticised for initial reluctance to register a communal angle.",
     "sources": [
-      "hrw2024"
+      "hrw2024",
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
     ]
   },
   {
@@ -127,27 +131,6 @@
     "sources": [
       "hrwGharWapsi2015"
     ]
-  },
-  {
-    "id": "gujarat-2002-prelude",
-    "year": 2002,
-    "date": "27 February-March 2002",
-    "title": "Gujarat communal violence and state-complicity allegations",
-    "category": "Prelude",
-    "actors": [
-      "BJP-linked",
-      "State institution",
-      "Hindutva-linked"
-    ],
-    "status": "Court-tested",
-    "severity": "Severe",
-    "summary": "Before the prime-ministerial period, Narendra Modi was Gujarat chief minister during the 2002 communal violence. HRW alleged state participation and complicity; later Supreme Court proceedings upheld the SIT clean chit to Modi and others on larger-conspiracy allegations.",
-    "outcome": "HRW alleged state complicity. The Supreme Court upheld the SIT clean chit to Modi in 2022. Earlier Best Bakery and Naroda Patiya cases ended in convictions of local accused.",
-    "sources": [
-      "hrwGujarat2002",
-      "scGujarat2022"
-    ],
-    "archived": true
   },
   {
     "id": "vyapam-2014",
@@ -251,9 +234,11 @@
     "status": "Reported",
     "severity": "High",
     "summary": "Mohammad Akhlaq was killed by a mob in Dadri after accusations that beef was stored in his home. The case became a national symbol of cow-vigilante violence.",
-    "outcome": "The political response around the case sharpened national debate on majoritarian mobilization and impunity.",
+    "outcome": "HRW later placed Dadri within a wider cow-vigilante pattern. The political response around the case sharpened national debate on majoritarian mobilization and impunity.",
     "sources": [
-      "hrw2024"
+      "hrw2024",
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
     ]
   },
   {
@@ -304,9 +289,10 @@
     "status": "Official",
     "severity": "Medium",
     "summary": "The Ministry of Home Affairs suspended Greenpeace India's foreign-funding license and froze accounts, accusing the group of harming national economic interests.",
-    "outcome": "The action became an early marker in the decade-long conflict between the state and civil society organizations using FCRA restrictions.",
+    "outcome": "The action became an early marker in the decade-long conflict between the state and civil society organizations using FCRA restrictions, later cited by HRW as part of a wider toolkit against activists and NGOs.",
     "sources": [
-      "greenpeaceReuters"
+      "greenpeaceReuters",
+      "hrw2026"
     ]
   },
   {
@@ -359,7 +345,9 @@
     "summary": "Four Dalit youths were stripped, tied to a vehicle, and flogged in Una, Gujarat, by cow-protection vigilantes on the pretext of skinning a dead cow.",
     "outcome": "The attack triggered large Dalit protests and sharpened scrutiny of vigilante violence.",
     "sources": [
-      "hrw2024"
+      "hrw2024",
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
     ]
   },
   {
@@ -685,7 +673,7 @@
     "status": "Alleged",
     "severity": "High",
     "summary": "Junior foreign minister M.J. Akbar resigned after multiple women accused him of sexual harassment during his earlier journalism career. Akbar denied the allegations and said he would contest them in court.",
-    "outcome": "This is preserved as an attributed allegation plus ministerial resignation, not as a conviction.",
+    "outcome": "Akbar resigned from his ministerial post. In 2021, a Delhi court dismissed his criminal defamation lawsuit against journalist Priya Ramani, noting she had the right to speak out about her experience.",
     "sources": [
       "ieAkbar2018"
     ]
@@ -847,11 +835,14 @@
     ],
     "status": "Official",
     "severity": "High",
-    "summary": "The government revoked Jammu and Kashmir's special status, split the state into union territories, imposed a heavy security lockdown, restricted communications, and detained political leaders.",
-    "outcome": "The decision reshaped federalism and civil-liberties debate in India.",
+    "summary": "The government revoked Jammu and Kashmir's special status, split the state into union territories, imposed a heavy security lockdown, restricted movement, and cut communications. HRW documented the communications blackout and preventive detentions that followed the 5 August 2019 decision.",
+    "outcome": "The decision reshaped federalism and civil-liberties debate in India. Communications restrictions and detentions became a separate rights record alongside the constitutional change.",
     "sources": [
       "hrw2024",
-      "hrw2025"
+      "hrw2025",
+      "hrwKashmirComms2019",
+      "hrwKashmirRights2019",
+      "hrwShutdowns2023"
     ]
   },
   {
@@ -867,9 +858,10 @@
     "status": "Reported",
     "severity": "Severe",
     "summary": "Human Rights Watch reported at least 25 people killed after protests against CAA began, with deaths in BJP-governed Uttar Pradesh, Assam, and Karnataka.",
-    "outcome": "The crackdown became a major evidence point for excessive force, internet shutdowns, and criminalization of dissent.",
+    "outcome": "The crackdown became a major evidence point for excessive force, internet shutdowns, and criminalization of dissent around the Citizenship Amendment Act protests.",
     "sources": [
-      "hrwCaaDeadlyForce"
+      "hrwCaaDeadlyForce",
+      "hrwCaaReport"
     ]
   },
   {
@@ -904,10 +896,11 @@
     "status": "Reported",
     "severity": "Severe",
     "summary": "Delhi's worst communal violence in decades left 53 people dead and hundreds injured. HRW cited findings that police were complicit or failed to act while BJP leaders used inflammatory rhetoric against anti-CAA protesters.",
-    "outcome": "More than 1,900 FIRs were filed. Critics documented that UAPA and sedition charges were disproportionately applied to activists and journalists rather than named instigators.",
+    "outcome": "More than 1,900 FIRs were filed. Critics documented that UAPA and related charges were disproportionately applied to activists and journalists. HRW later noted that Umar Khalid, Sharjeel Imam, Gulfisha Fatima, and others remained jailed for years without trial in related cases.",
     "sources": [
       "hrwDelhi2020",
-      "hrwCaaReport"
+      "hrwCaaReport",
+      "hrw2026"
     ]
   },
   {
@@ -978,7 +971,7 @@
     "status": "Alleged",
     "severity": "Severe",
     "summary": "The Pegasus Project reported that Indian numbers connected to journalists, human-rights defenders, lawyers, officials, and opposition politicians appeared in leaked potential-target lists. Amnesty's forensic work confirmed infections in selected cases.",
-    "outcome": "The government did not provide a full public accounting, deepening concerns about surveillance impunity.",
+    "outcome": "The government denied unauthorized surveillance. A Supreme Court-appointed technical committee found no conclusive evidence of Pegasus malware on the 29 devices it inspected, but noted that the government did not cooperate fully with its inquiry.",
     "sources": [
       "hrwPegasus2021",
       "amnestyPegasus2021"
@@ -1114,25 +1107,6 @@
     "sources": [
       "ieAnkita2022",
       "ieAnkitaConviction2025"
-    ]
-  },
-  {
-    "id": "bulldozer-2022",
-    "year": 2022,
-    "date": "2022",
-    "title": "Punitive demolitions become a governance pattern",
-    "category": "Civil liberties",
-    "actors": [
-      "BJP-led government",
-      "State institution"
-    ],
-    "status": "Reported",
-    "severity": "High",
-    "summary": "Authorities in several BJP-governed states used demolition drives against homes and properties of alleged offenders or protest-linked communities, often before trial.",
-    "outcome": "The pattern drew human-rights criticism and later Supreme Court limits on arbitrary punitive demolitions.",
-    "sources": [
-      "hrw2024",
-      "hrw2026"
     ]
   },
   {
@@ -1275,7 +1249,7 @@
     "status": "Alleged",
     "severity": "High",
     "summary": "Hindenburg Research accused the Adani Group of improper use of offshore tax havens and stock manipulation; the Adani Group denied wrongdoing. Reuters reported the report triggered a major listed-stock rout and regulator scrutiny.",
-    "outcome": "The event is recorded as alleged market and regulator controversy; it should not be written as a proven conviction.",
+    "outcome": "The Adani Group denied all allegations of manipulation and fraud. The Supreme Court directed SEBI to complete its investigation, and SEBI subsequently conducted inquiries into the group's transactions.",
     "sources": [
       "reutersAdani2023",
       "reutersAdaniRout2023"
@@ -1371,9 +1345,11 @@
     "status": "Reported",
     "severity": "High",
     "summary": "Communal violence broke out in Haryana's Nuh district after a religious procession. Authorities later carried out demolition drives that critics described as punitive and discriminatory.",
-    "outcome": "The episode became part of the broader national record on vigilante mobilization and administrative punishment.",
+    "outcome": "The episode became part of the broader national record on vigilante mobilization and administrative punishment, including demolition drives criticized as punitive.",
     "sources": [
-      "hrw2024"
+      "hrw2024",
+      "hrwBulldozers2022",
+      "hrw2026"
     ]
   },
   {
@@ -1389,7 +1365,7 @@
     "status": "Alleged",
     "severity": "High",
     "summary": "Hindenburg alleged that SEBI chair Madhabi Puri Buch and her husband had held investments in offshore funds also used by Adani-linked entities. Buch, SEBI, Adani-linked entities, and 360 ONE denied or disputed key allegations.",
-    "outcome": "The case belongs in the dataset as an alleged financial-regulator conflict, not as a proven conviction.",
+    "outcome": "Buch and SEBI issued statements denying the conflict-of-interest allegations, terming them baseless, while opposition parties called for an independent inquiry.",
     "sources": [
       "reutersSebi2024"
     ]
@@ -1464,7 +1440,7 @@
     "status": "Index",
     "severity": "High",
     "summary": "RSF ranked India 159 out of 180 in the 2024 World Press Freedom Index, reflecting concerns over violence against journalists, media ownership concentration, and political pressure.",
-    "outcome": "India improved to 151 in 2025 but fell again to 157 in 2026.",
+    "outcome": "The 2024 rank of 159 sits between the 2014 rank of 140 and later ranks of 151 (2025) and 157 (2026) in the site's RSF indicator series. Methodology changes mean year-to-year ranks should be read carefully.",
     "sources": [
       "rsfIndia"
     ]
@@ -1854,8 +1830,8 @@
     ],
     "status": "Reported",
     "severity": "Severe",
-    "summary": "HRW reported that authorities expelled hundreds of Bengali-speaking Muslims and Rohingya refugees to Bangladesh without due process, including some Indian citizens.",
-    "outcome": "Bangladesh authorities reported more than 1,500 men, women, and children expelled in May and June.",
+    "summary": "HRW reported that authorities expelled hundreds of Bengali-speaking Muslims and Rohingya refugees to Bangladesh without due process, including some Indian citizens. The same chapter recorded Assam demolition drives in July–August that displaced more than 5,000 families, majority Bengali-speaking Muslims, and a fatal shooting in Goalpara during eviction clashes.",
+    "outcome": "Bangladesh authorities reported more than 1,500 men, women, and children expelled in May and June. Assam demolitions and Goalpara killing sit in the same HRW 2026 rights record as the cross-border expulsions.",
     "sources": [
       "hrw2026"
     ]
@@ -1891,7 +1867,7 @@
     "status": "Reported",
     "severity": "Severe",
     "summary": "HRW cited NHRC registrations of 113 deaths in police custody, 1,535 deaths in judicial custody, and 132 alleged extrajudicial killings in the first eight months of 2025.",
-    "outcome": "The figures anchor the site's security-force accountability tracker.",
+    "outcome": "HRW reported the NHRC registrations as part of its 2026 India rights assessment; no separate nationwide conviction tally is attached to these counts in the cited source.",
     "sources": [
       "hrw2026"
     ]
@@ -2061,6 +2037,210 @@
     "outcome": "The third Modi government is coalition-supported rather than a BJP single-party majority. That distinction is kept visible in the archive.",
     "sources": [
       "eci2024Atlas"
+    ]
+  },
+  {
+    "id": "kashmir-comms-blackout-2019",
+    "year": 2019,
+    "date": "5 August 2019 onward",
+    "title": "Jammu and Kashmir communications blackout after Article 370",
+    "category": "Civil liberties",
+    "actors": [
+      "BJP-led government",
+      "State institution",
+      "Security forces"
+    ],
+    "status": "Reported",
+    "severity": "Severe",
+    "summary": "After the Article 370 decision, authorities shut down internet, mobile networks, and for a period landlines across much of Jammu and Kashmir, alongside movement restrictions and preventive detentions. HRW described the blackout as disproportionate and harmful to medical care, livelihoods, and information access.",
+    "outcome": "HRW's later shutdown report stated the August 2019 internet shutdown lasted 213 days into March 2020, with mobile 4G access restricted for 550 days. The episode remains one of the longest communications blackouts documented in India.",
+    "sources": [
+      "hrwKashmirComms2019",
+      "hrwKashmirRights2019",
+      "hrwShutdowns2023",
+      "sflcShutdowns"
+    ]
+  },
+  {
+    "id": "shaheen-bagh-2019-2020",
+    "year": 2019,
+    "date": "December 2019 – March 2020",
+    "title": "Shaheen Bagh sit-in against CAA and NRC fears",
+    "category": "Protest",
+    "actors": [
+      "BJP-led government",
+      "State institution"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "A prolonged women-led sit-in at Shaheen Bagh in Delhi became the most visible sustained protest against the Citizenship Amendment Act and linked fears of a nationwide NRC. HRW's CAA reporting documented the discriminatory structure of the law and the repression that surrounded the protest wave.",
+    "outcome": "The sit-in ended amid the COVID-19 lockdown. It remains a public-record marker of mass constitutional protest and of the policing and political backlash that followed anti-CAA mobilization.",
+    "sources": [
+      "hrwCaaReport",
+      "hrwCaaDeadlyForce"
+    ]
+  },
+  {
+    "id": "ayodhya-sc-verdict-2019",
+    "year": 2019,
+    "date": "9 November 2019",
+    "title": "Supreme Court Ayodhya title verdict awards disputed site for temple",
+    "category": "Institutional integrity",
+    "actors": [
+      "State institution",
+      "BJP-linked",
+      "Hindutva-linked"
+    ],
+    "status": "Court-tested",
+    "severity": "High",
+    "summary": "A five-judge Supreme Court bench delivered the Ayodhya title judgment, awarding the disputed site for a Ram temple while directing alternate land for a mosque. The judgment closed the long-running title litigation after the 1992 Babri Masjid demolition.",
+    "outcome": "The verdict was a court order, not a parliamentary statute. It remained politically central to Hindutva mobilization and to later consecration politics, while critics treated the communal aftermath as part of the majoritarian public record.",
+    "sources": [
+      "scAyodhya2019",
+      "ieAyodhya2019"
+    ]
+  },
+  {
+    "id": "triple-talaq-act-2019",
+    "year": 2019,
+    "date": "31 July 2019",
+    "title": "Muslim Women (Protection of Rights on Marriage) Act criminalises instant triple talaq",
+    "category": "Civil liberties",
+    "actors": [
+      "BJP-led government",
+      "State institution"
+    ],
+    "status": "Official",
+    "severity": "High",
+    "summary": "Parliament enacted the Muslim Women (Protection of Rights on Marriage) Act, 2019, declaring instant triple talaq void and illegal and making pronouncement a cognizable offence punishable by up to three years' imprisonment, with subsistence and custody provisions for affected women.",
+    "outcome": "The government presented the Act as women's-rights reform after Supreme Court scrutiny of talaq-e-biddat. Critics argued criminalisation of a personal-law practice raised due-process and minority-rights concerns even while opposing instant triple talaq itself.",
+    "sources": [
+      "prsTripleTalaq2019",
+      "pibTripleTalaq2019"
+    ]
+  },
+  {
+    "id": "galwan-2020",
+    "year": 2020,
+    "date": "15–16 June 2020",
+    "title": "Galwan Valley clash kills 20 Indian soldiers on LAC with China",
+    "category": "Security and terror",
+    "actors": [
+      "State institution",
+      "Security forces",
+      "BJP-led government"
+    ],
+    "status": "Official",
+    "severity": "Severe",
+    "summary": "Indian Army statements confirmed 20 Indian soldiers killed in a violent face-off with Chinese troops in the Galwan Valley during a supposed de-escalation along the Line of Actual Control. Reporting described hand-to-hand fighting without firearms.",
+    "outcome": "The clash was the deadliest India-China border confrontation in decades and reshaped domestic security politics, military posture in Ladakh, and later commemorative politics. Chinese casualty figures were disclosed much later and remain contested in Indian assessments.",
+    "sources": [
+      "hinduGalwan2020",
+      "reutersGalwan2020"
+    ]
+  },
+  {
+    "id": "cow-vigilante-killings-2015-2018",
+    "year": 2019,
+    "date": "HRW tally covering May 2015 – December 2018",
+    "title": "HRW: at least 44 killed in cow-vigilante attacks",
+    "category": "Communal violence",
+    "actors": [
+      "Hindutva-linked",
+      "BJP-linked",
+      "State institution"
+    ],
+    "status": "Reported",
+    "severity": "Severe",
+    "summary": "Human Rights Watch reported that between May 2015 and December 2018 at least 44 people were killed in cow-protection vigilante attacks across multiple states, including 36 Muslims, with around 280 people injured in over 100 incidents. The report documented police stalling, victim-blaming, and political rhetoric that accompanied the violence.",
+    "outcome": "The tally aggregates cases also represented individually on this timeline (Dadri, Pehlu Khan, Junaid Khan, and related attacks). It remains the clearest rights-group quantitative marker for the cow-vigilante wave after 2014.",
+    "sources": [
+      "hrwCowVigilantes2019",
+      "hrwCowVigilantesNews2019"
+    ]
+  },
+  {
+    "id": "delhi-riots-accused-prolonged-detention",
+    "year": 2025,
+    "date": "Noted in HRW World Report 2026 (covering 2025)",
+    "title": "Delhi riots accused remain jailed for years without trial",
+    "category": "Civil liberties",
+    "actors": [
+      "State institution",
+      "BJP-led government",
+      "Security forces"
+    ],
+    "status": "Reported",
+    "severity": "Severe",
+    "summary": "HRW reported that the Delhi High Court refused bail to Umar Khalid, Sharjeel Imam, Gulfisha Fatima, and six others who had spent over five years in prison without trial in cases linked to the 2020 Delhi violence after anti-CAA protests.",
+    "outcome": "The prolonged pre-trial detention became a leading example of how UAPA and related process can silence dissenters long before any conviction. It sits beside the Delhi riots death toll as a separate due-process record.",
+    "sources": [
+      "hrw2026",
+      "hrwDelhi2020"
+    ]
+  },
+  {
+    "id": "internet-shutdowns-digital-india-2019-2023",
+    "year": 2023,
+    "date": "HRW report 14 June 2023 (pattern since 2014)",
+    "title": "HRW documents internet shutdowns as rights deprivation in Digital India",
+    "category": "Civil liberties",
+    "actors": [
+      "BJP-led government",
+      "State institution"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "HRW's 2023 report documented how central and state authorities used internet and communications shutdowns to deny access to work, pay, food, education, and emergency information, with Kashmir's post-2019 blackout as the extreme case and India repeatedly ranking among the world's heaviest users of shutdowns.",
+    "outcome": "The report complements SFLC tracker counts in the statistics section. It treats shutdowns as a governance tool with measurable human costs, not only as temporary security measures.",
+    "sources": [
+      "hrwShutdowns2023",
+      "sflcShutdowns",
+      "hrwKashmirComms2019"
+    ]
+  },
+  {
+    "id": "bihar-sir-2025",
+    "year": 2025,
+    "date": "24 June-30 September 2025",
+    "title": "Bihar electoral-roll revision triggers disenfranchisement and institutional-integrity dispute",
+    "category": "Elections and institutions",
+    "actors": [
+      "Election Commission of India",
+      "BJP-led NDA government",
+      "Opposition parties",
+      "Supreme Court"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "The Election Commission conducted a Special Intensive Revision of Bihar's electoral rolls before the state election. The Commission said the exercise was intended to remove dead, shifted, absent, or duplicate entries and protect electoral-roll integrity. The BJP-backed exercise drew opposition protests and concerns that documentation requirements could exclude eligible voters; the draft process reported about 65 lakh names not included.",
+    "outcome": "The Supreme Court directed publication of the omitted names and reasons and allowed Aadhaar and other listed documents for claims. The ECI later published a final roll and said the revision was completed. Allegations that the exercise was designed to benefit the BJP remain contested rather than judicially established.",
+    "sources": [
+      "eciBiharSir2025",
+      "ieBiharSirDraft2025",
+      "ieBiharSirCourt2025",
+      "apBiharSir2025"
+    ]
+  },
+  {
+    "id": "caste-enumeration-census-2025",
+    "year": 2025,
+    "date": "30 April 2025",
+    "title": "Cabinet approves caste enumeration in the upcoming national census",
+    "category": "Governance and social policy",
+    "actors": [
+      "Union government",
+      "Prime Minister Narendra Modi",
+      "Opposition parties"
+    ],
+    "status": "Official",
+    "severity": "High",
+    "summary": "The Cabinet Committee on Political Affairs approved the inclusion of caste enumeration in the upcoming national census. The government presented the decision as a social-justice and inclusion measure; independent reporting also noted its political significance ahead of Bihar's election and the long-standing opposition demand for updated caste data.",
+    "outcome": "The decision was incorporated into planning for Census 2027. Detailed implementation, categories, publication, and use of the resulting data remained future questions at the time of the announcement.",
+    "sources": [
+      "pibCasteCensus2025",
+      "apCasteCensus2025",
+      "ieCasteCensus2025"
     ]
   }
 ]
