@@ -341,5 +341,24 @@
         "value": 171418
       }
     ]
+  },
+  {
+    "title": "World Happiness Report rank",
+    "value": "126/143 to 118/147",
+    "detail": "India ranked 126th of 143 countries in the 2024 World Happiness Report and 118th of 147 in the 2025 report. The rank improved, but the country count and report year changed, so this should not be read as a direct measure of a government-caused change in happiness.",
+    "direction": "Higher rank, limited comparison",
+    "sources": [
+      "worldHappiness2025"
+    ],
+    "chart": [
+      {
+        "label": "2024",
+        "value": 126
+      },
+      {
+        "label": "2025",
+        "value": 118
+      }
+    ]
   }
 ]

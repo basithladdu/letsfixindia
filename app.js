@@ -20,6 +20,7 @@ const resultCount = document.querySelector("#resultCount");
 const yearRail = document.querySelector("#yearRail");
 const indicatorGrid = document.querySelector("#indicatorGrid");
 const sourceList = document.querySelector("#sourceList");
+const sourceSummary = document.querySelector("#sourceSummary");
 const submissionForm = document.querySelector("#submissionForm");
 const submissionQueue = document.querySelector("#submissionQueue");
 const tenureValue = document.querySelector("#tenureValue");
@@ -282,7 +283,12 @@ function renderIndicators() {
 }
 
 function renderSources() {
-  sourceList.innerHTML = Object.entries(sources).map(([id, source]) => `
+  const entries = Object.entries(sources);
+  const pending = entries.filter(([, source]) => !source.url).length;
+  if (sourceSummary) {
+    sourceSummary.textContent = `${entries.length} source records in the ledger; ${pending} awaiting URL verification.`;
+  }
+  sourceList.innerHTML = entries.map(([id, source]) => `
     <article class="source-item">
       <div>
         <span>${source.type}</span>
@@ -629,12 +635,40 @@ function renderVoices() {
   }).join("");
 }
 
+function setSideNav(open) {
+  const sideNav = document.querySelector("#sideNav");
+  const backdrop = document.querySelector("#navBackdrop");
+  const toggle = document.querySelector("#menuToggle");
+  if (!sideNav || !backdrop || !toggle) return;
+  if (open) backdrop.hidden = false;
+  requestAnimationFrame(() => {
+    sideNav.classList.toggle("is-open", open);
+    backdrop.classList.toggle("is-open", open);
+  });
+  sideNav.setAttribute("aria-hidden", String(!open));
+  toggle.setAttribute("aria-expanded", String(open));
+  if (!open) {
+    setTimeout(() => { backdrop.hidden = true; }, 240);
+  }
+}
+
 function bindEvents() {
   syncFilterDisclosure();
+
+  document.querySelector("#menuToggle")?.addEventListener("click", () => {
+    const isOpen = document.querySelector("#sideNav")?.classList.contains("is-open");
+    setSideNav(!isOpen);
+  });
+  document.querySelector("#menuClose")?.addEventListener("click", () => setSideNav(false));
+  document.querySelector("#navBackdrop")?.addEventListener("click", () => setSideNav(false));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setSideNav(false);
+  });
 
   document.addEventListener("click", (event) => {
     const link = event.target.closest("a[data-link]");
     if (!link) return;
+    if (link.closest("#sideNav")) setSideNav(false);
     const url = new URL(link.href);
     if (url.origin !== window.location.origin) return;
     const fromRoute = resolveRoute();

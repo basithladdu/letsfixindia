@@ -1536,5 +1536,11 @@
     "publisher": "The Indian Express",
     "url": "https://indianexpress.com/article/education/neet-ug-2024-sc-rules-out-cancellation-and-retest-paper-leak-final-verdict-9403650/lite/",
     "type": "Court report"
+  },
+  "worldHappiness2025": {
+    "title": "World Happiness Report 2025",
+    "publisher": "Wellbeing Research Centre, University of Oxford / Gallup / UN SDSN",
+    "url": "https://files.worldhappiness.report/WHR25.pdf",
+    "type": "International report"
   }
 }

@@ -35,7 +35,28 @@
         <a href="/faq" data-link>FAQ</a>
         <a href="/about" data-link>About</a>
       </nav>
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideNav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
     </header>
+
+    <div id="navBackdrop" class="nav-backdrop" hidden></div>
+    <nav id="sideNav" class="side-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <div class="side-nav-head">
+        <span>LetsFixIndia</span>
+        <button id="menuClose" class="menu-close" type="button" aria-label="Close menu">&times;</button>
+      </div>
+      <a href="/" data-link>Timeline</a>
+      <a href="/statistics" data-link>Stats</a>
+      <a href="/voices" data-link>Voices</a>
+      <a href="/submit" data-link>Submit</a>
+      <a href="/sources" data-link>Sources</a>
+      <a href="/methodology" data-link>Method</a>
+      <a href="/faq" data-link>FAQ</a>
+      <a href="/about" data-link>About</a>
+    </nav>
 
     <main id="top">
       <section class="hero route-page" data-page="timeline">
@@ -229,6 +250,7 @@
           <h2>Evidence used in this build</h2>
           <p>Raw notes are stored in the local raw folder. The live entries link to the source ledger below.</p>
         </div>
+        <p id="sourceSummary" class="source-summary" aria-live="polite"></p>
         <div id="sourceList" class="source-list"></div>
       </section>
 
@@ -350,7 +372,7 @@
           </details>
           <details class="faq-item">
             <summary>Is this an anti-BJP site?</summary>
-            <p>It is a critical record, and it says so openly. But criticism is bound by evidence rules: opposition claims are labelled as claims, allegations are not written as convictions, and indicators that improved under this government — GDP per capita, inflation, internet access, PLFS unemployment — are shown on the Stats page alongside the ones that worsened.</p>
+            <p>It is a critical record, and it says so openly (or as a popular online comment goes, "the human body is not meant to endure three BJP terms"). But criticism is bound by evidence rules: opposition claims are labelled as claims, allegations are not written as convictions, and indicators that improved under this government — GDP per capita, inflation, internet access, PLFS unemployment — are shown on the Stats page alongside the ones that worsened.</p>
           </details>
           <details class="faq-item">
             <summary>What do the evidence labels mean?</summary>
