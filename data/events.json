@@ -164,7 +164,7 @@
     "summary": "The Madhya Pradesh admissions and recruitment scam drew national scrutiny as witnesses, accused persons, and people connected to the case died in suspicious or unexplained circumstances.",
     "outcome": "The Supreme Court transferred the probe to the CBI in 2015 after public pressure over institutional credibility.",
     "sources": [
-      "wikipedia2026"
+      "ieVyapamCbi2015"
     ]
   },
   {
@@ -198,7 +198,7 @@
     "summary": "The government used ordinance powers to amend land acquisition law after parliamentary contestation, drawing criticism from farmers and opposition parties over consent and social-impact safeguards.",
     "outcome": "The ordinance path became an early flashpoint over executive power and rural consent.",
     "sources": [
-      "wikipedia2026"
+      "ieLandOrdinance2014"
     ]
   },
   {
@@ -270,7 +270,7 @@
     "summary": "After resistance in Parliament, the land acquisition amendment ordinance was re-promulgated, keeping alive changes opposed by farmers and civil-society groups.",
     "outcome": "The government withdrew the ordinance in August 2015 after Parliament declined to pass it.",
     "sources": [
-      "wikipedia2026"
+      "thLandOrdinanceReissue2015"
     ]
   },
   {
@@ -2006,6 +2006,61 @@
     "sources": [
       "reutersRupee2026",
       "reutersInflation2026"
+    ]
+  },
+  {
+    "id": "modi-first-election-win-2014",
+    "year": 2014,
+    "date": "16 May 2014",
+    "title": "BJP wins the 2014 Lok Sabha election; Narendra Modi is chosen prime minister",
+    "category": "Election and government",
+    "actors": [
+      "BJP-led government",
+      "Narendra Modi"
+    ],
+    "status": "Official",
+    "severity": "Context",
+    "summary": "The BJP won 282 of 543 Lok Sabha seats in the 2014 general election, giving the party a single-party majority. Narendra Modi was appointed prime minister and took office on 26 May 2014.",
+    "outcome": "The result began the Modi government period documented in this archive. The election result itself is recorded separately from later policy outcomes and controversies.",
+    "sources": [
+      "eci2014Results"
+    ]
+  },
+  {
+    "id": "modi-second-election-win-2019",
+    "year": 2019,
+    "date": "23 May 2019",
+    "title": "BJP wins a second consecutive Lok Sabha majority",
+    "category": "Election and government",
+    "actors": [
+      "BJP-led government",
+      "Narendra Modi"
+    ],
+    "status": "Official",
+    "severity": "Context",
+    "summary": "The BJP won 303 Lok Sabha seats in the 2019 general election, increasing its seat total from 282 in 2014. Narendra Modi returned as prime minister for a second consecutive term.",
+    "outcome": "The result gave the government another single-party majority and preceded the second-term decisions recorded elsewhere in this timeline.",
+    "sources": [
+      "eci2019Results"
+    ]
+  },
+  {
+    "id": "modi-third-election-win-2024",
+    "year": 2024,
+    "date": "4 June 2024",
+    "title": "BJP remains the largest party as the NDA returns Modi for a third term",
+    "category": "Election and government",
+    "actors": [
+      "BJP-led government",
+      "NDA",
+      "Narendra Modi"
+    ],
+    "status": "Official",
+    "severity": "Context",
+    "summary": "The 2024 Lok Sabha election made the BJP the largest party, while its NDA alliance secured the parliamentary majority needed to form the government. Narendra Modi was sworn in for a third term on 9 June 2024.",
+    "outcome": "The third Modi government is coalition-supported rather than a BJP single-party majority. That distinction is kept visible in the archive.",
+    "sources": [
+      "eci2024Atlas"
     ]
   }
 ]

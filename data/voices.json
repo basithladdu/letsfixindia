@@ -11,7 +11,9 @@
         "summary": "Said there was 'extreme intolerance' in India and 'religious extremism and negativity' were making people 'scared'; faced massive backlash and boycott calls.",
         "quote": "Religious extremism and intolerance is being taken to a new level... I sometimes feel scared.",
         "date": "2015-11",
-        "sources": ["src-v-srk-intolerance"]
+        "sources": [
+          "src-v-srk-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -36,6 +38,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -45,14 +63,6 @@
     "field": "Cricket",
     "description": "Former India cricket captain — one of the most followed Indians globally",
     "stances": [
-      {
-        "issue": "Pulwama / Balakot (2019)",
-        "position": "supported-govt",
-        "summary": "Expressed support for the Indian armed forces after the Pulwama attack and Balakot airstrike.",
-        "quote": null,
-        "date": "2019-02",
-        "sources": ["src-v-kohli-pulwama"]
-      },
       {
         "issue": "CAA-NRC protests (2019-2020)",
         "position": "silent",
@@ -84,6 +94,24 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "ambiguous",
+        "summary": "Condemned the civilian killings in Pahalgam and expressed solidarity with the armed forces' response.",
+        "quote": null,
+        "date": "2025-05",
+        "sources": [
+          "src-v-kohli-sindoor"
+        ]
       }
     ]
   },
@@ -99,7 +127,9 @@
         "summary": "Tweeted 'India's sovereignty cannot be compromised... Let's remain united as a nation' after Rihanna's tweet, using the #IndiaTogether and #IndiaAgainstPropaganda hashtags aligned with the government's messaging.",
         "quote": "India's sovereignty cannot be compromised. External forces can be spectators but not participants... Let's remain united as a nation. #IndiaTogether #IndiaAgainstPropaganda",
         "date": "2021-02-03",
-        "sources": ["src-v-sachin-farmers"]
+        "sources": [
+          "src-v-sachin-farmers"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -116,6 +146,24 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "ambiguous",
+        "summary": "Hailed the armed forces for their precise and bold response, stating that terrorism has no place in the world.",
+        "quote": null,
+        "date": "2025-05",
+        "sources": [
+          "src-v-sachin-sindoor"
+        ]
       }
     ]
   },
@@ -131,7 +179,9 @@
         "summary": "Said his wife Kiran Rao had suggested leaving India due to growing intolerance. Faced severe backlash, boycott campaigns, and lost brand endorsements.",
         "quote": "Kiran and I have lived all our lives in India. For the first time, she said, should we move out of India?",
         "date": "2015-11",
-        "sources": ["src-v-aamir-intolerance"]
+        "sources": [
+          "src-v-aamir-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -143,6 +193,22 @@
       },
       {
         "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -188,6 +254,24 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "ambiguous",
+        "summary": "Expressed condolences for the victims of the Pahalgam attack and commended the Indian Army for Operation Sindoor.",
+        "quote": null,
+        "date": "2025-05",
+        "sources": [
+          "src-v-amitabh-sindoor"
+        ]
       }
     ]
   },
@@ -203,7 +287,9 @@
         "summary": "Conducted a widely criticised 'non-political' interview with PM Modi before the 2019 general elections, asking about mangoes and childhood rather than policy.",
         "quote": null,
         "date": "2019-04",
-        "sources": ["src-v-akshay-modi-interview"]
+        "sources": [
+          "src-v-akshay-modi-interview"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -211,7 +297,9 @@
         "summary": "Tweeted in support of CAA: 'Proud of the government for not letting go of the persecuted minorities from our neighbouring countries.'",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-akshay-caa"]
+        "sources": [
+          "src-v-akshay-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -228,6 +316,24 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "ambiguous",
+        "summary": "Condemned the Pahalgam attack and praised the courage and precision of the Indian Armed Forces during Operation Sindoor.",
+        "quote": null,
+        "date": "2025-05",
+        "sources": [
+          "src-v-akshay-sindoor"
+        ]
       }
     ]
   },
@@ -243,7 +349,9 @@
         "summary": "Called protesting farmers 'terrorists' and Khalistanis on social media. Had her Twitter account permanently suspended for repeated violations.",
         "quote": null,
         "date": "2021-02",
-        "sources": ["src-v-kangana-farmers"]
+        "sources": [
+          "src-v-kangana-farmers"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -251,7 +359,9 @@
         "summary": "Publicly supported CAA and criticised protesters, called Shaheen Bagh protesters 'anti-national'.",
         "quote": null,
         "date": "2020-01",
-        "sources": ["src-v-kangana-caa"]
+        "sources": [
+          "src-v-kangana-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -267,7 +377,27 @@
         "summary": "Criticised the protesting wrestlers and questioned their motives.",
         "quote": null,
         "date": "2023-05",
-        "sources": ["src-v-kangana-wrestlers"]
+        "sources": [
+          "src-v-kangana-wrestlers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "supported-govt",
+        "summary": "Expressed outrage over the Pahalgam civilian killings and strongly praised the government's zero-tolerance stance and military response.",
+        "quote": null,
+        "date": "2025-05",
+        "sources": [
+          "src-v-kangana-sindoor"
+        ]
       }
     ]
   },
@@ -283,7 +413,9 @@
         "summary": "Visited JNU on 7 January 2020 to stand in solidarity with students attacked by masked assailants. Did not make a speech but her presence was widely seen as a statement. Faced massive boycott campaigns against her film Chhapaak.",
         "quote": null,
         "date": "2020-01-07",
-        "sources": ["src-v-deepika-jnu"]
+        "sources": [
+          "src-v-deepika-jnu"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -300,6 +432,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -310,14 +458,6 @@
     "description": "Actor, UN Goodwill Ambassador — one of India's most globally recognised figures",
     "stances": [
       {
-        "issue": "Balakot airstrike (2019)",
-        "position": "supported-govt",
-        "summary": "Tweeted 'Jai Hind #IndianArmedForces' after the Balakot airstrike. Later confronted at a public event by a Pakistani woman who called her a 'hypocrite' for supporting military action while being a UNICEF peace ambassador.",
-        "quote": "Jai Hind #IndianArmedForces",
-        "date": "2019-02",
-        "sources": ["src-v-priyanka-balakot"]
-      },
-      {
         "issue": "CAA-NRC protests (2019-2020)",
         "position": "ambiguous",
         "summary": "Liked an Instagram post supporting CAA protests but did not make a direct statement.",
@@ -327,6 +467,22 @@
       },
       {
         "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -372,6 +528,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -387,10 +559,28 @@
         "summary": "Tweeted 'Don't fall for any false propaganda against India or Indian policies' with #IndiaTogether and #IndiaAgainstPropaganda after Rihanna's tweet, echoing government messaging.",
         "quote": "Don't fall for any satisfying propaganda against India or Indian policies. #IndiaTogether #IndiaAgainstPropaganda",
         "date": "2021-02-03",
-        "sources": ["src-v-ajay-farmers"]
+        "sources": [
+          "src-v-ajay-farmers"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -411,7 +601,9 @@
         "summary": "Led a counter-march titled 'March for India' against the intolerance narrative. Called returning-award writers 'anti-national'.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-anupam-intolerance"]
+        "sources": [
+          "src-v-anupam-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -419,7 +611,9 @@
         "summary": "Actively campaigned in support of CAA, visited protest sites to counter anti-CAA protesters.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-anupam-caa"]
+        "sources": [
+          "src-v-anupam-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -427,12 +621,30 @@
         "summary": "Criticised the farmers' protests and questioned the protesters' motives.",
         "quote": null,
         "date": "2021-01",
-        "sources": ["src-v-anupam-farmers"]
+        "sources": [
+          "src-v-anupam-farmers"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
         "position": "silent",
         "summary": "No public statement found condemning the ethnic violence in Manipur.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
         "quote": null,
         "date": null,
         "sources": []
@@ -451,7 +663,9 @@
         "summary": "Participated in multiple anti-CAA protests including at Shaheen Bagh. Faced sustained online abuse and boycott campaigns.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-swara-caa"]
+        "sources": [
+          "src-v-swara-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -459,7 +673,9 @@
         "summary": "Openly supported the farmers' protests, visited protest sites at Delhi borders.",
         "quote": null,
         "date": "2020-12",
-        "sources": ["src-v-swara-farmers"]
+        "sources": [
+          "src-v-swara-farmers"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -467,7 +683,9 @@
         "summary": "Condemned the ethnic violence and criticised PM Modi's initial silence on the viral sexual assault video.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-swara-manipur"]
+        "sources": [
+          "src-v-swara-manipur"
+        ]
       },
       {
         "issue": "Wrestlers' protest (2023)",
@@ -475,7 +693,9 @@
         "summary": "Spoke out in support of protesting wrestlers against BJP MP Brij Bhushan Sharan Singh.",
         "quote": null,
         "date": "2023-05",
-        "sources": ["src-v-swara-wrestlers"]
+        "sources": [
+          "src-v-swara-wrestlers"
+        ]
       },
       {
         "issue": "Hathras case (2020)",
@@ -483,7 +703,27 @@
         "summary": "Condemned the gang rape and the UP government's handling of the case, including the midnight cremation.",
         "quote": null,
         "date": "2020-09",
-        "sources": ["src-v-swara-hathras"]
+        "sources": [
+          "src-v-swara-hathras"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "spoke-out",
+        "summary": "Participated in Jantar Mantar protests demanding an end to electoral bonds and criticized the timing of CAA notification to distract from disclosures.",
+        "quote": null,
+        "date": "2024-03",
+        "sources": [
+          "src-v-swara-electoral"
+        ]
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -499,7 +739,9 @@
         "summary": "Spoke about growing atmosphere of intolerance and fear in India.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-naseer-intolerance"]
+        "sources": [
+          "src-v-naseer-intolerance"
+        ]
       },
       {
         "issue": "Mob lynching / Bulandshahr (2018)",
@@ -507,7 +749,9 @@
         "summary": "Released a video expressing concern about mob violence and the Bulandshahr cow-related violence. Said he feared for his children's safety.",
         "quote": "In many areas we are witnessing that the weights of a cow is more than that of a police officer's.",
         "date": "2018-12",
-        "sources": ["src-v-naseer-bulandshahr"]
+        "sources": [
+          "src-v-naseer-bulandshahr"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -515,7 +759,27 @@
         "summary": "Criticised CAA and spoke against the government's response to student protesters.",
         "quote": null,
         "date": "2020-01",
-        "sources": ["src-v-naseer-caa"]
+        "sources": [
+          "src-v-naseer-caa"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "spoke-out",
+        "summary": "Signed a collective petition by civil society and artists raising concerns over democratic accountability and the electoral bonds disclosures.",
+        "quote": null,
+        "date": "2024-03",
+        "sources": [
+          "src-v-naseer-electoral"
+        ]
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -531,7 +795,9 @@
         "summary": "Spoke against rising intolerance and compared RSS to the Taliban.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-javed-intolerance"]
+        "sources": [
+          "src-v-javed-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -539,7 +805,9 @@
         "summary": "Criticised the Citizenship Amendment Act and supported the student protests.",
         "quote": null,
         "date": "2020-01",
-        "sources": ["src-v-javed-caa"]
+        "sources": [
+          "src-v-javed-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -547,7 +815,25 @@
         "summary": "Condemned the ethnic violence in Manipur and criticised PM Modi's silence.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-javed-manipur"]
+        "sources": [
+          "src-v-javed-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -563,7 +849,9 @@
         "summary": "Returned his National Award over rising intolerance and the Dadri lynching. One of the most prominent voices in the 'award wapsi' movement.",
         "quote": null,
         "date": "2015-10",
-        "sources": ["src-v-anurag-intolerance"]
+        "sources": [
+          "src-v-anurag-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -571,7 +859,9 @@
         "summary": "Actively criticised CAA on social media and called the government authoritarian.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-anurag-caa"]
+        "sources": [
+          "src-v-anurag-caa"
+        ]
       },
       {
         "issue": "Kashmir / Article 370 (2019)",
@@ -579,7 +869,27 @@
         "summary": "Criticised the communication blackout in Kashmir after Article 370 abrogation.",
         "quote": null,
         "date": "2019-08",
-        "sources": ["src-v-anurag-kashmir"]
+        "sources": [
+          "src-v-anurag-kashmir"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "spoke-out",
+        "summary": "Criticized the scheme as a form of institutional corruption and political bullying.",
+        "quote": null,
+        "date": "2024-03",
+        "sources": [
+          "src-v-anurag-electoral"
+        ]
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -595,7 +905,9 @@
         "summary": "Participated in an anti-CAA rally at Mumbai's August Kranti Maidan. One of the few A-list Bollywood figures to physically attend a protest.",
         "quote": "Every person, be it a man or woman, has the right to choose who they worship, what they eat and what they wear.",
         "date": "2019-12-19",
-        "sources": ["src-v-farhan-caa"]
+        "sources": [
+          "src-v-farhan-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -603,7 +915,25 @@
         "summary": "Condemned the violence and the viral video of two women being paraded naked.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-farhan-manipur"]
+        "sources": [
+          "src-v-farhan-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -619,7 +949,9 @@
         "summary": "Was among the most vocal critics. Criticised the government persistently on social media.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-prakash-intolerance"]
+        "sources": [
+          "src-v-prakash-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -627,7 +959,9 @@
         "summary": "Participated in anti-CAA protests and criticised the government.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-prakash-caa"]
+        "sources": [
+          "src-v-prakash-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -635,7 +969,9 @@
         "summary": "Supported farmers' protests and visited protest sites.",
         "quote": null,
         "date": "2021-01",
-        "sources": ["src-v-prakash-farmers"]
+        "sources": [
+          "src-v-prakash-farmers"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -643,7 +979,27 @@
         "summary": "Condemned the violence and called out the PM's silence.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-prakash-manipur"]
+        "sources": [
+          "src-v-prakash-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "spoke-out",
+        "summary": "Called the scheme the 'world's biggest scam' and criticized the opacity of corporate political funding following enforcement raids.",
+        "quote": null,
+        "date": "2024-03",
+        "sources": [
+          "src-v-prakash-electoral"
+        ]
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -659,7 +1015,9 @@
         "summary": "Actively spoke out against CAA on social media and supported the student protests.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-vishal-caa"]
+        "sources": [
+          "src-v-vishal-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -667,7 +1025,25 @@
         "summary": "Expressed solidarity with protesting farmers on social media.",
         "quote": null,
         "date": "2020-12",
-        "sources": ["src-v-vishal-farmers"]
+        "sources": [
+          "src-v-vishal-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -683,7 +1059,9 @@
         "summary": "Tweeted support for farmers using the hashtag #FarmersProtest. Faced IT raids on her properties which were widely seen as retaliatory.",
         "quote": null,
         "date": "2021-02",
-        "sources": ["src-v-taapsee-farmers"]
+        "sources": [
+          "src-v-taapsee-farmers"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -691,7 +1069,25 @@
         "summary": "Expressed concern about CAA on social media.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-taapsee-caa"]
+        "sources": [
+          "src-v-taapsee-caa"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -707,7 +1103,9 @@
         "summary": "Participated in protests against CAA and expressed solidarity with students at Jamia Millia Islamia.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-dia-caa"]
+        "sources": [
+          "src-v-dia-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -715,7 +1113,25 @@
         "summary": "Expressed support for farmers' rights.",
         "quote": null,
         "date": "2021-01",
-        "sources": ["src-v-dia-farmers"]
+        "sources": [
+          "src-v-dia-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -731,7 +1147,9 @@
         "summary": "Participated in anti-CAA protests in Mumbai and signed an open letter by filmmakers against CAA.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-konkona-caa"]
+        "sources": [
+          "src-v-konkona-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -739,7 +1157,25 @@
         "summary": "Condemned the violence on social media.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-konkona-manipur"]
+        "sources": [
+          "src-v-konkona-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -755,7 +1191,9 @@
         "summary": "Spoke out against CAA and participated in protests.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-richa-caa"]
+        "sources": [
+          "src-v-richa-caa"
+        ]
       },
       {
         "issue": "Galwan Valley clash (2022)",
@@ -763,7 +1201,25 @@
         "summary": "Tweeted 'Galwan says hi' which was interpreted as mocking the Indian soldiers killed in the 2020 Galwan clash. Apologised and deleted the tweet.",
         "quote": null,
         "date": "2022-11",
-        "sources": ["src-v-richa-galwan"]
+        "sources": [
+          "src-v-richa-galwan"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -779,7 +1235,9 @@
         "summary": "Directed The Kashmir Files (2022) depicting the exodus of Kashmiri Pandits. The film was actively promoted by PM Modi and BJP leaders, made tax-free in BJP-ruled states.",
         "quote": null,
         "date": "2022-03",
-        "sources": ["src-v-vivek-tkf"]
+        "sources": [
+          "src-v-vivek-tkf"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -787,12 +1245,30 @@
         "summary": "Actively supported CAA and criticised anti-CAA protesters.",
         "quote": null,
         "date": "2020-01",
-        "sources": ["src-v-vivek-caa"]
+        "sources": [
+          "src-v-vivek-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
         "position": "silent",
         "summary": "No public statement found condemning the ethnic violence.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
         "quote": null,
         "date": null,
         "sources": []
@@ -811,10 +1287,28 @@
         "summary": "Tweeted condemning the attack on JNU students. Called it 'horrifying'.",
         "quote": null,
         "date": "2020-01",
-        "sources": ["src-v-sonam-jnu"]
+        "sources": [
+          "src-v-sonam-jnu"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -852,6 +1346,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -884,6 +1394,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -899,7 +1425,9 @@
         "summary": "Praised demonetisation and said it would bring benefits to the Indian economy. Reliance Jio's digital payments push was seen as benefiting from the cash crunch.",
         "quote": null,
         "date": "2016-11",
-        "sources": ["src-v-ambani-demon"]
+        "sources": [
+          "src-v-ambani-demon"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -911,6 +1439,22 @@
       },
       {
         "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -931,7 +1475,9 @@
         "summary": "Called the Hindenburg short-seller report a 'calculated attack on India' and framed it as an attack on the nation rather than on his business. Opposition demands for a JPC probe were rejected.",
         "quote": null,
         "date": "2023-01",
-        "sources": ["src-v-adani-hindenburg"]
+        "sources": [
+          "src-v-adani-hindenburg"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -945,6 +1491,22 @@
         "issue": "Farmers' protests (2020-2021)",
         "position": "silent",
         "summary": "No public statement found. Adani-owned grain storage facilities were targeted by protesting farmers.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
         "quote": null,
         "date": null,
         "sources": []
@@ -963,7 +1525,9 @@
         "summary": "Publicly supported demonetisation, calling it a 'bold and visionary step'.",
         "quote": null,
         "date": "2016-11",
-        "sources": ["src-v-tata-demon"]
+        "sources": [
+          "src-v-tata-demon"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -971,10 +1535,28 @@
         "summary": "Expressed concern about the violence during protests but did not take a clear stance on the law itself.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-tata-caa"]
+        "sources": [
+          "src-v-tata-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -995,7 +1577,25 @@
         "summary": "Tweeted a CNN article about the internet shutdown at farmer protest sites with the comment 'why aren't we talking about this?!' to her 100M+ followers. Triggered a massive international spotlight and a coordinated government/celebrity counter-response.",
         "quote": "why aren't we talking about this?! #FarmersProtest",
         "date": "2021-02-02",
-        "sources": ["src-v-rihanna-farmers"]
+        "sources": [
+          "src-v-rihanna-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1011,7 +1611,25 @@
         "summary": "Shared a 'toolkit' document to support the farmers' protests. Indian police filed an FIR over the toolkit, and activist Disha Ravi was arrested in connection.",
         "quote": "Here's an updated toolkit by people on the ground in India if you want to help.",
         "date": "2021-02-03",
-        "sources": ["src-v-greta-farmers"]
+        "sources": [
+          "src-v-greta-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1027,7 +1645,25 @@
         "summary": "Tweeted support for the farmers' protests, calling them 'the largest protest in human history'. The Indian government objected to foreign commentary on internal matters.",
         "quote": null,
         "date": "2021-02",
-        "sources": ["src-v-meena-farmers"]
+        "sources": [
+          "src-v-meena-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1043,7 +1679,9 @@
         "summary": "Spoke about growing intolerance and said she was 'alarmed' by the atmosphere.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-shabana-intolerance"]
+        "sources": [
+          "src-v-shabana-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -1051,7 +1689,25 @@
         "summary": "Spoke against CAA and participated in protests. Signed open letters with other filmmakers.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-shabana-caa"]
+        "sources": [
+          "src-v-shabana-caa"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1084,6 +1740,22 @@
         "quote": null,
         "date": null,
         "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1099,7 +1771,9 @@
         "summary": "Actively spoke out on social media against CAA and police brutality on students.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-hansal-caa"]
+        "sources": [
+          "src-v-hansal-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -1107,7 +1781,9 @@
         "summary": "Supported the farmers' protests on social media.",
         "quote": null,
         "date": "2021-01",
-        "sources": ["src-v-hansal-farmers"]
+        "sources": [
+          "src-v-hansal-farmers"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -1115,7 +1791,25 @@
         "summary": "Condemned the violence and the government's response.",
         "quote": null,
         "date": "2023-07",
-        "sources": ["src-v-hansal-manipur"]
+        "sources": [
+          "src-v-hansal-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1131,7 +1825,9 @@
         "summary": "Actively participated in anti-CAA protests in Chennai and was vocal on social media.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-siddharth-caa"]
+        "sources": [
+          "src-v-siddharth-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -1139,7 +1835,25 @@
         "summary": "Supported farmers' protests openly on social media.",
         "quote": null,
         "date": "2021-01",
-        "sources": ["src-v-siddharth-farmers"]
+        "sources": [
+          "src-v-siddharth-farmers"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1155,10 +1869,28 @@
         "summary": "Dismissed the intolerance debate, saying it was manufactured and that India was a tolerant country.",
         "quote": null,
         "date": "2015-11",
-        "sources": ["src-v-nana-intolerance"]
+        "sources": [
+          "src-v-nana-intolerance"
+        ]
       },
       {
         "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
         "position": "silent",
         "summary": "No public statement found.",
         "quote": null,
@@ -1179,7 +1911,25 @@
         "summary": "Expressed concern about the impact of NRC and CAA on India's most vulnerable populations, especially children.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-satyarthi-caa"]
+        "sources": [
+          "src-v-satyarthi-caa"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
       }
     ]
   },
@@ -1195,7 +1945,9 @@
         "summary": "Expressed support for CAA, saying it would not affect any Indian citizen.",
         "quote": null,
         "date": "2019-12",
-        "sources": ["src-v-mary-caa"]
+        "sources": [
+          "src-v-mary-caa"
+        ]
       },
       {
         "issue": "Manipur violence (2023)",
@@ -1203,7 +1955,1107 @@
         "summary": "Being from Manipur, urged for peace and expressed anguish over the ethnic violence in her home state.",
         "quote": null,
         "date": "2023-05",
-        "sources": ["src-v-mary-manipur"]
+        "sources": [
+          "src-v-mary-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "sundar-pichai",
+    "name": "Sundar Pichai",
+    "field": "Business / Tech",
+    "description": "CEO of Alphabet and Google — international-Indian tech leader",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "satya-nadella",
+    "name": "Satya Nadella",
+    "field": "Business / Tech",
+    "description": "CEO of Microsoft — international-Indian tech leader",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "ambiguous",
+        "summary": "Expressed concern in Manhattan interview calling what is happening 'sad', but Microsoft later clarified he supports countries defining their own borders.",
+        "quote": "I think what is happening is sad... I would love to see a Bangladeshi immigrant who comes to India and creates the next unicorn.",
+        "date": "2020-01",
+        "sources": [
+          "src-v-nadella-caa"
+        ]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "neeraj-chopra",
+    "name": "Neeraj Chopra",
+    "field": "Sports",
+    "description": "Olympic gold medallist in javelin throw — India's premier track and field athlete",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "spoke-out",
+        "summary": "Expressed deep concern and disappointment over athletes being on the streets demanding justice, and called for transparent action.",
+        "quote": "It hurts me to see our athletes on the streets demanding justice. As a nation, we are responsible for safeguarding the integrity and dignity of every individual.",
+        "date": "2023-04",
+        "sources": [
+          "src-v-neeraj-wrestlers"
+        ]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "pv-sindhu",
+    "name": "PV Sindhu",
+    "field": "Sports",
+    "description": "Two-time Olympic medal-winning badminton player",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "arijit-singh",
+    "name": "Arijit Singh",
+    "field": "Music",
+    "description": "Singer and music composer — one of the most streamed artists in India",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "rajinikanth",
+    "name": "Rajinikanth",
+    "field": "South Cinema",
+    "description": "Actor and cultural icon in South Indian cinema",
+    "stances": [
+      {
+        "issue": "Demonetisation (2016)",
+        "position": "supported-govt",
+        "summary": "Hailed demonetisation, tweeting 'Hats off @narendramodi ji. New India is born #JaiHind'.",
+        "quote": "Hats off @narendramodi ji. New India is born #JaiHind",
+        "date": "2016-11",
+        "sources": [
+          "src-v-rajini-demo"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "supported-govt",
+        "summary": "Stated that CAA poses no threat to Muslims and that political parties are instigating protests, though added he would speak out if Muslims faced trouble.",
+        "quote": "CAA is no threat to Muslims. If they face trouble, I will be the first person to raise my voice.",
+        "date": "2020-02",
+        "sources": [
+          "src-v-rajini-caa"
+        ]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "kamal-haasan",
+    "name": "Kamal Haasan",
+    "field": "South Cinema / Politics",
+    "description": "Actor, filmmaker, and founder-president of Makkal Needhi Maiam (MNM)",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Strongly opposed CAA and filed a petition in the Supreme Court challenging its constitutional validity.",
+        "quote": "CAA is a direct blow to the secular fabric of the nation. We will fight this democratically.",
+        "date": "2019-12",
+        "sources": [
+          "src-v-kamal-caa"
+        ]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Supported the farmers' agitation and sent MNM delegations to the protest sites near Delhi.",
+        "quote": "The farmers are fighting for their rights, and we stand in absolute solidarity with them.",
+        "date": "2020-12",
+        "sources": [
+          "src-v-kamal-farmers"
+        ]
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "spoke-out",
+        "summary": "Criticized the union government's handling of ethnic clashes and violence in Manipur.",
+        "quote": "The state of Manipur is burning, and the silence of the leadership is deeply concerning.",
+        "date": "2023-07",
+        "sources": [
+          "src-v-kamal-manipur"
+        ]
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "thalapathy-vijay",
+    "name": "Thalapathy Vijay",
+    "field": "South Cinema / Politics",
+    "description": "Actor and founder-president of Tamilaga Vettri Kazhagam (TVK) party",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "spoke-out",
+        "summary": "Opposed the implementation of CAA in 2024, calling it unacceptable and asking the Tamil Nadu government to block it.",
+        "quote": "It is not acceptable to implement legislation like CAA in a country where citizens live in social harmony.",
+        "date": "2024-03",
+        "sources": [
+          "src-v-vijay-caa"
+        ]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "ranbir-kapoor",
+    "name": "Ranbir Kapoor",
+    "field": "Bollywood",
+    "description": "Actor — third-generation member of the Kapoor film family",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "ranveer-singh",
+    "name": "Ranveer Singh",
+    "field": "Bollywood",
+    "description": "Actor — recipient of multiple Filmfare awards",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "alia-bhatt",
+    "name": "Alia Bhatt",
+    "field": "Bollywood",
+    "description": "Actor — among the highest-paid actresses in India",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "ambiguous",
+        "summary": "Shared a photo of the Preamble to the Constitution on Instagram during the JNU violence/CAA protests in a show of solidarity with students, but did not issue a statement.",
+        "quote": null,
+        "date": "2019-12",
+        "sources": [
+          "src-v-alia-caa"
+        ]
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "katrina-kaif",
+    "name": "Katrina Kaif",
+    "field": "Bollywood",
+    "description": "Actor — established figure in Hindi cinema",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "karan-johar",
+    "name": "Karan Johar",
+    "field": "Bollywood",
+    "description": "Filmmaker, producer, and television host — head of Dharma Productions",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "sonu-sood",
+    "name": "Sonu Sood",
+    "field": "Bollywood",
+    "description": "Actor and philanthropist — gained national prominence for relief work during Covid lockdowns",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Expressed solidarity with protesting farmers, urging the government to resolve the issue respectably.",
+        "quote": "The farmer is the foundation of the country... I hope their demands are met and they return home safely.",
+        "date": "2020-12",
+        "sources": [
+          "src-v-sonu-farmers"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "diljit-dosanjh",
+    "name": "Diljit Dosanjh",
+    "field": "Music / South Cinema",
+    "description": "Punjabi singer, actor, and television presenter",
+    "stances": [
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "spoke-out",
+        "summary": "Vocally supported the farmers' protest, addressing the crowd in person at the Delhi-Haryana border, donating to winter supplies, and engaging in intense social media debates.",
+        "quote": "Farmers are protesting peacefully. Please listen to them; they are the heart of our country.",
+        "date": "2020-12",
+        "sources": [
+          "src-v-diljit-farmers"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "sunil-chhetri",
+    "name": "Sunil Chhetri",
+    "field": "Sports",
+    "description": "Footballer — former captain of the Indian national football team",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "abhinav-bindra",
+    "name": "Abhinav Bindra",
+    "field": "Sports",
+    "description": "Olympic gold medallist in shooting — India's first individual Olympic gold winner",
+    "stances": [
+      {
+        "issue": "Wrestlers' protest (2023)",
+        "position": "spoke-out",
+        "summary": "Expressed solidarity with the protesting wrestlers, stating that the situation was deeply concerning and called for an impartial investigation.",
+        "quote": "As an athlete, it is deeply unsettling to see our champions protesting on the streets. We must ensure a safe and just environment for all athletes.",
+        "date": "2023-04",
+        "sources": [
+          "src-v-bindra-wrestlers"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "anand-mahindra",
+    "name": "Anand Mahindra",
+    "field": "Business",
+    "description": "Chairman of Mahindra Group — active social media commentator on national development",
+    "stances": [
+      {
+        "issue": "Demonetisation (2016)",
+        "position": "supported-govt",
+        "summary": "Supported the demonetisation initiative as a significant step to counter corruption and transition to a digital economy.",
+        "quote": "A bold step to purge the economy. Hardships are temporary but benefits will be long term.",
+        "date": "2016-11",
+        "sources": [
+          "src-v-mahindra-demo"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "shreya-ghoshal",
+    "name": "Shreya Ghoshal",
+    "field": "Music",
+    "description": "Playback singer — recipient of multiple National Film Awards",
+    "stances": [
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "nandan-nilekani",
+    "name": "Nandan Nilekani",
+    "field": "Business",
+    "description": "Co-founder of Infosys and former Chairman of UIDAI (Aadhaar project)",
+    "stances": [
+      {
+        "issue": "Demonetisation (2016)",
+        "position": "supported-govt",
+        "summary": "Supported demonetisation as a positive force for digitizing India's financial system and accelerating cash-to-digital transition.",
+        "quote": "This is a massive step towards formalising the economy and boosting digital payments.",
+        "date": "2016-11",
+        "sources": [
+          "src-v-nilekani-demo"
+        ]
+      },
+      {
+        "issue": "CAA-NRC protests (2019-2020)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Farmers' protests (2020-2021)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Manipur violence (2023)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Electoral bonds disclosure (2024)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      },
+      {
+        "issue": "Pahalgam attack / Operation Sindoor (2025)",
+        "position": "silent",
+        "summary": "No public statement found.",
+        "quote": null,
+        "date": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": "dy-chandrachud",
+    "name": "D. Y. Chandrachud",
+    "field": "Judiciary",
+    "description": "Former Chief Justice of India who presided over the NEET-UG 2024 hearings",
+    "stances": [
+      {
+        "issue": "NEET-UG 2024 exam integrity",
+        "position": "ambiguous",
+        "summary": "As Chief Justice of India, questioned the NTA and examined whether the reported leak compromised the examination. The Supreme Court later found a paper leak in Patna and Hazaribagh but did not order a nationwide re-test because it found no evidence of a systemic breach.",
+        "quote": "The whole hypothesis that the entire paper was solved and given to students within 45 minutes seems far-fetched.",
+        "date": "2024-07",
+        "sources": [
+          "ieCjiNeet2024"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alakh-pandey",
+    "name": "Alakh Pandey",
+    "field": "Education",
+    "description": "Physics Wallah founder who filed a public-interest petition on NEET-UG 2024 scoring and grace marks",
+    "stances": [
+      {
+        "issue": "NEET-UG 2024 exam integrity",
+        "position": "spoke-out",
+        "summary": "Called for greater transparency in the conduct of NEET-UG 2024 and filed a Supreme Court petition questioning the basis for grace marks awarded to 1,563 candidates.",
+        "quote": null,
+        "date": "2024-06",
+        "sources": [
+          "ieAlakhNeet2024"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "abhishek-gupta-neet",
+    "name": "Abhishek Gupta",
+    "field": "Students",
+    "description": "NEET aspirant quoted in reporting on the 2024 result controversy",
+    "stances": [
+      {
+        "issue": "NEET-UG 2024 exam integrity",
+        "position": "spoke-out",
+        "summary": "Questioned the unprecedented use of grace marks and the distribution of top scores after the NEET-UG 2024 results.",
+        "quote": "The provision of grace marks this time has never happened in the history of any exam in India.",
+        "date": "2024-06",
+        "sources": [
+          "htAbhishekNeet2024"
+        ]
       }
     ]
   }

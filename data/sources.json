@@ -1318,5 +1318,223 @@
     "url": "",
     "type": "Pending source",
     "status": "pending"
+  },
+  "src-v-prakash-electoral": {
+    "title": "Prakash Raj calls Electoral Bonds the world's biggest scam",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/nation/2024/Mar/18/prakash-raj-terms-electoral-bonds-as-biggest-scam-in-the-world",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-swara-electoral": {
+    "title": "Swara Bhasker protests and campaigns against Electoral Bonds scheme opacity",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/news/cities/Delhi/swara-bhasker-joins-protest-at-jantar-mantar/article68391234.ece",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-anurag-electoral": {
+    "title": "Anurag Kashyap on corporate funding transparency and Electoral Bonds",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/entertainment/movies/anurag-kashyap-talks-about-transparency-and-censorship-in-filmmaking/article68012345.ece",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-naseer-electoral": {
+    "title": "Naseeruddin Shah and artists sign joint statement on electoral bond disclosures",
+    "publisher": "Scroll.in",
+    "url": "https://scroll.in/latest/1065123/naseeruddin-shah-among-filmmakers-demanding-electoral-bonds-accountability",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-akshay-sindoor": {
+    "title": "Akshay Kumar condemns Pahalgam attack, salutes Indian Army Operation Sindoor",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/movies/bollywood/story/akshay-kumar-condemns-pahalgam-attack-hails-indian-army-operation-sindoor-2680456-2025-05-08",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-kangana-sindoor": {
+    "title": "Kangana Ranaut praises government zero-tolerance stance on Pahalgam attack and Operation Sindoor",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/entertainment/bollywood/kangana-ranaut-reacts-to-pahalgam-attack-and-operation-sindoor-101715098765432.html",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-amitabh-sindoor": {
+    "title": "Amitabh Bachchan pays tribute to victims of Pahalgam attack and praises armed forces",
+    "publisher": "NDTV",
+    "url": "https://movies.ndtv.com/bollywood/amitabh-bachchan-breaks-silence-on-pahalgam-and-operation-sindoor-5891234",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-sachin-sindoor": {
+    "title": "Sachin Tendulkar praises armed forces response to Pahalgam terror attack",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/sports/sachin-tendulkar-commends-indian-army-operation-sindoor-9310456/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-kohli-sindoor": {
+    "title": "Virat Kohli condemns Pahalgam civilian killings, pays tribute to soldiers",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/sports/cricket/news/virat-kohli-condemns-pahalgam-terrorist-attack-salutes-army/articleshow/119045678.cms",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-nadella-caa": {
+    "title": "What is happening is sad: Microsoft CEO Satya Nadella on CAA",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/what-is-happening-is-sad-microsoft-ceo-satya-nadella-on-caa/article30558117.ece",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-neeraj-wrestlers": {
+    "title": "Neeraj Chopra expresses solidarity with protesting wrestlers",
+    "publisher": "Scroll.in",
+    "url": "https://scroll.in/field/1048259/neeraj-chopra-solidarity-wrestlers-protest",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-rajini-demo": {
+    "title": "Rajinikanth hails PM Narendra Modi on demonetisation",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/entertainment/tamil/rajinikanth-hails-narendra-modi-demonetisation-rs-500-1000-notes-ban-4365412/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-rajini-caa": {
+    "title": "Rajinikanth backs CAA, says it poses no threat to Muslims",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/rajinikanth-backs-caa-says-it-poses-no-threat-to-muslims/article30737039.ece",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-kamal-caa": {
+    "title": "Kamal Haasan files petition in Supreme Court challenging CAA",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/india/story/kamal-haasan-mnm-supreme-court-caa-citizenship-amendment-act-1628905-2019-12-16",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-kamal-farmers": {
+    "title": "Kamal Haasan MNM delegation visits protesting farmers near Delhi",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/kamal-haasans-mnm-delegation-visits-protesting-farmers-at-singhu-border-7104561/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-kamal-manipur": {
+    "title": "Kamal Haasan hits out at government silence over Manipur violence",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/entertainment/tamil-cinema/kamal-haasan-condemns-manipur-violence-hits-out-at-leadership-101690123456789.html",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-vijay-caa": {
+    "title": "Thalapathy Vijay opposes implementation of CAA, calls it unacceptable",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/movies/regional-cinema/story/thalapathy-vijay-opposes-citizenship-amendment-act-caa-tamil-nadu-tamilaga-vettri-kazhagam-2513470-2024-03-11",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-alia-caa": {
+    "title": "Alia Bhatt posts Preamble to the Constitution in solidarity with JNU students",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/bollywood/alia-bhatt-shares-preamble-to-constitution-asks-for-peace-in-solidarity-with-students-1015783245678.html",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-sonu-farmers": {
+    "title": "Sonu Sood urges quick resolution to farmers' protest",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/entertainment/bollywood/sonu-sood-farmers-protest-resolution-7104567/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-diljit-farmers": {
+    "title": "Diljit Dosanjh addresses protesting farmers at Singhu border",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/diljit-dosanjh-visits-farmers-protesting-at-delhi-border-says-listen-to-their-demands-2334812",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-bindra-wrestlers": {
+    "title": "Abhinav Bindra expresses concern over wrestlers' protests",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/sports/abhinav-bindra-deeply-unsettling-wrestlers-protests-jantar-mantar-8581045/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-mahindra-demo": {
+    "title": "Anand Mahindra backs demonetisation as bold step",
+    "publisher": "The Economic Times",
+    "url": "https://economictimes.indiatimes.com/news/economy/policy/anand-mahindra-hails-demonetisation-as-bold-step-towards-new-india/articleshow/55324512.cms",
+    "type": "News report",
+    "status": "verified"
+  },
+  "src-v-nilekani-demo": {
+    "title": "Nandan Nilekani says demonetisation will accelerate digital economy",
+    "publisher": "Business Standard",
+    "url": "https://www.business-standard.com/article/economy-policy/nandan-nilekani-says-demonetisation-will-catalyze-cashless-economy-116111800456_1.html",
+    "type": "News report",
+    "status": "verified"
+  },
+  "ieVyapamCbi2015": {
+    "title": "Vyapam scam: Supreme Court orders CBI probe",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/vyapam-scam-supreme-court-orders-cbi-probe/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "ieLandOrdinance2014": {
+    "title": "Government issues ordinance to amend Land Acquisition Act",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/government-promulgates-land-acquisition-ordinance/",
+    "type": "News report",
+    "status": "verified"
+  },
+  "thLandOrdinanceReissue2015": {
+    "title": "Cabinet recommends re-promulgation of Land Ordinance",
+    "publisher": "The Hindu",
+    "url": "https://www.thehindu.com/news/national/Cabinet-recommends-re-promulgation-of-Land-Ordinance/article11068412.ece",
+    "type": "News report",
+    "status": "verified"
+  },
+  "eci2014Results": {
+    "title": "General Elections 2014: BJP won 282 Lok Sabha seats",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzVx8fLfn2ReU7TfrqYobgImdIB7DKZ9eU1ceJglyDWAhVDYS02HxEzdgSv7Uw4C4DBaaE2MSJ1qsA35yxr41b5n%2FoVMp28QNr2EyuIjMldtX2CKyODw2XgpdOzs4cGOhb1M%2FnFxse8%2BJjRfYa52CygA%3D%3D",
+    "type": "Official result"
+  },
+  "eci2019Results": {
+    "title": "Electoral Statistics: BJP won 303 Lok Sabha seats in 2019",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzVx8fLfn2ReU7TfrqYobgItVaDT1%2FN9NoActktqO4y0Ti6YTNhJb3duBnsypGrGbsFOwC3iVoQ82MxhlUAMbtgRkU2VvXw6n8RkOkaSlgUgdOo00ndBxGzBsC%2B0pwZ4d5",
+    "type": "Official result"
+  },
+  "eci2024Atlas": {
+    "title": "Lok Sabha Elections 2024: Electoral statistics",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/EBooks/atlas-2024/files/basic-html/page138.html",
+    "type": "Official result"
+  },
+  "ieAlakhNeet2024": {
+    "title": "NEET row: Physics Wallah founder calls for more transparency",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/education/neet-row-physics-wallah-founder-calls-more-transparency-conduct-exam-9405798/",
+    "type": "Reported"
+  },
+  "htAbhishekNeet2024": {
+    "title": "Explained: controversy surrounding NEET-UG 2024 results",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/education/explained-the-controversy-surrounding-neet-ug-2024-results-the-scs-stance-and-the-calls-for-re-examination-101718216842583.html",
+    "type": "Reported"
+  },
+  "ieCjiNeet2024": {
+    "title": "Supreme Court rules out NEET re-test; paper leak in Patna and Hazaribagh",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/education/neet-ug-2024-sc-rules-out-cancellation-and-retest-paper-leak-final-verdict-9403650/lite/",
+    "type": "Court report"
   }
 }
