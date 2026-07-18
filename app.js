@@ -21,11 +21,16 @@ const yearRail = document.querySelector("#yearRail");
 const indicatorGrid = document.querySelector("#indicatorGrid");
 const sourceList = document.querySelector("#sourceList");
 const sourceSummary = document.querySelector("#sourceSummary");
+const sourceSearchInput = document.querySelector("#sourceSearchInput");
 const submissionForm = document.querySelector("#submissionForm");
 const submissionQueue = document.querySelector("#submissionQueue");
 const tenureValue = document.querySelector("#tenureValue");
 const homeRecentList = document.querySelector("#homeRecentList");
 const recordView = document.querySelector("#recordView");
+const archiveList = document.querySelector("#archiveList");
+const defaultTitle = document.title;
+const defaultDescription = document.querySelector('meta[name="description"]');
+const defaultDescriptionText = defaultDescription?.content || "";
 const routePages = Array.from(document.querySelectorAll("[data-page]"));
 const advancedFilters = document.querySelector("#advancedFilters");
 const scrollDock = document.querySelector("#scrollDock");
@@ -34,8 +39,10 @@ const voicesSummary = document.querySelector("#voicesSummary");
 const voiceFieldFilter = document.querySelector("#voiceFieldFilter");
 const voiceStanceFilter = document.querySelector("#voiceStanceFilter");
 const voiceIssueFilter = document.querySelector("#voiceIssueFilter");
+const voiceSearchInput = document.querySelector("#voiceSearchInput");
 
-const voiceState = { field: "all", stance: "all", issue: "all" };
+const voiceState = { query: "", field: "all", stance: "all", issue: "all" };
+const sourceState = { query: "" };
 
 const TIMELINE_LAST_SCROLL_KEY = "letsFixIndia.timeline.lastY";
 const TIMELINE_RETURN_SCROLL_KEY = "letsFixIndia.timeline.returnY";
@@ -245,6 +252,26 @@ function renderTimeline() {
   `).join("");
 }
 
+function renderArchive() {
+  if (!archiveList) return;
+  const archived = events.filter((event) => event.archived).sort(byTimeline);
+  archiveList.innerHTML = archived.length
+    ? archived.map((event) => `
+      <article class="archive-card ${String(event.severity || "").toLowerCase()}">
+        <div class="event-meta"><span>${event.date}</span><span>${event.status}</span></div>
+        <h3>${event.title}</h3>
+        <div class="chips">
+          <span class="${chipClass(event.category)}">${event.category}</span>
+          ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${actor}</span>`).join("")}
+        </div>
+        <p>${event.summary}</p>
+        <p class="outcome">${event.outcome}</p>
+        <div class="source-links source-inline" aria-label="Sources for ${event.title}">${sourceLinks(event.sources)}</div>
+      </article>
+    `).join("")
+    : `<div class="empty-state">No archived context records are currently available.</div>`;
+}
+
 function renderHomeRecent() {
   const recent = [...events].sort(byTimeline).slice(0, 6);
   homeRecentList.innerHTML = recent.map((event) => `
@@ -284,11 +311,15 @@ function renderIndicators() {
 
 function renderSources() {
   const entries = Object.entries(sources);
-  const pending = entries.filter(([, source]) => !source.url).length;
+  const query = sourceState.query;
+  const filtered = entries.filter(([, source]) =>
+    !query || `${source.title} ${source.publisher} ${source.type}`.toLowerCase().includes(query)
+  );
+  const pending = filtered.filter(([, source]) => !source.url).length;
   if (sourceSummary) {
-    sourceSummary.textContent = `${entries.length} source records in the ledger; ${pending} awaiting URL verification.`;
+    sourceSummary.textContent = `${filtered.length} of ${entries.length} source records shown; ${pending} awaiting URL verification.`;
   }
-  sourceList.innerHTML = entries.map(([id, source]) => `
+  sourceList.innerHTML = filtered.map(([id, source]) => `
     <article class="source-item">
       <div>
         <span>${source.type}</span>
@@ -340,6 +371,38 @@ function renderRecord(id) {
   `;
 }
 
+function updatePageMeta(route) {
+  let title = defaultTitle;
+  let description = defaultDescriptionText;
+  if (route.page === "voices") {
+    title = "Public Voices | LetsFixIndia";
+    description = "Documented public statements, silence, and institutional responses to major Modi-era controversies.";
+  } else if (route.page === "faq") {
+    title = "FAQ | LetsFixIndia";
+    description = "How LetsFixIndia classifies evidence, handles corrections, and separates public records from unresolved leads.";
+  } else if (route.page === "archive") {
+    title = "Pre-2014 Archive | LetsFixIndia";
+    description = "Historical context records kept outside the 2014-2026 LetsFixIndia timeline scope.";
+  } else if (route.page === "record") {
+    const event = events.find((item) => item.id === route.id);
+    if (event) {
+      title = `${event.title} | LetsFixIndia`;
+      description = event.summary;
+    } else {
+      title = "Record not found | LetsFixIndia";
+      description = "The requested record is not present in the current LetsFixIndia data files.";
+    }
+  } else if (route.page === "statistics") {
+    title = "Statistics | LetsFixIndia";
+    description = "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.";
+  } else if (route.page === "sources") {
+    title = "Sources | LetsFixIndia";
+    description = "The source ledger behind LetsFixIndia public-record entries and research queue.";
+  }
+  document.title = title;
+  if (defaultDescription) defaultDescription.content = description;
+}
+
 function routeFromPath(pathname) {
   const path = pathname.replace(/\/+$/, "") || "/";
   if (path.startsWith("/record/")) {
@@ -353,6 +416,7 @@ function routeFromPath(pathname) {
   if (path === "/methodology") return { page: "methodology" };
   if (path === "/faq") return { page: "faq" };
   if (path === "/about") return { page: "about" };
+  if (path === "/archive") return { page: "archive" };
   return { page: "timeline" };
 }
 
@@ -375,6 +439,7 @@ function setActiveNav(page) {
 
 function renderRoute(options = {}) {
   const route = resolveRoute();
+  updatePageMeta(route);
   routePages.forEach((section) => section.classList.toggle("is-active", section.dataset.page === route.page));
   setActiveNav(route.page);
   if (route.page === "record") {
@@ -382,6 +447,9 @@ function renderRoute(options = {}) {
   }
   if (route.page === "voices") {
     renderVoices();
+  }
+  if (route.page === "archive") {
+    renderArchive();
   }
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
   requestAnimationFrame(() => {
@@ -529,7 +597,9 @@ function populateVoiceIssues() {
 }
 
 function voiceMatchesFilters(voice) {
-  const { field, stance, issue } = voiceState;
+  const { query, field, stance, issue } = voiceState;
+  const searchText = `${voice.name} ${voice.field} ${voice.description}`.toLowerCase();
+  if (query && !searchText.includes(query)) return false;
   if (field !== "all" && !voice.field.includes(field)) return false;
   if (stance !== "all" || issue !== "all") {
     const matchingStances = voice.stances.filter((s) => {
@@ -787,6 +857,14 @@ function bindEvents() {
     voiceState.issue = event.target.value;
     renderVoices();
   });
+  voiceSearchInput?.addEventListener("input", (event) => {
+    voiceState.query = event.target.value.trim().toLowerCase();
+    renderVoices();
+  });
+  sourceSearchInput?.addEventListener("input", (event) => {
+    sourceState.query = event.target.value.trim().toLowerCase();
+    renderSources();
+  });
 
   submissionQueue.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-remove-draft]");
@@ -820,6 +898,7 @@ async function init() {
     renderOptions();
     renderIndicators();
     renderSources();
+    renderArchive();
     renderHomeRecent();
     populateVoiceIssues();
     calculateTenure();

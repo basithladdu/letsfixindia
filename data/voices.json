@@ -463,7 +463,9 @@
         "summary": "Liked an Instagram post supporting CAA protests but did not make a direct statement.",
         "quote": null,
         "date": null,
-        "sources": []
+        "sources": [
+          "src-v-priyanka-caa"
+        ]
       },
       {
         "issue": "Farmers' protests (2020-2021)",

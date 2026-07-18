@@ -1,0 +1,9 @@
+{
+  "name": "letsfixindia-record",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate-data.mjs",
+    "serve": "node tools/static-server.mjs"
+  }
+}

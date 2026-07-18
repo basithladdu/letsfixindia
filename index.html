@@ -250,6 +250,10 @@
           <h2>Evidence used in this build</h2>
           <p>Raw notes are stored in the local raw folder. The live entries link to the source ledger below.</p>
         </div>
+        <label class="source-search">
+          <span>Search sources</span>
+          <input id="sourceSearchInput" type="search" placeholder="Publisher, title, or source type">
+        </label>
         <p id="sourceSummary" class="source-summary" aria-live="polite"></p>
         <div id="sourceList" class="source-list"></div>
       </section>
@@ -311,6 +315,7 @@
             <h3>How people can help</h3>
             <p>Submit missing events, verify sources, translate records, check court updates, improve weak Wikipedia-only leads, and flag over-strong wording before it becomes public.</p>
             <a class="text-button" href="/submit" data-link>Submit a sourced record</a>
+            <a class="text-button" href="/archive" data-link>Open pre-2014 archive</a>
           </article>
         </div>
       </section>
@@ -324,6 +329,10 @@
         <div class="voices-toolbar">
           <div class="voices-summary" id="voicesSummary"></div>
           <div class="voices-filter-bar">
+            <label>
+              <span>Search people</span>
+              <input id="voiceSearchInput" type="search" placeholder="Name or field">
+            </label>
             <label>
               <span>Field</span>
               <select id="voiceFieldFilter">
@@ -380,7 +389,7 @@
           </details>
           <details class="faq-item">
             <summary>Why does the timeline start at 2014?</summary>
-            <p>Because even a project has to start somewhere, and 26 May 2014 is when the current management took over. The decades before it — 2002 included — are not being spared; they are simply waiting their turn. Pre-2014 records are already archived in the data files and will be added as a proper section. Patience: the file is growing.</p>
+            <p>Because 26 May 2014 is when the current management took over. Earlier context, including 2002, is kept separately in the <a href="/archive" data-link>pre-2014 archive</a>, outside the 2014-2026 timeline scope.</p>
           </details>
           <details class="faq-item">
             <summary>Why are some entries sourced to Wikipedia?</summary>
@@ -403,6 +412,15 @@
             <p>No analytics, no cookies, no accounts. Submission drafts and your timeline reading position are stored only in your own browser's local storage and never leave your device.</p>
           </details>
         </div>
+      </section>
+
+      <section id="archive" class="section archive-section route-page" data-page="archive">
+        <div class="archive-banner">
+          <p class="eyebrow">Historical context</p>
+          <h2>Pre-2014 archive</h2>
+          <p>These records provide context for the main timeline. They are outside the 2014-2026 scope and are not included in live timeline totals or filters.</p>
+        </div>
+        <div id="archiveList" class="archive-list" aria-live="polite"></div>
       </section>
 
       <section id="recordView" class="section record-view route-page" data-page="record"></section>
