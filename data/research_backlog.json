@@ -1,0 +1,834 @@
+[
+  {
+    "id": "130th-constitutional-amendment-bill",
+    "title": "130th Constitutional Amendment Bill",
+    "years": "2025",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added to timeline as amendment-130-2025.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "1957-ramnad-riots",
+    "title": "1957 Ramnad riots",
+    "years": "1957",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "1961-jabalpur-riots",
+    "title": "1961 Jabalpur riots",
+    "years": "1961",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "1966-anti-cow-slaughter-riot",
+    "title": "1966 anti-cow slaughter riot",
+    "years": "1966",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "1970-bhiwandi-riots",
+    "title": "1970 Bhiwandi riots",
+    "years": "1970",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "1985-gujarat-riots",
+    "title": "1985 Gujarat riots",
+    "years": "1985",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2001-odisha-assembly-attack",
+    "title": "2001 Odisha Assembly attack",
+    "years": "2001",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "2002-gujarat-violence",
+    "title": "2002 Gujarat violence",
+    "years": "2002",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Already included as pre-2014 context entry.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2006-vadodara-riots",
+    "title": "2006 Vadodara riots",
+    "years": "2006",
+    "sourcePage": "Political riots / Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 Gujarat BJP context; backlog only.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2007-kolkata-riots",
+    "title": "2007 Kolkata riots",
+    "years": "2007",
+    "sourcePage": "Political riots / West Bengal violence",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2010-deganga-riots",
+    "title": "2010 Deganga riots",
+    "years": "2010",
+    "sourcePage": "West Bengal violence",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 and not clearly BJP.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2013-canning-riots",
+    "title": "2013 Canning riots",
+    "years": "2013",
+    "sourcePage": "West Bengal violence",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 and not clearly BJP.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2013-marakkanam-violence",
+    "title": "2013 Marakkanam violence",
+    "years": "2013",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 and not clearly BJP.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "2015-sandalwood-smugglers-encounter-in-andhra-pradesh",
+    "title": "2015 sandalwood smugglers encounter in Andhra Pradesh",
+    "years": "2015",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "NDA-era but not clearly BJP-directed; needs source.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2016-dhulagarh-riots",
+    "title": "2016 Dhulagarh riots",
+    "years": "2016",
+    "sourcePage": "West Bengal violence",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Not BJP-governed; needs source-specific link.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2016-kaliachak-riots",
+    "title": "2016 Kaliachak riots",
+    "years": "2016",
+    "sourcePage": "Political riots / West Bengal violence",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Not clearly BJP-governed; backlog only.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2016-2017-kashmir-unrest",
+    "title": "2016-2017 Kashmir unrest",
+    "years": "2016-2017",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as kashmir-unrest-2016.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2017-baduria-riots",
+    "title": "2017 Baduria riots",
+    "years": "2017",
+    "sourcePage": "West Bengal violence",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Not BJP-governed; source-specific BJP/RSS role needed.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2018-bengali-teacher-recruitment-movement",
+    "title": "2018 Bengali teacher recruitment movement",
+    "years": "2018",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "West Bengal state issue; backlog only.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2018-thoothukudi-protest-shooting",
+    "title": "2018 Thoothukudi protest shooting",
+    "years": "2018",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "AIADMK-era Tamil Nadu; not clearly BJP.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2019-jamia-millia-islamia-attack",
+    "title": "2019 Jamia Millia Islamia attack",
+    "years": "2019",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Covered through anti-CAA/police crackdown; standalone source-specific card pending.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2020-bangalore-riots",
+    "title": "2020 Bangalore riots",
+    "years": "2020",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Karnataka BJP government; needs event-specific source.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "2020-2021-indian-farmers-protest",
+    "title": "2020-2021 Indian farmers' protest",
+    "years": "2020-2021",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Already covered through farm laws, protests, and repeal.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2021-indian-farmers-republic-day-protest",
+    "title": "2021 Indian farmers' Republic Day protest",
+    "years": "2021",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Covered by farmers protest entries; can add if sourced separately.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "2021-kawardha-riots",
+    "title": "2021 Kawardha riots",
+    "years": "2021",
+    "sourcePage": "Bharatiya Janata Party controversies / Political riots",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs stronger event-specific source before timeline inclusion.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2021-west-bengal-post-poll-violence",
+    "title": "2021 West Bengal post-poll violence",
+    "years": "2021",
+    "sourcePage": "Political riots / West Bengal violence",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "BJP victims/opposition claims need careful source-specific entry.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2022-birbhum-violence",
+    "title": "2022 Birbhum violence",
+    "years": "2022",
+    "sourcePage": "West Bengal violence",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "TMC-governed state issue; backlog only.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2022-muhammad-remarks-controversy",
+    "title": "2022 Muhammad remarks controversy",
+    "years": "2022",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as nupur-sharma-remarks-2022.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2023-iit-bhu-gang-rape",
+    "title": "2023 IIT-BHU gang rape",
+    "years": "2023",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as iit-bhu-gang-rape-2023.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2023-west-bengal-local-elections-violence",
+    "title": "2023 West Bengal local elections violence",
+    "years": "2023",
+    "sourcePage": "Political riots / West Bengal violence",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Not BJP-governed; include only if BJP/RSS link is source-specific.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "2025-indian-electoral-controversy",
+    "title": "2025 Indian electoral controversy",
+    "years": "2025",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Keep as opposition-claim lead until stronger non-opposition evidence is attached.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "2025-nagpur-violence",
+    "title": "2025 Nagpur violence",
+    "years": "2025",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs stronger non-Wikipedia source before inclusion.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "2026-west-bengal-election-controversies",
+    "title": "2026 West Bengal election controversies",
+    "years": "2026",
+    "sourcePage": "Bharatiya Janata Party controversies / Political riots / West Bengal violence",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Future/live topic; add only after stable reporting.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "angamaly-police-firing",
+    "title": "Angamaly police firing",
+    "years": "1959",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "anti-posco-movement",
+    "title": "Anti-POSCO movement",
+    "years": "2005-2017",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs source-specific BJP/government relevance.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "attack-on-arvind-kejriwal-s-residence",
+    "title": "Attack on Arvind Kejriwal's residence",
+    "years": "2022",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs source and legal status before timeline inclusion.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "cockroach-janta-party",
+    "title": "Cockroach Janta Party",
+    "years": "2026",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Live protest-politics lead; needs stable sourcing.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "death-of-sohrabuddin-sheikh",
+    "title": "Death of Sohrabuddin Sheikh",
+    "years": "2005",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 context; linked to Loya/Gujarat prelude if needed.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "death-of-somnath-suryawanshi",
+    "title": "Death of Somnath Suryawanshi",
+    "years": "unknown",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs identification and source.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "demolition-of-the-babri-masjid",
+    "title": "Demolition of the Babri Masjid",
+    "years": "1992",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 historical context; not part of current timeline unless adding prelude section.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "dinakaran-attack",
+    "title": "Dinakaran attack",
+    "years": "2007",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Outside requested BJP/RSS/government scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "disqualification-of-rahul-gandhi",
+    "title": "Disqualification of Rahul Gandhi",
+    "years": "2023",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added to timeline as rahul-disqualification-2023.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "godi-media",
+    "title": "Godi media",
+    "years": "2014-2026",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Better handled through press-freedom indicators and source-specific media-pressure events.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "hashimpura-massacre",
+    "title": "Hashimpura massacre",
+    "years": "1987",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "india-the-modi-question",
+    "title": "India: The Modi Question",
+    "years": "2023",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Already covered through BBC raid/documentary entry.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "indira-oinam",
+    "title": "Indira Oinam",
+    "years": "unknown",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs identification and reliable source.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "kadakkal-revolt",
+    "title": "Kadakkal Revolt",
+    "years": "1938",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "killing-of-moinul-haque",
+    "title": "Killing of Moinul Haque",
+    "years": "2021",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as moinul-haque-assam-2021.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "killing-of-tulsiram-prajapati",
+    "title": "Killing of Tulsiram Prajapati",
+    "years": "2006",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 Gujarat/encounter context; backlog only.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "list-of-cases-of-police-brutality-in-india",
+    "title": "List of cases of police brutality in India",
+    "years": "various",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "unclear",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Category index only; not an event.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "murder-of-kanhaiya-lal",
+    "title": "Murder of Kanhaiya Lal",
+    "years": "2022",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as connected to Nupur Sharma remarks, not as BJP culpability.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "murders-of-p-jayaraj-and-j-bennix",
+    "title": "Murders of P. Jayaraj and J. Bennix",
+    "years": "2020",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Tamil Nadu police custody case; not clearly BJP.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "murshidabad-violence",
+    "title": "Murshidabad violence",
+    "years": "2025",
+    "sourcePage": "Political riots / West Bengal violence",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as waqf-murshidabad-2025.",
+    "sourceKeys": [
+      "wikipediaWbViolence"
+    ]
+  },
+  {
+    "id": "nandigram-violence",
+    "title": "Nandigram violence",
+    "years": "2007",
+    "sourcePage": "West Bengal violence / Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 and not BJP.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "one-nation-one-election",
+    "title": "One Nation, One Election",
+    "years": "2023-2025",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as one-nation-one-election-2024.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "prince-of-wales-riots",
+    "title": "Prince of Wales riots",
+    "years": "1921",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Historical, outside scope.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "ram-rath-yatra",
+    "title": "Ram Rath Yatra",
+    "years": "1990",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 context; backlog only.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "roshni-act-controversy",
+    "title": "Roshni Act controversy",
+    "years": "2020",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Needs clear Modi-era governance link and stronger sources.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "sanchar-saathi",
+    "title": "Sanchar Saathi",
+    "years": "2025",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as sanchar-saathi-2025.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "sandeshkhali-violence",
+    "title": "Sandeshkhali violence",
+    "years": "2024",
+    "sourcePage": "Political riots",
+    "bjpRelevance": "indirect",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "TMC-governed state; BJP relevance is opposition mobilization. Needs separate sourcing.",
+    "sourceKeys": [
+      "wikipediaPoliticalRiots"
+    ]
+  },
+  {
+    "id": "shaheen-bagh-protest",
+    "title": "Shaheen Bagh protest",
+    "years": "2019-2020",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Already partly represented through CAA/anti-CAA protest entries; standalone card pending.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  },
+  {
+    "id": "tata-nano-singur-controversy",
+    "title": "Tata Nano Singur controversy",
+    "years": "2006-2008",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Pre-2014 and not BJP.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "uttawar-forced-sterilisations",
+    "title": "Uttawar forced sterilisations",
+    "years": "1976",
+    "sourcePage": "Police brutality",
+    "bjpRelevance": "not_bjp",
+    "includeInTimeline": false,
+    "status": "research_backlog",
+    "nextStep": "Emergency-era historical case.",
+    "sourceKeys": [
+      "wikipediaPoliceBrutality"
+    ]
+  },
+  {
+    "id": "viksit-bharat-g-ram-g-act-2025",
+    "title": "Viksit Bharat-G RAM G Act, 2025",
+    "years": "2025",
+    "sourcePage": "Bharatiya Janata Party controversies",
+    "bjpRelevance": "direct",
+    "includeInTimeline": true,
+    "status": "promoted_or_covered",
+    "nextStep": "Added as vbg-ramg-2025 with positive 125-day guarantee noted.",
+    "sourceKeys": [
+      "wikipediaBjpControversies"
+    ]
+  }
+]

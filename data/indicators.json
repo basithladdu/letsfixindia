@@ -1,0 +1,345 @@
+[
+  {
+    "title": "Press freedom rank",
+    "value": "140/180 to 157/180",
+    "detail": "India ranked 140 in RSF's 2014 index and 157 in the 2026 index. RSF scores fell from 59.66 to 31.96, but methodology changes mean the trend should be read carefully.",
+    "direction": "Worse",
+    "sources": [
+      "rsf2014",
+      "rsfIndia"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 140
+      },
+      {
+        "label": "2025",
+        "value": 151
+      },
+      {
+        "label": "2026",
+        "value": 157
+      }
+    ]
+  },
+  {
+    "title": "Crimes against women",
+    "value": "337,922 to 448,211",
+    "detail": "NCRB-linked figures show total registered crimes against women rose from 337,922 in 2014 to 448,211 in 2023.",
+    "direction": "Higher reported volume",
+    "sources": [
+      "ncrbWomen2014",
+      "ncrbWomen2023"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 337922
+      },
+      {
+        "label": "2023",
+        "value": 448211
+      }
+    ]
+  },
+  {
+    "title": "Reported rape cases",
+    "value": "36,735 to 29,670",
+    "detail": "The official reported rape-case count was 36,735 in 2014 and 29,670 in 2023. The dataset should not falsely claim an increase where NCRB does not show one.",
+    "direction": "Lower reported volume",
+    "sources": [
+      "ncrb2014",
+      "ncrb2023",
+      "ncrbWomen2023"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 36735
+      },
+      {
+        "label": "2023",
+        "value": 29670
+      }
+    ]
+  },
+  {
+    "title": "Lawmakers and crimes against women",
+    "value": "151 sitting MPs/MLAs",
+    "detail": "ADR's 2024 affidavit analysis found 151 sitting MPs/MLAs had declared cases related to crimes against women. BJP had the highest party count at 54.",
+    "direction": "Affidavit red flag",
+    "sources": [
+      "adrWomen"
+    ],
+    "chart": [
+      {
+        "label": "BJP",
+        "value": 54
+      },
+      {
+        "label": "INC",
+        "value": 23
+      },
+      {
+        "label": "TDP",
+        "value": 17
+      }
+    ]
+  },
+  {
+    "title": "Rupee pressure",
+    "value": "96+ per US dollar",
+    "detail": "Reuters-linked reports showed the rupee breaching 96 per US dollar in May 2026. The driver mix includes oil shocks, yields, capital flows, and domestic macro pressure.",
+    "direction": "Record low in 2026",
+    "sources": [
+      "reutersRupee2026"
+    ],
+    "chart": [
+      {
+        "label": "2026 low",
+        "value": 96.18
+      }
+    ]
+  },
+  {
+    "title": "GDP per capita",
+    "value": "$1,553.9 to $2,702.5",
+    "detail": "World Bank current-dollar GDP per capita rose from 2014 to 2025. This is a real improvement, though current-dollar values are affected by exchange rates and inflation.",
+    "direction": "Higher",
+    "sources": [
+      "worldBankGdpPc"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 1553.9
+      },
+      {
+        "label": "2025",
+        "value": 2702.5
+      }
+    ]
+  },
+  {
+    "title": "CPI inflation",
+    "value": "6.67% to 2.40%",
+    "detail": "World Bank annual CPI inflation was lower in 2025 than in 2014. This is an improvement on that metric, even though food and local price stress can diverge from annual averages.",
+    "direction": "Lower",
+    "sources": [
+      "worldBankCpi"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 6.67
+      },
+      {
+        "label": "2025",
+        "value": 2.4
+      }
+    ]
+  },
+  {
+    "title": "Internet users",
+    "value": "16.5% to 70.0%",
+    "detail": "World Bank data shows internet usage rising sharply from the earliest comparable 2016 value to 2025.",
+    "direction": "Higher",
+    "sources": [
+      "worldBankInternet"
+    ],
+    "chart": [
+      {
+        "label": "2016",
+        "value": 16.5
+      },
+      {
+        "label": "2025",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "title": "Unemployment rate",
+    "value": "6.0% to 3.1%",
+    "detail": "PLFS usual-status unemployment fell from 2017-18 to 2025. Treat the comparison carefully because the PLFS series and 2025 sampling differ from older employment measures.",
+    "direction": "Lower",
+    "sources": [
+      "pibPlfs2017",
+      "pibPlfs2025"
+    ],
+    "chart": [
+      {
+        "label": "2017-18",
+        "value": 6
+      },
+      {
+        "label": "2025",
+        "value": 3.1
+      }
+    ]
+  },
+  {
+    "title": "Lok Sabha turnout",
+    "value": "66.44% to 66.10%",
+    "detail": "Election Commission atlas figures show turnout broadly flat between the 2014 and 2024 Lok Sabha elections, with the 2024 note excluding the uncontested Surat seat.",
+    "direction": "Nearly flat",
+    "sources": [
+      "eciAtlas2024Turnout"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 66.44
+      },
+      {
+        "label": "2024",
+        "value": 66.1
+      }
+    ]
+  },
+  {
+    "title": "Lok Sabha electorate",
+    "value": "83.41cr to 97.98cr",
+    "detail": "The electorate rose by about 14.57 crore from 2014 to 2024, while votes polled rose from 55.42 crore to 64.64 crore.",
+    "direction": "Higher participation base",
+    "sources": [
+      "eciAtlas2024Votes"
+    ],
+    "chart": [
+      {
+        "label": "2014 electorate",
+        "value": 83.41
+      },
+      {
+        "label": "2024 electorate",
+        "value": 97.98
+      },
+      {
+        "label": "2014 votes",
+        "value": 55.42
+      },
+      {
+        "label": "2024 votes",
+        "value": 64.64
+      }
+    ]
+  },
+  {
+    "title": "Winning MPs with criminal cases",
+    "value": "34% to 46%",
+    "detail": "ADR affidavit analysis shows winning Lok Sabha candidates with declared criminal cases rose from 185 of 542 in 2014 to 251 of 543 in 2024.",
+    "direction": "Worse",
+    "sources": [
+      "adrLokSabha2024",
+      "adrLokSabha2024Details"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 34
+      },
+      {
+        "label": "2024",
+        "value": 46
+      }
+    ]
+  },
+  {
+    "title": "Winning MPs with serious criminal cases",
+    "value": "21% to 31%",
+    "detail": "ADR/NEW figures show winning Lok Sabha candidates with declared serious criminal cases rose from 112 of 542 in 2014 to 170 of 543 in 2024.",
+    "direction": "Worse",
+    "sources": [
+      "adrLokSabha2024Details"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 21
+      },
+      {
+        "label": "2024",
+        "value": 31
+      }
+    ]
+  },
+  {
+    "title": "Crorepati winning MPs",
+    "value": "82% to 93%",
+    "detail": "ADR/NEW figures show the share of winning Lok Sabha candidates declaring assets above Rs 1 crore rose from 82% in 2014 to 93% in 2024.",
+    "direction": "More wealth concentration",
+    "sources": [
+      "adrLokSabha2024Details"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 82
+      },
+      {
+        "label": "2024",
+        "value": 93
+      }
+    ]
+  },
+  {
+    "title": "Freedom House status",
+    "value": "Free to Partly Free",
+    "detail": "Freedom House assessed India as Free in 2014 under its older rating scale and Partly Free with a 62/100 score in 2026. The scales are not directly numeric-comparable.",
+    "direction": "Worse",
+    "sources": [
+      "freedomHouse2014",
+      "freedomHouse2026"
+    ],
+    "chart": [
+      {
+        "label": "2026 score",
+        "value": 62
+      }
+    ]
+  },
+  {
+    "title": "Internet shutdowns",
+    "value": "6 to 54",
+    "detail": "SFLC's India shutdown tracker lists 6 shutdowns in 2014 and 54 in 2025, with 2026 still incomplete at 21 YTD in the captured research note.",
+    "direction": "Worse",
+    "sources": [
+      "sflcShutdowns"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 6
+      },
+      {
+        "label": "2025",
+        "value": 54
+      },
+      {
+        "label": "2026 YTD",
+        "value": 21
+      }
+    ]
+  },
+  {
+    "title": "Suicide incidence",
+    "value": "131,666 to 171,418",
+    "detail": "NCRB-linked data shows total reported suicides rose from 131,666 in 2014 to 171,418 in 2023. These numbers depend on state and UT reporting.",
+    "direction": "Higher reported volume",
+    "sources": [
+      "pibSuicides2014",
+      "dataGovSuicides2023"
+    ],
+    "chart": [
+      {
+        "label": "2014",
+        "value": 131666
+      },
+      {
+        "label": "2023",
+        "value": 171418
+      }
+    ]
+  }
+]

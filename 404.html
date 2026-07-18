@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>India Dossier | 2014-2026 Public Record</title>
+    <meta name="description" content="A mobile-first, source-led timeline of major Indian public record events from 2014 to 2026.">
+    <meta name="theme-color" content="#fbfaf5">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="India Dossier | 2014-2026 Public Record">
+    <meta property="og:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
+    <meta property="og:url" content="https://india-dossier.pages.dev/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="India Dossier | 2014-2026 Public Record">
+    <meta name="twitter:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
+    <link rel="icon" type="image/svg+xml" href="assets/india-flag-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" data-link aria-label="India 2014 to 2026 public record home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name"><span class="brand-full">India Dossier</span><span class="brand-short">Dossier</span></span>
+      </a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="/timeline" data-link>Timeline</a>
+        <a href="/statistics" data-link>Stats</a>
+        <a href="/submit" data-link>Submit</a>
+        <a href="/sources" data-link>Sources</a>
+        <a href="/methodology" data-link>Method</a>
+        <a href="/about" data-link>About</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero route-page" data-page="home">
+        <div class="hero-copy">
+          <p class="eyebrow">India under BJP / Modi administrations</p>
+          <h1>India Dossier 2014-2026</h1>
+          <p class="lede">A critical, sourced record of governance shocks, rights concerns, mass protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry is tagged by evidence status.</p>
+          <div class="hero-actions">
+            <a href="/timeline" data-link>Open timeline</a>
+            <a href="/methodology" data-link>Review method</a>
+          </div>
+        </div>
+
+        <section class="quick-panel" aria-label="Current record summary">
+          <div class="tenure">
+            <span class="label">Modi tenure tracked</span>
+            <strong id="tenureValue">12 years</strong>
+            <span id="tenureSubtitle">From 26 May 2014</span>
+            <span class="tenure-left" id="tenureLeftValue">Current term remaining loading</span>
+            <a class="tenure-source" href="https://www.eci.gov.in/term-of-the-houses/" target="_blank" rel="noopener">ECI term table</a>
+          </div>
+          <div class="tenure tenure-bjp">
+            <span class="label">BJP at centre - total</span>
+            <strong id="bjpTotalValue">~19 years</strong>
+            <span id="bjpTotalSubtitle">Vajpayee 1996, 1998-2004; Modi 2014-present</span>
+          </div>
+          <div class="mini-grid">
+            <div>
+              <span class="label">RSF press rank</span>
+              <strong>140 to 157</strong>
+              <span>2014 to 2026</span>
+            </div>
+            <div>
+              <span class="label">Crimes against women</span>
+              <strong>337,922 to 448,211</strong>
+              <span>NCRB 2014 to 2023</span>
+            </div>
+            <div>
+              <span class="label">Rape cases</span>
+              <strong>36,735 to 29,670</strong>
+              <span>Reported NCRB cases</span>
+            </div>
+            <div>
+              <span class="label">ADR affidavit scan</span>
+              <strong>54 BJP lawmakers</strong>
+              <span>Declared cases on crimes against women, 2024</span>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="route-page home-recent" data-page="home">
+        <div class="section-head">
+          <p class="eyebrow">Latest records</p>
+          <h2>Newest entries in the file</h2>
+          <p>A compressed view of the most recent records. Open the timeline for full filters.</p>
+        </div>
+        <div id="homeRecentList" class="home-recent-list"></div>
+      </section>
+
+      <section class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span>Search records</span>
+            <input id="searchInput" type="search" placeholder="Search Manipur, NEET, press, rape, bonds">
+          </label>
+          <details id="advancedFilters" class="advanced-filters">
+            <summary>Filters</summary>
+            <div class="advanced-filter-grid">
+              <label>
+                <span>Category</span>
+                <select id="categoryFilter">
+                  <option value="all">All categories</option>
+                </select>
+              </label>
+              <label>
+                <span>Actor tag</span>
+                <select id="actorFilter">
+                  <option value="all">All actors</option>
+                </select>
+              </label>
+              <label>
+                <span>Status</span>
+                <select id="statusFilter">
+                  <option value="all">All statuses</option>
+                </select>
+              </label>
+            </div>
+          </details>
+        </div>
+        <div id="yearRail" class="year-rail" aria-label="Filter by year"></div>
+      </section>
+
+      <section id="indicators" class="section route-page" data-page="statistics">
+        <div class="section-head">
+          <p class="eyebrow">Statistics</p>
+          <h2>What moved, up or down</h2>
+          <p>Indicators are shown even when they complicate the argument. The point is a public record, not a slogan.</p>
+        </div>
+        <div id="indicatorGrid" class="indicator-grid"></div>
+      </section>
+
+      <section id="timeline" class="section timeline-section route-page" data-page="timeline">
+        <div class="section-head">
+          <p class="eyebrow">Timeline</p>
+          <h2>Major public-record entries</h2>
+          <p id="resultCount">Loading records</p>
+        </div>
+        <div id="timelineList" class="timeline-list" aria-live="polite"></div>
+      </section>
+
+      <section id="submit" class="submit-band route-page" data-page="submit">
+        <div class="section-head compact">
+          <p class="eyebrow">Submission desk</p>
+          <h2>Submit a sourced record</h2>
+          <p>Use this for incidents, statistics, corrections, court updates, missing BJP/RSS/government links, or stronger sources for weak entries.</p>
+        </div>
+        <form id="submissionForm" class="submission-form">
+          <label>
+            <span>Record title</span>
+            <input name="title" required placeholder="NEET-UG paper leak, state, year">
+          </label>
+          <label>
+            <span>Date or year</span>
+            <input name="year" required placeholder="3 May 2026 or 2026">
+          </label>
+          <label>
+            <span>Place</span>
+            <input name="place" required placeholder="India, state, district, institution">
+          </label>
+          <label>
+            <span>Category</span>
+            <select name="category" required>
+              <option>Education</option>
+              <option>Sexual violence</option>
+              <option>Institutional integrity</option>
+              <option>Press freedom</option>
+              <option>Communal violence</option>
+              <option>Security and terror</option>
+              <option>Economy</option>
+              <option>Public health</option>
+              <option>Civil liberties</option>
+              <option>Statistics</option>
+            </select>
+          </label>
+          <label>
+            <span>Connection</span>
+            <select name="actor" required>
+              <option>BJP-linked</option>
+              <option>BJP-led government</option>
+              <option>NDA ally-linked</option>
+              <option>RSS or ABVP-linked</option>
+              <option>State institution</option>
+              <option>Security forces</option>
+              <option>Not party-specific</option>
+            </select>
+          </label>
+          <label>
+            <span>Evidence status</span>
+            <select name="status" required>
+              <option>Official</option>
+              <option>Court-tested</option>
+              <option>Convicted</option>
+              <option>Charged</option>
+              <option>Reported</option>
+              <option>Alleged</option>
+              <option>Opposition claim</option>
+              <option>Needs verification</option>
+            </select>
+          </label>
+          <label>
+            <span>Affected people</span>
+            <input name="affected" placeholder="Deaths, displaced, accused count, candidates affected">
+          </label>
+          <label class="wide">
+            <span>What happened</span>
+            <textarea name="summary" required rows="5" placeholder="Write the factual claim, the BJP/RSS/government connection, and what still needs verification."></textarea>
+          </label>
+          <label class="wide">
+            <span>Source links</span>
+            <textarea name="sources" required rows="3" placeholder="Paste URLs, one per line. Prefer court, official, NCRB, ADR, HRW, Amnesty, RSF, Reuters, The Hindu, Indian Express, BBC."></textarea>
+          </label>
+          <button type="submit">Save submission draft</button>
+        </form>
+        <div id="submissionQueue" class="submission-queue"></div>
+      </section>
+
+      <section id="sources" class="section source-section route-page" data-page="sources">
+        <div class="section-head">
+          <p class="eyebrow">Source ledger</p>
+          <h2>Evidence used in this build</h2>
+          <p>Raw notes are stored in the local raw folder. The live entries link to the source ledger below.</p>
+        </div>
+        <div id="sourceList" class="source-list"></div>
+      </section>
+
+      <section id="methodology" class="section method-section route-page" data-page="methodology">
+        <div class="section-head">
+          <p class="eyebrow">Method</p>
+          <h2>How records are classified</h2>
+          <p>Events are included when they are tied to a named source and a visible evidence status. Stronger sources override weaker summaries.</p>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span>Official</span>
+            <h3>Government, court, regulator, or statutory body record.</h3>
+          </article>
+          <article>
+            <span>Court-tested</span>
+            <h3>Litigated, convicted, dismissed, charged, or otherwise tested in court.</h3>
+          </article>
+          <article>
+            <span>Reported</span>
+            <h3>Credible newswire, rights group, or established publication reporting.</h3>
+          </article>
+          <article>
+            <span>Alleged</span>
+            <h3>Serious public allegation that has not reached a settled legal finding.</h3>
+          </article>
+          <article>
+            <span>Opposition claim</span>
+            <h3>Political claim preserved with attribution, not treated as primary proof.</h3>
+          </article>
+          <article>
+            <span>Dynamic lead</span>
+            <h3>Wikipedia or live pages used only as leads until stronger references are attached.</h3>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section route-page" data-page="about">
+        <div class="section-head">
+          <p class="eyebrow">About / Support</p>
+          <h2>Who maintains this record</h2>
+          <p>India Dossier is maintained by Basith and built to become a sourced public-record project. The point is not volume by itself; it is traceable claims, corrected weak entries, and a clear line between verified records and live leads.</p>
+        </div>
+        <div class="support-grid">
+          <article>
+            <span>About me</span>
+            <h3>Independent builder and editor</h3>
+            <p>This project is being shaped as a civic research interface: raw notes stay preserved, public entries stay sourced, and corrections are expected.</p>
+          </article>
+          <article>
+            <span>GitHub</span>
+            <h3>Repository link</h3>
+            <p>No public Git remote is connected in this local folder yet. When the repo is created, this card should point to the public repository for issues, corrections, and transparent data review.</p>
+            <a class="text-button" href="https://github.com/new" target="_blank" rel="noopener">Create public repo</a>
+          </article>
+          <article>
+            <span>Support</span>
+            <h3>How people can help</h3>
+            <p>Submit missing events, verify sources, translate records, check court updates, improve weak Wikipedia-only leads, and flag over-strong wording before it becomes public.</p>
+            <a class="text-button" href="/submit" data-link>Submit a sourced record</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="recordView" class="section record-view route-page" data-page="record"></section>
+    </main>
+
+    <div id="scrollDock" class="scroll-dock" aria-label="Timeline scroll controls" hidden>
+      <button type="button" data-scroll-action="top">Top</button>
+      <button type="button" data-scroll-action="saved">Saved spot</button>
+      <button type="button" data-scroll-action="bottom">Bottom</button>
+    </div>
+
+    <footer class="footer">
+      <span>India Dossier</span>
+      <span id="footerDate">Updated 18 July 2026</span>
+    </footer>
+
+    <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use India Dossier fully.</p></noscript>
+    <script src="app.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,860 @@
+{
+  "hrw2026": {
+    "title": "Human Rights Watch - World Report 2026: India",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/world-report/2026/country-chapters/india",
+    "type": "Rights report"
+  },
+  "hrw2025": {
+    "title": "Human Rights Watch - World Report 2025: India",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/world-report/2025/country-chapters/india",
+    "type": "Rights report"
+  },
+  "hrw2024": {
+    "title": "Human Rights Watch - World Report 2024: India",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/world-report/2024/country-chapters/india",
+    "type": "Rights report"
+  },
+  "rsfIndia": {
+    "title": "India country page and World Press Freedom Index",
+    "publisher": "Reporters Without Borders",
+    "url": "https://rsf.org/en/country/india",
+    "type": "Index"
+  },
+  "rsf2014": {
+    "title": "World Press Freedom Index 2014",
+    "publisher": "Reporters Without Borders",
+    "url": "https://rsf.org/en/node/79154?data_type=general&year=2014",
+    "type": "Index archive"
+  },
+  "ncrb2023": {
+    "title": "State/UT-wise cases registered under rape during 2023",
+    "publisher": "Open Government Data / NCRB",
+    "url": "https://www.data.gov.in/resource/stateut-wise-cases-registered-under-rape-section-wise-during-2023",
+    "type": "Official data"
+  },
+  "ncrb2014": {
+    "title": "NCRB rape cases reported during 2014 and 2015",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1484683",
+    "type": "Official release"
+  },
+  "ncrbWomen2014": {
+    "title": "Crime against women increased in 2014",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=124336",
+    "type": "Official release"
+  },
+  "ncrbWomen2023": {
+    "title": "India records close to 4.5 lakh crimes against women in 2023: NCRB",
+    "publisher": "Economic Times / NCRB",
+    "url": "https://economictimes.indiatimes.com/news/india/india-records-close-4-5-lakh-crimes-against-women-in-2023-ncrb-report/articleshow/124230733.cms",
+    "type": "Reported official data"
+  },
+  "adrWomen": {
+    "title": "151 sitting MPs and MLAs face cases of crimes against women: ADR",
+    "publisher": "Association for Democratic Reforms",
+    "url": "https://www.adrindia.org/content/151-sitting-mps-and-mlas-face-cases-of-crimes-against-women-16-charged-with-rape-adr-0",
+    "type": "Affidavit analysis"
+  },
+  "eciBonds": {
+    "title": "Disclosure of Electoral Bonds",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/disclosure-of-electoral-bonds",
+    "type": "Official disclosure"
+  },
+  "scBonds": {
+    "title": "Supreme Court strikes down Electoral Bonds Scheme",
+    "publisher": "SCC Online",
+    "url": "https://www.scconline.com/blog/post/2024/02/15/electoral-bonds-violative-right-to-information-art-191a-constitution-supreme-court-strikes-down-unconstitutional/",
+    "type": "Court coverage"
+  },
+  "rbiAnnual": {
+    "title": "RBI Annual Report 2017-18",
+    "publisher": "Reserve Bank of India",
+    "url": "https://www.rbi.org.in/Scripts/AnnualReportPublications.aspx?Id=1235",
+    "type": "Official report"
+  },
+  "reutersDemon": {
+    "title": "Indians returned almost all currency notes banned in 2016",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/economy-news/indians-turned-in-almost-all-the-currency-notes-banned-in-2016-central-bank-1590883",
+    "type": "News wire"
+  },
+  "hrwCaaDeadlyForce": {
+    "title": "India: Deadly Force Used Against Protesters",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2019/12/23/india-deadly-force-used-against-protesters",
+    "type": "Rights report"
+  },
+  "hrwCaaReport": {
+    "title": "Shoot the Traitors: Discrimination Against Muslims under India's New Citizenship Policy",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/report/2020/04/10/shoot-traitors/discrimination-against-muslims-under-indias-new-citizenship-policy",
+    "type": "Rights report"
+  },
+  "hrwCovid": {
+    "title": "India: Protect Rights, Dignity Amid Covid-19 Crisis",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2021/04/28/india-protect-rights-dignity-amid-covid-19-crisis",
+    "type": "Rights report"
+  },
+  "whoExcess": {
+    "title": "Global excess deaths associated with COVID-19",
+    "publisher": "World Health Organization",
+    "url": "https://www.who.int/data/sets/global-excess-deaths-associated-with-covid-19-modelled-estimates",
+    "type": "Official dataset"
+  },
+  "manipurHrw2025": {
+    "title": "India: Ethnic Clashes Restart in Manipur",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2025/03/27/india-ethnic-clashes-restart-manipur",
+    "type": "Rights report"
+  },
+  "manipurHrw2023": {
+    "title": "India: Investigate Police Bias Alleged in Manipur Violence",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2023/05/30/india-investigate-police-bias-alleged-manipur-violence",
+    "type": "Rights report"
+  },
+  "manipurAmnesty2026": {
+    "title": "India: Release all hostages and end cycle of violence in Manipur",
+    "publisher": "Amnesty International",
+    "url": "https://www.amnesty.org/en/latest/news/2026/06/india-release-all-hostages-and-end-cycle-of-violence-in-manipur/",
+    "type": "Rights report"
+  },
+  "neetPib2026": {
+    "title": "CBI arrests coaching institute owner in NEET-UG 2026 paper leak case",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2262358",
+    "type": "Official release"
+  },
+  "neetIe2026": {
+    "title": "NEET-UG 2026 paper leak: 111 of 136 questions matched NTA master set",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/neet-ug-2026-paper-leak-111-of-136-questions-on-latur-tutors-phone-matched-nta-master-set-cbi-tells-delhi-court-10788377/",
+    "type": "Court reporting"
+  },
+  "neetNta": {
+    "title": "NEET public notices",
+    "publisher": "National Testing Agency",
+    "url": "https://neet.nta.nic.in/document-category/public-notices/",
+    "type": "Official notices"
+  },
+  "neetSc2024": {
+    "title": "NEET UG 2024: leak took place, Supreme Court says",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/education/neet-ug-2024-sc-directs-cbi-to-submit-report-on-status-of-investigation-next-hearing-on-july-11-9439462/",
+    "type": "Court reporting"
+  },
+  "brijReuters": {
+    "title": "India court details sexual harassment charges against former wrestling body chief",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/india/india-court-details-sexual-harassment-charges-against-former-wrestling-body-chief/2079541/",
+    "type": "News wire"
+  },
+  "unnaoReuters": {
+    "title": "Indian court hands life term to ex-lawmaker for rape",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/world-news/indian-court-hands-life-term-to-exlawmaker-for-rape-2045786",
+    "type": "News wire"
+  },
+  "kathuaIe": {
+    "title": "Kathua case: BJP ministers who took part in rally in support of accused resign",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/kathua-rape-murder-bjp-chaudhary-lal-singh-chander-parkash-ganga-resign-5136429/",
+    "type": "News report"
+  },
+  "rohithGuardian": {
+    "title": "Rohith Vemula case and caste discrimination protests",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/world/2016/jan/19/rohith-vemula-suicide-note-india-dalit-student",
+    "type": "News report"
+  },
+  "greenpeaceReuters": {
+    "title": "India freezes Greenpeace accounts",
+    "publisher": "Reuters",
+    "url": "https://www.reuters.com/article/world/india-freezes-greenpeace-bank-accounts-idUSKBN0N01ZP/",
+    "type": "News wire"
+  },
+  "wikipedia2026": {
+    "title": "2026 in India",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/2026_in_India",
+    "type": "Dynamic lead list"
+  },
+  "hrwGujarat2002": {
+    "title": "We Have No Orders To Save You: Gujarat 2002",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/reports/2002/india/",
+    "type": "Rights report"
+  },
+  "scGujarat2022": {
+    "title": "Supreme Court dismisses Zakia Jafri plea against SIT clean chit",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/2002-gujarat-riots-sc-dismisses-zakia-jafri-plea-sit-clean-chit-modi-7987962/",
+    "type": "Court reporting"
+  },
+  "hrwDelhi2020": {
+    "title": "India's Police Found Complicit in Anti-Muslim Mob Violence",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2020/07/17/indias-police-found-complicit-anti-muslim-mob-violence",
+    "type": "Rights report"
+  },
+  "ieHathras2020": {
+    "title": "UP Police out in full force to cremate Hathras woman, away from family",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/hathras-rape-victim-cremation-up-police-6638470/",
+    "type": "News report"
+  },
+  "aljFarmers2020": {
+    "title": "India farmers brave tear gas as they protest against new laws",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2020/11/26/india-farmers-march-to-delhi-against-new-laws",
+    "type": "News report"
+  },
+  "hrwPegasus2021": {
+    "title": "India: Spyware Use Violates Supreme Court Privacy Ruling",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2021/08/26/india-spyware-use-violates-supreme-court-privacy-ruling",
+    "type": "Rights report"
+  },
+  "amnestyPegasus2021": {
+    "title": "The Pegasus Project",
+    "publisher": "Amnesty International",
+    "url": "https://www.amnesty.org/en/latest/press-release/2021/07/the-pegasus-project/",
+    "type": "Investigation"
+  },
+  "ieMorbi2022": {
+    "title": "Morbi bridge collapse killed 135; reopened without fitness certificate",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/ahmedabad/morbi-municipality-chief-officer-suspended-bridge-collapse-8248804/",
+    "type": "News report"
+  },
+  "ieMorbiSIT2023": {
+    "title": "Corroded wires and welded suspenders behind Morbi bridge tragedy",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/ahmedabad/morbi-bridge-tragedy-sit-in-preliminary-probe-8455322/",
+    "type": "Investigation report coverage"
+  },
+  "ieAnkita2022": {
+    "title": "Uttarakhand ex-minister's son held for killing 19-year-old",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/uttarakhand-bjp-leader-son-arrested-killing-receptionist-8169132/",
+    "type": "News report"
+  },
+  "ieAnkitaConviction2025": {
+    "title": "Ankita Bhandari murder case: life term for son of ex-BJP leader",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/ankita-bhandari-murder-case-life-term-for-son-of-ex-bjp-leader-2-others-10039525/",
+    "type": "Court reporting"
+  },
+  "ieEd2024": {
+    "title": "95 percent of ED cases against politicians since 2014 targeted opposition leaders",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/political-pulse/kejriwal-arrest-bjp-liquor-policy-case-modi-9227288/",
+    "type": "Investigative analysis"
+  },
+  "edStats2026": {
+    "title": "Directorate of Enforcement statistics up to 31 March 2026",
+    "publisher": "Directorate of Enforcement",
+    "url": "https://enforcementdirectorate.gov.in/performance/statistics/",
+    "type": "Official data"
+  },
+  "hrwBbcRaid2023": {
+    "title": "Tax Authorities Raid BBC Offices in India",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2023/02/14/tax-authorities-raid-bbc-offices-india",
+    "type": "Rights report"
+  },
+  "amnestyNewsClick2023": {
+    "title": "NewsClick arrests and raids signal attack on media critical of government",
+    "publisher": "Amnesty International",
+    "url": "https://www.amnesty.org/en/latest/news/2023/10/india-arrests-and-raids-at-newsclick-signals-attack-on-media-critical-of-the-government/",
+    "type": "Rights report"
+  },
+  "reutersBalasore2023": {
+    "title": "India's worst train crash in decades kills at least 288",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/stock-market-news/indian-train-crash-death-toll-jumps-to-233-900-injured-3097458",
+    "type": "News wire"
+  },
+  "reutersSilkyara2023": {
+    "title": "All 41 workers rescued from collapsed Himalayan tunnel",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/india/india-jubilant-as-all-trapped-workers-rescued-from-himalayan-tunnel/1863005/",
+    "type": "News wire"
+  },
+  "reutersTunnelAudit2023": {
+    "title": "India orders safety audit of tunnels after collapse in Himalayas",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/world-news/india-orders-safety-audit-of-tunnels-after-collapse-in-himalayas-3241264",
+    "type": "News wire"
+  },
+  "ieBilkis2024": {
+    "title": "Supreme Court quashes remission granted to Bilkis Bano convicts",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/bilkis-bano-case-supreme-court-quashes-remission-granted-to-11-convicts-10-points-9099709/",
+    "type": "Court reporting"
+  },
+  "reutersSebi2024": {
+    "title": "Hindenburg alleges India market regulator chief held stake in offshore funds used by Adani Group",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/stock-market-news/hindenburg-research-alleges-india-market-regulator-chief-held-investments-in-offshore-funds-used-by-adani-group-3565523",
+    "type": "News wire"
+  },
+  "reutersRupee2026": {
+    "title": "Rupee hits record low of 96.18 vs USD as rising yields add to oil shock",
+    "publisher": "Reuters via Economic Times",
+    "url": "https://economictimes.indiatimes.com/markets/forex/rupee-hits-record-low-of-96-18-vs-usd-as-rising-yields-add-to-oil-shock/articleshow/131165837.cms",
+    "type": "News wire"
+  },
+  "reutersInflation2026": {
+    "title": "India's inflation breaches target after more than a year",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/economy-news/indias-june-retail-inflation-at-438-on-year-4787882",
+    "type": "News wire"
+  },
+  "congress44Claim2026": {
+    "title": "44 BJP MPs, MLAs face serious sexual offence charges",
+    "publisher": "Indian National Congress",
+    "url": "https://www.inc.in/voice-of-the-nation/congress-sandesh/44-bjp-mps-mlas-face-serious-sexual-offence-charges",
+    "type": "Opposition claim"
+  },
+  "rgKarHrw2026": {
+    "title": "World Report 2026: India, women and girls' rights section",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/world-report/2026/country-chapters/india",
+    "type": "Rights report"
+  },
+  "reutersUber2014": {
+    "title": "Uber cab driver in India arrested after suspected rape",
+    "publisher": "Reuters via Trust.org",
+    "url": "https://news.trust.org/item/20141207141526-wlew4",
+    "type": "News wire"
+  },
+  "ieUberFake2014": {
+    "title": "Uber cab rape: forged police clearance document",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/uber-cab-rape-police-identify-man-who-forged-yadavs-clearance-document/",
+    "type": "News report"
+  },
+  "guardianVyapam2015": {
+    "title": "India calls in top investigators to review Vyapam scandal and suspicious deaths",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/world/2015/jul/09/india-calls-investigators-review-vyapam-scandal-suspicious-deaths",
+    "type": "News report"
+  },
+  "indiaTodayFtii2015": {
+    "title": "140-day FTII strike against Chauhan ends",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/india/story/140-day-ftii-strike-over-gajendra-chauhan-appointment-ends-270206-2015-10-28",
+    "type": "News report"
+  },
+  "eastAsiaLalitgate2015": {
+    "title": "Lalitgate narrows windows of Modi's popularity",
+    "publisher": "East Asia Forum",
+    "url": "https://eastasiaforum.org/2015/07/09/lalitgate-narrows-windows-of-modis-popularity/",
+    "type": "Analysis"
+  },
+  "ieLalitgate2015": {
+    "title": "Lalit Modi admits links with Sushma Swaraj, Vasundhara Raje",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/sushma-raje-helped-me-admits-lalit-blames-upa-and-murdoch/",
+    "type": "News report"
+  },
+  "hrwJnu2016": {
+    "title": "India: Outspoken Activists Charged with Sedition",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2016/02/19/india-outspoken-activists-charged-sedition",
+    "type": "Rights report"
+  },
+  "sccUttarakhand2016": {
+    "title": "Floor test puts an end to Uttarakhand Assembly crisis",
+    "publisher": "SCC Online",
+    "url": "https://www.scconline.com/blog/post/2016/05/12/floor-test-puts-an-end-to-the-uttarakhand-assembly-crisis-presidents-rule-to-be-revoked-harish-rawat-to-assume-the-chief-minister-of-uttarakhands-office/",
+    "type": "Court coverage"
+  },
+  "ieAgusta2016": {
+    "title": "Explaining the VVIP chopper row that rocked Parliament",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/explained/agusta-westland-vvip-helicopter-deal-behind-the-moving-parts-2773448/",
+    "type": "Explainer"
+  },
+  "reutersJayShah2017": {
+    "title": "Jay Shah Temple Enterprise revenue controversy",
+    "publisher": "Times of India",
+    "url": "https://timesofindia.indiatimes.com/politics/jay-shah/amp_articleshow/61001998.cms",
+    "type": "News report"
+  },
+  "ieEcGujarat2017": {
+    "title": "The EC disappoints",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/opinion/editorials/election-commission-himachal-pradesh-gujarat-elections-ec-model-code-of-conduct-bjp-the-ec-disappoints-4889241/",
+    "type": "Editorial"
+  },
+  "pibEcGujarat2017": {
+    "title": "General elections to Legislative Assemblies of Himachal Pradesh and Gujarat, 2017",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1508553&lang=2&reg=48",
+    "type": "Official release"
+  },
+  "reutersRafale2018": {
+    "title": "Supreme Court rejects call for probe into Rafale jet deal",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/amp/article/reuters/supreme-court-rejects-call-for-probe-into-rafale-jet-deal-118121400270_1.html",
+    "type": "News wire"
+  },
+  "ieLoya2018": {
+    "title": "Supreme Court rules out probe into Judge Loya's death",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/supreme-court-on-b-h-loyas-death-case-here-are-top-quotes-from-judgement/",
+    "type": "Court reporting"
+  },
+  "reutersIlfs2018": {
+    "title": "Factbox: IL&FS troubles and why investors should care",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/article/reuters/factbox-il-fs-its-recent-troubles-and-why-investors-should-care-118092501003_1.html",
+    "type": "News wire"
+  },
+  "ieIlfs2018": {
+    "title": "IL&FS defaults, NBFC whiplash: understanding the debt market crisis",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/explained/ilfs-defaults-nbfc-whiplash-understanding-the-debt-market-crisis-5374379/",
+    "type": "Explainer"
+  },
+  "reutersChanda2022": {
+    "title": "Former ICICI Bank CEO Chanda Kochhar arrested in loan fraud case",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/india/former-icici-bank-ceo-chanda-kochhar-arrested-in-loan-fraud-case-source/1279700/",
+    "type": "News wire"
+  },
+  "reutersChinmayanand2019": {
+    "title": "Former BJP minister arrested over alleged rape",
+    "publisher": "Reuters via Yahoo News",
+    "url": "https://sg.news.yahoo.com/former-bjp-minister-arrested-over-111424618.html",
+    "type": "News wire"
+  },
+  "ieChinmayanand2019": {
+    "title": "Chinmayanand held for sexual assault of law student",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/chinmayanand-held-for-sexual-assault-of-law-student-he-has-owned-up-cops-6015337/",
+    "type": "News report"
+  },
+  "hrwBhima2024": {
+    "title": "Indian Court, Finding Lack of Evidence, Grants Bail to Activist",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2024/04/09/indian-court-finding-lack-evidence-grants-bail-activist",
+    "type": "Rights report"
+  },
+  "wpBhima2021": {
+    "title": "Evidence found on Indian activists' computers was planted, reports say",
+    "publisher": "Washington Post",
+    "url": "https://www.washingtonpost.com/world/2021/07/06/bhima-koregaon-case-india/",
+    "type": "Forensic reporting"
+  },
+  "wikipedia2025": {
+    "title": "2025 in India",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/2025_in_India",
+    "type": "Dynamic lead list"
+  },
+  "wikipediaBjpControversies": {
+    "title": "Category: Bharatiya Janata Party controversies",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Category:Bharatiya_Janata_Party_controversies",
+    "type": "Dynamic lead list"
+  },
+  "wikipediaPoliticalRiots": {
+    "title": "Category: Political riots in India",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Category:Political_riots_in_India",
+    "type": "Dynamic lead list"
+  },
+  "wikipediaPoliceBrutality": {
+    "title": "Category: Police brutality in India",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Category:Police_brutality_in_India",
+    "type": "Dynamic lead list"
+  },
+  "wikipediaWbViolence": {
+    "title": "Category: Politico-Religious violence in West Bengal",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Category:Politico-Religious_violence_in_West_Bengal",
+    "type": "Dynamic lead list"
+  },
+  "reutersMallya2016": {
+    "title": "Tycoon Mallya denies fleeing India, Delhi left red-faced over exit",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/article/reuters/tycoon-mallya-denies-fleeing-india-delhi-left-red-faced-over-exit-116031100560_1.html",
+    "type": "News wire"
+  },
+  "reutersGstGlitches2017": {
+    "title": "India eyes spending cuts as glitches in GST hit revenue",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/article/reuters/india-eyes-spending-cuts-as-glitches-in-gst-hit-revenue-117091800932_1.html",
+    "type": "News wire"
+  },
+  "reutersPnb2018": {
+    "title": "Eyes wide shut: the $1.8 billion PNB fraud that went unnoticed",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/article/reuters/eyes-wide-shut-the-1-8-billion-pnb-fraud-that-went-unnoticed-118021900094_1.html",
+    "type": "News wire"
+  },
+  "reutersPnbLapses2018": {
+    "title": "Lapses at many levels of bank led to India's huge PNB fraud",
+    "publisher": "Reuters via Business Standard",
+    "url": "https://www.business-standard.com/article/reuters/exclusive-lapses-at-many-levels-of-bank-led-to-india-s-huge-pnb-fraud-internal-report-shows-118062000096_1.html",
+    "type": "News wire"
+  },
+  "aljPulwama2019": {
+    "title": "Nine killed in Kashmir gun battle days after deadly attack",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2019/2/18/nine-killed-in-kashmir-gun-battle-days-after-deadly-attack",
+    "type": "News report"
+  },
+  "ieKalburgi2015": {
+    "title": "Former Karnatak University vice-chancellor M M Kalburgi shot",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/ex-vc-m-m-kalaburgi-who-had-run-ins-with-hardliners-shot/lite/",
+    "type": "News report"
+  },
+  "ieAwardWapsi2015": {
+    "title": "M M Kalburgi murder: writers return awards",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/m-m-kalburgi-murder-kannada-poet-hindi-writer-to-return-awards/lite/",
+    "type": "News report"
+  },
+  "cpjGauri2017": {
+    "title": "Journalists Killed in 2017: Gauri Lankesh",
+    "publisher": "Committee to Protect Journalists via Refworld",
+    "url": "https://www.refworld.org/reference/annualreport/cpj/2017/en/119702",
+    "type": "Press freedom record"
+  },
+  "ieAkbar2018": {
+    "title": "M J Akbar resigns after flurry of #MeToo allegations",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/mj-akbar-resigns/",
+    "type": "News report"
+  },
+  "prsFarmRepeal2021": {
+    "title": "The Farm Laws Repeal Bill, 2021",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-farm-laws-repeal-bill-2021",
+    "type": "Legislative tracker"
+  },
+  "pibFarmRepeal2021": {
+    "title": "Prime Minister announces decision to repeal three farm laws",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1773175&lang=2&reg=48",
+    "type": "Official release"
+  },
+  "ieLakhimpurChargesheet2022": {
+    "title": "Lakhimpur case: MoS son faces murder, conspiracy case",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/lucknow/lakhimpur-kheri-sit-chargesheet-union-minister-ajay-mishra-son-ashish-others-7703537/lite/",
+    "type": "Court reporting"
+  },
+  "ieMoinulHaque2021": {
+    "title": "Assam eviction violence: two deaths in Darrang police firing",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/north-east-india/assam/assam-eviction-violence-two-deaths-clashes-7532641/",
+    "type": "News report"
+  },
+  "aljAssamEvictions2021": {
+    "title": "To dehumanise, terrorise us: Muslims evicted in India's Assam",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2021/10/12/india-assam-muslims-forcibly-evicted-dhalpur-bjp-darrang",
+    "type": "News report"
+  },
+  "reutersNupur2022": {
+    "title": "Suspended India ruling party spokeswoman in more trouble after Prophet Mohammed remarks",
+    "publisher": "Reuters via Euronews",
+    "url": "https://www.euronews.com/2022/06/10/us-india-politics-diplomacy",
+    "type": "News wire"
+  },
+  "reutersKanhaiya2022": {
+    "title": "Indian police arrest masterminds behind murder of Hindu tailor",
+    "publisher": "Reuters via Euronews",
+    "url": "https://www.euronews.com/2022/07/03/india-religion-tension",
+    "type": "News wire"
+  },
+  "freedomHouse2024": {
+    "title": "India: Freedom in the World 2024",
+    "publisher": "Freedom House",
+    "url": "https://freedomhouse.org/country/india/freedom-world/2024",
+    "type": "Democracy index"
+  },
+  "reutersRahul2023": {
+    "title": "India's parliament reinstates Rahul Gandhi as lawmaker",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/india/indias-parliament-reinstates-rahul-gandhi-as-lawmaker/1703470/",
+    "type": "News wire"
+  },
+  "ieRahulDisqualified2023": {
+    "title": "Rahul Gandhi disqualified from Lok Sabha day after conviction",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/rahukl-gandhi-conviction-disqualified-lok-sabha-mp-8516551/",
+    "type": "News report"
+  },
+  "reutersAdani2023": {
+    "title": "Explainer: Adani vs Hindenburg, what you need to know",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/economy/explaineradani-vs-hindenburg-what-you-need-to-know-2993502",
+    "type": "News wire"
+  },
+  "reutersAdaniRout2023": {
+    "title": "India's Adani tries to calm investors as regulator confirms probe",
+    "publisher": "Reuters via Investing.com",
+    "url": "https://www.investing.com/news/stock-market-news/adani-saga-spotlight-shifts-to-indian-regulator-shares-skid-again-3001577",
+    "type": "News wire"
+  },
+  "toiIitBhu2024": {
+    "title": "BJP IT cell duo among three held for IIT-BHU student's gang rape",
+    "publisher": "Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/varanasi/bjp-it-cell-duo-among-3-held-for-iit-bhu-girls-gang-rape/articleshow/106426429.cms",
+    "type": "News report"
+  },
+  "pibOneNation2024": {
+    "title": "High Level Committee submits report on One Nation, One Election",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2014497&lang=2&reg=48",
+    "type": "Official release"
+  },
+  "ieOneNation2024": {
+    "title": "Opposition told panel simultaneous elections against basic structure",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/report-opp-told-panel-its-against-the-basic-structure-of-constitution-9214949/",
+    "type": "News report"
+  },
+  "cpjMukesh2025": {
+    "title": "Mukesh Chandrakar killed",
+    "publisher": "Committee to Protect Journalists",
+    "url": "https://cpj.org/data/people/mukesh-chandrakar/",
+    "type": "Press freedom record"
+  },
+  "iePrajwal2025": {
+    "title": "Former MP Prajwal Revanna gets life sentence for rape of domestic worker",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/bangalore/prajwal-revanna-life-sentence-rape-case-10165502/",
+    "type": "Court reporting"
+  },
+  "ieSanchar2025": {
+    "title": "Government revokes order mandating preloading of Sanchar Saathi app",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/business/govt-amend-order-mandating-sanchar-saathi-phones-backlash-10399934/",
+    "type": "News report"
+  },
+  "aljSanchar2025": {
+    "title": "Why did India order smartphone makers to install a government app?",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2025/12/3/why-did-india-order-smartphone-makers-to-install-a-government-app",
+    "type": "News report"
+  },
+  "ieNuns2025": {
+    "title": "Kerala nuns arrested in Chhattisgarh to remain in jail",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/kerala-nuns-arrested-in-chhattisgarh-religious-conversion-nia-10159203/",
+    "type": "News report"
+  },
+  "ieNunsWomenCommission2025": {
+    "title": "Women's commission demands FIR against right-wing workers in Chhattisgarh nuns case",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/india/chhattisgarh-nuns-arrest-case-womens-commission-demands-fir-against-right-wing-workers-for-harassment-10298003/",
+    "type": "News report"
+  },
+  "ieReutersX2025": {
+    "title": "Reuters X account blocked in India; government says no legal requirement made",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/reuters-x-account-blocked-in-india-govt-legal-requirement-10110051/",
+    "type": "News report"
+  },
+  "ndtvWaqf2025": {
+    "title": "Three killed in Bengal Waqf protests",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/3-killed-in-clashes-linked-to-protests-against-waqf-act-in-bengals-murshidabad-police-8148399",
+    "type": "News report"
+  },
+  "ieSscProtests2025": {
+    "title": "Cancellations, glitches, wrong exam centre: why SSC aspirants are protesting",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/cancellations-glitches-wrong-exam-centre-ssc-aspirants-protest-delhi-10165270/lite/",
+    "type": "News report"
+  },
+  "ieSscChair2025": {
+    "title": "Technical, operational issues being resolved: SSC Chairman",
+    "publisher": "Indian Express",
+    "url": "https://indianexpress.com/article/education/ssc-cgl-2025-technical-operational-issues-being-resolved-ssc-chief-on-irregularities-in-recruitment-exams-selection-posts-10211971/",
+    "type": "News report"
+  },
+  "pibAaib171": {
+    "title": "AAIB interim statement on Air India Flight AI-171 investigation",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=289951",
+    "type": "Official release"
+  },
+  "aljRedFort2025": {
+    "title": "Delhi Red Fort blast kills 13: what happened as police invoke terror law?",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2025/11/11/delhi-red-fort-blast-kills-13-what-happened-as-police-invoke-terror-law",
+    "type": "News report"
+  },
+  "aljRedFortArrest2025": {
+    "title": "India arrests Kashmir resident over deadly Delhi car blast",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2025/11/16/india-arrests-kashmir-resident-over-deadly-delhi-car-blast",
+    "type": "News report"
+  },
+  "prs130th2025": {
+    "title": "The Constitution (130th Amendment) Bill, 2025",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-constitution-one-hundred-and-thirtieth-amendment-bill-2025",
+    "type": "Legislative tracker"
+  },
+  "pib130th2025": {
+    "title": "Amit Shah introduces Constitution (130th Amendment) Bill, 2025",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2158593&lang=1&reg=3",
+    "type": "Official release"
+  },
+  "prsVbGramg2025": {
+    "title": "The Viksit Bharat Guarantee for Rozgar and Ajeevika Mission (Gramin) Bill, 2025",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-viksit-bharat-%E2%80%93-guarantee-for-rozgar-and-ajeevika-mission-gramin-vb-%E2%80%93-g-ram-g-bill-2025",
+    "type": "Legislative tracker"
+  },
+  "pibVbGramg2025": {
+    "title": "President gives assent to VB-G RAM G Bill, 2025",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2207187&lang=1&reg=1",
+    "type": "Official release"
+  },
+  "aljKashmirVpn2026": {
+    "title": "India's VPN ban in Kashmir adds to psychological pressure, say residents",
+    "publisher": "Al Jazeera",
+    "url": "https://www.aljazeera.com/amp/news/2026/1/12/indias-vpn-ban-in-kashmir-adds-to-psychological-pressure-say-residents",
+    "type": "News report"
+  },
+  "hrwKashmirForce2016": {
+    "title": "India: Investigate Use of Lethal Force in Kashmir",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2016/07/13/india-investigate-use-lethal-force-kashmir",
+    "type": "Rights report"
+  },
+  "worldBankGdpPc": {
+    "title": "GDP per capita, current US dollars - India",
+    "publisher": "World Bank",
+    "url": "https://api.worldbank.org/v2/country/IND/indicator/NY.GDP.PCAP.CD?format=json&per_page=200",
+    "type": "Official dataset"
+  },
+  "worldBankCpi": {
+    "title": "Inflation, consumer prices annual percent - India",
+    "publisher": "World Bank",
+    "url": "https://api.worldbank.org/v2/country/IND/indicator/FP.CPI.TOTL.ZG?format=json&per_page=200",
+    "type": "Official dataset"
+  },
+  "worldBankInternet": {
+    "title": "Individuals using the Internet percent of population - India",
+    "publisher": "World Bank DataBank",
+    "url": "https://databank.worldbank.org/reports.aspx?country=IND&series=IT.NET.USER.ZS&source=2",
+    "type": "Official dataset"
+  },
+  "pibPlfs2017": {
+    "title": "PLFS unemployment reference for 2017-18",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2196924&lang=1&reg=3&sharetype=link",
+    "type": "Official release"
+  },
+  "pibPlfs2025": {
+    "title": "PLFS unemployment reference for 2025",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2246009&lang=1&reg=1",
+    "type": "Official release"
+  },
+  "eciAtlas2024Turnout": {
+    "title": "Election Commission Atlas 2024 turnout table",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/EBooks/atlas-2024/files/basic-html/page90.html",
+    "type": "Official dataset"
+  },
+  "eciAtlas2024Votes": {
+    "title": "Election Commission Atlas 2024 electorate and votes table",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/EBooks/atlas-2024/files/basic-html/page93.html",
+    "type": "Official dataset"
+  },
+  "adrLokSabha2024": {
+    "title": "Analysis of criminal background, financial, education, gender and other details of winning candidates, 2024",
+    "publisher": "Association for Democratic Reforms",
+    "url": "https://adrindia.org/content/analysis-criminal-background-financial-education-gender-and-other-details-winning-31",
+    "type": "Affidavit analysis"
+  },
+  "adrLokSabha2024Details": {
+    "title": "ADR winning candidate criminal, serious criminal and asset figures",
+    "publisher": "Association for Democratic Reforms / National Election Watch",
+    "url": "https://groups.google.com/g/national-election-watch/c/Ngg1Yzd_9kI",
+    "type": "Affidavit analysis"
+  },
+  "freedomHouse2014": {
+    "title": "Freedom in the World 2014: India",
+    "publisher": "Freedom House via Refworld",
+    "url": "https://www.refworld.org/reference/annualreport/freehou/2014/17339",
+    "type": "Democracy index"
+  },
+  "freedomHouse2026": {
+    "title": "India: Freedom in the World 2026",
+    "publisher": "Freedom House",
+    "url": "https://freedomhouse.org/country/india/freedom-world/2026",
+    "type": "Democracy index"
+  },
+  "sflcShutdowns": {
+    "title": "Internet shutdowns in India tracker",
+    "publisher": "Software Freedom Law Center India",
+    "url": "https://internetshutdowns.in/",
+    "type": "Civil-society tracker"
+  },
+  "dataGovSuicides2023": {
+    "title": "Year-wise incidence and rate of suicides, all India, 2013-2023",
+    "publisher": "Open Government Data / NCRB",
+    "url": "https://www.data.gov.in/resource/year-wise-details-incidence-and-rate-suicides-all-india-2013-2023",
+    "type": "Official dataset"
+  },
+  "pibSuicides2014": {
+    "title": "NCRB accidental deaths and suicides release",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?lang=2&reg=48&relid=124338",
+    "type": "Official release"
+  },
+  "hrwGharWapsi2015": {
+    "type": "Rights group report",
+    "title": "India: 'Ghar Wapsi' Reconversions Raise Concerns",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2015/01/08/india-ghar-wapsi-reconversions-raise-concerns"
+  },
+  "hrwCowVigilantes2019": {
+    "type": "Rights group report",
+    "title": "Violent Cow Protection in India: Vigilante Groups Attack Minorities",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/report/2019/02/18/violent-cow-protection-india/vigilante-groups-attack-minorities"
+  },
+  "hrwLoveJihad2021": {
+    "type": "Rights group report",
+    "title": "India: New Laws Attack Religious Freedom",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2020/12/21/india-new-laws-attack-religious-freedom"
+  },
+  "hrwHijab2022": {
+    "type": "Rights group report",
+    "title": "India's Karnataka Must Repeal Hijab Ban",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2022/02/10/indias-karnataka-must-repeal-hijab-ban"
+  },
+  "hrwBulldozers2022": {
+    "type": "Rights group report",
+    "title": "India: Authorities Bulldoze Homes of Protesters",
+    "publisher": "Human Rights Watch",
+    "url": "https://www.hrw.org/news/2022/06/17/india-authorities-bulldoze-homes-protesters"
+  }
+}
