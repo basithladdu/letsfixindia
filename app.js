@@ -82,6 +82,9 @@ function sourceLinks(ids) {
         .replace("Amnesty International", "Amnesty")
         .replace("Election Commission of India", "ECI")
         .replace("National Testing Agency", "NTA");
+      if (!sources[id].url) {
+        return `<span class="source-pending" title="${sources[id].title}">${label}</span>`;
+      }
       return `<a href="${sources[id].url}" target="_blank" rel="noopener" title="${sources[id].title}">${label}</a>`;
     })
     .filter(Boolean)
@@ -286,7 +289,9 @@ function renderSources() {
         <h3>${source.title}</h3>
         <p>${source.publisher}</p>
       </div>
-      <a href="${source.url}" target="_blank" rel="noopener">Open source</a>
+      ${source.url
+        ? `<a href="${source.url}" target="_blank" rel="noopener">Open source</a>`
+        : `<span class="source-pending">Verification pending</span>`}
     </article>
   `).join("");
 }
@@ -757,44 +762,6 @@ function bindEvents() {
     drafts.splice(index, 1);
     saveDrafts(drafts);
     renderSubmissions();
-  });
-
-  // Mobile Side Drawer Logic
-  const hamburgerBtn = document.querySelector("#hamburgerBtn");
-  const drawerCloseBtn = document.querySelector("#drawerCloseBtn");
-  const sideDrawer = document.querySelector("#sideDrawer");
-  const drawerOverlay = document.querySelector("#drawerOverlay");
-
-  function openDrawer() {
-    if (sideDrawer && drawerOverlay) {
-      sideDrawer.classList.add("is-open");
-      drawerOverlay.classList.add("is-visible");
-      hamburgerBtn?.setAttribute("aria-expanded", "true");
-      sideDrawer.setAttribute("aria-hidden", "false");
-      drawerOverlay.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-  }
-
-  function closeDrawer() {
-    if (sideDrawer && drawerOverlay) {
-      sideDrawer.classList.remove("is-open");
-      drawerOverlay.classList.remove("is-visible");
-      hamburgerBtn?.setAttribute("aria-expanded", "false");
-      sideDrawer.setAttribute("aria-hidden", "true");
-      drawerOverlay.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-  }
-
-  hamburgerBtn?.addEventListener("click", openDrawer);
-  drawerCloseBtn?.addEventListener("click", closeDrawer);
-  drawerOverlay?.addEventListener("click", closeDrawer);
-
-  sideDrawer?.addEventListener("click", (e) => {
-    if (e.target.closest("a[data-link]")) {
-      closeDrawer();
-    }
   });
 }
 

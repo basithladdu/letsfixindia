@@ -856,5 +856,467 @@
     "title": "India: Authorities Bulldoze Homes of Protesters",
     "publisher": "Human Rights Watch",
     "url": "https://www.hrw.org/news/2022/06/17/india-authorities-bulldoze-homes-protesters"
+  },
+  "src-v-srk-intolerance": {
+    "title": "Voice citation pending verification: srk intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-kohli-pulwama": {
+    "title": "Voice citation pending verification: kohli pulwama",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-sachin-farmers": {
+    "title": "Voice citation pending verification: sachin farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-aamir-intolerance": {
+    "title": "Voice citation pending verification: aamir intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-akshay-modi-interview": {
+    "title": "Voice citation pending verification: akshay modi interview",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-akshay-caa": {
+    "title": "Voice citation pending verification: akshay caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-kangana-farmers": {
+    "title": "Voice citation pending verification: kangana farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-kangana-caa": {
+    "title": "Voice citation pending verification: kangana caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-kangana-wrestlers": {
+    "title": "Voice citation pending verification: kangana wrestlers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-deepika-jnu": {
+    "title": "Voice citation pending verification: deepika jnu",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-priyanka-balakot": {
+    "title": "Voice citation pending verification: priyanka balakot",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-ajay-farmers": {
+    "title": "Voice citation pending verification: ajay farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anupam-intolerance": {
+    "title": "Voice citation pending verification: anupam intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anupam-caa": {
+    "title": "Voice citation pending verification: anupam caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anupam-farmers": {
+    "title": "Voice citation pending verification: anupam farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-swara-caa": {
+    "title": "Voice citation pending verification: swara caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-swara-farmers": {
+    "title": "Voice citation pending verification: swara farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-swara-manipur": {
+    "title": "Voice citation pending verification: swara manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-swara-wrestlers": {
+    "title": "Voice citation pending verification: swara wrestlers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-swara-hathras": {
+    "title": "Voice citation pending verification: swara hathras",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-naseer-intolerance": {
+    "title": "Voice citation pending verification: naseer intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-naseer-bulandshahr": {
+    "title": "Voice citation pending verification: naseer bulandshahr",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-naseer-caa": {
+    "title": "Voice citation pending verification: naseer caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-javed-intolerance": {
+    "title": "Voice citation pending verification: javed intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-javed-caa": {
+    "title": "Voice citation pending verification: javed caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-javed-manipur": {
+    "title": "Voice citation pending verification: javed manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anurag-intolerance": {
+    "title": "Voice citation pending verification: anurag intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anurag-caa": {
+    "title": "Voice citation pending verification: anurag caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-anurag-kashmir": {
+    "title": "Voice citation pending verification: anurag kashmir",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-farhan-caa": {
+    "title": "Voice citation pending verification: farhan caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-farhan-manipur": {
+    "title": "Voice citation pending verification: farhan manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-prakash-intolerance": {
+    "title": "Voice citation pending verification: prakash intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-prakash-caa": {
+    "title": "Voice citation pending verification: prakash caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-prakash-farmers": {
+    "title": "Voice citation pending verification: prakash farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-prakash-manipur": {
+    "title": "Voice citation pending verification: prakash manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-vishal-caa": {
+    "title": "Voice citation pending verification: vishal caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-vishal-farmers": {
+    "title": "Voice citation pending verification: vishal farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-taapsee-farmers": {
+    "title": "Voice citation pending verification: taapsee farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-taapsee-caa": {
+    "title": "Voice citation pending verification: taapsee caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-dia-caa": {
+    "title": "Voice citation pending verification: dia caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-dia-farmers": {
+    "title": "Voice citation pending verification: dia farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-konkona-caa": {
+    "title": "Voice citation pending verification: konkona caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-konkona-manipur": {
+    "title": "Voice citation pending verification: konkona manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-richa-caa": {
+    "title": "Voice citation pending verification: richa caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-richa-galwan": {
+    "title": "Voice citation pending verification: richa galwan",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-vivek-tkf": {
+    "title": "Voice citation pending verification: vivek tkf",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-vivek-caa": {
+    "title": "Voice citation pending verification: vivek caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-sonam-jnu": {
+    "title": "Voice citation pending verification: sonam jnu",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-ambani-demon": {
+    "title": "Voice citation pending verification: ambani demon",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-adani-hindenburg": {
+    "title": "Voice citation pending verification: adani hindenburg",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-tata-demon": {
+    "title": "Voice citation pending verification: tata demon",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-tata-caa": {
+    "title": "Voice citation pending verification: tata caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-rihanna-farmers": {
+    "title": "Voice citation pending verification: rihanna farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-greta-farmers": {
+    "title": "Voice citation pending verification: greta farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-meena-farmers": {
+    "title": "Voice citation pending verification: meena farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-shabana-intolerance": {
+    "title": "Voice citation pending verification: shabana intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-shabana-caa": {
+    "title": "Voice citation pending verification: shabana caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-hansal-caa": {
+    "title": "Voice citation pending verification: hansal caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-hansal-farmers": {
+    "title": "Voice citation pending verification: hansal farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-hansal-manipur": {
+    "title": "Voice citation pending verification: hansal manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-siddharth-caa": {
+    "title": "Voice citation pending verification: siddharth caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-siddharth-farmers": {
+    "title": "Voice citation pending verification: siddharth farmers",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-nana-intolerance": {
+    "title": "Voice citation pending verification: nana intolerance",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-satyarthi-caa": {
+    "title": "Voice citation pending verification: satyarthi caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-mary-caa": {
+    "title": "Voice citation pending verification: mary caa",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
+  },
+  "src-v-mary-manipur": {
+    "title": "Voice citation pending verification: mary manipur",
+    "publisher": "Verification queue",
+    "url": "",
+    "type": "Pending source",
+    "status": "pending"
   }
 }

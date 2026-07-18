@@ -6,3 +6,4 @@ server.out.log
 Thumbs.db
 
 .vercel
+private/
