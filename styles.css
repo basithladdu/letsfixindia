@@ -3410,43 +3410,116 @@ textarea:focus-visible {
 /* ── Share icons (brand colours) ─────────────────────────── */
 
 .share-btn {
-  width: 34px;
-  height: 34px;
-  min-height: 34px;
-  padding: 0;
-  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #cbd3da;
   border-radius: 999px;
+  color: #222830 !important;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
 
 .share-btn svg {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   fill: currentColor;
-  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-.share-btn.share-wa { color: #25d366; border-color: rgba(37, 211, 102, 0.45); }
-.share-btn.share-x { color: #0f1419; border-color: rgba(15, 20, 25, 0.35); }
-.share-btn.share-fb { color: #1877f2; border-color: rgba(24, 119, 242, 0.4); }
-.share-btn.share-ig {
-  color: #e1306c;
-  border-color: rgba(225, 48, 108, 0.4);
+.share-btn:hover svg {
+  transform: scale(1.1);
 }
-.share-btn.share-copy { color: var(--muted); }
 
-.share-btn.share-wa:hover, .share-btn.share-wa:focus-visible { background: #25d366; border-color: #25d366; color: #ffffff; }
-.share-btn.share-x:hover, .share-btn.share-x:focus-visible { background: #0f1419; border-color: #0f1419; color: #ffffff; }
-.share-btn.share-fb:hover, .share-btn.share-fb:focus-visible { background: #1877f2; border-color: #1877f2; color: #ffffff; }
-.share-btn.share-ig:hover, .share-btn.share-ig:focus-visible {
-  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-  border-color: #d6249f;
+.share-btn.share-wa {
+  border-color: rgba(37, 211, 102, 0.45);
+}
+.share-btn.share-wa svg {
+  color: #25d366;
+}
+.share-btn.share-wa:hover {
+  background: #25d366 !important;
+  border-color: #25d366 !important;
+  color: #ffffff !important;
+}
+.share-btn.share-wa:hover svg {
   color: #ffffff;
 }
-.share-btn.share-copy:hover, .share-btn.share-copy:focus-visible { background: var(--ink); border-color: var(--ink); color: #ffffff; }
+
+.share-btn.share-x {
+  border-color: rgba(15, 20, 25, 0.35);
+}
+.share-btn.share-x svg {
+  color: #0f1419;
+}
+.share-btn.share-x:hover {
+  background: #0f1419 !important;
+  border-color: #0f1419 !important;
+  color: #ffffff !important;
+}
+.share-btn.share-x:hover svg {
+  color: #ffffff;
+}
+
+.share-btn.share-fb {
+  border-color: rgba(24, 119, 242, 0.4);
+}
+.share-btn.share-fb svg {
+  color: #1877f2;
+}
+.share-btn.share-fb:hover {
+  background: #1877f2 !important;
+  border-color: #1877f2 !important;
+  color: #ffffff !important;
+}
+.share-btn.share-fb:hover svg {
+  color: #ffffff;
+}
+
+.share-btn.share-ig {
+  border-color: rgba(225, 48, 108, 0.4);
+}
+.share-btn.share-ig svg {
+  color: #e1306c;
+}
+.share-btn.share-ig:hover {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%) !important;
+  border-color: #d6249f !important;
+  color: #ffffff !important;
+}
+.share-btn.share-ig:hover svg {
+  color: #ffffff;
+}
+
+.share-btn.share-copy {
+  border-color: #cbd3da;
+}
+.share-btn.share-copy svg {
+  color: var(--muted);
+}
+.share-btn.share-copy:hover {
+  background: var(--ink) !important;
+  border-color: var(--ink) !important;
+  color: #ffffff !important;
+}
+.share-btn.share-copy:hover svg {
+  color: #ffffff;
+}
 
 .share-btn.share-copy.is-copied {
-  background: #138808;
-  border-color: #138808;
+  background: #138808 !important;
+  border-color: #138808 !important;
+  color: #ffffff !important;
+}
+.share-btn.share-copy.is-copied svg {
   color: #ffffff;
 }
 

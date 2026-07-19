@@ -573,11 +573,11 @@ function shareBarHtml(url, text) {
   const t = encodeURIComponent(text);
   return `
     <span class="share-label">Share</span>
-    <a class="share-btn share-wa" href="https://wa.me/?text=${t}%20${u}" target="_blank" rel="noopener" aria-label="Share on WhatsApp">WhatsApp</a>
-    <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=${t}&url=${u}" target="_blank" rel="noopener" aria-label="Share on X">X</a>
-    <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" aria-label="Share on Facebook">Facebook</a>
-    <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener" aria-label="LetsFixIndia on Instagram">Instagram</a>
-    <button type="button" class="share-btn share-copy" data-share-url="${esc(url)}" aria-label="Copy link">Copy link</button>
+    <a class="share-btn share-wa" href="https://wa.me/?text=${t}%20${u}" target="_blank" rel="noopener" aria-label="Share on WhatsApp">${SHARE_ICONS.wa}<span>WhatsApp</span></a>
+    <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=${t}&url=${u}" target="_blank" rel="noopener" aria-label="Share on X">${SHARE_ICONS.x}<span>X</span></a>
+    <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" aria-label="Share on Facebook">${SHARE_ICONS.fb}<span>Facebook</span></a>
+    <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener" aria-label="LetsFixIndia on Instagram">${SHARE_ICONS.ig}<span>Instagram</span></a>
+    <button type="button" class="share-btn share-copy" data-share-url="${esc(url)}" aria-label="Copy link">${SHARE_ICONS.copy}<span>Copy link</span></button>
   `;
 }
 
