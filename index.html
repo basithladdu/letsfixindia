@@ -36,7 +36,7 @@
         <a href="/statistics" data-link>Stats</a>
         <a href="/voices" data-link>Voices</a>
         <a href="/submit" data-link>Submit</a>
-        <a href="/sources" data-link>Sources</a>
+        <a href="/contact" data-link>Contact</a>
         <a href="/faq" data-link>FAQ</a>
         <a href="/support" data-link>Support</a>
         <a href="/about" data-link>About</a>
@@ -58,7 +58,7 @@
       <a href="/statistics" data-link>Stats</a>
       <a href="/voices" data-link>Voices</a>
       <a href="/submit" data-link>Submit</a>
-      <a href="/sources" data-link>Sources</a>
+      <a href="/contact" data-link>Contact</a>
       <a href="/faq" data-link>FAQ</a>
       <a href="/support" data-link>Support</a>
       <a href="/about" data-link>About</a>
@@ -243,30 +243,81 @@
         <div id="submissionQueue" class="submission-queue"></div>
       </section>
 
-      <section id="sources" class="section source-section route-page" data-page="sources">
+      <section id="contact" class="section route-page" data-page="contact">
         <div class="section-head">
-          <p class="eyebrow">Source ledger</p>
-          <h2>Evidence used in this build</h2>
-          <p>Publisher records behind timeline entries, indicators, and voices. Pending rows are intentionally visible until a verified URL is attached.</p>
+          <p class="eyebrow">Get in touch</p>
+          <h2>Contact & Collaboration</h2>
+          <p>For corrections, collaboration, research, or software work, reach out directly.</p>
         </div>
-        <label class="source-search">
-          <span>Search sources</span>
-          <input id="sourceSearchInput" type="search" placeholder="Publisher, title, or source type">
-        </label>
-        <label class="source-search">
-          <span>Evidence status</span>
-          <select id="sourceStatusFilter">
-            <option value="all">All source records</option>
-            <option value="linked">Linked URL</option>
-            <option value="pending">URL pending</option>
-            <option value="unused-linked">Unreferenced URL</option>
-            <option value="unused-pending">Pending placeholder</option>
-          </select>
-        </label>
-        <button id="clearSourceFiltersButton" class="clear-filters-button" type="button" title="Reset source filters">Clear filters</button>
-        <div id="sourceAuditCards" class="source-audit-cards" aria-live="polite"></div>
-        <p id="sourceSummary" class="source-summary" aria-live="polite"></p>
-        <div id="sourceList" class="source-list"></div>
+        
+        <div class="support-options">
+          <article class="support-card">
+            <span class="support-rank">WhatsApp</span>
+            <h3>WhatsApp Chat</h3>
+            <p>Chat directly with Basith for quick questions, feedback, or collaboration queries.</p>
+            <div class="support-actions" style="margin-top: 14px;">
+              <a href="https://wa.me/" target="_blank" rel="noopener" class="contact-item whatsapp-personal" style="text-decoration: none;">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                  </svg>
+                </span>
+                <span class="contact-label">Start WhatsApp Chat</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="support-card">
+            <span class="support-rank">Direct Contact</span>
+            <h3>Build with Basith</h3>
+            <p>For corrections, collaboration, research, or software work, contact me directly.</p>
+            <div class="contact-links" style="margin-top: 14px; display: grid; gap: 8px;">
+              <a href="mailto:basithladoo@gmail.com" class="contact-item email-personal">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </span>
+                <span class="contact-label">basithladoo@gmail.com</span>
+              </a>
+              <a href="mailto:workwithdevit@gmail.com" class="contact-item email-work">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </span>
+                <span class="contact-label">workwithdevit@gmail.com</span>
+              </a>
+              <a href="tel:+" class="contact-item phone-personal">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <span class="contact-label"></span>
+              </a>
+            </div>
+          </article>
+
+          <article class="support-card">
+            <span class="support-rank">Powered by</span>
+            <h3>devit.</h3>
+            <p>Devit — The studio behind this work, at wedevit.in. Basith is the founder. (A little self-aware paid promotion — don't mind if I do, hire us to build your software!). We design, build, and scale exceptional software for startups and businesses.</p>
+            <div class="support-actions" style="margin-top: 14px;">
+              <a class="contact-item company-site" href="https://www.wedevit.in/" target="_blank" rel="noopener">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                </span>
+                <span class="contact-label">Visit wedevit.in</span>
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="methodology" class="section method-section route-page" data-page="methodology">
@@ -356,6 +407,14 @@
             <h3>Build with Basith</h3>
             <p>For corrections, collaboration, research, or software work, contact me directly.</p>
             <div class="contact-links">
+              <a href="https://wa.me/" target="_blank" rel="noopener" class="contact-item whatsapp-personal">
+                <span class="contact-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
+                  </svg>
+                </span>
+                <span class="contact-label">WhatsApp Chat</span>
+              </a>
               <a href="mailto:basithladoo@gmail.com" class="contact-item email-personal">
                 <span class="contact-icon">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -382,20 +441,12 @@
                 </span>
                 <span class="contact-label"></span>
               </a>
-              <a href="https://wa.me/" target="_blank" rel="noopener" class="contact-item whatsapp-personal">
-                <span class="contact-icon">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.008c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/>
-                  </svg>
-                </span>
-                <span class="contact-label">WhatsApp Chat</span>
-              </a>
             </div>
           </article>
           <article class="about-contact-card about-company-card">
             <span>Powered by</span>
             <h3>devit.</h3>
-            <p>We design, build, and scale exceptional software for startups and businesses.</p>
+            <p>Devit — The studio behind this work, at wedevit.in. Basith is the founder. (A little self-aware paid promotion — don't mind if I do, hire us to build your software!). We design, build, and scale exceptional software for startups and businesses.</p>
             <a class="contact-item company-site" href="https://www.wedevit.in/" target="_blank" rel="noopener">
               <span class="contact-icon">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -594,7 +645,7 @@
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                   </svg>
                 </span>
-                <span class="contact-label">GitHub (if you are a software developer or designer)</span>
+                <span class="contact-label">GitHub (if you are a software developer, designer, or a student)</span>
               </a>
             </div>
           </article>

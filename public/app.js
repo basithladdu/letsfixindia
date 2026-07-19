@@ -446,6 +446,179 @@ function renderHomeRecent() {
   `).join("");
 }
 
+function generateChartHtml(chart, directionTone) {
+  if (!chart || chart.length === 0) return "";
+
+  // Check if labels are categories or years
+  const isCategory = chart.some(item => isNaN(item.label));
+  
+  // Highlight color based on direction tone
+  const accentColor = directionTone === "tone-better" ? "#138808" : directionTone === "tone-worse" ? "#b3261e" : "#8f3200";
+
+  // CASE 1: Category Breakdown (e.g. IPC cases, SLL cases) -> Donut Chart
+  if (isCategory) {
+    const totalItem = chart.find(item => item.label.toLowerCase() === "total");
+    const segments = chart.filter(item => item.label.toLowerCase() !== "total");
+    
+    const sum = segments.reduce((acc, item) => acc + item.value, 0);
+    const displayTotal = totalItem ? totalItem.value : sum;
+    
+    let accumulatedPercent = 0;
+    const paths = segments.map((item, index) => {
+      const val = item.value;
+      const percent = sum > 0 ? val / sum : 0;
+      const strokeDash = `${percent * 100} ${100 - (percent * 100)}`;
+      const strokeOffset = 100 - accumulatedPercent + 25; // start at top (12 o'clock)
+      accumulatedPercent += percent * 100;
+      
+      const segmentColors = [accentColor, "#3b82f6", "#10b981", "#8b5cf6", "#f59e0b"];
+      const color = segmentColors[index % segmentColors.length];
+      
+      return {
+        label: item.label,
+        value: val.toLocaleString("en-IN"),
+        color,
+        strokeDash,
+        strokeOffset
+      };
+    });
+
+    return `
+      <div class="donut-chart-wrapper">
+        <div class="donut-svg-container">
+          <svg viewBox="0 0 36 36" class="donut-svg">
+            <circle class="donut-ring" cx="18" cy="18" r="15.915" fill="transparent" stroke="rgba(0,0,0,0.06)" stroke-width="3.5"></circle>
+            ${paths.map(p => `
+              <circle class="donut-segment" cx="18" cy="18" r="15.915" fill="transparent" 
+                stroke="${p.color}" stroke-width="3.5" 
+                stroke-linecap="round"
+                stroke-dasharray="${p.strokeDash}" stroke-dashoffset="${p.strokeOffset}">
+              </circle>
+            `).join("")}
+          </svg>
+          <div class="donut-center-text">
+            <span class="donut-center-label">Total</span>
+            <span class="donut-center-value">${displayTotal.toLocaleString("en-IN")}</span>
+          </div>
+        </div>
+        <div class="donut-legend">
+          ${paths.map(p => `
+            <div class="donut-legend-item">
+              <span class="legend-indicator" style="background-color: ${p.color};"></span>
+              <span class="legend-text"><strong>${p.value}</strong> <small>${p.label}</small></span>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  // CASE 2: Exactly 2 data points (e.g. 2014 vs 2023) -> Premium Comparison Cards + Split Bar
+  if (chart.length === 2) {
+    const val1 = chart[0].value;
+    const val2 = chart[1].value;
+    const label1 = chart[0].label;
+    const label2 = chart[1].label;
+    
+    let pctChangeText = "";
+    let isIncrease = val2 > val1;
+    if (val1 > 0) {
+      const pct = Math.abs(((val2 - val1) / val1) * 100).toFixed(1);
+      pctChangeText = `${isIncrease ? "↑" : "↓"} ${pct}% ${isIncrease ? "increase" : "decrease"}`;
+    }
+
+    const pctColor = directionTone === "tone-better" ? "#0d6a04" : directionTone === "tone-worse" ? "#b3261e" : "#8f3200";
+    const barPercent = val1 + val2 > 0 ? (val2 / (val1 + val2)) * 100 : 50;
+
+    return `
+      <div class="comparison-chart-wrapper">
+        <div class="comparison-cards">
+          <div class="comp-card start">
+            <span class="comp-label">${label1}</span>
+            <span class="comp-value">${val1.toLocaleString("en-IN")}</span>
+          </div>
+          ${pctChangeText ? `
+            <div class="comp-change-badge" style="color: ${pctColor}; background: ${pctColor}10;">
+              ${pctChangeText}
+            </div>
+          ` : ""}
+          <div class="comp-card end">
+            <span class="comp-label">${label2}</span>
+            <span class="comp-value">${val2.toLocaleString("en-IN")}</span>
+          </div>
+        </div>
+        <div class="comparison-bar-track">
+          <div class="comparison-bar-fill" style="width: ${barPercent}%; background: ${accentColor};"></div>
+          <span class="bar-marker marker-start">${label1}</span>
+          <span class="bar-marker marker-end">${label2}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  // CASE 3: 3 or more data points -> SVG Trend Line / Area Sparkline
+  const values = chart.map(item => item.value);
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const valRange = maxVal - minVal;
+
+  const width = 360;
+  const height = 90;
+  const paddingX = 20;
+  const paddingY = 15;
+
+  const points = chart.map((item, idx) => {
+    const x = paddingX + (idx * ((width - (paddingX * 2)) / (chart.length - 1)));
+    const y = valRange === 0 
+      ? height / 2 
+      : height - paddingY - (((item.value - minVal) / valRange) * (height - (paddingY * 2)));
+    return { x, y, label: item.label, value: item.value };
+  });
+
+  const pathD = `M ${points.map(p => `${p.x} ${p.y}`).join(" L ")}`;
+  const areaD = `${pathD} L ${points[points.length - 1].x} ${height} L ${points[0].x} ${height} Z`;
+
+  return `
+    <div class="trend-chart-wrapper">
+      <svg viewBox="0 0 ${width} ${height}" class="trend-svg" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="areaGrad-${points[0].value}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${accentColor}" stop-opacity="0.16"></stop>
+            <stop offset="100%" stop-color="${accentColor}" stop-opacity="0.0"></stop>
+          </linearGradient>
+        </defs>
+        <!-- Area Grid lines -->
+        <line x1="${paddingX}" y1="${height - paddingY}" x2="${width - paddingX}" y2="${height - paddingY}" stroke="rgba(0,0,0,0.05)" stroke-width="1"></line>
+        <line x1="${paddingX}" y1="${paddingY}" x2="${width - paddingX}" y2="${paddingY}" stroke="rgba(0,0,0,0.05)" stroke-width="1"></line>
+        
+        <!-- Fill Area -->
+        <path d="${areaD}" fill="url(#areaGrad-${points[0].value})"></path>
+        
+        <!-- Stroke Line -->
+        <path d="${pathD}" fill="none" stroke="${accentColor}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        
+        <!-- Interactive Dots -->
+        ${points.map(p => `
+          <g class="trend-point-group">
+            <circle cx="${p.x}" cy="${p.y}" r="3.5" fill="#ffffff" stroke="${accentColor}" stroke-width="2" class="trend-dot"></circle>
+            <circle cx="${p.x}" cy="${p.y}" r="12" fill="transparent" class="trend-hitbox">
+              <title>${p.label}: ${p.value.toLocaleString("en-IN")}</title>
+            </circle>
+          </g>
+        `).join("")}
+      </svg>
+      <div class="trend-labels">
+        ${points.map(p => `
+          <div class="trend-label-item">
+            <span class="trend-year">${p.label}</span>
+            <span class="trend-val">${p.value.toLocaleString("en-IN")}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
 function renderIndicators() {
   if (!indicatorGrid) return;
   const indicatorAccents = ["#f28c28", "#138808", "#2f6fed", "#b12a8a", "#0f766e", "#c0392b", "#7c5cff", "#a05a2c", "#247ba0", "#d97706"];
@@ -467,7 +640,6 @@ function renderIndicators() {
   if (indicatorResultCount) indicatorResultCount.textContent = `${filtered.length} of ${indicators.length} indicators${indicatorFilterCount ? ` - ${indicatorFilterCount} filter${indicatorFilterCount === 1 ? "" : "s"} active` : ""}`;
   if (clearIndicatorFiltersButton) clearIndicatorFiltersButton.disabled = indicatorFilterCount === 0;
   indicatorGrid.innerHTML = filtered.map((indicator, cardIndex) => {
-    const max = Math.max(...indicator.chart.map((item) => item.value));
     const directionTone = String(indicator.direction || "").toLowerCase().includes("worse")
       || String(indicator.direction || "").toLowerCase().includes("higher")
       || String(indicator.direction || "").toLowerCase().includes("red flag")
@@ -489,14 +661,8 @@ function renderIndicators() {
           <strong>${esc(indicator.value)}</strong>
         </div>
         <p>${esc(indicator.detail)}</p>
-        <div class="bars chart-variant-${cardIndex % 3}" aria-label="${esc(indicator.title)} comparison chart">
-          ${indicator.chart.map((item, index) => `
-            <div class="bar-row">
-              <span>${esc(item.label)}</span>
-              <div class="bar-track"><div class="bar-fill" style="width:${Math.max(8, (item.value / max) * 100)}%;--i:${index};--value:${Math.max(8, (item.value / max) * 100)}%"></div></div>
-              <b>${item.value.toLocaleString("en-IN")}</b>
-            </div>
-          `).join("")}
+        <div class="indicator-chart-container" aria-label="${esc(indicator.title)} comparison chart">
+          ${generateChartHtml(indicator.chart, directionTone)}
         </div>
         <div class="source-links">${sourceLinks(indicator.sources)}</div>
       </article>
@@ -1411,13 +1577,24 @@ function initSplash() {
       document.body.style.overflow = "hidden";
     }
 
-    dismissBtn.addEventListener("click", () => {
+    const backdrop = splash.querySelector(".splash-backdrop");
+    const dismissSplash = () => {
       splash.style.display = "none";
       document.body.style.overflow = "";
       if (dontShowCheckbox && dontShowCheckbox.checked) {
         localStorage.setItem("letsfixindia_splash_dismissed_july20", "true");
       } else {
         sessionStorage.setItem("letsfixindia_splash_dismissed_july20", "true");
+      }
+    };
+
+    dismissBtn.addEventListener("click", dismissSplash);
+    if (backdrop) {
+      backdrop.addEventListener("click", dismissSplash);
+    }
+    splash.addEventListener("click", (e) => {
+      if (e.target === splash) {
+        dismissSplash();
       }
     });
   }
