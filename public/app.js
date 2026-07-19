@@ -1,22 +1,15 @@
-// Initialize Firebase using the public credentials copied from the fixit project
-const firebaseConfig = {
-  apiKey: "AIzaSyDyTaws6Zn6F46X_mSTWQl7Axly03DNmPM",
-  authDomain: "fixit-6b215.firebaseapp.com",
-  projectId: "fixit-6b215",
-  storageBucket: "fixit-6b215.appspot.com",
-  messagingSenderId: "684763574365",
-  appId: "1:684763574365:web:f9e40fefc3b76ae7475db4"
-};
+// Initialize Supabase using the credentials provided
+const supabaseUrl = 'https://pjonynkzgsfwojwboixi.supabase.co';
+const supabaseKey = 'sb_publishable_YH3S94knvXqBI3a960u01w_fqgmz0LC';
+let db;
 
-let db = null;
-if (typeof firebase !== "undefined") {
-  try {
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.firestore();
-    console.log("Firebase & Firestore initialized successfully");
-  } catch (error) {
-    console.error("Firebase init failed:", error);
+try {
+  if (typeof window !== 'undefined' && window.supabase) {
+    db = window.supabase.createClient(supabaseUrl, supabaseKey);
+    console.log("Supabase initialized successfully");
   }
+} catch (error) {
+  console.error("Supabase init failed:", error);
 }
 
 let events = [];
@@ -1586,15 +1579,16 @@ function bindEvents() {
     
     setSubmitFeedback("Sending submission to editor review queue...");
     
-    // Direct persistence to Firestore
+    // Direct persistence to Supabase
     if (db) {
-      db.collection("letsfixindia_submissions").add(draft)
-        .then(() => {
+      db.from("letsfixindia_submissions").insert([{ data: draft }])
+        .then(({ error }) => {
+          if (error) throw error;
           setSubmitFeedback("Submission sent directly to the editor's queue! Thank you.");
           window.setTimeout(() => setSubmitFeedback(""), 6000);
         })
         .catch((error) => {
-          console.error("Firestore submission failed:", error);
+          console.error("Supabase submission failed:", error);
           setSubmitFeedback("Saved locally in this browser. Cloud submission failed: " + error.message);
           window.setTimeout(() => setSubmitFeedback(""), 6000);
         });

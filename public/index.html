@@ -192,7 +192,7 @@
           <div class="indicator-legend" aria-label="Indicator interpretation"><span><i class="legend-dot legend-better"></i>Favorable movement</span><span><i class="legend-dot legend-worse"></i>Adverse movement</span><span><i class="legend-dot legend-flat"></i>Mixed / caution</span></div>
         </div>
 
-        <div class="live-trackers-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px 0;">
+        <div class="live-trackers-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 0 0 48px 0;">
           <div class="tracker-card" style="padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: #fff; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
             <p style="margin: 0 0 8px 0; font-size: 0.85rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Countdown to Next General Election</p>
             <div id="electionCountdown" style="font-size: 1.35rem; font-weight: 900; color: var(--ink); font-family: monospace;">Loading countdown...</div>
@@ -882,8 +882,7 @@
     </div>
 
     <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use LetsFixIndia fully.</p></noscript>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/app.js?v=2"></script>
     <!-- Mobile Scroll Progress Indicator -->
     <div id="mobileScrollProgress" class="mobile-scroll-progress" aria-hidden="true">
