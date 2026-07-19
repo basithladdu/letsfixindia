@@ -143,10 +143,13 @@ const sourceFilterStatus = (id, source, usage) => {
 const TIMELINE_LAST_SCROLL_KEY = "letsFixIndia.timeline.lastY";
 const TIMELINE_RETURN_SCROLL_KEY = "letsFixIndia.timeline.returnY";
 const TIMELINE_JUMP_ORIGIN_KEY = "letsFixIndia.timeline.jumpOrigin";
+const UI_SOUND_KEY = "letsFixIndia.ui.sound";
 let scrollSaveQueued = false;
 let filtersWideState = null;
 let autoScrollFrame = 0;
 let autoScrollActive = false;
+let soundEnabled = localStorage.getItem(UI_SOUND_KEY) === "on";
+let audioContext = null;
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -158,6 +161,54 @@ function esc(str) {
 
 function closestFromEvent(event, selector) {
   return event.target instanceof Element ? event.target.closest(selector) : null;
+}
+
+function updateSoundButtons() {
+  document.querySelectorAll("[data-sound-toggle]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(soundEnabled));
+    button.classList.toggle("is-on", soundEnabled);
+    const label = soundEnabled ? "Sound on" : "Sound off";
+    button.title = label;
+    button.setAttribute("aria-label", label);
+    const text = button.querySelector("span");
+    if (text) text.textContent = label;
+  });
+}
+
+function setSoundEnabled(enabled) {
+  soundEnabled = enabled;
+  localStorage.setItem(UI_SOUND_KEY, enabled ? "on" : "off");
+  document.documentElement.classList.toggle("sound-enabled", enabled);
+  updateSoundButtons();
+}
+
+function playUiSound(kind = "tap", force = false) {
+  if (!force && !soundEnabled) return;
+  try {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    audioContext ||= new AudioCtx();
+    if (audioContext.state === "suspended") audioContext.resume();
+    const now = audioContext.currentTime;
+    const osc = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+    const notes = {
+      tap: [440, 0.035, 0.018],
+      nav: [520, 0.055, 0.026],
+      filter: [360, 0.045, 0.018],
+      success: [660, 0.08, 0.032]
+    };
+    const [freq, duration, peak] = notes[kind] || notes.tap;
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(freq, now);
+    osc.frequency.exponentialRampToValueAtTime(freq * 1.18, now + duration);
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(peak, now + 0.006);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+    osc.connect(gain).connect(audioContext.destination);
+    osc.start(now);
+    osc.stop(now + duration + 0.01);
+  } catch {}
 }
 
 function uniqueSorted(values) {
@@ -829,6 +880,7 @@ function shareBarHtml(url, text) {
     <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" aria-label="Share on Facebook">${SHARE_ICONS.fb}<span>Facebook</span></a>
     <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener" aria-label="LetsFixIndia on Instagram">${SHARE_ICONS.ig}<span>Instagram</span></a>
     <button type="button" class="share-btn share-copy" data-share-url="${esc(url)}" aria-label="Copy link">${SHARE_ICONS.copy}<span>Copy link</span></button>
+    <button type="button" class="share-btn share-sound" data-sound-toggle aria-pressed="false" aria-label="Sound off"><span>Sound off</span></button>
   `;
 }
 
@@ -836,6 +888,7 @@ function renderShareBars() {
   document.querySelectorAll(".share-bar[data-share-context='site']").forEach((bar) => {
     bar.innerHTML = shareBarHtml(SITE_URL, SITE_SHARE_TEXT);
   });
+  updateSoundButtons();
 }
 
 document.addEventListener("click", async (event) => {
@@ -848,6 +901,19 @@ document.addEventListener("click", async (event) => {
   } catch {
     button.title = "Copy failed";
   }
+});
+
+document.addEventListener("click", (event) => {
+  const toggle = closestFromEvent(event, "button[data-sound-toggle]");
+  if (toggle) {
+    const next = !soundEnabled;
+    setSoundEnabled(next);
+    playUiSound(next ? "success" : "tap", true);
+    return;
+  }
+  const control = closestFromEvent(event, "a, button, summary");
+  if (!control || control.disabled) return;
+  playUiSound(control.hasAttribute("data-link") ? "nav" : "tap");
 });
 
 function renderRecord(id) {
@@ -1587,24 +1653,28 @@ function bindEvents() {
 
   searchInput?.addEventListener("input", (event) => {
     state.query = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
 
   categoryFilter?.addEventListener("change", (event) => {
     state.category = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
 
   actorFilter?.addEventListener("change", (event) => {
     state.actor = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
 
   statusFilter?.addEventListener("change", (event) => {
     state.status = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
@@ -1612,6 +1682,7 @@ function bindEvents() {
   evidenceFilter?.addEventListener("change", (event) => {
     saveTimelineScroll(true);
     state.evidence = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
@@ -1619,6 +1690,7 @@ function bindEvents() {
   sortFilter?.addEventListener("change", (event) => {
     saveTimelineScroll(true);
     state.sort = event.target.value;
+    playUiSound("filter");
     renderTimeline();
     updateScrollDock();
   });
@@ -1630,6 +1702,7 @@ function bindEvents() {
     if (!button) return;
     saveTimelineScroll(true);
     state.year = button.dataset.year;
+    playUiSound("filter");
     yearRail.querySelectorAll(".year-pill").forEach((pill) => pill.classList.toggle("active", pill === button));
     renderTimeline();
     updateScrollDock();
@@ -1878,6 +1951,7 @@ async function init() {
       history.replaceState({ restoreTimeline: false }, "", window.location.pathname);
     }
     renderShareBars();
+    setSoundEnabled(soundEnabled);
     renderRoute();
   } catch (error) {
     if (timelineList) {
