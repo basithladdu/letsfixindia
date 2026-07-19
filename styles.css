@@ -115,21 +115,23 @@ textarea {
 
 .topnav a {
   flex: 0 0 auto;
-  padding: 6px 2px;
+  padding: 6px 12px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
   text-decoration: none;
+  border-radius: 99px;
 }
 
 .topnav a:hover,
-.topnav a:focus-visible,
-.topnav a.active-route {
+.topnav a:focus-visible {
+  background: rgba(23, 23, 23, 0.05);
   color: var(--ink);
 }
 
 .topnav a.active-route {
-  border-bottom: 2px solid var(--bjp);
+  background: rgba(255, 103, 31, 0.09) !important;
+  color: var(--bjp) !important;
 }
 
 .record-menu {
@@ -1812,29 +1814,7 @@ button,
   transform: scale(0.96);
 }
 
-.topnav a {
-  position: relative;
-}
 
-.topnav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: 4px;
-  height: 2px;
-  background: var(--bjp);
-  transition: right 0.22s ease;
-}
-
-.topnav a:hover::after,
-.topnav a.active-route::after {
-  right: 0;
-}
-
-.topnav a.active-route {
-  border-bottom: none;
-}
 
 @keyframes card-in {
   from {
@@ -3526,10 +3506,10 @@ textarea:focus-visible {
 /* ── UI Alignments & Spacing Fixes ─────────────────────────── */
 @media (min-width: 960px) {
   .topnav {
-    gap: 20px !important;
+    gap: 12px !important;
   }
   .topnav a {
-    padding: 8px 6px !important;
+    padding: 8px 16px !important;
     font-size: 13.5px !important;
   }
 }
