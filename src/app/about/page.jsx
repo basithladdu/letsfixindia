@@ -37,7 +37,7 @@ export default function AboutPage() {
           This project is powered by <strong>devit.</strong> Basith is the founder. (A little self-aware paid promotion — don't mind if I do, hire us to build your software!).
         </p>
         <div className="support-actions">
-          <a className="text-button" href="https://github.com/basithladdu/theindiafiles" target="_blank" rel="noreferrer">Support on GitHub</a>
+          <a className="text-button" href="https://github.com/basithladdu/letsfixindia" target="_blank" rel="noreferrer">Support on GitHub</a>
           <a className="text-button" href="mailto:basithladoo@gmail.com">Email basithladoo@gmail.com</a>
           <a className="text-button" href="https://www.wedevit.in/" target="_blank" rel="noreferrer">Visit wedevit.in</a>
         </div>
