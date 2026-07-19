@@ -776,9 +776,8 @@ textarea:focus {
   justify-content: space-between;
   gap: 12px;
   padding: 12px 0 10px 26px;
-  background: rgba(251, 250, 245, 0.94);
+  background: var(--paper);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
 }
 
 .year-heading::before {
@@ -4068,3 +4067,14 @@ textarea:focus-visible {
   font-weight: 900;
   color: var(--ink);
 }
+
+@media (max-width: 768px) {
+  .year-group,
+  .year-records .event-card,
+  .scroll-dock,
+  .record-shell,
+  .hero-copy {
+    animation: none !important;
+  }
+}
+
