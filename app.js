@@ -507,6 +507,9 @@ function renderTimeline() {
               </div>
               <p>${esc(event.summary)}</p>
               <p class="outcome">${esc(event.outcome)}</p>
+              <div style="margin-top: 12px; display: flex; justify-content: flex-end; border-top: 1px dashed rgba(0,0,0,0.05); padding-top: 8px;">
+                <a href="/submit?correct=${event.id}" data-link style="font-size: 0.8rem; color: var(--muted); text-decoration: underline;">Suggest a correction or update</a>
+              </div>
             </div>
           </article>
         `).join("")}
@@ -1037,6 +1040,39 @@ function renderRoute(options = {}) {
   setActiveNav(route.page);
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
   
+  if (route.page === "submit") {
+    populateEventDropdown();
+    
+    // Check URL parameters for suggesting a correction to a specific event
+    const params = new URLSearchParams(window.location.search);
+    const correctId = params.get("correct");
+    if (correctId) {
+      setTimeout(() => {
+        const radioCorrection = document.querySelector('input[name="submissionType"][value="correction"]');
+        if (radioCorrection) {
+          radioCorrection.checked = true;
+          radioCorrection.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+        
+        const eventSelect = document.getElementById("eventSelect");
+        if (eventSelect) {
+          eventSelect.value = correctId;
+        }
+        
+        const summaryTextarea = document.querySelector('textarea[name="summary"]');
+        if (summaryTextarea) {
+          summaryTextarea.focus();
+        }
+      }, 50);
+    } else {
+      const radioNew = document.querySelector('input[name="submissionType"][value="new"]');
+      if (radioNew) {
+        radioNew.checked = true;
+        radioNew.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    }
+  }
+
   if (route.page === "statistics") {
     startLiveTrackers();
   } else {
@@ -1070,6 +1106,20 @@ function daysToYMD(totalDays) {
   if (d < 0) { m--; d += new Date(end.getFullYear(), end.getMonth(), 0).getDate(); }
   if (m < 0) { y--; m += 12; }
   return { y, m, d };
+}
+
+function populateEventDropdown() {
+  const select = document.getElementById("eventSelect");
+  if (!select || !events) return;
+  
+  // Sort events by year descending, then title
+  const sortedEvents = [...events].sort((a, b) => {
+    if (a.year !== b.year) return b.year - a.year;
+    return String(a.title).localeCompare(String(b.title));
+  });
+  
+  select.innerHTML = '<option value="">-- Search & select from all events --</option>' +
+    sortedEvents.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
 }
 
 function calendarDiffYMD(from, to) {
@@ -1564,17 +1614,107 @@ function bindEvents() {
     updateScrollDock();
   });
 
+  // Handle submission type toggle
+  submissionForm?.addEventListener("change", (event) => {
+    if (event.target.name === "submissionType") {
+      const type = event.target.value;
+      const newFields = document.getElementById("newEventFields");
+      const corrFields = document.getElementById("correctionEventFields");
+      const summaryLabel = document.getElementById("summaryLabel");
+      const summaryTextarea = document.querySelector('textarea[name="summary"]');
+      const sourcesTextarea = document.querySelector('textarea[name="sources"]');
+      
+      if (!newFields || !corrFields) return;
+      
+      const newRequiredInputs = newFields.querySelectorAll("input, select");
+      const eventSelect = document.getElementById("eventSelect");
+      
+      if (type === "correction") {
+        newFields.style.display = "none";
+        corrFields.style.display = "block";
+        newRequiredInputs.forEach(el => el.removeAttribute("required"));
+        if (eventSelect) eventSelect.setAttribute("required", "required");
+        
+        if (summaryLabel) summaryLabel.textContent = "What needs to be corrected or added?";
+        if (summaryTextarea) {
+          summaryTextarea.placeholder = "Describe the correction, source updates, or extra details that should be added to the selected event.";
+        }
+        if (sourcesTextarea) {
+          sourcesTextarea.placeholder = "Additional source URLs supporting your correction, one per line.";
+        }
+      } else {
+        newFields.style.display = "contents";
+        corrFields.style.display = "none";
+        newRequiredInputs.forEach(el => {
+          if (el.name !== "affected") {
+            el.setAttribute("required", "required");
+          }
+        });
+        if (eventSelect) eventSelect.removeAttribute("required");
+        
+        if (summaryLabel) summaryLabel.textContent = "What happened";
+        if (summaryTextarea) {
+          summaryTextarea.placeholder = "Write the factual claim, the BJP/RSS/government connection, and what still needs verification.";
+        }
+        if (sourcesTextarea) {
+          sourcesTextarea.placeholder = "Paste URLs, one per line. Prefer court, official, NCRB, ADR, HRW, Amnesty, RSF, Reuters, The Hindu, Indian Express, BBC.";
+        }
+      }
+    }
+  });
+
+  // Handle event search filter
+  const eventSearchInput = document.getElementById("eventSearchInput");
+  eventSearchInput?.addEventListener("input", (event) => {
+    const query = event.target.value.toLowerCase().trim();
+    const eventSelect = document.getElementById("eventSelect");
+    if (!eventSelect || !events) return;
+    
+    const filtered = events.filter(ev => 
+      ev.title.toLowerCase().includes(query) || 
+      String(ev.year).includes(query) ||
+      (ev.summary && ev.summary.toLowerCase().includes(query))
+    );
+    
+    // Sort events by year descending, then title
+    const sortedFiltered = [...filtered].sort((a, b) => {
+      if (a.year !== b.year) return b.year - a.year;
+      return String(a.title).localeCompare(String(b.title));
+    });
+    
+    eventSelect.innerHTML = '<option value="">-- Found ' + sortedFiltered.length + ' events --</option>' +
+      sortedFiltered.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
+  });
+
   submissionForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(submissionForm);
     const draft = Object.fromEntries(formData.entries());
     draft.createdAt = new Date().toISOString();
     
+    // Enrich draft if it's a correction suggestion
+    if (draft.submissionType === "correction" && draft.targetEventId) {
+      const matchedEvent = events.find(ev => ev.id === draft.targetEventId);
+      if (matchedEvent) {
+        draft.targetEventTitle = matchedEvent.title;
+        draft.targetEventYear = matchedEvent.year;
+      }
+    }
+    
     // Save to local drafts as a fallback
     const drafts = getDrafts();
     drafts.unshift(draft);
     saveDrafts(drafts);
+    
     submissionForm.reset();
+    
+    // Reset submission type visual state back to "new"
+    const radioNew = document.querySelector('input[name="submissionType"][value="new"]');
+    if (radioNew) {
+      radioNew.checked = true;
+      radioNew.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    
     renderSubmissions();
     
     setSubmitFeedback("Sending submission to editor review queue...");
