@@ -642,7 +642,7 @@ textarea:focus {
 .indicator-legend .legend-better { background:#138808; }
 .indicator-legend .legend-worse { background:var(--danger); }
 .indicator-legend .legend-flat { background:#9da8b1; }
-.stats-toolbar { display:grid; grid-template-columns:minmax(220px,1fr) 180px auto auto; align-items:end; gap:10px; margin-top:16px; }
+.stats-toolbar { display:grid; grid-template-columns:minmax(220px,1fr) 180px auto auto; align-items:end; gap:10px; margin-top:16px; margin-bottom:24px; }
 .stats-toolbar label { display:grid; gap:5px; color:var(--muted); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.04em; }
 .stats-toolbar input, .stats-toolbar select { min-height:40px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); padding:0 11px; font:inherit; text-transform:none; letter-spacing:normal; }
 .stats-result { color:var(--muted); font-size:12px; font-weight:800; padding-bottom:11px; white-space:nowrap; }
