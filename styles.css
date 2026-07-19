@@ -373,13 +373,18 @@ h2 {
 }
 
 .advanced-filters summary {
-  min-height: 40px;
-  padding: 10px;
+  min-height: 38px;
+  padding: 9px 11px;
   cursor: pointer;
   color: var(--ink);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
   list-style-position: inside;
+  user-select: none;
+}
+
+.advanced-filters summary:hover {
+  background: #f8f7f5;
 }
 
 .advanced-filter-grid {
@@ -1036,39 +1041,40 @@ textarea:focus {
 .source-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 5px;
+  margin-top: 8px;
 }
 
 .source-inline {
   align-items: center;
   gap: 6px;
-  padding: 8px;
+  padding: 6px;
   background: #fbfaf5;
   border: 1px solid #ece6dc;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .source-inline > span {
   flex-basis: 100%;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .source-links a {
   display: inline-flex;
   align-items: center;
-  min-height: 28px;
-  padding: 4px 8px;
+  min-height: 22px;
+  padding: 3px 7px;
   max-width: 100%;
   overflow: hidden;
   background: #ffffff;
   border: 1px solid #cbd3da;
-  border-radius: 6px;
+  border-radius: 5px;
   color: #222830;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1996,9 +2002,109 @@ button,
 
 .about-contact-card { border-top:3px solid var(--rss); }
 .about-company-card { border-top-color:var(--bjp); }
-.contact-links { display:grid; gap:7px; margin-top:12px; }
-.contact-links a { color:var(--rss); font-size:13px; font-weight:800; overflow-wrap:anywhere; }
-.contact-links a:hover { color:var(--bjp); }
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #fbfaf8;
+  border: 1px solid #ebdcd0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.contact-item:hover {
+  background: #fff !important;
+  border-color: var(--bjp) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(223, 107, 43, 0.08);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+/* Premium Brand Colors for Social Icons */
+.whatsapp-personal .contact-icon {
+  background: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+}
+.whatsapp-personal:hover .contact-icon {
+  background: #25D366;
+  color: #fff;
+}
+
+.email-personal .contact-icon {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+.email-personal:hover .contact-icon {
+  background: #dc3545;
+  color: #fff;
+}
+
+.email-work .contact-icon {
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+.email-work:hover .contact-icon {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.phone-personal .contact-icon {
+  background: rgba(111, 66, 193, 0.1);
+  color: #6f42c1;
+}
+.phone-personal:hover .contact-icon {
+  background: #6f42c1;
+  color: #fff;
+}
+
+.github-link {
+  display: inline-flex !important;
+  width: auto;
+}
+.github-link .contact-icon {
+  background: rgba(33, 37, 41, 0.1);
+  color: #212529;
+}
+.github-link:hover .contact-icon {
+  background: #212529;
+  color: #fff;
+}
+
+.company-site {
+  display: inline-flex !important;
+  width: auto;
+}
+.company-site .contact-icon {
+  background: rgba(253, 126, 20, 0.1);
+  color: #fd7e14;
+}
+.company-site:hover .contact-icon {
+  background: #fd7e14;
+  color: #fff;
+}
 
 @media (max-width:559px) {
   .about-quote { margin-top: 16px; padding: 16px 15px; }
@@ -3169,7 +3275,19 @@ textarea:focus-visible {
 .support-qr {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  background: #fbfaf8;
+  border: 1px solid #ebdcd0;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(223, 107, 43, 0.04);
+  transition: all 0.25s ease;
+}
+
+.support-qr:hover {
+  border-color: var(--bjp) !important;
+  box-shadow: 0 6px 18px rgba(223, 107, 43, 0.08);
+  transform: translateY(-1px);
 }
 
 .support-qr-placeholder {
@@ -3240,22 +3358,124 @@ textarea:focus-visible {
 /* ── Support QR image ──────────────────────────────────────── */
 
 .support-qr-image {
-  width: 140px;
-  height: 140px;
-  border: 1px solid var(--line);
+  width: 110px;
+  height: 110px;
+  border: 1px solid #dfd5cb;
   border-radius: 8px;
-  image-rendering: pixelated;
+  padding: 4px;
+  background: #fff;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.support-qr:hover .support-qr-image {
+  transform: scale(1.03);
 }
 
 .support-qr-info {
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.5;
   color: var(--muted);
 }
 
 .support-qr-info strong {
   display: block;
-  color: var(--ink);
+  color: var(--bjp);
+  font-size: 14px;
   font-weight: 800;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+}
+
+.support-qr-info small {
+  display: block;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.support-qr-info .upi-app-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  background: rgba(37, 211, 102, 0.1);
+  color: #128c7e;
+  border-radius: 99px;
+  font-weight: 750;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Share icons (brand colours) ─────────────────────────── */
+
+.share-btn {
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.share-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  display: block;
+}
+
+.share-btn.share-wa { color: #25d366; border-color: rgba(37, 211, 102, 0.45); }
+.share-btn.share-x { color: #0f1419; border-color: rgba(15, 20, 25, 0.35); }
+.share-btn.share-fb { color: #1877f2; border-color: rgba(24, 119, 242, 0.4); }
+.share-btn.share-ig {
+  color: #e1306c;
+  border-color: rgba(225, 48, 108, 0.4);
+}
+.share-btn.share-copy { color: var(--muted); }
+
+.share-btn.share-wa:hover, .share-btn.share-wa:focus-visible { background: #25d366; border-color: #25d366; color: #ffffff; }
+.share-btn.share-x:hover, .share-btn.share-x:focus-visible { background: #0f1419; border-color: #0f1419; color: #ffffff; }
+.share-btn.share-fb:hover, .share-btn.share-fb:focus-visible { background: #1877f2; border-color: #1877f2; color: #ffffff; }
+.share-btn.share-ig:hover, .share-btn.share-ig:focus-visible {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border-color: #d6249f;
+  color: #ffffff;
+}
+.share-btn.share-copy:hover, .share-btn.share-copy:focus-visible { background: var(--ink); border-color: var(--ink); color: #ffffff; }
+
+.share-btn.share-copy.is-copied {
+  background: #138808;
+  border-color: #138808;
+  color: #ffffff;
+}
+
+/* ── UI Alignments & Spacing Fixes ─────────────────────────── */
+@media (min-width: 960px) {
+  .topnav {
+    gap: 20px !important;
+  }
+  .topnav a {
+    padding: 8px 6px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+.stats-toolbar {
+  align-items: end !important;
+}
+
+.stats-toolbar .clear-filters-button {
+  margin-bottom: 0 !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.stats-result {
+  padding-bottom: 12px !important;
+  align-self: end !important;
 }
