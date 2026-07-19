@@ -1,3 +1,24 @@
+// Initialize Firebase using the public credentials copied from the fixit project
+const firebaseConfig = {
+  apiKey: "AIzaSyDyTaws6Zn6F46X_mSTWQl7Axly03DNmPM",
+  authDomain: "fixit-6b215.firebaseapp.com",
+  projectId: "fixit-6b215",
+  storageBucket: "fixit-6b215.appspot.com",
+  messagingSenderId: "684763574365",
+  appId: "1:684763574365:web:f9e40fefc3b76ae7475db4"
+};
+
+let db = null;
+if (typeof firebase !== "undefined") {
+  try {
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+    console.log("Firebase & Firestore initialized successfully");
+  } catch (error) {
+    console.error("Firebase init failed:", error);
+  }
+}
+
 let events = [];
 let sources = {};
 let indicators = [];
@@ -1460,13 +1481,32 @@ function bindEvents() {
     const formData = new FormData(submissionForm);
     const draft = Object.fromEntries(formData.entries());
     draft.createdAt = new Date().toISOString();
+    
+    // Save to local drafts as a fallback
     const drafts = getDrafts();
     drafts.unshift(draft);
     saveDrafts(drafts);
     submissionForm.reset();
     renderSubmissions();
-    setSubmitFeedback("Draft saved in this browser. It is not published until an editor promotes it.");
-    window.setTimeout(() => setSubmitFeedback(""), 5000);
+    
+    setSubmitFeedback("Sending submission to editor review queue...");
+    
+    // Direct persistence to Firestore
+    if (db) {
+      db.collection("letsfixindia_submissions").add(draft)
+        .then(() => {
+          setSubmitFeedback("Submission sent directly to the editor's queue! Thank you.");
+          window.setTimeout(() => setSubmitFeedback(""), 6000);
+        })
+        .catch((error) => {
+          console.error("Firestore submission failed:", error);
+          setSubmitFeedback("Saved locally in this browser. Cloud submission failed: " + error.message);
+          window.setTimeout(() => setSubmitFeedback(""), 6000);
+        });
+    } else {
+      setSubmitFeedback("Saved locally in this browser (Cloud offline).");
+      window.setTimeout(() => setSubmitFeedback(""), 6000);
+    }
   });
 
   voiceFieldFilter?.addEventListener("change", (event) => {
