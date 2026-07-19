@@ -1041,23 +1041,35 @@ function renderRoute(options = {}) {
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
   
   if (route.page === "submit") {
-    populateEventDropdown();
+    renderEventDropdownList(events);
     
     // Check URL parameters for suggesting a correction to a specific event
     const params = new URLSearchParams(window.location.search);
     const correctId = params.get("correct");
+    const modeSelector = document.getElementById("submitModeSelector");
+    const form = document.getElementById("submissionForm");
+    
     if (correctId) {
       setTimeout(() => {
+        const btnCorrection = document.querySelector('.mode-btn[data-mode="correction"]');
+        if (btnCorrection) {
+          btnCorrection.classList.add("active");
+        }
         const radioCorrection = document.querySelector('input[name="submissionType"][value="correction"]');
         if (radioCorrection) {
           radioCorrection.checked = true;
           radioCorrection.dispatchEvent(new Event("change", { bubbles: true }));
         }
         
-        const eventSelect = document.getElementById("eventSelect");
-        if (eventSelect) {
-          eventSelect.value = correctId;
+        const matched = events.find(ev => ev.id === correctId);
+        if (matched) {
+          const searchInput = document.getElementById("eventSearchInput");
+          const hiddenInput = document.getElementById("eventSelectHidden");
+          if (searchInput) searchInput.value = matched.title;
+          if (hiddenInput) hiddenInput.value = matched.id;
         }
+        
+        if (form) form.style.display = "grid";
         
         const summaryTextarea = document.querySelector('textarea[name="summary"]');
         if (summaryTextarea) {
@@ -1065,10 +1077,11 @@ function renderRoute(options = {}) {
         }
       }, 50);
     } else {
-      const radioNew = document.querySelector('input[name="submissionType"][value="new"]');
-      if (radioNew) {
-        radioNew.checked = true;
-        radioNew.dispatchEvent(new Event("change", { bubbles: true }));
+      if (form) form.style.display = "none";
+      if (modeSelector) {
+        modeSelector.querySelectorAll(".mode-btn").forEach(b => {
+          b.classList.remove("active");
+        });
       }
     }
   }
@@ -1108,17 +1121,26 @@ function daysToYMD(totalDays) {
   return { y, m, d };
 }
 
-function populateEventDropdown() {
-  const select = document.getElementById("eventSelect");
-  if (!select || !events) return;
+function renderEventDropdownList(filteredEvents) {
+  const list = document.getElementById("eventDropdownList");
+  if (!list || !events) return;
   
-  // Sort events by year descending, then title
-  const sortedEvents = [...events].sort((a, b) => {
+  const sorted = [...filteredEvents].sort((a, b) => {
     if (a.year !== b.year) return b.year - a.year;
     return String(a.title).localeCompare(String(b.title));
   });
   
-  select.innerHTML = sortedEvents.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
+  if (sorted.length === 0) {
+    list.innerHTML = `<li style="padding: 10px 14px; color: var(--muted); font-size: 13px;">No matching events found</li>`;
+    return;
+  }
+  
+  list.innerHTML = sorted.map(ev => `
+    <li class="combobox-item" data-id="${ev.id}" data-title="${esc(ev.title)}" style="padding: 10px 14px; cursor: pointer; font-size: 13px; display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid rgba(0,0,0,0.03); transition: background 0.15s;">
+      <span style="font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase;">${ev.year} | ${esc(ev.category)}</span>
+      <strong style="color: var(--ink); font-weight: 500; line-height: 1.3;">${esc(ev.title)}</strong>
+    </li>
+  `).join('');
 }
 
 function calendarDiffYMD(from, to) {
@@ -1613,6 +1635,32 @@ function bindEvents() {
     updateScrollDock();
   });
 
+  // Handle big buttons mode selector
+  const submitModeSelector = document.getElementById("submitModeSelector");
+  const submissionFormElement = document.getElementById("submissionForm");
+
+  submitModeSelector?.addEventListener("click", (event) => {
+    const btn = closestFromEvent(event, ".mode-btn");
+    if (!btn) return;
+    
+    // Highlight active button by toggling active class
+    submitModeSelector.querySelectorAll(".mode-btn").forEach(b => {
+      b.classList.remove("active");
+    });
+    btn.classList.add("active");
+    
+    const mode = btn.dataset.mode;
+    const radio = document.getElementById(mode === "new" ? "submitTypeNew" : "submitTypeCorrection");
+    if (radio) {
+      radio.checked = true;
+      radio.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    
+    if (submissionFormElement) {
+      submissionFormElement.style.display = "grid";
+    }
+  });
+
   // Handle submission type toggle
   submissionForm?.addEventListener("change", (event) => {
     if (event.target.name === "submissionType") {
@@ -1626,13 +1674,13 @@ function bindEvents() {
       if (!newFields || !corrFields) return;
       
       const newRequiredInputs = newFields.querySelectorAll("input, select");
-      const eventSelect = document.getElementById("eventSelect");
+      const hiddenInput = document.getElementById("eventSelectHidden");
       
       if (type === "correction") {
         newFields.style.display = "none";
         corrFields.style.display = "block";
         newRequiredInputs.forEach(el => el.removeAttribute("required"));
-        if (eventSelect) eventSelect.setAttribute("required", "required");
+        if (hiddenInput) hiddenInput.setAttribute("required", "required");
         
         if (summaryLabel) summaryLabel.textContent = "What needs to be corrected or added?";
         if (summaryTextarea) {
@@ -1649,7 +1697,7 @@ function bindEvents() {
             el.setAttribute("required", "required");
           }
         });
-        if (eventSelect) eventSelect.removeAttribute("required");
+        if (hiddenInput) hiddenInput.removeAttribute("required");
         
         if (summaryLabel) summaryLabel.textContent = "What happened";
         if (summaryTextarea) {
@@ -1662,12 +1710,27 @@ function bindEvents() {
     }
   });
 
-  // Handle event search filter
+  // Handle event search and custom combobox dropdown filter
   const eventSearchInput = document.getElementById("eventSearchInput");
+  const eventDropdownList = document.getElementById("eventDropdownList");
+  const eventSelectHidden = document.getElementById("eventSelectHidden");
+
+  eventSearchInput?.addEventListener("focus", () => {
+    if (events) {
+      renderEventDropdownList(events);
+      if (eventDropdownList) eventDropdownList.style.display = "block";
+    }
+  });
+
+  eventSearchInput?.addEventListener("blur", () => {
+    setTimeout(() => {
+      if (eventDropdownList) eventDropdownList.style.display = "none";
+    }, 200);
+  });
+
   eventSearchInput?.addEventListener("input", (event) => {
     const query = event.target.value.toLowerCase().trim();
-    const eventSelect = document.getElementById("eventSelect");
-    if (!eventSelect || !events) return;
+    if (!events || !eventDropdownList) return;
     
     const filtered = events.filter(ev => 
       ev.title.toLowerCase().includes(query) || 
@@ -1675,13 +1738,17 @@ function bindEvents() {
       (ev.summary && ev.summary.toLowerCase().includes(query))
     );
     
-    // Sort events by year descending, then title
-    const sortedFiltered = [...filtered].sort((a, b) => {
-      if (a.year !== b.year) return b.year - a.year;
-      return String(a.title).localeCompare(String(b.title));
-    });
+    renderEventDropdownList(filtered);
+    eventDropdownList.style.display = "block";
+  });
+
+  eventDropdownList?.addEventListener("click", (event) => {
+    const item = closestFromEvent(event, ".combobox-item");
+    if (!item) return;
     
-    eventSelect.innerHTML = sortedFiltered.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
+    if (eventSearchInput) eventSearchInput.value = item.dataset.title;
+    if (eventSelectHidden) eventSelectHidden.value = item.dataset.id;
+    eventDropdownList.style.display = "none";
   });
 
   submissionForm?.addEventListener("submit", (event) => {
@@ -1706,11 +1773,14 @@ function bindEvents() {
     
     submissionForm.reset();
     
-    // Reset submission type visual state back to "new"
-    const radioNew = document.querySelector('input[name="submissionType"][value="new"]');
-    if (radioNew) {
-      radioNew.checked = true;
-      radioNew.dispatchEvent(new Event("change", { bubbles: true }));
+    // Hide form and reset buttons state
+    if (submissionFormElement) {
+      submissionFormElement.style.display = "none";
+    }
+    if (submitModeSelector) {
+      submitModeSelector.querySelectorAll(".mode-btn").forEach(b => {
+        b.classList.remove("active");
+      });
     }
     
     renderSubmissions();
