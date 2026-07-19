@@ -1,0 +1,103 @@
+---
+import eventsData from "../../../data/events.json";
+import sourcesData from "../../../data/sources.json";
+import "../../../styles.css";
+
+const events = Array.isArray(eventsData) ? eventsData : Object.values(eventsData);
+const sources = Array.isArray(sourcesData) ? sourcesData : Object.entries(sourcesData).map(([id, source]) => ({ id, ...source }));
+const byId = Object.fromEntries(sources.map((source) => [source.id, source]));
+
+export function getStaticPaths() {
+  const entries = Array.isArray(eventsData) ? eventsData : Object.values(eventsData);
+  return entries.map((event) => ({ params: { id: event.id }, props: { event } }));
+}
+
+const { event } = Astro.props;
+const linkedSources = (event.sources || []).map((id) => byId[id]).filter(Boolean);
+const sourceIds = Array.from(new Set(event.sources || []));
+const linkedCount = sourceIds.filter((id) => byId[id]?.url).length;
+const pendingCount = sourceIds.filter((id) => byId[id] && !byId[id].url).length;
+const missingCount = sourceIds.filter((id) => !byId[id]).length;
+const evidenceClass = missingCount ? "missing" : pendingCount ? "pending" : linkedCount ? "linked" : "missing";
+const evidenceLabel = missingCount
+  ? `${missingCount} missing source record${missingCount === 1 ? "" : "s"}`
+  : pendingCount
+    ? `${linkedCount} linked, ${pendingCount} pending`
+    : linkedCount
+      ? `${linkedCount} linked source${linkedCount === 1 ? "" : "s"}`
+      : "No source record";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{event.title} | LetsFixIndia</title>
+    <meta name="description" content={event.summary} />
+    <link rel="icon" href="/india-flag-icon.svg" />
+  </head>
+  <body>
+    <header class="topbar record-topbar">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>LetsFixIndia</span></a>
+      <nav class="topnav" aria-label="Main navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/submit">Submit</a><a href="/sources">Sources</a><a href="/faq">FAQ</a><a href="/about">About</a></nav>
+      <details class="record-menu">
+        <summary aria-label="Open navigation menu">Menu</summary>
+        <nav class="record-menu-panel" aria-label="Record navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/submit">Submit</a><a href="/sources">Sources</a><a href="/faq">FAQ</a><a href="/about">About</a></nav>
+      </details>
+    </header>
+    <main class="page-section record-page">
+      <a class="record-back" href="/">Back to timeline</a>
+      <p class="eyebrow">{event.date || event.year} · {event.category}</p>
+      <h1>{event.title}</h1>
+      <article class={`event-card record-evidence-card ${String(event.severity || "").toLowerCase()}`}>
+        <div class="event-meta"><span>{event.status}</span><span>{event.severity || "Recorded"}</span></div>
+        <span class={`evidence-status ${evidenceClass}`} aria-label={`Evidence status: ${evidenceLabel}`}>{evidenceLabel}</span>
+        <p>{event.summary}</p>
+        <p class="event-outcome"><strong>Outcome:</strong> {event.outcome}</p>
+        <div class="source-links" aria-label="Sources">
+          {linkedSources.length ? linkedSources.map((source) => source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`${source.publisher}: ${source.title} (opens source in a new tab)`}>{source.publisher}: {source.title}</a> : <span class="source-pending">Verification pending</span>) : <span class="source-pending">No linked source record</span>}
+        </div>
+        <div class="record-section-heading"><p class="record-label">Documentation</p><h2>Sources used for this record</h2></div>
+        <div class="record-actions">
+          <button type="button" data-copy-citation>Copy citation</button>
+          <span data-copy-feedback aria-live="polite"></span>
+        </div>
+        <div class="share-panel" aria-labelledby="share-heading">
+          <div><p class="record-label">Share this record</p><h2 id="share-heading">Pass it on</h2></div>
+          <div class="share-actions">
+            <a class="share-button share-x" data-share-url="x" href="#" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+            <a class="share-button share-facebook" data-share-url="facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="share-button share-linkedin" data-share-url="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="share-button share-whatsapp" data-share-url="whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="share-button share-telegram" data-share-url="telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <button class="share-button share-native" type="button" data-native-share>Share</button>
+            <button class="share-button share-copy" type="button" data-copy-link>Copy link</button>
+          </div>
+          <span class="share-feedback" data-share-feedback aria-live="polite"></span>
+        </div>
+      </article>
+    </main>
+    <footer class="site-footer"><p><strong>LetsFixIndia</strong> is a source-led public record.</p><p><a href="/">Back to timeline</a></p></footer>
+    <script is:inline define:vars={{ title: event.title, date: event.date || event.year, url: Astro.url.href, sourceTitles: linkedSources.filter((source) => source.url).map((source) => `${source.publisher}: ${source.title} - ${source.url}`) }}>
+      const copyButton = document.querySelector("[data-copy-citation]");
+      const copyFeedback = document.querySelector("[data-copy-feedback]");
+      const shareText = `${title} | LetsFixIndia`;
+      const encodedUrl = encodeURIComponent(url);
+      const encodedText = encodeURIComponent(shareText);
+      const shareTargets = { x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`, facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`, linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${url}`)}`, telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}` };
+      document.querySelectorAll("[data-share-url]").forEach((link) => { link.href = shareTargets[link.dataset.shareUrl]; });
+      const shareFeedback = document.querySelector("[data-share-feedback]");
+      document.querySelector("[data-native-share]")?.addEventListener("click", async () => { if (!navigator.share) { if (shareFeedback) shareFeedback.textContent = "Use Copy link or choose a platform"; return; } try { await navigator.share({ title: shareText, url }); } catch {} });
+      document.querySelector("[data-copy-link]")?.addEventListener("click", async () => { try { await navigator.clipboard.writeText(url); if (shareFeedback) shareFeedback.textContent = "Link copied"; } catch { if (shareFeedback) shareFeedback.textContent = "Copy unavailable"; } });
+      copyButton?.addEventListener("click", async () => {
+        const citation = [title, date, url, ...sourceTitles].join("\n");
+        try {
+          await navigator.clipboard.writeText(citation);
+          if (copyFeedback) copyFeedback.textContent = "Citation copied";
+        } catch {
+          if (copyFeedback) copyFeedback.textContent = "Copy unavailable; select the page text instead";
+        }
+      });
+    </script>
+  </body>
+</html>

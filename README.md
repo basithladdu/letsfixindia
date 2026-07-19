@@ -9,8 +9,10 @@ Mobile-first static website for a sourced timeline of major governance crises, r
 - `data/events.json` - timeline entries.
 - `data/sources.json` - source ledger.
 - `data/indicators.json` - numeric indicators.
+- `data/voices.json` - source-linked public statements and documented silence.
 - `app.js` - filters, search, timeline rendering, and local submission queue.
 - `tools/expand-json-data.mjs` - repeatable data updater used to append newly researched entries.
+- `tools/audit-data.mjs` - source-reference and URL integrity audit.
 
 ## Local Run
 
@@ -25,3 +27,15 @@ Then open:
 ```text
 http://127.0.0.1:5178/
 ```
+
+## Verification
+
+Run the complete local release check before publishing research changes:
+
+```powershell
+npm run check
+```
+
+This audits source references, validates all JSON databases, and builds the static site.
+
+The audit prints exact pending and orphaned source IDs so research cleanup can be assigned without manually searching the JSON files.

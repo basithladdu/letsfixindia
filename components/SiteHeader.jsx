@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-const links = [["/timeline","Timeline"],["/voices","Voices"],["/statistics","Statistics"],["/sources","Sources"],["/faq","FAQ"]];
+const links = [["/timeline","Timeline"],["/voices","Voices"],["/statistics","Statistics"],["/sources","Sources"],["/faq","Help"],["/about","About"]];
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   return <>

@@ -2,7 +2,10 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 
-const root = process.cwd();
+const workspaceRoot = process.cwd();
+const root = fs.existsSync(path.join(workspaceRoot, "dist"))
+  ? path.join(workspaceRoot, "dist")
+  : workspaceRoot;
 const port = Number(process.argv[2] || 5178);
 const host = "127.0.0.1";
 
@@ -11,6 +14,7 @@ const types = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
   ".md": "text/markdown; charset=utf-8"
 };
 
