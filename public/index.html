@@ -238,25 +238,35 @@
           <p>Use this for incidents, statistics, corrections, court updates, missing actor links, or stronger sources for weak entries. Drafts stay in this browser only until an editor promotes them.</p>
         </div>
         <p id="submitFeedback" class="submit-feedback" aria-live="polite"></p>
-        <form id="submissionForm" class="submission-form">
-          <div class="submission-type-selector" style="grid-column: 1 / -1; display: flex; gap: 16px; margin-bottom: 8px; border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 16px;">
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
-              <input type="radio" name="submissionType" value="new" checked style="width: auto; margin: 0;">
-              <span>Submit a new record</span>
-            </label>
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
-              <input type="radio" name="submissionType" value="correction" style="width: auto; margin: 0;">
-              <span>Suggest correction/addition to existing event</span>
-            </label>
-          </div>
+        <!-- Big Mode Selector (Shown first) -->
+        <div id="submitModeSelector" class="submit-mode-selector" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px;">
+          <button type="button" class="mode-btn" data-mode="new" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 24px; border: 2px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; transition: all 0.2s; gap: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); text-align: center; font-family: inherit;">
+            <span style="font-size: 2rem;">📝</span>
+            <span style="font-size: 1.1rem; font-weight: 700; color: var(--ink);">Submit a new record</span>
+            <span style="font-size: 0.85rem; color: var(--muted); line-height: 1.4; margin-top: 4px;">Report an incident, statistic, or institutional event</span>
+          </button>
+          <button type="button" class="mode-btn" data-mode="correction" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 24px; border: 2px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; transition: all 0.2s; gap: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); text-align: center; font-family: inherit;">
+            <span style="font-size: 2rem;">✏️</span>
+            <span style="font-size: 1.1rem; font-weight: 700; color: var(--ink);">Suggest correction / update</span>
+            <span style="font-size: 0.85rem; color: var(--muted); line-height: 1.4; margin-top: 4px;">Update sources, clarify details, or fix errors in an existing event</span>
+          </button>
+        </div>
 
-          <!-- Correction Target Event Selector -->
-          <div id="correctionEventFields" style="grid-column: 1 / -1; display: none; margin-bottom: 8px;">
+        <form id="submissionForm" class="submission-form" style="display: none;">
+          <!-- Hidden radio selector for form state -->
+          <input type="radio" name="submissionType" value="new" id="submitTypeNew" style="display: none;" checked>
+          <input type="radio" name="submissionType" value="correction" id="submitTypeCorrection" style="display: none;">
+
+          <!-- Correction Target Event Selector (Premium Combobox) -->
+          <div id="correctionEventFields" style="grid-column: 1 / -1; display: none; margin-bottom: 8px; position: relative;">
             <label style="display: flex; flex-direction: column; gap: 6px; width: 100%;">
               <span>Search & Select Existing Event</span>
-              <input type="text" id="eventSearchInput" placeholder="Type to search events (e.g. NEET, Demonetisation, Hijab)..." autocomplete="off" style="width: 100%;">
-              <select id="eventSelect" name="targetEventId" style="width: 100%; margin-top: 8px; padding: 8px; border-radius: 4px; border: 1px solid var(--border); background: var(--bg); color: var(--text);">
-              </select>
+              <div class="combobox-wrapper" style="position: relative; width: 100%;">
+                <input type="text" id="eventSearchInput" placeholder="Type to search events (e.g. NEET, Demonetisation, Hijab)..." autocomplete="off" style="width: 100%;">
+                <input type="hidden" id="eventSelectHidden" name="targetEventId">
+                <ul id="eventDropdownList" style="display: none; position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: #fff; border: 1px solid var(--line); border-radius: 6px; max-height: 220px; overflow-y: auto; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin: 0; padding: 4px 0; list-style: none;">
+                </ul>
+              </div>
             </label>
           </div>
 
@@ -403,7 +413,7 @@
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </span>
-                <span class="contact-label">Instagram</span>
+                <span class="contact-label">Follow on Instagram</span>
               </a>
               <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener" class="contact-item twitter-personal">
                 <span class="contact-icon">
@@ -411,7 +421,7 @@
                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                   </svg>
                 </span>
-                <span class="contact-label">Twitter</span>
+                <span class="contact-label">Follow on Twitter</span>
               </a>
               <a href="https://youtube.com/@basithladdu" target="_blank" rel="noopener" class="contact-item youtube-personal">
                 <span class="contact-icon">
@@ -420,7 +430,7 @@
                     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                   </svg>
                 </span>
-                <span class="contact-label">YouTube</span>
+                <span class="contact-label">Follow on YouTube</span>
               </a>
               <a href="https://www.wedevit.in/" target="_blank" rel="noopener" class="contact-item agency-link">
                 <span class="contact-icon">
@@ -429,7 +439,7 @@
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                   </svg>
                 </span>
-                <span class="contact-label">Software Development Agency</span>
+                <span class="contact-label">Follow our Software Development Agency</span>
               </a>
             </div>
           </article>
@@ -587,7 +597,7 @@
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </span>
-                <span class="contact-label">Instagram</span>
+                <span class="contact-label">Follow on Instagram</span>
               </a>
               <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener" class="contact-item twitter-personal">
                 <span class="contact-icon">
@@ -595,7 +605,7 @@
                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                   </svg>
                 </span>
-                <span class="contact-label">Twitter</span>
+                <span class="contact-label">Follow on Twitter</span>
               </a>
               <a href="https://youtube.com/@basithladdu" target="_blank" rel="noopener" class="contact-item youtube-personal">
                 <span class="contact-icon">
@@ -604,7 +614,7 @@
                     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
                   </svg>
                 </span>
-                <span class="contact-label">YouTube</span>
+                <span class="contact-label">Follow on YouTube</span>
               </a>
               <a href="https://www.wedevit.in/" target="_blank" rel="noopener" class="contact-item agency-link">
                 <span class="contact-icon">
@@ -613,7 +623,7 @@
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                   </svg>
                 </span>
-                <span class="contact-label">Software Development Agency</span>
+                <span class="contact-label">Follow our Software Development Agency</span>
               </a>
             </div>
           </article>
