@@ -3778,6 +3778,48 @@ textarea:focus-visible {
   transform: translateY(0.5px);
 }
 
+@media (max-width: 480px) {
+  .splash-content {
+    width: 94%;
+    max-height: 90vh;
+    border-radius: 12px;
+  }
+  .splash-header {
+    padding: 12px 16px;
+  }
+  .splash-header .brand-name {
+    font-size: 16px;
+  }
+  .splash-badge {
+    padding: 2px 6px;
+    font-size: 9px;
+  }
+  .splash-body {
+    padding: 16px;
+  }
+  .splash-body h2 {
+    font-size: 18px;
+  }
+  .splash-footer {
+    padding: 12px 16px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .splash-checkbox {
+    justify-content: center;
+  }
+  .splash-btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+  .splash-bullets {
+    padding-left: 1.1rem !important;
+  }
+}
+
+
 /* ── Premium Statistics Charts ─────────────────── */
 .indicator-chart-container {
   margin: 18px 0;
