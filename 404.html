@@ -657,7 +657,13 @@
               <img src="/assets/support-upi-qr.png" alt="UPI QR code: basithmuqeeth-1@okhdfcbank" class="support-qr-image" loading="lazy">
               <div class="support-qr-info">
                 <strong>UPI QR</strong>
-                <small>basithmuqeeth-1@okhdfcbank</small>
+                <div class="upi-id-container">
+                  <small>basithmuqeeth-1@okhdfcbank</small>
+                  <button type="button" class="copy-upi-btn" onclick="const btn = this; navigator.clipboard.writeText('basithmuqeeth-1@okhdfcbank').then(() => { const original = btn.innerHTML; btn.innerHTML = 'Copied!'; setTimeout(() => btn.innerHTML = original, 1500); }).catch(err => console.error(err))" title="Copy UPI ID">
+                    <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-top:-2px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy
+                  </button>
+                </div>
                 <span class="upi-app-badge">Any UPI app</span>
               </div>
             </div>

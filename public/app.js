@@ -877,9 +877,9 @@ function updatePageMeta(route) {
   } else if (route.page === "statistics") {
     title = "Statistics | LetsFixIndia";
     description = "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.";
-  } else if (route.page === "sources") {
-    title = "Sources | LetsFixIndia";
-    description = "The source ledger behind LetsFixIndia public-record entries and research queue.";
+  } else if (route.page === "contact") {
+    title = "Contact | LetsFixIndia";
+    description = "Contact Basith and Devit directly for corrections, collaboration, or software development work.";
   } else if (route.page === "submit") {
     title = "Submit a record | LetsFixIndia";
     description = "Propose a sourced public-record entry. Drafts stay local in your browser until an editor reviews them.";
@@ -906,7 +906,7 @@ function routeFromPath(pathname) {
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
   if (path === "/voices") return { page: "voices" };
   if (path === "/submit" || path === "/submissions") return { page: "submit" };
-  if (path === "/sources") return { page: "sources" };
+  if (path === "/contact") return { page: "contact" };
   if (path === "/methodology") return { page: "faq" };
   if (path === "/faq") return { page: "faq" };
   if (path === "/support") return { page: "support" };
@@ -942,7 +942,7 @@ function ensureRouteContent(route) {
   if (route.page === "statistics") renderIndicators();
   if (route.page === "voices") renderVoices();
   if (route.page === "submit") renderSubmissions();
-  if (route.page === "sources") renderSources();
+
 
   renderedPages.add(route.page);
 }
