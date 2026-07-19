@@ -4222,5 +4222,10 @@ textarea:focus-visible {
   box-shadow: 0 8px 24px rgba(245, 158, 11, 0.1) !important;
 }
 
+.submit-mode-selector .mode-btn:hover .mode-icon,
+.submit-mode-selector .mode-btn.active .mode-icon {
+  transform: scale(1.15) !important;
+}
+
 
 
