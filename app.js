@@ -1398,4 +1398,35 @@ function clearVoiceFilters() {
   renderVoices();
 }
 
+// Initialize splash screen alert
+function initSplash() {
+  const splash = document.getElementById("splashScreen");
+  const dismissBtn = document.getElementById("dismissSplash");
+  const dontShowCheckbox = document.getElementById("dontShowAgain");
+
+  if (splash && dismissBtn) {
+    const isDismissed = localStorage.getItem("letsfixindia_splash_dismissed_july20") || sessionStorage.getItem("letsfixindia_splash_dismissed_july20");
+    if (!isDismissed) {
+      splash.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    dismissBtn.addEventListener("click", () => {
+      splash.style.display = "none";
+      document.body.style.overflow = "";
+      if (dontShowCheckbox && dontShowCheckbox.checked) {
+        localStorage.setItem("letsfixindia_splash_dismissed_july20", "true");
+      } else {
+        sessionStorage.setItem("letsfixindia_splash_dismissed_july20", "true");
+      }
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initSplash);
+// Also run immediately in case DOMContentLoaded has already fired
+if (document.readyState === "interactive" || document.readyState === "complete") {
+  initSplash();
+}
+
 init();

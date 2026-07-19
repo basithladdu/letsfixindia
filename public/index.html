@@ -594,7 +594,7 @@
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                   </svg>
                 </span>
-                <span class="contact-label">GitHub</span>
+                <span class="contact-label">GitHub (if you are a software developer or designer)</span>
               </a>
             </div>
           </article>
@@ -629,6 +629,48 @@
       <span>LetsFixIndia</span>
       <span id="footerDate">Updated 18 July 2026</span>
     </footer>
+
+    <div id="splashScreen" class="splash-screen" role="dialog" aria-modal="true" aria-labelledby="splashTitle" style="display: none;">
+      <div class="splash-backdrop"></div>
+      <div class="splash-content">
+        <div class="splash-header">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-name" id="splashTitle">LetsFixIndia</span>
+          </div>
+          <span class="splash-badge">Monsoon Session Alert</span>
+        </div>
+        
+        <div class="splash-body">
+          <h2>Sansad Chalo March to Parliament</h2>
+          <div class="splash-date">Scheduled for July 20, 2026</div>
+          
+          <div class="splash-section alert-warning">
+            <h3>Protest & Security Notice</h3>
+            <p><strong>Route:</strong> March from Jantar Mantar to Parliament House.</p>
+            <p><strong>Security Measures:</strong> Delhi Police have imposed Section 163 BNSS (formerly Section 144 CrPC) in New Delhi district, banning unauthorized public gatherings of 4 or more people near Parliament.</p>
+          </div>
+
+          <div class="splash-section">
+            <h3>Demands & Context</h3>
+            <p>Agitation led by student groups demanding examination system reforms and accountability following the NEET-UG and other national exam controversies.</p>
+          </div>
+
+          <div class="splash-section alert-info">
+            <h3>Commuter Advisory</h3>
+            <p>Expect severe traffic delays, barricades, and potential road closures in Central Delhi (Connaught Place, Jantar Mantar, Sansad Marg, and surrounding areas). Commuters are advised to plan alternative routes.</p>
+          </div>
+        </div>
+        
+        <div class="splash-footer">
+          <label class="splash-checkbox">
+            <input type="checkbox" id="dontShowAgain">
+            <span>Don't show this again during this session</span>
+          </label>
+          <button id="dismissSplash" class="splash-btn-primary">Continue to Platform</button>
+        </div>
+      </div>
+    </div>
 
     <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use LetsFixIndia fully.</p></noscript>
     <script src="/app.js"></script>
