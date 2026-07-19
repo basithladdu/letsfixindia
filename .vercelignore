@@ -1,0 +1,14 @@
+node_modules
+.git
+.github
+.next
+.astro
+dist
+out
+output
+*.log
+*.png
+*.jpg
+*.jpeg
+*.svg
+.vercel
