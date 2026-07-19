@@ -1,0 +1,17 @@
+{
+  "name": "LetsFixIndia Public Record",
+  "short_name": "LetsFixIndia",
+  "description": "A source-led public record of India from 2014 to 2026.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf5",
+  "theme_color": "#fbfaf5",
+  "icons": [
+    {
+      "src": "/india-flag-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

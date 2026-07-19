@@ -6,6 +6,8 @@
     <title>LetsFixIndia | 2014-2026 Public Record</title>
     <meta name="description" content="LetsFixIndia: a bright, mobile-first, source-tagged public record of major Indian events, indicators, and documented public voices from 2014 to 2026.">
     <meta name="theme-color" content="#fbfaf5">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta property="og:type" content="website">
     <meta property="og:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta property="og:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
@@ -15,13 +17,14 @@
     <meta name="twitter:title" content="LetsFixIndia | 2014-2026 Public Record">
     <meta name="twitter:description" content="A sourced timeline of governance crises, rights concerns, press freedom, and institutional controversies during the BJP/Modi period.">
     <meta name="twitter:image" content="https://letsfixindia.com/assets/og-image.png">
-    <link rel="icon" type="image/svg+xml" href="assets/india-flag-icon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/india-flag-icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+    <noscript><div class="no-script-message">This archive needs JavaScript enabled to load its records and filters.</div></noscript>
     <header class="topbar">
       <a class="brand" href="/" data-link aria-label="LetsFixIndia home">
         <span class="brand-mark" aria-hidden="true"></span>
@@ -33,8 +36,8 @@
         <a href="/voices" data-link>Voices</a>
         <a href="/submit" data-link>Submit</a>
         <a href="/sources" data-link>Sources</a>
-        <a href="/methodology" data-link>Method</a>
         <a href="/faq" data-link>FAQ</a>
+        <a href="/support" data-link>Support</a>
         <a href="/about" data-link>About</a>
       </nav>
       <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideNav">
@@ -55,8 +58,8 @@
       <a href="/voices" data-link>Voices</a>
       <a href="/submit" data-link>Submit</a>
       <a href="/sources" data-link>Sources</a>
-      <a href="/methodology" data-link>Method</a>
       <a href="/faq" data-link>FAQ</a>
+      <a href="/support" data-link>Support</a>
       <a href="/about" data-link>About</a>
     </nav>
 
@@ -66,48 +69,9 @@
           <p class="eyebrow">India under BJP / Modi administrations</p>
           <h1>LetsFixIndia 2014-2026</h1>
           <p class="lede">A sourced public record of governance shocks, rights concerns, protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry carries an evidence status and linked sources.</p>
-          <div class="hero-actions">
-            <a href="#filters">Open timeline</a>
-            <a href="/methodology" data-link>Review method</a>
-          </div>
+          <div class="share-bar hero-share" data-share-context="site"></div>
         </div>
 
-        <section class="quick-panel" aria-label="Current record summary">
-          <div class="tenure">
-            <span class="label">Modi tenure tracked</span>
-            <strong id="tenureValue">12 years</strong>
-            <span id="tenureSubtitle">From 26 May 2014</span>
-            <span class="tenure-left" id="tenureLeftValue">Current term remaining loading</span>
-            <a class="tenure-source" href="https://www.eci.gov.in/term-of-the-houses/" target="_blank" rel="noopener">ECI term table</a>
-          </div>
-          <div class="tenure tenure-bjp">
-            <span class="label">BJP at centre - total</span>
-            <strong id="bjpTotalValue">~19 years</strong>
-            <span id="bjpTotalSubtitle">Vajpayee 1996, 1998-2004; Modi 2014-present</span>
-          </div>
-          <div class="mini-grid">
-            <div>
-              <span class="label">RSF press rank</span>
-              <strong>140 to 157</strong>
-              <span>2014 to 2026</span>
-            </div>
-            <div>
-              <span class="label">Crimes against women</span>
-              <strong>337,922 to 448,211</strong>
-              <span>NCRB 2014 to 2023</span>
-            </div>
-            <div>
-              <span class="label">Rape cases</span>
-              <strong>36,735 to 29,670</strong>
-              <span>Reported NCRB cases</span>
-            </div>
-            <div>
-              <span class="label">ADR affidavit scan</span>
-              <strong>54 BJP lawmakers</strong>
-              <span>Declared cases on crimes against women, 2024</span>
-            </div>
-          </div>
-        </section>
       </section>
 
       <section class="route-page home-recent" data-page="home-unused" style="display: none;">
@@ -124,6 +88,7 @@
           <label class="search-wrap">
             <span>Search records</span>
             <input id="searchInput" type="search" placeholder="Search records, names, places">
+            <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters">Clear filters</button>
           </label>
           <details id="advancedFilters" class="advanced-filters">
             <summary>Filters</summary>
@@ -146,10 +111,24 @@
                   <option value="all">All statuses</option>
                 </select>
               </label>
+              <label>
+                <span>Evidence</span>
+                <select id="evidenceFilter">
+                  <option value="all">All evidence</option>
+                  <option value="linked">Fully linked</option>
+                  <option value="pending">Pending URLs</option>
+                  <option value="missing">No source record</option>
+                </select>
+              </label>
             </div>
           </details>
         </div>
         <div id="yearRail" class="year-rail" aria-label="Filter by year"></div>
+        <div class="tag-legend" aria-label="Actor tag legend">
+          <span><i class="legend-swatch legend-bjp" aria-hidden="true"></i>BJP-linked / BJP-led</span>
+          <span><i class="legend-swatch legend-rss" aria-hidden="true"></i>RSS / ABVP / Hindutva-linked</span>
+          <span><i class="legend-swatch legend-neutral" aria-hidden="true"></i>State institution or other actor</span>
+        </div>
       </section>
 
       <section id="indicators" class="section route-page" data-page="statistics">
@@ -157,6 +136,13 @@
           <p class="eyebrow">Statistics</p>
           <h2>What moved, up or down</h2>
           <p>Source-backed indicators for the period. Direction labels describe the series, not a moral verdict. Methodology caveats stay beside each chart.</p>
+          <div class="indicator-legend" aria-label="Indicator interpretation"><span><i class="legend-dot legend-better"></i>Favorable movement</span><span><i class="legend-dot legend-worse"></i>Adverse movement</span><span><i class="legend-dot legend-flat"></i>Mixed / caution</span></div>
+          </div>
+        <div class="stats-toolbar" aria-label="Statistics filters">
+          <label class="stats-search"><span>Search indicators</span><input id="indicatorSearchInput" type="search" placeholder="Search health, jobs, rights, prices"></label>
+          <label><span>Signal</span><select id="indicatorToneFilter"><option value="all">All signals</option><option value="tone-better">Favorable</option><option value="tone-worse">Adverse</option><option value="tone-flat">Mixed / caution</option></select></label>
+          <button id="clearIndicatorFiltersButton" class="clear-filters-button" type="button" title="Reset statistics filters">Clear filters</button>
+          <span id="indicatorResultCount" class="stats-result" aria-live="polite"></span>
         </div>
         <div id="indicatorGrid" class="indicator-grid"></div>
       </section>
@@ -165,7 +151,8 @@
         <div class="section-head">
           <p class="eyebrow">Timeline</p>
           <h2>Major public-record entries</h2>
-          <p id="resultCount">Loading records</p>
+          <p id="resultCount" class="result-count" aria-live="polite" aria-atomic="true">Loading records</p>
+          <p id="evidenceSummary" class="evidence-summary" aria-live="polite"></p>
         </div>
         <div id="timelineList" class="timeline-list" aria-live="polite"></div>
       </section>
@@ -265,6 +252,18 @@
           <span>Search sources</span>
           <input id="sourceSearchInput" type="search" placeholder="Publisher, title, or source type">
         </label>
+        <label class="source-search">
+          <span>Evidence status</span>
+          <select id="sourceStatusFilter">
+            <option value="all">All source records</option>
+            <option value="linked">Linked URL</option>
+            <option value="pending">URL pending</option>
+            <option value="unused-linked">Unreferenced URL</option>
+            <option value="unused-pending">Pending placeholder</option>
+          </select>
+        </label>
+        <button id="clearSourceFiltersButton" class="clear-filters-button" type="button" title="Reset source filters">Clear filters</button>
+        <div id="sourceAuditCards" class="source-audit-cards" aria-live="polite"></div>
         <p id="sourceSummary" class="source-summary" aria-live="polite"></p>
         <div id="sourceList" class="source-list"></div>
       </section>
@@ -319,13 +318,13 @@
         <div class="section-head">
           <p class="eyebrow">About / Support</p>
           <h2>Who maintains this record</h2>
-          <p>LetsFixIndia is maintained by Basith and built to become a sourced public-record project. The point is not volume by itself; it is traceable claims, corrected weak entries, and a clear line between verified records and live leads.</p>
+          <p>LetsFixIndia is maintained by Basith and built to become a sourced public record. It is not a shrine, a slogan, or a rage-feed. Each entry should let you ask three ordinary questions: what happened, who says so, and what is still unresolved.</p>
         </div>
         <div class="support-grid">
           <article>
             <span>About me</span>
             <h3>Independent builder and editor</h3>
-            <p>This project is being shaped as a civic research interface: raw notes stay preserved, public entries stay sourced, and corrections are expected.</p>
+            <p>This is a one-person project with a deliberately public working method: raw notes stay preserved, public entries stay sourced, and corrections are expected. The archive is allowed to be unfinished; it is not allowed to pretend otherwise.</p>
           </article>
           <article>
             <span>GitHub</span>
@@ -336,9 +335,35 @@
           <article>
             <span>Support</span>
             <h3>How people can help</h3>
-            <p>Submit missing events, verify sources, translate records, check court updates, improve weak Wikipedia-only leads, and flag over-strong wording before it becomes public.</p>
+            <p>Support it with the least glamorous things that make an archive useful: send the missing date, the court order, the official number, or the sentence that is too strong. Translation, source-checking, court-status updates, and careful disagreement all help.</p>
             <a class="text-button" href="/submit" data-link>Submit a sourced record</a>
           </article>
+          <article class="about-contact-card">
+            <span>Contact</span>
+            <h3>Build with Basith</h3>
+            <p>For corrections, collaboration, research, or software work, contact me directly.</p>
+            <div class="contact-links">
+              <a href="mailto:basithladoo@gmail.com">basithladoo@gmail.com</a>
+              <a href="mailto:workwithdevit@gmail.com">workwithdevit@gmail.com</a>
+              <a href="tel:+"></a>
+              <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </article>
+          <article class="about-contact-card about-company-card">
+            <span>Powered by</span>
+            <h3>devit.</h3>
+            <p>We design, build, and scale exceptional software for startups and businesses.</p>
+            <a class="text-button" href="https://www.wedevit.in/" target="_blank" rel="noopener">Visit wedevit.in</a>
+          </article>
+        </div>
+        <blockquote class="about-quote">
+          <p>"Aerodynamically, the bumble bee shouldn't be able to fly, but the bumble bee doesn't know it so it goes on flying anyway."</p>
+          <cite>A note on persistence</cite>
+        </blockquote>
+        <div class="about-support-note">
+          <p class="eyebrow">How to support the record</p>
+          <h3>Bring evidence, not just volume.</h3>
+          <p>One primary document can improve an entry more than a hundred reposts. Use <a href="/submit" data-link>Submit</a> for a missing record or correction, <a href="https://github.com/basithladdu/theindiafiles" target="_blank" rel="noopener">review the code and data on GitHub</a>, or contact Basith if you want to help with research or software.</p>
         </div>
       </section>
 
@@ -349,7 +374,7 @@
           <p>Tracking documented public statements — or documented silence — by India's most influential figures on major Modi-era controversies. Silence is not proof of support; it is recorded as "no public statement found."</p>
         </div>
         <div class="voices-toolbar">
-          <div class="voices-summary" id="voicesSummary"></div>
+          <div class="voices-summary" id="voicesSummary" role="status" aria-live="polite" aria-atomic="true"></div>
           <div class="voices-filter-bar">
             <label>
               <span>Search people</span>
@@ -385,6 +410,15 @@
                 <option value="all">All issues</option>
               </select>
             </label>
+            <button id="clearVoiceFiltersButton" class="clear-filters-button" type="button" title="Reset voice filters">Clear filters</button>
+          </div>
+          <div class="voices-meta" id="voicesMeta" aria-live="polite">
+            <span class="voices-result-count">Loading documented voices...</span>
+            <span class="voices-legend" aria-label="Stance colors">
+              <span><i class="legend-dot legend-spoke"></i>Spoke out</span>
+              <span><i class="legend-dot legend-govt"></i>Supported govt</span>
+              <span><i class="legend-dot legend-silent"></i>No statement found</span>
+            </span>
           </div>
         </div>
         <div id="voicesGrid" class="voices-grid" aria-live="polite"></div>
@@ -399,7 +433,7 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>What is LetsFixIndia?</summary>
-            <p>A sourced public-record timeline of major governance, rights, press-freedom, and institutional events in India from 2014 to 2026, during the BJP/Modi administrations. Every entry carries a named source and a visible evidence status.</p>
+            <p>A sourced public-record timeline of major governance, rights, press-freedom, and institutional events in India from 2014 to 2026, during the BJP/Modi administrations. Every entry carries a named source and a visible evidence status. The archive records improvements too; a criticism that cannot survive a fair comparison is not useful criticism.</p>
           </details>
           <details class="faq-item">
             <summary>Is this an anti-BJP site?</summary>
@@ -407,7 +441,45 @@
           </details>
           <details class="faq-item">
             <summary>What do the evidence labels mean?</summary>
-            <p><strong>Official</strong> — government, court, or regulator record. <strong>Court-tested</strong> — litigated, charged, convicted, or dismissed in court. <strong>Reported</strong> — credible newswire, rights group, or established publication. <strong>Alleged</strong> — serious public allegation without a settled legal finding. <strong>Opposition claim</strong> — political claim kept with attribution, not treated as proof. The full rules are on the Method page.</p>
+            <p>Events enter the public file only with a named source and an evidence status. Stronger sources override weaker summaries. Wikipedia pages are leads, not primary proof.</p>
+            <div class="method-grid faq-method-grid">
+              <article>
+                <span>Official</span>
+                <h3>Government, court, regulator, or statutory body record.</h3>
+              </article>
+              <article>
+                <span>Court-tested / Convicted / Charged</span>
+                <h3>Litigated outcomes, convictions, charges, dismissals, or other court-tested states.</h3>
+              </article>
+              <article>
+                <span>Investigated</span>
+                <h3>Named probe by police, CBI, commissions, or other investigative bodies without a settled court finding.</h3>
+              </article>
+              <article>
+                <span>Reported</span>
+                <h3>Credible newswire, rights group, or established publication reporting.</h3>
+              </article>
+              <article>
+                <span>Alleged</span>
+                <h3>Serious public allegation that has not reached a settled legal finding.</h3>
+              </article>
+              <article>
+                <span>Index / Affidavit analysis</span>
+                <h3>Rankings, indexes, or affidavit-derived tallies treated as measurements, not courtroom verdicts.</h3>
+              </article>
+              <article>
+                <span>Opposition claim</span>
+                <h3>Political claim preserved with attribution, not treated as primary proof.</h3>
+              </article>
+              <article>
+                <span>Official proposal / reversed</span>
+                <h3>Government proposals, ordinances, or later reversals kept distinct from enacted outcomes.</h3>
+              </article>
+              <article>
+                <span>Dynamic lead</span>
+                <h3>Wikipedia or live pages used only as leads until stronger references are attached.</h3>
+              </article>
+            </div>
           </details>
           <details class="faq-item">
             <summary>Why does the timeline start at 2014?</summary>
@@ -427,12 +499,54 @@
           </details>
           <details class="faq-item">
             <summary>Who is behind this, and can I contribute?</summary>
-            <p>The project is maintained independently — see the About page. Contributions are welcome through the Submit page: missing events, court-status updates, stronger sources for weak entries, and flags on wording that claims more than the evidence supports.</p>
+            <p>The project is maintained independently — see the About page. The most useful contribution is specific: a missing event, a stronger source, a court-status update, a translation, or a correction to wording that claims more than the evidence supports. "Everyone knows" is not a citation.</p>
           </details>
           <details class="faq-item">
             <summary>Does the site track me?</summary>
-            <p>No analytics, no cookies, no accounts. Submission drafts and your timeline reading position are stored only in your own browser's local storage and never leave your device.</p>
+            <p>No cookies, no accounts, no ad trackers. We use cookieless, privacy-friendly page-view counting (so we know if anyone is actually reading this) and nothing else. Submission drafts and your timeline reading position live only in your own browser and never leave your device.</p>
           </details>
+          <details class="faq-item">
+            <summary>Who funds this?</summary>
+            <p>Nobody, which is both the good news and the problem. There is no party, NGO, foreign hand, or mysterious uncle behind this — just one maintainer and a support page that covers server costs. Money buys hosting; it has never bought a single word of an entry, and it never will. The evidence rules on the Method page are the editor, not any donor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How can I help without money?</summary>
+            <p>Share it — that is genuinely worth more than a donation. Beyond that: submit missing events with sources, flag wording that claims more than the evidence shows, check court-status updates, or contribute on GitHub. A record like this stays alive by being read, checked, and corrected.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="support" class="section support-section route-page" data-page="support">
+        <div class="section-head">
+          <p class="eyebrow">Support</p>
+          <h2>Keep the record running</h2>
+          <p>This site is free, has no ads, no paywall, and no sponsor. It costs a small amount to host and a large amount of unpaid time to research. If it is useful to you, here are the ways to help — most of them cost nothing.</p>
+        </div>
+        <div class="support-options">
+          <article class="support-card">
+            <span class="support-rank">Best help · free</span>
+            <h3>Share it</h3>
+            <p>One share reaches more people than any donation. Send a record that surprised you to someone who would argue with it.</p>
+            <div class="share-bar" data-share-context="site"></div>
+          </article>
+          <article class="support-card">
+            <span class="support-rank">Second best · free</span>
+            <h3>Improve the record</h3>
+            <p>Submit missing events with sources, correct over-claims, update court statuses, or contribute directly on GitHub.</p>
+            <div class="support-actions">
+              <a class="text-button" href="/submit" data-link>Submit a record</a>
+              <a class="text-button" href="https://github.com/basithladdu/theindiafiles" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+          <article class="support-card">
+            <span class="support-rank">If you insist</span>
+            <h3>Chip in for hosting</h3>
+            <p>Donations cover server and domain costs only — they buy uptime, not opinions. No donor has any say over any entry; the evidence rules stay the editor.</p>
+            <div id="supportQr" class="support-qr">
+              <div class="support-qr-placeholder" aria-hidden="true">QR</div>
+              <span>UPI QR coming soon — until then, sharing is the donation.</span>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -441,9 +555,10 @@
     </main>
 
     <div id="scrollDock" class="scroll-dock" role="toolbar" aria-label="Timeline scroll controls" hidden>
-      <button type="button" data-scroll-action="top" aria-keyshortcuts="Home" title="Jump to top (Home)">Top</button>
-      <button type="button" data-scroll-action="saved" aria-keyshortcuts="Period" title="Saved reading spot or continue">Saved spot</button>
-      <button type="button" data-scroll-action="bottom" aria-keyshortcuts="End" title="Jump to bottom (End)">Bottom</button>
+      <button type="button" data-scroll-action="top" aria-label="Jump to top" aria-keyshortcuts="Home" title="Jump to top (Home)">Top</button>
+      <button type="button" data-scroll-action="saved" aria-label="Return to saved reading spot" aria-keyshortcuts="Period" title="Saved reading spot or continue">Saved spot</button>
+      <button type="button" data-scroll-action="auto" aria-label="Start automatic reading scroll" aria-pressed="false" title="Start automatic reading scroll">Auto-scroll</button>
+      <button type="button" data-scroll-action="bottom" aria-label="Jump to bottom" aria-keyshortcuts="End" title="Jump to bottom (End)">Bottom</button>
     </div>
 
     <footer class="footer">
@@ -452,6 +567,6 @@
     </footer>
 
     <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use LetsFixIndia fully.</p></noscript>
-    <script src="app.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>

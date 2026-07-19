@@ -1,2 +1,15 @@
 @import "../styles.css";
 body { min-width: 320px; }
+/* About and help pages: quiet editorial blocks, readable on narrow screens. */
+.about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; background: var(--line, #d9d4ca); border: 1px solid var(--line, #d9d4ca); }
+.about-grid article { padding: 1.6rem; background: var(--paper, #fffdf8); min-height: 12rem; }
+.about-grid h2 { margin-top: 0; }
+.about-quote { display: flex; flex-direction: column; justify-content: center; }
+.about-quote blockquote { margin: 0 0 1rem; font-family: Georgia, serif; font-size: 1.25rem; line-height: 1.35; }
+.about-quote cite { color: var(--muted, #6b6b67); font-size: .85rem; }
+.support-panel { margin-top: 2.5rem; padding: 2rem; background: #f3eee5; border: 1px solid var(--line, #d9d4ca); }
+.support-panel h2 { margin-top: .25rem; }
+.support-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.25rem 0; }
+.contact-line { margin-bottom: 0; font-size: .9rem; }
+.about-signoff { margin-top: 2.5rem; font-family: Georgia, serif; font-size: 1.25rem; }
+@media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } .about-grid article { min-height: auto; padding: 1.25rem; } .support-panel { padding: 1.25rem; } .support-actions { align-items: stretch; flex-direction: column; } .support-actions .text-button { width: 100%; text-align: center; } }

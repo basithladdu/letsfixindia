@@ -9,3 +9,8 @@ Thumbs.db
 private/
 .next/
 out/
+dist/
+.astro/
+output/
+*.err.log
+*.out.log

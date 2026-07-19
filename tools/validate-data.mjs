@@ -3,6 +3,7 @@ import fs from 'fs';
 const eventsPath = './data/events.json';
 const sourcesPath = './data/sources.json';
 const voicesPath = './data/voices.json';
+const indicatorsPath = './data/indicators.json';
 
 let hasErrors = false;
 
@@ -20,6 +21,7 @@ try {
   const events = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
   const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf8'));
   const voices = JSON.parse(fs.readFileSync(voicesPath, 'utf8'));
+  const indicators = JSON.parse(fs.readFileSync(indicatorsPath, 'utf8'));
 
   logSuccess('Successfully parsed all JSON databases.');
 
@@ -117,6 +119,44 @@ try {
     }
   });
   logSuccess(`Validated ${voices.length} public figures successfully.`);
+
+  // Validate statistics cards and their chart points.
+  if (!Array.isArray(indicators)) {
+    logError('indicators.json must contain an array.');
+  } else {
+    indicators.forEach((indicator, index) => {
+      const label = `Indicator at index ${index}`;
+      ['title', 'value', 'detail', 'direction'].forEach((field) => {
+        if (typeof indicator[field] !== 'string' || !indicator[field].trim()) {
+          logError(`${label} is missing a non-empty "${field}".`);
+        }
+      });
+
+      if (!Array.isArray(indicator.sources) || indicator.sources.length === 0) {
+        logError(`${label} sources must be a non-empty array.`);
+      } else {
+        indicator.sources.forEach((srcId) => {
+          if (!sources[srcId]) {
+            logError(`${label} references undefined source ID "${srcId}".`);
+          }
+        });
+      }
+
+      if (!Array.isArray(indicator.chart) || indicator.chart.length === 0) {
+        logError(`${label} chart must be a non-empty array.`);
+      } else {
+        indicator.chart.forEach((point, pointIndex) => {
+          if (typeof point.label !== 'string' || !point.label.trim()) {
+            logError(`${label} chart point ${pointIndex} is missing a label.`);
+          }
+          if (typeof point.value !== 'number' || !Number.isFinite(point.value)) {
+            logError(`${label} chart point ${pointIndex} must have a finite numeric value.`);
+          }
+        });
+      }
+    });
+    logSuccess(`Validated ${indicators.length} statistics successfully.`);
+  }
 
 } catch (err) {
   logError(`Fatal validation parsing error: ${err.message}`);

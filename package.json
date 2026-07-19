@@ -4,10 +4,14 @@
   "type": "module",
   "scripts": {
     "validate": "node tools/validate-data.mjs",
+    "audit:data": "node tools/audit-data.mjs",
+    "check": "npm run audit:data && npm run validate && npm run build",
     "serve": "node tools/static-server.mjs",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "serve:local": "node tools/static-server.mjs 5192",
+    "dev": "astro dev",
+    "build": "astro build",
+    "start": "astro preview",
+    "build:next": "next build"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.1",
