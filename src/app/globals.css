@@ -1,4 +1,4 @@
-@import "../styles.css";
+@import "../../styles.css";
 body { min-width: 320px; }
 /* About and help pages: quiet editorial blocks, readable on narrow screens. */
 .about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; background: var(--line, #d9d4ca); border: 1px solid var(--line, #d9d4ca); }
