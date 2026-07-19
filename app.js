@@ -1118,8 +1118,7 @@ function populateEventDropdown() {
     return String(a.title).localeCompare(String(b.title));
   });
   
-  select.innerHTML = '<option value="">-- Search & select from all events --</option>' +
-    sortedEvents.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
+  select.innerHTML = sortedEvents.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
 }
 
 function calendarDiffYMD(from, to) {
@@ -1682,8 +1681,7 @@ function bindEvents() {
       return String(a.title).localeCompare(String(b.title));
     });
     
-    eventSelect.innerHTML = '<option value="">-- Select an event --</option>' +
-      sortedFiltered.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
+    eventSelect.innerHTML = sortedFiltered.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
   });
 
   submissionForm?.addEventListener("submit", (event) => {
