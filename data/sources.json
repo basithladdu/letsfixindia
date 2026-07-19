@@ -3683,5 +3683,29 @@
     "publisher": "Press Information Bureau",
     "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1579510&lang=2&reg=48",
     "type": "Official government release"
+  },
+  "wireModiPressConf2024": {
+    "title": "Narendra Modi has not held a single press conference in 10 years as Prime Minister",
+    "publisher": "The Wire",
+    "url": "https://thewire.in/politics/narendra-modi-has-not-held-a-single-press-conference-in-10-years-as-prime-minister",
+    "type": "News report"
+  },
+  "quintModiPressConf2019": {
+    "title": "Modi holds first press conference of his 5-year term — but takes no questions",
+    "publisher": "The Quint",
+    "url": "https://www.thequint.com/news/politics/modi-holds-first-press-conference-bjp-hq-takes-no-questions",
+    "type": "News report"
+  },
+  "ndtvModiPressConf2019": {
+    "title": "PM Modi at post-election press conference, does not take questions, lets Shah speak",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/pm-modi-at-post-election-press-conference-doesnt-take-questions-lets-amit-shah-speak-2041753",
+    "type": "News report"
+  },
+  "scrollModiPressConf2024": {
+    "title": "Ten years of Modi government: PM has avoided solo press conferences, questions from reporters",
+    "publisher": "Scroll.in",
+    "url": "https://scroll.in/article/1065434/ten-years-of-modi-government-pm-has-avoided-solo-press-conferences-questions-from-reporters",
+    "type": "Analysis"
   }
 }

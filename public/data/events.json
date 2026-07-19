@@ -3306,5 +3306,31 @@
     "summary": "During the Winter Session of Parliament, PRS reported that 146 opposition MPs were suspended, including 100 from the Lok Sabha and 46 from the Rajya Sabha. The suspensions followed disruptions and demands for a statement from the Home Minister after two intruders entered the Lok Sabha on 13 December. Parliament nevertheless passed the three criminal-law replacement bills and the Telecommunications Bill during the session.",
     "outcome": "The government and presiding officers treated the suspensions as responses to disorder; opposition parties said the scale of the action restricted scrutiny after the security breach. PRS reported that nearly 20% of MPs were suspended and that bills introduced in the session were passed without referral to committees. This record describes the parliamentary process and its dispute without declaring every bill invalid or treating suspension alone as proof of authoritarianism.",
     "sources": ["prsWinterSessionStats2023", "prsDecemberReview2023", "pibWinterSession2023", "apParliamentSuspensions2023"]
+  },
+  {
+    "id": "sansad-chalo-march-2026",
+    "year": 2026,
+    "date": "20 July 2026",
+    "title": "Sansad Chalo march organized near Parliament",
+    "category": "Protests and public response",
+    "actors": ["Student groups", "Delhi Police"],
+    "status": "Scheduled",
+    "severity": "Medium",
+    "summary": "Protest groups organized a 'Sansad Chalo' march from Jantar Mantar to Parliament House demanding examination system reforms and accountability following controversies surrounding national exams like NEET-UG. Delhi Police imposed Section 163 BNSS (formerly Section 144 CrPC) in the New Delhi district, banning unauthorized public gatherings of 4 or more people near Parliament.",
+    "outcome": "Scheduled to take place during the Monsoon Session. The Delhi Police issued commuter advisories warning of road closures and traffic delays in Connaught Place, Sansad Marg, and Jantar Mantar.",
+    "sources": []
+  },
+  {
+    "id": "modi-no-press-conference-2014-2026",
+    "year": 2026,
+    "date": "10 July 2026",
+    "title": "Modi has never held a solo press conference in over 12 years as PM",
+    "category": "Parliament and institutional accountability",
+    "actors": ["Modi government", "Prime Minister's Office"],
+    "status": "Documented pattern",
+    "severity": "Medium",
+    "summary": "Prime Minister Narendra Modi has not held a single solo press conference — where reporters can freely ask questions — since assuming office on 26 May 2014. His sole appearance at anything resembling a press conference was on 17 May 2019, at BJP headquarters after the election result, where he sat silently while Amit Shah spoke and took no direct questions from journalists. Modi has given interviews to select, pre-screened media organisations, but no open, unscripted press interaction with the Indian press corps has ever occurred across more than 12 years in office. Multiple Indian and international media organisations have documented and reported on this pattern.",
+    "outcome": "The pattern remains unchanged as of mid-2026. Media freedom groups including Reporters Without Borders have noted the inaccessibility of the Prime Minister to the domestic press as a factor in India's declining press freedom rankings. The government has not addressed the absence of press conferences.",
+    "sources": ["wireModiPressConf2024", "quintModiPressConf2019", "ndtvModiPressConf2019", "scrollModiPressConf2024"]
   }
 ]

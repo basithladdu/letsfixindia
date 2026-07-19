@@ -8,7 +8,7 @@
   "theme_color": "#fbfaf5",
   "icons": [
     {
-      "src": "/india-flag-icon.svg",
+      "src": "/assets/india-flag-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
