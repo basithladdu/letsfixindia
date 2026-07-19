@@ -1682,7 +1682,7 @@ function bindEvents() {
       return String(a.title).localeCompare(String(b.title));
     });
     
-    eventSelect.innerHTML = '<option value="">-- Found ' + sortedFiltered.length + ' events --</option>' +
+    eventSelect.innerHTML = '<option value="">-- Select an event --</option>' +
       sortedFiltered.map(ev => `<option value="${ev.id}">${ev.year} | ${ev.title.substring(0, 80)}${ev.title.length > 80 ? '...' : ''}</option>`).join('');
   });
 
