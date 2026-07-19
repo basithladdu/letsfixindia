@@ -116,6 +116,9 @@ export default function ContactPage() {
           </div>
         </article>
       </div>
+      <div className="maker-note-container" style={{ marginTop: "2rem", paddingTop: "1.5rem", borderTop: "1px dashed rgba(0,0,0,0.1)", textAlign: "center", fontSize: "0.9rem", color: "var(--muted)", fontStyle: "italic" }}>
+        "we are all going to be worm food anyways." — A note from the maker (basith, 2024)
+      </div>
     </main>
   );
 }
