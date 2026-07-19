@@ -14,3 +14,8 @@ dist/
 output/
 *.err.log
 *.out.log
+
+# Support assets (containing sensitive QR codes)
+public/assets/support-*.png
+assets/support-*.png
+private/qr-codes/

@@ -777,7 +777,7 @@ textarea:focus {
 .year-heading::before {
   content: "";
   position: absolute;
-  left: calc(var(--timeline-axis) - 6.5px);
+  left: calc(var(--timeline-axis) + 1px - 6.5px);
   top: 50%;
   width: 13px;
   height: 13px;
@@ -785,7 +785,7 @@ textarea:focus {
   background: var(--paper);
   border: 3px solid var(--bjp);
   border-radius: 999px;
-  box-shadow: 0 0 0 4px var(--paper);
+  box-shadow: 0 0 0 2px var(--paper);
 }
 
 .year-heading::after {
@@ -864,14 +864,14 @@ textarea:focus {
 .event-card::before {
   content: "";
   position: absolute;
-  left: calc(var(--timeline-axis) - 32.5px);
+  left: calc(var(--timeline-axis) + 1px - 32.5px);
   top: 22px;
   width: 13px;
   height: 13px;
   background: #ffffff;
   border: 3px solid #8d96a1;
   border-radius: 999px;
-  box-shadow: 0 0 0 4px var(--paper);
+  box-shadow: 0 0 0 2px var(--paper);
   transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
@@ -3203,4 +3203,59 @@ textarea:focus-visible {
   .support-options {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+/* ── Author link styling ───────────────────────────────────── */
+
+.author-link {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 103, 31, 0.4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: var(--ink);
+}
+
+.author-link:hover {
+  text-decoration-color: var(--bjp);
+}
+
+.link-icon {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.9em;
+  opacity: 0.6;
+}
+
+.author-link:hover .link-icon {
+  opacity: 1;
+  animation: link-bounce 0.4s ease;
+}
+
+@keyframes link-bounce {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(2px) translateY(-2px); }
+}
+
+/* ── Support QR image ──────────────────────────────────────── */
+
+.support-qr-image {
+  width: 140px;
+  height: 140px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+.support-qr-info {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.support-qr-info strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 800;
+  margin-bottom: 2px;
 }

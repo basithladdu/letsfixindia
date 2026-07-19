@@ -3243,6 +3243,58 @@
     "sources": ["scDelhiServices2023", "prsDelhiServicesOrdinance2023", "prsDelhiServicesAct2023"]
   },
   {
+    "id": "kejriwal-arrest-election-bail-2024",
+    "year": 2024,
+    "date": "21 March-10 May 2024",
+    "title": "Delhi Chief Minister arrested before the general election, then granted interim bail",
+    "category": "Investigative agencies and elections",
+    "actors": ["Enforcement Directorate", "Union government", "BJP-led government", "Aam Aadmi Party", "Supreme Court of India"],
+    "status": "Arrested; interim bail granted; prosecution ongoing",
+    "severity": "Severe",
+    "summary": "The Enforcement Directorate arrested Delhi Chief Minister Arvind Kejriwal on 21 March 2024 in the Delhi excise-policy money-laundering case, shortly before Lok Sabha polling began. Kejriwal denied the allegations and opposition parties called the timing politically motivated. On 10 May, the Supreme Court granted him interim bail until 1 June to campaign, while expressly leaving the merits of the arrest challenge unresolved and imposing conditions including surrender after the election period.",
+    "outcome": "The arrest became a central election-period dispute over the use of federal investigative agencies against opposition leaders. The interim-bail order was temporary and did not amount to an acquittal or finding that the prosecution was false. The record therefore separates the confirmed arrest and court order from both the agency's allegations and the opposition's claim of political targeting.",
+    "sources": ["scKejriwalInterimBail2024", "apKejriwalBail2024", "ieKejriwalArrestBail2024"]
+  },
+  {
+    "id": "congress-bank-account-tax-dispute-2024",
+    "year": 2024,
+    "date": "13 February-21 March 2024",
+    "title": "Congress bank-account lien becomes an election-finance dispute",
+    "category": "Elections and political finance",
+    "actors": ["Income Tax Department", "Indian National Congress", "BJP-led government", "Income Tax Appellate Tribunal"],
+    "status": "Tax dispute; competing accounts of account restrictions",
+    "severity": "High",
+    "summary": "Ahead of the 2024 general election, the Congress party said the Income Tax Department had effectively frozen party and Youth Congress accounts over a demand of about Rs 2.1 billion. The Income Tax Department and BJP rejected the description of a blanket freeze, saying the action involved a lien or recovery connected to disputed tax treatment of political donations and late filing. Reporting recorded that the tribunal allowed partial operation while the dispute was heard and that money was recovered or attached.",
+    "outcome": "The episode raised a major election-finance and level-playing-field dispute because it affected the principal opposition party during the campaign period. The record does not declare the tax demand unlawful or the party's allegation proven; it preserves the competing descriptions and the tribunal process.",
+    "sources": ["apCongressAccounts2024", "reutersCongressAccounts2024", "htCongressTaxLien2024"]
+  },
+  {
+    "id": "pm-cares-transparency-rti-2020",
+    "year": 2020,
+    "date": "27 March-18 August 2020",
+    "title": "PM CARES Fund transparency and RTI dispute",
+    "category": "Transparency and public accountability",
+    "actors": ["Prime Minister's Office", "PM CARES Fund", "Union government", "Supreme Court of India", "RTI applicants"],
+    "status": "Court-tested; disclosure status disputed",
+    "severity": "High",
+    "summary": "The Union government established the PM CARES Fund during the COVID-19 emergency. RTI applicants and public-interest petitioners sought information about its structure, donations, and use of public institutional resources. The government said the fund was a public charitable trust and not a public authority under the RTI Act; the Supreme Court declined to order transfer of donations to the National Disaster Response Fund and recorded that PM CARES was not subject to CAG audit in the requested manner.",
+    "outcome": "The fund published selected audited statements, while applicants and transparency advocates continued to challenge the limits on RTI access and public audit. Later court proceedings addressed disclosure of tax-exemption files. This record distinguishes the confirmed legal position in the cited orders from criticism about transparency and does not infer diversion or misuse without evidence.",
+    "sources": ["scPmCares2020", "cicPmCaresRti2021", "iePmCaresRti2020"]
+  },
+  {
+    "id": "rti-amendment-2019",
+    "year": 2019,
+    "date": "25 July-1 August 2019",
+    "title": "RTI Amendment changes Information Commission terms and service conditions",
+    "category": "Transparency and public accountability",
+    "actors": ["Union government", "Parliament of India", "Central Information Commission", "Opposition parties"],
+    "status": "Act in force",
+    "severity": "High",
+    "summary": "Parliament passed the Right to Information (Amendment) Act, 2019. It removed the RTI Act's fixed statutory terms and salary equivalence for the Central and State Information Commissioners, instead authorising the Central Government to prescribe their terms, salaries, allowances, and service conditions by rules.",
+    "outcome": "The government said the amendment rationalised the service framework and did not weaken the RTI right itself. Opposition parties and transparency advocates argued that executive control over tenure and pay could reduce the institutional independence of bodies that decide disclosure disputes. PRS noted the change as a significant alteration to the commission structure; this record does not claim that every later RTI decision was politically controlled.",
+    "sources": ["indiaCodeRtiAmendment2019", "prsRtiAmendment2019", "pibRtiAmendment2019"]
+  },
+  {
     "id": "parliament-winter-suspensions-2023",
     "year": 2023,
     "date": "4-21 December 2023",

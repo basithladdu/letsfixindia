@@ -3611,5 +3611,77 @@
     "publisher": "PRS Legislative Research",
     "url": "https://prsindia.org/billtrack/the-government-of-national-capital-territory-of-delhi-amendment-bill-2023",
     "type": "Legislative analysis"
+  },
+  "scKejriwalInterimBail2024": {
+    "title": "Arvind Kejriwal v Directorate of Enforcement, interim bail order",
+    "publisher": "Supreme Court of India",
+    "url": "https://webapi.sci.gov.in/supremecourt/2024/16350/16350_2024_2_50_53083_Judgement_10-May-2024.pdf",
+    "type": "Published Supreme Court judgment"
+  },
+  "apKejriwalBail2024": {
+    "title": "Top Indian opposition leader released on bail to campaign in election",
+    "publisher": "The Associated Press",
+    "url": "https://apnews.com/article/4304db5bf5609496274d2b7629cffb47",
+    "type": "Reported election and court proceeding"
+  },
+  "ieKejriwalArrestBail2024": {
+    "title": "Interim bail granted to Delhi CM Arvind Kejriwal until June 1",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/supreme-court-delhi-cm-arvind-kejriwal-bail-excise-policy-case-9319850/",
+    "type": "Reported Supreme Court proceeding"
+  },
+  "apCongressAccounts2024": {
+    "title": "India's main opposition party accuses government of freezing bank accounts ahead of election",
+    "publisher": "The Associated Press",
+    "url": "https://apnews.com/article/cf0d39fa9cae7839f8139ed1a881a4b3",
+    "type": "Reported election-finance dispute"
+  },
+  "reutersCongressAccounts2024": {
+    "title": "India's Congress party says bank accounts frozen over tax demand",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/india/indias-congress-party-says-bank-accounts-frozen-over-25-million-tax-demand/1969016/",
+    "type": "Reported tax and election-finance dispute"
+  },
+  "htCongressTaxLien2024": {
+    "title": "Income-tax action on Congress accounts becomes election dispute",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/india-news/it-action-on-congress-accounts-kicks-off-row-101708106958617.html",
+    "type": "Reported tax tribunal and election coverage"
+  },
+  "scPmCares2020": {
+    "title": "Supreme Court judgment concerning PM CARES Fund and NDRF",
+    "publisher": "Supreme Court of India",
+    "url": "https://api.sci.gov.in/supremecourt/2020/12392/12392_2020_35_1501_23456_Judgement_18-Aug-2020.pdf",
+    "type": "Published Supreme Court judgment"
+  },
+  "cicPmCaresRti2021": {
+    "title": "RTI decision concerning PM CARES Fund information",
+    "publisher": "Central Information Commission",
+    "url": "https://indiankanoon.org/doc/82182631/",
+    "type": "Published information-commission decision"
+  },
+  "iePmCaresRti2020": {
+    "title": "PM CARES transparency petition and RTI position",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/plea-to-declare-pm-cares-fund-as-a-public-authority-under-rti-not-maintainable-pmo-to-delhi-hc-6452582/",
+    "type": "Reported transparency proceeding"
+  },
+  "indiaCodeRtiAmendment2019": {
+    "title": "Right to Information (Amendment) Act, 2019",
+    "publisher": "India Code, Ministry of Law and Justice",
+    "url": "https://www.indiacode.nic.in/repealedfileopen?rfilename=A2019-24.pdf",
+    "type": "Official statute"
+  },
+  "prsRtiAmendment2019": {
+    "title": "The Right to Information (Amendment) Bill, 2019",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-right-to-information-amendment-bill-2019",
+    "type": "Legislative analysis"
+  },
+  "pibRtiAmendment2019": {
+    "title": "Government explanation of the Right to Information Amendment Bill",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1579510&lang=2&reg=48",
+    "type": "Official government release"
   }
 }

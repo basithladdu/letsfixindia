@@ -169,6 +169,42 @@ function scrollToY(y, behavior = "smooth") {
   window.scrollTo({ top: clampScroll(y), behavior });
 }
 
+let cruiseFrame = 0;
+
+function cancelCruise() {
+  if (cruiseFrame) cancelAnimationFrame(cruiseFrame);
+  cruiseFrame = 0;
+}
+
+function cruiseTo(targetY) {
+  cancelCruise();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    scrollToY(targetY, "auto");
+    return;
+  }
+  const startY = window.scrollY;
+  const target = clampScroll(targetY);
+  const distance = target - startY;
+  if (Math.abs(distance) < 4) return;
+  const duration = Math.min(4200, Math.max(900, Math.abs(distance) * 0.32));
+  const startTime = performance.now();
+  const ease = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+  const step = (now) => {
+    const progress = Math.min(1, (now - startTime) / duration);
+    window.scrollTo(0, startY + distance * ease(progress));
+    if (progress < 1) {
+      cruiseFrame = requestAnimationFrame(step);
+    } else {
+      cruiseFrame = 0;
+    }
+  };
+  cruiseFrame = requestAnimationFrame(step);
+}
+
+["wheel", "touchstart", "pointerdown"].forEach((eventName) => {
+  window.addEventListener(eventName, cancelCruise, { passive: true });
+});
+
 function sourceStatus(ids) {
   const uniqueIds = Array.from(new Set(Array.isArray(ids) ? ids : []));
   const linked = uniqueIds.filter((id) => sources[id]?.url).length;
@@ -258,23 +294,42 @@ function eventUrl(event) {
   return `/record/${encodeURIComponent(event.id)}`;
 }
 
+function matchesExcept(event, skip) {
+  const query = state.query.trim().toLowerCase();
+  const searchText = [event.title, event.summary, event.outcome, event.category, event.status, event.actors.join(" "), event.year, event.date].join(" ").toLowerCase();
+  return (
+    (!query || searchText.includes(query)) &&
+    (skip === "category" || state.category === "all" || event.category === state.category) &&
+    (skip === "actor" || state.actor === "all" || event.actors.includes(state.actor)) &&
+    (skip === "status" || state.status === "all" || event.status === state.status) &&
+    (state.evidence === "all" || sourceStatus(event.sources).className === state.evidence) &&
+    (skip === "year" || state.year === "all" || String(event.year) === state.year)
+  );
+}
+
+function fillSelect(select, allLabel, values, current) {
+  select.innerHTML = `<option value="all">${allLabel}</option>` +
+    values.map((value) => `<option value="${esc(value)}">${esc(value)}</option>`).join("");
+  select.value = values.includes(current) ? current : "all";
+}
+
 function renderOptions() {
   if (!categoryFilter || !actorFilter || !statusFilter || !yearRail) return;
-  const active = events;
-  const categories = uniqueSorted(active.map((e) => e.category));
-  const actors = uniqueSorted(active.flatMap((e) => e.actors));
-  const statuses = uniqueSorted(active.map((e) => e.status));
-  categoryFilter.innerHTML = `<option value="all">All categories</option>`;
-  actorFilter.innerHTML = `<option value="all">All actors</option>`;
-  statusFilter.innerHTML = `<option value="all">All statuses</option>`;
-  categoryFilter.insertAdjacentHTML("beforeend", categories.map((c) => `<option value="${c}">${c}</option>`).join(""));
-  actorFilter.insertAdjacentHTML("beforeend", actors.map((a) => `<option value="${a}">${a}</option>`).join(""));
-  statusFilter.insertAdjacentHTML("beforeend", statuses.map((s) => `<option value="${s}">${s}</option>`).join(""));
+  const pool = (skip) => events.filter((e) => matchesExcept(e, skip));
+  const categories = uniqueSorted(pool("category").map((e) => e.category));
+  const actors = uniqueSorted(pool("actor").flatMap((e) => e.actors));
+  const statuses = uniqueSorted(pool("status").map((e) => e.status));
+  fillSelect(categoryFilter, "All categories", categories, state.category);
+  fillSelect(actorFilter, "All actors", actors, state.actor);
+  fillSelect(statusFilter, "All statuses", statuses, state.status);
+  if (categoryFilter.value !== state.category) state.category = categoryFilter.value;
+  if (actorFilter.value !== state.actor) state.actor = actorFilter.value;
+  if (statusFilter.value !== state.status) state.status = statusFilter.value;
 
-  const years = uniqueSorted(active.map((e) => e.year)).sort((a, b) => b - a);
+  const years = uniqueSorted(pool("year").map((e) => e.year)).sort((a, b) => b - a);
   yearRail.innerHTML = [
-    `<button class="year-pill active" data-year="all">All years</button>`,
-    ...years.map((year) => `<button class="year-pill" data-year="${year}">${year}</button>`)
+    `<button class="year-pill${state.year === "all" ? " active" : ""}" data-year="all">All years</button>`,
+    ...years.map((year) => `<button class="year-pill${state.year === String(year) ? " active" : ""}" data-year="${year}">${year}</button>`)
   ].join("");
 }
 
@@ -293,6 +348,7 @@ function matches(event) {
 
 function renderTimeline() {
   if (!timelineList) return;
+  renderOptions();
   const filtered = events.filter(matches).sort(byTimeline);
   const activeTotal = events.length;
   if (resultCount) resultCount.textContent = `${filtered.length} of ${activeTotal} records`;
@@ -300,7 +356,9 @@ function renderTimeline() {
     const linked = filtered.filter((event) => sourceStatus(event.sources).className === "linked").length;
     const pending = filtered.filter((event) => sourceStatus(event.sources).className === "pending").length;
     const missing = filtered.length - linked - pending;
-    evidenceSummary.textContent = `${linked} linked • ${pending} pending URLs • ${missing} source gaps`;
+    evidenceSummary.textContent = (pending || missing)
+      ? `${linked} linked • ${pending} pending URLs • ${missing} source gaps`
+      : `Every entry links to its sources`;
   }
   if (clearFiltersButton) {
     clearFiltersButton.disabled = !state.query && state.category === "all" && state.actor === "all" && state.status === "all" && state.evidence === "all" && state.year === "all";
@@ -333,7 +391,7 @@ function renderTimeline() {
         ${yearEvents.map((event, index) => `
           <article class="event-card ${String(event.severity || "").toLowerCase()}" style="--i:${index}">
             <div class="event-body">
-              ${(() => { const evidence = sourceStatus(event.sources); return `<span class="evidence-status ${evidence.className}" title="Evidence link status">${esc(evidence.label)}</span>`; })()}
+              ${(() => { const evidence = sourceStatus(event.sources); return evidence.className === "linked" ? "" : `<span class="evidence-status ${evidence.className}" title="Evidence link status">${esc(evidence.label)}</span>`; })()}
               <div class="event-meta">
                 <span>${esc(event.date)}</span>
                 <span class="${statusClass(event.status)}">${esc(event.status)}</span>
@@ -1112,7 +1170,7 @@ function bindEvents() {
     const action = button.dataset.scrollAction;
     if (action === "top") {
       localStorage.setItem(TIMELINE_JUMP_ORIGIN_KEY, String(Math.round(window.scrollY)));
-      scrollToY(0);
+      cruiseTo(0);
       updateScrollDock();
     }
     if (action === "saved") {
@@ -1127,7 +1185,7 @@ function bindEvents() {
     }
     if (action === "bottom") {
       localStorage.setItem(TIMELINE_JUMP_ORIGIN_KEY, String(Math.round(window.scrollY)));
-      scrollToY(maxScrollY());
+      cruiseTo(maxScrollY());
       updateScrollDock();
     }
     if (action === "auto") setAutoScroll(!autoScrollActive);
