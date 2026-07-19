@@ -25,19 +25,82 @@ let indicators = [];
 let voices = [];
 let researchBacklog = [];
 
+let trackersInterval = null;
+
+function updateMobileScrollProgress() {
+  const fill = document.getElementById("mobileScrollProgressFill");
+  if (!fill) return;
+  const winScroll = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  if (height <= 0) {
+    fill.style.height = "0%";
+    return;
+  }
+  const scrolled = Math.min(100, Math.max(0, (winScroll / height) * 100));
+  fill.style.height = scrolled + "%";
+}
+
+function startLiveTrackers() {
+  if (trackersInterval) clearInterval(trackersInterval);
+  
+  function updateTrackers() {
+    const electionEl = document.getElementById("electionCountdown");
+    const pressEl = document.getElementById("pressConferenceTracker");
+    
+    if (!electionEl && !pressEl) return;
+    
+    const now = new Date();
+    
+    // Election Countdown (Target: April 15, 2029)
+    const electionTarget = new Date("2029-04-15T00:00:00");
+    const diffElection = electionTarget - now;
+    if (electionEl) {
+      if (diffElection <= 0) {
+        electionEl.textContent = "Elections Ongoing / Completed";
+      } else {
+        const days = Math.floor(diffElection / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diffElection % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diffElection % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diffElection % (1000 * 60)) / 1000);
+        electionEl.innerHTML = `${days}d ${hours}h ${mins}m ${secs}s`;
+      }
+    }
+    
+    // Press Conference Tracker (Modi became PM: May 26, 2014 — has NEVER held a solo press conference)
+    const pressStart = new Date("2014-05-26T00:00:00");
+    const diffPress = now - pressStart;
+    if (pressEl) {
+      if (diffPress < 0) {
+        pressEl.textContent = "0 days";
+      } else {
+        const days = Math.floor(diffPress / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diffPress % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diffPress % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diffPress % (1000 * 60)) / 1000);
+        pressEl.innerHTML = `${days}d ${hours}h ${mins}m ${secs}s`;
+      }
+    }
+  }
+  
+  updateTrackers();
+  trackersInterval = setInterval(updateTrackers, 1000);
+}
+
 const state = {
   query: "",
   category: "all",
   actor: "all",
   status: "all",
   evidence: "all",
-  year: "all"
+  year: "all",
+  sort: "desc"
 };
 
 const categoryFilter = document.querySelector("#categoryFilter");
 const actorFilter = document.querySelector("#actorFilter");
 const statusFilter = document.querySelector("#statusFilter");
 const evidenceFilter = document.querySelector("#evidenceFilter");
+const sortFilter = document.querySelector("#sortFilter");
 const clearFiltersButton = document.querySelector("#clearFiltersButton");
 const searchInput = document.querySelector("#searchInput");
 const timelineList = document.querySelector("#timelineList");
@@ -111,6 +174,11 @@ function uniqueSorted(values) {
 function byTimeline(a, b) {
   if (a.year !== b.year) return b.year - a.year;
   return String(b.date).localeCompare(String(a.date));
+}
+
+function byTimelineAsc(a, b) {
+  if (a.year !== b.year) return a.year - b.year;
+  return String(a.date).localeCompare(String(b.date));
 }
 
 function chipClass(value) {
@@ -386,7 +454,7 @@ function matches(event) {
 function renderTimeline() {
   if (!timelineList) return;
   renderOptions();
-  const filtered = events.filter(matches).sort(byTimeline);
+  const filtered = events.filter(matches).sort(state.sort === "asc" ? byTimelineAsc : byTimeline);
   const activeTotal = events.length;
   if (resultCount) resultCount.textContent = `${filtered.length} of ${activeTotal} records`;
   if (evidenceSummary) {
@@ -421,7 +489,7 @@ function renderTimeline() {
   timelineList.innerHTML = Array.from(grouped.entries()).map(([year, yearEvents]) => `
     <section class="year-group" aria-label="${year} records">
       <div class="year-heading">
-        <span>${year}</span>
+        <span>${year} <b class="year-timeline-label" style="font-family: sans-serif; font-size: 14px; font-weight: 900; letter-spacing: 0.05em; margin-left: 6px; vertical-align: middle; color: var(--muted); text-transform: uppercase;">TIMELINE</b></span>
         <b>${yearEvents.length} records</b>
       </div>
       <div class="year-records">
@@ -975,6 +1043,16 @@ function renderRoute(options = {}) {
   routePages.forEach((section) => section.classList.toggle("is-active", section.dataset.page === route.page));
   setActiveNav(route.page);
   const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
+  
+  if (route.page === "statistics") {
+    startLiveTrackers();
+  } else {
+    if (trackersInterval) {
+      clearInterval(trackersInterval);
+      trackersInterval = null;
+    }
+  }
+  
   requestAnimationFrame(() => {
     if (shouldRestoreTimeline) {
       restoreTimelineScroll("auto");
@@ -982,6 +1060,7 @@ function renderRoute(options = {}) {
       window.scrollTo({ top: 0, behavior: "auto" });
     }
     updateScrollDock();
+    updateMobileScrollProgress();
   });
 }
 
@@ -1361,14 +1440,21 @@ function bindEvents() {
     renderRoute({ restoreTimeline: resolveRoute().page === "timeline" });
   });
 
+  let scrollSaveTimeout = null;
   window.addEventListener("scroll", () => {
-    if (resolveRoute().page !== "timeline" || scrollSaveQueued) return;
-    scrollSaveQueued = true;
-    requestAnimationFrame(() => {
+    updateMobileScrollProgress();
+    if (resolveRoute().page !== "timeline") return;
+    if (!scrollSaveQueued) {
+      scrollSaveQueued = true;
+      requestAnimationFrame(() => {
+        updateScrollDock();
+        scrollSaveQueued = false;
+      });
+    }
+    if (scrollSaveTimeout) window.clearTimeout(scrollSaveTimeout);
+    scrollSaveTimeout = window.setTimeout(() => {
       saveTimelineScroll(false);
-      updateScrollDock();
-      scrollSaveQueued = false;
-    });
+    }, 200);
   }, { passive: true });
 
   window.addEventListener("resize", () => {
@@ -1460,10 +1546,19 @@ function bindEvents() {
   });
 
   evidenceFilter?.addEventListener("change", (event) => {
+    saveTimelineScroll(true);
     state.evidence = event.target.value;
     renderTimeline();
     updateScrollDock();
   });
+  
+  sortFilter?.addEventListener("change", (event) => {
+    saveTimelineScroll(true);
+    state.sort = event.target.value;
+    renderTimeline();
+    updateScrollDock();
+  });
+
   clearFiltersButton?.addEventListener("click", clearTimelineFilters);
 
   yearRail?.addEventListener("click", (event) => {
