@@ -239,72 +239,97 @@
         </div>
         <p id="submitFeedback" class="submit-feedback" aria-live="polite"></p>
         <form id="submissionForm" class="submission-form">
-          <label>
-            <span>Record title</span>
-            <input name="title" required placeholder="NEET-UG paper leak, state, year" autocomplete="off">
-          </label>
-          <label>
-            <span>Date or year</span>
-            <input name="year" required placeholder="3 May 2026 or 2026" autocomplete="off">
-          </label>
-          <label>
-            <span>Place</span>
-            <input name="place" required placeholder="India, state, district, institution" autocomplete="off">
-          </label>
-          <label>
-            <span>Category</span>
-            <select name="category" required>
-              <option>Education</option>
-              <option>Sexual violence</option>
-              <option>Institutional integrity</option>
-              <option>Press freedom</option>
-              <option>Communal violence</option>
-              <option>Security and terror</option>
-              <option>Security forces</option>
-              <option>Economy</option>
-              <option>Public health</option>
-              <option>Civil liberties</option>
-              <option>Statistics</option>
-            </select>
-          </label>
-          <label>
-            <span>Connection</span>
-            <select name="actor" required>
-              <option>BJP-linked</option>
-              <option>BJP-led government</option>
-              <option>NDA ally-linked</option>
-              <option>RSS or ABVP-linked</option>
-              <option>State institution</option>
-              <option>Security forces</option>
-              <option>Not party-specific</option>
-            </select>
-          </label>
-          <label>
-            <span>Evidence status</span>
-            <select name="status" required>
-              <option>Official</option>
-              <option>Official proposal</option>
-              <option>Official reversed</option>
-              <option>Official investigation</option>
-              <option>Court-tested</option>
-              <option>Convicted</option>
-              <option>Charged</option>
-              <option>Investigated</option>
-              <option>Reported</option>
-              <option>Alleged</option>
-              <option>Index</option>
-              <option>Affidavit analysis</option>
-              <option>Investigative analysis</option>
-              <option>Opposition claim</option>
-              <option>Needs verification</option>
-            </select>
-          </label>
-          <label>
-            <span>Affected people</span>
-            <input name="affected" placeholder="Deaths, displaced, accused count, candidates affected">
-          </label>
+          <div class="submission-type-selector" style="grid-column: 1 / -1; display: flex; gap: 16px; margin-bottom: 8px; border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 16px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
+              <input type="radio" name="submissionType" value="new" checked style="width: auto; margin: 0;">
+              <span>Submit a new record</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
+              <input type="radio" name="submissionType" value="correction" style="width: auto; margin: 0;">
+              <span>Suggest correction/addition to existing event</span>
+            </label>
+          </div>
+
+          <!-- Correction Target Event Selector -->
+          <div id="correctionEventFields" style="grid-column: 1 / -1; display: none; margin-bottom: 8px;">
+            <label style="display: flex; flex-direction: column; gap: 6px; width: 100%;">
+              <span>Search & Select Existing Event</span>
+              <input type="text" id="eventSearchInput" placeholder="Type to search events (e.g. NEET, Demonetisation, Hijab)..." autocomplete="off" style="width: 100%;">
+              <select id="eventSelect" name="targetEventId" style="width: 100%; margin-top: 8px; padding: 8px; border-radius: 4px; border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+                <option value="">-- Start typing above to search, or select from all events --</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="newEventFields" style="display: contents;">
+            <label>
+              <span>Record title</span>
+              <input name="title" required placeholder="NEET-UG paper leak, state, year" autocomplete="off">
+            </label>
+            <label>
+              <span>Date or year</span>
+              <input name="year" required placeholder="3 May 2026 or 2026" autocomplete="off">
+            </label>
+            <label>
+              <span>Place</span>
+              <input name="place" required placeholder="India, state, district, institution" autocomplete="off">
+            </label>
+            <label>
+              <span>Category</span>
+              <select name="category" required>
+                <option>Education</option>
+                <option>Sexual violence</option>
+                <option>Institutional integrity</option>
+                <option>Press freedom</option>
+                <option>Communal violence</option>
+                <option>Security and terror</option>
+                <option>Security forces</option>
+                <option>Economy</option>
+                <option>Public health</option>
+                <option>Civil liberties</option>
+                <option>Statistics</option>
+              </select>
+            </label>
+            <label>
+              <span>Connection</span>
+              <select name="actor" required>
+                <option>BJP-linked</option>
+                <option>BJP-led government</option>
+                <option>NDA ally-linked</option>
+                <option>RSS or ABVP-linked</option>
+                <option>State institution</option>
+                <option>Security forces</option>
+                <option>Not party-specific</option>
+              </select>
+            </label>
+            <label>
+              <span>Evidence status</span>
+              <select name="status" required>
+                <option>Official</option>
+                <option>Official proposal</option>
+                <option>Official reversed</option>
+                <option>Official investigation</option>
+                <option>Court-tested</option>
+                <option>Convicted</option>
+                <option>Charged</option>
+                <option>Investigated</option>
+                <option>Reported</option>
+                <option>Alleged</option>
+                <option>Index</option>
+                <option>Affidavit analysis</option>
+                <option>Investigative analysis</option>
+                <option>Opposition claim</option>
+                <option>Needs verification</option>
+              </select>
+            </label>
+            <label>
+              <span>Affected people</span>
+              <input name="affected" placeholder="Deaths, displaced, accused count, candidates affected">
+            </label>
+          </div>
+
           <label class="wide">
-            <span>What happened</span>
+            <span id="summaryLabel">What happened</span>
             <textarea name="summary" required rows="5" placeholder="Write the factual claim, the BJP/RSS/government connection, and what still needs verification."></textarea>
           </label>
           <label class="wide">
