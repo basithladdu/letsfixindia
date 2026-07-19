@@ -6,6 +6,10 @@ export default function AboutPage() {
   return (
     <main className="page-section about-page">
       <blockquote className="about-quote">
+        <p>"Aerodynamically, the bumble bee shouldn't be able to fly, but the bumble bee doesn't know it so it goes on flying anyway."</p>
+        <cite>A note on persistence</cite>
+      </blockquote>
+      <blockquote className="about-quote" style={{ marginTop: "1rem" }}>
         <p>"we are all going to be worm food anyways."</p>
         <cite>A note from the maker (basith, 2024)</cite>
       </blockquote>
