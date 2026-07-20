@@ -4620,9 +4620,11 @@ textarea:focus-visible {
 
 .contact-tile {
   display: grid;
-  justify-items: start;
-  gap: 4px;
-  padding: 18px 16px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+  row-gap: 2px;
+  padding: 16px 18px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -4630,6 +4632,16 @@ textarea:focus-visible {
   color: var(--ink);
   text-decoration: none;
   animation: card-in 0.32s ease both;
+}
+
+.contact-tile .tile-icon {
+  grid-row: span 2;
+  margin-bottom: 0;
+}
+
+.contact-tile strong,
+.contact-tile .tile-sub {
+  grid-column: 2;
 }
 
 .contact-tile:hover {
@@ -4737,12 +4749,6 @@ textarea:focus-visible {
   margin: 0;
   color: #37312c;
   font-size: 14px;
-}
-
-@media (min-width: 860px) {
-  .contact-tiles {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }
 
 /* ── About note row ──────────────────────────────────────── */
