@@ -2312,12 +2312,18 @@
     "date": "20 November 2016",
     "title": "Indore-Patna Express derailment near Pukhrayan",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Reported",
     "severity": "Severe",
     "summary": "The Indore-Patna Express derailed near Pukhrayan in Uttar Pradesh, killing more than 100 people and injuring more than 150. The disaster became one of the deadliest railway accidents during the period and prompted scrutiny of track condition, maintenance, and passenger safety.",
     "outcome": "Initial casualty figures changed during rescue operations and reporting. The event is retained with a range rather than a single unsupported final number.",
-    "sources": ["reutersPukhrayan2016", "pibRailwaySafety2024"]
+    "sources": [
+      "reutersPukhrayan2016",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "khatauli-derailment-2017",
@@ -2325,12 +2331,18 @@
     "date": "19 August 2017",
     "title": "Khatauli Utkal Express derailment",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Reported",
     "severity": "High",
     "summary": "The Kalinga Utkal Express derailed near Khatauli in Uttar Pradesh, killing 23 people and injuring more than 150. Reports raised questions about track work, railway maintenance, and whether safety procedures were followed before trains passed through the section.",
     "outcome": "The Railway Board ordered an inquiry and disciplinary action was reported. The case is recorded as an infrastructure and operational-safety failure, not as proof of a single political cause.",
-    "sources": ["ieKhatauli2017", "pibRailwaySafety2024"]
+    "sources": [
+      "ieKhatauli2017",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "jalgaon-pushpak-2025",
@@ -2338,12 +2350,18 @@
     "date": "22 January 2025",
     "title": "Jalgaon passenger deaths after a fire scare",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Reported",
     "severity": "High",
     "summary": "Passengers jumped from the Pushpak Express after a reported fire scare and were struck by another train on the adjacent track near Jalgaon, Maharashtra. At least 12 people died and several were injured.",
     "outcome": "The initial account cited sparks from a possible hot axle or brake binding and passenger panic. The incident highlights emergency communication, platform/track separation, and crowd-safety risks in addition to rolling-stock safety.",
-    "sources": ["apJalgaon2025", "pibRailwaySafety2024"]
+    "sources": [
+      "apJalgaon2025",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "cuttack-bengaluru-kamakhya-2025",
@@ -2351,12 +2369,18 @@
     "date": "30 March 2025",
     "title": "Bengaluru-Kamakhya Express derailment near Cuttack",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "High",
     "summary": "Eleven coaches of the Bengaluru-Kamakhya Express derailed near Nergundi in Odisha's Cuttack district. One person died and several passengers were injured. Railway authorities began an inquiry while rescue and route restoration operations continued.",
     "outcome": "The cause remained under investigation in the initial reporting. The record therefore separates the confirmed casualties from later claims about track defects or maintenance responsibility.",
-    "sources": ["ieCuttack2025", "pibRailwaySafety2024"]
+    "sources": [
+      "ieCuttack2025",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "bilaspur-passenger-cargo-2025",
@@ -2364,12 +2388,18 @@
     "date": "4 November 2025",
     "title": "Passenger train collides with cargo train near Bilaspur",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "Severe",
     "summary": "A passenger train collided with a cargo train near Bilaspur in central India. At least 11 people died and about 20 were injured. One passenger coach came to rest on a cargo wagon during the crash.",
     "outcome": "Indian Railways opened an inquiry and announced compensation. The cause was not treated as established in the initial reports.",
-    "sources": ["apBilaspur2025", "pibRailwaySafety2024"]
+    "sources": [
+      "apBilaspur2025",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "vasco-patna-derailment-2017",
@@ -2377,12 +2407,18 @@
     "date": "24 November 2017",
     "title": "Vasco Da Gama–Patna Express derailment near Manikpur",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Official report",
     "severity": "High",
     "summary": "Fourteen coaches of the Vasco Da Gama–Patna Express derailed near Manikpur in Uttar Pradesh. The railway ministry's incident release recorded the location, time, train number, and coach derailment details; contemporary reporting recorded deaths and injuries.",
     "outcome": "The entry preserves the official incident facts without treating an initial cause or casualty figure as final. It is part of the wider 2017 cluster of railway safety failures.",
-    "sources": ["pibVascoPatna2017", "pibRailwaySafety2024"]
+    "sources": [
+      "pibVascoPatna2017",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "madurai-train-fire-2023",
@@ -2390,12 +2426,18 @@
     "date": "26 August 2023",
     "title": "Fire in a parked private train coach at Madurai",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Reported",
     "severity": "High",
     "summary": "A fire inside a detached private coach parked at Madurai station killed nine people and injured others. Southern Railway said a gas cylinder brought into the coach caused the blaze, which burned for about two hours.",
     "outcome": "The incident highlights fire prevention, passenger screening, emergency egress, and the separate safety risks of private coaches parked on railway premises.",
-    "sources": ["apMaduraiFire2023", "pibRailwaySafety2024"]
+    "sources": [
+      "apMaduraiFire2023",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "howrah-mumbai-mail-derailment-2024",
@@ -2403,12 +2445,18 @@
     "date": "30 July 2024",
     "title": "Howrah-Mumbai Mail derailment in Jharkhand",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "High",
     "summary": "The Howrah-Mumbai Mail derailed in Jharkhand after a reported interaction with a partially derailed goods train on a parallel track. Two people died and 16 were injured in the initial reporting.",
     "outcome": "The Commissioner of Railway Safety was tasked with investigating the cause. The record distinguishes the confirmed casualties from preliminary accounts about the sequence of derailment and collision.",
-    "sources": ["ieHowrahMumbai2024", "pibRailwaySafety2024"]
+    "sources": [
+      "ieHowrahMumbai2024",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "assam-rajdhani-elephants-2025",
@@ -2416,12 +2464,19 @@
     "date": "20 December 2025",
     "title": "Rajdhani Express collision kills seven elephants in Assam",
     "category": "Railway and wildlife safety",
-    "actors": ["Ministry of Railways", "Assam government", "Wildlife authorities"],
+    "actors": [
+      "Ministry of Railways",
+      "Assam government",
+      "Wildlife authorities"
+    ],
     "status": "Reported",
     "severity": "High",
     "summary": "A Rajdhani Express struck a herd of elephants in Assam. Seven wild elephants were killed, a calf was injured, and five coaches and the engine derailed; no human deaths were reported in the initial account.",
     "outcome": "The collision renewed scrutiny of speed management, wildlife corridors, early-warning systems, and coordination between railway and forest authorities. The site was reported not to be a designated elephant corridor.",
-    "sources": ["apAssamElephants2025", "pibRailwaySafety2024"]
+    "sources": [
+      "apAssamElephants2025",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "kavaraipettai-bagmati-collision-2024",
@@ -2429,12 +2484,19 @@
     "date": "11 October 2024",
     "title": "Bagmati Express collides with a stationary goods train at Kavaraipettai",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "High",
     "summary": "The Mysuru-Darbhanga Bagmati Express entered a loop line at Kavaraipettai in Tamil Nadu and collided with a stationary goods train. Twelve coaches derailed, a fire broke out in a parcel coach, and early reports recorded injuries but no deaths.",
     "outcome": "Railway authorities ordered a high-level inquiry. Officials described a mismatch between the signal and route as a possible factor; the record preserves that as an investigative finding rather than a final judicial conclusion.",
-    "sources": ["ieKavaraipettai2024", "ndtvKavaraipettai2024", "pibRailwaySafety2024"]
+    "sources": [
+      "ieKavaraipettai2024",
+      "ndtvKavaraipettai2024",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "gonda-dibrugarh-derailment-2024",
@@ -2442,12 +2504,19 @@
     "date": "18 July 2024",
     "title": "Chandigarh-Dibrugarh Express derailment near Gonda",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "High",
     "summary": "Eight coaches of the Chandigarh-Dibrugarh Express derailed between Jhilahi and Motiganj in Uttar Pradesh's Gonda district. Four passengers were later reported dead and 32 injured in parliamentary and press accounts.",
     "outcome": "The Railway Ministry ordered a high-level inquiry alongside a Commission of Railway Safety inquiry. Later reporting discussed possible track or equipment failure, but the record does not treat early hypotheses as a final finding.",
-    "sources": ["ieGondaDibrugarh2024", "rsGondaDibrugarh2024", "pibRailwaySafety2024"]
+    "sources": [
+      "ieGondaDibrugarh2024",
+      "rsGondaDibrugarh2024",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "new-delhi-station-crush-2025",
@@ -2455,12 +2524,19 @@
     "date": "15 February 2025",
     "title": "Crowd crush at New Delhi Railway Station during Maha Kumbh travel",
     "category": "Public safety and crowd management",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "Severe",
     "summary": "A crowd crush at New Delhi Railway Station killed 18 people and injured 15 others as passengers gathered to travel toward the Maha Kumbh in Prayagraj. Early accounts described confusion around platforms and movement near a footbridge.",
     "outcome": "The government constituted a high-level inquiry committee. Railway authorities later rejected reports that a separate RPF inquiry had already established a definitive cause, so this record keeps the cause and accountability questions open.",
-    "sources": ["apDelhiStationCrush2025", "pibDelhiStationInquiry2025", "pibDelhiStationClarification2025"]
+    "sources": [
+      "apDelhiStationCrush2025",
+      "pibDelhiStationInquiry2025",
+      "pibDelhiStationClarification2025"
+    ]
   },
   {
     "id": "maha-kumbh-crush-2025",
@@ -2468,12 +2544,19 @@
     "date": "29 January 2025",
     "title": "Maha Kumbh crowd crush in Prayagraj",
     "category": "Public safety and crowd management",
-    "actors": ["Uttar Pradesh government", "State institution"],
+    "actors": [
+      "Uttar Pradesh government",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "Severe",
     "summary": "A crowd crush during the Maha Kumbh festival in Prayagraj killed at least 30 people and injured about 60, according to police and Associated Press reporting. The crush occurred during a major bathing day when exceptionally large crowds gathered at the festival site.",
     "outcome": "Authorities announced an inquiry into the incident. Contemporaneous reporting contained differing unofficial estimates, so the record uses the official police figure available in the cited reporting and does not present higher unofficial counts as settled fact.",
-    "sources": ["apMahaKumbhCrush2025", "reutersMahaKumbhInquiry2025", "pibMahaKumbhCondolence2025"]
+    "sources": [
+      "apMahaKumbhCrush2025",
+      "reutersMahaKumbhInquiry2025",
+      "pibMahaKumbhCondolence2025"
+    ]
   },
   {
     "id": "nagpur-violence-2025",
@@ -2481,12 +2564,20 @@
     "date": "17-20 March 2025",
     "title": "Nagpur violence after Aurangzeb-tomb protest",
     "category": "Communal violence",
-    "actors": ["VHP and Bajrang Dal-linked protesters", "Maharashtra government", "Police"],
+    "actors": [
+      "VHP and Bajrang Dal-linked protesters",
+      "Maharashtra government",
+      "Police"
+    ],
     "status": "Reported",
     "severity": "Severe",
     "summary": "Violence broke out in Nagpur after protests by Hindu nationalist groups demanding removal of Aurangzeb's tomb. Associated Press reported injuries to at least 34 police personnel and five other people, damage to homes and vehicles, arrests, and an indefinite curfew in affected areas.",
     "outcome": "Police and courts continued processing arrests while the curfew was relaxed. A later report said one person who suffered injuries died in hospital; the record distinguishes that later reported death from the initial riot toll and does not assign collective criminal responsibility to every protest participant.",
-    "sources": ["apNagpurViolence2025", "ieNagpurCurfew2025", "ieNagpurDeath2025"]
+    "sources": [
+      "apNagpurViolence2025",
+      "ieNagpurCurfew2025",
+      "ieNagpurDeath2025"
+    ]
   },
   {
     "id": "ajmer-sabarmati-derailment-2024",
@@ -2494,12 +2585,18 @@
     "date": "18 March 2024",
     "title": "Sabarmati-Agra Superfast derailment near Ajmer",
     "category": "Railway safety",
-    "actors": ["Ministry of Railways", "State institution"],
+    "actors": [
+      "Ministry of Railways",
+      "State institution"
+    ],
     "status": "Reported",
     "severity": "Moderate",
     "summary": "Four coaches and the locomotive of the Sabarmati-Agra Superfast derailed near Madar in Rajasthan's Ajmer district after the train reportedly struck a stationary goods train. No loss of life was reported in the cited contemporaneous account.",
     "outcome": "Railway officials restored traffic and examined the derailment site. The record is retained as a non-fatal safety incident and does not infer a final cause beyond the reported collision sequence.",
-    "sources": ["ieAjmerDerailment2024", "pibRailwaySafety2024"]
+    "sources": [
+      "ieAjmerDerailment2024",
+      "pibRailwaySafety2024"
+    ]
   },
   {
     "id": "tirupati-stampede-2025",
@@ -2507,12 +2604,20 @@
     "date": "8 January 2025",
     "title": "Tirupati temple stampede during darshan-token distribution",
     "category": "Public safety and crowd management",
-    "actors": ["Andhra Pradesh government", "Tirumala Tirupati Devasthanams", "State institution"],
+    "actors": [
+      "Andhra Pradesh government",
+      "Tirumala Tirupati Devasthanams",
+      "State institution"
+    ],
     "status": "Under investigation",
     "severity": "High",
     "summary": "At least six devotees died and about 35 were injured in a stampede near Tirupati after thousands gathered to obtain free tokens for a special darshan at the Sri Venkateswara temple.",
     "outcome": "The Andhra Pradesh government ordered an inquiry. Reporting raised questions about token-counter arrangements and crowd control, but this record does not treat those questions as a final finding of criminal or administrative liability.",
-    "sources": ["apTirupatiStampede2025", "reutersTirupatiStampede2025", "ieTirupatiStampede2025"]
+    "sources": [
+      "apTirupatiStampede2025",
+      "reutersTirupatiStampede2025",
+      "ieTirupatiStampede2025"
+    ]
   },
   {
     "id": "delhi-assembly-election-2025",
@@ -2520,12 +2625,19 @@
     "date": "5 February 2025",
     "title": "BJP returns to power in Delhi Assembly election",
     "category": "Elections and party power",
-    "actors": ["Bharatiya Janata Party", "Aam Aadmi Party", "Election Commission of India"],
+    "actors": [
+      "Bharatiya Janata Party",
+      "Aam Aadmi Party",
+      "Election Commission of India"
+    ],
     "status": "Official result",
     "severity": "Moderate",
     "summary": "The BJP won the Delhi Assembly election and returned to government in the National Capital Territory after more than two decades. Associated Press reported the BJP winning 47 of 70 seats on the official count cited in its report.",
     "outcome": "The result ended the AAP's uninterrupted Delhi government since 2015 and led to the formation of a BJP government under Rekha Gupta. Secondary summaries have reported a different seat total, so the record links the election source rather than presenting the discrepancy as settled without qualification.",
-    "sources": ["apDelhiElection2025", "eciDelhiPollSchedule2025"]
+    "sources": [
+      "apDelhiElection2025",
+      "eciDelhiPollSchedule2025"
+    ]
   },
   {
     "id": "waqf-amendment-act-2025",
@@ -2533,12 +2645,20 @@
     "date": "2 April-15 September 2025",
     "title": "Waqf (Amendment) Act passed and partially stayed by Supreme Court",
     "category": "Legislation and minority rights",
-    "actors": ["BJP-led Union government", "Parliament of India", "Supreme Court of India"],
+    "actors": [
+      "BJP-led Union government",
+      "Parliament of India",
+      "Supreme Court of India"
+    ],
     "status": "Partially stayed",
     "severity": "High",
     "summary": "Parliament passed the Waqf (Amendment) Bill in April 2025 after contentious debate over changes to the Waqf Act, including eligibility, board composition, and property-administration rules. The President subsequently assented to the legislation.",
     "outcome": "The Supreme Court declined to suspend the entire Act but stayed or limited operation of several provisions in September 2025, including the five-year-practice condition and some powers concerning disputed properties. The constitutional challenge remained pending in the cited material.",
-    "sources": ["prsWaqfBill2024", "apWaqfPassage2025", "scWaqfInterimOrder2025"]
+    "sources": [
+      "prsWaqfBill2024",
+      "apWaqfPassage2025",
+      "scWaqfInterimOrder2025"
+    ]
   },
   {
     "id": "bengaluru-dj-halli-violence-2020",
@@ -2546,12 +2666,22 @@
     "date": "11-12 August 2020",
     "title": "Bengaluru DJ Halli and KG Halli violence and police firing",
     "category": "Communal violence and police response",
-    "actors": ["Karnataka BJP-led government", "Bengaluru Police", "Congress MLA's relative", "SDPI-linked accused"],
+    "actors": [
+      "Karnataka BJP-led government",
+      "Bengaluru Police",
+      "Congress MLA's relative",
+      "SDPI-linked accused"
+    ],
     "status": "Under investigation",
     "severity": "Severe",
     "summary": "Violence followed a social-media post attributed to a relative of Congress MLA Akhanda Srinivasa Murthy. Mobs attacked a police station and the MLA's residence; three people were killed in police firing and a fourth later died from injuries, according to contemporaneous reporting.",
     "outcome": "The Karnataka government ordered a magisterial inquiry and later used the UAPA against some accused. Reporting also described extensive property damage, injuries, arrests, curfew, and a subsequent inquiry report; allegations about planning and political links remained contested.",
-    "sources": ["ieBengaluruViolence2020", "ieBengaluruFactFinding2020", "nieBengaluruUapa2020", "nieBengaluruInquiry2023"]
+    "sources": [
+      "ieBengaluruViolence2020",
+      "ieBengaluruFactFinding2020",
+      "nieBengaluruUapa2020",
+      "nieBengaluruInquiry2023"
+    ]
   },
   {
     "id": "kejriwal-residence-vandalism-2022",
@@ -2559,12 +2689,20 @@
     "date": "30 March 2022",
     "title": "Vandalism outside Delhi Chief Minister Arvind Kejriwal's residence",
     "category": "Political violence and policing",
-    "actors": ["Bharatiya Janata Yuva Morcha", "Delhi Police", "Delhi government"],
+    "actors": [
+      "Bharatiya Janata Yuva Morcha",
+      "Delhi Police",
+      "Delhi government"
+    ],
     "status": "Chargesheet filed",
     "severity": "High",
     "summary": "During a protest by members of the BJP's youth wing outside Arvind Kejriwal's residence, demonstrators breached barricades and damaged the gate and CCTV equipment. Delhi Police arrested eight people initially and later filed a chargesheet against 30 persons, according to reporting.",
     "outcome": "The Delhi High Court questioned the police response and later granted bail to eight accused, while the chargesheet preserved the prosecution case. The record describes alleged vandalism and procedural failures without treating arrest or charges as convictions.",
-    "sources": ["ieKejriwalAttack2022", "ieKejriwalChargesheet2022", "ieKejriwalBail2022"]
+    "sources": [
+      "ieKejriwalAttack2022",
+      "ieKejriwalChargesheet2022",
+      "ieKejriwalBail2022"
+    ]
   },
   {
     "id": "jamia-police-campus-2019",
@@ -2572,12 +2710,21 @@
     "date": "15 December 2019",
     "title": "Police enter Jamia Millia Islamia campus during anti-CAA protests",
     "category": "Civil liberties and police response",
-    "actors": ["Delhi Police", "Central government", "Jamia Millia Islamia students"],
+    "actors": [
+      "Delhi Police",
+      "Central government",
+      "Jamia Millia Islamia students"
+    ],
     "status": "Court scrutiny",
     "severity": "High",
     "summary": "After violence in areas near Jamia Millia Islamia during protests against the Citizenship Amendment Act, Delhi Police entered the university campus. Students reported injuries from lathi charges and tear gas; a parliamentary record cited 69 injured Jamia students, while police said they were responding to surrounding violence.",
     "outcome": "The NHRC deputed a fact-finding team over allegations of illegal detention and denial of medical access. Later court proceedings examined requests for FIRs and an independent probe; the record preserves both the student allegations and the police account.",
-    "sources": ["hrwJamia2020", "nhrcJamia2019", "ieJamiaStudents2019", "rsJamiaInjuries2020"]
+    "sources": [
+      "hrwJamia2020",
+      "nhrcJamia2019",
+      "ieJamiaStudents2019",
+      "rsJamiaInjuries2020"
+    ]
   },
   {
     "id": "farmers-republic-day-violence-2021",
@@ -2585,12 +2732,21 @@
     "date": "26 January 2021",
     "title": "Farmers' Republic Day tractor rally violence",
     "category": "Protest and policing",
-    "actors": ["Union government", "Delhi Police", "Farmers' unions"],
+    "actors": [
+      "Union government",
+      "Delhi Police",
+      "Farmers' unions"
+    ],
     "status": "Court proceedings",
     "severity": "Severe",
     "summary": "A tractor rally permitted on specified routes entered parts of Delhi early and clashes followed at several locations, including the Red Fort. Police used tear gas and lathis; police records later cited 122 arrests and multiple FIRs, while police personnel and protesters were injured.",
     "outcome": "The Delhi High Court directed investigators to conclude proceedings in existing FIRs and later bail orders examined whether individual accused had followed approved routes. The record does not generalize the actions of some participants to the entire farmers' movement.",
-    "sources": ["ieFarmersTractorRally2021", "ieFarmersArrests2021", "ieFarmersBail2022", "ieFarmersHC2021"]
+    "sources": [
+      "ieFarmersTractorRally2021",
+      "ieFarmersArrests2021",
+      "ieFarmersBail2022",
+      "ieFarmersHC2021"
+    ]
   },
   {
     "id": "west-bengal-post-poll-violence-2021",
@@ -2598,12 +2754,22 @@
     "date": "May-December 2021",
     "title": "West Bengal post-poll violence and court-directed investigation",
     "category": "Political violence and accountability",
-    "actors": ["West Bengal government", "Trinamool Congress", "Opposition workers and residents", "NHRC", "Calcutta High Court"],
+    "actors": [
+      "West Bengal government",
+      "Trinamool Congress",
+      "Opposition workers and residents",
+      "NHRC",
+      "Calcutta High Court"
+    ],
     "status": "Court-directed investigation",
     "severity": "Severe",
     "summary": "After the 2021 West Bengal Assembly election results, residents and opposition workers reported killings, assaults, sexual violence, property damage, and displacement. The NHRC examined complaints under a Calcutta High Court order and submitted a report covering alleged human-rights violations.",
     "outcome": "The Calcutta High Court ordered CBI investigation into alleged murder, rape, and attempted-rape cases and constituted an SIT for other matters. The state government disputed the NHRC committee's methodology and alleged bias, so the record presents the findings and the rebuttal together.",
-    "sources": ["nhrcWestBengalCommittee2021", "ieWestBengalCbi2021", "ieWestBengalStateReply2021"]
+    "sources": [
+      "nhrcWestBengalCommittee2021",
+      "ieWestBengalCbi2021",
+      "ieWestBengalStateReply2021"
+    ]
   },
   {
     "id": "kawardha-violence-2021",
@@ -2611,12 +2777,21 @@
     "date": "3-10 October 2021",
     "title": "Kawardha communal violence and curfew",
     "category": "Communal violence and political mobilisation",
-    "actors": ["VHP-linked rally", "BJP leaders", "Chhattisgarh government", "Police"],
+    "actors": [
+      "VHP-linked rally",
+      "BJP leaders",
+      "Chhattisgarh government",
+      "Police"
+    ],
     "status": "Reported",
     "severity": "High",
     "summary": "Clashes in Kawardha, Chhattisgarh, followed an altercation involving religious flags and escalated after a rally by Hindu organisations. Reporting described injuries, property damage, detentions, curfew, and internet restrictions; a later march by BJP leaders was alleged to have defied curfew.",
     "outcome": "Police registered cases against multiple participants, including BJP leaders, while the state government said the matter was under investigation. The record does not treat political allegations about planning or partisan bias in arrests as established findings.",
-    "sources": ["ieKawardhaClashes2021", "ieKawardhaBjpFir2021", "ndtvKawardhaRally2021"]
+    "sources": [
+      "ieKawardhaClashes2021",
+      "ieKawardhaBjpFir2021",
+      "ndtvKawardhaRally2021"
+    ]
   },
   {
     "id": "sandeshkhali-violence-2024",
@@ -2624,12 +2799,22 @@
     "date": "January-May 2024",
     "title": "Sandeshkhali allegations, protests, and CBI investigation",
     "category": "Political violence and crimes against women",
-    "actors": ["West Bengal government", "TMC-linked local leaders", "BJP opposition", "CBI", "Calcutta High Court"],
+    "actors": [
+      "West Bengal government",
+      "TMC-linked local leaders",
+      "BJP opposition",
+      "CBI",
+      "Calcutta High Court"
+    ],
     "status": "Court-directed investigation",
     "severity": "High",
     "summary": "Women in Sandeshkhali reported alleged sexual harassment, land grabbing, assault, and intimidation involving local TMC-linked figures. Protests and BJP mobilisation followed, while an attack on Enforcement Directorate officials became a separate criminal investigation.",
     "outcome": "The Calcutta High Court ordered a court-monitored CBI probe and directed a complaint channel for residents; the CBI later filed a chargesheet in the ED-attack case. The record also preserves subsequent allegations that some rape complaints were fabricated or politically induced, which remained contested rather than treating either narrative as universally proved.",
-    "sources": ["ieSandeshkhaliCbiProbe2024", "ieSandeshkhaliEdAttack2024", "ieSandeshkhaliCompetingClaims2024"]
+    "sources": [
+      "ieSandeshkhaliCbiProbe2024",
+      "ieSandeshkhaliEdAttack2024",
+      "ieSandeshkhaliCompetingClaims2024"
+    ]
   },
   {
     "id": "dharmasthala-burial-allegations-2025",
@@ -2637,12 +2822,19 @@
     "date": "July 2025-July 2026",
     "title": "Dharmasthala mass-burial allegations and SIT inquiry",
     "category": "Crimes against women and accountability",
-    "actors": ["Karnataka government", "Karnataka SIT", "Dharmasthala whistleblower"],
+    "actors": [
+      "Karnataka government",
+      "Karnataka SIT",
+      "Dharmasthala whistleblower"
+    ],
     "status": "SIT report filed; court process pending",
     "severity": "High",
     "summary": "A former sanitation worker alleged that he had been forced to bury bodies, including alleged victims of sexual assault and murder, near Dharmasthala between the 1990s and 2014. Karnataka registered a case and formed an SIT in July 2025; investigators examined locations identified by the complainant and recovered skeletal fragments at one reported site.",
     "outcome": "In July 2026, reporting said the SIT filed a 7,000-page final report concluding that the complainant's allegations were false. That is the investigating team's conclusion; the record does not convert it into a judicial acquittal or erase the fact that the allegations triggered a year-long official inquiry.",
-    "sources": ["ieDharmasthalaSIT2025", "ieDharmasthalaFinal2026"]
+    "sources": [
+      "ieDharmasthalaSIT2025",
+      "ieDharmasthalaFinal2026"
+    ]
   },
   {
     "id": "operation-sindoor-2025",
@@ -2650,12 +2842,21 @@
     "date": "7-10 May 2025",
     "title": "Operation Sindoor and India-Pakistan military escalation",
     "category": "Terrorism, national security, and interstate conflict",
-    "actors": ["Government of India", "Indian armed forces", "Pakistan government", "Indian and Pakistani armed forces"],
+    "actors": [
+      "Government of India",
+      "Indian armed forces",
+      "Pakistan government",
+      "Indian and Pakistani armed forces"
+    ],
     "status": "Officially documented; contested wartime claims",
     "severity": "Severe",
     "summary": "After the 22 April Pahalgam attack, India announced Operation Sindoor and said it had struck alleged terror infrastructure in Pakistan and Pakistan-administered Kashmir. Pakistan reported retaliatory attacks, and the four-day escalation included missile, drone, and artillery exchanges before a military-to-military ceasefire took effect on 10 May.",
     "outcome": "The Indian Ministry of External Affairs confirmed that both sides agreed to stop firing and military action from 1700 IST on 10 May 2025. Claims about targets, damage, and casualties remained disputed between the two governments and are not treated here as independently settled facts.",
-    "sources": ["meaOperationSindoor2025", "pibOperationSindoor2025", "bbcIndiaPakistanMay2025"]
+    "sources": [
+      "meaOperationSindoor2025",
+      "pibOperationSindoor2025",
+      "bbcIndiaPakistanMay2025"
+    ]
   },
   {
     "id": "bihar-assembly-election-2025",
@@ -2663,12 +2864,26 @@
     "date": "6-14 November 2025",
     "title": "Bihar Assembly election: NDA victory after electoral-roll dispute",
     "category": "Elections and institutional accountability",
-    "actors": ["BJP-led NDA", "Election Commission of India", "Mahagathbandhan", "Bihar voters"],
+    "actors": [
+      "BJP-led NDA",
+      "Election Commission of India",
+      "Mahagathbandhan",
+      "Bihar voters"
+    ],
     "status": "Official result; roll-revision dispute contested",
     "severity": "High",
     "summary": "The 2025 Bihar Assembly election produced a BJP-led NDA victory. Election reporting based on ECI results put the alliance at 202 seats in the 243-member assembly, including 89 for the BJP. The contest followed a Special Intensive Revision of electoral rolls that opposition parties challenged as potentially exclusionary.",
     "outcome": "The ECI reported 67.13% turnout, its highest figure for a Bihar Assembly election since 1951, while ADR's winners report recorded criminal and financial-affidavit data for elected candidates. The roll exercise generated a court-supervised dispute: the ECI published the final roll, while the Supreme Court directed disclosure of names deleted from the draft list and the reasons for deletion. The election result is established; claims that the revision changed the outcome remain political allegations rather than a judicial finding in the cited sources.",
-    "sources": ["eciBiharResults2025", "pibBiharTurnout2025", "adrBiharWinners2025", "apBiharElectionResult2025", "eciBiharSir2025", "ieBiharSirDraft2025", "ieBiharSirCourt2025", "apBiharSir2025"]
+    "sources": [
+      "eciBiharResults2025",
+      "pibBiharTurnout2025",
+      "adrBiharWinners2025",
+      "apBiharElectionResult2025",
+      "eciBiharSir2025",
+      "ieBiharSirDraft2025",
+      "ieBiharSirCourt2025",
+      "apBiharSir2025"
+    ]
   },
   {
     "id": "naac-rating-bribery-2025",
@@ -2676,12 +2891,21 @@
     "date": "1-6 February 2025",
     "title": "NAAC accreditation bribery investigation",
     "category": "Institutional integrity and education governance",
-    "actors": ["Central Bureau of Investigation", "NAAC inspection committee", "KLEF University", "JNU professor"],
+    "actors": [
+      "Central Bureau of Investigation",
+      "NAAC inspection committee",
+      "KLEF University",
+      "JNU professor"
+    ],
     "status": "CBI investigation; allegations not final convictions",
     "severity": "High",
     "summary": "The CBI arrested the chairman and members of a National Assessment and Accreditation Council inspection committee over allegations that bribes were sought for a favourable institutional rating. Reporting on the FIR described an alleged cumulative demand of Rs 1.80 crore and a proposed A++ accreditation outcome.",
     "outcome": "NAAC subsequently barred seven arrested inspection-panel members from further evaluation visits. The case is recorded as an alleged accreditation-integrity failure under investigation; arrests, FIR allegations, and administrative debarment are not treated as proof of guilt or as a completed conviction.",
-    "sources": ["ieNaacBriberyArrests2025", "ieNaacBriberyFir2025", "htNaacDebarment2025"]
+    "sources": [
+      "ieNaacBriberyArrests2025",
+      "ieNaacBriberyFir2025",
+      "htNaacDebarment2025"
+    ]
   },
   {
     "id": "railway-exam-bribery-2025",
@@ -2689,12 +2913,20 @@
     "date": "18-19 February 2025",
     "title": "Railway departmental-exam bribery case",
     "category": "Exams, recruitment, and institutional integrity",
-    "actors": ["Central Bureau of Investigation", "Western Railway officials", "Railway examination candidates"],
+    "actors": [
+      "Central Bureau of Investigation",
+      "Western Railway officials",
+      "Railway examination candidates"
+    ],
     "status": "CBI FIR and arrests; investigation pending",
     "severity": "High",
     "summary": "The CBI registered a case and arrested six people, including five railway officials, over allegations that candidates were asked for money in exchange for selection in a Western Railway departmental examination. Searches reportedly recovered cash, gold, electronic devices, and documents.",
     "outcome": "The case remained an investigation in the cited reporting. The record does not treat the arrests or alleged recovery as proof of guilt, and it separates this departmental recruitment case from the NEET and SSC exam-integrity records.",
-    "sources": ["ieRailwayExamFIR2025", "ieRailwayExamArrests2025", "htRailwayExamArrests2025"]
+    "sources": [
+      "ieRailwayExamFIR2025",
+      "ieRailwayExamArrests2025",
+      "htRailwayExamArrests2025"
+    ]
   },
   {
     "id": "karur-political-rally-crush-2025",
@@ -2702,12 +2934,21 @@
     "date": "27 September 2025",
     "title": "Karur political-rally crowd crush",
     "category": "Political events and public safety",
-    "actors": ["Tamilaga Vettri Kazhagam", "Vijay", "Tamil Nadu administration", "Tamil Nadu Police"],
+    "actors": [
+      "Tamilaga Vettri Kazhagam",
+      "Vijay",
+      "Tamil Nadu administration",
+      "Tamil Nadu Police"
+    ],
     "status": "Investigation and accountability review",
     "severity": "Severe",
     "summary": "A crowd crush at a Tamilaga Vettri Kazhagam political rally in Karur, Tamil Nadu, killed at least 40 people and injured dozens. The victims included women and children; reporting described a crowd far larger than the venue's expected capacity and questions about arrival timing, access, water, and crowd management.",
     "outcome": "The state ordered an investigation and criminal cases were reported against aides. Later reporting described a CBI inquiry into aspects of the event. Responsibility and the final causal findings remained under investigation in the cited material, so this record does not assign sole blame to the party or administration.",
-    "sources": ["bbcKarurCrush2025", "apKarurCrush2025", "ndtvKarurInquiry2025"]
+    "sources": [
+      "bbcKarurCrush2025",
+      "apKarurCrush2025",
+      "ndtvKarurInquiry2025"
+    ]
   },
   {
     "id": "nainital-child-assault-2025",
@@ -2715,12 +2956,21 @@
     "date": "12 April-20 May 2025",
     "title": "Nainital child sexual-assault case and law-and-order response",
     "category": "Crimes against children and public accountability",
-    "actors": ["Uttarakhand Police", "Uttarakhand High Court", "Special POCSO Court", "Survivor and family"],
+    "actors": [
+      "Uttarakhand Police",
+      "Uttarakhand High Court",
+      "Special POCSO Court",
+      "Survivor and family"
+    ],
     "status": "POCSO case; bail denied; proceedings pending",
     "severity": "Severe",
     "summary": "A 12-year-old girl in Nainital district was allegedly sexually assaulted by an elderly man. The case was registered under the Bharatiya Nyaya Sanhita, POCSO Act, and SC/ST Act after the survivor's caste was recorded; protests and violence followed in Nainital.",
     "outcome": "The Uttarakhand High Court directed police to supervise the investigation and maintain public order, while a special POCSO court denied bail to the accused in May 2025. The record describes an active criminal proceeding and does not present the allegation as a final conviction.",
-    "sources": ["ieNainitalDemolitionStay2025", "livelawNainitalBail2025", "toiNainitalHighCourt2025"]
+    "sources": [
+      "ieNainitalDemolitionStay2025",
+      "livelawNainitalBail2025",
+      "toiNainitalHighCourt2025"
+    ]
   },
   {
     "id": "anjel-chakma-killing-2025",
@@ -2728,12 +2978,22 @@
     "date": "9-26 December 2025",
     "title": "Anjel Chakma killing and dispute over racial-motive findings",
     "category": "Discrimination, public safety, and policing",
-    "actors": ["Dehradun Police", "Uttarakhand government", "National Human Rights Commission", "Northeast student groups"],
+    "actors": [
+      "Dehradun Police",
+      "Uttarakhand government",
+      "National Human Rights Commission",
+      "Northeast student groups"
+    ],
     "status": "Murder investigation; motive contested",
     "severity": "Severe",
     "summary": "Anjel Chakma, a 24-year-old MBA student from Tripura, was attacked in Dehradun on 9 December 2025 and died from his injuries on 26 December. His family and student groups said the assault followed racial slurs; police said their preliminary inquiry found no racial motive and described a heat-of-the-moment altercation.",
     "outcome": "Police formed a Special Investigation Team, added murder provisions after Chakma's death, and later filed a chargesheet against six people according to reporting. The NHRC sought a report from the Uttarakhand government. This record keeps the alleged racial context, the police denial, and the ongoing accountability process separate rather than presenting motive as judicially settled.",
-    "sources": ["ieAnjelDeath2025", "ieAnjelPoliceMotive2025", "ieAnjelNhrc2025", "ieAnjelChargesheet2026"]
+    "sources": [
+      "ieAnjelDeath2025",
+      "ieAnjelPoliceMotive2025",
+      "ieAnjelNhrc2025",
+      "ieAnjelChargesheet2026"
+    ]
   },
   {
     "id": "manipur-arambai-curfew-2025",
@@ -2741,12 +3001,21 @@
     "date": "7-10 June 2025",
     "title": "Manipur unrest after Arambai Tenggol arrests and internet shutdown",
     "category": "Communal violence, policing, and internet restrictions",
-    "actors": ["Manipur government", "Central Bureau of Investigation", "Arambai Tenggol", "Manipur Police"],
+    "actors": [
+      "Manipur government",
+      "Central Bureau of Investigation",
+      "Arambai Tenggol",
+      "Manipur Police"
+    ],
     "status": "Official restrictions; accountability contested",
     "severity": "High",
     "summary": "Fresh unrest followed the arrest of five leaders of the Meitei group Arambai Tenggol, including Asem Kanan Singh, in June 2025. Authorities imposed curfews and suspended internet and mobile-data services across parts of the Imphal Valley as protests and clashes were reported.",
     "outcome": "The administration later relaxed prohibitory orders and the group called off a planned shutdown. The record treats the arrests, restrictions, and reported unrest as established events while leaving the proportionality of the response and competing political explanations open.",
-    "sources": ["bbcManipurArambai2025", "ieManipurArambai2025", "newIndianExpressManipurCurfew2025"]
+    "sources": [
+      "bbcManipurArambai2025",
+      "ieManipurArambai2025",
+      "newIndianExpressManipurCurfew2025"
+    ]
   },
   {
     "id": "operation-black-forest-2025",
@@ -2754,12 +3023,21 @@
     "date": "21 May 2025",
     "title": "Operation Black Forest and Abujhmad Maoist encounter",
     "category": "Counterinsurgency and indigenous-community accountability",
-    "actors": ["Union Ministry of Home Affairs", "Chhattisgarh Police", "CRPF", "CPI (Maoist)"],
+    "actors": [
+      "Union Ministry of Home Affairs",
+      "Chhattisgarh Police",
+      "CRPF",
+      "CPI (Maoist)"
+    ],
     "status": "Official operation account; encounter circumstances contested",
     "severity": "Severe",
     "summary": "Security forces reported killing 27 CPI (Maoist) members in an encounter in the Abujhmad area of Chhattisgarh, including general secretary Nambala Keshava Rao. The Union government described the operation as a major counterinsurgency success and part of Operation Black Forest.",
     "outcome": "The Home Ministry reported additional arrests and surrenders after the operation and renewed its March 2026 deadline for eliminating Naxalism. The entry preserves the official casualty account and the broader security context; an encounter report is not treated as independent proof that every use of force was lawful, and no separate civilian-abuse finding is asserted here without evidence.",
-    "sources": ["pibBlackForest2025", "ieAbujhmadEncounter2025", "pibBlackForestFollowup2025"]
+    "sources": [
+      "pibBlackForest2025",
+      "ieAbujhmadEncounter2025",
+      "pibBlackForestFollowup2025"
+    ]
   },
   {
     "id": "sigachi-factory-explosion-2025",
@@ -2767,12 +3045,22 @@
     "date": "30 June 2025-December 2025",
     "title": "Sigachi pharmaceutical-factory explosion and safety investigation",
     "category": "Industrial safety and regulatory accountability",
-    "actors": ["Sigachi Industries", "Telangana authorities", "Telangana High Court", "National Green Tribunal"],
+    "actors": [
+      "Sigachi Industries",
+      "Telangana authorities",
+      "Telangana High Court",
+      "National Green Tribunal"
+    ],
     "status": "Investigation; chargesheet and arrest reported",
     "severity": "Severe",
     "summary": "An explosion and fire at Sigachi Industries' pharmaceutical plant in Pashamylaram, Telangana, killed workers and injured others. The death toll later reached 54 according to reporting, while early official counts changed as rescue teams recovered bodies from the collapsed unit.",
     "outcome": "Police registered a case and later arrested the company's managing director; the Telangana High Court was told that the investigation was progressing but that no arrests had initially been made. Environmental and industrial-safety reports examined the incident. The record does not assign final legal liability while proceedings remain active.",
-    "sources": ["apSigachiExplosion2025", "ieSigachiInvestigation2025", "ieSigachiArrest2025", "ngtSigachiReport2025"]
+    "sources": [
+      "apSigachiExplosion2025",
+      "ieSigachiInvestigation2025",
+      "ieSigachiArrest2025",
+      "ngtSigachiReport2025"
+    ]
   },
   {
     "id": "kishtwar-cloudburst-2025",
@@ -2780,12 +3068,21 @@
     "date": "14 August 2025",
     "title": "Kishtwar cloudburst and Chositi flash flood",
     "category": "Climate disasters and public safety",
-    "actors": ["Jammu and Kashmir administration", "National Disaster Response Force", "Indian Army", "Pilgrimage authorities"],
+    "actors": [
+      "Jammu and Kashmir administration",
+      "National Disaster Response Force",
+      "Indian Army",
+      "Pilgrimage authorities"
+    ],
     "status": "Rescue and disaster-response record",
     "severity": "Severe",
     "summary": "A cloudburst triggered flash floods and landslides in Chositi village on the Machail Mata pilgrimage route in Jammu and Kashmir's Kishtwar district. Authorities and the Associated Press reported dozens killed, hundreds rescued, and many people missing as debris overwhelmed a remote pilgrimage base camp.",
     "outcome": "Rescue operations continued with the Army, NDRF, police, and local teams, while the death toll changed as recovery work progressed. The record uses the early AP and official-response figures rather than treating later evolving counts as a single final number, and does not infer a cause beyond the reported cloudburst and flash flooding.",
-    "sources": ["apKishtwarFlood2025", "pibKishtwarCloudburst2025", "ieKishtwarCloudburst2025"]
+    "sources": [
+      "apKishtwarFlood2025",
+      "pibKishtwarCloudburst2025",
+      "ieKishtwarCloudburst2025"
+    ]
   },
   {
     "id": "uttarkashi-dharali-cloudburst-2025",
@@ -2793,12 +3090,22 @@
     "date": "5 August 2025",
     "title": "Uttarkashi Dharali cloudburst and flash flood",
     "category": "Climate disasters and public safety",
-    "actors": ["Uttarakhand government", "Indian Army", "National Disaster Response Force", "District administration"],
+    "actors": [
+      "Uttarakhand government",
+      "Indian Army",
+      "National Disaster Response Force",
+      "District administration"
+    ],
     "status": "Rescue and disaster-response record",
     "severity": "Severe",
     "summary": "A cloudburst over the Kheer Ganga catchment triggered a flash flood and debris flow through Dharali in Uttarkashi district, Uttarakhand. Homes, hotels, roads, bridges, and an Army camp were damaged; early official and news reports recorded deaths, injuries, and dozens of missing people.",
     "outcome": "The Army, NDRF, police, and district teams conducted search-and-rescue operations while telecommunications and road links were restored. Later reporting described 67 people still missing and procedures for death certificates; figures changed during the response, so the record does not present one early toll as final.",
-    "sources": ["apUttarkashiCloudburst2025", "pibUttarkashiCloudburst2025", "ndmiUttarkashiCloudburst2025", "ieUttarkashiMissing2025"]
+    "sources": [
+      "apUttarkashiCloudburst2025",
+      "pibUttarkashiCloudburst2025",
+      "ndmiUttarkashiCloudburst2025",
+      "ieUttarkashiMissing2025"
+    ]
   },
   {
     "id": "rohit-arya-powai-hostage-2025",
@@ -2806,12 +3113,21 @@
     "date": "30 October 2025",
     "title": "Powai hostage incident involving 17 children",
     "category": "Public safety, policing, and children",
-    "actors": ["Mumbai Police", "Rohit Arya", "Maharashtra government", "Children and families"],
+    "actors": [
+      "Mumbai Police",
+      "Rohit Arya",
+      "Maharashtra government",
+      "Children and families"
+    ],
     "status": "Police rescue; fatal police shooting; accountability questions",
     "severity": "Severe",
     "summary": "Mumbai Police rescued 18 people, including 17 children, from a Powai acting studio after a man identified as Rohit Arya allegedly held them inside. Police entered the building during the incident; Arya was shot and later died.",
     "outcome": "Reporting said the children were rescued safely. Follow-up coverage linked Arya's prior dispute with Maharashtra's School Education Department over a state education initiative and recorded the police account of the rescue. This record separates the rescue and reported background from unresolved questions about the fatal use of force and does not treat its legality as judicially settled.",
-    "sources": ["ieRohitAryaHostage2025", "ieRohitAryaFollowup2025", "ieRohitAryaEducationDispute2025"]
+    "sources": [
+      "ieRohitAryaHostage2025",
+      "ieRohitAryaFollowup2025",
+      "ieRohitAryaEducationDispute2025"
+    ]
   },
   {
     "id": "sanchar-saathi-preinstall-2025",
@@ -2819,12 +3135,22 @@
     "date": "28 November-3 December 2025",
     "title": "Sanchar Saathi mandatory-preinstallation order and rollback",
     "category": "Digital rights and executive regulation",
-    "actors": ["Department of Telecommunications", "Ministry of Communications", "Smartphone manufacturers", "Internet Freedom Foundation"],
+    "actors": [
+      "Department of Telecommunications",
+      "Ministry of Communications",
+      "Smartphone manufacturers",
+      "Internet Freedom Foundation"
+    ],
     "status": "Government order withdrawn after public and industry criticism",
     "severity": "High",
     "summary": "The Department of Telecommunications directed smartphone manufacturers and importers to pre-install the government Sanchar Saathi cyber-safety app on new devices, distribute it through software updates for existing inventory, and keep it visible and functional. Privacy, consent, and user-control concerns followed, including criticism that the original direction restricted disabling or removing the app.",
     "outcome": "The Ministry of Communications announced on 3 December 2025 that mandatory pre-installation would be removed. The government said the app's growing acceptance made the mandate unnecessary; rights and industry critics treated the reversal as a response to privacy, consent, and implementation concerns. The app and the wider telecom-cybersecurity rules remained in place, so this record concerns the withdrawn mandate rather than the entire Sanchar Saathi programme.",
-    "sources": ["dotSancharPreinstall2025", "pibSancharRollback2025", "apSancharRollback2025", "iffSancharPreinstall2025"]
+    "sources": [
+      "dotSancharPreinstall2025",
+      "pibSancharRollback2025",
+      "apSancharRollback2025",
+      "iffSancharPreinstall2025"
+    ]
   },
   {
     "id": "ssc-exam-protests-2025",
@@ -2832,12 +3158,22 @@
     "date": "24 July-26 September 2025",
     "title": "Staff Selection Commission exam disruptions and aspirant protests",
     "category": "Education governance and public examinations",
-    "actors": ["Staff Selection Commission", "Eduquity Career Technologies", "Exam aspirants and teachers", "Union government"],
+    "actors": [
+      "Staff Selection Commission",
+      "Eduquity Career Technologies",
+      "Exam aspirants and teachers",
+      "Union government"
+    ],
     "status": "Administrative response; affected candidates and accountability questions remain",
     "severity": "High",
     "summary": "Candidates reported technical failures, mouse and computer problems, distant or changed examination centres, and cancellations during SSC Selection Post Phase 13 after the Commission changed its examination vendor from TCS to Eduquity Career Technologies. Aspirants and teachers protested in Delhi and elsewhere; SSC acknowledged operational problems and said it was working with the vendor and C-DAC.",
     "outcome": "The SSC said the examination would not be cancelled wholesale but that a retest could be held for candidates who were denied a fair chance. SSC CGL examinations were later cancelled at multiple Delhi and Gurgaon centres for administrative reasons and rescheduled. The record does not adopt allegations that the vendor was inherently unfit as a proven finding; it records the reported disruptions, official response, and unresolved demands for transparent accountability.",
-    "sources": ["ieSscProtests2025", "ieSscChairmanIssues2025", "ieSscCglCancellations2025", "ndtvSscMismanagement2025"]
+    "sources": [
+      "ieSscProtests2025",
+      "ieSscChairmanIssues2025",
+      "ieSscCglCancellations2025",
+      "ndtvSscMismanagement2025"
+    ]
   },
   {
     "id": "air-india-ai171-crash-2025",
@@ -2845,12 +3181,22 @@
     "date": "12 June 2025-ongoing investigation",
     "title": "Air India Flight AI171 crash in Ahmedabad",
     "category": "Aviation safety and public accountability",
-    "actors": ["Air India", "Aircraft Accident Investigation Bureau", "Ministry of Civil Aviation", "Ahmedabad authorities"],
+    "actors": [
+      "Air India",
+      "Aircraft Accident Investigation Bureau",
+      "Ministry of Civil Aviation",
+      "Ahmedabad authorities"
+    ],
     "status": "Fatal accident; preliminary report issued; final investigation pending",
     "severity": "Severe",
     "summary": "Air India Boeing 787-8 Flight AI171 crashed shortly after takeoff from Ahmedabad while flying to London Gatwick. The aircraft had 242 people on board; the crash also caused deaths and injuries on the ground. The AAIB's preliminary report records the factual sequence and the continuing investigation.",
     "outcome": "The AAIB released a preliminary report on 12 July 2025 and continued its investigation with international technical support. The preliminary report is not a final causal or liability finding. This record therefore preserves the confirmed accident, the scale of loss, and the official investigation status without assigning blame before the final report.",
-    "sources": ["aaibAi171Preliminary2025", "apAi171Crash2025", "govukAi171Update2025", "pibAi171Progress2026"]
+    "sources": [
+      "aaibAi171Preliminary2025",
+      "apAi171Crash2025",
+      "govukAi171Update2025",
+      "pibAi171Progress2026"
+    ]
   },
   {
     "id": "murshidabad-waqf-violence-2025",
@@ -2858,12 +3204,23 @@
     "date": "11-18 April 2025",
     "title": "Murshidabad violence during protests over the Waqf Amendment Act",
     "category": "Communal violence and minority rights",
-    "actors": ["West Bengal government", "Central Armed Police Forces", "Calcutta High Court", "National Human Rights Commission", "Protesters and affected residents"],
+    "actors": [
+      "West Bengal government",
+      "Central Armed Police Forces",
+      "Calcutta High Court",
+      "National Human Rights Commission",
+      "Protesters and affected residents"
+    ],
     "status": "Violence reported; court-ordered deployment and inquiries",
     "severity": "Severe",
     "summary": "Protests against the Waqf (Amendment) Act turned violent in parts of Murshidabad district, West Bengal. Police and reporting recorded three deaths, injuries to police personnel, arson and vandalism, and displacement of families to neighbouring Malda.",
     "outcome": "The Calcutta High Court ordered deployment of central forces and directed governments to report on the situation. The NHRC took suo motu cognisance and announced an inquiry team; police arrests and competing claims about the response followed. The record does not attribute the violence to an entire community or treat political allegations as established findings.",
-    "sources": ["ieMurshidabadWaqf2025", "ieMurshidabadForces2025", "nhrcMurshidabad2025", "ieMurshidabadNia2025"]
+    "sources": [
+      "ieMurshidabadWaqf2025",
+      "ieMurshidabadForces2025",
+      "nhrcMurshidabad2025",
+      "ieMurshidabadNia2025"
+    ]
   },
   {
     "id": "maha-kumbh-stampede-2025",
@@ -2871,12 +3228,21 @@
     "date": "29 January 2025",
     "title": "Maha Kumbh crowd crush in Prayagraj",
     "category": "Public safety and crowd management",
-    "actors": ["Uttar Pradesh government", "Prayagraj administration", "Police and emergency services", "Maha Kumbh pilgrims"],
+    "actors": [
+      "Uttar Pradesh government",
+      "Prayagraj administration",
+      "Police and emergency services",
+      "Maha Kumbh pilgrims"
+    ],
     "status": "Fatal crowd disaster; judicial inquiry announced",
     "severity": "Severe",
     "summary": "A crowd crush occurred at the Maha Kumbh festival in Prayagraj as pilgrims gathered for a major bathing day. Police reported 30 deaths and around 60 injuries; early reporting and witness accounts described confusion, dense crowds, barricades and rapidly changing casualty figures.",
     "outcome": "The Uttar Pradesh government announced a judicial inquiry and authorities continued rescue, identification and crowd-management operations. The official early toll and independent reports differed during the response, so this record preserves the reported figures and does not assign final responsibility for the disaster before the inquiry's findings.",
-    "sources": ["apMahaKumbhCrush2025", "reutersMahaKumbhCrush2025", "ieMahaKumbhInquiry2025"]
+    "sources": [
+      "apMahaKumbhCrush2025",
+      "reutersMahaKumbhCrush2025",
+      "ieMahaKumbhInquiry2025"
+    ]
   },
   {
     "id": "new-delhi-station-stampede-2025",
@@ -2884,12 +3250,23 @@
     "date": "15 February 2025",
     "title": "New Delhi Railway Station crowd crush during Maha Kumbh travel rush",
     "category": "Railway safety and crowd management",
-    "actors": ["Ministry of Railways", "Indian Railways", "Railway Protection Force", "Delhi Police", "Passengers and pilgrims"],
+    "actors": [
+      "Ministry of Railways",
+      "Indian Railways",
+      "Railway Protection Force",
+      "Delhi Police",
+      "Passengers and pilgrims"
+    ],
     "status": "Fatal crowd disaster; high-level railway inquiry",
     "severity": "Severe",
     "summary": "A crowd crush occurred at New Delhi Railway Station as passengers gathered to travel toward the Maha Kumbh festival. Reporting and authorities placed the death toll at 18, including children, with many more injured; the crush occurred around the footbridge and platforms 14 and 15 amid heavy passenger movement.",
     "outcome": "The Railways formed a two-member high-level committee, secured CCTV footage and called witnesses. Police notes and witness accounts examined crowd movement and possible platform-announcement confusion, while the ministry cautioned against treating leaked or preliminary accounts as its final finding. This record preserves the inquiry status rather than assigning final responsibility.",
-    "sources": ["apNewDelhiStationCrush2025", "reutersNewDelhiStationCrush2025", "ieNewDelhiStationInquiry2025", "pibNewDelhiStationClarification2025"]
+    "sources": [
+      "apNewDelhiStationCrush2025",
+      "reutersNewDelhiStationCrush2025",
+      "ieNewDelhiStationInquiry2025",
+      "pibNewDelhiStationClarification2025"
+    ]
   },
   {
     "id": "cuddalore-school-van-train-collision-2025",
@@ -2897,12 +3274,22 @@
     "date": "8 July 2025",
     "title": "Cuddalore school-van and passenger-train collision",
     "category": "Railway safety and public safety",
-    "actors": ["Indian Railways", "Southern Railway", "Tamil Nadu authorities", "National Human Rights Commission", "Affected families and students"],
+    "actors": [
+      "Indian Railways",
+      "Southern Railway",
+      "Tamil Nadu authorities",
+      "National Human Rights Commission",
+      "Affected families and students"
+    ],
     "status": "Fatal collision; statutory notice and investigation",
     "severity": "Severe",
     "summary": "A passenger train collided with a school van at a level crossing in Cuddalore district, Tamil Nadu. Three children were killed and several people were injured. Initial accounts differed over how the crossing gate was being operated, so this record separates reported facts from unresolved responsibility.",
     "outcome": "The National Human Rights Commission took suo motu cognisance and sought reports from the Railway Board, Tamil Nadu's Chief Secretary and Director General of Police. The NHRC release also noted that a sanctioned underpass had not yet been constructed. The record remains an inquiry and public-safety failure entry, not a final finding of individual culpability.",
-    "sources": ["nhrcCuddaloreTrainCollision2025", "pibCuddaloreTrainCollision2025", "ieCuddaloreTrainCollision2025"]
+    "sources": [
+      "nhrcCuddaloreTrainCollision2025",
+      "pibCuddaloreTrainCollision2025",
+      "ieCuddaloreTrainCollision2025"
+    ]
   },
   {
     "id": "bengaluru-rcb-crowd-crush-2025",
@@ -2910,12 +3297,22 @@
     "date": "4 June 2025",
     "title": "Bengaluru RCB victory-celebration crowd crush",
     "category": "Public safety and crowd management",
-    "actors": ["Karnataka government", "Bengaluru police", "Royal Challengers Bengaluru", "Karnataka State Cricket Association", "Fans and affected families"],
+    "actors": [
+      "Karnataka government",
+      "Bengaluru police",
+      "Royal Challengers Bengaluru",
+      "Karnataka State Cricket Association",
+      "Fans and affected families"
+    ],
     "status": "Fatal crowd disaster; judicial inquiry and criminal proceedings",
     "severity": "Severe",
     "summary": "A crowd crush occurred outside M. Chinnaswamy Stadium during celebrations for Royal Challengers Bengaluru's IPL victory. The reported toll was 11 deaths and more than 50 injuries. The event raised questions about permission, crowd planning, communications and police deployment.",
     "outcome": "The Karnataka government ordered a magisterial inquiry, a later one-member judicial commission examined the lapses, and criminal cases and departmental proceedings followed. Court records describe the inquiry as examining the causes, sequence of events and possible negligence; this record distinguishes those proceedings from a final criminal conviction.",
-    "sources": ["catBengaluruCrowdCrush2025", "ieBengaluruCrowdCrush2025", "ieBengaluruCrowdReport2025"]
+    "sources": [
+      "catBengaluruCrowdCrush2025",
+      "ieBengaluruCrowdCrush2025",
+      "ieBengaluruCrowdReport2025"
+    ]
   },
   {
     "id": "gulzar-houz-fire-2025",
@@ -2923,12 +3320,22 @@
     "date": "18 May 2025",
     "title": "Gulzar Houz residential fire kills 17 in Hyderabad",
     "category": "Public safety and fire regulation",
-    "actors": ["Telangana government", "Hyderabad fire services", "GHMC and power authorities", "Telangana High Court", "Affected families"],
+    "actors": [
+      "Telangana government",
+      "Hyderabad fire services",
+      "GHMC and power authorities",
+      "Telangana High Court",
+      "Affected families"
+    ],
     "status": "Fatal fire; committee inquiry and court proceedings",
     "severity": "Severe",
     "summary": "A fire in a mixed residential and commercial building near Gulzar Houz in Hyderabad killed 17 members of an extended family, including children. The preliminary fire account cited a short circuit, while other reported accounts raised questions about the building, escape conditions and the cause; responsibility remained under investigation.",
     "outcome": "The Telangana government formed a six-member IAS-IPS committee. Later court proceedings sought the state's response to alleged safety and regulatory lapses. This record preserves the death toll and inquiry status without treating a preliminary cause as a final finding.",
-    "sources": ["ieGulzarHouzFire2025", "htGulzarHouzFire2025", "ieGulzarHouzCourt2026"]
+    "sources": [
+      "ieGulzarHouzFire2025",
+      "htGulzarHouzFire2025",
+      "ieGulzarHouzCourt2026"
+    ]
   },
   {
     "id": "arpora-nightclub-fire-2025",
@@ -2936,12 +3343,23 @@
     "date": "6 December 2025",
     "title": "Arpora nightclub fire exposes fire-safety and licensing failures",
     "category": "Public safety and fire regulation",
-    "actors": ["Goa government", "Arpora-Nagoa panchayat", "Goa fire and emergency services", "Goa Police", "Nightclub management and affected families"],
+    "actors": [
+      "Goa government",
+      "Arpora-Nagoa panchayat",
+      "Goa fire and emergency services",
+      "Goa Police",
+      "Nightclub management and affected families"
+    ],
     "status": "Fatal fire; magisterial inquiry and criminal investigation",
     "severity": "Severe",
     "summary": "A fire at the Birch by Romeo Lane nightclub in Arpora, Goa killed 25 people and injured others. Initial reporting described a crowded venue, a narrow access route and questions about fire-safety equipment, emergency exits and licences.",
     "outcome": "The Goa government constituted a magisterial inquiry to examine the fire and responsibility. Police registered criminal cases, and subsequent reporting on the inquiry described alleged failures across the venue and public authorities. These are investigation and inquiry findings, not a final conviction of every person named in reports.",
-    "sources": ["goaArporaInquiry2025", "apArporaFire2025", "ieArporaFireFIR2025", "ieArporaInquiry2025"]
+    "sources": [
+      "goaArporaInquiry2025",
+      "apArporaFire2025",
+      "ieArporaFireFIR2025",
+      "ieArporaInquiry2025"
+    ]
   },
   {
     "id": "dima-hasao-mine-flooding-2025",
@@ -2949,12 +3367,22 @@
     "date": "6 January-21 February 2025",
     "title": "Dima Hasao illegal coal-mine flooding and prolonged rescue",
     "category": "Worker safety and disaster response",
-    "actors": ["Assam government", "National Disaster Response Force", "Indian Army and Navy divers", "Coal India and ONGC teams", "Affected miners and families"],
+    "actors": [
+      "Assam government",
+      "National Disaster Response Force",
+      "Indian Army and Navy divers",
+      "Coal India and ONGC teams",
+      "Affected miners and families"
+    ],
     "status": "Fatal mine disaster; multi-agency rescue and official review",
     "severity": "Severe",
     "summary": "A rat-hole coal mine in the Umrangso area of Assam's Dima Hasao district flooded on 6 January 2025, trapping nine miners. The rescue operation involved state and central agencies and continued for weeks; official parliamentary material later recorded the deaths and recovery effort.",
     "outcome": "Rescuers recovered bodies after a 44-day operation. Parliamentary records described the mine as illegal and referred to the existing ban on rat-hole mining, while the National Disaster Response Force documented the operation. The entry records the regulatory and worker-safety context without claiming that every responsibility question has been adjudicated.",
-    "sources": ["ndrfDimaHasaoMine2025", "sansadDimaHasaoMine2025", "ieDimaHasaoMine2025"]
+    "sources": [
+      "ndrfDimaHasaoMine2025",
+      "sansadDimaHasaoMine2025",
+      "ieDimaHasaoMine2025"
+    ]
   },
   {
     "id": "piplodi-school-roof-collapse-2025",
@@ -2962,12 +3390,23 @@
     "date": "25 July 2025",
     "title": "Piplodi government-school roof collapse kills seven children",
     "category": "Education infrastructure and child safety",
-    "actors": ["Rajasthan government", "Jhalawar district administration", "Education Department", "National Human Rights Commission", "Affected students and families"],
+    "actors": [
+      "Rajasthan government",
+      "Jhalawar district administration",
+      "Education Department",
+      "National Human Rights Commission",
+      "Affected students and families"
+    ],
     "status": "Fatal public-school collapse; notices and accountability proceedings",
     "severity": "Severe",
     "summary": "Part of a government school building in Piplodi village, Jhalawar district, Rajasthan collapsed during school hours, killing seven students and injuring more than 20 others. The cause and responsibility were investigated separately from the immediate rescue and compensation response.",
     "outcome": "The NHRC took suo motu cognisance and sought a detailed report from Rajasthan authorities on the collapse, injuries and compensation. Teachers were suspended and further safety audits and criminal or departmental proceedings were reported. This record does not treat suspension or an FIR as a conviction.",
-    "sources": ["nhrcPiplodiSchoolCollapse2025", "pibPiplodiSchoolCollapse2025", "apPiplodiSchoolCollapse2025", "iePiplodiSuspensions2025"]
+    "sources": [
+      "nhrcPiplodiSchoolCollapse2025",
+      "pibPiplodiSchoolCollapse2025",
+      "apPiplodiSchoolCollapse2025",
+      "iePiplodiSuspensions2025"
+    ]
   },
   {
     "id": "lairai-devi-temple-crush-2025",
@@ -2975,12 +3414,22 @@
     "date": "3 May 2025",
     "title": "Sree Lairai Devi temple crowd crush in Goa",
     "category": "Public safety and crowd management",
-    "actors": ["Goa government", "Goa Police and district administration", "Temple committee", "Festival devotees and affected families"],
+    "actors": [
+      "Goa government",
+      "Goa Police and district administration",
+      "Temple committee",
+      "Festival devotees and affected families"
+    ],
     "status": "Fatal crowd disaster; fact-finding and magisterial inquiry",
     "severity": "Severe",
     "summary": "A crowd crush during the annual Sree Lairai Devi Zatra at Shirgao in North Goa killed six people and injured dozens. Early accounts differed on the immediate trigger, while later reporting identified crowd management, narrow access routes and multiple queues as subjects of inquiry.",
     "outcome": "The Goa government ordered an inquiry and temporarily cancelled or postponed state-supported celebrations. A later fact-finding report described the incident as preventable and attributed lapses across crowd behaviour, the temple committee, district administration, police and local bodies; the report was disputed by the temple committee.",
-    "sources": ["goaLairaiStateResponse2025", "apLairaiTempleCrush2025", "ieLairaiInquiry2025", "htLairaiCrowdReport2025"]
+    "sources": [
+      "goaLairaiStateResponse2025",
+      "apLairaiTempleCrush2025",
+      "ieLairaiInquiry2025",
+      "htLairaiCrowdReport2025"
+    ]
   },
   {
     "id": "slbc-tunnel-collapse-2025",
@@ -2988,12 +3437,22 @@
     "date": "22 February-26 April 2025",
     "title": "Srisailam Left Bank Canal tunnel collapse traps eight workers",
     "category": "Infrastructure and worker safety",
-    "actors": ["Telangana government", "Irrigation Department", "National Disaster Response Force", "Army and Navy rescue teams", "Affected workers and families"],
+    "actors": [
+      "Telangana government",
+      "Irrigation Department",
+      "National Disaster Response Force",
+      "Army and Navy rescue teams",
+      "Affected workers and families"
+    ],
     "status": "Infrastructure collapse; prolonged rescue and recovery operation",
     "severity": "Severe",
     "summary": "A section of the Srisailam Left Bank Canal tunnel near Domalapenta in Nagarkurnool district, Telangana collapsed on 22 February 2025, trapping eight workers. NDRF, Army, Navy, state agencies and specialist teams were mobilised during a prolonged operation.",
     "outcome": "The NDRF recorded the operation through 26 April, while later reports described the rescue being withdrawn after geological-risk advice. The record preserves the workers' trapped status, rescue effort and unresolved engineering or project-accountability questions rather than assigning an unproven cause.",
-    "sources": ["ndrfSlbcTunnel2025", "ieSlbcCollapse2025", "ddSlbcRescueWithdrawn2025"]
+    "sources": [
+      "ndrfSlbcTunnel2025",
+      "ieSlbcCollapse2025",
+      "ddSlbcRescueWithdrawn2025"
+    ]
   },
   {
     "id": "vote-chori-election-integrity-dispute-2025",
@@ -3001,12 +3460,22 @@
     "date": "1 August-5 November 2025",
     "title": "'Vote chori' allegations trigger a national election-integrity dispute",
     "category": "Elections and institutions",
-    "actors": ["Rahul Gandhi and Indian National Congress", "Election Commission of India", "BJP", "Karnataka Chief Electoral Officer", "Bihar electors and opposition parties"],
+    "actors": [
+      "Rahul Gandhi and Indian National Congress",
+      "Election Commission of India",
+      "BJP",
+      "Karnataka Chief Electoral Officer",
+      "Bihar electors and opposition parties"
+    ],
     "status": "Opposition claim; ECI rebuttal; evidence disputed",
     "severity": "High",
     "summary": "Rahul Gandhi and the Congress alleged that voter-roll irregularities in Karnataka's Mahadevapura constituency and elsewhere showed systematic 'vote chori' and collusion benefiting the BJP. The Election Commission rejected the claims and said they required formal, sworn evidence rather than public assertions.",
     "outcome": "The Karnataka Chief Electoral Officer asked Gandhi to submit a signed declaration, identify the electors concerned and provide evidence so proceedings could be initiated. The dispute remained politically consequential but was not established as a judicial finding of large-scale election fraud in the cited record. The Bihar SIR litigation proceeded separately: the Supreme Court questioned the exercise's authority, procedure and timing and directed greater disclosure and access to documents.",
-    "sources": ["ieVoteChoriMahadevapura2025", "ieVoteChoriEciResponse2025", "scBiharSirOrderJuly2025"]
+    "sources": [
+      "ieVoteChoriMahadevapura2025",
+      "ieVoteChoriEciResponse2025",
+      "scBiharSirOrderJuly2025"
+    ]
   },
   {
     "id": "west-bengal-sir-election-integrity-2026",
@@ -3014,12 +3483,22 @@
     "date": "16 December 2025-4 May 2026",
     "title": "West Bengal voter-roll revision becomes a live election-integrity crisis",
     "category": "Elections and institutions",
-    "actors": ["Election Commission of India", "Chief Electoral Officer, West Bengal", "BJP", "Trinamool Congress", "West Bengal electors"],
+    "actors": [
+      "Election Commission of India",
+      "Chief Electoral Officer, West Bengal",
+      "BJP",
+      "Trinamool Congress",
+      "West Bengal electors"
+    ],
     "status": "Official roll revision; exclusion allegations contested",
     "severity": "Severe",
     "summary": "Ahead of the 2026 West Bengal Assembly election, the Election Commission conducted a Special Intensive Revision of electoral rolls. Opposition parties and affected voters alleged that eligible people, particularly Bengali-speaking and minority voters, were removed or made unable to vote. The Commission said the process targeted deceased, duplicate, shifted or otherwise ineligible entries and published a final roll of about 6.44 crore electors.",
     "outcome": "Polling proceeded in April 2026 and the results were declared in May. Reporting documented voters who said their names were missing despite valid documents, while the ECI maintained that the revision removed ineligible entries rather than targeting a political group. The record does not label the deletions as proven election fraud; it records a consequential voter-access dispute and the absence of a cited judicial finding that the election result was manufactured.",
-    "sources": ["wbCeoSirFinalRoll2026", "apWestBengalVoterPurge2026", "apWestBengalElectionTensions2026"]
+    "sources": [
+      "wbCeoSirFinalRoll2026",
+      "apWestBengalVoterPurge2026",
+      "apWestBengalElectionTensions2026"
+    ]
   },
   {
     "id": "haryana-election-vote-chori-claim-2025",
@@ -3027,12 +3506,20 @@
     "date": "5-6 November 2025",
     "title": "Haryana 2024 election 'vote chori' claim and ECI rebuttal",
     "category": "Elections and institutions",
-    "actors": ["Rahul Gandhi and Indian National Congress", "Election Commission of India", "BJP", "Haryana electors"],
+    "actors": [
+      "Rahul Gandhi and Indian National Congress",
+      "Election Commission of India",
+      "BJP",
+      "Haryana electors"
+    ],
     "status": "Opposition claim; ECI rebuttal; no cited judicial finding",
     "severity": "High",
     "summary": "Rahul Gandhi alleged that the BJP's victory in the 2024 Haryana Assembly election was enabled by large-scale voter-list manipulation, describing 25 lakh alleged bogus votes and presenting what he called the 'H files'. The allegations included duplicate or anomalous entries and were directed at the ECI and the BJP.",
     "outcome": "The ECI rejected the allegations as unfounded and said Congress had not filed objections or appeals against the electoral rolls during the relevant process. The cited reporting records a major credibility dispute, but does not establish the allegations as a court-proven finding or prove that the election result was manufactured.",
-    "sources": ["ieHaryanaVoteChori2025", "niecHaryanaEciResponse2025"]
+    "sources": [
+      "ieHaryanaVoteChori2025",
+      "niecHaryanaEciResponse2025"
+    ]
   },
   {
     "id": "west-bengal-falta-repoll-2026",
@@ -3040,12 +3527,19 @@
     "date": "2-21 May 2026",
     "title": "EC orders a full Falta repoll after severe electoral offences",
     "category": "Elections and institutions",
-    "actors": ["Election Commission of India", "West Bengal election officials", "Falta electors and candidates"],
+    "actors": [
+      "Election Commission of India",
+      "West Bengal election officials",
+      "Falta electors and candidates"
+    ],
     "status": "Official repoll ordered after investigation",
     "severity": "Severe",
     "summary": "After investigating polling complaints in West Bengal's Falta Assembly constituency, the Election Commission ordered fresh polling across all 285 polling stations. The order cited severe electoral offences, alleged deliberate interference with the poll process, and incomplete or unavailable footage in parts of the inquiry.",
     "outcome": "The ECI's decision to cancel the earlier poll and order a repoll is an official corrective action, not a finding that the entire West Bengal election was fraudulent. The record distinguishes confirmed electoral-process intervention in Falta from broader political allegations about EVM manipulation or the state-wide result.",
-    "sources": ["ieFaltaRepoll2026", "ndtvFaltaRepollReport2026"]
+    "sources": [
+      "ieFaltaRepoll2026",
+      "ndtvFaltaRepollReport2026"
+    ]
   },
   {
     "id": "west-bengal-election-petitions-2026",
@@ -3053,12 +3547,21 @@
     "date": "23 June 2026",
     "title": "West Bengal election petitions put disputed constituency results under court review",
     "category": "Elections and institutions",
-    "actors": ["Calcutta High Court", "Mamata Banerjee", "BJP candidates", "Election Commission of India", "West Bengal election petitioners"],
+    "actors": [
+      "Calcutta High Court",
+      "Mamata Banerjee",
+      "BJP candidates",
+      "Election Commission of India",
+      "West Bengal election petitioners"
+    ],
     "status": "Petitions admitted or records preserved; merits unresolved",
     "severity": "High",
     "summary": "The Calcutta High Court admitted an election petition challenging the Bhabanipur Assembly result, where Mamata Banerjee lost to BJP's Suvendu Adhikari. A separate published order in another West Bengal constituency directed preservation of voting and counting materials while allegations of corrupt practices, counting irregularities and statutory non-compliance were examined.",
     "outcome": "Admission of an election petition is not a finding that fraud or corrupt practice occurred. The proceedings preserve a legal route for testing constituency-specific allegations and require the record to distinguish pending judicial scrutiny from claims already established by a final judgment.",
-    "sources": ["ieBhabanipurElectionPetition2026", "indiankanoonManbazarElectionPetition2026"]
+    "sources": [
+      "ieBhabanipurElectionPetition2026",
+      "indiankanoonManbazarElectionPetition2026"
+    ]
   },
   {
     "id": "west-bengal-post-poll-violence-2026",
@@ -3066,12 +3569,21 @@
     "date": "4-15 May 2026",
     "title": "West Bengal post-poll violence brings arrests, FIRs and court scrutiny",
     "category": "Political violence and accountability",
-    "actors": ["West Bengal Police", "Election Commission of India", "BJP workers and supporters", "TMC workers and supporters", "Calcutta High Court"],
+    "actors": [
+      "West Bengal Police",
+      "Election Commission of India",
+      "BJP workers and supporters",
+      "TMC workers and supporters",
+      "Calcutta High Court"
+    ],
     "status": "Police cases and court directions; responsibility contested",
     "severity": "Severe",
     "summary": "Violence, arson, vandalism and deaths were reported in parts of West Bengal after the 2026 Assembly results. Police said 200 cases had been registered and 433 people arrested in the first days after the result; BJP and TMC representatives blamed each other for attacks.",
     "outcome": "The ECI directed state authorities and security forces to take action, while the Calcutta High Court directed protection for people who had fled and arrangements for safe return regardless of party affiliation. The record does not assign collective guilt to either party and distinguishes reported arrests and court directions from final criminal findings.",
-    "sources": ["ndtvBengalPostPollCases2026", "ieBengalPostPollHighCourt2026"]
+    "sources": [
+      "ndtvBengalPostPollCases2026",
+      "ieBengalPostPollHighCourt2026"
+    ]
   },
   {
     "id": "bihar-election-annulment-plea-2026",
@@ -3079,12 +3591,20 @@
     "date": "6 February 2026",
     "title": "Supreme Court declines plea to annul the 2025 Bihar Assembly election",
     "category": "Elections and institutions",
-    "actors": ["Supreme Court of India", "Jan Suraaj Party", "Election Commission of India", "Bihar Assembly voters"],
+    "actors": [
+      "Supreme Court of India",
+      "Jan Suraaj Party",
+      "Election Commission of India",
+      "Bihar Assembly voters"
+    ],
     "status": "Petition not entertained; allegations not adjudicated as proven fraud",
     "severity": "High",
     "summary": "The Jan Suraaj Party asked the Supreme Court to annul the 2025 Bihar Assembly election, citing alleged electoral malpractice including alleged cash transfers during the election period. The court declined to entertain the plea and questioned whether a constitutional petition was the correct route to undo an electoral verdict.",
     "outcome": "The petition was withdrawn or not entertained rather than converted into a finding that the election was fraudulent. The record therefore preserves the allegation and the court response without presenting the claimed cash-transfer or malpractice allegations as established facts.",
-    "sources": ["ieBiharElectionAnnulmentPlea2026", "htBiharElectionAnnulmentPlea2026"]
+    "sources": [
+      "ieBiharElectionAnnulmentPlea2026",
+      "htBiharElectionAnnulmentPlea2026"
+    ]
   },
   {
     "id": "tamil-nadu-counting-dispute-2026",
@@ -3092,12 +3612,21 @@
     "date": "12-13 May 2026",
     "title": "Tamil Nadu counting dispute leads to court-ordered preservation of election material",
     "category": "Elections and institutions",
-    "actors": ["Madras High Court", "Tamil Nadu election officials", "TVK MLA R. Seenivasa Sethupathi", "DMK petitioner", "Election Commission of India"],
+    "actors": [
+      "Madras High Court",
+      "Tamil Nadu election officials",
+      "TVK MLA R. Seenivasa Sethupathi",
+      "DMK petitioner",
+      "Election Commission of India"
+    ],
     "status": "Court scrutiny; counting allegations unresolved",
     "severity": "High",
     "summary": "A dispute over a Tamil Nadu Assembly result raised allegations of irregularities in vote counting and the handling of a postal ballot. The Madras High Court's proceedings treated preservation of vital electoral material as necessary while the dispute followed the legally available election route.",
     "outcome": "The court process did not establish fraud or invalidate the election in the cited record. It preserved evidence and separated a disputed counting claim from a broader conclusion about the state's election or any political party.",
-    "sources": ["ieTamilNaduCountingDispute2026", "tnCountingPreservationOrder2026"]
+    "sources": [
+      "ieTamilNaduCountingDispute2026",
+      "tnCountingPreservationOrder2026"
+    ]
   },
   {
     "id": "aland-voter-deletion-chargesheet-2025",
@@ -3105,12 +3634,21 @@
     "date": "22 October-13 December 2025",
     "title": "Aland voter-deletion investigation reaches chargesheet stage",
     "category": "Elections and institutions",
-    "actors": ["Karnataka CID Special Investigation Team", "Former BJP MLA Subhash Guttedar", "Named co-accused", "Election Commission of India", "Aland electors"],
+    "actors": [
+      "Karnataka CID Special Investigation Team",
+      "Former BJP MLA Subhash Guttedar",
+      "Named co-accused",
+      "Election Commission of India",
+      "Aland electors"
+    ],
     "status": "SIT chargesheet; prosecution allegations not convictions",
     "severity": "Severe",
     "summary": "A Karnataka CID Special Investigation Team investigated online requests seeking deletion of thousands of names from electoral rolls in Aland ahead of the 2023 Assembly election. Reporting on the investigation said 6,018 deletion requests were examined and 5,994 names were still associated with residents after verification. A later chargesheet named seven people, including a former BJP MLA, in the alleged operation.",
     "outcome": "The chargesheet and digital-evidence filings move the matter beyond a purely political allegation, but they do not establish guilt. The record keeps the accused status, investigative claims, and any later trial outcome separate and does not claim that the case proves nationwide election fraud or implicates the BJP as a whole.",
-    "sources": ["ieAlandSitChargesheet2025", "ieAlandSitEvidence2025"]
+    "sources": [
+      "ieAlandSitChargesheet2025",
+      "ieAlandSitEvidence2025"
+    ]
   },
   {
     "id": "election-cctv-access-rule-change-2024",
@@ -3118,12 +3656,20 @@
     "date": "20-21 December 2024",
     "title": "Election rules restrict public access to electronic poll records",
     "category": "Elections and institutions",
-    "actors": ["Union government", "Election Commission of India", "Ministry of Law and Justice", "Election litigants and journalists"],
+    "actors": [
+      "Union government",
+      "Election Commission of India",
+      "Ministry of Law and Justice",
+      "Election litigants and journalists"
+    ],
     "status": "Rule change; transparency and privacy dispute",
     "severity": "High",
     "summary": "The government amended Rule 93(2)(a) of the Conduct of Election Rules, 1961, limiting public inspection of certain electronic election records, including CCTV, webcasting and video material. The change followed a court direction concerning access to election documents and footage from the Haryana Assembly election.",
     "outcome": "The government and ECI position emphasised voter privacy, secrecy and misuse risks. Critics argued that restricting access could make independent verification of polling disputes harder. The record describes the rule change and its timing without claiming that it proves electoral fraud or invalidates any election.",
-    "sources": ["ieElectionCctvRuleChange2024", "etElectionCctvAccess2024"]
+    "sources": [
+      "ieElectionCctvRuleChange2024",
+      "etElectionCctvAccess2024"
+    ]
   },
   {
     "id": "election-deepfakes-misinformation-2024",
@@ -3131,12 +3677,23 @@
     "date": "6 May-1 June 2024",
     "title": "AI deepfakes and campaign misinformation enter the 2024 election",
     "category": "Elections and information integrity",
-    "actors": ["Election Commission of India", "Recognised political parties", "BJP", "Indian National Congress", "Social media platforms", "Voters"],
+    "actors": [
+      "Election Commission of India",
+      "Recognised political parties",
+      "BJP",
+      "Indian National Congress",
+      "Social media platforms",
+      "Voters"
+    ],
     "status": "ECI advisory; campaign-content dispute",
     "severity": "High",
     "summary": "During the 2024 Lok Sabha campaign, manipulated audio and video became a documented election-integrity problem. The Election Commission directed recognised parties not to circulate deepfakes or patently false and misleading material, to remove such content within three hours of being notified, and to identify and warn the person responsible within the party. Independent reporting also documented AI-generated celebrity videos and other synthetic political media circulating during the campaign.",
     "outcome": "The advisory created a response rule, but it did not resolve every disputed video or establish that one party alone was responsible for the wider problem. This record tracks the documented technology and the regulator's response without turning campaign allegations into findings of electoral fraud.",
-    "sources": ["pibEciDeepfakeAdvisory2024", "ieEciDeepfakeExplainer2024", "apIndiaElectionMisinformation2024"]
+    "sources": [
+      "pibEciDeepfakeAdvisory2024",
+      "ieEciDeepfakeExplainer2024",
+      "apIndiaElectionMisinformation2024"
+    ]
   },
   {
     "id": "2024-election-mcc-speeches-ec-response",
@@ -3144,12 +3701,24 @@
     "date": "25 April-22 May 2024",
     "title": "Election Commission responds to rival complaints over campaign speeches",
     "category": "Elections and institutions",
-    "actors": ["Election Commission of India", "BJP", "Indian National Congress", "Narendra Modi", "Rahul Gandhi", "J. P. Nadda", "Mallikarjun Kharge"],
+    "actors": [
+      "Election Commission of India",
+      "BJP",
+      "Indian National Congress",
+      "Narendra Modi",
+      "Rahul Gandhi",
+      "J. P. Nadda",
+      "Mallikarjun Kharge"
+    ],
     "status": "Notices and directions; political complaints contested",
     "severity": "High",
     "summary": "For the first time in the 2024 campaign, the Election Commission sought a response from a party president over a complaint against a prime minister. Congress complained about Narendra Modi's Banswara speech, while the BJP complained about statements by Rahul Gandhi and Mallikarjun Kharge. The Commission later directed BJP campaigners to avoid communal appeals and Congress campaigners not to create an impression that the Constitution would be abolished.",
     "outcome": "The Commission's action was a regulatory intervention, not a judicial finding that either side committed a criminal offence or that the election was invalid. The episode remains relevant because it records both the complaints and the institution's choice to address them through party leadership rather than a public adjudication of each speech.",
-    "sources": ["ieEciBjpCongressMccDirections2024", "reutersPollPanelModiGandhi2024", "apModiInfiltratorsComplaint2024"]
+    "sources": [
+      "ieEciBjpCongressMccDirections2024",
+      "reutersPollPanelModiGandhi2024",
+      "apModiInfiltratorsComplaint2024"
+    ]
   },
   {
     "id": "modi-third-term-coalition-result-2024",
@@ -3157,12 +3726,24 @@
     "date": "4-9 June 2024",
     "title": "2024 election returns Modi to office but ends the BJP's solo majority",
     "category": "Elections and government formation",
-    "actors": ["BJP", "National Democratic Alliance", "Narendra Modi", "Election Commission of India", "TDP", "JD(U)", "INDIA bloc"],
+    "actors": [
+      "BJP",
+      "National Democratic Alliance",
+      "Narendra Modi",
+      "Election Commission of India",
+      "TDP",
+      "JD(U)",
+      "INDIA bloc"
+    ],
     "status": "Official result; coalition government formed",
     "severity": "High",
     "summary": "The BJP remained the largest party after the 2024 Lok Sabha election but won 240 of 543 seats, below the 272-seat majority mark. The BJP-led NDA crossed the majority threshold with its allies, and Narendra Modi was chosen to lead a third-term government.",
     "outcome": "The result preserved the incumbent coalition at the Centre while changing its parliamentary arithmetic: the BJP could no longer govern with a solo Lok Sabha majority and became more dependent on alliance partners. This entry records the result as political context, not as a positive or negative verdict on the government.",
-    "sources": ["eciLokSabhaResults2024Context", "ddNewsBjp240Nda2024", "apModiCoalitionThirdTerm2024"]
+    "sources": [
+      "eciLokSabhaResults2024Context",
+      "ddNewsBjp240Nda2024",
+      "apModiCoalitionThirdTerm2024"
+    ]
   },
   {
     "id": "form-17c-turnout-transparency-row-2024",
@@ -3170,12 +3751,22 @@
     "date": "3 May-24 May 2024",
     "title": "Form 17C voter-turnout data becomes an election-transparency dispute",
     "category": "Elections and institutions",
-    "actors": ["Election Commission of India", "Association for Democratic Reforms", "Supreme Court of India", "Congress", "Political parties and candidates"],
+    "actors": [
+      "Election Commission of India",
+      "Association for Democratic Reforms",
+      "Supreme Court of India",
+      "Congress",
+      "Political parties and candidates"
+    ],
     "status": "Court proceedings; data-publication dispute",
     "severity": "High",
     "summary": "During the 2024 Lok Sabha election, civil-society group ADR and opposition politicians questioned the timing and format of voter-turnout figures, including revisions between preliminary and later percentages. ADR asked for scanned polling-station Form 17C records, which contain the authenticated number of votes recorded, to be published online after each phase. The Election Commission said Form 17C was available to candidates and agents and that there was no legal mandate to publish it on its website.",
     "outcome": "The Supreme Court declined to order the requested interim publication during the live election and adjourned the matter. The dispute did not establish that votes were altered or that the election was fraudulent; it exposed a transparency gap between records available to candidates and records readily available to the public.",
-    "sources": ["adrForm17cPetition2024", "ieSupremeCourtForm17c2024", "ieEciTurnoutResponse2024"]
+    "sources": [
+      "adrForm17cPetition2024",
+      "ieSupremeCourtForm17c2024",
+      "ieEciTurnoutResponse2024"
+    ]
   },
   {
     "id": "lok-sabha-criminal-cases-adr-2024",
@@ -3183,12 +3774,20 @@
     "date": "6 June 2024",
     "title": "ADR finds criminal cases declared by 251 newly elected MPs",
     "category": "Elections and political accountability",
-    "actors": ["Association for Democratic Reforms", "National Election Watch", "18th Lok Sabha candidates", "Election Commission of India"],
+    "actors": [
+      "Association for Democratic Reforms",
+      "National Election Watch",
+      "18th Lok Sabha candidates",
+      "Election Commission of India"
+    ],
     "status": "Affidavit analysis; declarations are not convictions",
     "severity": "High",
     "summary": "An Association for Democratic Reforms analysis of the affidavits of all 543 newly elected Lok Sabha MPs found that 251, or 46 percent, had declared criminal cases against themselves. It reported that 170 MPs, or 31 percent, had declared serious criminal cases and that 27 MPs had declared prior convictions. The analysis also reported a higher winning probability for candidates with declared criminal cases than for candidates with clean affidavits.",
     "outcome": "The figures describe self-declared affidavit information and do not establish guilt for pending cases. They provide a national accountability baseline for the 18th Lok Sabha; party-level comparisons should be read from the underlying ADR tables rather than converted into a claim that one party alone accounts for the problem.",
-    "sources": ["adrNewLokSabhaCriminalCases2024", "adrLokSabha2024CriminalBook"]
+    "sources": [
+      "adrNewLokSabhaCriminalCases2024",
+      "adrLokSabha2024CriminalBook"
+    ]
   },
   {
     "id": "sc-evm-vvpat-verification-2024",
@@ -3196,12 +3795,20 @@
     "date": "26 April 2024",
     "title": "Supreme Court rejects demand for 100% EVM-VVPAT verification",
     "category": "Elections and institutions",
-    "actors": ["Supreme Court of India", "Association for Democratic Reforms", "Election Commission of India", "Political parties and candidates"],
+    "actors": [
+      "Supreme Court of India",
+      "Association for Democratic Reforms",
+      "Election Commission of India",
+      "Political parties and candidates"
+    ],
     "status": "Final judgment; verification safeguards modified",
     "severity": "High",
     "summary": "The Supreme Court rejected petitions seeking a return to paper ballots and complete cross-verification of Electronic Voting Machine counts with VVPAT slips. The judgment accepted the existing system while directing additional safeguards, including allowing candidates to seek post-result verification of the burnt memory of a specified proportion of machines and requiring symbol-loading units to be sealed and preserved.",
     "outcome": "The judgment did not find EVM tampering or validate claims of election fraud. It settled the 2024 litigation against 100% verification while leaving a continuing public debate about how much independent audit access is appropriate for electronic elections.",
-    "sources": ["scEvmVvpatJudgment2024", "ndtvEvmVvpatVerdict2024"]
+    "sources": [
+      "scEvmVvpatJudgment2024",
+      "ndtvEvmVvpatVerdict2024"
+    ]
   },
   {
     "id": "election-commission-appointments-act-2023",
@@ -3209,12 +3816,23 @@
     "date": "28 December 2023-2 January 2024",
     "title": "Parliament changes the Election Commission appointment panel",
     "category": "Elections and institutions",
-    "actors": ["Union government", "Parliament of India", "Election Commission of India", "Supreme Court of India", "Chief Justice of India", "Leader of Opposition"],
+    "actors": [
+      "Union government",
+      "Parliament of India",
+      "Election Commission of India",
+      "Supreme Court of India",
+      "Chief Justice of India",
+      "Leader of Opposition"
+    ],
     "status": "Act in force; constitutional challenge pending",
     "severity": "Severe",
     "summary": "Parliament enacted the Chief Election Commissioner and Other Election Commissioners (Appointment, Conditions of Service and Term of Office) Act, 2023. It replaced the Chief Justice of India on the selection committee with a Union Cabinet Minister nominated by the Prime Minister, while retaining the Prime Minister and the Leader of Opposition as the other members. The law followed the Supreme Court's March 2023 interim appointment framework, which had included the Chief Justice.",
     "outcome": "Supporters described the law as Parliament exercising its power under Article 324 and creating a statutory process. Critics argued that replacing the Chief Justice with a government-nominated minister increased executive influence over the election watchdog. The Supreme Court did not stay the law before the 2024 general election; the record does not treat the appointment structure alone as proof of an election being rigged.",
-    "sources": ["indiaCodeEciAppointmentsAct2023", "prsEciAppointmentsBill2023", "scObserverEciAppointments2024"]
+    "sources": [
+      "indiaCodeEciAppointmentsAct2023",
+      "prsEciAppointmentsBill2023",
+      "scObserverEciAppointments2024"
+    ]
   },
   {
     "id": "mahua-moitra-expulsion-2023",
@@ -3222,12 +3840,20 @@
     "date": "8 December 2023",
     "title": "Lok Sabha expels Mahua Moitra after Ethics Committee report",
     "category": "Parliament and institutional accountability",
-    "actors": ["Lok Sabha", "Ethics Committee", "BJP-linked", "Trinamool Congress"],
+    "actors": [
+      "Lok Sabha",
+      "Ethics Committee",
+      "BJP-linked",
+      "Trinamool Congress"
+    ],
     "status": "Official parliamentary action; allegations disputed",
     "severity": "High",
     "summary": "The Lok Sabha adopted a motion expelling Trinamool Congress MP Mahua Moitra after its Ethics Committee found her conduct unethical in a complaint alleging that she shared parliamentary login credentials and accepted benefits in exchange for questions. The parliamentary record confirms the expulsion; the underlying cash-for-query allegation was contested and the committee recommended a separate government investigation into the alleged money trail.",
     "outcome": "The motion passed by voice vote after opposition members objected and walked out. Supporters of the action pointed to credential-sharing and parliamentary privilege; critics argued that the process was rushed, that Moitra was not allowed to make a full intervention in the House, and that the committee's findings did not itself establish a criminal conviction. This record distinguishes the expulsion from the unresolved criminal allegation.",
-    "sources": ["sansadMahuaExpulsion2023", "ieMahuaExpulsion2023"]
+    "sources": [
+      "sansadMahuaExpulsion2023",
+      "ieMahuaExpulsion2023"
+    ]
   },
   {
     "id": "delhi-services-ordinance-act-2023",
@@ -3235,12 +3861,22 @@
     "date": "11 May-4 August 2023",
     "title": "Delhi services power dispute follows Supreme Court ruling",
     "category": "Federalism and institutional integrity",
-    "actors": ["Union government", "BJP-led government", "Delhi government", "Supreme Court of India", "Lieutenant Governor of Delhi"],
+    "actors": [
+      "Union government",
+      "BJP-led government",
+      "Delhi government",
+      "Supreme Court of India",
+      "Lieutenant Governor of Delhi"
+    ],
     "status": "Act in force; constitutional challenge pending",
     "severity": "High",
     "summary": "On 11 May 2023, the Supreme Court held that Delhi's elected government had control over services other than public order, police, and land. Eight days later, the Union government promulgated an ordinance creating the National Capital Civil Services Authority and shifting decisive power over postings and disciplinary matters toward the Lieutenant Governor. Parliament later enacted the Government of National Capital Territory of Delhi (Amendment) Act, 2023.",
     "outcome": "The Union government said the framework balanced Delhi's local administration with the national role of the capital. The Delhi government and critics said the ordinance and Act effectively reversed the Court's allocation of executive power and weakened elected accountability. The legal dispute was referred to a Constitution Bench; this record does not predetermine the constitutional outcome.",
-    "sources": ["scDelhiServices2023", "prsDelhiServicesOrdinance2023", "prsDelhiServicesAct2023"]
+    "sources": [
+      "scDelhiServices2023",
+      "prsDelhiServicesOrdinance2023",
+      "prsDelhiServicesAct2023"
+    ]
   },
   {
     "id": "kejriwal-arrest-election-bail-2024",
@@ -3248,12 +3884,22 @@
     "date": "21 March-10 May 2024",
     "title": "Delhi Chief Minister arrested before the general election, then granted interim bail",
     "category": "Investigative agencies and elections",
-    "actors": ["Enforcement Directorate", "Union government", "BJP-led government", "Aam Aadmi Party", "Supreme Court of India"],
+    "actors": [
+      "Enforcement Directorate",
+      "Union government",
+      "BJP-led government",
+      "Aam Aadmi Party",
+      "Supreme Court of India"
+    ],
     "status": "Arrested; interim bail granted; prosecution ongoing",
     "severity": "Severe",
     "summary": "The Enforcement Directorate arrested Delhi Chief Minister Arvind Kejriwal on 21 March 2024 in the Delhi excise-policy money-laundering case, shortly before Lok Sabha polling began. Kejriwal denied the allegations and opposition parties called the timing politically motivated. On 10 May, the Supreme Court granted him interim bail until 1 June to campaign, while expressly leaving the merits of the arrest challenge unresolved and imposing conditions including surrender after the election period.",
     "outcome": "The arrest became a central election-period dispute over the use of federal investigative agencies against opposition leaders. The interim-bail order was temporary and did not amount to an acquittal or finding that the prosecution was false. The record therefore separates the confirmed arrest and court order from both the agency's allegations and the opposition's claim of political targeting.",
-    "sources": ["scKejriwalInterimBail2024", "apKejriwalBail2024", "ieKejriwalArrestBail2024"]
+    "sources": [
+      "scKejriwalInterimBail2024",
+      "apKejriwalBail2024",
+      "ieKejriwalArrestBail2024"
+    ]
   },
   {
     "id": "congress-bank-account-tax-dispute-2024",
@@ -3261,12 +3907,21 @@
     "date": "13 February-21 March 2024",
     "title": "Congress bank-account lien becomes an election-finance dispute",
     "category": "Elections and political finance",
-    "actors": ["Income Tax Department", "Indian National Congress", "BJP-led government", "Income Tax Appellate Tribunal"],
+    "actors": [
+      "Income Tax Department",
+      "Indian National Congress",
+      "BJP-led government",
+      "Income Tax Appellate Tribunal"
+    ],
     "status": "Tax dispute; competing accounts of account restrictions",
     "severity": "High",
     "summary": "Ahead of the 2024 general election, the Congress party said the Income Tax Department had effectively frozen party and Youth Congress accounts over a demand of about Rs 2.1 billion. The Income Tax Department and BJP rejected the description of a blanket freeze, saying the action involved a lien or recovery connected to disputed tax treatment of political donations and late filing. Reporting recorded that the tribunal allowed partial operation while the dispute was heard and that money was recovered or attached.",
     "outcome": "The episode raised a major election-finance and level-playing-field dispute because it affected the principal opposition party during the campaign period. The record does not declare the tax demand unlawful or the party's allegation proven; it preserves the competing descriptions and the tribunal process.",
-    "sources": ["apCongressAccounts2024", "reutersCongressAccounts2024", "htCongressTaxLien2024"]
+    "sources": [
+      "apCongressAccounts2024",
+      "reutersCongressAccounts2024",
+      "htCongressTaxLien2024"
+    ]
   },
   {
     "id": "pm-cares-transparency-rti-2020",
@@ -3274,12 +3929,22 @@
     "date": "27 March-18 August 2020",
     "title": "PM CARES Fund transparency and RTI dispute",
     "category": "Transparency and public accountability",
-    "actors": ["Prime Minister's Office", "PM CARES Fund", "Union government", "Supreme Court of India", "RTI applicants"],
+    "actors": [
+      "Prime Minister's Office",
+      "PM CARES Fund",
+      "Union government",
+      "Supreme Court of India",
+      "RTI applicants"
+    ],
     "status": "Court-tested; disclosure status disputed",
     "severity": "High",
     "summary": "The Union government established the PM CARES Fund during the COVID-19 emergency. RTI applicants and public-interest petitioners sought information about its structure, donations, and use of public institutional resources. The government said the fund was a public charitable trust and not a public authority under the RTI Act; the Supreme Court declined to order transfer of donations to the National Disaster Response Fund and recorded that PM CARES was not subject to CAG audit in the requested manner.",
     "outcome": "The fund published selected audited statements, while applicants and transparency advocates continued to challenge the limits on RTI access and public audit. Later court proceedings addressed disclosure of tax-exemption files. This record distinguishes the confirmed legal position in the cited orders from criticism about transparency and does not infer diversion or misuse without evidence.",
-    "sources": ["scPmCares2020", "cicPmCaresRti2021", "iePmCaresRti2020"]
+    "sources": [
+      "scPmCares2020",
+      "cicPmCaresRti2021",
+      "iePmCaresRti2020"
+    ]
   },
   {
     "id": "rti-amendment-2019",
@@ -3287,12 +3952,21 @@
     "date": "25 July-1 August 2019",
     "title": "RTI Amendment changes Information Commission terms and service conditions",
     "category": "Transparency and public accountability",
-    "actors": ["Union government", "Parliament of India", "Central Information Commission", "Opposition parties"],
+    "actors": [
+      "Union government",
+      "Parliament of India",
+      "Central Information Commission",
+      "Opposition parties"
+    ],
     "status": "Act in force",
     "severity": "High",
     "summary": "Parliament passed the Right to Information (Amendment) Act, 2019. It removed the RTI Act's fixed statutory terms and salary equivalence for the Central and State Information Commissioners, instead authorising the Central Government to prescribe their terms, salaries, allowances, and service conditions by rules.",
     "outcome": "The government said the amendment rationalised the service framework and did not weaken the RTI right itself. Opposition parties and transparency advocates argued that executive control over tenure and pay could reduce the institutional independence of bodies that decide disclosure disputes. PRS noted the change as a significant alteration to the commission structure; this record does not claim that every later RTI decision was politically controlled.",
-    "sources": ["indiaCodeRtiAmendment2019", "prsRtiAmendment2019", "pibRtiAmendment2019"]
+    "sources": [
+      "indiaCodeRtiAmendment2019",
+      "prsRtiAmendment2019",
+      "pibRtiAmendment2019"
+    ]
   },
   {
     "id": "parliament-winter-suspensions-2023",
@@ -3300,25 +3974,45 @@
     "date": "4-21 December 2023",
     "title": "146 opposition MPs suspended during Parliament's security-breach session",
     "category": "Parliament and institutional accountability",
-    "actors": ["Lok Sabha", "Rajya Sabha", "Opposition MPs", "Union government", "Parliamentary presiding officers"],
+    "actors": [
+      "Lok Sabha",
+      "Rajya Sabha",
+      "Opposition MPs",
+      "Union government",
+      "Parliamentary presiding officers"
+    ],
     "status": "Official parliamentary action; process dispute",
     "severity": "Severe",
     "summary": "During the Winter Session of Parliament, PRS reported that 146 opposition MPs were suspended, including 100 from the Lok Sabha and 46 from the Rajya Sabha. The suspensions followed disruptions and demands for a statement from the Home Minister after two intruders entered the Lok Sabha on 13 December. Parliament nevertheless passed the three criminal-law replacement bills and the Telecommunications Bill during the session.",
     "outcome": "The government and presiding officers treated the suspensions as responses to disorder; opposition parties said the scale of the action restricted scrutiny after the security breach. PRS reported that nearly 20% of MPs were suspended and that bills introduced in the session were passed without referral to committees. This record describes the parliamentary process and its dispute without declaring every bill invalid or treating suspension alone as proof of authoritarianism.",
-    "sources": ["prsWinterSessionStats2023", "prsDecemberReview2023", "pibWinterSession2023", "apParliamentSuspensions2023"]
+    "sources": [
+      "prsWinterSessionStats2023",
+      "prsDecemberReview2023",
+      "pibWinterSession2023",
+      "apParliamentSuspensions2023"
+    ]
   },
   {
     "id": "sansad-chalo-march-2026",
     "year": 2026,
     "date": "20 July 2026",
-    "title": "Sansad Chalo march organized near Parliament",
-    "category": "Protests and public response",
-    "actors": ["Student groups", "Delhi Police"],
-    "status": "Scheduled",
-    "severity": "Medium",
-    "summary": "Protest groups organized a 'Sansad Chalo' march from Jantar Mantar to Parliament House demanding examination system reforms and accountability following controversies surrounding national exams like NEET-UG. Delhi Police imposed Section 163 BNSS (formerly Section 144 CrPC) in the New Delhi district, banning unauthorized public gatherings of 4 or more people near Parliament.",
-    "outcome": "Scheduled to take place during the Monsoon Session. The Delhi Police issued commuter advisories warning of road closures and traffic delays in Connaught Place, Sansad Marg, and Jantar Mantar.",
-    "sources": []
+    "title": "Police lathi-charge, tear gas at Sansad Chalo march near Parliament",
+    "category": "Protest and policing",
+    "actors": [
+      "Student groups",
+      "Cockroach Janta Party",
+      "Delhi Police",
+      "BJP-led government"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "On 20 July 2026, the first day of the monsoon session, the Cockroach Janta Party (CJP) led a 'Sansad Chalo' march from Jantar Mantar toward Parliament demanding the resignation of Education Minister Dharmendra Pradhan and reforms over the 2026 NEET paper leak and CBSE marking irregularities. Delhi Police had denied permission, imposed Section 163 BNSS across New Delhi district banning gatherings of four or more, closed metro stations, and readied water cannons. As protesters neared Parliament, police used lathi charges and tear gas to disperse close to 1,000 people, with some protesters shown bleeding from head and upper-body injuries in visuals circulated on social media.",
+    "outcome": "Police detained CJP founder Abhijeet Dipke, Samajwadi Party MP Dimple Yadav, and several other protesters, and imposed an internet shutdown across a roughly 5-km radius of Jantar Mantar. Sonam Wangchuk had been forcibly hospitalised on 18 July during a related hunger strike. Inside Parliament, the first day of the monsoon session was adjourned after opposition parties raised the crackdown. Injury and detention totals were not officially confirmed.",
+    "sources": [
+      "southFirstSansadChalo2026",
+      "deccanHeraldSansadChalo2026",
+      "wikiJantarMantar2026"
+    ]
   },
   {
     "id": "modi-no-press-conference-2014-2026",
@@ -3326,11 +4020,19 @@
     "date": "10 July 2026",
     "title": "Modi has never held a solo press conference in over 12 years as PM",
     "category": "Parliament and institutional accountability",
-    "actors": ["Modi government", "Prime Minister's Office"],
+    "actors": [
+      "Modi government",
+      "Prime Minister's Office"
+    ],
     "status": "Documented pattern",
     "severity": "Medium",
     "summary": "Prime Minister Narendra Modi has not held a single solo press conference — where reporters can freely ask questions — since assuming office on 26 May 2014. His sole appearance at anything resembling a press conference was on 17 May 2019, at BJP headquarters after the election result, where he sat silently while Amit Shah spoke and took no direct questions from journalists. Modi has given interviews to select, pre-screened media organisations, but no open, unscripted press interaction with the Indian press corps has ever occurred across more than 12 years in office. Multiple Indian and international media organisations have documented and reported on this pattern.",
     "outcome": "The pattern remains unchanged as of mid-2026. Media freedom groups including Reporters Without Borders have noted the inaccessibility of the Prime Minister to the domestic press as a factor in India's declining press freedom rankings. The government has not addressed the absence of press conferences.",
-    "sources": ["wireModiPressConf2024", "quintModiPressConf2019", "ndtvModiPressConf2019", "scrollModiPressConf2024"]
+    "sources": [
+      "wireModiPressConf2024",
+      "quintModiPressConf2019",
+      "ndtvModiPressConf2019",
+      "scrollModiPressConf2024"
+    ]
   }
 ]

@@ -678,10 +678,10 @@
     "type": "News report"
   },
   "ieSscProtests2025": {
-    "title": "Cancellations, glitches, wrong exam centre: why SSC aspirants are protesting",
-    "publisher": "Indian Express",
-    "url": "https://indianexpress.com/article/cities/delhi/cancellations-glitches-wrong-exam-centre-ssc-aspirants-protest-delhi-10165270/lite/",
-    "type": "News report"
+    "title": "Why SSC aspirants are protesting: glitches and exam cancellations",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/explained/why-ssc-aspirants-are-protesting-glitches-exam-cancel-10210252/",
+    "type": "Explainer and protest reporting"
   },
   "ieSscChair2025": {
     "title": "Technical, operational issues being resolved: SSC Chairman",
@@ -1992,12 +1992,6 @@
     "url": "https://indianexpress.com/article/cities/bangalore/dharmasthala-secret-burials-sit-final-report-false-allegations-10788891/",
     "type": "News report"
   },
-  "ieAjmerDerailment2024": {
-    "title": "Sabarmati-Agra Superfast derailment near Ajmer",
-    "publisher": "The Indian Express",
-    "url": "https://indianexpress.com/article/india/coaches-sabarmati-agra-superfast-train-derail-rajasthan-ajmer-casualty-9220160/",
-    "type": "News report"
-  },
   "apTirupatiStampede2025": {
     "title": "At least six die in stampede at Tirupati temple",
     "publisher": "Associated Press",
@@ -2027,18 +2021,6 @@
     "publisher": "The Indian Express",
     "url": "https://indianexpress.com/article/india/four-killed-several-injured-stampede-tirupati-9767763/",
     "type": "News report"
-  },
-  "apDelhiElection2025": {
-    "title": "Modi's party wins most seats in New Delhi polls after 27 years",
-    "publisher": "Associated Press",
-    "url": "https://apnews.com/article/e106114e815b537c073188c87a997c9d",
-    "type": "News report"
-  },
-  "eciDelhiPollSchedule2025": {
-    "title": "Election Commission polling information for Delhi Assembly election 2025",
-    "publisher": "Election Commission of India",
-    "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2Fzk1vx4ptJpQsKYHA87guoLg6qlmD60BonJdDr9iLVjGLS%2F5g54cBUk8Q3%2BGXu7BIxMWx%2BzZqaZugBnaOJXu4MPg%3D%3D",
-    "type": "Official election document"
   },
   "prsWaqfBill2024": {
     "title": "PRS summary of the Waqf (Amendment) Bill, 2024",
@@ -2401,28 +2383,28 @@
     "type": "Official government release"
   },
   "apUttarkashiCloudburst2025": {
-    "title": "Flash floods kill at least four and trap others under debris in northern India",
+    "title": "Rescuers search for dozens missing after Uttarkashi flash floods",
     "publisher": "Associated Press",
-    "url": "https://apnews.com/article/221a6e3736dba9077da7cb62ec271f57",
+    "url": "https://apnews.com/article/04f67370a3774ee705d1a34cca006757",
     "type": "News report"
   },
   "pibUttarkashiCloudburst2025": {
-    "title": "Department of Telecommunications restores connectivity after Dharali cloudburst",
-    "publisher": "Press Information Bureau / Ministry of Communications",
-    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2156502&lang=2&reg=48",
+    "title": "Prime Minister expresses condolences over Dharali tragedy",
+    "publisher": "Press Information Bureau / Prime Minister's Office",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2152581",
     "type": "Official government release"
   },
   "ndmiUttarkashiCloudburst2025": {
-    "title": "Rescuers search for dozens missing after deadly Dharali flash floods",
-    "publisher": "Associated Press",
-    "url": "https://apnews.com/article/04f67370a3774ee705d1a34cca006757",
-    "type": "Disaster-response reporting"
+    "title": "Government disaster-management situation report on Dharali cloudburst",
+    "publisher": "National Disaster Management Information System",
+    "url": "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2647",
+    "type": "Official disaster-management record"
   },
   "ieUttarkashiMissing2025": {
-    "title": "Death certificates set to be issued for 67 missing after Uttarkashi disaster",
+    "title": "Death certificates for people missing after Uttarkashi disaster",
     "publisher": "The Indian Express",
     "url": "https://indianexpress.com/article/india/death-certificates-issued-missing-uttarkashi-disaster-10276276/",
-    "type": "Follow-up reporting"
+    "type": "News report"
   },
   "hrwUmarKhalid2026": {
     "title": "India's top court rejects bail for long-held student activists",
@@ -2562,30 +2544,6 @@
     "url": "https://indianexpress.com/article/india/jk-kishtwar-cloudburst-news-live-updates-amit-shah-speaks-with-l-g-cm-ndrf-teams-rushed-to-site-10189035/",
     "type": "News report"
   },
-  "apUttarkashiCloudburst2025": {
-    "title": "Rescuers search for dozens missing after Uttarkashi flash floods",
-    "publisher": "Associated Press",
-    "url": "https://apnews.com/article/04f67370a3774ee705d1a34cca006757",
-    "type": "News report"
-  },
-  "pibUttarkashiCloudburst2025": {
-    "title": "Prime Minister expresses condolences over Dharali tragedy",
-    "publisher": "Press Information Bureau / Prime Minister's Office",
-    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2152581",
-    "type": "Official government release"
-  },
-  "ndmiUttarkashiCloudburst2025": {
-    "title": "Government disaster-management situation report on Dharali cloudburst",
-    "publisher": "National Disaster Management Information System",
-    "url": "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2647",
-    "type": "Official disaster-management record"
-  },
-  "ieUttarkashiMissing2025": {
-    "title": "Death certificates for people missing after Uttarkashi disaster",
-    "publisher": "The Indian Express",
-    "url": "https://indianexpress.com/article/india/death-certificates-issued-missing-uttarkashi-disaster-10276276/",
-    "type": "News report"
-  },
   "ieRohitAryaHostage2025": {
     "title": "Mumbai Police rescue 17 children from Powai studio hostage incident",
     "publisher": "The Indian Express",
@@ -2627,12 +2585,6 @@
     "publisher": "Internet Freedom Foundation",
     "url": "https://internetfreedom.in/sanchar-saathi-pre-installation-directive/",
     "type": "Digital-rights analysis"
-  },
-  "ieSscProtests2025": {
-    "title": "Why SSC aspirants are protesting: glitches and exam cancellations",
-    "publisher": "The Indian Express",
-    "url": "https://indianexpress.com/article/explained/why-ssc-aspirants-are-protesting-glitches-exam-cancel-10210252/",
-    "type": "Explainer and protest reporting"
   },
   "ieSscChairmanIssues2025": {
     "title": "SSC chairman responds to technical and operational issues in recruitment exams",
@@ -2699,12 +2651,6 @@
     "publisher": "The Indian Express",
     "url": "https://indianexpress.com/article/cities/kolkata/murshidabad-violence-hc-no-to-nia-probe-centre-free-to-order-9950522/",
     "type": "Court reporting"
-  },
-  "apMahaKumbhCrush2025": {
-    "title": "Police say at least 30 people died in Maha Kumbh crowd crush",
-    "publisher": "Associated Press",
-    "url": "https://apnews.com/article/da4a3423bf2fd1c06f7c730e65dc1350",
-    "type": "News report"
   },
   "reutersMahaKumbhCrush2025": {
     "title": "Maha Kumbh stampede and announced judicial inquiry",
@@ -3707,5 +3653,23 @@
     "publisher": "Scroll.in",
     "url": "https://scroll.in/article/1065434/ten-years-of-modi-government-pm-has-avoided-solo-press-conferences-questions-from-reporters",
     "type": "Analysis"
+  },
+  "southFirstSansadChalo2026": {
+    "title": "Delhi Police lathi-charge, fire tear gas at Sansad Chalo march, detain Abhijeet Dipke, Dimple Yadav and others",
+    "publisher": "The South First",
+    "url": "https://thesouthfirst.com/beyond-south/delhi-police-lathi-charge-fire-tear-gas-at-sansad-chalo-march-arrest-abhijeet-dipke-dimple-yadav-and-others/",
+    "type": "News report"
+  },
+  "deccanHeraldSansadChalo2026": {
+    "title": "Tear gas, lathi charge: Police use force to disperse CJP protesters near Parliament House amid Chalo Sansad",
+    "publisher": "Deccan Herald",
+    "url": "https://www.deccanherald.com/india/tear-gas-lathi-charge-police-use-force-to-disperse-cjp-protesters-near-parliament-house-as-chaos-unfolds-amid-chalo-sansad-4080104",
+    "type": "News report"
+  },
+  "wikiJantarMantar2026": {
+    "title": "2026 Delhi Jantar Mantar protests",
+    "publisher": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/2026_Delhi_Jantar_Mantar_protests",
+    "type": "Encyclopedia lead"
   }
 }
