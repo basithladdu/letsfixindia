@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=2">
+    <link rel="stylesheet" href="/styles.css?v=25">
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
       if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
@@ -55,6 +55,10 @@
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
           Voices
         </a>
+        <a href="/sources" data-link>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.71"></path></svg>
+          Sources
+        </a>
         <a href="/submit" data-link>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
           Submit
@@ -76,6 +80,9 @@
           About
         </a>
       </nav>
+      <button class="nav-sound-button" type="button" data-sound-toggle aria-label="Sound off" aria-pressed="false" title="Sound off">
+        <span>Sound off</span>
+      </button>
       <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideNav">
         <span class="menu-bar"></span>
         <span class="menu-bar"></span>
@@ -101,6 +108,10 @@
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
         Voices
       </a>
+      <a href="/sources" data-link>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.71"></path></svg>
+        Sources
+      </a>
       <a href="/submit" data-link>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
         Submit
@@ -121,6 +132,9 @@
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
         About
       </a>
+      <button class="side-sound-button" type="button" data-sound-toggle aria-label="Sound off" aria-pressed="false" title="Sound off">
+        <span>Sound off</span>
+      </button>
     </nav>
 
     <main id="top">
@@ -129,6 +143,11 @@
           <p class="eyebrow">India under BJP / Modi administrations</p>
           <h1>LetsFixIndia 2014-2026</h1>
           <p class="lede">A sourced public record of governance shocks, rights concerns, protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry carries an evidence status and linked sources.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="/#timeline" data-link>Explore records</a>
+            <a href="/statistics" data-link>View statistics</a>
+            <a href="/submit" data-link>Submit evidence</a>
+          </div>
           <blockquote class="democracy-definition" style="margin: 1.75rem 0; padding: 1.25rem 1.5rem; border-left: 4px solid #2563eb; background: rgba(37, 99, 235, 0.04); border-radius: 0 12px 12px 0; font-size: 1rem; line-height: 1.6; color: #1e3a8a; box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);">
             <div style="font-weight: 700; color: #1d4ed8; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #2563eb;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -168,29 +187,29 @@
             <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters">Clear filters</button>
           </label>
           <details id="advancedFilters" class="advanced-filters">
-            <summary>Filters</summary>
+            <summary>Filters <span id="advancedFilterBadge" class="filter-summary-badge" hidden>0 active</span></summary>
             <div class="advanced-filter-grid">
               <label>
                 <span>Category</span>
-                <select id="categoryFilter">
+                <select id="categoryFilter" aria-label="Filter records by category">
                   <option value="all">All categories</option>
                 </select>
               </label>
               <label>
                 <span>Actor tag</span>
-                <select id="actorFilter">
+                <select id="actorFilter" aria-label="Filter records by actor tag">
                   <option value="all">All actors</option>
                 </select>
               </label>
               <label>
                 <span>Status</span>
-                <select id="statusFilter">
+                <select id="statusFilter" aria-label="Filter records by status">
                   <option value="all">All statuses</option>
                 </select>
               </label>
               <label>
                 <span>Evidence</span>
-                <select id="evidenceFilter">
+                <select id="evidenceFilter" aria-label="Filter records by evidence status">
                   <option value="all">All evidence</option>
                   <option value="linked">Fully linked</option>
                   <option value="pending">Pending URLs</option>
@@ -199,7 +218,7 @@
               </label>
               <label>
                 <span>Sort order</span>
-                <select id="sortFilter">
+                <select id="sortFilter" aria-label="Sort timeline records">
                   <option value="desc">Newest first (2026-2014)</option>
                   <option value="asc">Oldest first (2014-2026)</option>
                 </select>
@@ -243,6 +262,22 @@
           <span id="indicatorResultCount" class="stats-result" aria-live="polite"></span>
         </div>
         <div id="indicatorGrid" class="indicator-grid"></div>
+      </section>
+
+      <section id="sources" class="section route-page" data-page="sources">
+        <div class="section-head">
+          <p class="eyebrow">Source ledger</p>
+          <h2>Evidence behind the record</h2>
+          <p>Search the public source registry, inspect URL-backed records, and isolate entries still awaiting stronger verification. No raw-data download controls are exposed on this page.</p>
+          <div id="sourceAuditCards" class="source-audit-cards" aria-label="Source ledger health"></div>
+        </div>
+        <div class="stats-toolbar" aria-label="Source filters">
+          <label class="stats-search"><span>Search sources</span><input id="sourceSearchInput" type="search" placeholder="Search ID, publisher, title, or type"></label>
+          <label><span>Status</span><select id="sourceStatusFilter"><option value="all">All source records</option><option value="linked">Linked URL</option><option value="pending">URL pending</option><option value="unused-linked">Unreferenced URL</option><option value="unused-pending">Pending placeholder</option></select></label>
+          <button id="clearSourceFiltersButton" class="clear-filters-button" type="button" title="Reset source filters">Clear filters</button>
+          <span id="sourceSummary" class="source-summary" aria-live="polite"></span>
+        </div>
+        <div id="sourceList" class="source-list" aria-live="polite"></div>
       </section>
 
       <section id="timeline" class="section timeline-section route-page" data-page="timeline">
@@ -558,7 +593,8 @@
           <div class="about-support-note">
             <p class="eyebrow">How to support the record</p>
             <h3>Bring evidence, not just volume</h3>
-            <p>One primary document can improve an entry more than a hundred reposts. Use <a href="/submit" data-link>Submit</a> for a missing record or correction, or <a href="https://github.com/basithladdu/letsfixindia" target="_blank" rel="noopener">review the code and data on GitHub</a>.</p>
+            <p>One primary document can improve an entry more than a hundred reposts. Use <a href="/submit" data-link>Submit</a> for a missing record or correction.</p>
+            <p><a class="text-button" href="https://github.com/basithladdu/letsfixindia" target="_blank" rel="noopener">Review the code and data on GitHub</a></p>
           </div>
         </div>
         <blockquote class="about-quote">
@@ -718,8 +754,8 @@
             <p>Share it — that is genuinely worth more than a donation. Beyond that: submit missing events with sources, flag wording that claims more than the evidence shows, check court-status updates, or contribute on GitHub. A record like this stays alive by being read, checked, and corrected.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I download the raw data or host a mirror?</summary>
-            <p>Yes. The entire dataset of events, sources, and codebase is open source and hosted on GitHub. You can download the JSON records, verify the code, run it locally, or deploy your own copy of the site without needing any special permission.</p>
+            <summary>Can I inspect the raw data or host a mirror?</summary>
+            <p>Yes. The dataset and codebase are open source in the public repository, so contributors can inspect the records, verify the code, run it locally, or host a mirror. The website itself does not show raw-data download buttons.</p>
           </details>
         </div>
       </section>
@@ -748,9 +784,9 @@
                 <strong>UPI QR</strong>
                 <div class="upi-id-container">
                   <small>basithmuqeeth-1@okhdfcbank</small>
-                  <button type="button" class="copy-upi-btn" onclick="const btn = this; navigator.clipboard.writeText('basithmuqeeth-1@okhdfcbank').then(() => { const original = btn.innerHTML; btn.innerHTML = 'Copied!'; setTimeout(() => btn.innerHTML = original, 1500); }).catch(err => console.error(err))" title="Copy UPI ID">
+                  <button type="button" class="copy-upi-btn" data-copy-text="basithmuqeeth-1@okhdfcbank" data-default-label="Copy" data-success-label="Copied!" data-error-label="Copy failed" title="Copy UPI ID" aria-label="Copy UPI ID">
                     <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-top:-2px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    Copy
+                    <span data-copy-label>Copy</span>
                   </button>
                 </div>
                 <span class="upi-app-badge">Any UPI app</span>
@@ -779,6 +815,18 @@
 
 
       <section id="recordView" class="section record-view route-page" data-page="record"></section>
+
+      <section id="notFoundView" class="section not-found-section route-page" data-page="not-found">
+        <div class="empty-state">
+          <strong>Page not found</strong>
+          <p>This address is not part of the current LetsFixIndia site. Use the buttons below to get back to a working route.</p>
+          <div class="hero-actions" aria-label="Not found actions">
+            <a href="/" data-link>Back to timeline</a>
+            <a href="/statistics" data-link>View statistics</a>
+            <a href="/submit" data-link>Submit evidence</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div id="scrollDock" class="scroll-dock" role="toolbar" aria-label="Timeline scroll controls" hidden>
@@ -801,7 +849,7 @@
       </div>
     </footer>
 
-    <div id="splashScreen" class="splash-screen" role="dialog" aria-modal="true" aria-labelledby="splashTitle" style="display: none;">
+    <div id="splashScreen" class="splash-screen" role="dialog" aria-modal="true" aria-labelledby="splashTitle" aria-hidden="true" hidden>
       <div class="splash-backdrop"></div>
       <div class="splash-content">
         <div class="splash-header">
@@ -836,14 +884,14 @@
             <input type="checkbox" id="dontShowAgain">
             <span>Don't show again</span>
           </label>
-          <button id="dismissSplash" class="splash-btn-primary">Dismiss</button>
+          <button id="dismissSplash" class="splash-btn-primary" type="button">Dismiss</button>
         </div>
       </div>
     </div>
 
     <noscript><style>.route-page{display:block!important}</style><p style="padding:24px;font-family:sans-serif">JavaScript is required to filter and search records. Enable JS to use LetsFixIndia fully.</p></noscript>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/app.js?v=2"></script>
+    <script src="/app.js?v=25"></script>
     <!-- Mobile Scroll Progress Indicator -->
     <div id="mobileScrollProgress" class="mobile-scroll-progress" aria-hidden="true">
       <div id="mobileScrollProgressFill" class="mobile-scroll-progress-fill"></div>

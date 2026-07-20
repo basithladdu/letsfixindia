@@ -6,7 +6,6 @@ let db;
 try {
   if (typeof window !== 'undefined' && window.supabase) {
     db = window.supabase.createClient(supabaseUrl, supabaseKey);
-    console.log("Supabase initialized successfully");
   }
 } catch (error) {
   console.error("Supabase init failed:", error);
@@ -121,6 +120,7 @@ const defaultDescription = document.querySelector('meta[name="description"]');
 const defaultDescriptionText = defaultDescription?.content || "";
 const routePages = Array.from(document.querySelectorAll("[data-page]"));
 const advancedFilters = document.querySelector("#advancedFilters");
+const advancedFilterBadge = document.querySelector("#advancedFilterBadge");
 const scrollDock = document.querySelector("#scrollDock");
 const voicesGrid = document.querySelector("#voicesGrid");
 const voicesSummary = document.querySelector("#voicesSummary");
@@ -148,8 +148,12 @@ let scrollSaveQueued = false;
 let filtersWideState = null;
 let autoScrollFrame = 0;
 let autoScrollActive = false;
-let soundEnabled = localStorage.getItem(UI_SOUND_KEY) === "on";
+let routeMotionTimer = 0;
+let soundEnabled = readUiSoundPreference();
 let audioContext = null;
+let scrollProgressBar = null;
+let globalStatusToast = null;
+let globalStatusTimer = 0;
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -161,6 +165,14 @@ function esc(str) {
 
 function closestFromEvent(event, selector) {
   return event.target instanceof Element ? event.target.closest(selector) : null;
+}
+
+function readUiSoundPreference() {
+  try {
+    return localStorage.getItem(UI_SOUND_KEY) === "on";
+  } catch {
+    return false;
+  }
 }
 
 function updateSoundButtons() {
@@ -177,38 +189,153 @@ function updateSoundButtons() {
 
 function setSoundEnabled(enabled) {
   soundEnabled = enabled;
-  localStorage.setItem(UI_SOUND_KEY, enabled ? "on" : "off");
+  try {
+    localStorage.setItem(UI_SOUND_KEY, enabled ? "on" : "off");
+  } catch {
+    // Keep the current page state even if browser storage is blocked.
+  }
   document.documentElement.classList.toggle("sound-enabled", enabled);
   updateSoundButtons();
 }
 
 function playUiSound(kind = "tap", force = false) {
   if (!force && !soundEnabled) return;
+  if (navigator.vibrate) {
+    try {
+      navigator.vibrate(kind === "success" ? [8, 22, 10] : 10);
+    } catch {}
+  }
   try {
     const AudioCtx = window.AudioContext || window.webkitAudioContext;
     if (!AudioCtx) return;
     audioContext ||= new AudioCtx();
     if (audioContext.state === "suspended") audioContext.resume();
     const now = audioContext.currentTime;
-    const osc = audioContext.createOscillator();
-    const gain = audioContext.createGain();
     const notes = {
-      tap: [440, 0.035, 0.018],
-      nav: [520, 0.055, 0.026],
-      filter: [360, 0.045, 0.018],
-      success: [660, 0.08, 0.032]
+      tap: [[440, 0, 0.035, 0.018]],
+      nav: [[520, 0, 0.045, 0.022], [640, 0.048, 0.04, 0.016]],
+      filter: [[360, 0, 0.04, 0.016], [420, 0.035, 0.035, 0.012]],
+      success: [[660, 0, 0.055, 0.028], [880, 0.06, 0.07, 0.02]]
     };
-    const [freq, duration, peak] = notes[kind] || notes.tap;
-    osc.type = "sine";
-    osc.frequency.setValueAtTime(freq, now);
-    osc.frequency.exponentialRampToValueAtTime(freq * 1.18, now + duration);
-    gain.gain.setValueAtTime(0.0001, now);
-    gain.gain.exponentialRampToValueAtTime(peak, now + 0.006);
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
-    osc.connect(gain).connect(audioContext.destination);
-    osc.start(now);
-    osc.stop(now + duration + 0.01);
+    (notes[kind] || notes.tap).forEach(([freq, offset, duration, peak]) => {
+      const start = now + offset;
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.type = kind === "success" ? "triangle" : "sine";
+      osc.frequency.setValueAtTime(freq, start);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.14, start + duration);
+      gain.gain.setValueAtTime(0.0001, start);
+      gain.gain.exponentialRampToValueAtTime(peak, start + 0.006);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      osc.connect(gain).connect(audioContext.destination);
+      osc.start(start);
+      osc.stop(start + duration + 0.012);
+    });
   } catch {}
+}
+
+function setGlobalStatus(message, delay = 1800) {
+  if (!message) return;
+  if (!globalStatusToast) {
+    globalStatusToast = document.createElement("div");
+    globalStatusToast.className = "ui-toast";
+    globalStatusToast.setAttribute("role", "status");
+    globalStatusToast.setAttribute("aria-live", "polite");
+    document.body.appendChild(globalStatusToast);
+  }
+  window.clearTimeout(globalStatusTimer);
+  globalStatusToast.textContent = message;
+  globalStatusToast.classList.add("is-visible");
+  globalStatusTimer = window.setTimeout(() => {
+    globalStatusToast?.classList.remove("is-visible");
+  }, delay);
+}
+
+function setShareStatus(control, message, delay = 1800) {
+  const status = control?.closest?.(".share-bar")?.querySelector?.("[data-share-status]");
+  if (!status) {
+    setGlobalStatus(message, delay);
+    return;
+  }
+  window.clearTimeout(status._clearTimer);
+  status.textContent = message;
+  status.classList.toggle("is-visible", Boolean(message));
+  if (message && delay) {
+    status._clearTimer = window.setTimeout(() => {
+      status.textContent = "";
+      status.classList.remove("is-visible");
+    }, delay);
+  }
+}
+
+async function copyTextToClipboard(text) {
+  const value = String(text || "");
+  if (!value) return false;
+  try {
+    await navigator.clipboard.writeText(value);
+    return true;
+  } catch {
+    const field = document.createElement("textarea");
+    field.value = value;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.left = "-9999px";
+    field.style.top = "0";
+    document.body.appendChild(field);
+    field.select();
+    field.setSelectionRange(0, field.value.length);
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch {
+      copied = false;
+    }
+    field.remove();
+    return copied;
+  }
+}
+
+function triggerTapFeedback(control, sourceEvent) {
+  if (!(control instanceof HTMLElement)) return;
+  if (sourceEvent && "clientX" in sourceEvent && "clientY" in sourceEvent) {
+    const rect = control.getBoundingClientRect();
+    control.style.setProperty("--tap-x", `${sourceEvent.clientX - rect.left}px`);
+    control.style.setProperty("--tap-y", `${sourceEvent.clientY - rect.top}px`);
+  }
+  control.classList.remove("is-tapping");
+  void control.offsetWidth;
+  control.classList.add("is-tapping");
+  window.setTimeout(() => control.classList.remove("is-tapping"), 900);
+}
+
+function triggerRouteMotion(page) {
+  document.documentElement.dataset.route = page;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  window.clearTimeout(routeMotionTimer);
+  document.documentElement.classList.remove("route-motion");
+  void document.documentElement.offsetWidth;
+  document.documentElement.classList.add("route-motion");
+  routeMotionTimer = window.setTimeout(() => {
+    document.documentElement.classList.remove("route-motion");
+  }, 900);
+}
+
+function ensureScrollProgress() {
+  if (scrollProgressBar) return;
+  scrollProgressBar = document.createElement("div");
+  scrollProgressBar.className = "scroll-progress";
+  scrollProgressBar.setAttribute("aria-hidden", "true");
+  scrollProgressBar.dataset.scrollProgress = "";
+  document.body.prepend(scrollProgressBar);
+  updateScrollProgress();
+}
+
+function updateScrollProgress() {
+  if (!scrollProgressBar) return;
+  const max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = max ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+  scrollProgressBar.hidden = max < 80;
+  scrollProgressBar.style.transform = `scaleX(${progress})`;
 }
 
 function uniqueSorted(values) {
@@ -315,7 +442,29 @@ function timelineSavedY() {
 }
 
 function scrollToY(y, behavior = "smooth") {
-  window.scrollTo({ top: clampScroll(y), behavior });
+  const target = clampScroll(y);
+  if (behavior === "auto") {
+    const root = document.documentElement;
+    const body = document.body;
+    const previousBehavior = root.style.scrollBehavior;
+    const previousBodyBehavior = body.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    body.style.scrollBehavior = "auto";
+    root.scrollTop = target;
+    body.scrollTop = target;
+    requestAnimationFrame(() => {
+      root.style.scrollBehavior = previousBehavior;
+      body.style.scrollBehavior = previousBodyBehavior;
+    });
+    return;
+  }
+  window.scrollTo({ top: target, behavior });
+}
+
+function jumpDockToY(y) {
+  cancelCruise();
+  scrollToY(y, "auto");
+  requestAnimationFrame(updateScrollDock);
 }
 
 let cruiseFrame = 0;
@@ -386,7 +535,7 @@ function setAutoScroll(active) {
     }
     const elapsed = lastTime ? Math.min(50, time - lastTime) : 16;
     lastTime = time;
-    window.scrollBy(0, Math.max(1, elapsed * 0.045));
+    window.scrollBy(0, Math.max(7, elapsed * 0.34));
     autoScrollFrame = requestAnimationFrame(tick);
   };
   autoScrollFrame = requestAnimationFrame(tick);
@@ -405,8 +554,9 @@ function updateScrollDock() {
   if (!scrollDock) return;
   const route = resolveRoute();
   const isLongTimeline = route.page === "timeline" && document.documentElement.scrollHeight > window.innerHeight * 1.45;
-  scrollDock.hidden = !isLongTimeline;
-  scrollDock.classList.toggle("is-visible", isLongTimeline);
+  const shouldShowDock = isLongTimeline;
+  scrollDock.hidden = !shouldShowDock;
+  scrollDock.classList.toggle("is-visible", shouldShowDock);
   if (!isLongTimeline) return;
   const topButton = scrollDock.querySelector("[data-scroll-action='top']");
   const middleButton = scrollDock.querySelector("[data-scroll-action='saved']");
@@ -429,6 +579,22 @@ function updateScrollDock() {
 
 function restoreTimelineScroll(behavior = "auto") {
   scrollToY(timelineSavedY(), behavior);
+}
+
+function hashTargetFor(hash = window.location.hash) {
+  if (!hash || hash === "#") return null;
+  try {
+    return document.getElementById(decodeURIComponent(hash.slice(1)));
+  } catch {
+    return null;
+  }
+}
+
+function scrollToHashTarget(hash = window.location.hash, behavior = "auto") {
+  const target = hashTargetFor(hash);
+  if (!target) return false;
+  target.scrollIntoView({ behavior, block: "start" });
+  return true;
 }
 
 function syncFilterDisclosure() {
@@ -477,8 +643,8 @@ function renderOptions() {
 
   const years = uniqueSorted(pool("year").map((e) => e.year)).sort((a, b) => b - a);
   yearRail.innerHTML = [
-    `<button class="year-pill${state.year === "all" ? " active" : ""}" data-year="all">All years</button>`,
-    ...years.map((year) => `<button class="year-pill${state.year === String(year) ? " active" : ""}" data-year="${year}">${year}</button>`)
+    `<button type="button" class="year-pill${state.year === "all" ? " active" : ""}" data-year="all" aria-pressed="${state.year === "all"}">All years</button>`,
+    ...years.map((year) => `<button type="button" class="year-pill${state.year === String(year) ? " active" : ""}" data-year="${year}" aria-pressed="${state.year === String(year)}">${year}</button>`)
   ].join("");
 }
 
@@ -500,6 +666,17 @@ function renderTimeline() {
   renderOptions();
   const filtered = events.filter(matches).sort(state.sort === "asc" ? byTimelineAsc : byTimeline);
   const activeTotal = events.length;
+  const activeAdvancedFilters = [
+    state.category !== "all",
+    state.actor !== "all",
+    state.status !== "all",
+    state.evidence !== "all",
+    state.sort !== "desc"
+  ].filter(Boolean).length;
+  if (advancedFilterBadge) {
+    advancedFilterBadge.hidden = activeAdvancedFilters === 0;
+    advancedFilterBadge.textContent = `${activeAdvancedFilters} active`;
+  }
   if (resultCount) resultCount.textContent = `${filtered.length} of ${activeTotal} records`;
   if (evidenceSummary) {
     const linked = filtered.filter((event) => sourceStatus(event.sources).className === "linked").length;
@@ -510,7 +687,7 @@ function renderTimeline() {
       : `Every entry links to its sources`;
   }
   if (clearFiltersButton) {
-    clearFiltersButton.disabled = !state.query && state.category === "all" && state.actor === "all" && state.status === "all" && state.evidence === "all" && state.year === "all";
+    clearFiltersButton.disabled = !state.query && state.category === "all" && state.actor === "all" && state.status === "all" && state.evidence === "all" && state.year === "all" && state.sort === "desc";
   }
   pulseResultCount();
   markTimelineRefreshing();
@@ -559,7 +736,7 @@ function renderTimeline() {
               <p>${esc(event.summary)}</p>
               <p class="outcome">${esc(event.outcome)}</p>
               <div style="margin-top: 12px; display: flex; justify-content: flex-end; border-top: 1px dashed rgba(0,0,0,0.05); padding-top: 8px;">
-                <a href="/submit?correct=${event.id}" data-link style="font-size: 0.8rem; color: var(--muted); text-decoration: underline;">Suggest a correction or update</a>
+                <a href="/submit?correct=${event.id}" data-link class="correction-link">Suggest a correction or update</a>
               </div>
             </div>
           </article>
@@ -839,6 +1016,9 @@ function renderSources() {
   if (sourceSummary) {
     sourceSummary.textContent = `${filtered.length} of ${entries.length} source records shown; ${linked} linked; ${pending} awaiting URL verification; ${unusedLinked} unreferenced URLs; ${unusedPending} pending placeholders.`;
   }
+  if (clearSourceFiltersButton) {
+    clearSourceFiltersButton.disabled = !sourceState.query && sourceState.status === "all";
+  }
   if (!filtered.length) {
     sourceList.innerHTML = `<div class="empty-state"><strong>No sources match</strong><p>Try a shorter publisher or title fragment.</p></div>`;
     return;
@@ -867,6 +1047,9 @@ const SHARE_ICONS = {
   x: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>`,
   fb: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`,
   ig: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>`,
+  li: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.447-2.136 2.943v5.663H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.368-1.852 3.6 0 4.266 2.37 4.266 5.455v6.288zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.114 20.452H3.558V9h3.556v11.452z"/></svg>`,
+  tg: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.78 15.37 9.4 20.7c.55 0 .79-.24 1.08-.52l2.59-2.48 5.37 3.93c.98.54 1.67.26 1.94-.91l3.52-16.5c.31-1.45-.52-2.02-1.48-1.66L1.75 10.5c-1.41.55-1.39 1.34-.24 1.7l5.32 1.66L19.18 6.1c.58-.38 1.11-.17.67.21L9.78 15.37z"/></svg>`,
+  native: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 1 0 15 5c0 .24.04.47.09.7L8.04 9.81A3 3 0 1 0 8.04 14.2l7.12 4.18c-.05.21-.08.43-.08.65a2.92 2.92 0 1 0 2.92-2.95z"/></svg>`,
   copy: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`
 };
 
@@ -875,12 +1058,16 @@ function shareBarHtml(url, text) {
   const t = encodeURIComponent(text);
   return `
     <span class="share-label">Share</span>
-    <a class="share-btn share-wa" href="https://wa.me/?text=${t}%20${u}" target="_blank" rel="noopener" aria-label="Share on WhatsApp">${SHARE_ICONS.wa}<span>WhatsApp</span></a>
-    <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=${t}&url=${u}" target="_blank" rel="noopener" aria-label="Share on X">${SHARE_ICONS.x}<span>X</span></a>
-    <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" aria-label="Share on Facebook">${SHARE_ICONS.fb}<span>Facebook</span></a>
-    <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener" aria-label="LetsFixIndia on Instagram">${SHARE_ICONS.ig}<span>Instagram</span></a>
+    <a class="share-btn share-wa" href="https://wa.me/?text=${t}%20${u}" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">${SHARE_ICONS.wa}<span>WhatsApp</span></a>
+    <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=${t}&url=${u}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">${SHARE_ICONS.x}<span>X</span></a>
+    <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">${SHARE_ICONS.fb}<span>Facebook</span></a>
+    <a class="share-btn share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=${u}" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">${SHARE_ICONS.li}<span>LinkedIn</span></a>
+    <a class="share-btn share-tg" href="https://t.me/share/url?url=${u}&text=${t}" target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram">${SHARE_ICONS.tg}<span>Telegram</span></a>
+    <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener noreferrer" aria-label="LetsFixIndia on Instagram">${SHARE_ICONS.ig}<span>Instagram</span></a>
+    <button type="button" class="share-btn share-native" data-native-share-url="${esc(url)}" data-native-share-text="${esc(text)}" aria-label="Open native share">${SHARE_ICONS.native}<span>Share</span></button>
     <button type="button" class="share-btn share-copy" data-share-url="${esc(url)}" aria-label="Copy link">${SHARE_ICONS.copy}<span>Copy link</span></button>
     <button type="button" class="share-btn share-sound" data-sound-toggle aria-pressed="false" aria-label="Sound off"><span>Sound off</span></button>
+    <span class="share-status" data-share-status aria-live="polite"></span>
   `;
 }
 
@@ -892,14 +1079,89 @@ function renderShareBars() {
 }
 
 document.addEventListener("click", async (event) => {
-  const button = event.target.closest("button[data-share-url]");
+  const nativeShare = closestFromEvent(event, "button[data-native-share-url]");
+  if (nativeShare) {
+    triggerTapFeedback(nativeShare, event);
+    const url = nativeShare.dataset.nativeShareUrl || SITE_URL;
+    const text = nativeShare.dataset.nativeShareText || SITE_SHARE_TEXT;
+    const label = nativeShare.querySelector("span");
+    const defaultLabel = label?.textContent || "Share";
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: "LetsFixIndia", text, url });
+        setShareStatus(nativeShare, "Shared");
+        playUiSound("success");
+        return;
+      }
+    } catch {
+      return;
+    }
+    if (await copyTextToClipboard(url)) {
+      nativeShare.classList.add("is-copied");
+      if (label) label.textContent = "Copied";
+      nativeShare.setAttribute("aria-label", "Link copied");
+      setShareStatus(nativeShare, "Link copied");
+      playUiSound("success");
+      setTimeout(() => {
+        nativeShare.classList.remove("is-copied");
+        if (label) label.textContent = defaultLabel;
+        nativeShare.setAttribute("aria-label", "Open native share");
+      }, 1800);
+    }
+    return;
+  }
+
+  const button = closestFromEvent(event, "button[data-share-url]");
   if (!button) return;
-  try {
-    await navigator.clipboard.writeText(button.dataset.shareUrl);
+  triggerTapFeedback(button, event);
+  const label = button.querySelector("span");
+  const defaultLabel = label?.textContent || "Copy link";
+  if (await copyTextToClipboard(button.dataset.shareUrl)) {
     button.classList.add("is-copied");
-    setTimeout(() => { button.classList.remove("is-copied"); }, 1600);
-  } catch {
+    button.setAttribute("aria-label", "Link copied");
+    if (label) label.textContent = "Copied";
+    setShareStatus(button, "Link copied");
+    setTimeout(() => {
+      button.classList.remove("is-copied");
+      button.setAttribute("aria-label", defaultLabel);
+      if (label) label.textContent = defaultLabel;
+    }, 1600);
+  } else {
     button.title = "Copy failed";
+    button.setAttribute("aria-label", "Copy failed");
+    if (label) label.textContent = "Copy failed";
+    setShareStatus(button, "Copy failed");
+    setTimeout(() => {
+      button.setAttribute("aria-label", defaultLabel);
+      if (label) label.textContent = defaultLabel;
+    }, 1800);
+  }
+});
+
+document.addEventListener("click", async (event) => {
+  const button = closestFromEvent(event, "button[data-copy-text]");
+  if (!button || button.disabled) return;
+  triggerTapFeedback(button, event);
+  const label = button.querySelector("[data-copy-label]");
+  const defaultLabel = button.dataset.defaultLabel || label?.textContent || "Copy";
+  const successLabel = button.dataset.successLabel || "Copied";
+  const errorLabel = button.dataset.errorLabel || "Copy failed";
+  if (await copyTextToClipboard(button.dataset.copyText || "")) {
+    button.classList.add("is-copied");
+    if (label) label.textContent = successLabel;
+    button.setAttribute("aria-label", successLabel);
+    setTimeout(() => {
+      button.classList.remove("is-copied");
+      if (label) label.textContent = defaultLabel;
+      button.setAttribute("aria-label", button.title || defaultLabel);
+    }, 1600);
+  } else {
+    if (label) label.textContent = errorLabel;
+    button.setAttribute("aria-label", errorLabel);
+    setTimeout(() => {
+      if (label) label.textContent = defaultLabel;
+      button.setAttribute("aria-label", button.title || defaultLabel);
+    }, 1800);
   }
 });
 
@@ -908,11 +1170,14 @@ document.addEventListener("click", (event) => {
   if (toggle) {
     const next = !soundEnabled;
     setSoundEnabled(next);
+    triggerTapFeedback(toggle, event);
+    setShareStatus(toggle, next ? "Sound on" : "Sound off");
     playUiSound(next ? "success" : "tap", true);
     return;
   }
   const control = closestFromEvent(event, "a, button, summary");
   if (!control || control.disabled) return;
+  triggerTapFeedback(control, event);
   playUiSound(control.hasAttribute("data-link") ? "nav" : "tap");
 });
 
@@ -986,33 +1251,15 @@ function clearSourceFilters() {
   renderSources();
 }
 
-function downloadCurrentSources() {
-  const usage = new Map();
-  events.forEach((event) => (event.sources || []).forEach((id) => usage.set(id, (usage.get(id) || 0) + 1)));
-  indicators.forEach((indicator) => (indicator.sources || []).forEach((id) => usage.set(id, (usage.get(id) || 0) + 1)));
-  voices.forEach((voice) => (voice.stances || []).forEach((stance) => (stance.sources || []).forEach((id) => usage.set(id, (usage.get(id) || 0) + 1))));
-  researchBacklog.forEach((item) => (item.sourceKeys || []).forEach((id) => usage.set(id, (usage.get(id) || 0) + 1)));
-  const query = sourceState.query;
-  const filtered = Object.entries(sources).filter(([id, source]) =>
-    (!query || `${id} ${source.title} ${source.publisher} ${source.type}`.toLowerCase().includes(query)) &&
-    (sourceState.status === "all" || sourceState.status === sourceFilterStatus(id, source, usage))
-  );
-  const payload = Object.fromEntries(filtered.map(([id, source]) => [id, { ...source, referenceCount: usage.get(id) || 0 }]));
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `letsfixindia-sources-${sourceState.status}.json`;
-  link.click();
-  URL.revokeObjectURL(url);
-}
-
 function updatePageMeta(route) {
   let title = defaultTitle;
   let description = defaultDescriptionText;
   if (route.page === "voices") {
     title = "Public Voices | LetsFixIndia";
     description = "Documented public statements, silence, and institutional responses to major Modi-era controversies.";
+  } else if (route.page === "sources") {
+    title = "Source Ledger | LetsFixIndia";
+    description = "Search the public source ledger and inspect linked, pending, and placeholder evidence records.";
   } else if (route.page === "faq") {
     title = "FAQ | LetsFixIndia";
     description = "How LetsFixIndia classifies evidence, handles corrections, and separates public records from unresolved leads.";
@@ -1031,6 +1278,9 @@ function updatePageMeta(route) {
   } else if (route.page === "contact") {
     title = "Contact | LetsFixIndia";
     description = "Contact Basith and Devit directly for corrections, collaboration, or software development work.";
+  } else if (route.page === "methodology") {
+    title = "Methodology | LetsFixIndia";
+    description = "How LetsFixIndia separates documented events, allegations, outcomes, and evidence caveats.";
   } else if (route.page === "submit") {
     title = "Submit a record | LetsFixIndia";
     description = "Propose a sourced public-record entry. Drafts stay local in your browser until an editor reviews them.";
@@ -1040,6 +1290,9 @@ function updatePageMeta(route) {
   } else if (route.page === "about") {
     title = "About | LetsFixIndia";
     description = "Who maintains LetsFixIndia, how to support sourced corrections, and where the public repository lives.";
+  } else if (route.page === "not-found") {
+    title = "Page not found | LetsFixIndia";
+    description = "This address is not part of the current LetsFixIndia site.";
   } else if (route.page === "timeline") {
     title = defaultTitle;
     description = defaultDescriptionText;
@@ -1056,17 +1309,40 @@ function routeFromPath(pathname) {
   if (path === "/" || path === "/timeline" || path === "/landing") return { page: "timeline" };
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
   if (path === "/voices") return { page: "voices" };
+  if (path === "/sources") return { page: "sources" };
   if (path === "/submit" || path === "/submissions") return { page: "submit" };
   if (path === "/contact") return { page: "contact" };
-  if (path === "/methodology") return { page: "faq" };
+  if (path === "/methodology") return { page: "methodology" };
   if (path === "/faq") return { page: "faq" };
   if (path === "/support") return { page: "support" };
   if (path === "/about") return { page: "about" };
-  return { page: "timeline" };
+  return { page: "not-found" };
 }
 
 function resolveRoute() {
   return routeFromPath(window.location.pathname);
+}
+
+function revealSubmissionForm(focusSelector) {
+  const form = document.getElementById("submissionForm");
+  if (!form) return;
+  document.getElementById("submitModeSelector")?.classList.add("is-compact");
+  document.querySelector(".submit-rules")?.classList.add("is-compact");
+  form.style.display = "grid";
+  requestAnimationFrame(() => {
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const topbar = document.querySelector(".topbar");
+    const topOffset = (topbar?.getBoundingClientRect().height || 0) + 12;
+    const targetTop = Math.max(0, form.getBoundingClientRect().top + window.scrollY - topOffset);
+    window.scrollTo({
+      top: targetTop,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+    const focusTarget = form.querySelector(focusSelector || "input:not([type='hidden']), textarea, select");
+    window.setTimeout(() => {
+      focusTarget?.focus({ preventScroll: true });
+    }, prefersReducedMotion ? 0 : 220);
+  });
 }
 
 function setActiveNav(page) {
@@ -1092,6 +1368,7 @@ function ensureRouteContent(route) {
   if (route.page === "timeline") renderTimeline();
   if (route.page === "statistics") renderIndicators();
   if (route.page === "voices") renderVoices();
+  if (route.page === "sources") renderSources();
   if (route.page === "submit") renderSubmissions();
 
 
@@ -1103,8 +1380,10 @@ function renderRoute(options = {}) {
   updatePageMeta(route);
   ensureRouteContent(route);
   routePages.forEach((section) => section.classList.toggle("is-active", section.dataset.page === route.page));
+  triggerRouteMotion(route.page);
   setActiveNav(route.page);
-  const shouldRestoreTimeline = route.page === "timeline" && (options.restoreTimeline || history.state?.restoreTimeline);
+  const hasHashTarget = Boolean(hashTargetFor());
+  const shouldRestoreTimeline = route.page === "timeline" && !hasHashTarget && (options.restoreTimeline || history.state?.restoreTimeline);
   
   if (route.page === "submit") {
     renderEventDropdownList(events);
@@ -1135,20 +1414,17 @@ function renderRoute(options = {}) {
           if (hiddenInput) hiddenInput.value = matched.id;
         }
         
-        if (form) form.style.display = "grid";
-        
-        const summaryTextarea = document.querySelector('textarea[name="summary"]');
-        if (summaryTextarea) {
-          summaryTextarea.focus();
-        }
+        revealSubmissionForm("textarea[name='summary']");
       }, 50);
     } else {
       if (form) form.style.display = "none";
       if (modeSelector) {
+        modeSelector.classList.remove("is-compact");
         modeSelector.querySelectorAll(".mode-btn").forEach(b => {
           b.classList.remove("active");
         });
       }
+      document.querySelector(".submit-rules")?.classList.remove("is-compact");
     }
   }
 
@@ -1164,12 +1440,25 @@ function renderRoute(options = {}) {
   requestAnimationFrame(() => {
     if (shouldRestoreTimeline) {
       restoreTimelineScroll("auto");
+    } else if (hasHashTarget) {
+      scrollToHashTarget(window.location.hash, "auto");
     } else {
       window.scrollTo({ top: 0, behavior: "auto" });
     }
     updateScrollDock();
     updateMobileScrollProgress();
+    updateScrollProgress();
+    requestAnimationFrame(() => {
+      updateScrollDock();
+      updateMobileScrollProgress();
+      updateScrollProgress();
+    });
   });
+  window.setTimeout(() => {
+    updateScrollDock();
+    updateMobileScrollProgress();
+    updateScrollProgress();
+  }, 140);
 }
 
 function daysBetween(a, b) {
@@ -1308,13 +1597,17 @@ function clearTimelineFilters() {
   state.status = "all";
   state.evidence = "all";
   state.year = "all";
+  state.sort = "desc";
   if (searchInput) searchInput.value = "";
   if (categoryFilter) categoryFilter.value = "all";
   if (actorFilter) actorFilter.value = "all";
   if (statusFilter) statusFilter.value = "all";
   if (evidenceFilter) evidenceFilter.value = "all";
+  if (sortFilter) sortFilter.value = "desc";
   yearRail?.querySelectorAll(".year-pill").forEach((pill) => {
-    pill.classList.toggle("active", pill.dataset.year === "all");
+    const isActive = pill.dataset.year === "all";
+    pill.classList.toggle("active", isActive);
+    pill.setAttribute("aria-pressed", String(isActive));
   });
   renderTimeline();
   updateScrollDock();
@@ -1559,10 +1852,10 @@ function bindEvents() {
     }
     event.preventDefault();
     const restoreTimeline = toRoute.page === "timeline" && fromRoute.page === "record";
-    history.pushState({ restoreTimeline }, "", `${url.pathname}${url.hash}`);
+    history.pushState({ restoreTimeline }, "", `${url.pathname}${url.search}${url.hash}`);
     renderRoute({ restoreTimeline });
     if (url.hash) {
-      requestAnimationFrame(() => document.querySelector(url.hash)?.scrollIntoView({ behavior: "smooth", block: "start" }));
+      requestAnimationFrame(() => scrollToHashTarget(url.hash, "smooth"));
     }
   });
 
@@ -1573,6 +1866,7 @@ function bindEvents() {
   let scrollSaveTimeout = null;
   window.addEventListener("scroll", () => {
     updateMobileScrollProgress();
+    updateScrollProgress();
     if (resolveRoute().page !== "timeline") return;
     if (!scrollSaveQueued) {
       scrollSaveQueued = true;
@@ -1590,6 +1884,7 @@ function bindEvents() {
   window.addEventListener("resize", () => {
     syncFilterDisclosure();
     updateScrollDock();
+    updateScrollProgress();
   });
 
   scrollDock?.addEventListener("click", (event) => {
@@ -1598,14 +1893,14 @@ function bindEvents() {
     const action = button.dataset.scrollAction;
     if (action === "top") {
       localStorage.setItem(TIMELINE_JUMP_ORIGIN_KEY, String(Math.round(window.scrollY)));
-      cruiseTo(0);
+      jumpDockToY(0);
       updateScrollDock();
     }
     if (action === "saved") {
       const jumpOrigin = storedScroll(TIMELINE_JUMP_ORIGIN_KEY);
       if (jumpOrigin > 24) {
         localStorage.removeItem(TIMELINE_JUMP_ORIGIN_KEY);
-        scrollToY(jumpOrigin);
+        jumpDockToY(jumpOrigin);
       } else {
         restoreTimelineScroll();
       }
@@ -1613,7 +1908,7 @@ function bindEvents() {
     }
     if (action === "bottom") {
       localStorage.setItem(TIMELINE_JUMP_ORIGIN_KEY, String(Math.round(window.scrollY)));
-      cruiseTo(maxScrollY());
+      jumpDockToY(maxScrollY());
       updateScrollDock();
     }
     if (action === "auto") setAutoScroll(!autoScrollActive);
@@ -1623,6 +1918,7 @@ function bindEvents() {
     window.addEventListener(eventName, (event) => {
       if (!autoScrollActive) return;
       if (eventName === "keydown" && ["Tab", "Shift", "Control", "Alt", "Meta"].includes(event.key)) return;
+      if (eventName === "pointerdown" && closestFromEvent(event, "[data-scroll-action='auto']")) return;
       setAutoScroll(false);
     }, { passive: true });
   });
@@ -1630,7 +1926,7 @@ function bindEvents() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setAutoScroll(false);
 
   window.addEventListener("keydown", (event) => {
-    if (resolveRoute().page !== "timeline" || scrollDock?.hidden) return;
+    if (resolveRoute().page !== "timeline") return;
     const tag = (event.target?.tagName || "").toLowerCase();
     if (tag === "input" || tag === "textarea" || tag === "select" || event.target?.isContentEditable) return;
     if (event.key === "Home" && !event.metaKey && !event.ctrlKey && !event.altKey) {
@@ -1703,14 +1999,17 @@ function bindEvents() {
     saveTimelineScroll(true);
     state.year = button.dataset.year;
     playUiSound("filter");
-    yearRail.querySelectorAll(".year-pill").forEach((pill) => pill.classList.toggle("active", pill === button));
+    yearRail.querySelectorAll(".year-pill").forEach((pill) => {
+      const isActive = pill === button;
+      pill.classList.toggle("active", isActive);
+      pill.setAttribute("aria-pressed", String(isActive));
+    });
     renderTimeline();
     updateScrollDock();
   });
 
   // Handle big buttons mode selector
   const submitModeSelector = document.getElementById("submitModeSelector");
-  const submissionFormElement = document.getElementById("submissionForm");
 
   submitModeSelector?.addEventListener("click", (event) => {
     const btn = closestFromEvent(event, ".mode-btn");
@@ -1729,9 +2028,7 @@ function bindEvents() {
       radio.dispatchEvent(new Event("change", { bubbles: true }));
     }
     
-    if (submissionFormElement) {
-      submissionFormElement.style.display = "grid";
-    }
+    revealSubmissionForm(mode === "correction" ? "#eventSearchInput" : "input[name='title']");
   });
 
   // Handle submission type toggle
@@ -1847,14 +2144,14 @@ function bindEvents() {
     submissionForm.reset();
     
     // Hide form and reset buttons state
-    if (submissionFormElement) {
-      submissionFormElement.style.display = "none";
-    }
+    submissionForm.style.display = "none";
     if (submitModeSelector) {
+      submitModeSelector.classList.remove("is-compact");
       submitModeSelector.querySelectorAll(".mode-btn").forEach(b => {
         b.classList.remove("active");
       });
     }
+    document.querySelector(".submit-rules")?.classList.remove("is-compact");
     
     renderSubmissions();
     
@@ -1869,8 +2166,8 @@ function bindEvents() {
           window.setTimeout(() => setSubmitFeedback(""), 6000);
         })
         .catch((error) => {
-          console.error("Supabase submission failed:", error);
-          setSubmitFeedback("Saved locally in this browser. Cloud submission failed: " + error.message);
+          console.warn("Supabase submission failed; draft saved locally:", error);
+          setSubmitFeedback("Saved locally in this browser. Cloud submission is offline: " + error.message);
           window.setTimeout(() => setSubmitFeedback(""), 6000);
         });
     } else {
@@ -1881,33 +2178,54 @@ function bindEvents() {
 
   voiceFieldFilter?.addEventListener("change", (event) => {
     voiceState.field = event.target.value;
+    playUiSound("filter");
     renderVoices();
   });
 
   voiceStanceFilter?.addEventListener("change", (event) => {
     voiceState.stance = event.target.value;
+    playUiSound("filter");
     renderVoices();
   });
 
   voiceIssueFilter?.addEventListener("change", (event) => {
     voiceState.issue = event.target.value;
+    playUiSound("filter");
     renderVoices();
   });
   voiceSearchInput?.addEventListener("input", (event) => {
     voiceState.query = event.target.value.trim().toLowerCase();
+    playUiSound("filter");
     renderVoices();
   });
   sourceSearchInput?.addEventListener("input", (event) => {
     sourceState.query = event.target.value.trim().toLowerCase();
+    playUiSound("filter");
     renderSources();
   });
-  indicatorSearchInput?.addEventListener("input", renderIndicators);
-  indicatorToneFilter?.addEventListener("change", renderIndicators);
-  clearIndicatorFiltersButton?.addEventListener("click", clearIndicatorFilters);
-  clearVoiceFiltersButton?.addEventListener("click", clearVoiceFilters);
-  clearSourceFiltersButton?.addEventListener("click", clearSourceFilters);
+  indicatorSearchInput?.addEventListener("input", () => {
+    playUiSound("filter");
+    renderIndicators();
+  });
+  indicatorToneFilter?.addEventListener("change", () => {
+    playUiSound("filter");
+    renderIndicators();
+  });
+  clearIndicatorFiltersButton?.addEventListener("click", () => {
+    playUiSound("success");
+    clearIndicatorFilters();
+  });
+  clearVoiceFiltersButton?.addEventListener("click", () => {
+    playUiSound("success");
+    clearVoiceFilters();
+  });
+  clearSourceFiltersButton?.addEventListener("click", () => {
+    playUiSound("success");
+    clearSourceFilters();
+  });
   sourceStatusFilter?.addEventListener("change", (event) => {
     sourceState.status = event.target.value;
+    playUiSound("filter");
     renderSources();
   });
 
@@ -1948,10 +2266,11 @@ async function init() {
     calculateTenure();
     bindEvents();
     if (!history.state) {
-      history.replaceState({ restoreTimeline: false }, "", window.location.pathname);
+      history.replaceState({ restoreTimeline: false }, "", `${window.location.pathname}${window.location.search}${window.location.hash}`);
     }
     renderShareBars();
     setSoundEnabled(soundEnabled);
+    ensureScrollProgress();
     renderRoute();
   } catch (error) {
     if (timelineList) {
@@ -1982,15 +2301,28 @@ function initSplash() {
   const dontShowCheckbox = document.getElementById("dontShowAgain");
 
   if (splash && dismissBtn) {
+    const isEnabled = splash.dataset.active === "true";
+    if (!isEnabled) {
+      splash.hidden = true;
+      splash.classList.remove("is-visible");
+      splash.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      return;
+    }
+
     const isDismissed = localStorage.getItem("letsfixindia_splash_dismissed_july20") || sessionStorage.getItem("letsfixindia_splash_dismissed_july20");
     if (!isDismissed) {
-      splash.style.display = "flex";
+      splash.hidden = false;
+      splash.classList.add("is-visible");
+      splash.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
     }
 
     const backdrop = splash.querySelector(".splash-backdrop");
     const dismissSplash = () => {
-      splash.style.display = "none";
+      splash.hidden = true;
+      splash.classList.remove("is-visible");
+      splash.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
       if (dontShowCheckbox && dontShowCheckbox.checked) {
         localStorage.setItem("letsfixindia_splash_dismissed_july20", "true");
