@@ -146,8 +146,6 @@ const TIMELINE_JUMP_ORIGIN_KEY = "letsFixIndia.timeline.jumpOrigin";
 const UI_SOUND_KEY = "letsFixIndia.ui.sound";
 let scrollSaveQueued = false;
 let filtersWideState = null;
-let autoScrollFrame = 0;
-let autoScrollActive = false;
 let routeMotionTimer = 0;
 let soundEnabled = readUiSoundPreference();
 let audioContext = null;
@@ -513,33 +511,7 @@ function sourceStatus(ids) {
   return { label: `${linked} linked source${linked === 1 ? "" : "s"}`, className: "linked" };
 }
 
-function setAutoScroll(active) {
-  autoScrollActive = active;
-  if (autoScrollFrame) cancelAnimationFrame(autoScrollFrame);
-  autoScrollFrame = 0;
-  const button = scrollDock?.querySelector("[data-scroll-action='auto']");
-  if (button) {
-    button.textContent = active ? "Pause reading" : "Auto-scroll";
-    button.setAttribute("aria-pressed", String(active));
-    button.title = active ? "Pause automatic reading scroll" : "Start automatic reading scroll";
-    button.classList.toggle("is-active", active);
-  }
-  if (!active) return;
-  let lastTime = 0;
-  const tick = (time) => {
-    if (!autoScrollActive) return;
-    const atBottom = window.scrollY >= maxScrollY() - 2;
-    if (atBottom) {
-      setAutoScroll(false);
-      return;
-    }
-    const elapsed = lastTime ? Math.min(50, time - lastTime) : 16;
-    lastTime = time;
-    window.scrollBy(0, Math.max(7, elapsed * 0.34));
-    autoScrollFrame = requestAnimationFrame(tick);
-  };
-  autoScrollFrame = requestAnimationFrame(tick);
-}
+
 
 function saveTimelineScroll(markReturnPoint = false) {
   if (resolveRoute().page !== "timeline") return;
@@ -1911,19 +1883,7 @@ function bindEvents() {
       jumpDockToY(maxScrollY());
       updateScrollDock();
     }
-    if (action === "auto") setAutoScroll(!autoScrollActive);
   });
-
-  ["wheel", "touchstart", "pointerdown", "keydown"].forEach((eventName) => {
-    window.addEventListener(eventName, (event) => {
-      if (!autoScrollActive) return;
-      if (eventName === "keydown" && ["Tab", "Shift", "Control", "Alt", "Meta"].includes(event.key)) return;
-      if (eventName === "pointerdown" && closestFromEvent(event, "[data-scroll-action='auto']")) return;
-      setAutoScroll(false);
-    }, { passive: true });
-  });
-
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setAutoScroll(false);
 
   window.addEventListener("keydown", (event) => {
     if (resolveRoute().page !== "timeline") return;
