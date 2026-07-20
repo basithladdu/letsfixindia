@@ -1,1 +1,0 @@
-ALTER TABLE letsfixindia_submissions DISABLE ROW LEVEL SECURITY;
