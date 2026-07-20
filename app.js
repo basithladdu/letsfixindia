@@ -167,9 +167,9 @@ function closestFromEvent(event, selector) {
 
 function readUiSoundPreference() {
   try {
-    return localStorage.getItem(UI_SOUND_KEY) === "on";
+    return localStorage.getItem(UI_SOUND_KEY) !== "off";
   } catch {
-    return false;
+    return true;
   }
 }
 
