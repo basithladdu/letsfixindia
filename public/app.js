@@ -1038,7 +1038,6 @@ function shareBarHtml(url, text) {
     <a class="share-btn share-ig" href="https://www.instagram.com/letsfixindia" target="_blank" rel="noopener noreferrer" aria-label="LetsFixIndia on Instagram">${SHARE_ICONS.ig}<span>Instagram</span></a>
     <button type="button" class="share-btn share-native" data-native-share-url="${esc(url)}" data-native-share-text="${esc(text)}" aria-label="Open native share">${SHARE_ICONS.native}<span>Share</span></button>
     <button type="button" class="share-btn share-copy" data-share-url="${esc(url)}" aria-label="Copy link">${SHARE_ICONS.copy}<span>Copy link</span></button>
-    <button type="button" class="share-btn share-sound" data-sound-toggle aria-pressed="false" aria-label="Sound off"><span>Sound off</span></button>
     <span class="share-status" data-share-status aria-live="polite"></span>
   `;
 }
