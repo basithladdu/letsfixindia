@@ -1,0 +1,17 @@
+---
+const { lang = "en-IN" } = Astro.props;
+const isHindi = lang.startsWith("hi");
+---
+<footer class="site-footer">
+  <div>
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">LF</span><span class="brand-wordmark"><span class="brand-article">The</span> LetsFixIndia Archive</span></a>
+    <p>{isHindi ? "एक सार्वजनिक रिकॉर्ड—पढ़ने, जाँचने और सुधारने के लिए।" : "A public record built to be read, checked, and corrected."}</p>
+    <p class="footer-note">{isHindi ? "किसी राजनीतिक दल या समाचार संस्था से संबद्ध नहीं।" : "Independent, non-partisan, and not affiliated with any news organisation."}</p>
+  </div>
+  <nav aria-label="Footer navigation">
+    <a href="/methodology">{isHindi ? "तरीका" : "How we work"}</a>
+    <a href="/sources">{isHindi ? "स्रोत सूची" : "Source ledger"}</a>
+    <a href="/submit">{isHindi ? "सुधार भेजें" : "Suggest a correction"}</a>
+    <a href="/about">{isHindi ? "परियोजना" : "About"}</a>
+  </nav>
+</footer>

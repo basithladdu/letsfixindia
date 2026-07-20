@@ -1,31 +1,23 @@
 # LetsFixIndia
 
-Mobile-first static website for a sourced timeline of major governance crises, rights concerns, scandals, public protests, sexual-violence cases involving political actors, terror attacks, and exam-integrity failures during the BJP/Modi period.
+LetsFixIndia is an Astro-built, source-led public record of events, decisions, institutions, indicators, and public responses in India. It is designed to be readable on a phone, checkable through its source ledger, and open to evidence-backed corrections.
 
-## Structure
+## Architecture
 
-- `index.html` - page shell.
-- `styles.css` - mobile-first visual system.
-- `data/events.json` - timeline entries.
-- `data/sources.json` - source ledger.
-- `data/indicators.json` - numeric indicators.
-- `data/voices.json` - source-linked public statements and documented silence.
-- `app.js` - filters, search, timeline rendering, and local submission queue.
-- `tools/expand-json-data.mjs` - repeatable data updater used to append newly researched entries.
-- `tools/audit-data.mjs` - source-reference and URL integrity audit.
+- `src/pages/` — statically rendered public routes, including one indexable page per record.
+- `src/components/` — shared Astro UI and small progressively enhanced explorers.
+- `src/lib/records.js` — the single read interface for published data.
+- `src/styles/global.css` — the responsive design system.
+- `data/` — reviewed public content: events, sources, indicators, and voices.
+- `supabase/functions/submit-suggestion/` — protected submission intake; public clients do not write to the database directly.
+
+The public site is static-first. Search and filtering improve the page when JavaScript is available, while record content and source links remain available as HTML.
 
 ## Local Run
 
-Serve this folder with any static server. Example:
-
-```powershell
-python -m http.server 5178
-```
-
-Then open:
-
-```text
-http://127.0.0.1:5178/
+```bash
+npm install
+npm run dev
 ```
 
 ## Verification
@@ -36,6 +28,8 @@ Run the complete local release check before publishing research changes:
 npm run check
 ```
 
-This audits source references, validates all JSON databases, and builds the static site.
+This audits source references, validates all JSON databases, and builds the static site. The audit prints exact pending and orphaned source IDs so research cleanup can be assigned without manually searching the data.
 
-The audit prints exact pending and orphaned source IDs so research cleanup can be assigned without manually searching the JSON files.
+## Submissions
+
+Apply the Supabase migrations and deploy `submit-suggestion` as an Edge Function before enabling public submissions. Set `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `TURNSTILE_SECRET_KEY`, `SUBMISSION_RATE_LIMIT_SALT`, and a comma-separated `ALLOWED_ORIGINS` only in the Edge Function environment. Set `PUBLIC_SUBMISSION_ENDPOINT` and `PUBLIC_TURNSTILE_SITE_KEY` in the static site’s build environment. The form is deliberately unavailable until both public values exist. Do not grant `anon` or `authenticated` database access to `letsfixindia_submissions`.

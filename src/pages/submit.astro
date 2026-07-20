@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const endpoint = import.meta.env.PUBLIC_SUBMISSION_ENDPOINT || "";
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "";
+const intakeEnabled = Boolean(endpoint && turnstileSiteKey);
+---
+<BaseLayout title="Suggest a correction | LetsFixIndia" description="Submit a source-backed correction or missing public record for editorial review.">
+  <div class="page-shell"><header class="record-header"><p class="eyebrow">Correction desk</p><h1>Make the record stronger.</h1><p class="lede">Send a precise correction, court update, missing event, or stronger source. Nothing is published automatically.</p></header>
+    <div class="submit-layout section">{intakeEnabled ? <form class="submit-form" data-submission-form>
+      <div class="form-row"><label class="field-label">Your name (optional)<input name="name" autocomplete="name" maxlength="100" /></label><label class="field-label">Email (optional)<input name="email" type="email" autocomplete="email" maxlength="254" /></label></div>
+      <label class="field-label">Type of contribution<select name="kind" required><option value="correction">Correction to an existing record</option><option value="source">Stronger or missing source</option><option value="event">Missing public event</option><option value="outcome">Updated legal or institutional outcome</option></select></label>
+      <label class="field-label">Record or issue<input name="subject" required maxlength="180" placeholder="Title, issue, or relevant record URL" /></label>
+      <label class="field-label">What should change?<textarea name="message" required minlength="30" maxlength="5000" placeholder="State the correction clearly. Include dates, names, and the exact wording that needs review."></textarea></label>
+      <label class="field-label">Source URLs<textarea name="sources" required minlength="10" maxlength="5000" placeholder="One URL per line. Prefer primary documents, court orders, official data, or credible reporting."></textarea></label>
+      <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="turnstile-spin-v1"></div>
+      <label class="field-label"><span><input type="checkbox" required name="confirmation" /> I understand this is a review request, not an automatic publication.</span></label>
+      <button class="button" type="submit">Send for editorial review</button><p class="form-status" data-form-status aria-live="polite"></p>
+    </form> : <article class="method-card"><p class="eyebrow">Correction intake</p><h2>Temporarily unavailable</h2><p>The secure correction form is not configured in this deployment. Please send your source-backed correction by email instead.</p><a class="button" href="mailto:workwithdevit@gmail.com?subject=LetsFixIndia%20correction">Email a correction</a></article>}
+    <aside class="privacy-note"><p><strong>Before you submit</strong></p><p>Do not include sensitive personal information you would not want an editor to handle. Be specific, add sources, and separate facts from your interpretation.</p></aside></div>
+  </div>
+</BaseLayout>
+{intakeEnabled && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+{intakeEnabled && <script define:vars={{ endpoint }}>
+  const form = document.querySelector("[data-submission-form]");
+  const status = document.querySelector("[data-form-status]");
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const button = form.querySelector("button[type=submit]");
+    const payload = Object.fromEntries(new FormData(form).entries());
+    payload.turnstileToken = payload["cf-turnstile-response"];
+    if (status) status.textContent = "Sending your request…";
+    if (button) button.disabled = true;
+    try {
+      const response = await fetch(endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
+      if (!response.ok) throw new Error("Submission service unavailable");
+      form.reset();
+      if (status) status.textContent = "Thank you. Your request is now waiting for editorial review.";
+    } catch {
+      if (status) status.textContent = "We could not send this right now. Please try again later.";
+    } finally { if (button) button.disabled = false; }
+  });
+</script>}

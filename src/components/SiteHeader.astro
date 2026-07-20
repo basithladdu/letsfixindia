@@ -1,0 +1,43 @@
+---
+const { lang = "en-IN" } = Astro.props;
+const isHindi = lang.startsWith("hi");
+const links = [
+  ["/timeline", "Chronicle", "रिकॉर्ड"],
+  ["/statistics", "Data book", "आँकड़े"],
+  ["/voices", "Public voices", "आवाज़ें"],
+  ["/sources", "Source ledger", "स्रोत"],
+  ["/methodology", "Our method", "तरीका"],
+].map(([href, english, hindi]) => [href, isHindi ? hindi : english]);
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="edition-strip" aria-label={isHindi ? "प्रकाशन परिचय" : "Publication details"}>
+    <div class="edition-inner">
+      <span>{isHindi ? "भारत का सार्वजनिक रिकॉर्ड" : "The public-interest edition"}</span>
+      <span class="edition-promise">{isHindi ? "राय से पहले सबूत" : "Evidence before opinion"}</span>
+      <a href={isHindi ? "/" : "/hi/"} lang={isHindi ? "en" : "hi"}>{isHindi ? "English edition" : "हिन्दी संस्करण"}</a>
+    </div>
+  </div>
+  <div class="masthead-inner">
+    <p class="masthead-note">{isHindi ? "स्रोत-आधारित पढ़ाई" : "Source-led reading"}</p>
+    <a class="brand" href={isHindi ? "/hi/" : "/"} aria-label="LetsFixIndia home">
+      <span class="brand-mark" aria-hidden="true">LF</span>
+      <span class="brand-wordmark"><span class="brand-article">The</span> LetsFixIndia Archive</span>
+      <span class="brand-edition">{isHindi ? "सार्वजनिक रिकॉर्ड" : "Public record"}</span>
+    </a>
+    <a class="header-action" href="/submit">{isHindi ? "सबूत भेजें" : "Submit evidence"}</a>
+  </div>
+  <div class="header-inner">
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      {links.map(([href, label]) => <a href={href} aria-current={path === href ? "page" : undefined}>{label}</a>)}
+    </nav>
+    <details class="mobile-nav">
+      <summary aria-label={isHindi ? "मेनू खोलें" : "Open navigation"}>{isHindi ? "मेनू" : "Menu"}</summary>
+      <nav aria-label="Mobile navigation">
+        {links.map(([href, label]) => <a href={href}>{label}</a>)}
+        <a href="/submit">{isHindi ? "सबूत भेजें" : "Submit evidence"}</a>
+        <a href={isHindi ? "/" : "/hi/"} lang={isHindi ? "en" : "hi"}>{isHindi ? "English" : "हिन्दी"}</a>
+      </nav>
+    </details>
+  </div>
+</header>

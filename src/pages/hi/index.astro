@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EventCard from "../../components/EventCard.astro";
+import { events, orderedEvents, sources } from "../../lib/records.js";
+
+const featured = orderedEvents[0];
+---
+<BaseLayout lang="hi-IN" title="लेट्स फिक्स इंडिया | एक सार्वजनिक रिकॉर्ड" description="भारत के सार्वजनिक घटनाक्रमों और स्रोतों को समझने और जाँचने के लिए एक सार्वजनिक रिकॉर्ड।">
+  <div class="page-shell">
+    <section class="hero" aria-labelledby="hindi-home-heading">
+      <div><p class="eyebrow">स्रोतों पर आधारित सार्वजनिक रिकॉर्ड</p><h1 id="hindi-home-heading">जानिए क्या हुआ। सबूत जाँचिए।</h1><p class="lede">लेट्स फिक्स इंडिया घटनाओं, फैसलों और उनके नतीजों को समझने योग्य बनाता है—ताकि किसी दावे को बिना जाँचे मानना न पड़े।</p><div class="hero-actions"><a class="button" href="/timeline">रिकॉर्ड देखें <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/methodology">कैसे पढ़ें</a></div></div>
+      <aside class="trust-panel"><p class="eyebrow">जाँच के लिए बनाया गया</p><h2>तथ्य, स्रोत और अनिश्चितता साथ-साथ।</h2><p>हर प्रविष्टि पाठक को रिपोर्टिंग, आधिकारिक दस्तावेज़ या अन्य सार्वजनिक स्रोत तक ले जाती है।</p><div class="trust-grid"><div><strong>{events.length}</strong><span>सार्वजनिक रिकॉर्ड</span></div><div><strong>{sources.length}</strong><span>स्रोत रिकॉर्ड</span></div><div><strong>खुला</strong><span>सुधार के लिए</span></div><div><strong>पहले</strong><span>स्रोत</span></div></div></aside>
+    </section>
+    <section class="section"><div class="callout"><p><strong>भाषा संबंधी सूचना:</strong> इंटरफ़ेस का यह हिंदी प्रवेश-बिंदु है। प्रकाशित रिकॉर्ड और उनके स्रोत अभी अंग्रेज़ी में हैं; राजनीतिक या कानूनी सारांशों का अनुवाद संपादकीय समीक्षा के बाद ही जोड़ा जाएगा।</p></div></section>
+    {featured && <section class="section"><div class="section-heading"><div><p class="eyebrow">रिकॉर्ड से</p><h2>शीर्षक से आगे पढ़ें।</h2></div><a class="button button-secondary" href="/timeline">सभी रिकॉर्ड</a></div><div class="record-grid"><EventCard event={featured} featured /></div></section>}
+  </div>
+</BaseLayout>

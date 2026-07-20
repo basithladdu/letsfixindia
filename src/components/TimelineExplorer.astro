@@ -1,0 +1,57 @@
+---
+import EventCard from "./EventCard.astro";
+import { categories, years } from "../lib/records.js";
+
+const { events } = Astro.props;
+---
+<section aria-labelledby="records-heading">
+  <div class="toolbar" data-timeline-controls>
+    <label class="field-label">Search the record
+      <input type="search" data-record-search placeholder="Issue, place, person, or institution" autocomplete="off" />
+    </label>
+    <label class="field-label">Year
+      <select data-record-year><option value="all">All years</option>{years.map((year) => <option value={year}>{year}</option>)}</select>
+    </label>
+    <label class="field-label">Issue
+      <select data-record-category><option value="all">All issues</option>{categories.map((category) => <option value={category}>{category}</option>)}</select>
+    </label>
+  </div>
+  <p class="result-count" data-record-count aria-live="polite">Showing {events.length} records</p>
+  <div class="record-grid" data-record-list>
+    {events.map((event) => <div data-record-item data-year={event.year} data-category={event.category} data-search={[event.title, event.summary, event.outcome, ...(event.actors || [])].join(" ").toLocaleLowerCase()}><EventCard event={event} /></div>)}
+  </div>
+</section>
+<script>
+  const controls = document.querySelector("[data-timeline-controls]");
+  const search = controls?.querySelector("[data-record-search]");
+  const year = controls?.querySelector("[data-record-year]");
+  const category = controls?.querySelector("[data-record-category]");
+  const count = document.querySelector("[data-record-count]");
+  const records = [...document.querySelectorAll("[data-record-item]")];
+
+  const applyFilters = () => {
+    const query = search?.value.trim().toLocaleLowerCase() || "";
+    let visible = 0;
+    records.forEach((record) => {
+      const match = (!query || record.dataset.search?.includes(query))
+        && (!year?.value || year.value === "all" || record.dataset.year === year.value)
+        && (!category?.value || category.value === "all" || record.dataset.category === category.value);
+      record.hidden = !match;
+      if (match) visible += 1;
+    });
+    if (count) count.textContent = `Showing ${visible} ${visible === 1 ? "record" : "records"}`;
+    const params = new URLSearchParams();
+    if (query) params.set("q", query);
+    if (year?.value && year.value !== "all") params.set("year", year.value);
+    if (category?.value && category.value !== "all") params.set("category", category.value);
+    history.replaceState(null, "", `${location.pathname}${params.size ? `?${params}` : ""}`);
+  };
+
+  const params = new URLSearchParams(location.search);
+  if (search && params.has("q")) search.value = params.get("q") || "";
+  if (year && params.has("year")) year.value = params.get("year") || "all";
+  if (category && params.has("category")) category.value = params.get("category") || "all";
+  controls?.addEventListener("input", applyFilters);
+  controls?.addEventListener("change", applyFilters);
+  if (params.size) applyFilters();
+</script>

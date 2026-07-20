@@ -1,273 +1,42 @@
 ---
-import eventsData from "../../../data/events.json";
-import sourcesData from "../../../data/sources.json";
-import "../../../styles.css";
-
-const events = Array.isArray(eventsData) ? eventsData : Object.values(eventsData);
-const sources = Array.isArray(sourcesData) ? sourcesData : Object.entries(sourcesData).map(([id, source]) => ({ id, ...source }));
-const byId = Object.fromEntries(sources.map((source) => [source.id, source]));
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceBadge from "../../components/EvidenceBadge.astro";
+import { events, evidenceFor, getEventSources } from "../../lib/records.js";
 
 export function getStaticPaths() {
-  const entries = Array.isArray(eventsData) ? eventsData : Object.values(eventsData);
-  return entries.map((event) => ({ params: { id: event.id }, props: { event } }));
+  return events.map((event) => ({ params: { id: event.id }, props: { event } }));
 }
 
 const { event } = Astro.props;
-const linkedSources = (event.sources || []).map((id) => byId[id]).filter(Boolean);
-const sourceIds = Array.from(new Set(event.sources || []));
-const linkedCount = sourceIds.filter((id) => byId[id]?.url).length;
-const pendingCount = sourceIds.filter((id) => byId[id] && !byId[id].url).length;
-const missingCount = sourceIds.filter((id) => !byId[id]).length;
-const evidenceClass = missingCount ? "missing" : pendingCount ? "pending" : linkedCount ? "linked" : "missing";
-const evidenceLabel = missingCount
-  ? `${missingCount} missing source record${missingCount === 1 ? "" : "s"}`
-  : pendingCount
-    ? `${linkedCount} linked, ${pendingCount} pending`
-    : linkedCount
-      ? `${linkedCount} linked source${linkedCount === 1 ? "" : "s"}`
-      : "No source record";
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
-const shareText = `${event.title} | LetsFixIndia`;
-const encodedUrl = encodeURIComponent(canonicalUrl);
-const encodedText = encodeURIComponent(shareText);
-const shareTargets = {
-  x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
-  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-  whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${canonicalUrl}`)}`,
-  telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`
+const evidence = evidenceFor(event);
+const linkedSources = getEventSources(event);
+const canonical = new URL(`/record/${event.id}/`, Astro.site).href;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: event.title,
+  description: event.summary,
+  datePublished: String(event.year),
+  dateModified: String(event.year),
+  mainEntityOfPage: canonical,
+  publisher: { "@type": "Organization", name: "LetsFixIndia", url: "https://www.letsfixindia.com" },
 };
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{event.title} | LetsFixIndia</title>
-    <meta name="description" content={event.summary} />
-    <link rel="icon" href="/assets/india-flag-icon.svg" />
-  </head>
-  <body data-route="record">
-    <header class="topbar record-topbar">
-      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>LetsFixIndia</span></a>
-      <nav class="topnav" aria-label="Main navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/sources">Sources</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
-      <button class="nav-sound-button" type="button" data-record-sound-toggle aria-pressed="false" aria-label="Sound off" title="Sound off"><span>Sound off</span></button>
-      <details class="record-menu">
-        <summary aria-label="Open navigation menu">Menu</summary>
-        <nav class="record-menu-panel" aria-label="Record navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/sources">Sources</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
-      </details>
-    </header>
-    <main class="page-section record-page">
-      <a class="record-back" href="/">Back to timeline</a>
-      <p class="eyebrow">{event.date || event.year} · {event.category}</p>
-      <h1>{event.title}</h1>
-      <div class="share-panel record-share" aria-labelledby="share-heading">
-        <div><p class="record-label">Share this record</p><h2 id="share-heading">Pass it on</h2></div>
-        <div class="share-actions">
-          <a class="share-button share-x" data-share-url="x" href={shareTargets.x} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on X / Twitter`}>X / Twitter</a>
-          <a class="share-button share-facebook" data-share-url="facebook" href={shareTargets.facebook} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on Facebook`}>Facebook</a>
-          <a class="share-button share-linkedin" data-share-url="linkedin" href={shareTargets.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on LinkedIn`}>LinkedIn</a>
-          <a class="share-button share-whatsapp" data-share-url="whatsapp" href={shareTargets.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on WhatsApp`}>WhatsApp</a>
-          <a class="share-button share-telegram" data-share-url="telegram" href={shareTargets.telegram} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on Telegram`}>Telegram</a>
-          <button class="share-button share-native" type="button" data-native-share aria-label={`Open native share for ${event.title}`}>Share</button>
-          <button class="share-button share-copy" type="button" data-copy-link aria-label={`Copy link for ${event.title}`}>Copy link</button>
-          <button class="share-button share-sound" type="button" data-record-sound-toggle aria-pressed="false" aria-label="Sound off">Sound off</button>
-        </div>
-        <span class="share-feedback" data-share-feedback aria-live="polite"></span>
-      </div>
-      <article class={`event-card record-evidence-card ${String(event.severity || "").toLowerCase()}`}>
-        <div class="event-meta"><span>{event.status}</span><span>{event.severity || "Recorded"}</span></div>
-        <span class={`evidence-status ${evidenceClass}`} aria-label={`Evidence status: ${evidenceLabel}`}>{evidenceLabel}</span>
-        <p>{event.summary}</p>
-        <p class="event-outcome"><strong>Outcome:</strong> {event.outcome}</p>
-        <div class="source-links" aria-label="Sources">
-          {linkedSources.length ? linkedSources.map((source) => source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`${source.publisher}: ${source.title} (opens source in a new tab)`}>{source.publisher}: {source.title}</a> : <span class="source-pending">Verification pending</span>) : <span class="source-pending">No linked source record</span>}
-        </div>
-        <div class="record-section-heading"><p class="record-label">Documentation</p><h2>Sources used for this record</h2></div>
-        <div class="record-actions">
-          <button type="button" data-copy-citation>Copy citation</button>
-          <span data-copy-feedback aria-live="polite"></span>
-        </div>
+<BaseLayout title={`${event.title} | LetsFixIndia`} description={event.summary} canonical={canonical}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+  <div class="page-shell">
+    <a class="read-record" href="/timeline">← Back to the record</a>
+    <header class="record-header"><p class="eyebrow">{event.date || event.year} · {event.category}</p><h1>{event.title}</h1><EvidenceBadge evidence={evidence} /></header>
+    <div class="record-layout">
+      <article class="record-story">
+        <h2>What happened</h2><p>{event.summary}</p>
+        <h2>What happened next</h2><p>{event.outcome}</p>
+        <h2>How to read this record</h2><p>The evidence label describes the state of the linked source ledger, not a verdict on the event. Open the cited material and read it in context.</p>
       </article>
-    </main>
-    <footer class="site-footer"><p><strong>LetsFixIndia</strong> is a source-led public record.</p><p><a href="/">Back to timeline</a></p></footer>
-    <script is:inline define:vars={{ title: event.title, date: event.date || event.year, url: canonicalUrl, sourceTitles: linkedSources.filter((source) => source.url).map((source) => `${source.publisher}: ${source.title} - ${source.url}`) }}>
-      const copyButton = document.querySelector("[data-copy-citation]");
-      const copyFeedback = document.querySelector("[data-copy-feedback]");
-      const shareText = `${title} | LetsFixIndia`;
-      const shareFeedback = document.querySelector("[data-share-feedback]");
-      const recordSoundToggles = Array.from(document.querySelectorAll("[data-record-sound-toggle]"));
-      let recordAudioContext = null;
-      let recordToast = null;
-      let recordToastTimer = 0;
-      const soundIsEnabled = () => {
-        try {
-          return localStorage.getItem("letsFixIndia.ui.sound") === "on";
-        } catch {
-          return false;
-        }
-      };
-      const setRecordSound = (enabled) => {
-        try {
-          localStorage.setItem("letsFixIndia.ui.sound", enabled ? "on" : "off");
-        } catch {}
-        recordSoundToggles.forEach((recordSoundToggle) => {
-          const label = enabled ? "Sound on" : "Sound off";
-          recordSoundToggle.setAttribute("aria-label", label);
-          recordSoundToggle.setAttribute("aria-pressed", String(enabled));
-          recordSoundToggle.title = label;
-          recordSoundToggle.classList.toggle("is-on", enabled);
-          const text = recordSoundToggle.querySelector("span");
-          if (text) text.textContent = label;
-          else recordSoundToggle.textContent = label;
-        });
-        document.documentElement.classList.toggle("sound-enabled", enabled);
-      };
-      const setRecordToast = (message, delay = 1800) => {
-        if (!message) return;
-        if (!recordToast) {
-          recordToast = document.createElement("div");
-          recordToast.className = "ui-toast";
-          recordToast.setAttribute("role", "status");
-          recordToast.setAttribute("aria-live", "polite");
-          document.body.appendChild(recordToast);
-        }
-        clearTimeout(recordToastTimer);
-        recordToast.textContent = message;
-        recordToast.classList.add("is-visible");
-        recordToastTimer = setTimeout(() => {
-          recordToast?.classList.remove("is-visible");
-        }, delay);
-      };
-      const playRecordSound = (kind = "tap") => {
-        if (!soundIsEnabled()) return;
-        if (navigator.vibrate) {
-          try {
-            navigator.vibrate(kind === "success" ? [8, 22, 10] : 10);
-          } catch {}
-        }
-        try {
-          const AudioCtx = window.AudioContext || window.webkitAudioContext;
-          if (!AudioCtx) return;
-          recordAudioContext ||= new AudioCtx();
-          if (recordAudioContext.state === "suspended") recordAudioContext.resume();
-          const now = recordAudioContext.currentTime;
-          const notes = {
-            tap: [[440, 0, 0.035, 0.018]],
-            nav: [[520, 0, 0.045, 0.022], [640, 0.048, 0.04, 0.016]],
-            success: [[660, 0, 0.055, 0.028], [880, 0.06, 0.07, 0.02]]
-          };
-          (notes[kind] || notes.tap).forEach(([freq, offset, duration, peak]) => {
-            const start = now + offset;
-            const osc = recordAudioContext.createOscillator();
-            const gain = recordAudioContext.createGain();
-            osc.type = kind === "success" ? "triangle" : "sine";
-            osc.frequency.setValueAtTime(freq, start);
-            osc.frequency.exponentialRampToValueAtTime(freq * 1.14, start + duration);
-            gain.gain.setValueAtTime(0.0001, start);
-            gain.gain.exponentialRampToValueAtTime(peak, start + 0.006);
-            gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
-            osc.connect(gain).connect(recordAudioContext.destination);
-            osc.start(start);
-            osc.stop(start + duration + 0.012);
-          });
-        } catch {}
-      };
-      const tap = (element, event) => {
-        if (!element) return;
-        const rect = element.getBoundingClientRect();
-        if (event && rect.width && rect.height) {
-          element.style.setProperty("--tap-x", `${event.clientX - rect.left}px`);
-          element.style.setProperty("--tap-y", `${event.clientY - rect.top}px`);
-        }
-        element.classList.remove("is-tapping");
-        void element.offsetWidth;
-        element.classList.add("is-tapping");
-        setTimeout(() => element.classList.remove("is-tapping"), 900);
-      };
-      const progress = document.createElement("div");
-      progress.className = "scroll-progress";
-      progress.setAttribute("aria-hidden", "true");
-      document.body.prepend(progress);
-      const updateProgress = () => {
-        const max = document.documentElement.scrollHeight - window.innerHeight;
-        if (max < 80) {
-          progress.hidden = true;
-          progress.style.transform = "scaleX(0)";
-          return;
-        }
-        progress.hidden = false;
-        const ratio = Math.min(1, Math.max(0, window.scrollY / max));
-        progress.style.transform = `scaleX(${ratio})`;
-      };
-      window.addEventListener("scroll", updateProgress, { passive: true });
-      window.addEventListener("resize", updateProgress);
-      updateProgress();
-      setRecordSound(soundIsEnabled());
-      const copyTextToClipboard = async (text) => {
-        const value = String(text || "");
-        if (!value) return false;
-        try {
-          await navigator.clipboard.writeText(value);
-          return true;
-        } catch {
-          const field = document.createElement("textarea");
-          field.value = value;
-          field.setAttribute("readonly", "");
-          field.style.position = "fixed";
-          field.style.left = "-9999px";
-          field.style.top = "0";
-          document.body.appendChild(field);
-          field.select();
-          field.setSelectionRange(0, field.value.length);
-          let copied = false;
-          try {
-            copied = document.execCommand("copy");
-          } catch {
-            copied = false;
-          }
-          field.remove();
-          return copied;
-        }
-      };
-      document.addEventListener("click", (event) => {
-        const control = event.target instanceof Element ? event.target.closest(".share-button, .nav-sound-button, [data-copy-citation], .record-back") : null;
-        if (control) {
-          tap(control, event);
-          if (control.matches("[data-record-sound-toggle]")) {
-            const next = !soundIsEnabled();
-            setRecordSound(next);
-            if (shareFeedback) shareFeedback.textContent = next ? "Sound on" : "Sound off";
-            setRecordToast(next ? "Sound on" : "Sound off");
-            playRecordSound(next ? "success" : "tap");
-            return;
-          }
-          playRecordSound(control.matches(".record-back") ? "nav" : "tap");
-        }
-      });
-      document.querySelector("[data-native-share]")?.addEventListener("click", async () => { if (!navigator.share) { if (shareFeedback) shareFeedback.textContent = "Use Copy link or choose a platform"; return; } try { await navigator.share({ title: shareText, url }); playRecordSound("success"); } catch {} });
-      document.querySelector("[data-copy-link]")?.addEventListener("click", async (event) => {
-        const button = event.currentTarget;
-        if (await copyTextToClipboard(url)) {
-          button.classList.add("is-copied");
-          playRecordSound("success");
-          if (shareFeedback) shareFeedback.textContent = "Link copied";
-          setTimeout(() => button.classList.remove("is-copied"), 1600);
-        } else if (shareFeedback) {
-          shareFeedback.textContent = "Copy unavailable";
-        }
-      });
-      copyButton?.addEventListener("click", async () => {
-        const citation = [title, date, url, ...sourceTitles].join("\n");
-        if (await copyTextToClipboard(citation)) {
-          copyButton.classList.add("is-copied");
-          playRecordSound("success");
-          if (copyFeedback) copyFeedback.textContent = "Citation copied";
-          setTimeout(() => copyButton.classList.remove("is-copied"), 1600);
-        } else {
-          if (copyFeedback) copyFeedback.textContent = "Copy unavailable; select the page text instead";
-        }
-      });
-    </script>
-  </body>
-</html>
+      <aside class="record-aside" id="sources"><p class="eyebrow">Documentation</p><h2>Sources for this record</h2>
+        {linkedSources.length ? linkedSources.map((source, index) => source.url ? <a class="source-link source-motion" data-source-motion style={`--reveal-delay: ${index * 75}ms`} href={source.url} target="_blank" rel="noopener noreferrer"><span class="source-reference">Source {String(index + 1).padStart(2, "0")}</span>{source.publisher}: {source.title} <span aria-hidden="true">↗</span></a> : <span class="source-pending source-motion" data-source-motion style={`--reveal-delay: ${index * 75}ms`}>{source.publisher}: link pending</span>) : <span class="source-pending">No linked source record yet.</span>}
+        <a class="button button-secondary" href={`/submit?record=${encodeURIComponent(event.id)}`}>Suggest a correction</a>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

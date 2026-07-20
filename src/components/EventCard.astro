@@ -1,0 +1,22 @@
+---
+import EvidenceBadge from "./EvidenceBadge.astro";
+import { evidenceFor, getEventSources } from "../lib/records.js";
+
+const { event, featured = false } = Astro.props;
+const evidence = evidenceFor(event);
+const primarySource = getEventSources(event).find((source) => source.url);
+---
+<article class:list={["record-card", featured && "record-card-featured"]}>
+  <div class="record-card-meta">
+    <span class="archive-label">Record</span>
+    <span>{event.date || event.year}</span>
+    <span>{event.category}</span>
+  </div>
+  <EvidenceBadge evidence={evidence} />
+  <h3><a href={`/record/${event.id}/`}>{event.title}</a></h3>
+  <p>{event.summary}</p>
+  <div class="record-card-footer">
+    <a class="read-record" href={`/record/${event.id}/`}>Read the full record <span aria-hidden="true">→</span></a>
+    {primarySource && <a class="source-count" href={`/record/${event.id}/#sources`}>{evidence.linked} source{evidence.linked === 1 ? "" : "s"}</a>}
+  </div>
+</article>

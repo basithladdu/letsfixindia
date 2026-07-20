@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimelineExplorer from "../components/TimelineExplorer.astro";
+import { orderedEvents } from "../lib/records.js";
+---
+<BaseLayout title="Explore the record | LetsFixIndia" description="Search a source-led public record of events, decisions, crises, and public responses in India.">
+  <div class="page-shell">
+    <header class="record-header"><p class="eyebrow">Explore the record</p><h1>Find the event. Follow the evidence.</h1><p class="lede">Search by issue, year, institution, place, or person. Each result leads to the event’s sources and documented outcome.</p></header>
+    <TimelineExplorer events={orderedEvents} />
+  </div>
+</BaseLayout>
