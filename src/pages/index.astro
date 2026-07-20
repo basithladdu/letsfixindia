@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EventCard from "../components/EventCard.astro";
+import { events, indicators, orderedEvents, sources } from "../lib/records.js";
+
+const featured = orderedEvents[0];
+const recent = orderedEvents.slice(1, 5);
+---
+<BaseLayout>
+  <div class="page-shell">
+    <section class="archive-front-page" aria-labelledby="home-heading">
+      <div class="front-page-info" aria-label="Public record edition details"><span>Archive No. 001</span><span>India · Public record edition</span><span>Open to correction</span></div>
+      <div class="front-page-grid">
+        <aside class="front-page-briefs" aria-label="Read the archive">
+          <p class="column-heading">In this edition</p>
+          <a href="/timeline"><strong>The chronicle</strong><span>Search public events by issue, year, institution, place, or person.</span></a>
+          <a href="/statistics"><strong>The data book</strong><span>Read the numbers with their definitions and source trail intact.</span></a>
+          <a href="/sources"><strong>The source ledger</strong><span>Inspect the documents and reporting behind the record.</span></a>
+        </aside>
+      <article class="lead-story">
+        <p class="eyebrow">The public-interest record</p>
+        <h1 id="home-heading">India, in the record.</h1>
+        <p class="lede">Follow the decisions, events, and public outcomes that shape daily life—then see the reporting and documents behind every entry.</p>
+        <div class="hero-actions">
+          <a class="button" href="/timeline">Read the record <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="/methodology">Our standards</a>
+        </div>
+      </article>
+      <aside class="trust-panel" aria-label="About the public record">
+        <p class="eyebrow">The archive desk</p>
+        <h2>Every claim leaves a trail.</h2>
+        <p>Each record keeps the reporting, public documents, and open questions close at hand.</p>
+        <div class="trust-grid">
+          <div><strong>{events.length}</strong><span>public records</span></div>
+          <div><strong>{indicators.length}</strong><span>tracked indicators</span></div>
+          <div><strong>{sources.length}</strong><span>source records</span></div>
+          <div><strong>Open</strong><span>to correction</span></div>
+        </div>
+      </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="start-heading">
+      <div class="section-heading"><div><p class="eyebrow">Start with a question</p><h2 id="start-heading">Your guide to the public record</h2></div><p>Built for a quick check on a phone and a deeper read when the details matter.</p></div>
+      <div class="feature-grid">
+        <article class="intent-card"><span class="intent-icon" aria-hidden="true">01</span><h3>Verify a claim</h3><p>Search by issue, year, institution, or place and follow the evidence to its source.</p><a href="/timeline">Search the record →</a></article>
+        <article class="intent-card"><span class="intent-icon" aria-hidden="true">02</span><h3>See what changed</h3><p>Read indicators with their period, definition, and source beside the number.</p><a href="/statistics">Explore the data →</a></article>
+        <article class="intent-card"><span class="intent-icon" aria-hidden="true">03</span><h3>Strengthen a record</h3><p>Send a precise correction or a stronger source for editorial review.</p><a href="/submit">Submit evidence →</a></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="latest-heading">
+      <div class="section-heading"><div><p class="eyebrow">From the record</p><h2 id="latest-heading">The stories behind the headlines.</h2></div><a class="button button-secondary" href="/timeline">Browse all records</a></div>
+      <div class="record-grid">
+        {featured && <EventCard event={featured} featured />}
+        {recent.map((event) => <EventCard event={event} />)}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

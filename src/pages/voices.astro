@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { voices, sourceById } from "../lib/records.js";
+---
+<BaseLayout title="Public voices | LetsFixIndia" description="A source-led index of documented public statements, responses, and unverified gaps.">
+  <div class="page-shell"><header class="record-header"><p class="eyebrow">Public voices</p><h1>Statements need context too.</h1><p class="lede">A source-led index of documented public positions, with gaps clearly marked as research status rather than proof of intent.</p></header>
+    <div class="voice-grid">
+      {voices.map((voice) => <article class="voice-card"><p class="eyebrow">{voice.field}</p><h2>{voice.name}</h2><p>{voice.description}</p>{(voice.stances || []).slice(0, 3).map((stance) => <div class="source-card"><span class="source-type">{stance.position.replace("-", " ")}</span><h3>{stance.issue}</h3><p>{stance.summary}</p>{(stance.sources || []).map((id) => sourceById[id]).filter(Boolean).slice(0, 1).map((source) => source.url && <a href={source.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>)}</div>)}</article>)}
+    </div>
+  </div>
+</BaseLayout>

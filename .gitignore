@@ -11,9 +11,10 @@ private/
 out/
 dist/
 .astro/
+AGENTLOG.md
+raw/
 output/
 *.err.log
 *.out.log
 
 private/qr-codes/
-scratch/

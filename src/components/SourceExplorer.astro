@@ -1,0 +1,40 @@
+---
+const { sources } = Astro.props;
+---
+<div class="toolbar" data-source-controls>
+  <label class="field-label">Search sources
+    <input type="search" data-source-search placeholder="Publisher, title, or source type" autocomplete="off" />
+  </label>
+  <label class="field-label">Availability
+    <select data-source-status><option value="all">All sources</option><option value="linked">Linked sources</option><option value="pending">Link pending</option></select>
+  </label>
+  <p class="result-count" data-source-count aria-live="polite">{sources.length} sources</p>
+</div>
+<div class="source-list" data-source-list>
+  {sources.map((source, index) => <article class="source-card source-motion" data-source-item data-source-motion data-linked={source.url ? "true" : "false"} style={`--reveal-delay: ${(index % 6) * 55}ms`}>
+    <span class="source-type">{source.type || "Source"}</span>
+    <h3>{source.publisher}</h3>
+    <p>{source.title}</p>
+    {source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer">Open source <span aria-hidden="true">↗</span></a> : <span class="source-pending">Link pending editorial review</span>}
+  </article>)}
+</div>
+<script>
+  const controls = document.querySelector("[data-source-controls]");
+  const search = controls?.querySelector("[data-source-search]");
+  const status = controls?.querySelector("[data-source-status]");
+  const count = controls?.querySelector("[data-source-count]");
+  const sources = [...document.querySelectorAll("[data-source-item]")];
+  const filter = () => {
+    const query = search?.value.trim().toLocaleLowerCase() || "";
+    let visible = 0;
+    sources.forEach((source) => {
+      const matchingStatus = !status || status.value === "all" || (status.value === "linked" ? source.dataset.linked === "true" : source.dataset.linked === "false");
+      const matchingQuery = !query || source.textContent.toLocaleLowerCase().includes(query);
+      source.hidden = !(matchingStatus && matchingQuery);
+      if (!source.hidden) visible += 1;
+    });
+    if (count) count.textContent = `${visible} ${visible === 1 ? "source" : "sources"}`;
+  };
+  controls?.addEventListener("input", filter);
+  controls?.addEventListener("change", filter);
+</script>

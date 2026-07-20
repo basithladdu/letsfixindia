@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { indicators, sourceById } from "../lib/records.js";
+---
+<BaseLayout title="Indicators | LetsFixIndia" description="Source-backed indicators with their definitions, periods, and caveats.">
+  <div class="page-shell"><header class="record-header"><p class="eyebrow">Numbers with context</p><h1>Indicators, not talking points.</h1><p class="lede">A number becomes useful when its definition, period, source, and limits are visible alongside it.</p></header>
+    <div class="stat-grid">
+      {indicators.map((indicator) => <article class="stat-card"><span class="tag">{indicator.direction}</span><h2>{indicator.title}</h2><strong>{indicator.value}</strong><p>{indicator.detail}</p><div>{(indicator.sources || []).map((id) => sourceById[id]).filter(Boolean).slice(0, 2).map((source) => source.url ? <a class="source-link" href={source.url} target="_blank" rel="noopener noreferrer">{source.publisher} ↗</a> : <span class="source-pending">Source link pending</span>)}</div></article>)}
+    </div>
+  </div>
+</BaseLayout>

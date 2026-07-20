@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SourceExplorer from "../components/SourceExplorer.astro";
+import { sources } from "../lib/records.js";
+
+const linked = sources.filter((source) => source.url).length;
+---
+<BaseLayout title="Source ledger | LetsFixIndia" description="Search the public source ledger behind LetsFixIndia records and indicators.">
+  <div class="page-shell"><header class="record-header"><p class="eyebrow">Source ledger</p><h1>See what the record rests on.</h1><p class="lede">Browse the publishers and documents linked across the public record. A pending label means the source entry still needs an accessible URL.</p></header>
+    <div class="callout"><p><strong>{linked} of {sources.length}</strong> source records currently have direct links. Entries with incomplete links are visible as work still to be done—not hidden.</p></div>
+    <SourceExplorer sources={sources} />
+  </div>
+</BaseLayout>

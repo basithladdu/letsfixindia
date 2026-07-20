@@ -1,0 +1,6 @@
+---
+const { evidence } = Astro.props;
+---
+<span class:list={["evidence-badge", `evidence-${evidence.tone}`]}>
+  <span aria-hidden="true">●</span>{evidence.label}
+</span>
