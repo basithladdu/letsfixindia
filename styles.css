@@ -5422,3 +5422,21 @@ summary {
     margin-bottom: 0;
   }
 }
+
+/* ── Sort order outside Filters ──────────────────────────── */
+
+.sort-wrap span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 720px) {
+  .toolbar {
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 2fr) minmax(180px, 0.45fr);
+  }
+}
