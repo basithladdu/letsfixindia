@@ -340,14 +340,39 @@ function uniqueSorted(values) {
   return Array.from(new Set(values)).sort((a, b) => String(a).localeCompare(String(b)));
 }
 
+const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+
+// Turn a free-text date ("20 July 2026", "May-July 2026", "6 February 2026",
+// "December 2014", "2026-07-20", "2026") into a sortable number within its year.
+// Ranges sort by their latest month; missing month/day sort to the start of the year.
+function dateSortKey(event) {
+  const raw = String(event.date || "").trim();
+  const iso = raw.match(/^\d{4}-(\d{2})-(\d{2})/);
+  if (iso) return Number(iso[1]) * 100 + Number(iso[2]);
+  const lower = raw.toLowerCase();
+  // Use the rightmost month mentioned (handles ranges like "May-July" or
+  // cross-year spans like "16 December 2025-4 May 2026").
+  let month = 0;
+  let monthPos = -1;
+  MONTHS.forEach((name, i) => {
+    const pos = lower.lastIndexOf(name);
+    if (pos > monthPos) { monthPos = pos; month = i + 1; }
+  });
+  // Use the last 1-2 digit day number (<=31), i.e. the one nearest that month.
+  const days = raw.match(/\b(\d{1,2})\b/g) || [];
+  const validDays = days.map(Number).filter((n) => n >= 1 && n <= 31);
+  const day = validDays.length ? validDays[validDays.length - 1] : 0;
+  return month * 100 + day;
+}
+
 function byTimeline(a, b) {
   if (a.year !== b.year) return b.year - a.year;
-  return String(b.date).localeCompare(String(a.date));
+  return dateSortKey(b) - dateSortKey(a);
 }
 
 function byTimelineAsc(a, b) {
   if (a.year !== b.year) return a.year - b.year;
-  return String(a.date).localeCompare(String(b.date));
+  return dateSortKey(a) - dateSortKey(b);
 }
 
 function chipClass(value) {
