@@ -3418,18 +3418,6 @@ textarea:focus-visible {
   margin-top: 16px;
 }
 
-.hero-share::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 34px;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(255, 251, 245, 0), #fffbf5 74%);
-  opacity: 0;
-}
-
 .record-share {
   max-width: 900px;
   margin-top: 14px;
@@ -3448,34 +3436,14 @@ textarea:focus-visible {
 
 @media (max-width: 900px) {
   .hero-share {
-    position: relative;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    overflow-x: auto;
-    padding-bottom: 24px;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .hero-share::before {
-    content: "Swipe for more share options";
-    position: absolute;
-    left: 2px;
-    bottom: 0;
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 850;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-
-  .hero-share::after {
-    opacity: 1;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .hero-share .share-btn {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+    min-height: 34px;
+    padding: 5px 12px;
+    font-size: 12px;
   }
 
   .record-share {
@@ -5410,23 +5378,17 @@ summary {
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
+    gap: 8px;
     padding: 2px 0 0;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-  }
-  .share-label,
-  .share-btn {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
   }
   .share-label {
-    flex-basis: auto;
-    margin-right: 2px;
-    margin-bottom: 0;
+    flex-basis: 100%;
+    margin-bottom: 2px;
+  }
+  .share-btn {
+    flex: 0 0 auto;
   }
   .hero-share,
   .record-share {
