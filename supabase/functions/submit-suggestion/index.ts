@@ -64,6 +64,7 @@ Deno.serve(async (request) => {
   const token = stringField(body.turnstileToken, 4096, true);
   const name = stringField(body.name, 100);
   const email = stringField(body.email, 254);
+  const recordId = stringField(body.recordId, 180);
   const urls = (sources || "").split(/\r?\n/).map((url) => url.trim()).filter(Boolean);
   if (!kind || !allowedKinds.has(kind) || !subject || !message || !sources || !token || message.length < 30 || !urls.length || urls.some((url) => !/^https:\/\//i.test(url))) {
     return response(422, { error: "Provide a clear request and one or more HTTPS source URLs." }, origin);
@@ -80,7 +81,7 @@ Deno.serve(async (request) => {
   if (limitError) return response(500, { error: "Unable to validate submission" }, origin);
   if ((count || 0) >= 3) return response(429, { error: "Too many requests. Please try again later." }, origin);
 
-  const { error } = await client.from("letsfixindia_submissions").insert({ data: { kind, subject, message, sources: urls, name, email }, status: "pending", request_hash: requestHash });
+  const { error } = await client.from("letsfixindia_submissions").insert({ data: { kind, subject, message, sources: urls, name, email, recordId }, status: "pending", request_hash: requestHash });
   if (error) return response(500, { error: "Unable to store submission" }, origin);
   return response(201, { ok: "Submission received" }, origin);
 });

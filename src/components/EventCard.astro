@@ -4,7 +4,8 @@ import { evidenceFor, getEventSources } from "../lib/records.js";
 
 const { event, featured = false } = Astro.props;
 const evidence = evidenceFor(event);
-const primarySource = getEventSources(event).find((source) => source.url);
+const linkedSources = getEventSources(event).filter((source) => source.url);
+const primarySource = linkedSources[0];
 ---
 <article class:list={["record-card", featured && "record-card-featured"]}>
   <div class="record-card-meta">
@@ -15,6 +16,10 @@ const primarySource = getEventSources(event).find((source) => source.url);
   <EvidenceBadge evidence={evidence} />
   <h3><a href={`/record/${event.id}/`}>{event.title}</a></h3>
   <p>{event.summary}</p>
+  {linkedSources.length > 0 && <div class="card-source-links" aria-label={`Sources for ${event.title}`}>
+    {linkedSources.slice(0, 2).map((source) => <a href={source.url} target="_blank" rel="noreferrer">{source.publisher || "Source"} <span aria-hidden="true">↗</span></a>)}
+    {linkedSources.length > 2 && <a href={`/record/${event.id}/#sources`}>+{linkedSources.length - 2} more</a>}
+  </div>}
   <div class="record-card-footer">
     <a class="read-record" href={`/record/${event.id}/`}>Read the full record <span aria-hidden="true">→</span></a>
     {primarySource && <a class="source-count" href={`/record/${event.id}/#sources`}>{evidence.linked} source{evidence.linked === 1 ? "" : "s"}</a>}

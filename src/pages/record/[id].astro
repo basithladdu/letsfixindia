@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import EvidenceBadge from "../../components/EvidenceBadge.astro";
+import RecordActions from "../../components/RecordActions.astro";
 import { events, evidenceFor, getEventSources } from "../../lib/records.js";
 
 export function getStaticPaths() {
@@ -11,6 +12,12 @@ const { event } = Astro.props;
 const evidence = evidenceFor(event);
 const linkedSources = getEventSources(event);
 const canonical = new URL(`/record/${event.id}/`, Astro.site).href;
+const citation = [
+  `${event.title}.`,
+  `LetsFixIndia Archive, ${event.date || event.year}.`,
+  canonical,
+  ...linkedSources.filter((source) => source.url).map((source) => `${source.publisher || "Source"}: ${source.title}. ${source.url}`),
+].join("\n");
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -26,7 +33,7 @@ const jsonLd = {
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
   <div class="page-shell">
     <a class="read-record" href="/timeline">← Back to the record</a>
-    <header class="record-header"><p class="eyebrow">{event.date || event.year} · {event.category}</p><h1>{event.title}</h1><EvidenceBadge evidence={evidence} /></header>
+    <header class="record-header"><p class="eyebrow">{event.date || event.year} · {event.category}</p><h1>{event.title}</h1><EvidenceBadge evidence={evidence} /><RecordActions title={event.title} url={canonical} citation={citation} /></header>
     <div class="record-layout">
       <article class="record-story">
         <h2>What happened</h2><p>{event.summary}</p>

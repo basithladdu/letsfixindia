@@ -113,6 +113,9 @@ p { color: var(--muted); line-height: 1.65; }
 .record-card h3 a { text-decoration: none; }
 .record-card h3 a:hover { color: var(--red); text-decoration: underline; text-decoration-thickness: 1px; }
 .record-card p { font-size: .92rem; }
+.card-source-links { display: flex; flex-wrap: wrap; gap: .35rem .7rem; padding: .65rem 0 .1rem; }
+.card-source-links a { color: var(--blue); font-size: .73rem; font-weight: 800; text-decoration: none; }
+.card-source-links a:hover { color: var(--red); text-decoration: underline; }
 .record-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto; padding-top: .95rem; border-top: 1px solid var(--line); }
 .read-record, .source-count { color: var(--red); font-size: .78rem; font-weight: 850; text-decoration: none; }
 .source-count { color: var(--muted); font-weight: 700; }
@@ -121,7 +124,7 @@ p { color: var(--muted); line-height: 1.65; }
 .intent-card h3 { margin-bottom: .4rem; font-family: Georgia, "Noto Serif Devanagari", serif; font-size: 1.35rem; }
 .intent-card a { margin-top: auto; color: var(--red); font-size: .84rem; font-weight: 850; text-decoration: none; }
 
-.toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 170px 210px; gap: .75rem; padding: 1rem; margin: 1.6rem 0; background: #e8ddc8; border-top: 3px solid var(--ink); }
+.toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 150px 190px 155px; gap: .75rem; padding: 1rem; margin: 1.6rem 0; background: #e8ddc8; border-top: 3px solid var(--ink); }
 .field-label { display: grid; gap: .35rem; color: var(--muted); font-size: .7rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
 input, select, textarea { width: 100%; min-height: 44px; padding: .65rem .75rem; color: var(--ink); background: #fffdf8; border: 1px solid #bcae99; border-radius: 2px; }
 textarea { min-height: 132px; resize: vertical; }
@@ -160,6 +163,12 @@ html[data-source-motion="ready"] .source-motion.is-visible { animation: source-s
 .method-card h3 { margin-bottom: .5rem; font-family: Georgia, serif; }
 .callout { max-width: 800px; padding: 1.2rem 1.3rem; margin-top: 1.5rem; background: #e5f0eb; border-left: 5px solid var(--green); }
 .callout p { margin: 0; color: #245c3b; }
+.civic-note { max-width: 800px; padding: 1.4rem 1.5rem; border-top: 4px double var(--ink); border-bottom: 1px solid var(--ink); }
+.civic-note h2 { margin-bottom: .6rem; font-family: Georgia, "Noto Serif Devanagari", serif; }
+.record-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin-top: 1rem; }
+.record-action { min-height: auto; padding: .42rem .65rem; color: var(--ink); background: transparent; border: 1px solid var(--ink); border-radius: 0; font-family: inherit; font-size: .72rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; cursor: pointer; }
+.record-action:hover { color: var(--red); border-color: var(--red); }
+.record-action-status { width: 100%; min-height: 1.2rem; margin: 0; color: var(--muted); font-size: .78rem; }
 .submit-layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 2rem; }
 .submit-form { display: grid; gap: 1rem; padding: clamp(1.2rem, 4vw, 2rem); background: var(--card); border-top: 3px solid var(--red); box-shadow: var(--shadow); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }

@@ -15,10 +15,13 @@ const { events } = Astro.props;
     <label class="field-label">Issue
       <select data-record-category><option value="all">All issues</option>{categories.map((category) => <option value={category}>{category}</option>)}</select>
     </label>
+    <label class="field-label">Order
+      <select data-record-sort><option value="desc">Newest first</option><option value="asc">Oldest first</option></select>
+    </label>
   </div>
   <p class="result-count" data-record-count aria-live="polite">Showing {events.length} records</p>
   <div class="record-grid" data-record-list>
-    {events.map((event) => <div data-record-item data-year={event.year} data-category={event.category} data-search={[event.title, event.summary, event.outcome, ...(event.actors || [])].join(" ").toLocaleLowerCase()}><EventCard event={event} /></div>)}
+    {events.map((event, index) => <div data-record-item data-record-order={index} data-year={event.year} data-category={event.category} data-search={[event.title, event.summary, event.outcome, ...(event.actors || [])].join(" ").toLocaleLowerCase()}><EventCard event={event} /></div>)}
   </div>
 </section>
 <script>
@@ -26,7 +29,9 @@ const { events } = Astro.props;
   const search = controls?.querySelector("[data-record-search]");
   const year = controls?.querySelector("[data-record-year]");
   const category = controls?.querySelector("[data-record-category]");
+  const sort = controls?.querySelector("[data-record-sort]");
   const count = document.querySelector("[data-record-count]");
+  const list = document.querySelector("[data-record-list]");
   const records = [...document.querySelectorAll("[data-record-item]")];
 
   const applyFilters = () => {
@@ -39,11 +44,17 @@ const { events } = Astro.props;
       record.hidden = !match;
       if (match) visible += 1;
     });
+    const ordered = [...records].sort((left, right) => {
+      const difference = Number(left.dataset.recordOrder) - Number(right.dataset.recordOrder);
+      return sort?.value === "asc" ? -difference : difference;
+    });
+    ordered.forEach((record) => list?.append(record));
     if (count) count.textContent = `Showing ${visible} ${visible === 1 ? "record" : "records"}`;
     const params = new URLSearchParams();
     if (query) params.set("q", query);
     if (year?.value && year.value !== "all") params.set("year", year.value);
     if (category?.value && category.value !== "all") params.set("category", category.value);
+    if (sort?.value === "asc") params.set("sort", "asc");
     history.replaceState(null, "", `${location.pathname}${params.size ? `?${params}` : ""}`);
   };
 
@@ -51,6 +62,7 @@ const { events } = Astro.props;
   if (search && params.has("q")) search.value = params.get("q") || "";
   if (year && params.has("year")) year.value = params.get("year") || "all";
   if (category && params.has("category")) category.value = params.get("category") || "all";
+  if (sort && params.has("sort")) sort.value = params.get("sort") || "desc";
   controls?.addEventListener("input", applyFilters);
   controls?.addEventListener("change", applyFilters);
   if (params.size) applyFilters();

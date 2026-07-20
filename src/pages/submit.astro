@@ -1,16 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { orderedEvents } from "../lib/records.js";
 
 const endpoint = import.meta.env.PUBLIC_SUBMISSION_ENDPOINT || "";
 const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "";
 const intakeEnabled = Boolean(endpoint && turnstileSiteKey);
+const recordOptions = orderedEvents.map((event) => ({ id: event.id, title: event.title, date: event.date || event.year }));
 ---
 <BaseLayout title="Suggest a correction | LetsFixIndia" description="Submit a source-backed correction or missing public record for editorial review.">
   <div class="page-shell"><header class="record-header"><p class="eyebrow">Correction desk</p><h1>Make the record stronger.</h1><p class="lede">Send a precise correction, court update, missing event, or stronger source. Nothing is published automatically.</p></header>
     <div class="submit-layout section">{intakeEnabled ? <form class="submit-form" data-submission-form>
       <div class="form-row"><label class="field-label">Your name (optional)<input name="name" autocomplete="name" maxlength="100" /></label><label class="field-label">Email (optional)<input name="email" type="email" autocomplete="email" maxlength="254" /></label></div>
       <label class="field-label">Type of contribution<select name="kind" required><option value="correction">Correction to an existing record</option><option value="source">Stronger or missing source</option><option value="event">Missing public event</option><option value="outcome">Updated legal or institutional outcome</option></select></label>
-      <label class="field-label">Record or issue<input name="subject" required maxlength="180" placeholder="Title, issue, or relevant record URL" /></label>
+      <label class="field-label">Record or issue<input name="subject" data-record-subject required maxlength="180" list="record-options" placeholder="Choose a listed record, enter an issue, or add a record URL" /></label>
+      <input name="recordId" data-record-id type="hidden" />
+      <datalist id="record-options">{recordOptions.map((record) => <option value={record.title} label={`${record.date} · ${record.id}`} />)}</datalist>
       <label class="field-label">What should change?<textarea name="message" required minlength="30" maxlength="5000" placeholder="State the correction clearly. Include dates, names, and the exact wording that needs review."></textarea></label>
       <label class="field-label">Source URLs<textarea name="sources" required minlength="10" maxlength="5000" placeholder="One URL per line. Prefer primary documents, court orders, official data, or credible reporting."></textarea></label>
       <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-action="turnstile-spin-v1"></div>
@@ -21,9 +25,23 @@ const intakeEnabled = Boolean(endpoint && turnstileSiteKey);
   </div>
 </BaseLayout>
 {intakeEnabled && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
-{intakeEnabled && <script define:vars={{ endpoint }}>
+{intakeEnabled && <script define:vars={{ endpoint, recordOptions }}>
   const form = document.querySelector("[data-submission-form]");
   const status = document.querySelector("[data-form-status]");
+  const subject = form?.querySelector("[data-record-subject]");
+  const recordId = form?.querySelector("[data-record-id]");
+  const requestRecordId = new URLSearchParams(location.search).get("record");
+  const selectedRecord = () => recordOptions.find((record) => record.title === subject?.value);
+  const syncRecord = () => {
+    const selected = selectedRecord();
+    if (recordId) recordId.value = selected?.id || "";
+  };
+  const requestedRecord = recordOptions.find((record) => record.id === requestRecordId);
+  if (requestedRecord && subject) {
+    subject.value = requestedRecord.title;
+    syncRecord();
+  }
+  subject?.addEventListener("input", syncRecord);
   form?.addEventListener("submit", async (event) => {
     event.preventDefault();
     const button = form.querySelector("button[type=submit]");
@@ -35,6 +53,7 @@ const intakeEnabled = Boolean(endpoint && turnstileSiteKey);
       const response = await fetch(endpoint, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(payload) });
       if (!response.ok) throw new Error("Submission service unavailable");
       form.reset();
+      if (recordId) recordId.value = "";
       if (status) status.textContent = "Thank you. Your request is now waiting for editorial review.";
     } catch {
       if (status) status.textContent = "We could not send this right now. Please try again later.";
