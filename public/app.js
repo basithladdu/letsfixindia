@@ -696,10 +696,6 @@ function renderTimeline() {
               </div>
               <div class="event-title-row">
                 <a class="event-title-link" href="${eventUrl(event)}" data-link>${esc(event.title)}</a>
-                <div class="source-links source-inline" aria-label="Sources for ${esc(event.title)}">
-                  <span>Sources</span>
-                  ${sourceLinks(event.sources)}
-                </div>
               </div>
               <div class="chips">
                 <span class="${chipClass(event.category)}">${esc(event.category)}</span>
@@ -707,7 +703,11 @@ function renderTimeline() {
               </div>
               <p>${esc(event.summary)}</p>
               <p class="outcome">${esc(event.outcome)}</p>
-              <div style="margin-top: 12px; display: flex; justify-content: flex-end; border-top: 1px dashed rgba(0,0,0,0.05); padding-top: 8px;">
+              <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed rgba(0,0,0,0.08); padding-top: 12px; flex-wrap: wrap; gap: 12px;">
+                <div class="source-links source-inline" aria-label="Sources for ${esc(event.title)}" style="margin-top: 0; background: none; border: none; padding: 0; display: inline-flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--muted); margin-right: 4px; letter-spacing: 0.05em;">Sources</span>
+                  ${sourceLinks(event.sources)}
+                </div>
                 <a href="/submit?correct=${event.id}" data-link class="correction-link">Suggest a correction or update</a>
               </div>
             </div>

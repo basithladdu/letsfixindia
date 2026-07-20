@@ -1044,8 +1044,7 @@ textarea:focus {
 }
 
 .event-title-row {
-  display: grid;
-  gap: 10px;
+  display: block;
   margin-bottom: 12px;
 }
 
@@ -1915,18 +1914,7 @@ textarea:focus {
     border-left-width: 6px;
   }
 
-  .event-title-row {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
-    align-items: start;
-  }
 
-  .source-inline {
-    justify-content: flex-end;
-  }
-
-  .source-inline > span {
-    flex-basis: auto;
-  }
 
   .scroll-dock {
     right: 24px;
