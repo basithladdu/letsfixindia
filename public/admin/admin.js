@@ -4,6 +4,10 @@
   const loginStatus = document.querySelector("#loginStatus");
   const queue = document.querySelector("#queue");
   const queueStatus = document.querySelector("#queueStatus");
+  const toast = document.querySelector("#adminToast");
+  const toastIcon = document.querySelector("#adminToastIcon");
+  const toastMessage = document.querySelector("#adminToastMessage");
+  let toastTimer;
 
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>\"]/g, (char) => ({
     "&": "&amp;",
@@ -45,6 +49,15 @@
     return error.message;
   }
 
+  function showToast(message, state = "success") {
+    window.clearTimeout(toastTimer);
+    toast.dataset.state = state;
+    toastIcon.textContent = state === "error" ? "!" : "✓";
+    toastMessage.textContent = message;
+    toast.hidden = false;
+    toastTimer = window.setTimeout(() => { toast.hidden = true; }, 3600);
+  }
+
   function render(items) {
     queue.innerHTML = items.length ? items.map((item) => {
       const data = item.data || {};
@@ -52,7 +65,10 @@
       const media = mediaUrl
         ? `<a href="${escapeHtml(mediaUrl)}" target="_blank" rel="noopener noreferrer">Open media</a>`
         : "No valid media URL";
-      return `<article class="submission"><div><strong>${escapeHtml(data.eventTitle || data.caption || "Untitled submission")}</strong><span>${escapeHtml(data.state || "State unknown")} &middot; ${escapeHtml(data.mediaType || "media")} &middot; ${escapeHtml(data.reviewStatus || "pending")}</span><p>${escapeHtml(data.caption || "")}</p>${media}</div><div class="actions"><button data-id="${Number(item.id)}" data-status="approved">Approve</button><button data-id="${Number(item.id)}" data-status="rejected" class="reject">Reject</button></div></article>`;
+      const status = ["approved", "rejected"].includes(data.reviewStatus) ? data.reviewStatus : "pending";
+      const approveCurrent = status === "approved";
+      const rejectCurrent = status === "rejected";
+      return `<article class="submission"><div><strong>${escapeHtml(data.eventTitle || data.caption || "Untitled submission")}</strong><span>${escapeHtml(data.state || "State unknown")} &middot; ${escapeHtml(data.mediaType || "media")} &middot; ${escapeHtml(status)}</span><p>${escapeHtml(data.caption || "")}</p>${media}</div><div class="actions"><button data-id="${Number(item.id)}" data-status="approved"${approveCurrent ? ' class="is-current" disabled aria-current="true"' : ""}>${approveCurrent ? "Approved" : "Approve"}</button><button data-id="${Number(item.id)}" data-status="rejected" class="reject${rejectCurrent ? " is-current" : ""}"${rejectCurrent ? ' disabled aria-current="true"' : ""}>${rejectCurrent ? "Rejected" : "Reject"}</button></div></article>`;
     }).join("") : "<p>No submissions found.</p>";
   }
 
@@ -85,16 +101,23 @@
   document.querySelector("#refreshButton").addEventListener("click", load);
   queue.addEventListener("click", async (event) => {
     const button = event.target.closest("button[data-id]");
-    if (!button) return;
+    if (!button || button.disabled) return;
+    const nextStatus = button.dataset.status;
+    const actionLabel = nextStatus === "approved" ? "Approve" : "Reject";
     button.disabled = true;
+    button.textContent = nextStatus === "approved" ? "Approving…" : "Rejecting…";
     try {
       await request({
         method: "PATCH",
-        body: JSON.stringify({ id: Number(button.dataset.id), status: button.dataset.status }),
+        body: JSON.stringify({ id: Number(button.dataset.id), status: nextStatus }),
       });
       await load();
+      showToast(nextStatus === "approved" ? "Submission approved." : "Submission rejected.");
     } catch (error) {
-      queueStatus.textContent = serviceMessage(error);
+      const message = serviceMessage(error);
+      queueStatus.textContent = message;
+      showToast(message, "error");
+      button.textContent = actionLabel;
       button.disabled = false;
     }
   });
