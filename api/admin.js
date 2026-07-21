@@ -4,6 +4,13 @@ const COOKIE = "letsfixindia_admin";
 const MAX_AGE = 8 * 60 * 60;
 const loginAttempts = new Map();
 
+class AdminServiceError extends Error {
+  constructor(code, message) {
+    super(message);
+    this.code = code;
+  }
+}
+
 function send(res, status, body) {
   res.status(status).setHeader("cache-control", "no-store").json(body);
 }
@@ -46,7 +53,7 @@ async function body(req) {
 async function supabaseFetch(path, options = {}) {
   const base = String(process.env.SUPABASE_URL || "").replace(/\/$/, "");
   const key = String(process.env.SUPABASE_SERVICE_ROLE_KEY || "");
-  if (!base || !key) throw new Error("Supabase moderation service is not configured.");
+  if (!base || !key) throw new AdminServiceError("moderation_not_configured", "The moderation database is not connected.");
   const response = await fetch(`${base}/rest/v1/${path}`, { ...options, headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json", ...(options.headers || {}) } });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(data.message || data.error || "Supabase moderation request failed.");
@@ -60,6 +67,7 @@ export default async function handler(req, res) {
       if (input.action !== "login") return send(res, 400, { error: "Invalid admin action." });
       const supplied = String(input.password || "");
       const configured = adminPassword();
+      if (!configured) return send(res, 503, { error: "Admin login is not configured.", code: "admin_password_not_configured" });
       const key = clientKey(req);
       const attempt = loginAttempts.get(key) || { count: 0, since: Date.now() };
       if (Date.now() - attempt.since > 15 * 60 * 1000) { attempt.count = 0; attempt.since = Date.now(); }
@@ -92,6 +100,7 @@ export default async function handler(req, res) {
     return send(res, 405, { error: "Method not allowed." });
   } catch (error) {
     console.error("Admin moderation error:", error);
-    return send(res, 503, { error: "Admin service unavailable." });
+    if (error instanceof AdminServiceError) return send(res, 503, { error: error.message, code: error.code });
+    return send(res, 503, { error: "The moderation database did not respond.", code: "moderation_request_failed" });
   }
 }

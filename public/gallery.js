@@ -63,6 +63,7 @@
   let initialized = false;
   let initialization;
   let lastOpener = null;
+  let successOpener = null;
   let previewUrl = "";
   let selectedFile = null;
   let selectedInspection = null;
@@ -379,6 +380,27 @@
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
 
+  function showSuccessDialog() {
+    const dialog = document.getElementById("gallerySuccessDialog");
+    if (!dialog) return;
+    successOpener = document.activeElement;
+    document.getElementById("galleryUploadModal")?.setAttribute("inert", "");
+    dialog.hidden = false;
+    document.body.classList.add("gallery-success-open");
+    window.requestAnimationFrame(() => dialog.querySelector("[data-gallery-success-close]")?.focus());
+  }
+
+  function closeSuccessDialog() {
+    const dialog = document.getElementById("gallerySuccessDialog");
+    if (!dialog || dialog.hidden) return false;
+    dialog.hidden = true;
+    document.getElementById("galleryUploadModal")?.removeAttribute("inert");
+    document.body.classList.remove("gallery-success-open");
+    successOpener?.focus?.();
+    successOpener = null;
+    return true;
+  }
+
   function setProgress(percent) {
     const progress = document.getElementById("galleryUploadProgress");
     const fill = progress?.querySelector("span");
@@ -540,6 +562,8 @@
       selectedFile = null;
       revokePreview();
       setStatus("Received for editorial review. It is not public yet.", "success");
+      populateStates();
+      showSuccessDialog();
     } catch (error) {
       setStatus(error.message || "The submission failed. No gallery item was published.", "error");
     } finally {
@@ -569,6 +593,7 @@
 
   function bindEvents() {
     document.querySelectorAll("[data-gallery-close]").forEach((control) => control.addEventListener("click", closeModal));
+    document.querySelectorAll("[data-gallery-success-close]").forEach((control) => control.addEventListener("click", closeSuccessDialog));
     document.querySelector("[data-gallery-back]")?.addEventListener("click", (event) => {
       event.preventDefault();
       closeModal();
@@ -603,7 +628,7 @@
       if (share) copyItemLink(share.dataset.galleryShare, share);
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeModal();
+      if (event.key === "Escape" && !closeSuccessDialog()) closeModal();
     });
     document.addEventListener("click", (event) => {
       if (event.target.closest("[data-link]") && !event.target.closest("#galleryUploadModal")) hideModal();
@@ -612,8 +637,8 @@
 
   function populateStates() {
     const select = document.getElementById("galleryState");
-    if (!select || select.options.length > 1) return;
-    STATES_AND_UTS.forEach((name) => select.add(new Option(name, name)));
+    if (!select) return;
+    if (select.options.length <= 1) STATES_AND_UTS.forEach((name) => select.add(new Option(name, name)));
     const recordedDate = document.querySelector('#galleryUploadForm input[name="recordedDate"]');
     const today = new Date().toISOString().slice(0, 10);
     if (recordedDate) {

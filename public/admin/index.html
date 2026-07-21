@@ -1,3 +1,36 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>Gallery admin | LetsFixIndia</title><link rel="stylesheet" href="/admin/admin.css"></head>
-<body><main class="admin-shell"><p class="eyebrow">LetsFixIndia</p><h1>Gallery moderation</h1><section id="loginPanel"><p>Sign in to review submitted media.</p><form id="loginForm"><label>Password<input id="password" type="password" autocomplete="current-password" required></label><button>Sign in</button><p id="loginStatus" role="alert"></p></form></section><section id="queuePanel" hidden><div class="queue-head"><p id="queueStatus">Loading submissions...</p><button id="refreshButton" type="button">Refresh</button></div><div id="queue"></div></section></main><script src="/admin/admin.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <title>Gallery admin | LetsFixIndia</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/admin/admin.css?v=20260721-1">
+  </head>
+  <body>
+    <main class="admin-shell">
+      <p class="eyebrow">LetsFixIndia</p>
+      <h1>Gallery moderation</h1>
+      <section id="loginPanel">
+        <p>Sign in to review submitted media.</p>
+        <form id="loginForm">
+          <label class="visually-hidden" for="username">Username</label>
+          <input id="username" name="username" class="visually-hidden" type="text" value="letsfixindia-admin" autocomplete="username" readonly>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button type="submit">Sign in</button>
+          <p id="loginStatus" role="alert"></p>
+        </form>
+      </section>
+      <section id="queuePanel" hidden>
+        <div class="queue-head">
+          <p id="queueStatus">Loading submissions...</p>
+          <button id="refreshButton" type="button">Refresh</button>
+        </div>
+        <div id="queue"></div>
+      </section>
+    </main>
+    <script src="/admin/admin.js?v=20260721-1"></script>
+  </body>
+</html>

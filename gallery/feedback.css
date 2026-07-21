@@ -1,0 +1,105 @@
+.gallery-success-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.gallery-success-dialog[hidden] {
+  display: none;
+}
+
+.gallery-success-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 25, 32, 0.58);
+  backdrop-filter: blur(5px);
+}
+
+.gallery-success-card {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(420px, 100%);
+  padding: 30px 28px 26px;
+  border: 1px solid #c9d3cc;
+  border-radius: 16px;
+  background: var(--paper, #fbfaf5);
+  box-shadow: 0 28px 80px rgba(14, 22, 29, 0.28);
+  color: var(--ink, #20252a);
+  text-align: center;
+  animation: gallery-success-enter 180ms ease-out both;
+}
+
+.gallery-success-mark {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 15px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4f4e8;
+  color: #176b35;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.gallery-success-card .eyebrow {
+  margin: 0 0 7px;
+  color: #a33c09;
+}
+
+.gallery-success-card h3 {
+  margin: 0;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(27px, 6vw, 34px);
+  line-height: 1.05;
+}
+
+.gallery-success-card > p:last-of-type {
+  max-width: 33ch;
+  margin: 12px auto 21px;
+  color: var(--muted, #60676d);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.gallery-success-action {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 9px;
+  background: #a33c09;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.gallery-success-action:hover,
+.gallery-success-action:focus-visible {
+  background: #7f2f08;
+  outline: 3px solid rgba(163, 60, 9, 0.2);
+  outline-offset: 3px;
+}
+
+body.gallery-success-open {
+  overflow: hidden;
+}
+
+@keyframes gallery-success-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-success-card {
+    animation: none;
+  }
+}

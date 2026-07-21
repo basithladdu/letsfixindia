@@ -125,4 +125,15 @@
             </form>
           </div>
         </div>
+
+        <div id="gallerySuccessDialog" class="gallery-success-dialog" role="dialog" aria-modal="true" aria-labelledby="gallerySuccessTitle" aria-describedby="gallerySuccessMessage" hidden>
+          <div class="gallery-success-backdrop" data-gallery-success-close></div>
+          <div class="gallery-success-card" role="document">
+            <span class="gallery-success-mark" aria-hidden="true">&#10003;</span>
+            <p class="eyebrow">Submission received</p>
+            <h3 id="gallerySuccessTitle">Sent for review</h3>
+            <p id="gallerySuccessMessage">Your media is in the editor queue. It will appear in the gallery after approval.</p>
+            <a class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
+          </div>
+        </div>
       </section>

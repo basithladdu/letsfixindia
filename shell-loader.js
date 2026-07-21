@@ -40,7 +40,7 @@
     const status = document.getElementById("shellLoaderStatus");
     try {
       const [appMarkup, scriptsMarkup, progressMarkup] = await Promise.all([
-        readText("/shell/app-markup.html?v=20260721-1"),
+        readText("/shell/app-markup.html?v=20260721-2"),
         readText("/shell/scripts.html?v=20260721-1"),
         readText("/shell/mobile-progress.html?v=20260721-1")
       ]);
