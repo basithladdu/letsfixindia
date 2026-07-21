@@ -55,7 +55,11 @@ export default async function handler(request, response) {
     const upstream = await fetch(url, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
     const rows = await upstream.json().catch(() => []);
     if (!upstream.ok) throw new Error("Supabase gallery request failed.");
-    return send(response, 200, { items: rows.map(publicItem).filter(Boolean) });
+    response
+      .status(200)
+      .setHeader("cache-control", "public, max-age=0, s-maxage=15, stale-while-revalidate=45")
+      .json({ items: rows.map(publicItem).filter(Boolean) });
+    return;
   } catch (error) {
     console.error("Public gallery error:", error);
     return send(response, 503, { error: "The approved gallery is temporarily unavailable." });

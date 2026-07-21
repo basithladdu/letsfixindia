@@ -62,6 +62,7 @@
   let staticApprovedItems = [];
   let liveApprovedItems = [];
   let liveRefreshTask;
+  let lastLiveRefresh = 0;
   let dbClient;
   let initialized = false;
   let initialization;
@@ -142,13 +143,18 @@
     approvedItems = [...merged.values()];
   }
 
-  async function refreshApprovedItems() {
+  async function refreshApprovedItems({ force = false } = {}) {
     if (liveRefreshTask) return liveRefreshTask;
+    if (!force && Date.now() - lastLiveRefresh < 15000) {
+      renderGallery();
+      return Promise.resolve();
+    }
     liveRefreshTask = (async () => {
-      const response = await fetch("/api/gallery", { cache: "no-store" });
+      const response = await fetch("/api/gallery");
       if (!response.ok) throw new Error("Unable to refresh approved gallery media.");
       const data = await response.json();
       liveApprovedItems = Array.isArray(data?.items) ? data.items : [];
+      lastLiveRefresh = Date.now();
       mergeApprovedItems();
       renderGallery();
     })().catch((error) => console.warn(error.message)).finally(() => { liveRefreshTask = null; });
@@ -190,10 +196,29 @@
     const title = item.eventTitle || item.title || `Gallery item ${index + 1}`;
     const type = item.mediaType === "video" || new URL(url).pathname.includes("/video/upload/") ? "video" : "image";
     if (type === "video") {
-      const poster = cloudinaryAssetUrl(item.posterUrl);
-      return `<video controls playsinline preload="metadata"${poster ? ` poster="${esc(poster)}"` : ""} aria-label="${esc(title)}"><source src="${esc(url)}"></video>`;
+      return `<div class="gallery-video-gate"><span class="gallery-video-play" aria-hidden="true">▶</span><strong>Video evidence</strong><small>Loads only when you press play</small><button type="button" data-gallery-video-src="${esc(url)}" data-gallery-video-title="${esc(title)}">Play video</button></div>`;
     }
     return `<img src="${esc(url)}" alt="${esc(item.alt || title)}" loading="lazy" decoding="async">`;
+  }
+
+  function postPath(id) {
+    return `/gallery?post=${encodeURIComponent(id)}`;
+  }
+
+  function revealRequestedItem() {
+    const queryId = new URLSearchParams(window.location.search).get("post") || "";
+    const hashId = window.location.hash.startsWith("#") ? window.location.hash.slice(1) : "";
+    const requestedId = cleanId(queryId || hashId, "");
+    if (!requestedId) return;
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const card = document.getElementById(requestedId);
+        if (!card) return;
+        document.querySelectorAll(".gallery-card.is-shared").forEach((item) => item.classList.remove("is-shared"));
+        card.classList.add("is-shared");
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
   }
 
   function renderGallery() {
@@ -223,12 +248,13 @@
       const title = item.eventTitle || item.title || "Documented public event";
       const warning = WARNING_LABELS[item.contentWarning];
       const record = item.relatedRecordId ? `/record/${encodeURIComponent(item.relatedRecordId)}` : "";
+      const permalink = postPath(id);
       return `
         <article id="${id}" class="gallery-card">
           <header class="gallery-card-head">
             <span class="gallery-avatar" aria-hidden="true">${esc(initial)}</span>
             <div><strong>${esc(credit)}</strong><span>${socialHandle && socialHandle !== credit ? `${esc(socialHandle)} · ` : ""}${esc(item.location || item.state || "Location checked by editor")} · ${esc(formatDate(item.recordedDate))}</span></div>
-            <button type="button" class="gallery-share-button" data-gallery-share="${esc(id)}" aria-label="Copy link to ${esc(title)}">Share</button>
+            <button type="button" class="gallery-share-button" data-gallery-url="${esc(permalink)}" data-gallery-title="${esc(title)}" aria-label="Share ${esc(title)}">Share</button>
           </header>
           <div class="gallery-media">
             ${warning ? `<span class="gallery-warning">Content warning: ${esc(warning)}</span>` : ""}
@@ -239,11 +265,12 @@
             <p><strong>${esc(socialHandle || credit)}</strong> ${esc(item.caption || "Context available from the editor.")}</p>
             <div class="gallery-card-foot">
               <span>Reviewed before publication</span>
-              ${record ? `<a href="${record}" data-link>Related record</a>` : ""}
+              <span class="gallery-card-links">${record ? `<a href="${record}" data-link>Related record</a>` : ""}<a href="${esc(permalink)}" data-link>Post link</a></span>
             </div>
           </div>
         </article>`;
     }).join("");
+    revealRequestedItem();
   }
 
   function revokePreview() {
@@ -596,8 +623,16 @@
     }
   }
 
-  async function copyItemLink(id, button) {
-    const url = `${window.location.origin}/gallery#${encodeURIComponent(id)}`;
+  async function shareItem(path, title, button) {
+    const url = new URL(path, window.location.origin).href;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: `${title} | LetsFixIndia`, url });
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
+      }
+    }
     try {
       await navigator.clipboard.writeText(url);
     } catch {
@@ -649,8 +684,25 @@
       previewFile(file);
     });
     document.getElementById("galleryGrid")?.addEventListener("click", (event) => {
-      const share = event.target.closest("[data-gallery-share]");
-      if (share) copyItemLink(share.dataset.galleryShare, share);
+      const share = event.target.closest("[data-gallery-url]");
+      if (share) shareItem(share.dataset.galleryUrl, share.dataset.galleryTitle || "Gallery post", share);
+      const videoButton = event.target.closest("[data-gallery-video-src]");
+      if (videoButton) {
+        const url = cloudinaryAssetUrl(videoButton.dataset.galleryVideoSrc);
+        const gate = videoButton.closest(".gallery-video-gate");
+        if (!url || !gate) return;
+        const video = document.createElement("video");
+        video.controls = true;
+        video.playsInline = true;
+        video.autoplay = true;
+        video.preload = "none";
+        video.setAttribute("aria-label", videoButton.dataset.galleryVideoTitle || "Gallery video");
+        const source = document.createElement("source");
+        source.src = url;
+        video.appendChild(source);
+        gate.replaceWith(video);
+        video.play().catch(() => {});
+      }
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && !closeSuccessDialog()) closeModal();
@@ -686,6 +738,7 @@
     config = { ...DEFAULT_CONFIG, ...(configData || {}) };
     staticApprovedItems = Array.isArray(galleryData) ? galleryData : Array.isArray(galleryData?.items) ? galleryData.items : [];
     liveApprovedItems = Array.isArray(liveGalleryData?.items) ? liveGalleryData.items : [];
+    lastLiveRefresh = Date.now();
     mergeApprovedItems();
     populateStates();
     bindEvents();
