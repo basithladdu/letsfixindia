@@ -168,17 +168,20 @@
   async function refreshApprovedItems({ force = false } = {}) {
     if (liveRefreshTask) return liveRefreshTask;
     if (!force && Date.now() - lastLiveRefresh < 15000) {
-      renderGallery();
       return Promise.resolve();
     }
     liveRefreshTask = (async () => {
       const response = await fetch("/api/gallery");
       if (!response.ok) throw new Error("Unable to refresh approved gallery media.");
       const data = await response.json();
-      liveApprovedItems = Array.isArray(data?.items) ? data.items : [];
+      const nextLiveItems = Array.isArray(data?.items) ? data.items : [];
+      const changed = JSON.stringify(nextLiveItems) !== JSON.stringify(liveApprovedItems);
+      liveApprovedItems = nextLiveItems;
       lastLiveRefresh = Date.now();
-      mergeApprovedItems();
-      renderGallery();
+      if (changed) {
+        mergeApprovedItems();
+        renderGallery();
+      }
     })().catch((error) => console.warn(error.message)).finally(() => { liveRefreshTask = null; });
     return liveRefreshTask;
   }
@@ -216,7 +219,7 @@
     const social = socialPost(item.externalUrl);
     const title = item.eventTitle || item.title || `Gallery item ${index + 1}`;
     if (social) {
-      return `<div class="gallery-embed-shell" data-platform="${esc(social.platform)}"><iframe class="gallery-embed-frame" src="${esc(social.embedUrl)}" title="${esc(`${social.platformName} post: ${title}`)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-presentation" allowfullscreen></iframe><p class="gallery-embed-fallback">Embed unavailable? <a href="${esc(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open the original post</a></p></div>`;
+      return `<div class="gallery-embed-shell" data-platform="${esc(social.platform)}"><iframe class="gallery-embed-frame" src="${esc(social.embedUrl)}" title="${esc(`${social.platformName} post: ${title}`)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-presentation" allowfullscreen></iframe><p class="gallery-embed-fallback">Embed unavailable? <a href="${esc(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open the original post</a></p></div>`;
     }
     const url = cloudinaryAssetUrl(item.secureUrl || item.url);
     if (!url) return "";
