@@ -60,36 +60,5 @@
     return null;
   }
 
-  function createFrame(info, title) {
-    if (!info || !["x", "instagram", "youtube"].includes(info.platform)) return null;
-    const shell = document.createElement("div");
-    shell.className = "gallery-embed-shell";
-    shell.dataset.platform = info.platform;
-
-    const frame = document.createElement("iframe");
-    frame.className = "gallery-embed-frame";
-    frame.src = info.embedUrl;
-    frame.title = `${info.platformName} post: ${title || "submitted evidence"}`;
-    frame.loading = "lazy";
-    frame.referrerPolicy = "strict-origin-when-cross-origin";
-    frame.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
-    frame.setAttribute("sandbox", "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-presentation");
-    frame.setAttribute("allowfullscreen", "");
-
-    const fallback = document.createElement("p");
-    fallback.className = "gallery-embed-fallback";
-    fallback.append("Embed unavailable? ");
-    const link = document.createElement("a");
-    link.href = info.canonicalUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "Open the original post";
-    fallback.append(link);
-
-    frame.addEventListener("error", () => shell.classList.add("is-error"), { once: true });
-    shell.append(frame, fallback);
-    return shell;
-  }
-
-  root.LetsFixIndiaEmbeds = Object.freeze({ parse, createFrame });
+  root.LetsFixIndiaEmbeds = Object.freeze({ parse });
 })(typeof window === "undefined" ? globalThis : window);

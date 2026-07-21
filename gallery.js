@@ -114,6 +114,24 @@
     }
   }
 
+  function cloudinaryVideoPosterUrl(value) {
+    const assetUrl = cloudinaryAssetUrl(value);
+    if (!assetUrl) return "";
+    const url = new URL(assetUrl);
+    const marker = "/video/upload/";
+    const markerIndex = url.pathname.indexOf(marker);
+    if (markerIndex < 0) return "";
+
+    const assetPath = url.pathname.slice(markerIndex + marker.length);
+    const lastSlash = assetPath.lastIndexOf("/");
+    const lastDot = assetPath.lastIndexOf(".");
+    const posterPath = lastDot > lastSlash ? `${assetPath.slice(0, lastDot)}.jpg` : `${assetPath}.jpg`;
+    url.pathname = `${url.pathname.slice(0, markerIndex + marker.length)}c_limit,w_960,q_auto:eco/${posterPath}`;
+    url.search = "";
+    url.hash = "";
+    return url.href;
+  }
+
   function formatDate(value) {
     if (!value) return "Date under review";
     const date = new Date(`${String(value).slice(0, 10)}T00:00:00`);
@@ -198,13 +216,15 @@
     const social = socialPost(item.externalUrl);
     const title = item.eventTitle || item.title || `Gallery item ${index + 1}`;
     if (social) {
-      return `<div class="gallery-external-gate" data-platform="${esc(social.platform)}"><span class="gallery-external-mark" aria-hidden="true">${esc(social.platform === "instagram" ? "IG" : social.platform === "youtube" ? "YT" : "X")}</span><strong>${esc(social.platformName)} post</strong><small>Loads only when you choose to view it</small><button type="button" data-gallery-embed-url="${esc(social.canonicalUrl)}" data-gallery-embed-title="${esc(title)}">Load ${esc(social.platformName)} post</button><a href="${esc(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open original</a></div>`;
+      return `<div class="gallery-embed-shell" data-platform="${esc(social.platform)}"><iframe class="gallery-embed-frame" src="${esc(social.embedUrl)}" title="${esc(`${social.platformName} post: ${title}`)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms allow-presentation" allowfullscreen></iframe><p class="gallery-embed-fallback">Embed unavailable? <a href="${esc(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open the original post</a></p></div>`;
     }
     const url = cloudinaryAssetUrl(item.secureUrl || item.url);
     if (!url) return "";
     const type = item.mediaType === "video" || new URL(url).pathname.includes("/video/upload/") ? "video" : "image";
     if (type === "video") {
-      return `<div class="gallery-video-gate"><span class="gallery-video-play" aria-hidden="true">▶</span><strong>Video evidence</strong><small>Loads only when you press play</small><button type="button" data-gallery-video-src="${esc(url)}" data-gallery-video-title="${esc(title)}">Play video</button></div>`;
+      const posterUrl = cloudinaryVideoPosterUrl(url);
+      const poster = posterUrl ? `<img class="gallery-video-poster" src="${esc(posterUrl)}" alt="" loading="lazy" decoding="async">` : "";
+      return `<div class="gallery-video-gate">${poster}<span class="gallery-video-shade" aria-hidden="true"></span><span class="gallery-video-play" aria-hidden="true">▶</span><strong>Video evidence</strong><small>Press play to load the original video</small><button type="button" data-gallery-video-src="${esc(url)}" data-gallery-video-title="${esc(title)}">Play video</button></div>`;
     }
     return `<img src="${esc(url)}" alt="${esc(item.alt || title)}" loading="lazy" decoding="async">`;
   }
@@ -827,15 +847,6 @@
     document.getElementById("galleryGrid")?.addEventListener("click", (event) => {
       const share = event.target.closest("[data-gallery-url]");
       if (share) shareItem(share.dataset.galleryUrl, share.dataset.galleryTitle || "Gallery post", share);
-      const embedButton = event.target.closest("[data-gallery-embed-url]");
-      if (embedButton) {
-        const info = socialPost(embedButton.dataset.galleryEmbedUrl);
-        const gate = embedButton.closest(".gallery-external-gate");
-        const frame = window.LetsFixIndiaEmbeds?.createFrame(info, embedButton.dataset.galleryEmbedTitle);
-        if (!gate || !frame) return;
-        gate.replaceWith(frame);
-        return;
-      }
       const videoButton = event.target.closest("[data-gallery-video-src]");
       if (videoButton) {
         const url = cloudinaryAssetUrl(videoButton.dataset.galleryVideoSrc);
