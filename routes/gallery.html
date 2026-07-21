@@ -2,8 +2,8 @@
         <div class="gallery-route-head">
           <div class="section-head">
             <p class="eyebrow">Public evidence gallery</p>
-            <h2>Photos and video from the ground</h2>
-            <p>Reviewed photos and videos from protests and public incidents across India.</p>
+            <h2>Public media from the ground</h2>
+            <p>Reviewed photos, videos, and public social posts from protests and public incidents across India.</p>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
               <div class="gallery-modal-title">
                 <p class="eyebrow">Gallery submission</p>
                 <h3 id="galleryUploadTitle" tabindex="-1">Submit protest media</h3>
-                <p class="gallery-modal-intro">Send original media and enough context for editorial review.</p>
+                <p class="gallery-modal-intro">Share a public post or upload original media with enough context for editorial review.</p>
               </div>
               <a class="gallery-submit-back" href="/gallery" data-gallery-back>
                 <span aria-hidden="true">&larr;</span> Back to Gallery
@@ -34,7 +34,29 @@
               <button type="button" class="gallery-modal-close" data-gallery-close aria-label="Close upload form">&times;</button>
             </div>
             <form id="galleryUploadForm" class="gallery-upload-form" novalidate>
-              <div class="gallery-file-field">
+              <fieldset id="gallerySubmissionKind" class="gallery-intake-choice" tabindex="-1">
+                <legend>Do you have a social media link or the original video/photo?</legend>
+                <div class="gallery-intake-options">
+                  <label>
+                    <input type="radio" name="submissionKind" value="social-link" required>
+                    <span><strong>I have a social media link</strong><small>Instagram, X/Twitter, or YouTube</small></span>
+                  </label>
+                  <label>
+                    <input type="radio" name="submissionKind" value="original-media" required>
+                    <span><strong>I have the original video/photo</strong><small>Upload a photo or video from your device</small></span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div id="gallerySubmissionFields" class="gallery-submission-fields" hidden>
+                <label id="gallerySocialField" class="gallery-social-field" hidden>
+                  <span>Public social media post <b class="gallery-field-status is-required">Required</b></span>
+                  <input id="gallerySocialUrl" name="externalUrl" type="url" inputmode="url" autocomplete="url" maxlength="500" placeholder="Paste an Instagram, X/Twitter, or YouTube link" disabled>
+                  <small id="gallerySocialStatus" role="status" aria-live="polite">The post must be public. Tracking parameters are removed before publication.</small>
+                </label>
+
+                <div id="galleryOriginalMediaFields" class="gallery-original-fields" hidden>
+                  <div class="gallery-file-field">
                 <span id="galleryFileLabel">Photo or video <b class="gallery-field-status is-required">Required</b></span>
                 <div id="galleryDropzone" class="gallery-dropzone" role="button" tabindex="0" aria-labelledby="galleryFileLabel galleryDropTitle" aria-controls="galleryFile">
                   <span class="gallery-drop-icon" aria-hidden="true">
@@ -43,16 +65,17 @@
                   <span class="gallery-drop-copy"><strong id="galleryDropTitle">Drop evidence here</strong><small>JPEG, PNG, WebP, MP4, MOV, or WebM</small></span>
                   <span class="gallery-file-choose" aria-hidden="true">Choose media</span>
                 </div>
-                <input id="galleryFile" class="gallery-file-input" name="file" type="file" accept="image/*,video/*" required>
+                    <input id="galleryFile" class="gallery-file-input" name="file" type="file" accept="image/*,video/*" required disabled>
                 <small>Images up to 20 MB; videos up to 100 MB. Original aspect ratios are preserved.</small>
                 <small id="galleryIntegrityStatus" class="gallery-integrity-status" role="status" aria-live="polite">We’ll review your media before publication.</small>
-              </div>
+                  </div>
 
-              <div id="galleryPreview" class="gallery-preview" hidden>
-                <img id="galleryImagePreview" alt="Selected upload preview" hidden>
-                <video id="galleryVideoPreview" controls muted playsinline hidden></video>
-                <span id="galleryFileMeta"></span>
-              </div>
+                  <div id="galleryPreview" class="gallery-preview" hidden>
+                    <img id="galleryImagePreview" alt="Selected upload preview" hidden>
+                    <video id="galleryVideoPreview" controls muted playsinline hidden></video>
+                    <span id="galleryFileMeta"></span>
+                  </div>
+                </div>
 
               <div class="gallery-form-grid">
                 <label>
@@ -85,7 +108,7 @@
                   <input name="location" type="text" maxlength="120" required placeholder="Street, landmark, district, or city">
                 </label>
                 <label class="gallery-field-wide">
-                  <span>What happened in the attached video or photo <b class="gallery-field-status is-required">Required</b></span>
+                  <span>What happened in the video/photo <b class="gallery-field-status is-required">Required</b></span>
                   <textarea name="caption" rows="4" maxlength="600" required placeholder="Describe only what the media shows. Include sequence, uniforms, crowd movement, warnings, force used, injuries, or detentions when visible."></textarea>
                 </label>
                 <div class="gallery-form-divider gallery-field-wide" aria-hidden="true">
@@ -115,12 +138,13 @@
 
               <label class="gallery-consent">
                 <input name="rightsConfirmed" type="checkbox" required>
-                <span><strong>Rights confirmation <b class="gallery-field-status is-required">Required</b></strong><small>I recorded this media or have permission to submit it, and the description is accurate to the best of my knowledge.</small></span>
+                <span><strong>Submission confirmation <b class="gallery-field-status is-required">Required</b></strong><small id="galleryConsentCopy">I confirm the link is public and the description is accurate to the best of my knowledge.</small></span>
               </label>
               <div id="galleryUploadProgress" class="gallery-upload-progress" hidden aria-hidden="true"><span></span></div>
               <div class="gallery-upload-actions">
                 <button id="gallerySubmitButton" type="submit" class="gallery-submit-btn">Submit for review</button>
                 <p id="galleryUploadStatus" class="gallery-upload-status" role="status" aria-live="polite"></p>
+              </div>
               </div>
             </form>
           </div>
@@ -132,7 +156,7 @@
             <span class="gallery-success-mark" aria-hidden="true">&#10003;</span>
             <p class="eyebrow">Submission received</p>
             <h3 id="gallerySuccessTitle">Sent for review</h3>
-            <p id="gallerySuccessMessage">Your media is in the editor queue. It will appear in the gallery after approval.</p>
+            <p id="gallerySuccessMessage">Your submission is in the editor queue. It will appear in the gallery after approval.</p>
             <a class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
           </div>
         </div>

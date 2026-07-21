@@ -11,5 +11,37 @@
     },
     "updatedAt": "2026-07-21"
   },
-  "items": []
+  "items": [
+    {
+      "id": "social-x-2079443179527684502",
+      "reviewStatus": "approved",
+      "mediaType": "embed",
+      "externalUrl": "https://x.com/Cockroachisback/status/2079443179527684502",
+      "eventTitle": "X post alleges Delhi Police hit a 10-year-old during protest",
+      "caption": "The submitted X post says Delhi Police slapped and hit a 10-year-old boy during the protest.",
+      "state": "Delhi",
+      "location": "Delhi",
+      "incidentType": "excessive-force",
+      "credit": "@Cockroachisback",
+      "socialHandle": "@Cockroachisback",
+      "pinToEnd": true,
+      "displayOrder": 1
+    },
+    {
+      "id": "social-instagram-Da-M4OvJvTK",
+      "reviewStatus": "approved",
+      "mediaType": "embed",
+      "externalUrl": "https://www.instagram.com/reel/Da-M4OvJvTK/",
+      "eventTitle": "Jantar Mantar protest, 20 July",
+      "caption": "The submitted Instagram Reel identifies the scene as the Jantar Mantar protest on 20 July.",
+      "recordedDate": "2026-07-20",
+      "state": "Delhi",
+      "location": "Jantar Mantar",
+      "incidentType": "protest-march",
+      "credit": "@sakshamlutra_",
+      "socialHandle": "@sakshamlutra_",
+      "pinToEnd": true,
+      "displayOrder": 2
+    }
+  ]
 }

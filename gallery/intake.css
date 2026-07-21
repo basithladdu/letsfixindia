@@ -119,6 +119,120 @@
   padding: 16px 18px 20px;
 }
 
+.gallery-intake-choice {
+  display: grid;
+  gap: 11px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.gallery-intake-choice:focus {
+  outline: none;
+}
+
+.gallery-intake-choice legend {
+  padding: 0;
+  color: var(--ink);
+  font-family: Newsreader, Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.gallery-intake-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.gallery-upload-form .gallery-intake-options label {
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  min-height: 94px;
+  padding: 14px;
+  border: 1px solid #c9cfd4;
+  border-radius: 11px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.gallery-upload-form .gallery-intake-options label:hover,
+.gallery-upload-form .gallery-intake-options label:has(input:focus-visible) {
+  border-color: #d05b20;
+  background: #fff9f5;
+  box-shadow: 0 0 0 3px rgba(255, 103, 31, 0.11);
+}
+
+.gallery-upload-form .gallery-intake-options label:has(input:checked) {
+  border-color: #d95411;
+  background: #fff5ed;
+  box-shadow: inset 0 0 0 1px #d95411;
+}
+
+.gallery-intake-options input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  min-height: 20px;
+  margin: 1px 0 0;
+  accent-color: #d95411;
+}
+
+.gallery-intake-options label > span {
+  display: grid;
+  gap: 5px;
+}
+
+.gallery-intake-options strong {
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.gallery-intake-options small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.gallery-submission-fields,
+.gallery-original-fields {
+  display: grid;
+  gap: 16px;
+}
+
+.gallery-submission-fields[hidden],
+.gallery-original-fields[hidden],
+.gallery-social-field[hidden] {
+  display: none;
+}
+
+.gallery-upload-form .gallery-social-field {
+  padding: 13px;
+  border: 1px solid #d7c9bd;
+  border-radius: 10px;
+  background: #fffaf6;
+}
+
+#gallerySocialStatus[data-state="success"] {
+  color: #166534;
+  font-weight: 750;
+}
+
+#gallerySocialStatus[data-state="error"],
+.gallery-upload-form input[aria-invalid="true"] {
+  color: #a1241e;
+}
+
+.gallery-upload-form input[aria-invalid="true"] {
+  border-color: #b3261e;
+  outline: 3px solid rgba(179, 38, 30, 0.12);
+}
+
 .gallery-upload-form label {
   display: grid;
   gap: 6px;

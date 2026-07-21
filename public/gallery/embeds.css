@@ -1,0 +1,109 @@
+.gallery-external-gate {
+  display: grid;
+  width: 100%;
+  min-height: 300px;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  padding: 30px 18px;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #111315, #25282c);
+  color: #fff;
+  text-align: center;
+}
+
+.gallery-external-mark {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.gallery-external-gate[data-platform="instagram"] .gallery-external-mark {
+  background: linear-gradient(145deg, rgba(214, 41, 118, 0.7), rgba(252, 175, 69, 0.58));
+}
+
+.gallery-external-gate[data-platform="youtube"] .gallery-external-mark {
+  background: rgba(255, 0, 0, 0.65);
+}
+
+.gallery-external-gate strong {
+  font-size: 14px;
+}
+
+.gallery-external-gate small {
+  color: #c4c9ce;
+  font-size: 10px;
+}
+
+.gallery-external-gate button {
+  min-height: 42px;
+  margin-top: 4px;
+  padding: 9px 14px;
+  border: 1px solid #ff8a4c;
+  border-radius: 8px;
+  background: #fff7f1;
+  color: #9a3412;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.gallery-external-gate button:hover,
+.gallery-external-gate button:focus-visible {
+  background: #ffeadc;
+}
+
+.gallery-external-gate a,
+.gallery-embed-fallback a {
+  color: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
+
+.gallery-embed-shell {
+  display: grid;
+  width: 100%;
+  min-height: 300px;
+  align-content: start;
+  background: #fff;
+}
+
+.gallery-embed-frame {
+  display: block;
+  width: 100%;
+  min-height: 560px;
+  border: 0;
+  background: #fff;
+}
+
+.gallery-embed-shell[data-platform="instagram"] .gallery-embed-frame {
+  min-height: min(760px, 78vh);
+}
+
+.gallery-embed-shell[data-platform="youtube"] .gallery-embed-frame {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-embed-fallback {
+  margin: 0;
+  padding: 9px 11px;
+  border-top: 1px solid #e3e6e8;
+  background: #f7f8f8;
+  color: #59616a;
+  font-size: 10px;
+  text-align: center;
+}
+
+.gallery-embed-fallback a {
+  color: #9a3412;
+}

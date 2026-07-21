@@ -97,6 +97,10 @@
     }
   }
 
+  function socialPost(value) {
+    return window.LetsFixIndiaEmbeds?.parse(value) || null;
+  }
+
   function cloudinaryAssetUrl(value, expectedCloudName = "") {
     try {
       const url = new URL(String(value || ""));
@@ -137,7 +141,7 @@
   function mergeApprovedItems() {
     const merged = new Map();
     [...liveApprovedItems, ...staticApprovedItems].forEach((item, index) => {
-      const key = item?.publicId || item?.secureUrl || item?.url || item?.id || `gallery-item-${index}`;
+      const key = item?.publicId || item?.externalUrl || item?.secureUrl || item?.url || item?.id || `gallery-item-${index}`;
       if (!merged.has(key)) merged.set(key, item);
     });
     approvedItems = [...merged.values()];
@@ -184,16 +188,20 @@
   function renderConfigurationState() {
     const storage = document.getElementById("galleryStorageLabel");
     const submit = document.getElementById("gallerySubmitButton");
-    if (storage) storage.textContent = "Photos + video · reviewed before publication";
+    if (storage) storage.textContent = "Photos + video + public posts · reviewed before publication";
     if (!submit) return;
     submit.disabled = false;
     submit.textContent = "Submit for review";
   }
 
   function mediaMarkup(item, index) {
+    const social = socialPost(item.externalUrl);
+    const title = item.eventTitle || item.title || `Gallery item ${index + 1}`;
+    if (social) {
+      return `<div class="gallery-external-gate" data-platform="${esc(social.platform)}"><span class="gallery-external-mark" aria-hidden="true">${esc(social.platform === "instagram" ? "IG" : social.platform === "youtube" ? "YT" : "X")}</span><strong>${esc(social.platformName)} post</strong><small>Loads only when you choose to view it</small><button type="button" data-gallery-embed-url="${esc(social.canonicalUrl)}" data-gallery-embed-title="${esc(title)}">Load ${esc(social.platformName)} post</button><a href="${esc(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open original</a></div>`;
+    }
     const url = cloudinaryAssetUrl(item.secureUrl || item.url);
     if (!url) return "";
-    const title = item.eventTitle || item.title || `Gallery item ${index + 1}`;
     const type = item.mediaType === "video" || new URL(url).pathname.includes("/video/upload/") ? "video" : "image";
     if (type === "video") {
       return `<div class="gallery-video-gate"><span class="gallery-video-play" aria-hidden="true">▶</span><strong>Video evidence</strong><small>Loads only when you press play</small><button type="button" data-gallery-video-src="${esc(url)}" data-gallery-video-title="${esc(title)}">Play video</button></div>`;
@@ -227,8 +235,12 @@
     if (!grid || !count) return;
 
     const items = approvedItems
-      .filter((item) => item && item.reviewStatus === "approved" && cloudinaryAssetUrl(item.secureUrl || item.url))
-      .sort((a, b) => String(b.publishedAt || b.recordedDate || "").localeCompare(String(a.publishedAt || a.recordedDate || "")));
+      .filter((item) => item && item.reviewStatus === "approved" && (socialPost(item.externalUrl) || cloudinaryAssetUrl(item.secureUrl || item.url)))
+      .sort((a, b) => {
+        if (Boolean(a.pinToEnd) !== Boolean(b.pinToEnd)) return a.pinToEnd ? 1 : -1;
+        if (a.pinToEnd && b.pinToEnd) return Number(a.displayOrder || 0) - Number(b.displayOrder || 0);
+        return String(b.publishedAt || b.recordedDate || "").localeCompare(String(a.publishedAt || a.recordedDate || ""));
+      });
 
     count.textContent = `${items.length} approved ${items.length === 1 ? "item" : "items"}`;
     if (!items.length) {
@@ -242,6 +254,7 @@
 
     grid.innerHTML = items.map((item, index) => {
       const id = cleanId(item.id, `gallery-item-${index + 1}`);
+      const social = socialPost(item.externalUrl);
       const socialHandle = String(item.socialHandle || "").trim();
       const credit = item.credit || socialHandle || "Anonymous contributor";
       const initial = credit.replace(/^@/, "").charAt(0).toUpperCase() || "A";
@@ -249,11 +262,13 @@
       const warning = WARNING_LABELS[item.contentWarning];
       const record = item.relatedRecordId ? `/record/${encodeURIComponent(item.relatedRecordId)}` : "";
       const permalink = postPath(id);
+      const locationLabel = item.location || item.state || (social ? "Public social post" : "Location checked by editor");
+      const dateLabel = item.recordedDate ? ` · ${formatDate(item.recordedDate)}` : "";
       return `
         <article id="${id}" class="gallery-card">
           <header class="gallery-card-head">
             <span class="gallery-avatar" aria-hidden="true">${esc(initial)}</span>
-            <div><strong>${esc(credit)}</strong><span>${socialHandle && socialHandle !== credit ? `${esc(socialHandle)} · ` : ""}${esc(item.location || item.state || "Location checked by editor")} · ${esc(formatDate(item.recordedDate))}</span></div>
+            <div><strong>${esc(credit)}</strong><span>${socialHandle && socialHandle !== credit ? `${esc(socialHandle)} · ` : ""}${esc(locationLabel)}${esc(dateLabel)}</span></div>
             <button type="button" class="gallery-share-button" data-gallery-url="${esc(permalink)}" data-gallery-title="${esc(title)}" aria-label="Share ${esc(title)}">Share</button>
           </header>
           <div class="gallery-media">
@@ -271,6 +286,86 @@
         </article>`;
     }).join("");
     revealRequestedItem();
+  }
+
+  function setSocialStatus(message, state = "") {
+    const status = document.getElementById("gallerySocialStatus");
+    if (!status) return;
+    status.textContent = message;
+    if (state) status.dataset.state = state;
+    else delete status.dataset.state;
+  }
+
+  function resetProgress() {
+    const progress = document.getElementById("galleryUploadProgress");
+    const fill = progress?.querySelector("span");
+    if (progress) {
+      progress.hidden = true;
+      progress.setAttribute("aria-hidden", "true");
+    }
+    if (fill) fill.style.width = "0%";
+  }
+
+  function setSubmissionKind(kind) {
+    const isSocial = kind === "social-link";
+    const isOriginal = kind === "original-media";
+    const fields = document.getElementById("gallerySubmissionFields");
+    const socialField = document.getElementById("gallerySocialField");
+    const originalFields = document.getElementById("galleryOriginalMediaFields");
+    const socialInput = document.getElementById("gallerySocialUrl");
+    const fileInput = document.getElementById("galleryFile");
+    const consent = document.getElementById("galleryConsentCopy");
+
+    if (fields) fields.hidden = !isSocial && !isOriginal;
+    if (socialField) socialField.hidden = !isSocial;
+    if (originalFields) originalFields.hidden = !isOriginal;
+    if (socialInput) {
+      socialInput.disabled = !isSocial;
+      socialInput.required = isSocial;
+      socialInput.removeAttribute("aria-invalid");
+    }
+    if (fileInput) {
+      fileInput.disabled = !isOriginal;
+      fileInput.required = isOriginal;
+    }
+    if (consent) {
+      consent.textContent = isOriginal
+        ? "I recorded this media or have permission to submit it, and the description is accurate to the best of my knowledge."
+        : "I confirm this is a public post and the description is accurate to the best of my knowledge.";
+    }
+    if (isSocial) {
+      selectedFile = null;
+      revokePreview();
+      setSocialStatus("The post must be public. Tracking parameters are removed before publication.");
+    }
+    setStatus("");
+    resetProgress();
+  }
+
+  function validateSocialInput({ report = false } = {}) {
+    const input = document.getElementById("gallerySocialUrl");
+    const value = input?.value.trim() || "";
+    const info = socialPost(value);
+    if (!value) {
+      if (report) {
+        input?.setAttribute("aria-invalid", "true");
+        setSocialStatus("Paste a public Instagram, X/Twitter, or YouTube post link.", "error");
+      }
+      return null;
+    }
+    if (!info) {
+      input?.setAttribute("aria-invalid", "true");
+      setSocialStatus("Use a public Instagram post or Reel, X/Twitter post, or YouTube video link.", "error");
+      return null;
+    }
+    input?.removeAttribute("aria-invalid");
+    setSocialStatus(`${info.platformName} link ready. It will be embedded after editorial approval.`, "success");
+    return info;
+  }
+
+  function resetSubmissionKind() {
+    setSubmissionKind("");
+    setSocialStatus("The post must be public. Tracking parameters are removed before publication.");
   }
 
   function revokePreview() {
@@ -408,10 +503,10 @@
     window.requestAnimationFrame(() => {
       if (isSubmitRoute) {
         window.scrollTo(0, 0);
-        document.getElementById("galleryUploadTitle")?.focus({ preventScroll: true });
-      } else {
-        document.getElementById("galleryDropzone")?.focus();
       }
+      const kindInput = document.querySelector('#galleryUploadForm input[name="submissionKind"]:checked')
+        || document.querySelector('#galleryUploadForm input[name="submissionKind"]');
+      kindInput?.focus({ preventScroll: true });
     });
   }
 
@@ -530,54 +625,82 @@
     event.preventDefault();
     const form = event.currentTarget;
     const fileInput = document.getElementById("galleryFile");
+    const values = new FormData(form);
+    const submissionKind = String(values.get("submissionKind") || "");
+    const isSocial = submissionKind === "social-link";
+    const isOriginal = submissionKind === "original-media";
     const file = selectedFile || fileInput?.files?.[0];
     if (!isConfigured()) {
       setStatus("Submissions are temporarily paused. Please DM @basithladdu on Instagram.", "error");
       return;
     }
-    if (!file) {
+    if (!isSocial && !isOriginal) {
+      document.getElementById("gallerySubmissionKind")?.focus();
+      setStatus("Choose whether you have a social media link or the original media.", "error");
+      return;
+    }
+    const social = isSocial ? validateSocialInput({ report: true }) : null;
+    if (isSocial && !social) {
+      document.getElementById("gallerySocialUrl")?.focus();
+      setStatus("Check the social media link.", "error");
+      return;
+    }
+    if (isOriginal && !file) {
       document.getElementById("galleryDropzone")?.setAttribute("aria-invalid", "true");
       document.getElementById("galleryDropzone")?.focus();
       setStatus("Choose a photo or video first.", "error");
       return;
     }
-    const inputWasRequired = Boolean(fileInput?.required);
-    if (selectedFile && fileInput) fileInput.required = false;
     const formIsValid = form.reportValidity();
-    if (fileInput) fileInput.required = inputWasRequired;
     if (!formIsValid) return;
-    const validationError = validateFile(file);
+    const validationError = isOriginal ? validateFile(file) : "";
     if (validationError) {
       setStatus(validationError, "error");
       return;
     }
-    if (!selectedFile) selectedFile = file;
+    if (isOriginal && !selectedFile) selectedFile = file;
 
     const submit = document.getElementById("gallerySubmitButton");
     submit.disabled = true;
-    setStatus(IMAGE_TYPES.has(file.type) ? "Finishing media review check…" : "Preparing secure upload…");
+    setStatus(isSocial ? `Preparing ${social.platformName} link…` : IMAGE_TYPES.has(file.type) ? "Finishing media review check…" : "Preparing secure upload…");
     setProgress(2);
 
     try {
-      const inspection = IMAGE_TYPES.has(file.type) ? selectedInspection || await (inspectionTask || inspectImage(file)) : null;
-      if (selectedFile !== file) throw new Error("The selected file changed. Check the preview and submit again.");
-      setStatus("Preparing secure upload…");
-      const uploaded = await uploadToCloudinary(file);
-      if (!cloudinaryAssetUrl(uploaded.secure_url, uploaded.cloudName)) throw new Error("The returned media URL did not match the signed Cloudinary environment.");
+      let inspection = null;
+      let media = {
+        mediaType: "embed",
+        externalUrl: social?.canonicalUrl || "",
+        embedPlatform: social?.platform || "",
+        publicId: social ? `social-${social.platform}-${social.id}` : "",
+      };
+      if (isOriginal) {
+        inspection = IMAGE_TYPES.has(file.type) ? selectedInspection || await (inspectionTask || inspectImage(file)) : null;
+        if (selectedFile !== file) throw new Error("The selected file changed. Check the preview and submit again.");
+        setStatus("Preparing secure upload…");
+        const uploaded = await uploadToCloudinary(file);
+        if (!cloudinaryAssetUrl(uploaded.secure_url, uploaded.cloudName)) throw new Error("The returned media URL did not match the signed Cloudinary environment.");
+        media = {
+          mediaType: VIDEO_TYPES.has(file.type) ? "video" : "image",
+          secureUrl: uploaded.secure_url,
+          publicId: uploaded.public_id,
+          resourceType: uploaded.resource_type,
+          format: uploaded.format,
+          bytes: uploaded.bytes,
+          width: uploaded.width,
+          height: uploaded.height,
+          duration: uploaded.duration || null,
+          cloudinaryFolder: config.folder,
+        };
+      } else {
+        setProgress(45);
+        setStatus(`Sending ${social.platformName} link to the editor…`);
+      }
 
-      const values = new FormData(form);
       const submission = {
-        submissionType: "gallery-media",
+        submissionType: isSocial ? "gallery-link" : "gallery-media",
+        submissionKind,
         reviewStatus: "pending",
-        mediaType: VIDEO_TYPES.has(file.type) ? "video" : "image",
-        secureUrl: uploaded.secure_url,
-        publicId: uploaded.public_id,
-        resourceType: uploaded.resource_type,
-        format: uploaded.format,
-        bytes: uploaded.bytes,
-        width: uploaded.width,
-        height: uploaded.height,
-        duration: uploaded.duration || null,
+        ...media,
         eventTitle: String(values.get("caption") || "").trim(),
         recordedDate: String(values.get("recordedDate") || ""),
         state: String(values.get("state") || ""),
@@ -592,20 +715,23 @@
         rightsConfirmed: values.get("rightsConfirmed") === "on",
         reviewConfirmed: true,
         integrity: inspection?.integrity || null,
-        duplicateReview: VIDEO_TYPES.has(file.type)
-          ? { level: "video-review", reason: "Browser preflight currently covers images only.", requiresManualReview: true }
-          : ["exact", "likely", "possible", "unavailable"].includes(inspection?.match?.level)
-            ? { ...inspection.match, requiresManualReview: true }
-            : inspection?.integrity ? null : { level: "unavailable", reason: "Image preflight did not return an integrity fingerprint.", requiresManualReview: true },
-        cloudinaryFolder: config.folder,
+        duplicateReview: isSocial
+          ? null
+          : VIDEO_TYPES.has(file.type)
+            ? { level: "video-review", reason: "Browser preflight currently covers images only.", requiresManualReview: true }
+            : ["exact", "likely", "possible", "unavailable"].includes(inspection?.match?.level)
+              ? { ...inspection.match, requiresManualReview: true }
+              : inspection?.integrity ? null : { level: "unavailable", reason: "Image preflight did not return an integrity fingerprint.", requiresManualReview: true },
         submittedAt: new Date().toISOString(),
       };
 
       try {
         await queueForReview(submission);
       } catch (queueError) {
-        saveReceipt(submission);
-        throw new Error(`The file uploaded, but the editor queue did not confirm it. Save this reference: ${submission.publicId}`);
+        if (isOriginal) saveReceipt(submission);
+        throw new Error(isOriginal
+          ? `The file uploaded, but the editor queue did not confirm it. Save this reference: ${submission.publicId}`
+          : "The link did not reach the editor queue. Please try again.");
       }
 
       saveReceipt(submission);
@@ -613,8 +739,9 @@
       form.reset();
       selectedFile = null;
       revokePreview();
-      setStatus("Received for editorial review. It is not public yet.", "success");
+      resetSubmissionKind();
       populateStates();
+      setStatus("Received for editorial review. It is not public yet.", "success");
       showSuccessDialog();
     } catch (error) {
       setStatus(error.message || "The submission failed. No gallery item was published.", "error");
@@ -658,7 +785,21 @@
       event.preventDefault();
       closeModal();
     });
-    document.getElementById("galleryUploadForm")?.addEventListener("submit", submitMedia);
+    const uploadForm = document.getElementById("galleryUploadForm");
+    uploadForm?.addEventListener("submit", submitMedia);
+    uploadForm?.querySelectorAll('input[name="submissionKind"]').forEach((input) => {
+      input.addEventListener("change", () => setSubmissionKind(input.value));
+    });
+    const socialInput = document.getElementById("gallerySocialUrl");
+    socialInput?.addEventListener("input", () => {
+      if (!socialInput.value.trim()) {
+        socialInput.removeAttribute("aria-invalid");
+        setSocialStatus("The post must be public. Tracking parameters are removed before publication.");
+      } else if (socialPost(socialInput.value)) {
+        validateSocialInput();
+      }
+    });
+    socialInput?.addEventListener("blur", () => validateSocialInput({ report: Boolean(socialInput.value.trim()) }));
     const fileInput = document.getElementById("galleryFile");
     const dropzone = document.getElementById("galleryDropzone");
     fileInput?.addEventListener("change", (event) => previewFile(event.target.files?.[0]));
@@ -686,6 +827,15 @@
     document.getElementById("galleryGrid")?.addEventListener("click", (event) => {
       const share = event.target.closest("[data-gallery-url]");
       if (share) shareItem(share.dataset.galleryUrl, share.dataset.galleryTitle || "Gallery post", share);
+      const embedButton = event.target.closest("[data-gallery-embed-url]");
+      if (embedButton) {
+        const info = socialPost(embedButton.dataset.galleryEmbedUrl);
+        const gate = embedButton.closest(".gallery-external-gate");
+        const frame = window.LetsFixIndiaEmbeds?.createFrame(info, embedButton.dataset.galleryEmbedTitle);
+        if (!gate || !frame) return;
+        gate.replaceWith(frame);
+        return;
+      }
       const videoButton = event.target.closest("[data-gallery-video-src]");
       if (videoButton) {
         const url = cloudinaryAssetUrl(videoButton.dataset.galleryVideoSrc);
@@ -742,6 +892,7 @@
     mergeApprovedItems();
     populateStates();
     bindEvents();
+    setSubmissionKind(document.querySelector('#galleryUploadForm input[name="submissionKind"]:checked')?.value || "");
     renderConfigurationState();
     renderGallery();
     initialized = true;

@@ -1,3 +1,5 @@
+import { parseSocialPostUrl } from "../lib/social-embed.js";
+
 function send(response, status, body) {
   response.status(status).setHeader("cache-control", "no-store").json(body);
 }
@@ -19,12 +21,15 @@ function trustedMediaUrl(value) {
 function publicItem(row) {
   const data = row?.data || {};
   const secureUrl = trustedMediaUrl(data.secureUrl);
-  if (data.reviewStatus !== "approved" || !secureUrl) return null;
+  const socialPost = parseSocialPostUrl(data.externalUrl);
+  if (data.reviewStatus !== "approved" || (!secureUrl && !socialPost)) return null;
   return {
     id: `submission-${Number(row.id)}`,
     reviewStatus: "approved",
-    mediaType: data.mediaType === "video" ? "video" : "image",
+    mediaType: socialPost ? "embed" : data.mediaType === "video" ? "video" : "image",
     secureUrl,
+    externalUrl: socialPost?.canonicalUrl || "",
+    embedPlatform: socialPost?.platform || "",
     eventTitle: text(data.eventTitle || data.caption, 600),
     caption: text(data.caption, 600),
     recordedDate: text(data.recordedDate, 10),

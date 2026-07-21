@@ -55,6 +55,14 @@
     grid-template-columns: 1fr;
   }
 
+  .gallery-intake-options {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-upload-form .gallery-intake-options label {
+    min-height: 0;
+  }
+
   .gallery-dropzone {
     grid-template-columns: 42px minmax(0, 1fr);
     min-height: 104px;

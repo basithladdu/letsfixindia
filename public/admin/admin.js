@@ -64,9 +64,12 @@
     queue.innerHTML = submissions.length ? submissions.map((item) => {
       const data = item.data || {};
       const mediaUrl = trustedMediaUrl(data.secureUrl);
+      const social = window.LetsFixIndiaEmbeds?.parse(data.externalUrl);
       const media = mediaUrl
         ? `<a href="${escapeHtml(mediaUrl)}" target="_blank" rel="noopener noreferrer">Open media</a>`
-        : "No valid media URL";
+        : social
+          ? `<a href="${escapeHtml(social.canonicalUrl)}" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(social.platformName)} post</a>`
+          : "No valid media URL";
       const status = ["approved", "rejected"].includes(data.reviewStatus) ? data.reviewStatus : "pending";
       const approveCurrent = status === "approved";
       const rejectCurrent = status === "rejected";
