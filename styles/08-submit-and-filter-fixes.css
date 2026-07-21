@@ -1,0 +1,290 @@
+/* ── Submit rules strip ──────────────────────────────────── */
+
+.submit-rules {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.submit-rule {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  animation: card-in 0.32s ease both;
+}
+
+.submit-rule-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 103, 31, 0.1);
+  border-radius: 999px;
+  color: var(--bjp);
+  font-family: Newsreader, Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.submit-rule strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.submit-rule p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.submit-mode-selector.is-compact {
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.submit-mode-selector.is-compact .mode-btn {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  min-height: 58px;
+  padding: 12px 14px !important;
+  gap: 10px !important;
+}
+
+.submit-mode-selector.is-compact .mode-icon {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+}
+
+.submit-mode-selector.is-compact .mode-btn span:last-child {
+  display: none;
+}
+
+.submit-rules.is-compact {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .submit-rules {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ── Timeline small tweaks ───────────────────────────────── */
+
+.event-title-link {
+  text-decoration: none;
+  transition: color 0.16s ease;
+}
+
+.event-title-link:hover,
+.event-title-link:focus-visible {
+  color: var(--bjp);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.voice-src .source-links a,
+.voice-src a,
+.about-section p a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px !important;
+  min-width: 44px;
+  box-sizing: border-box;
+}
+
+.event-meta {
+  letter-spacing: 0.02em;
+}
+
+.brand,
+.site-brand,
+.topnav a,
+.nav-sound-button,
+.side-sound-button,
+.hero-actions a,
+.main-nav a,
+.menu-toggle,
+.menu-close,
+.toolbar input,
+.toolbar select,
+.stats-toolbar input,
+.stats-toolbar select,
+.clear-filters-button,
+.stats-toolbar .clear-filters-button,
+.year-pill,
+.year-nav button,
+.event-title-link,
+.source-links a,
+.source-item a,
+.source-pending,
+.record-back,
+.record-actions button,
+.support-card button,
+.footer-links a,
+.footer a,
+.site-footer a,
+.about-section a,
+.contact-card a,
+.contact-page a,
+.text-button,
+.follow-chip,
+.social-link,
+.share-btn,
+.share-button,
+summary {
+  height: auto !important;
+  min-height: 46px !important;
+  min-width: 44px !important;
+  box-sizing: border-box;
+}
+
+.year-pill {
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
+}
+
+.year-pill:hover:not(.active) {
+  border-color: var(--bjp);
+  color: var(--bjp);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 559px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .democracy-definition {
+    margin: 1rem 0 1.05rem !important;
+    padding: 0.95rem 1rem !important;
+    font-size: 0.92rem !important;
+    line-height: 1.42 !important;
+    overflow: hidden;
+  }
+  .democracy-definition .democracy-meta {
+    font-size: 0.82rem;
+  }
+  .share-bar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 0 0;
+  }
+  .share-label {
+    flex-basis: 100%;
+    margin-bottom: 2px;
+  }
+  .share-btn {
+    flex: 0 0 auto;
+  }
+  .hero-share,
+  .record-share {
+    min-width: 0;
+    max-width: 100%;
+    mask-image: none;
+  }
+  .support-card {
+    min-width: 0;
+  }
+  .tag-legend {
+    flex-wrap: wrap !important;
+    overflow-x: visible !important;
+    white-space: normal !important;
+  }
+  .tag-legend span {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .contact-tiles {
+    grid-template-columns: 1fr;
+  }
+  .contact-tile {
+    grid-template-columns: 44px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 12px;
+    padding: 14px 16px;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .contact-tile .tile-icon {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+}
+
+/* ── Sort order outside Filters ──────────────────────────── */
+
+.sort-wrap span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 720px) {
+  .toolbar {
+    grid-template-columns: minmax(220px, 0.75fr) minmax(0, 2fr) minmax(180px, 0.45fr);
+  }
+}
+
+.github-announcement-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(36, 41, 47, 0.05);
+  border: 1px solid rgba(36, 41, 47, 0.15);
+  border-radius: 99px;
+  color: #24292f;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.github-announcement-banner:hover {
+  background: rgba(36, 41, 47, 0.1);
+  border-color: rgba(36, 41, 47, 0.25);
+  transform: translateY(-1px);
+}
+
+.github-announcement-banner .github-arrow {
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.github-announcement-banner:hover .github-arrow {
+  transform: translateX(3px);
+}
+
+.github-hero-btn:hover {
+  background: var(--bg-hover, rgba(0, 0, 0, 0.02)) !important;
+  border-color: var(--ink) !important;
+}
+
+/* Route-specific map, statistics, and voices rules live in explorers.css. */

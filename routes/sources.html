@@ -1,0 +1,16 @@
+      <section id="sources" class="section route-page" data-page="sources">
+        <div class="section-head">
+          <p class="eyebrow">Source ledger</p>
+          <h2>Evidence behind the record</h2>
+          <p>Search the public source registry, inspect URL-backed records, and isolate entries still awaiting stronger verification. No raw-data download controls are exposed on this page.</p>
+          <div id="sourceAuditCards" class="source-audit-cards" aria-label="Source ledger health"></div>
+        </div>
+        <div class="stats-toolbar" aria-label="Source filters">
+          <label class="stats-search"><span>Search sources</span><input id="sourceSearchInput" type="search" placeholder="Search ID, publisher, title, or type"></label>
+          <label><span>Status</span><select id="sourceStatusFilter"><option value="all">All source records</option><option value="linked">Linked URL</option><option value="pending">URL pending</option><option value="unused-linked">Unreferenced URL</option><option value="unused-pending">Pending placeholder</option></select></label>
+          <button id="clearSourceFiltersButton" class="clear-filters-button" type="button" title="Reset source filters">Clear filters</button>
+          <span id="sourceSummary" class="source-summary" aria-live="polite"></span>
+        </div>
+        <div id="sourceList" class="source-list" aria-live="polite"></div>
+      </section>
+

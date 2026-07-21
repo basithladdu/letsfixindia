@@ -2,20 +2,29 @@
 import SpaShell from "../components/SpaShell.astro";
 
 export function getStaticPaths() {
-  return [
+  const namedRoutes = [
     "timeline",
     "landing",
+    "gallery",
+    "gallery/submit",
+    "map",
+    "states",
     "statistics",
     "indicators",
     "voices",
+    "sources",
     "submit",
     "submissions",
     "faq",
     "methodology",
     "contact",
     "support",
+    "partner",
+    "donors",
     "about"
   ].map((route) => ({ params: { route } }));
+
+  return [{ params: { route: undefined } }, ...namedRoutes];
 }
 ---
 <SpaShell />

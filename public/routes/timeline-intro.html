@@ -1,0 +1,96 @@
+      <section class="hero route-page" data-page="timeline">
+        <div class="hero-copy">
+          <p class="eyebrow">India under BJP / Modi administrations</p>
+          <h1>LetsFixIndia 2014-2026</h1>
+          <p class="lede">A sourced public record of governance shocks, rights concerns, protests, institutional controversies, terror attacks, exam failures, and cases involving political actors. Every entry carries an evidence status and linked sources.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="/#timeline" data-link>Explore records</a>
+            <a href="/map" data-link>Explore states</a>
+            <a href="/statistics" data-link>View statistics</a>
+            <a href="/submit" data-link>Submit evidence</a>
+          </div>
+          <blockquote class="democracy-definition" style="margin: 1.75rem 0; padding: 1.25rem 1.5rem; border-left: 4px solid #2563eb; background: rgba(37, 99, 235, 0.04); border-radius: 0 12px 12px 0; font-size: 1rem; line-height: 1.6; color: #1e3a8a; box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);">
+            <div style="font-weight: 700; color: #1d4ed8; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #2563eb;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Democracy
+            </div>
+            <p style="margin: 0 0 0.5rem 0; color: #1f2937; font-weight: 600;">
+              A system of government where power is vested in the people, who rule either directly or through freely elected representatives.
+            </p>
+            <p style="margin: 0 0 0.75rem 0; color: #374151; font-size: 0.95rem; font-style: italic;">
+              In simple words, as Abraham Lincoln said: "Democracy is government of the people, by the people, and for the people."
+            </p>
+            <div class="democracy-meta" style="font-size: 0.88rem; color: #4b5563; border-top: 1px dashed rgba(37, 99, 235, 0.15); padding-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center;">
+              <span style="display: block; width: 100%; max-width: max-content;"><strong>Pronunciation:</strong> <em>dih-MOK-ruh-see</em> (IPA: <span style="font-family: monospace; background: rgba(0,0,0,0.05); padding: 2px 4px; border-radius: 4px;">/dɪˈmɑːkrəsi/</span>)</span>
+              <span class="democracy-sep" style="color: #d1d5db;">|</span>
+              <span style="display: block; width: 100%; max-width: max-content;"><strong>Etymology:</strong> Ancient Greek <em>demokratia</em> (<em>demos</em> "the people" + <em>kratos</em> "power/rule")</span>
+            </div>
+          </blockquote>
+          <div class="share-bar hero-share" data-share-context="site"></div>
+        </div>
+
+      </section>
+
+      <section class="route-page home-recent" data-page="home-unused" style="display: none;">
+        <div class="section-head">
+          <p class="eyebrow">Latest records</p>
+          <h2>Newest entries in the file</h2>
+          <p>A compressed view of the most recent records. Open the timeline for full filters.</p>
+        </div>
+        <div id="homeRecentList" class="home-recent-list"></div>
+      </section>
+
+      <section id="filters" class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
+        <div class="toolbar">
+          <label class="search-wrap">
+            <span>Search records</span>
+            <input id="searchInput" type="search" placeholder="Search records, names, places">
+            <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters">Clear filters</button>
+          </label>
+          <details id="advancedFilters" class="advanced-filters">
+            <summary>Filters <span id="advancedFilterBadge" class="filter-summary-badge" hidden>0 active</span></summary>
+            <div class="advanced-filter-grid">
+              <label>
+                <span>Category</span>
+                <select id="categoryFilter" aria-label="Filter records by category">
+                  <option value="all">All categories</option>
+                </select>
+              </label>
+              <label>
+                <span>Actor tag</span>
+                <select id="actorFilter" aria-label="Filter records by actor tag">
+                  <option value="all">All actors</option>
+                </select>
+              </label>
+              <label>
+                <span>Status</span>
+                <select id="statusFilter" aria-label="Filter records by status">
+                  <option value="all">All statuses</option>
+                </select>
+              </label>
+              <label>
+                <span>Evidence</span>
+                <select id="evidenceFilter" aria-label="Filter records by evidence status">
+                  <option value="all">All evidence</option>
+                  <option value="linked">Fully linked</option>
+                  <option value="pending">Pending URLs</option>
+                  <option value="missing">No source record</option>
+                </select>
+              </label>
+            </div>
+          </details>
+          <label class="sort-wrap">
+            <span>Sort order</span>
+            <select id="sortFilter" aria-label="Sort timeline records">
+              <option value="desc">Newest first (2026-2014)</option>
+              <option value="asc">Oldest first (2014-2026)</option>
+            </select>
+          </label>
+        </div>
+        <div id="yearRail" class="year-rail" aria-label="Filter by year"></div>
+        <div class="tag-legend" aria-label="Actor tag legend">
+          <span><i class="legend-swatch legend-bjp" aria-hidden="true"></i>BJP-linked / BJP-led</span>
+          <span><i class="legend-swatch legend-rss" aria-hidden="true"></i>RSS / ABVP / Hindutva-linked</span>
+          <span><i class="legend-swatch legend-neutral" aria-hidden="true"></i>State institution or other actor</span>
+        </div>
+      </section>

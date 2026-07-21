@@ -1,7 +1,42 @@
 ---
-import fs from "node:fs";
-import path from "node:path";
+import { composeShell } from "../../tools/compose-shell.mjs";
 
-const shellHtml = fs.readFileSync(path.join(process.cwd(), "index.html"), "utf8");
+const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
+const routeMeta = {
+  "/": ["LetsFixIndia Timeline | India's Sourced Public Record, 2014-2026", "A source-led timeline of governance events, rights concerns, protests, institutional controversies, and documented public voices in India from 2014 to 2026.", "/"],
+  "/timeline": ["LetsFixIndia Timeline | India's Sourced Public Record, 2014-2026", "A source-led timeline of governance events, rights concerns, protests, institutional controversies, and documented public voices in India from 2014 to 2026.", "/"],
+  "/landing": ["LetsFixIndia Timeline | India's Sourced Public Record, 2014-2026", "A source-led timeline of governance events, rights concerns, protests, institutional controversies, and documented public voices in India from 2014 to 2026.", "/"],
+  "/gallery": ["Public Evidence Gallery | LetsFixIndia", "Reviewed photos and video documenting protests, excessive force, lathi charges, tear gas, detentions, injuries, and other public events.", "/gallery"],
+  "/gallery/submit": ["Submit Protest Media | LetsFixIndia", "Submit original protest photos or video with the date, location, and visible context required for editorial review.", "/gallery/submit", false],
+  "/map": ["State Map | LetsFixIndia", "Explore explicitly state-tagged public records across all 36 Indian states and union territories.", "/map"],
+  "/states": ["State Map | LetsFixIndia", "Explore explicitly state-tagged public records across all 36 Indian states and union territories.", "/map"],
+  "/statistics": ["Statistics | LetsFixIndia", "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.", "/statistics"],
+  "/indicators": ["Statistics | LetsFixIndia", "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.", "/statistics"],
+  "/voices": ["Public Voices | LetsFixIndia", "Documented public statements, silence, and institutional responses to major Modi-era controversies.", "/voices"],
+  "/sources": ["Source Ledger | LetsFixIndia", "Search the public source ledger and inspect linked, pending, and placeholder evidence records.", "/sources"],
+  "/submit": ["Submit a Record | LetsFixIndia", "Propose a sourced public-record entry for editorial review.", "/submit"],
+  "/submissions": ["Submit a Record | LetsFixIndia", "Propose a sourced public-record entry for editorial review.", "/submit"],
+  "/methodology": ["Methodology | LetsFixIndia", "How LetsFixIndia separates documented events, allegations, outcomes, and evidence caveats.", "/methodology"],
+  "/faq": ["FAQ | LetsFixIndia", "How LetsFixIndia classifies evidence, handles corrections, and separates public records from unresolved leads.", "/faq"],
+  "/partner": ["Partner with LetsFixIndia", "Partner with LetsFixIndia on source verification, public-interest media, research, accessibility, or focused technical improvements.", "/partner"],
+  "/donors": ["Donors and Funding Transparency | LetsFixIndia", "How LetsFixIndia is funded and the rules that keep contributions separate from editorial decisions.", "/donors"],
+  "/support": ["Support | LetsFixIndia", "Share the record, contribute sourced corrections, or help cover hosting and media storage.", "/support"],
+  "/contact": ["Contact | LetsFixIndia", "Contact Basith for corrections, collaboration, research, or software work.", "/contact"],
+  "/about": ["About | LetsFixIndia", "Who maintains LetsFixIndia and how its public-record workflow operates.", "/about"],
+};
+const [title, description, canonicalPath, indexable = true] = routeMeta[pathname] || ["Page Not Found | LetsFixIndia", "This address is not part of the current LetsFixIndia site.", pathname, false];
+const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const canonicalUrl = new URL(canonicalPath, Astro.site).href;
+let shellHtml = composeShell(process.cwd());
+shellHtml = shellHtml
+  .replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`)
+  .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${escapeHtml(description)}">`)
+  .replace(/<meta name="robots" content="[^"]*">/, `<meta name="robots" content="${indexable ? "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" : "noindex,follow"}">`)
+  .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${escapeHtml(canonicalUrl)}">`)
+  .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${escapeHtml(title)}">`)
+  .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${escapeHtml(description)}">`)
+  .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${escapeHtml(canonicalUrl)}">`)
+  .replace(/<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${escapeHtml(title)}">`)
+  .replace(/<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${escapeHtml(description)}">`);
 ---
 <Fragment set:html={shellHtml} />

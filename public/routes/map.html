@@ -1,0 +1,44 @@
+      <section id="state-map" class="section state-map-section route-page" data-page="map">
+        <div class="section-head state-map-head">
+          <p class="eyebrow">State government record</p>
+          <h2>Explore the record state by state</h2>
+          <p>Select any state or union territory to isolate records with an explicit incident or governing-jurisdiction tag. India-wide and not-yet-tagged records remain outside state totals.</p>
+        </div>
+
+        <div class="state-map-toolbar" aria-label="State map controls">
+          <label>
+            <span>State or union territory</span>
+            <select id="stateMapSelect"><option value="">Choose a state or UT</option></select>
+          </label>
+          <button id="stateMapReset" class="clear-filters-button" type="button" disabled>Show all India</button>
+          <p id="stateMapSummary" class="state-map-summary" aria-live="polite">Loading state boundaries and jurisdiction tags...</p>
+        </div>
+
+        <div class="state-map-layout">
+          <div class="state-map-canvas-wrap">
+            <div id="indiaStateMap" class="state-map-canvas" role="img" aria-label="Interactive map of India states and union territories"></div>
+            <div class="state-map-legend" aria-label="Mapped record count legend">
+              <span>Fewer records</span><i class="state-map-scale" aria-hidden="true"></i><span>More records</span>
+            </div>
+            <p class="state-map-credit">Boundary layer: India Administrative Boundaries 2024 (LGD-coded), simplified for web display. Map rendering: MapLibre GL JS.</p>
+          </div>
+
+          <aside class="state-map-panel" aria-live="polite">
+            <div id="stateMapSelection" class="state-map-selection">
+              <span class="state-map-kicker">No state selected</span>
+              <h3>Choose a state on the map</h3>
+              <p>The timeline will appear here. States without tagged records remain selectable and show a clear zero state.</p>
+            </div>
+            <div id="stateTimeline" class="state-timeline"></div>
+          </aside>
+        </div>
+
+        <div class="state-directory-wrap">
+          <div class="state-directory-head">
+            <h3>All 36 states and union territories</h3>
+            <span>Keyboard-accessible map alternative</span>
+          </div>
+          <div id="stateDirectory" class="state-directory" role="list"></div>
+        </div>
+      </section>
+

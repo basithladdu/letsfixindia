@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "description": "Editor-approved photos and videos for the public evidence gallery.",
+    "publicationRule": "Only reviewed items marked approved belong in this file.",
+    "imageIntegrity": {
+      "exactAlgorithm": "SHA-256",
+      "perceptualAlgorithm": "blockhash-core@0.1.0:bmvbhash-256-v1",
+      "likelyDuplicateMaximumDistance": 13,
+      "possibleDuplicateMaximumDistance": 26,
+      "decisionRule": "Exact and perceptual matches require human review so additional witness provenance is not discarded."
+    },
+    "updatedAt": "2026-07-21"
+  },
+  "items": []
+}

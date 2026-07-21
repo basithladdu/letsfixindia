@@ -1,0 +1,247 @@
+.gallery-section {
+  max-width: 1240px;
+}
+
+.gallery-route-head {
+  display: block;
+}
+
+.gallery-route-head .section-head {
+  margin-bottom: 0;
+}
+
+.gallery-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border-color: #e55213;
+  background: #fff8f2;
+  color: #9a3412;
+}
+
+.gallery-upload-btn svg {
+  flex: 0 0 auto;
+}
+
+.gallery-bar-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.gallery-storage-label {
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.gallery-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  overflow: hidden;
+  break-inside: avoid;
+  border: 1px solid #d7dce1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(24, 31, 38, 0.06);
+}
+
+.gallery-card-head {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 56px;
+  padding: 9px 10px;
+}
+
+.gallery-card-head > div {
+  display: grid;
+  min-width: 0;
+}
+
+.gallery-card-head strong,
+.gallery-card-head span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gallery-card-head strong {
+  font-size: 12px;
+}
+
+.gallery-card-head span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.gallery-avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid #f3a274;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffefe3, #f7fff9);
+  color: #9a3412 !important;
+  font-size: 13px !important;
+  font-weight: 900;
+}
+
+.gallery-share-button {
+  min-width: 52px;
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.gallery-share-button:hover,
+.gallery-share-button:focus-visible {
+  background: #f3f4f6;
+  color: var(--ink);
+}
+
+.gallery-media {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 120px;
+  place-items: center;
+  overflow: hidden;
+  background: #101214;
+}
+
+.gallery-media img,
+.gallery-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+  background: #101214;
+}
+
+.gallery-warning {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 1;
+  max-width: calc(100% - 18px);
+  padding: 5px 7px;
+  border-radius: 6px;
+  background: rgba(20, 20, 20, 0.84);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.gallery-card-body {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+}
+
+.gallery-card-body h3,
+.gallery-card-body p {
+  margin: 0;
+}
+
+.gallery-card-body h3 {
+  font-family: Newsreader, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.gallery-card-body p {
+  color: #34383d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.gallery-card-body p strong {
+  margin-right: 4px;
+  color: var(--ink);
+}
+
+.gallery-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eceff1;
+  color: #47705d;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.gallery-card-foot a {
+  color: #9a3412;
+  text-underline-offset: 2px;
+}
+
+.gallery-empty {
+  column-span: all;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  min-height: 140px;
+  padding: 22px;
+  border: 1px dashed #c5ccd2;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.gallery-empty-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff0e6;
+  color: #b8460b;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.gallery-empty strong,
+.gallery-empty p {
+  display: block;
+  margin: 0;
+}
+
+.gallery-empty p {
+  max-width: 680px;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}

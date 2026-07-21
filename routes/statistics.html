@@ -1,0 +1,59 @@
+
+      <section id="indicators" class="section route-page" data-page="statistics">
+        <div class="section-head">
+          <p class="eyebrow">Statistics</p>
+          <h2>What moved, up or down</h2>
+          <p>Source-backed indicators for the period. Direction labels describe the series, not a moral verdict. Methodology caveats stay beside each chart.</p>
+          <div class="indicator-legend" aria-label="Indicator interpretation"><span><i class="legend-dot legend-better"></i>Favorable movement</span><span><i class="legend-dot legend-worse"></i>Adverse movement</span><span><i class="legend-dot legend-flat"></i>Mixed / caution</span></div>
+        </div>
+
+        <div id="statsOverview" class="stats-overview" aria-label="Indicator coverage summary"></div>
+
+        <div id="statsSignalMeter" class="stats-signal-meter" aria-label="Indicator signal distribution"></div>
+
+        <div class="live-trackers-container">
+          <div class="tracker-card tracker-election">
+            <p class="tracker-label">Countdown to Next General Election</p>
+            <div id="electionCountdown" class="tracker-value">Loading countdown...</div>
+            <small>Expected April–May 2029</small>
+          </div>
+          <div class="tracker-card tracker-presser">
+            <p class="tracker-label">PM Has Never Held a Solo Press Conference</p>
+            <div id="pressConferenceTracker" class="tracker-value tracker-value-red">Loading tracker...</div>
+            <small>Counting since he became PM — 26 May 2014</small>
+          </div>
+        </div>
+
+        <div class="stats-topic-explorer">
+          <div class="stats-topic-heading">
+            <span>Explore by topic</span>
+            <small>Counts show the number of source-backed indicators</small>
+          </div>
+          <div id="statsQuickTopics" class="stats-topic-chips" role="group" aria-label="Quick topic filters"></div>
+        </div>
+
+        <div class="stats-controls-panel">
+          <div class="stats-controls-heading">
+            <div class="stats-controls-title"><span>Find an indicator</span><small>Press / anywhere on this page to search</small></div>
+            <div class="stats-density-toggle" role="group" aria-label="Card density">
+              <button type="button" data-stats-density="comfortable" aria-pressed="true">Comfortable</button>
+              <button type="button" data-stats-density="compact" aria-pressed="false">Compact</button>
+            </div>
+          </div>
+          <div class="stats-toolbar" aria-label="Statistics filters">
+            <label class="stats-search"><span>Search indicators <kbd title="Press slash to focus search" aria-hidden="true">/</kbd></span><input id="indicatorSearchInput" type="search" placeholder="Search health, jobs, rights, prices" aria-keyshortcuts="/" autocomplete="off" autocapitalize="none" spellcheck="false"></label>
+            <label><span>Topic</span><select id="indicatorTopicFilter"><option value="all">All topics</option></select></label>
+            <label><span>Signal</span><select id="indicatorToneFilter"><option value="all">All signals</option><option value="tone-better">Favorable</option><option value="tone-worse">Adverse</option><option value="tone-flat">Mixed / caution</option></select></label>
+            <label><span>Order</span><select id="indicatorSortFilter"><option value="editorial">Editorial order</option><option value="title">Title A-Z</option><option value="latest">Latest endpoint</option></select></label>
+            <button id="clearIndicatorFiltersButton" class="clear-filters-button" type="button" title="Reset statistics filters">Clear filters</button>
+            <span id="indicatorResultCount" class="stats-result" aria-live="polite"></span>
+          </div>
+          <div id="statsActiveFilters" class="stats-active-filters" aria-label="Active statistics filters" hidden></div>
+        </div>
+        <div id="indicatorGrid" class="indicator-grid"></div>
+        <div id="statsPagination" class="stats-pagination" aria-label="Indicator results pagination" hidden>
+          <span id="statsShowingCount" aria-live="polite"></span>
+          <button id="statsLoadMore" type="button">Show more</button>
+          <button id="statsShowAll" type="button">Show all</button>
+        </div>
+      </section>

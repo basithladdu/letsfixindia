@@ -50,11 +50,10 @@ const shareTargets = {
   <body data-route="record">
     <header class="topbar record-topbar">
       <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span>LetsFixIndia</span></a>
-      <nav class="topnav" aria-label="Main navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/sources">Sources</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
-      <button class="nav-sound-button" type="button" data-record-sound-toggle aria-pressed="false" aria-label="Sound off" title="Sound off"><span>Sound off</span></button>
+      <nav class="topnav" aria-label="Main navigation"><a href="/">Timeline</a><a href="/gallery">Gallery</a><a href="/map">States</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
       <details class="record-menu">
         <summary aria-label="Open navigation menu">Menu</summary>
-        <nav class="record-menu-panel" aria-label="Record navigation"><a href="/">Timeline</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/sources">Sources</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
+        <nav class="record-menu-panel" aria-label="Record navigation"><a href="/">Timeline</a><a href="/gallery">Gallery</a><a href="/map">States</a><a href="/statistics">Stats</a><a href="/voices">Voices</a><a href="/submit">Submit</a><a href="/contact">Contact</a><a href="/faq">FAQ</a><a href="/support">Support</a><a href="/about">About</a></nav>
       </details>
     </header>
     <main class="page-section record-page">
@@ -71,7 +70,6 @@ const shareTargets = {
           <a class="share-button share-telegram" data-share-url="telegram" href={shareTargets.telegram} target="_blank" rel="noopener noreferrer" aria-label={`Share ${event.title} on Telegram`}>Telegram</a>
           <button class="share-button share-native" type="button" data-native-share aria-label={`Open native share for ${event.title}`}>Share</button>
           <button class="share-button share-copy" type="button" data-copy-link aria-label={`Copy link for ${event.title}`}>Copy link</button>
-          <button class="share-button share-sound" type="button" data-record-sound-toggle aria-pressed="false" aria-label="Sound off">Sound off</button>
         </div>
         <span class="share-feedback" data-share-feedback aria-live="polite"></span>
       </div>
@@ -90,89 +88,12 @@ const shareTargets = {
         </div>
       </article>
     </main>
-    <footer class="site-footer"><p><strong>LetsFixIndia</strong> is a source-led public record.</p><p><a href="/">Back to timeline</a></p></footer>
+    <footer class="site-footer"><p><strong>LetsFixIndia</strong> is a source-led public record.</p><p><a href="/">Back to timeline</a> · <a href="/sources">Sources</a></p></footer>
     <script is:inline define:vars={{ title: event.title, date: event.date || event.year, url: canonicalUrl, sourceTitles: linkedSources.filter((source) => source.url).map((source) => `${source.publisher}: ${source.title} - ${source.url}`) }}>
       const copyButton = document.querySelector("[data-copy-citation]");
       const copyFeedback = document.querySelector("[data-copy-feedback]");
       const shareText = `${title} | LetsFixIndia`;
       const shareFeedback = document.querySelector("[data-share-feedback]");
-      const recordSoundToggles = Array.from(document.querySelectorAll("[data-record-sound-toggle]"));
-      let recordAudioContext = null;
-      let recordToast = null;
-      let recordToastTimer = 0;
-      const soundIsEnabled = () => {
-        try {
-          return localStorage.getItem("letsFixIndia.ui.sound") === "on";
-        } catch {
-          return false;
-        }
-      };
-      const setRecordSound = (enabled) => {
-        try {
-          localStorage.setItem("letsFixIndia.ui.sound", enabled ? "on" : "off");
-        } catch {}
-        recordSoundToggles.forEach((recordSoundToggle) => {
-          const label = enabled ? "Sound on" : "Sound off";
-          recordSoundToggle.setAttribute("aria-label", label);
-          recordSoundToggle.setAttribute("aria-pressed", String(enabled));
-          recordSoundToggle.title = label;
-          recordSoundToggle.classList.toggle("is-on", enabled);
-          const text = recordSoundToggle.querySelector("span");
-          if (text) text.textContent = label;
-          else recordSoundToggle.textContent = label;
-        });
-        document.documentElement.classList.toggle("sound-enabled", enabled);
-      };
-      const setRecordToast = (message, delay = 1800) => {
-        if (!message) return;
-        if (!recordToast) {
-          recordToast = document.createElement("div");
-          recordToast.className = "ui-toast";
-          recordToast.setAttribute("role", "status");
-          recordToast.setAttribute("aria-live", "polite");
-          document.body.appendChild(recordToast);
-        }
-        clearTimeout(recordToastTimer);
-        recordToast.textContent = message;
-        recordToast.classList.add("is-visible");
-        recordToastTimer = setTimeout(() => {
-          recordToast?.classList.remove("is-visible");
-        }, delay);
-      };
-      const playRecordSound = (kind = "tap") => {
-        if (!soundIsEnabled()) return;
-        if (navigator.vibrate) {
-          try {
-            navigator.vibrate(kind === "success" ? [8, 22, 10] : 10);
-          } catch {}
-        }
-        try {
-          const AudioCtx = window.AudioContext || window.webkitAudioContext;
-          if (!AudioCtx) return;
-          recordAudioContext ||= new AudioCtx();
-          if (recordAudioContext.state === "suspended") recordAudioContext.resume();
-          const now = recordAudioContext.currentTime;
-          const notes = {
-            tap: [[440, 0, 0.035, 0.018]],
-            nav: [[520, 0, 0.045, 0.022], [640, 0.048, 0.04, 0.016]],
-            success: [[660, 0, 0.055, 0.028], [880, 0.06, 0.07, 0.02]]
-          };
-          (notes[kind] || notes.tap).forEach(([freq, offset, duration, peak]) => {
-            const start = now + offset;
-            const osc = recordAudioContext.createOscillator();
-            const gain = recordAudioContext.createGain();
-            osc.type = kind === "success" ? "triangle" : "sine";
-            osc.frequency.setValueAtTime(freq, start);
-            osc.frequency.exponentialRampToValueAtTime(freq * 1.14, start + duration);
-            gain.gain.setValueAtTime(0.0001, start);
-            gain.gain.exponentialRampToValueAtTime(peak, start + 0.006);
-            gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
-            osc.connect(gain).connect(recordAudioContext.destination);
-            osc.start(start);
-            osc.stop(start + duration + 0.012);
-          });
-        } catch {}
-      };
       const tap = (element, event) => {
         if (!element) return;
         const rect = element.getBoundingClientRect();
@@ -203,7 +124,6 @@ const shareTargets = {
       window.addEventListener("scroll", updateProgress, { passive: true });
       window.addEventListener("resize", updateProgress);
       updateProgress();
-      setRecordSound(soundIsEnabled());
       const copyTextToClipboard = async (text) => {
         const value = String(text || "");
         if (!value) return false;
@@ -231,26 +151,14 @@ const shareTargets = {
         }
       };
       document.addEventListener("click", (event) => {
-        const control = event.target instanceof Element ? event.target.closest(".share-button, .nav-sound-button, [data-copy-citation], .record-back") : null;
-        if (control) {
-          tap(control, event);
-          if (control.matches("[data-record-sound-toggle]")) {
-            const next = !soundIsEnabled();
-            setRecordSound(next);
-            if (shareFeedback) shareFeedback.textContent = next ? "Sound on" : "Sound off";
-            setRecordToast(next ? "Sound on" : "Sound off");
-            playRecordSound(next ? "success" : "tap");
-            return;
-          }
-          playRecordSound(control.matches(".record-back") ? "nav" : "tap");
-        }
+        const control = event.target instanceof Element ? event.target.closest(".share-button, [data-copy-citation], .record-back") : null;
+        if (control) tap(control, event);
       });
-      document.querySelector("[data-native-share]")?.addEventListener("click", async () => { if (!navigator.share) { if (shareFeedback) shareFeedback.textContent = "Use Copy link or choose a platform"; return; } try { await navigator.share({ title: shareText, url }); playRecordSound("success"); } catch {} });
+      document.querySelector("[data-native-share]")?.addEventListener("click", async () => { if (!navigator.share) { if (shareFeedback) shareFeedback.textContent = "Use Copy link or choose a platform"; return; } try { await navigator.share({ title: shareText, url }); } catch {} });
       document.querySelector("[data-copy-link]")?.addEventListener("click", async (event) => {
         const button = event.currentTarget;
         if (await copyTextToClipboard(url)) {
           button.classList.add("is-copied");
-          playRecordSound("success");
           if (shareFeedback) shareFeedback.textContent = "Link copied";
           setTimeout(() => button.classList.remove("is-copied"), 1600);
         } else if (shareFeedback) {
@@ -261,7 +169,6 @@ const shareTargets = {
         const citation = [title, date, url, ...sourceTitles].join("\n");
         if (await copyTextToClipboard(citation)) {
           copyButton.classList.add("is-copied");
-          playRecordSound("success");
           if (copyFeedback) copyFeedback.textContent = "Citation copied";
           setTimeout(() => copyButton.classList.remove("is-copied"), 1600);
         } else {

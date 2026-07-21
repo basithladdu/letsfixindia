@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "description": "Public, non-secret configuration for moderated gallery uploads.",
+    "configurationStatus": "server-signed-upload-required",
+    "security": "Never place a Cloudinary API secret in this file or any browser-delivered asset."
+  },
+  "cloudName": "dqslqjmod",
+  "uploadPreset": "",
+  "folder": "letsfixindia",
+  "maxImageBytes": 20971520,
+  "maxVideoBytes": 104857600,
+  "moderationMode": "review-before-publish"
+}

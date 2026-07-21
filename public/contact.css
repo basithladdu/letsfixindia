@@ -1,0 +1,127 @@
+.contact-direct-note,
+.support-dm-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border: 1px solid #efb08d;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #fff5ed, #fff 62%);
+}
+
+.contact-direct-note .eyebrow,
+.contact-direct-note h3,
+.contact-direct-note p {
+  margin: 0;
+}
+
+.contact-direct-note h3 {
+  margin-top: 3px;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.08;
+}
+
+.contact-direct-note p:not(.eyebrow) {
+  max-width: 720px;
+  margin-top: 6px;
+  color: #4f555c;
+  font-size: 12px;
+}
+
+.contact-dm-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  flex: 0 0 auto;
+  padding: 10px 15px;
+  border: 1px solid #bd3c72;
+  border-radius: 8px;
+  background: #c73576;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.contact-dm-primary:hover,
+.contact-dm-primary:focus-visible {
+  background: #a92964;
+  outline: 3px solid rgba(199, 53, 118, 0.16);
+}
+
+.contact-tiles {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tile-instagram .tile-icon {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.tile-x .tile-icon {
+  background: #e8edf1;
+  color: #111827;
+}
+
+.tile-whatsapp .tile-icon {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.tile-whatsapp {
+  cursor: default;
+}
+
+.support-dm-note {
+  margin-bottom: 20px;
+  border-color: #c9d8cf;
+  background: linear-gradient(110deg, #f2fbf6, #fff 65%);
+}
+
+.support-dm-note > div {
+  display: grid;
+  gap: 3px;
+}
+
+.support-dm-note strong {
+  color: #163f2c;
+  font-size: 13px;
+}
+
+.support-dm-note span {
+  color: #4d5e54;
+  font-size: 12px;
+}
+
+.support-dm-note span a {
+  color: #9d255e;
+  font-weight: 800;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+  .contact-direct-note,
+  .support-dm-note {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .contact-dm-primary {
+    width: 100%;
+  }
+
+  .contact-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1080px) {
+  .contact-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

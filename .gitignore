@@ -6,6 +6,9 @@ server.out.log
 Thumbs.db
 
 .vercel
+.env
+.env.*
+!.env.example
 private/
 .next/
 out/
@@ -17,3 +20,7 @@ output/
 
 private/qr-codes/
 scratch/
+
+# Local planning documents; never publish these in the public repository.
+FUTURE_REQUIREMENTS_AND_UI.md
+CONTENT_AND_DISTRIBUTION_STRATEGY.md
