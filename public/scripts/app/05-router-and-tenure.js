@@ -2,13 +2,16 @@ function updatePageMeta(route) {
   let title = defaultTitle;
   let description = defaultDescriptionText;
   if (route.page === "voices") {
-    title = "Public Voices | LetsFixIndia";
-    description = "Documented public statements, silence, and institutional responses to major Modi-era controversies.";
+    const voice = route.person ? voices.find((item) => item.id === route.person) : null;
+    title = voice ? `${voice.name} - Public Voice Record | LetsFixIndia` : "Public Voices | LetsFixIndia";
+    description = voice ? `Source-linked public statements and documented research gaps for ${voice.name}.` : "Documented public statements, silence, and institutional responses to major Modi-era controversies.";
   } else if (route.page === "gallery") {
-    title = route.gallerySubmit ? "Submit Protest Media | LetsFixIndia" : "Public Evidence Gallery | LetsFixIndia";
-    description = route.gallerySubmit
-      ? "Submit original protest photos or video with the date, location, and visible context required for editorial review."
-      : "Reviewed photos and video documenting protests, excessive force, lathi charges, tear gas, detentions, injuries, and other public events.";
+    title = route.galleryStatus ? "Submission Status | LetsFixIndia" : route.gallerySubmit ? "Submit Protest Media | LetsFixIndia" : "Public Evidence Gallery | LetsFixIndia";
+    description = route.galleryStatus
+      ? "Privately check the editorial status of a LetsFixIndia Gallery submission."
+      : route.gallerySubmit
+        ? "Submit original protest photos or video with the date, state, and visible context required for editorial review."
+        : "Reviewed photos and video documenting protests, excessive force, lathi charges, tear gas, detentions, injuries, and other public events.";
   } else if (route.page === "sources") {
     title = "Source Ledger | LetsFixIndia";
     description = "Search the public source ledger and inspect linked, pending, and placeholder evidence records.";
@@ -67,10 +70,10 @@ function updatePageMeta(route) {
 
   const canonicalPaths = {
     timeline: "/",
-    gallery: route.gallerySubmit ? "/gallery/submit" : "/gallery",
+    gallery: route.galleryStatus ? `/gallery/submission/${encodeURIComponent(route.reference || "")}` : route.gallerySubmit ? "/gallery/submit" : "/gallery",
     map: "/map",
     statistics: "/statistics",
-    voices: "/voices",
+    voices: route.person ? `/voices/${encodeURIComponent(route.person)}` : "/voices",
     sources: "/sources",
     submit: "/submit",
     contact: "/contact",
@@ -85,7 +88,7 @@ function updatePageMeta(route) {
   const canonicalUrl = new URL(canonicalPath, "https://letsfixindia.com").href;
   document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
   document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
-  const shouldIndex = route.page !== "not-found" && !route.gallerySubmit;
+  const shouldIndex = route.page !== "not-found" && !route.gallerySubmit && !route.galleryStatus;
   document.querySelector('meta[name="robots"]')?.setAttribute(
     "content",
     shouldIndex ? "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" : "noindex,follow"
@@ -99,9 +102,13 @@ function routeFromPath(pathname) {
   }
   if (path === "/" || path === "/timeline" || path === "/landing") return { page: "timeline" };
   if (path === "/gallery/submit") return { page: "gallery", gallerySubmit: true };
+  if (/^\/gallery\/submission\/LFI-\d{8}-[A-F0-9]{8}$/i.test(path)) {
+    return { page: "gallery", galleryStatus: true, reference: decodeURIComponent(path.slice("/gallery/submission/".length)).toUpperCase() };
+  }
   if (path === "/gallery") return { page: "gallery", gallerySubmit: false };
   if (path === "/map" || path === "/states") return { page: "map" };
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
+  if (path.startsWith("/voices/")) return { page: "voices", person: decodeURIComponent(path.slice("/voices/".length)) };
   if (path === "/voices") return { page: "voices" };
   if (path === "/sources") return { page: "sources" };
   if (path === "/submit" || path === "/submissions") return { page: "submit" };
@@ -162,10 +169,13 @@ function ensureRouteContent(route) {
     if (renderedPages.has(route.page)) {
       if (route.page === "gallery") {
         window.LetsFixIndiaGallery?.refresh();
-        requestAnimationFrame(() => route.gallerySubmit
-          ? window.LetsFixIndiaGallery?.openUpload()
-          : window.LetsFixIndiaGallery?.closeUpload());
+        requestAnimationFrame(() => {
+          if (route.galleryStatus) window.LetsFixIndiaGallery?.openStatus(route.reference);
+          else if (route.gallerySubmit) window.LetsFixIndiaGallery?.openUpload();
+          else window.LetsFixIndiaGallery?.closeUpload();
+        });
       }
+      if (route.page === "voices") renderVoices();
       return;
     }
 
@@ -179,13 +189,16 @@ function ensureRouteContent(route) {
 
 
   renderedPages.add(route.page);
-  if (route.page === "gallery" && route.gallerySubmit) {
-    requestAnimationFrame(() => window.LetsFixIndiaGallery?.openUpload());
+  if (route.page === "gallery") {
+    if (route.galleryStatus) requestAnimationFrame(() => window.LetsFixIndiaGallery?.openStatus(route.reference));
+    else if (route.gallerySubmit) requestAnimationFrame(() => window.LetsFixIndiaGallery?.openUpload());
   }
 }
 
 function renderRoute(options = {}) {
   const route = resolveRoute();
+  if (route.page !== "voices") document.body.classList.remove("voice-profile-route");
+  if (route.page !== "gallery") document.body.classList.remove("gallery-status-route");
   updatePageMeta(route);
   ensureRouteContent(route);
   routePages.forEach((section) => section.classList.toggle("is-active", section.dataset.page === route.page));

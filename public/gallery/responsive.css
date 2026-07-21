@@ -119,7 +119,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gallery-upload-progress span {
+  .gallery-upload-progress [data-gallery-progress-fill] {
     transition: none;
   }
 }

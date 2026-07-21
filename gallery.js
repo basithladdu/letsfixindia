@@ -73,6 +73,10 @@
   let selectedInspection = null;
   let inspectionTask = null;
   let inspectionToken = 0;
+  let stagedUpload = null;
+  let isSubmitting = false;
+  let submissionCompleted = false;
+  let currentReceipt = null;
 
   function esc(value) {
     return String(value ?? "")
@@ -106,8 +110,8 @@
       const url = new URL(String(value || ""));
       const cloudPath = expectedCloudName ? `/${expectedCloudName}/` : null;
       const isMediaPath = cloudPath
-        ? url.pathname.startsWith(`${cloudPath}image/upload/`) || url.pathname.startsWith(`${cloudPath}video/upload/`)
-        : /^\/[^/]+\/(image|video)\/upload\//.test(url.pathname);
+        ? ["upload", "private"].some((deliveryType) => url.pathname.startsWith(`${cloudPath}image/${deliveryType}/`) || url.pathname.startsWith(`${cloudPath}video/${deliveryType}/`))
+        : /^\/[^/]+\/(image|video)\/(upload|private)\//.test(url.pathname);
       return url.protocol === "https:" && url.hostname === "res.cloudinary.com" && isMediaPath ? url.href : "";
     } catch {
       return "";
@@ -118,7 +122,7 @@
     const assetUrl = cloudinaryAssetUrl(value);
     if (!assetUrl) return "";
     const url = new URL(assetUrl);
-    const marker = "/video/upload/";
+    const marker = url.pathname.includes("/video/private/") ? "/video/private/" : "/video/upload/";
     const markerIndex = url.pathname.indexOf(marker);
     if (markerIndex < 0) return "";
 
@@ -321,12 +325,37 @@
 
   function resetProgress() {
     const progress = document.getElementById("galleryUploadProgress");
-    const fill = progress?.querySelector("span");
+    const fill = progress?.querySelector("[data-gallery-progress-fill]");
+    const track = progress?.querySelector("[role='progressbar']");
+    const label = document.getElementById("galleryUploadProgressLabel");
+    const retry = document.getElementById("galleryRetryButton");
     if (progress) {
       progress.hidden = true;
       progress.setAttribute("aria-hidden", "true");
     }
     if (fill) fill.style.width = "0%";
+    if (track) track.setAttribute("aria-valuenow", "0");
+    if (label) label.textContent = "Preparing upload";
+    if (retry) retry.hidden = true;
+  }
+
+  function markFormStarted({ force = false } = {}) {
+    const startedAt = document.getElementById("galleryStartedAt");
+    if (startedAt && (force || !startedAt.value)) startedAt.value = String(Date.now());
+  }
+
+  function hasIncompleteSubmission() {
+    if (submissionCompleted) return false;
+    if (isSubmitting || selectedFile) return true;
+    const form = document.getElementById("galleryUploadForm");
+    if (!form) return false;
+    const values = new FormData(form);
+    return ["submissionKind", "externalUrl", "caption", "location", "credit", "socialHandle", "phone", "sourceUrl"]
+      .some((name) => String(values.get(name) || "").trim()) || values.get("rightsConfirmed") === "on";
+  }
+
+  function confirmDiscard() {
+    return !hasIncompleteSubmission() || window.confirm("Leave this unfinished submission? Your entered details will be lost.");
   }
 
   function setSubmissionKind(kind) {
@@ -358,6 +387,7 @@
     }
     if (isSocial) {
       selectedFile = null;
+      stagedUpload = null;
       revokePreview();
       setSocialStatus("The post must be public. Tracking parameters are removed before publication.");
     }
@@ -395,6 +425,7 @@
     inspectionToken += 1;
     selectedInspection = null;
     inspectionTask = null;
+    stagedUpload = null;
     setIntegrityStatus("We’ll review your media before publication.");
     if (previewUrl) URL.revokeObjectURL(previewUrl);
     previewUrl = "";
@@ -514,6 +545,8 @@
     if (!modal) return;
     const isSubmitRoute = window.location.pathname.replace(/\/+$/, "") === "/gallery/submit";
     lastOpener = opener || document.activeElement;
+    document.body.classList.remove("gallery-status-route");
+    markFormStarted();
     modal.hidden = false;
     modal.setAttribute("role", isSubmitRoute ? "region" : "dialog");
     if (isSubmitRoute) {
@@ -543,16 +576,25 @@
   }
 
   function closeModal() {
+    if (!confirmDiscard()) return;
     const isSubmitRoute = window.location.pathname.replace(/\/+$/, "") === "/gallery/submit";
+    submissionCompleted = true;
     hideModal();
     if (!isSubmitRoute) return;
     window.history.pushState({}, "", "/gallery");
     window.dispatchEvent(new PopStateEvent("popstate"));
   }
 
-  function showSuccessDialog() {
+  function showSuccessDialog(receipt) {
     const dialog = document.getElementById("gallerySuccessDialog");
     if (!dialog) return;
+    currentReceipt = receipt;
+    const reference = document.getElementById("gallerySuccessReference");
+    const phrase = document.getElementById("gallerySuccessPhrase");
+    const statusLink = document.getElementById("gallerySuccessStatusLink");
+    if (reference) reference.textContent = receipt.reference;
+    if (phrase) phrase.textContent = receipt.recoveryPhrase;
+    if (statusLink) statusLink.href = receipt.statusPath;
     successOpener = document.activeElement;
     document.getElementById("galleryUploadModal")?.setAttribute("inert", "");
     dialog.hidden = false;
@@ -573,23 +615,41 @@
 
   function setProgress(percent) {
     const progress = document.getElementById("galleryUploadProgress");
-    const fill = progress?.querySelector("span");
+    const fill = progress?.querySelector("[data-gallery-progress-fill]");
+    const track = progress?.querySelector("[role='progressbar']");
+    const label = document.getElementById("galleryUploadProgressLabel");
     if (!progress || !fill) return;
     const safe = Math.max(0, Math.min(100, Number(percent) || 0));
     progress.hidden = false;
     progress.setAttribute("aria-hidden", "false");
     fill.style.width = `${safe}%`;
+    track?.setAttribute("aria-valuenow", String(safe));
+    if (label) label.textContent = safe >= 100 ? "Submission received" : `Uploading ${safe}%`;
   }
 
-  async function uploadToCloudinary(file) {
+  function showRetry() {
+    const progress = document.getElementById("galleryUploadProgress");
+    const retry = document.getElementById("galleryRetryButton");
+    if (progress) {
+      progress.hidden = false;
+      progress.setAttribute("aria-hidden", "false");
+    }
+    if (retry) retry.hidden = false;
+  }
+
+  async function uploadToCloudinary(file, guard) {
     const signatureResponse = await fetch("/api/gallery-signature", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ mediaType: VIDEO_TYPES.has(file.type) ? "video" : "image" }),
+      body: JSON.stringify({
+        mediaType: VIDEO_TYPES.has(file.type) ? "video" : "image",
+        website: guard.website,
+        startedAt: guard.startedAt,
+      }),
     });
     let signature;
     try { signature = await signatureResponse.json(); } catch { signature = {}; }
-    if (!signatureResponse.ok || !signature.signature || !signature.timestamp || !signature.apiKey || !signature.cloudName) {
+    if (!signatureResponse.ok || !signature.signature || !signature.timestamp || !signature.apiKey || !signature.cloudName || !signature.assetFolder || !signature.publicId || !signature.resourceType || !signature.allowedFormats) {
       throw new Error(signature.error || "The secure upload service is not configured.");
     }
 
@@ -599,11 +659,14 @@
       payload.append("api_key", signature.apiKey);
       payload.append("timestamp", String(signature.timestamp));
       payload.append("signature", signature.signature);
-      payload.append("folder", signature.folder);
+      payload.append("asset_folder", signature.assetFolder);
+      payload.append("public_id", signature.publicId);
+      payload.append("allowed_formats", signature.allowedFormats);
       if (signature.uploadPreset) payload.append("upload_preset", signature.uploadPreset);
 
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", `https://api.cloudinary.com/v1_1/${encodeURIComponent(signature.cloudName)}/auto/upload`);
+      xhr.open("POST", `https://api.cloudinary.com/v1_1/${encodeURIComponent(signature.cloudName)}/${encodeURIComponent(signature.resourceType)}/${encodeURIComponent(signature.deliveryType)}`);
+      xhr.timeout = 3 * 60 * 1000;
       xhr.upload.addEventListener("progress", (event) => {
         if (event.lengthComputable) {
           const percent = Math.round((event.loaded / event.total) * 100);
@@ -618,11 +681,12 @@
         else reject(new Error(response.error?.message || "Cloudinary rejected the upload."));
       });
       xhr.addEventListener("error", () => reject(new Error("The upload could not reach Cloudinary.")));
+      xhr.addEventListener("timeout", () => reject(new Error("The upload timed out. Your file is still selected; retry when the connection is stable.")));
       xhr.send(payload);
     });
   }
 
-  function saveReceipt(submission) {
+  function saveReceipt(submission, receipt) {
     try {
       const key = "letsFixIndia.gallerySubmissionReceipts";
       const receipts = JSON.parse(localStorage.getItem(key) || "[]");
@@ -631,6 +695,9 @@
         eventTitle: submission.eventTitle,
         submittedAt: submission.submittedAt,
         integrity: submission.integrity,
+        reference: receipt.reference,
+        recoveryPhrase: receipt.recoveryPhrase,
+        statusPath: receipt.statusPath,
       });
       localStorage.setItem(key, JSON.stringify(receipts.slice(0, 10)));
     } catch {
@@ -639,13 +706,23 @@
   }
 
   async function queueForReview(submission) {
-    if (!dbClient) throw new Error("The editor queue is unavailable.");
-    const { error } = await dbClient.from("letsfixindia_submissions").insert([{ data: submission }]);
-    if (error) throw error;
+    const response = await fetch("/api/gallery-submit", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(submission),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.reference || !result.recoveryPhrase || !result.statusPath) {
+      const error = new Error(result.error || "The editor queue did not accept the submission.");
+      error.status = response.status;
+      throw error;
+    }
+    return result;
   }
 
   async function submitMedia(event) {
     event.preventDefault();
+    if (isSubmitting) return;
     const form = event.currentTarget;
     const fileInput = document.getElementById("galleryFile");
     const values = new FormData(form);
@@ -684,7 +761,11 @@
     if (isOriginal && !selectedFile) selectedFile = file;
 
     const submit = document.getElementById("gallerySubmitButton");
+    const retry = document.getElementById("galleryRetryButton");
+    isSubmitting = true;
+    submissionCompleted = false;
     submit.disabled = true;
+    if (retry) retry.hidden = true;
     setStatus(isSocial ? `Preparing ${social.platformName} link…` : IMAGE_TYPES.has(file.type) ? "Finishing media review check…" : "Preparing secure upload…");
     setProgress(2);
 
@@ -700,7 +781,13 @@
         inspection = IMAGE_TYPES.has(file.type) ? selectedInspection || await (inspectionTask || inspectImage(file)) : null;
         if (selectedFile !== file) throw new Error("The selected file changed. Check the preview and submit again.");
         setStatus("Preparing secure upload…");
-        const uploaded = await uploadToCloudinary(file);
+        const uploaded = stagedUpload?.file === file
+          ? stagedUpload.uploaded
+          : await uploadToCloudinary(file, {
+              website: String(values.get("website") || ""),
+              startedAt: String(values.get("startedAt") || ""),
+            });
+        stagedUpload = { file, uploaded };
         if (!cloudinaryAssetUrl(uploaded.secure_url, uploaded.cloudName)) throw new Error("The returned media URL did not match the signed Cloudinary environment.");
         media = {
           mediaType: VIDEO_TYPES.has(file.type) ? "video" : "image",
@@ -712,6 +799,8 @@
           width: uploaded.width,
           height: uploaded.height,
           duration: uploaded.duration || null,
+          version: uploaded.version,
+          deliveryType: uploaded.type,
           cloudinaryFolder: config.folder,
         };
       } else {
@@ -736,6 +825,8 @@
         contentWarning: "none",
         sourceUrl: String(values.get("sourceUrl") || "").trim(),
         rightsConfirmed: values.get("rightsConfirmed") === "on",
+        website: String(values.get("website") || ""),
+        startedAt: Number(values.get("startedAt")),
         reviewConfirmed: true,
         integrity: inspection?.integrity || null,
         duplicateReview: isSocial
@@ -748,28 +839,103 @@
         submittedAt: new Date().toISOString(),
       };
 
+      let receipt;
       try {
-        await queueForReview(submission);
+        receipt = await queueForReview(submission);
       } catch (queueError) {
-        if (isOriginal) saveReceipt(submission);
-        throw new Error(isOriginal
-          ? `The file uploaded, but the editor queue did not confirm it. Save this reference: ${submission.publicId}`
-          : "The link did not reach the editor queue. Please try again.");
+        throw new Error(queueError.message || (isOriginal
+          ? "The file uploaded, but the editor queue did not confirm it. Retry without choosing the file again."
+          : "The link did not reach the editor queue. Please try again."));
       }
 
-      saveReceipt(submission);
+      saveReceipt(submission, receipt);
       setProgress(100);
+      submissionCompleted = true;
       form.reset();
       selectedFile = null;
+      stagedUpload = null;
       revokePreview();
       resetSubmissionKind();
       populateStates();
+      markFormStarted({ force: true });
       setStatus("Received for editorial review. It is not public yet.", "success");
-      showSuccessDialog();
+      showSuccessDialog(receipt);
     } catch (error) {
       setStatus(error.message || "The submission failed. No gallery item was published.", "error");
+      showRetry();
     } finally {
+      isSubmitting = false;
       submit.disabled = !isConfigured();
+    }
+  }
+
+  function storedReceipt(reference) {
+    try {
+      const receipts = JSON.parse(localStorage.getItem("letsFixIndia.gallerySubmissionReceipts") || "[]");
+      return receipts.find((receipt) => receipt.reference === reference) || null;
+    } catch {
+      return null;
+    }
+  }
+
+  async function checkSubmissionStatus(event) {
+    event?.preventDefault();
+    const form = document.getElementById("galleryStatusForm");
+    const result = document.getElementById("galleryStatusResult");
+    if (!form || !result) return;
+    const values = new FormData(form);
+    result.textContent = "Checking submission statusâ€¦";
+    delete result.dataset.state;
+    const response = await fetch("/api/gallery-status", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        reference: String(values.get("reference") || ""),
+        recoveryPhrase: String(values.get("recoveryPhrase") || ""),
+      }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      result.textContent = data.error || "Status could not be checked.";
+      result.dataset.state = "error";
+      return;
+    }
+    const statusLabel = data.status === "approved" ? "Approved and published" : data.status === "rejected" ? "Not accepted for publication" : "Awaiting editorial review";
+    result.innerHTML = `<strong>${esc(statusLabel)}</strong><br>${esc(data.title || "Gallery submission")} Â· ${esc(data.mediaKind || "Submission")}`;
+    result.dataset.state = "success";
+  }
+
+  function openStatus(reference) {
+    const cleanReference = String(reference || "").trim().toUpperCase();
+    const panel = document.getElementById("gallerySubmissionStatus");
+    const referenceInput = document.getElementById("galleryStatusReference");
+    const phraseInput = document.getElementById("galleryStatusPhrase");
+    const result = document.getElementById("galleryStatusResult");
+    if (!panel || !referenceInput) return;
+    closeSuccessDialog();
+    hideModal();
+    document.body.classList.add("gallery-status-route");
+    panel.hidden = false;
+    referenceInput.value = cleanReference;
+    if (result) {
+      result.textContent = "";
+      delete result.dataset.state;
+    }
+    const receipt = storedReceipt(cleanReference);
+    if (phraseInput) phraseInput.value = receipt?.recoveryPhrase || "";
+    window.scrollTo(0, 0);
+    if (receipt?.recoveryPhrase) document.getElementById("galleryStatusForm")?.requestSubmit();
+    else phraseInput?.focus({ preventScroll: true });
+  }
+
+  async function copyReceipt() {
+    if (!currentReceipt) return;
+    const text = `LetsFixIndia submission\nReference: ${currentReceipt.reference}\nRecovery phrase: ${currentReceipt.recoveryPhrase}\nStatus: ${new URL(currentReceipt.statusPath, window.location.origin).href}`;
+    try { await navigator.clipboard.writeText(text); } catch { return; }
+    const button = document.getElementById("galleryCopyReceipt");
+    if (button) {
+      button.textContent = "Copied";
+      window.setTimeout(() => { button.textContent = "Copy receipt"; }, 1400);
     }
   }
 
@@ -810,6 +976,10 @@
     });
     const uploadForm = document.getElementById("galleryUploadForm");
     uploadForm?.addEventListener("submit", submitMedia);
+    uploadForm?.addEventListener("input", () => { submissionCompleted = false; });
+    document.getElementById("galleryRetryButton")?.addEventListener("click", () => uploadForm?.requestSubmit());
+    document.getElementById("galleryCopyReceipt")?.addEventListener("click", copyReceipt);
+    document.getElementById("galleryStatusForm")?.addEventListener("submit", checkSubmissionStatus);
     uploadForm?.querySelectorAll('input[name="submissionKind"]').forEach((input) => {
       input.addEventListener("change", () => setSubmissionKind(input.value));
     });
@@ -874,6 +1044,32 @@
     document.addEventListener("click", (event) => {
       if (event.target.closest("[data-link]") && !event.target.closest("#galleryUploadModal")) hideModal();
     });
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link || !hasIncompleteSubmission() || window.location.pathname !== "/gallery/submit") return;
+      let url;
+      try { url = new URL(link.href, window.location.href); } catch { return; }
+      if (url.href === window.location.href) return;
+      if (!window.confirm("Leave this unfinished submission? Your entered details will be lost.")) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      } else {
+        submissionCompleted = true;
+      }
+    }, true);
+    window.addEventListener("beforeunload", (event) => {
+      if (!hasIncompleteSubmission()) return;
+      event.preventDefault();
+      event.returnValue = "";
+    });
+    window.addEventListener("popstate", () => {
+      if (!hasIncompleteSubmission() || window.location.pathname === "/gallery/submit") return;
+      if (window.confirm("Leave this unfinished submission? Your entered details will be lost.")) {
+        submissionCompleted = true;
+      } else {
+        window.history.forward();
+      }
+    });
     window.addEventListener("focus", () => {
       if (window.location.pathname.startsWith("/gallery")) refreshApprovedItems();
     });
@@ -884,7 +1080,8 @@
     if (!select) return;
     if (select.options.length <= 1) STATES_AND_UTS.forEach((name) => select.add(new Option(name, name)));
     const recordedDate = document.querySelector('#galleryUploadForm input[name="recordedDate"]');
-    const today = new Date().toISOString().slice(0, 10);
+    const current = new Date();
+    const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, "0")}-${String(current.getDate()).padStart(2, "0")}`;
     if (recordedDate) {
       recordedDate.max = today;
       recordedDate.value = today;
@@ -905,6 +1102,7 @@
     lastLiveRefresh = Date.now();
     mergeApprovedItems();
     populateStates();
+    markFormStarted({ force: true });
     bindEvents();
     setSubmissionKind(document.querySelector('#galleryUploadForm input[name="submissionKind"]:checked')?.value || "");
     renderConfigurationState();
@@ -920,15 +1118,33 @@
 
   function renderRoute() {
     if (!initialized) return init({ db: dbClient });
-    if (window.location.pathname.replace(/\/+$/, "") !== "/gallery/submit") hideModal();
+    const path = window.location.pathname.replace(/\/+$/, "");
+    const statusMatch = path.match(/^\/gallery\/submission\/(LFI-\d{8}-[A-F0-9]{8})$/i);
+    if (statusMatch) openStatus(statusMatch[1]);
+    else {
+      document.body.classList.remove("gallery-status-route");
+      const statusPanel = document.getElementById("gallerySubmissionStatus");
+      if (statusPanel) statusPanel.hidden = true;
+      if (path !== "/gallery/submit") hideModal();
+    }
     renderConfigurationState();
     renderGallery();
     return Promise.resolve();
   }
 
   function openUpload() {
+    document.body.classList.remove("gallery-status-route");
+    const statusPanel = document.getElementById("gallerySubmissionStatus");
+    if (statusPanel) statusPanel.hidden = true;
     openModal(document.getElementById("galleryUploadOpen"));
   }
 
-  window.LetsFixIndiaGallery = { init, renderRoute, refresh: refreshApprovedItems, openUpload, closeUpload: hideModal };
+  function closeUpload() {
+    hideModal();
+    document.body.classList.remove("gallery-status-route");
+    const statusPanel = document.getElementById("gallerySubmissionStatus");
+    if (statusPanel) statusPanel.hidden = true;
+  }
+
+  window.LetsFixIndiaGallery = { init, renderRoute, refresh: refreshApprovedItems, openUpload, openStatus, closeUpload };
 })();

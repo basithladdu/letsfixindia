@@ -225,7 +225,7 @@
           </div>
           <div class="tracker-card tracker-presser">
             <p class="tracker-label">PM Has Never Held a Solo Press Conference</p>
-            <div id="pressConferenceTracker" class="tracker-value tracker-value-red">Loading tracker...</div>
+            <div id="pressConferenceTracker" class="tracker-value tracker-value-red tracker-calendar">Loading tracker...</div>
             <small>Counting since he became PM — 26 May 2014</small>
           </div>
         </div>
@@ -332,6 +332,25 @@
           </div>
         </div>
 
+        <section id="gallerySubmissionStatus" class="gallery-submission-status" aria-labelledby="gallerySubmissionStatusTitle" hidden>
+          <a class="gallery-status-back" href="/gallery" data-link><span aria-hidden="true">&larr;</span> Back to Gallery</a>
+          <p class="eyebrow">Private submission status</p>
+          <h2 id="gallerySubmissionStatusTitle">Check your submission</h2>
+          <p>Enter the recovery phrase issued when this submission was received.</p>
+          <form id="galleryStatusForm" class="gallery-status-form">
+            <label>
+              <span>Reference number</span>
+              <input id="galleryStatusReference" name="reference" type="text" readonly>
+            </label>
+            <label>
+              <span>Recovery phrase</span>
+              <input id="galleryStatusPhrase" name="recoveryPhrase" type="text" autocomplete="off" maxlength="100" required placeholder="six word recovery phrase">
+            </label>
+            <button type="submit">Check status</button>
+          </form>
+          <div id="galleryStatusResult" class="gallery-status-result" role="status" aria-live="polite"></div>
+        </section>
+
         <div class="gallery-bar">
           <a id="galleryUploadOpen" class="text-button gallery-upload-btn" href="/gallery/submit" data-link>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
@@ -343,6 +362,7 @@
           </div>
         </div>
         <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+        <p class="gallery-takedown-note"><strong>Contributor safety or takedown:</strong> DM <a href="https://www.instagram.com/basithladdu/" target="_blank" rel="noopener noreferrer">@basithladdu on Instagram</a> with the Gallery post link and what needs to be removed. Reports involving exposed identities or locations are prioritised.</p>
 
         <div id="galleryUploadModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryUploadTitle" hidden>
           <div class="gallery-modal-backdrop" data-gallery-close></div>
@@ -359,6 +379,10 @@
               <button type="button" class="gallery-modal-close" data-gallery-close aria-label="Close upload form">&times;</button>
             </div>
             <form id="galleryUploadForm" class="gallery-upload-form" novalidate>
+              <div class="gallery-bot-field" aria-hidden="true" inert>
+                <label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+              </div>
+              <input id="galleryStartedAt" name="startedAt" type="hidden">
               <fieldset id="gallerySubmissionKind" class="gallery-intake-choice" tabindex="-1">
                 <legend>Do you have a social media link or the original video/photo?</legend>
                 <div class="gallery-intake-options">
@@ -429,8 +453,9 @@
                   </select>
                 </label>
                 <label class="gallery-field-wide">
-                  <span>Place <b class="gallery-field-status is-required">Required</b></span>
-                  <input name="location" type="text" maxlength="120" required placeholder="Street, landmark, district, or city">
+                  <span>Place <b class="gallery-field-status is-optional">Optional</b></span>
+                  <input name="location" type="text" maxlength="120" placeholder="Street, landmark, district, or city">
+                  <small>Add a landmark, district, or city only if it helps verify the media.</small>
                 </label>
                 <label class="gallery-field-wide">
                   <span>What happened in the video/photo <b class="gallery-field-status is-required">Required</b></span>
@@ -465,7 +490,11 @@
                 <input name="rightsConfirmed" type="checkbox" required>
                 <span><strong>Submission confirmation <b class="gallery-field-status is-required">Required</b></strong><small id="galleryConsentCopy">I confirm the link is public and the description is accurate to the best of my knowledge.</small></span>
               </label>
-              <div id="galleryUploadProgress" class="gallery-upload-progress" hidden aria-hidden="true"><span></span></div>
+              <p class="gallery-contributor-safety"><strong>Contributor safety:</strong> Public image copies remove embedded EXIF metadata. Original files stay private for verification and are deleted after 90 days if they remain unpublished. For a takedown or urgent identity/location concern, DM <a href="https://www.instagram.com/basithladdu/" target="_blank" rel="noopener noreferrer">@basithladdu</a> with the post or reference number.</p>
+              <div id="galleryUploadProgress" class="gallery-upload-progress" hidden aria-hidden="true">
+                <div class="gallery-upload-progress-track" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-gallery-progress-fill></span></div>
+                <div class="gallery-upload-progress-meta"><span id="galleryUploadProgressLabel">Preparing upload</span><button id="galleryRetryButton" type="button" hidden>Retry</button></div>
+              </div>
               <div class="gallery-upload-actions">
                 <button id="gallerySubmitButton" type="submit" class="gallery-submit-btn">Submit for review</button>
                 <p id="galleryUploadStatus" class="gallery-upload-status" role="status" aria-live="polite"></p>
@@ -482,7 +511,16 @@
             <p class="eyebrow">Submission received</p>
             <h3 id="gallerySuccessTitle">Sent for review</h3>
             <p id="gallerySuccessMessage">Your submission is in the editor queue. It will appear in the gallery after approval.</p>
-            <a class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
+            <dl class="gallery-recovery-receipt">
+              <div><dt>Reference number</dt><dd id="gallerySuccessReference"></dd></div>
+              <div><dt>Recovery phrase</dt><dd id="gallerySuccessPhrase"></dd></div>
+            </dl>
+            <p class="gallery-recovery-note">Save both. The phrase is shown only once and is required to check status later.</p>
+            <div class="gallery-success-actions">
+              <button id="galleryCopyReceipt" class="gallery-success-secondary" type="button">Copy receipt</button>
+              <a id="gallerySuccessStatusLink" class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Check status</a>
+              <a class="gallery-success-secondary" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
+            </div>
           </div>
         </div>
       </section>
@@ -658,32 +696,52 @@
           <div>
             <p class="eyebrow">Fastest contact</p>
             <h3>DM me on Instagram. I'm not Kylie Jenner.</h3>
-            <p>Send the link, correction, photo, video, or context directly to <strong>@basithladdu</strong>. X/Twitter DMs at <strong>@basithladoo</strong> also work, or message the WhatsApp username <strong>@basithladdu</strong>.</p>
+            <p>Found a bug? DM me on Instagram first. X is the backup, or copy my WhatsApp username.</p>
           </div>
-          <a href="https://instagram.com/basithladdu" target="_blank" rel="noopener" class="contact-dm-primary">DM @basithladdu</a>
+          <div class="contact-social-actions" aria-label="Social media contact options">
+            <a href="https://instagram.com/basithladdu" target="_blank" rel="noopener" class="contact-social-action is-instagram" aria-label="DM @basithladdu on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram <strong>@basithladdu</strong></span>
+              <svg class="social-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener" class="contact-social-action is-x" aria-label="DM @basithladoo on X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l14 16M19 4 5 20"/></svg>
+              <span>X <strong>@basithladoo</strong></span>
+              <svg class="social-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <button type="button" class="contact-social-action is-whatsapp" data-copy-text="basithladdu" data-default-label="Copy WhatsApp username" data-success-label="WhatsApp username copied" data-error-label="Copy failed" aria-label="Copy WhatsApp username basithladdu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.7l1.6-4.8A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8.4 7.9c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.5l.8 1.9c.1.3.1.5-.1.7l-.6.8c-.2.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.1.7-.1l.8-1c.2-.2.4-.3.7-.2l2 .9c.3.1.4.3.4.6 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.1-.2-2.7-.8-4.5-2.4-2.1-1.9-3.4-4.2-3.5-5.4 0-.5.1-.8.2-1.1Z"/></svg>
+              <span data-copy-label>Copy WhatsApp username</span>
+              <svg class="social-copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            </button>
+          </div>
         </aside>
 
         <div class="contact-tiles">
-          <a href="mailto:basithladoo@gmail.com" class="contact-tile tile-email">
-            <span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-            <strong>Email</strong>
-            <span class="tile-sub">basithladoo@gmail.com</span>
-          </a>
           <a href="https://instagram.com/basithladdu" target="_blank" rel="noopener" class="contact-tile tile-instagram">
             <span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>
             <strong>DM on Instagram</strong>
             <span class="tile-sub">@basithladdu</span>
+            <span class="tile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           </a>
           <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener" class="contact-tile tile-x">
             <span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></span>
             <strong>DM on X / Twitter</strong>
             <span class="tile-sub">@basithladoo</span>
+            <span class="tile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
           </a>
-          <div class="contact-tile tile-whatsapp" role="note" aria-label="WhatsApp username basithladdu">
+          <button type="button" class="contact-tile tile-whatsapp" data-copy-text="basithladdu" data-default-label="Copy username" data-success-label="Copied" data-error-label="Copy failed" aria-label="Copy WhatsApp username basithladdu">
             <span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5a8.5 8.5 0 0 1 4.7-7.6A8.38 8.38 0 0 1 12.5 3H13a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
             <strong>WhatsApp</strong>
-            <span class="tile-sub">Message @basithladdu</span>
-          </div>
+            <span class="tile-sub" data-copy-label>Copy username basithladdu</span>
+            <span class="tile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span>
+          </button>
+          <a href="mailto:basithladoo@gmail.com" class="contact-tile tile-email">
+            <span class="tile-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <strong>Email</strong>
+            <span class="tile-sub">basithladoo@gmail.com</span>
+            <span class="tile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
         </div>
 
         <div class="contact-follow">
@@ -692,11 +750,11 @@
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
               <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-            </svg>YouTube</a>
+            </svg>YouTube <svg class="follow-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
           <a href="https://github.com/basithladdu/letsfixindia" target="_blank" rel="noopener" class="follow-chip chip-gh">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
               <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>GitHub</a>
+            </svg>GitHub <svg class="follow-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
 
         <article class="devit-banner">
@@ -712,7 +770,6 @@
           <cite>A note from the maker (basith, 2024)</cite>
         </blockquote>
       </section>
-
       <section id="methodology" class="section method-section route-page" data-page="methodology">
         <div class="section-head">
           <p class="eyebrow">Method</p>
@@ -803,6 +860,7 @@
         </div>
       </section>
       <section id="voices" class="section voices-section route-page" data-page="voices">
+        <a class="voice-profile-back" href="/voices" data-link><span aria-hidden="true">&larr;</span> All public voices</a>
         <div class="section-head">
           <p class="eyebrow">Public figures &amp; celebrities</p>
           <h2>Who spoke, who backed power, and where no statement was found</h2>
@@ -875,7 +933,6 @@
           <a href="/submit" data-link class="text-button" style="display: inline-block; padding: 8px 16px; font-size: 0.85rem; font-weight: 750;">Report another voice / statement</a>
         </div>
       </section>
-
       <section id="faq" class="section faq-section route-page" data-page="faq">
         <div class="section-head">
           <p class="eyebrow">FAQ</p>
@@ -979,8 +1036,24 @@
           <p>This site is free, has no ads, no paywall, and no sponsor. It costs a small amount to host and a large amount of unpaid time to research. If it is useful to you, here are the ways to help — most of them cost nothing.</p>
         </div>
         <aside class="support-dm-note">
-          <div><strong>Have evidence or a correction?</strong><span>DM <a href="https://instagram.com/basithladdu" target="_blank" rel="noopener">@basithladdu on Instagram</a>, <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener">@basithladoo on X</a>, or message the WhatsApp username <strong>@basithladdu</strong>.</span></div>
-          <a class="contact-dm-primary" href="https://instagram.com/basithladdu" target="_blank" rel="noopener">Open Instagram</a>
+          <div><strong>Have evidence, a correction, or found a bug?</strong><span>DM me on Instagram first. X is the backup, or copy my WhatsApp username.</span></div>
+          <div class="contact-social-actions" aria-label="Social media contact options">
+            <a href="https://instagram.com/basithladdu" target="_blank" rel="noopener" class="contact-social-action is-instagram" aria-label="DM @basithladdu on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram <strong>@basithladdu</strong></span>
+              <svg class="social-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <a href="https://twitter.com/basithladoo" target="_blank" rel="noopener" class="contact-social-action is-x" aria-label="DM @basithladoo on X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l14 16M19 4 5 20"/></svg>
+              <span>X <strong>@basithladoo</strong></span>
+              <svg class="social-link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+            <button type="button" class="contact-social-action is-whatsapp" data-copy-text="basithladdu" data-default-label="Copy WhatsApp username" data-success-label="WhatsApp username copied" data-error-label="Copy failed" aria-label="Copy WhatsApp username basithladdu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.7l1.6-4.8A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8.4 7.9c.3-.5.6-.5.9-.5h.5c.2 0 .4.1.5.5l.8 1.9c.1.3.1.5-.1.7l-.6.8c-.2.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.1.7-.1l.8-1c.2-.2.4-.3.7-.2l2 .9c.3.1.4.3.4.6 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.2.6-1.1-.2-2.7-.8-4.5-2.4-2.1-1.9-3.4-4.2-3.5-5.4 0-.5.1-.8.2-1.1Z"/></svg>
+              <span data-copy-label>Copy WhatsApp username</span>
+              <svg class="social-copy-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            </button>
+          </div>
         </aside>
         <div class="support-options">
           <article class="support-card">
@@ -1028,8 +1101,6 @@
           </article>
         </div>
       </section>
-
-
       <section id="partner" class="section support-section route-page" data-page="partner">
         <div class="section-head">
           <p class="eyebrow">Partner</p>

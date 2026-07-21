@@ -2,9 +2,9 @@
 @import url("/styles/01-foundation.css");
 @import url("/styles/02-records-and-data.css");
 @import url("/styles/03-responsive-and-shell.css");
-@import url("/styles/04-voices-and-timeline-motion.css");
+@import url("/styles/04-voices-and-timeline-motion.css?v=20260722-1");
 @import url("/styles/05-sharing-and-support.css");
 @import url("/styles/06-splash-and-charts.css");
-@import url("/styles/07-contact-and-interactions.css");
+@import url("/styles/07-contact-and-interactions.css?v=2");
 @import url("/styles/08-submit-and-filter-fixes.css");
 @import url("/styles/09-mobile-bottom-nav.css");

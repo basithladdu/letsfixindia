@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex,nofollow,noarchive">
     <title>Gallery admin | LetsFixIndia</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/admin/admin.css?v=20260721-2">
+    <link rel="stylesheet" href="/admin/admin.css?v=20260722-1">
   </head>
   <body>
     <main class="admin-shell">
@@ -28,6 +28,13 @@
           <p id="queueStatus">Loading submissions...</p>
           <button id="refreshButton" type="button">Refresh</button>
         </div>
+        <div id="queueFilters" class="queue-filters" role="group" aria-label="Filter submissions by moderation status">
+          <button type="button" data-filter="all" aria-pressed="true">All <span data-filter-count="all">0</span></button>
+          <button type="button" data-filter="pending" aria-pressed="false">Pending <span data-filter-count="pending">0</span></button>
+          <button type="button" data-filter="approved" aria-pressed="false">Approved <span data-filter-count="approved">0</span></button>
+          <button type="button" data-filter="rejected" aria-pressed="false">Rejected <span data-filter-count="rejected">0</span></button>
+        </div>
+        <p class="admin-safety-note">Preview only. Uploaded files render as restricted images or videos; there is no download action. Approve unlocks only after the preview loads.</p>
         <div id="queue"></div>
       </section>
     </main>
@@ -36,6 +43,6 @@
       <span id="adminToastMessage"></span>
     </div>
     <script src="/gallery-embeds.js?v=20260721-1"></script>
-    <script src="/admin/admin.js?v=20260721-4"></script>
+    <script src="/admin/admin.js?v=20260722-2"></script>
   </body>
 </html>

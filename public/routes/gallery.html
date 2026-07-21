@@ -7,6 +7,25 @@
           </div>
         </div>
 
+        <section id="gallerySubmissionStatus" class="gallery-submission-status" aria-labelledby="gallerySubmissionStatusTitle" hidden>
+          <a class="gallery-status-back" href="/gallery" data-link><span aria-hidden="true">&larr;</span> Back to Gallery</a>
+          <p class="eyebrow">Private submission status</p>
+          <h2 id="gallerySubmissionStatusTitle">Check your submission</h2>
+          <p>Enter the recovery phrase issued when this submission was received.</p>
+          <form id="galleryStatusForm" class="gallery-status-form">
+            <label>
+              <span>Reference number</span>
+              <input id="galleryStatusReference" name="reference" type="text" readonly>
+            </label>
+            <label>
+              <span>Recovery phrase</span>
+              <input id="galleryStatusPhrase" name="recoveryPhrase" type="text" autocomplete="off" maxlength="100" required placeholder="six word recovery phrase">
+            </label>
+            <button type="submit">Check status</button>
+          </form>
+          <div id="galleryStatusResult" class="gallery-status-result" role="status" aria-live="polite"></div>
+        </section>
+
         <div class="gallery-bar">
           <a id="galleryUploadOpen" class="text-button gallery-upload-btn" href="/gallery/submit" data-link>
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
@@ -18,6 +37,7 @@
           </div>
         </div>
         <div id="galleryGrid" class="gallery-grid" aria-live="polite"></div>
+        <p class="gallery-takedown-note"><strong>Contributor safety or takedown:</strong> DM <a href="https://www.instagram.com/basithladdu/" target="_blank" rel="noopener noreferrer">@basithladdu on Instagram</a> with the Gallery post link and what needs to be removed. Reports involving exposed identities or locations are prioritised.</p>
 
         <div id="galleryUploadModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryUploadTitle" hidden>
           <div class="gallery-modal-backdrop" data-gallery-close></div>
@@ -34,6 +54,10 @@
               <button type="button" class="gallery-modal-close" data-gallery-close aria-label="Close upload form">&times;</button>
             </div>
             <form id="galleryUploadForm" class="gallery-upload-form" novalidate>
+              <div class="gallery-bot-field" aria-hidden="true" inert>
+                <label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+              </div>
+              <input id="galleryStartedAt" name="startedAt" type="hidden">
               <fieldset id="gallerySubmissionKind" class="gallery-intake-choice" tabindex="-1">
                 <legend>Do you have a social media link or the original video/photo?</legend>
                 <div class="gallery-intake-options">
@@ -104,8 +128,9 @@
                   </select>
                 </label>
                 <label class="gallery-field-wide">
-                  <span>Place <b class="gallery-field-status is-required">Required</b></span>
-                  <input name="location" type="text" maxlength="120" required placeholder="Street, landmark, district, or city">
+                  <span>Place <b class="gallery-field-status is-optional">Optional</b></span>
+                  <input name="location" type="text" maxlength="120" placeholder="Street, landmark, district, or city">
+                  <small>Add a landmark, district, or city only if it helps verify the media.</small>
                 </label>
                 <label class="gallery-field-wide">
                   <span>What happened in the video/photo <b class="gallery-field-status is-required">Required</b></span>
@@ -140,7 +165,11 @@
                 <input name="rightsConfirmed" type="checkbox" required>
                 <span><strong>Submission confirmation <b class="gallery-field-status is-required">Required</b></strong><small id="galleryConsentCopy">I confirm the link is public and the description is accurate to the best of my knowledge.</small></span>
               </label>
-              <div id="galleryUploadProgress" class="gallery-upload-progress" hidden aria-hidden="true"><span></span></div>
+              <p class="gallery-contributor-safety"><strong>Contributor safety:</strong> Public image copies remove embedded EXIF metadata. Original files stay private for verification and are deleted after 90 days if they remain unpublished. For a takedown or urgent identity/location concern, DM <a href="https://www.instagram.com/basithladdu/" target="_blank" rel="noopener noreferrer">@basithladdu</a> with the post or reference number.</p>
+              <div id="galleryUploadProgress" class="gallery-upload-progress" hidden aria-hidden="true">
+                <div class="gallery-upload-progress-track" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-gallery-progress-fill></span></div>
+                <div class="gallery-upload-progress-meta"><span id="galleryUploadProgressLabel">Preparing upload</span><button id="galleryRetryButton" type="button" hidden>Retry</button></div>
+              </div>
               <div class="gallery-upload-actions">
                 <button id="gallerySubmitButton" type="submit" class="gallery-submit-btn">Submit for review</button>
                 <p id="galleryUploadStatus" class="gallery-upload-status" role="status" aria-live="polite"></p>
@@ -157,7 +186,16 @@
             <p class="eyebrow">Submission received</p>
             <h3 id="gallerySuccessTitle">Sent for review</h3>
             <p id="gallerySuccessMessage">Your submission is in the editor queue. It will appear in the gallery after approval.</p>
-            <a class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
+            <dl class="gallery-recovery-receipt">
+              <div><dt>Reference number</dt><dd id="gallerySuccessReference"></dd></div>
+              <div><dt>Recovery phrase</dt><dd id="gallerySuccessPhrase"></dd></div>
+            </dl>
+            <p class="gallery-recovery-note">Save both. The phrase is shown only once and is required to check status later.</p>
+            <div class="gallery-success-actions">
+              <button id="galleryCopyReceipt" class="gallery-success-secondary" type="button">Copy receipt</button>
+              <a id="gallerySuccessStatusLink" class="gallery-success-action" href="/gallery" data-link data-gallery-success-close>Check status</a>
+              <a class="gallery-success-secondary" href="/gallery" data-link data-gallery-success-close>Back to gallery</a>
+            </div>
           </div>
         </div>
       </section>

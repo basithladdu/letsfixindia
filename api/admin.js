@@ -33,6 +33,37 @@ function tokenFor(timestamp) {
   return `${timestamp}.${crypto.createHmac("sha256", adminPassword()).update(String(timestamp)).digest("hex")}`;
 }
 
+function cloudinarySignature(parameters, secret) {
+  const payload = Object.entries(parameters)
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([key, value]) => `${key}=${value}`)
+    .join("&");
+  return crypto.createHash("sha1").update(`${payload}${secret}`).digest("hex");
+}
+
+async function destroyCloudinaryOriginal(original) {
+  const cloudName = String(process.env.CLOUDINARY_CLOUD_NAME || "");
+  const apiKey = String(process.env.CLOUDINARY_API_KEY || "");
+  const apiSecret = String(process.env.CLOUDINARY_API_SECRET || "");
+  const publicId = String(original?.publicId || "");
+  const resourceType = String(original?.resourceType || "");
+  if (!cloudName || !apiKey || !apiSecret) throw new AdminServiceError("media_deletion_not_configured", "Cloudinary deletion is not configured.");
+  if (!/^letsfixindia\/[A-Za-z0-9_/-]{4,220}$/.test(publicId) || !["image", "video"].includes(resourceType)) {
+    throw new AdminServiceError("invalid_media_reference", "The stored media reference is invalid and was not deleted.");
+  }
+  const timestamp = Math.floor(Date.now() / 1000);
+  const parameters = { invalidate: "true", public_id: publicId, timestamp: String(timestamp), type: "private" };
+  const form = new URLSearchParams({ ...parameters, api_key: apiKey, signature: cloudinarySignature(parameters, apiSecret) });
+  const response = await fetch(`https://api.cloudinary.com/v1_1/${encodeURIComponent(cloudName)}/${resourceType}/destroy`, {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: form,
+  });
+  const result = await response.json().catch(() => ({}));
+  if (!response.ok || !["ok", "not found"].includes(result.result)) throw new Error("Cloudinary media deletion failed.");
+  return result.result === "ok";
+}
+
 function authorized(req) {
   const value = String(req.headers.cookie || "").split(";").map((item) => item.trim()).find((item) => item.startsWith(`${COOKIE}=`))?.slice(COOKIE.length + 1) || "";
   const [timestamp, signature] = value.split(".");
@@ -96,7 +127,19 @@ export default async function handler(req, res) {
       await supabaseFetch(`letsfixindia_submissions?id=eq.${id}`, { method: "PATCH", headers: { Prefer: "return=minimal" }, body: JSON.stringify({ data }) });
       return send(res, 200, { ok: true, id, status });
     }
-    res.setHeader("allow", "GET, POST, PATCH");
+    if (req.method === "DELETE") {
+      const input = await body(req);
+      const id = Number(input.id);
+      if (!Number.isInteger(id) || id <= 0) return send(res, 400, { error: "Invalid submission ID." });
+      const rows = await supabaseFetch(`letsfixindia_submissions?id=eq.${id}&select=id,data&limit=1`);
+      const row = rows[0];
+      if (!row) return send(res, 404, { error: "Submission not found." });
+      const original = row.data?.privateOriginal;
+      const cloudinaryDeleted = original?.publicId ? await destroyCloudinaryOriginal(original) : false;
+      await supabaseFetch(`letsfixindia_submissions?id=eq.${id}`, { method: "DELETE", headers: { Prefer: "return=minimal" } });
+      return send(res, 200, { ok: true, id, cloudinaryDeleted });
+    }
+    res.setHeader("allow", "GET, POST, PATCH, DELETE");
     return send(res, 405, { error: "Method not allowed." });
   } catch (error) {
     console.error("Admin moderation error:", error);

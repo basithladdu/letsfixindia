@@ -1,5 +1,6 @@
 ---
 import { composeShell } from "../../tools/compose-shell.mjs";
+import voices from "../../data/voices.json";
 
 const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 const routeMeta = {
@@ -7,7 +8,7 @@ const routeMeta = {
   "/timeline": ["LetsFixIndia Timeline | India's Sourced Public Record, 2014-2026", "A source-led timeline of governance events, rights concerns, protests, institutional controversies, and documented public voices in India from 2014 to 2026.", "/"],
   "/landing": ["LetsFixIndia Timeline | India's Sourced Public Record, 2014-2026", "A source-led timeline of governance events, rights concerns, protests, institutional controversies, and documented public voices in India from 2014 to 2026.", "/"],
   "/gallery": ["Public Evidence Gallery | LetsFixIndia", "Reviewed photos and video documenting protests, excessive force, lathi charges, tear gas, detentions, injuries, and other public events.", "/gallery"],
-  "/gallery/submit": ["Submit Protest Media | LetsFixIndia", "Submit original protest photos or video with the date, location, and visible context required for editorial review.", "/gallery/submit", false],
+  "/gallery/submit": ["Submit Protest Media | LetsFixIndia", "Submit original protest photos or video with the date, state, and visible context required for editorial review.", "/gallery/submit", false],
   "/map": ["State Map | LetsFixIndia", "Explore explicitly state-tagged public records across all 36 Indian states and union territories.", "/map"],
   "/states": ["State Map | LetsFixIndia", "Explore explicitly state-tagged public records across all 36 Indian states and union territories.", "/map"],
   "/statistics": ["Statistics | LetsFixIndia", "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.", "/statistics"],
@@ -24,7 +25,12 @@ const routeMeta = {
   "/contact": ["Contact | LetsFixIndia", "Contact Basith for corrections, collaboration, research, or software work.", "/contact"],
   "/about": ["About | LetsFixIndia", "Who maintains LetsFixIndia and how its public-record workflow operates.", "/about"],
 };
-const [title, description, canonicalPath, indexable = true] = routeMeta[pathname] || ["Page Not Found | LetsFixIndia", "This address is not part of the current LetsFixIndia site.", pathname, false];
+const voiceId = pathname.startsWith("/voices/") ? decodeURIComponent(pathname.slice("/voices/".length)) : "";
+const voice = voiceId ? voices.find((item) => item.id === voiceId) : null;
+const dynamicMeta = voice
+  ? [`${voice.name} - Public Voice Record | LetsFixIndia`, `Source-linked public statements and documented research gaps for ${voice.name}.`, `/voices/${voice.id}`]
+  : null;
+const [title, description, canonicalPath, indexable = true] = routeMeta[pathname] || dynamicMeta || ["Page Not Found | LetsFixIndia", "This address is not part of the current LetsFixIndia site.", pathname, false];
 const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const canonicalUrl = new URL(canonicalPath, Astro.site).href;
 let shellHtml = composeShell(process.cwd());

@@ -31,6 +31,89 @@
   font-size: 12px;
 }
 
+.contact-direct-note > div:first-child,
+.support-dm-note > div:first-child {
+  min-width: min(100%, 340px);
+}
+
+.contact-social-actions {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.contact-social-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #cad2d9;
+  border-radius: 9px;
+  background: #fff;
+  color: #20262d;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1.15;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-social-action > svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-social-action span {
+  display: grid;
+  gap: 1px;
+}
+
+.contact-social-action span strong {
+  color: inherit;
+  font-size: 10px;
+}
+
+.contact-social-action .social-link-arrow,
+.contact-social-action .social-copy-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.72;
+}
+
+.contact-social-action.is-instagram {
+  border-color: #c73576;
+  background: #c73576;
+  color: #fff;
+}
+
+.contact-social-action.is-x:hover,
+.contact-social-action.is-x:focus-visible {
+  border-color: #111827;
+}
+
+.contact-social-action.is-whatsapp {
+  border-color: #75c995;
+  color: #126b34;
+}
+
+.contact-social-action:hover,
+.contact-social-action:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(21, 29, 38, 0.1);
+  outline: 3px solid rgba(199, 53, 118, 0.12);
+}
+
 .contact-dm-primary {
   display: inline-flex;
   align-items: center;
@@ -57,6 +140,45 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.contact-tile {
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+}
+
+button.contact-tile {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tile-action-icon {
+  display: inline-flex;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #f2f4f5;
+  color: #4d5963;
+}
+
+.tile-action-icon svg,
+.follow-link-arrow {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.follow-link-arrow {
+  margin-left: 2px;
+}
+
 .tile-instagram .tile-icon {
   background: #fce7f3;
   color: #be185d;
@@ -70,10 +192,6 @@
 .tile-whatsapp .tile-icon {
   background: #dcfce7;
   color: #15803d;
-}
-
-.tile-whatsapp {
-  cursor: default;
 }
 
 .support-dm-note {
@@ -103,6 +221,17 @@
   text-underline-offset: 2px;
 }
 
+.support-dm-note > .contact-social-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.support-dm-note .contact-social-action,
+.support-dm-note .contact-social-action span,
+.support-dm-note .contact-social-action strong {
+  color: inherit;
+}
+
 @media (max-width: 760px) {
   .contact-direct-note,
   .support-dm-note {
@@ -112,6 +241,20 @@
   }
 
   .contact-dm-primary {
+    width: 100%;
+  }
+
+  .contact-social-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .support-dm-note > .contact-social-actions {
+    display: grid;
+  }
+
+  .contact-social-action {
     width: 100%;
   }
 

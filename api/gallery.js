@@ -8,19 +8,21 @@ function text(value, maximum) {
   return String(value || "").trim().slice(0, maximum);
 }
 
-function trustedMediaUrl(value) {
+function trustedMediaUrl(value, cloudName) {
   try {
     const url = new URL(String(value || ""));
-    const isCloudinaryMedia = /^\/[^/]+\/(image|video)\/upload\//.test(url.pathname);
-    return url.protocol === "https:" && url.hostname === "res.cloudinary.com" && isCloudinaryMedia ? url.href : "";
+    const prefix = `/${cloudName}/`;
+    const isLegacyUpload = url.pathname.startsWith(`${prefix}image/upload/`) || url.pathname.startsWith(`${prefix}video/upload/`);
+    const isPrivateDerivative = new RegExp(`^/${cloudName}/(image|video)/private/[^/]+/v\\d+/`).test(url.pathname);
+    return url.protocol === "https:" && url.hostname === "res.cloudinary.com" && (isLegacyUpload || isPrivateDerivative) ? url.href : "";
   } catch {
     return "";
   }
 }
 
-function publicItem(row) {
+function publicItem(row, cloudName) {
   const data = row?.data || {};
-  const secureUrl = trustedMediaUrl(data.secureUrl);
+  const secureUrl = trustedMediaUrl(data.secureUrl, cloudName);
   const socialPost = parseSocialPostUrl(data.externalUrl);
   if (data.reviewStatus !== "approved" || (!secureUrl && !socialPost)) return null;
   return {
@@ -50,7 +52,8 @@ export default async function handler(request, response) {
 
   const base = String(process.env.SUPABASE_URL || "").replace(/\/$/, "");
   const key = String(process.env.SUPABASE_SERVICE_ROLE_KEY || "");
-  if (!base || !key) return send(response, 503, { error: "The approved gallery is temporarily unavailable." });
+  const cloudName = String(process.env.CLOUDINARY_CLOUD_NAME || "").trim();
+  if (!base || !key || !cloudName) return send(response, 503, { error: "The approved gallery is temporarily unavailable." });
 
   try {
     const url = new URL(`${base}/rest/v1/letsfixindia_submissions`);
@@ -63,7 +66,7 @@ export default async function handler(request, response) {
     response
       .status(200)
       .setHeader("cache-control", "public, max-age=0, s-maxage=15, stale-while-revalidate=45")
-      .json({ items: rows.map(publicItem).filter(Boolean) });
+      .json({ items: rows.map((row) => publicItem(row, cloudName)).filter(Boolean) });
     return;
   } catch (error) {
     console.error("Public gallery error:", error);

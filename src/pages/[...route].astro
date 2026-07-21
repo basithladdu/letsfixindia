@@ -1,5 +1,6 @@
 ---
 import SpaShell from "../components/SpaShell.astro";
+import voices from "../../data/voices.json";
 
 export function getStaticPaths() {
   const namedRoutes = [
@@ -23,8 +24,9 @@ export function getStaticPaths() {
     "donors",
     "about"
   ].map((route) => ({ params: { route } }));
+  const voiceRoutes = voices.map((voice) => ({ params: { route: `voices/${voice.id}` } }));
 
-  return [{ params: { route: undefined } }, ...namedRoutes];
+  return [{ params: { route: undefined } }, ...namedRoutes, ...voiceRoutes];
 }
 ---
 <SpaShell />

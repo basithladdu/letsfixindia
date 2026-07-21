@@ -39,6 +39,31 @@ function updateMobileScrollProgress() {
 
 function startLiveTrackers() {
   if (trackersInterval) clearInterval(trackersInterval);
+
+  function calendarElapsed(start, end) {
+    const addMonthsClamped = (value, months) => {
+      const result = new Date(value);
+      const day = result.getDate();
+      result.setDate(1);
+      result.setMonth(result.getMonth() + months);
+      const lastDay = new Date(result.getFullYear(), result.getMonth() + 1, 0).getDate();
+      result.setDate(Math.min(day, lastDay));
+      return result;
+    };
+    let totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + end.getMonth() - start.getMonth();
+    let anchor = addMonthsClamped(start, totalMonths);
+    if (anchor > end) {
+      totalMonths -= 1;
+      anchor = addMonthsClamped(start, totalMonths);
+    }
+    const remainder = end - anchor;
+    return {
+      years: Math.floor(totalMonths / 12),
+      months: totalMonths % 12,
+      days: Math.floor(remainder / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((remainder % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    };
+  }
   
   function updateTrackers() {
     const electionEl = document.getElementById("electionCountdown");
@@ -68,13 +93,12 @@ function startLiveTrackers() {
     const diffPress = now - pressStart;
     if (pressEl) {
       if (diffPress < 0) {
-        pressEl.textContent = "0 days";
+        pressEl.textContent = "0Y · 0M · 0D · 0H";
       } else {
-        const days = Math.floor(diffPress / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diffPress % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diffPress % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diffPress % (1000 * 60)) / 1000);
-        pressEl.innerHTML = `${days}d ${hours}h ${mins}m ${secs}s`;
+        const elapsed = calendarElapsed(pressStart, now);
+        const unitLabel = (value, singular) => `${value} ${singular}${value === 1 ? "" : "s"}`;
+        pressEl.setAttribute("aria-label", [unitLabel(elapsed.years, "year"), unitLabel(elapsed.months, "month"), unitLabel(elapsed.days, "day"), unitLabel(elapsed.hours, "hour")].join(", "));
+        pressEl.innerHTML = `<span class="tracker-unit"><strong>${elapsed.years}</strong><small>Y</small></span><i aria-hidden="true">&middot;</i><span class="tracker-unit"><strong>${elapsed.months}</strong><small>M</small></span><i aria-hidden="true">&middot;</i><span class="tracker-unit"><strong>${elapsed.days}</strong><small>D</small></span><i aria-hidden="true">&middot;</i><span class="tracker-unit"><strong>${elapsed.hours}</strong><small>H</small></span>`;
       }
     }
   }

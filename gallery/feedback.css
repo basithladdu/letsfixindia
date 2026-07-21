@@ -22,7 +22,7 @@
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  width: min(420px, 100%);
+  width: min(520px, 100%);
   padding: 30px 28px 26px;
   border: 1px solid #c9d3cc;
   border-radius: 16px;
@@ -58,12 +58,73 @@
   line-height: 1.05;
 }
 
-.gallery-success-card > p:last-of-type {
+.gallery-success-card > #gallerySuccessMessage {
   max-width: 33ch;
-  margin: 12px auto 21px;
+  margin: 12px auto 18px;
   color: var(--muted, #60676d);
   font-size: 13px;
   line-height: 1.55;
+}
+
+.gallery-recovery-receipt {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  text-align: left;
+}
+
+.gallery-recovery-receipt > div {
+  padding: 10px 12px;
+  border: 1px solid #d6dce0;
+  border-radius: 8px;
+  background: #f5f7f7;
+}
+
+.gallery-recovery-receipt dt {
+  color: var(--muted, #60676d);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gallery-recovery-receipt dd {
+  margin: 4px 0 0;
+  overflow-wrap: anywhere;
+  color: var(--ink, #20252a);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gallery-recovery-note {
+  margin: 10px 0 16px;
+  color: var(--muted, #60676d);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.gallery-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gallery-success-secondary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border: 1px solid #c8ced3;
+  border-radius: 9px;
+  background: #fff;
+  color: #3e464e;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 850;
+  text-decoration: none;
 }
 
 .gallery-success-action {

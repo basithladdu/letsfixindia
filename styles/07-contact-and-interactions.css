@@ -204,6 +204,40 @@
   color: var(--danger);
 }
 
+.tracker-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(7px, 1.4vw, 14px);
+}
+
+.tracker-calendar > i {
+  color: #b9a9a4;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.tracker-unit {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.tracker-unit strong {
+  font: inherit;
+}
+
+.tracker-calendar .tracker-unit small {
+  display: inline;
+  margin: 0;
+  color: currentColor;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
 .tracker-card small {
   display: block;
   margin-top: 6px;
@@ -570,4 +604,3 @@ details:not(.stance-detail) > summary.is-tapping::after {
 .share-button.share-sound::before {
   content: "\266A";
 }
-

@@ -5,7 +5,11 @@
   ],
   "rewrites": [
     { "source": "/admin", "destination": "/admin/index.html" },
-    { "source": "/admin/", "destination": "/admin/index.html" }
+    { "source": "/admin/", "destination": "/admin/index.html" },
+    { "source": "/gallery/submission/:reference", "destination": "/gallery/index.html" }
+  ],
+  "crons": [
+    { "path": "/api/gallery-retention", "schedule": "0 4 * * *" }
   ],
   "headers": [
     {

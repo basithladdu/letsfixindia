@@ -146,12 +146,26 @@ function voiceMatchesFilters(voice) {
 function renderVoices() {
   if (!voicesGrid || !voices.length) return;
 
-  const filtered = voices.filter(voiceMatchesFilters);
-  if (voiceState.sort === "name") {
+  const route = resolveRoute();
+  const isProfileRoute = route.page === "voices" && Boolean(route.person);
+  const profile = isProfileRoute ? voices.find((voice) => voice.id === route.person) : null;
+  document.body.classList.toggle("voice-profile-route", isProfileRoute);
+  const sectionHead = document.querySelector("#voices .section-head");
+  const sectionTitle = sectionHead?.querySelector("h2");
+  const sectionDescription = sectionHead?.querySelector("p:last-child");
+  if (sectionTitle) sectionTitle.textContent = profile ? profile.name : isProfileRoute ? "Voice record not found" : "Who spoke, who backed power, and where no statement was found";
+  if (sectionDescription) sectionDescription.textContent = profile
+    ? `${profile.description}. Each entry below links to the cited public record; “no statement found” describes the current research result, not intent.`
+    : isProfileRoute
+      ? "This person is not present in the current public-voices dataset."
+      : "Tracking source-linked public statements by influential figures across major controversies. “No statement found” describes the current research result; it is not proof of support, intent, or permanent silence.";
+
+  const filtered = profile ? [profile] : isProfileRoute ? [] : voices.filter(voiceMatchesFilters);
+  if (!isProfileRoute && voiceState.sort === "name") {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (voiceState.sort === "spoke") {
+  } else if (!isProfileRoute && voiceState.sort === "spoke") {
     filtered.sort((a, b) => b.stances.filter((stance) => stance.position === "spoke-out").length - a.stances.filter((stance) => stance.position === "spoke-out").length || a.name.localeCompare(b.name));
-  } else if (voiceState.sort === "unfound") {
+  } else if (!isProfileRoute && voiceState.sort === "unfound") {
     filtered.sort((a, b) => b.stances.filter((stance) => stance.position === "silent").length - a.stances.filter((stance) => stance.position === "silent").length || a.name.localeCompare(b.name));
   }
   renderVoiceIssueSpotlight();
@@ -172,7 +186,7 @@ function renderVoices() {
   }
 
   if (voicesMeta) {
-    const activeFilterCount = [voiceState.query, voiceState.field !== "all" ? voiceState.field : "", voiceState.stance !== "all" ? voiceState.stance : "", voiceState.issue !== "all" ? voiceState.issue : "", voiceState.sort !== "editorial" ? voiceState.sort : ""].filter(Boolean).length;
+    const activeFilterCount = isProfileRoute ? 0 : [voiceState.query, voiceState.field !== "all" ? voiceState.field : "", voiceState.stance !== "all" ? voiceState.stance : "", voiceState.issue !== "all" ? voiceState.issue : "", voiceState.sort !== "editorial" ? voiceState.sort : ""].filter(Boolean).length;
     if (clearVoiceFiltersButton) clearVoiceFiltersButton.disabled = activeFilterCount === 0;
     voicesMeta.querySelector(".voices-result-count").textContent = `${filtered.length} of ${totalPeople} figures shown${activeFilterCount ? ` · ${activeFilterCount} filter${activeFilterCount === 1 ? "" : "s"} active` : ""}`;
   }
@@ -237,7 +251,7 @@ function renderVoices() {
         <div class="voice-header">
           <div class="voice-avatar">${esc(initials)}</div>
           <div class="voice-id">
-            <h3 class="voice-name">${esc(voice.name)}</h3>
+            <h3 class="voice-name"><a href="/voices/${encodeURIComponent(voice.id)}" data-link${isProfileRoute ? ' aria-current="page"' : ""}>${esc(voice.name)}</a></h3>
             <div class="voice-fields">${fieldChips}</div>
           </div>
         </div>
@@ -254,4 +268,3 @@ function renderVoices() {
     `;
   }).join("");
 }
-
