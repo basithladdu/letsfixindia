@@ -8,6 +8,7 @@
   const toastIcon = document.querySelector("#adminToastIcon");
   const toastMessage = document.querySelector("#adminToastMessage");
   let toastTimer;
+  let submissions = [];
 
   const escapeHtml = (value) => String(value ?? "").replace(/[&<>\"]/g, (char) => ({
     "&": "&amp;",
@@ -34,6 +35,7 @@
     if (!response.ok) {
       const error = new Error(data.error || "Request failed.");
       error.code = data.code || "";
+      error.status = response.status;
       throw error;
     }
     return data;
@@ -58,8 +60,8 @@
     toastTimer = window.setTimeout(() => { toast.hidden = true; }, 3600);
   }
 
-  function render(items) {
-    queue.innerHTML = items.length ? items.map((item) => {
+  function render() {
+    queue.innerHTML = submissions.length ? submissions.map((item) => {
       const data = item.data || {};
       const mediaUrl = trustedMediaUrl(data.secureUrl);
       const media = mediaUrl
@@ -72,13 +74,26 @@
     }).join("") : "<p>No submissions found.</p>";
   }
 
-  async function load() {
+  async function load({ reportError = true } = {}) {
     try {
       const data = await request();
-      render(data.items || []);
-      queueStatus.textContent = `${(data.items || []).length} submissions`;
+      submissions = Array.isArray(data.items) ? data.items : [];
+      render();
+      queueStatus.textContent = `${submissions.length} submissions`;
+      return { ok: true };
     } catch (error) {
-      queueStatus.textContent = serviceMessage(error);
+      if (reportError) queueStatus.textContent = serviceMessage(error);
+      return { ok: false, error };
+    }
+  }
+
+  async function restoreSession() {
+    const result = await load({ reportError: false });
+    if (result.ok) {
+      loginPanel.hidden = true;
+      queuePanel.hidden = false;
+    } else if (result.error.status !== 401) {
+      loginStatus.textContent = serviceMessage(result.error);
     }
   }
 
@@ -103,15 +118,19 @@
     const button = event.target.closest("button[data-id]");
     if (!button || button.disabled) return;
     const nextStatus = button.dataset.status;
+    const id = Number(button.dataset.id);
     const actionLabel = nextStatus === "approved" ? "Approve" : "Reject";
     button.disabled = true;
     button.textContent = nextStatus === "approved" ? "Approving…" : "Rejecting…";
     try {
       await request({
         method: "PATCH",
-        body: JSON.stringify({ id: Number(button.dataset.id), status: nextStatus }),
+        body: JSON.stringify({ id, status: nextStatus }),
       });
-      await load();
+      submissions = submissions.map((item) => Number(item.id) === id
+        ? { ...item, data: { ...(item.data || {}), reviewStatus: nextStatus, reviewedAt: new Date().toISOString() } }
+        : item);
+      render();
       showToast(nextStatus === "approved" ? "Submission approved." : "Submission rejected.");
     } catch (error) {
       const message = serviceMessage(error);
@@ -121,4 +140,6 @@
       button.disabled = false;
     }
   });
+
+  restoreSession();
 })();

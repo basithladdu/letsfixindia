@@ -161,6 +161,7 @@ function ensureRouteContent(route) {
   }
     if (renderedPages.has(route.page)) {
       if (route.page === "gallery") {
+        window.LetsFixIndiaGallery?.refresh();
         requestAnimationFrame(() => route.gallerySubmit
           ? window.LetsFixIndiaGallery?.openUpload()
           : window.LetsFixIndiaGallery?.closeUpload());

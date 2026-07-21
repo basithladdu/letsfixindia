@@ -59,6 +59,9 @@
 
   let config = { ...DEFAULT_CONFIG };
   let approvedItems = [];
+  let staticApprovedItems = [];
+  let liveApprovedItems = [];
+  let liveRefreshTask;
   let dbClient;
   let initialized = false;
   let initialization;
@@ -128,6 +131,28 @@
       console.warn(error.message);
       return fallback;
     }
+  }
+
+  function mergeApprovedItems() {
+    const merged = new Map();
+    [...liveApprovedItems, ...staticApprovedItems].forEach((item, index) => {
+      const key = item?.publicId || item?.secureUrl || item?.url || item?.id || `gallery-item-${index}`;
+      if (!merged.has(key)) merged.set(key, item);
+    });
+    approvedItems = [...merged.values()];
+  }
+
+  async function refreshApprovedItems() {
+    if (liveRefreshTask) return liveRefreshTask;
+    liveRefreshTask = (async () => {
+      const response = await fetch("/api/gallery", { cache: "no-store" });
+      if (!response.ok) throw new Error("Unable to refresh approved gallery media.");
+      const data = await response.json();
+      liveApprovedItems = Array.isArray(data?.items) ? data.items : [];
+      mergeApprovedItems();
+      renderGallery();
+    })().catch((error) => console.warn(error.message)).finally(() => { liveRefreshTask = null; });
+    return liveRefreshTask;
   }
 
   function isConfigured() {
@@ -633,6 +658,9 @@
     document.addEventListener("click", (event) => {
       if (event.target.closest("[data-link]") && !event.target.closest("#galleryUploadModal")) hideModal();
     });
+    window.addEventListener("focus", () => {
+      if (window.location.pathname.startsWith("/gallery")) refreshApprovedItems();
+    });
   }
 
   function populateStates() {
@@ -650,12 +678,15 @@
 
   async function initialize(options = {}) {
     dbClient = options.db;
-    const [configData, galleryData] = await Promise.all([
+    const [configData, galleryData, liveGalleryData] = await Promise.all([
       loadJson("/data/gallery-config.json", {}),
       loadJson("/data/gallery.json", { items: [] }),
+      loadJson("/api/gallery", { items: [] }),
     ]);
     config = { ...DEFAULT_CONFIG, ...(configData || {}) };
-    approvedItems = Array.isArray(galleryData) ? galleryData : Array.isArray(galleryData?.items) ? galleryData.items : [];
+    staticApprovedItems = Array.isArray(galleryData) ? galleryData : Array.isArray(galleryData?.items) ? galleryData.items : [];
+    liveApprovedItems = Array.isArray(liveGalleryData?.items) ? liveGalleryData.items : [];
+    mergeApprovedItems();
     populateStates();
     bindEvents();
     renderConfigurationState();
@@ -681,5 +712,5 @@
     openModal(document.getElementById("galleryUploadOpen"));
   }
 
-  window.LetsFixIndiaGallery = { init, renderRoute, openUpload, closeUpload: hideModal };
+  window.LetsFixIndiaGallery = { init, renderRoute, refresh: refreshApprovedItems, openUpload, closeUpload: hideModal };
 })();
