@@ -3671,5 +3671,209 @@
     "publisher": "Wikipedia",
     "url": "https://en.wikipedia.org/wiki/2026_Delhi_Jantar_Mantar_protests",
     "type": "Encyclopedia lead"
+  },
+  "mediaNdtvCompany2026": {
+    "title": "NDTV - About the Company",
+    "publisher": "New Delhi Television Limited",
+    "url": "https://www.ndtv.com/convergence/ndtv/corporatepage/index.aspx?pfrom=home-ndtv_footer",
+    "type": "Official company disclosure"
+  },
+  "mediaNdtvShareholding2026": {
+    "title": "NDTV Shareholding Pattern as on 30 June 2026",
+    "publisher": "New Delhi Television Limited",
+    "url": "https://www.ndtv.com/convergence/ndtv/corporatepage/Shareholding_pattern.aspx",
+    "type": "Stock-exchange disclosure index"
+  },
+  "mediaNdtvRightsIssue2025": {
+    "title": "NDTV raises Rs 396.49 crore via rights issue to fuel growth",
+    "publisher": "New Delhi Television Limited",
+    "url": "https://www.ndtv.com/india-news/ndtv-raises-rs-396-49-crore-via-rights-issue-to-fuel-growth-9437071",
+    "type": "Official company statement"
+  },
+  "mediaAdaniNdtvAcquisition2022": {
+    "title": "AMG Media Networks Limited to indirectly acquire 29.18% stake in NDTV and launch open offer",
+    "publisher": "Adani Group",
+    "url": "https://www.adani.com/newsroom/media-releases/amg-media-networks-limited-to-indirectly-acquire-2918-stake-in-ndtv-and-launch-open-offer",
+    "type": "Official acquisition announcement"
+  },
+  "mediaAdaniBusinesses2021": {
+    "title": "Adani Group statement describing its listed infrastructure and energy portfolio",
+    "publisher": "Adani Group",
+    "url": "https://www.adani.com/newsroom/media-releases/media-statement-clarification-on-news-article-published-in-the-economic-times",
+    "type": "Official company disclosure"
+  },
+  "mediaRepublicAbout2026": {
+    "title": "About Republic Media Network",
+    "publisher": "Republic Media Network",
+    "url": "https://www.republicworld.com/about-us",
+    "type": "Official company disclosure"
+  },
+  "mediaRepublicOwnership2020": {
+    "title": "Republic Media Network's shareholding made public: Arnab Goswami controls 82% equity",
+    "publisher": "Republic Media Network",
+    "url": "https://www.republicworld.com/business/republic-media-networks-shareholding-public-arnab-goswami-sole-owner",
+    "type": "Owner disclosure"
+  },
+  "mediaRepublicOwnershipPti2020": {
+    "title": "Arnab Goswami personally owns over 82 per cent of Republic TV: company",
+    "publisher": "Press Trust of India via Business Standard",
+    "url": "https://www.business-standard.com/article/pti-stories/arnab-goswami-personally-owns-over-82-pc-of-republic-tv-co-says-clearing-air-around-ownership-120021900958_1.html",
+    "type": "Newswire report"
+  },
+  "mediaRepublicRajeevBoard2018": {
+    "title": "Rajeev Chandrasekhar resigns as board director of Republic TV",
+    "publisher": "Business Standard",
+    "url": "https://www.business-standard.com/article/current-affairs/rajeev-chandrasekhar-resigns-as-board-director-of-republic-tv-118040200517_1.html",
+    "type": "News report"
+  },
+  "mediaRepublicAsianetStake2019": {
+    "title": "Rajeev Chandrasekhar's Asianet pares stake in Arnab Goswami's Republic TV",
+    "publisher": "Business Standard",
+    "url": "https://www.business-standard.com/article/companies/rajeev-chandrasekhar-s-asianet-pares-stake-in-arnab-goswami-s-republic-tv-119050601036_1.html",
+    "type": "News report"
+  },
+  "mediaNetwork18Corporate2026": {
+    "title": "Network18 corporate profile and ownership structure",
+    "publisher": "Network18 Media & Investments Limited",
+    "url": "https://www.nw18.com/corporate-main",
+    "type": "Official company disclosure"
+  },
+  "mediaNetwork18Portfolio2026": {
+    "title": "About Network18 and its media portfolio",
+    "publisher": "Network18 Media & Investments Limited",
+    "url": "https://www.nw18.com/corporate",
+    "type": "Official company disclosure"
+  },
+  "mediaNetwork18AnnualReport2025": {
+    "title": "Network18 Annual Report 2024-25",
+    "publisher": "Network18 Media & Investments Limited via National Stock Exchange of India",
+    "url": "https://nsearchives.nseindia.com/annual_reports/AR_26541_NETWORK18_2024_2025_A_11062025193548.pdf",
+    "type": "Stock-exchange filing"
+  },
+  "mediaNetwork18Merger2024": {
+    "title": "Network18 Q2 FY2024-25 earnings release documenting the TV18 and E18 merger",
+    "publisher": "Network18 Media & Investments Limited",
+    "url": "https://www.nw18.com/reports/reports/Financial-Results/2024-25/NW18InvestorUpdate30092024.pdf",
+    "type": "Official company disclosure"
+  },
+  "mediaRelianceNetwork18Acquisition2014": {
+    "title": "Independent Media Trust completes acquisition of control of Network18",
+    "publisher": "Reliance Industries Limited",
+    "url": "https://www.ril.com/news-media/press-releases/independent-media-trust-completes-acquisition-control-network18",
+    "type": "Official acquisition announcement"
+  },
+  "mediaRelianceBusinesses2026": {
+    "title": "Reliance Industries business portfolio",
+    "publisher": "Reliance Industries Limited",
+    "url": "https://www.ril.com/businesses",
+    "type": "Official company disclosure"
+  },
+  "mediaAdilCbcTerm2025": {
+    "title": "S. Radha Chauhan assumes charge as Chairperson of the Capacity Building Commission",
+    "publisher": "Capacity Building Commission, Government of India",
+    "url": "https://cbc.gov.in/node/720",
+    "type": "Official government record"
+  },
+  "mediaAniOana2026": {
+    "title": "Asian News International member profile",
+    "publisher": "Organization of Asia-Pacific News Agencies",
+    "url": "https://oananews.org/agencies/ANI",
+    "type": "News-agency association record"
+  },
+  "mediaAniSupremeCourt2021": {
+    "title": "Sanjiv Prakash v. Seema Kukreja and others",
+    "publisher": "Supreme Court of India",
+    "url": "https://api.sci.gov.in/supremecourt/2020/23663/23663_2020_33_1502_27307_Judgement_06-Apr-2021.pdf",
+    "type": "Court judgment"
+  },
+  "mediaAniCorporateRecord2024": {
+    "title": "ANI Media Private Limited corporate record",
+    "publisher": "ZaubaCorp, reproducing Ministry of Corporate Affairs records",
+    "url": "https://www.zaubacorp.com/company/ANI-MEDIA-PRIVATE-LIMITED/U74899DL1971PTC005895",
+    "type": "Corporate-registry record"
+  },
+  "mediaPtiAbout2026": {
+    "title": "About PTI and its board of directors",
+    "publisher": "Press Trust of India",
+    "url": "https://www.ptinews.com/about",
+    "type": "Official company disclosure"
+  },
+  "mediaPtiProducts2026": {
+    "title": "PTI English, Hindi, photo and video services",
+    "publisher": "Press Trust of India",
+    "url": "https://www.ptinews.com/products",
+    "type": "Official service disclosure"
+  },
+  "mediaPtiMahendraRajyaSabha2012": {
+    "title": "Rajya Sabha synopsis recording Mahendra Mohan's retirement remarks",
+    "publisher": "Rajya Sabha Secretariat",
+    "url": "https://cms.rajyasabha.nic.in/UploadedFiles/Synopsis/SynopsisUpload/225/21032012.pdf",
+    "type": "Official parliamentary record"
+  },
+  "mediaPtiMahendraMyneta2012": {
+    "title": "Mahendra Mohan Rajya Sabha candidate record",
+    "publisher": "Association for Democratic Reforms / MyNeta",
+    "url": "https://www.myneta.info/rajsab09sec/candidate.php?candidate_id=218",
+    "type": "Election-affidavit record"
+  },
+  "mediaPtiShreyamsParliament2022": {
+    "title": "Parliamentary committee membership listing M. V. Shreyams Kumar and party",
+    "publisher": "Rajya Sabha Secretariat",
+    "url": "https://cms.rajyasabha.nic.in/UploadedFiles/ElectronicPublications/committee_bodies_2022.pdf",
+    "type": "Official parliamentary record"
+  },
+  "mediaPtiShreyamsPrs2022": {
+    "title": "M. V. Shreyams Kumar parliamentary profile",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/mptrack/rajya-sabha/mv-shreyams-kumar",
+    "type": "Parliamentary research record"
+  },
+  "mediaIansAbout2026": {
+    "title": "About IANS and its news services",
+    "publisher": "IANS India Private Limited",
+    "url": "https://www.ians.in/about-us",
+    "type": "Official company disclosure"
+  },
+  "mediaIansAcquisition2023": {
+    "title": "AMG Media Networks acquisition of a 50.50% stake in IANS",
+    "publisher": "Adani Enterprises Limited",
+    "url": "https://www.adanienterprises.com/-/media/Project/Enterprises/Investors/Corporate-Announcement/594-IANS.pdf",
+    "type": "Stock-exchange filing"
+  },
+  "mediaIansFullAcquisition2026": {
+    "title": "Share acquisition completion for IANS and AMG Media",
+    "publisher": "Adani Enterprises Limited",
+    "url": "https://www.adanienterprises.com/investors/corporate-governance/corporate-announcement",
+    "type": "Official stock-exchange announcement index"
+  },
+  "mediaUniAbout2026": {
+    "title": "About United News of India and its multilingual services",
+    "publisher": "United News of India",
+    "url": "https://test.uniindia.com/aboutus.aspx",
+    "type": "Official company disclosure"
+  },
+  "mediaUniShareholding2022": {
+    "title": "United News of India information memorandum and 2022 shareholding",
+    "publisher": "United News of India",
+    "url": "https://www.uniindia.com/pdf/DATA%20ABOUT%20UNITED%20NEWS%20OF%20INDIA%20UPLOADED%20WEBSITE%20-%20ROUND%202%20EOI-%202024%20with%20annexures%20JULY.pdf",
+    "type": "Official corporate document"
+  },
+  "mediaUniResolutionPlan2025": {
+    "title": "Notice of approval of The Statesman resolution plan for UNI",
+    "publisher": "United News of India insolvency professional",
+    "url": "https://www.uniindia.com/pdf/INTIMATION_APPROVAL_OF_RESOLUTION_PLAN_OF_UNI.pdf",
+    "type": "Official insolvency notice"
+  },
+  "mediaUniTakeoverCourt2026": {
+    "title": "United News of India v. Union of India judgment recording The Statesman takeover",
+    "publisher": "Delhi High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/39603394/",
+    "type": "Court judgment mirror"
+  },
+  "mediaUniTakeoverReporting2026": {
+    "title": "How The Statesman acquired United News of India through insolvency",
+    "publisher": "Scroll.in",
+    "url": "https://scroll.in/article/1091549/how-a-loan-from-a-mysterious-lender-helped-a-distressed-newspaper-take-over-uni",
+    "type": "Investigative news report"
   }
 }

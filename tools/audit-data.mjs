@@ -5,6 +5,10 @@ const events = readJson("events.json");
 const indicators = readJson("indicators.json");
 const voices = readJson("voices.json");
 const researchBacklog = readJson("research_backlog.json");
+const mediaGroups = readJson("media-groups.json");
+const mediaOutlets = readJson("media-outlets.json");
+const mediaPeople = readJson("media-people.json");
+const mediaConnections = readJson("media-connections.json");
 const sourceMap = readJson("sources.json");
 const sources = Array.isArray(sourceMap) ? Object.fromEntries(sourceMap.map((source) => [source.id, source])) : sourceMap;
 
@@ -12,6 +16,10 @@ const references = [
   ...events.flatMap((item) => item.sources || []),
   ...indicators.flatMap((item) => item.sources || []),
   ...voices.flatMap((item) => (item.stances || []).flatMap((stance) => stance.sources || []))
+  , ...mediaGroups.flatMap((item) => [...(item.sourceIds || []), ...(item.stake?.sourceIds || []), ...(item.ownershipHistory || []).flatMap((change) => change.sourceIds || [])])
+  , ...mediaOutlets.flatMap((item) => item.sourceIds || [])
+  , ...mediaPeople.flatMap((item) => item.sourceIds || [])
+  , ...mediaConnections.flatMap((item) => item.sourceIds || [])
 ];
 const publicReferenced = new Set(references);
 const backlogReferences = researchBacklog.flatMap((item) => item.sourceKeys || []);

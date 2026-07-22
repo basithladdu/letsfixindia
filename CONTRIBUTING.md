@@ -46,3 +46,11 @@ Run the validator before submitting:
 ```powershell
 npm run validate
 ```
+
+## MediaMap India
+
+Media ownership claims need a current, named source such as a company disclosure,
+stock-exchange filing, regulator record, or attributable reporting. Record the
+verification date and use precise relationship wording. Political records must
+describe a documented formal connection; do not submit claims about editorial
+leaning or a person's presumed party support.

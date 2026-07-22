@@ -1,0 +1,44 @@
+[
+  {
+    "id": "republic-rajeev-chandrasekhar-bjp-2018",
+    "subjectId": "rajeev-chandrasekhar",
+    "subjectType": "person",
+    "connectionType": "party-membership",
+    "party": "Bharatiya Janata Party",
+    "startDate": "2018-04-02",
+    "description": "Rajeev Chandrasekhar resigned from Republic TV's board after becoming a BJP member. At that point his indirect 16.82% holding through Asianet remained; Asianet reduced its stake in May 2019.",
+    "sourceIds": ["mediaRepublicRajeevBoard2018", "mediaRepublicAsianetStake2019"]
+  },
+  {
+    "id": "network18-adil-zainulbhai-cbc-2021-2025",
+    "subjectId": "adil-zainulbhai",
+    "subjectType": "person",
+    "connectionType": "government-appointment",
+    "startDate": "2021-04",
+    "endDate": "2025-08-06",
+    "description": "Network18 board chairman Adil Zainulbhai served as chair of the Government of India's Capacity Building Commission from April 2021 until August 2025. This records a formal government appointment; it is not evidence of party membership or editorial influence.",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaAdilCbcTerm2025"]
+  },
+  {
+    "id": "pti-mahendra-mohan-rajya-sabha-2006-2012",
+    "subjectId": "mahendra-mohan-gupta",
+    "subjectType": "person",
+    "connectionType": "elected-office",
+    "party": "Samajwadi Party",
+    "startDate": "2006-04",
+    "endDate": "2012-04",
+    "description": "PTI board chairman Mahendra Mohan Gupta served in the Rajya Sabha as a Samajwadi Party member from 2006 to 2012. This is a concluded elected role and does not establish PTI's editorial position.",
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiMahendraRajyaSabha2012", "mediaPtiMahendraMyneta2012"]
+  },
+  {
+    "id": "pti-shreyams-kumar-rajya-sabha-2020-2022",
+    "subjectId": "mv-shreyams-kumar",
+    "subjectType": "person",
+    "connectionType": "elected-office",
+    "party": "Loktantrik Janata Dal",
+    "startDate": "2020-08-25",
+    "endDate": "2022-04-02",
+    "description": "PTI board vice chairman M. V. Shreyams Kumar served in the Rajya Sabha as a Loktantrik Janata Dal member from August 2020 to April 2022. This is a concluded elected role and does not establish PTI's editorial position.",
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiShreyamsParliament2022", "mediaPtiShreyamsPrs2022"]
+  }
+]

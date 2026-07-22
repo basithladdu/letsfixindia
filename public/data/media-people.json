@@ -1,0 +1,37 @@
+[
+  {
+    "id": "arnab-goswami",
+    "name": "Arnab Goswami",
+    "role": "Founder, chairman, editor-in-chief and controlling shareholder",
+    "groupIds": ["republic-media-network"],
+    "sourceIds": ["mediaRepublicAbout2026", "mediaRepublicOwnership2020", "mediaRepublicOwnershipPti2020"]
+  },
+  {
+    "id": "rajeev-chandrasekhar",
+    "name": "Rajeev Chandrasekhar",
+    "role": "Former Republic TV director and former indirect investor through Asianet",
+    "groupIds": ["republic-media-network"],
+    "sourceIds": ["mediaRepublicRajeevBoard2018", "mediaRepublicAsianetStake2019"]
+  },
+  {
+    "id": "adil-zainulbhai",
+    "name": "Adil Zainulbhai",
+    "role": "Chairman of the Network18 board; former chair of the Government of India's Capacity Building Commission",
+    "groupIds": ["network18"],
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaAdilCbcTerm2025"]
+  },
+  {
+    "id": "mahendra-mohan-gupta",
+    "name": "Mahendra Mohan Gupta",
+    "role": "Chairman of the PTI board and former Rajya Sabha member",
+    "groupIds": ["press-trust-of-india"],
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiMahendraRajyaSabha2012", "mediaPtiMahendraMyneta2012"]
+  },
+  {
+    "id": "mv-shreyams-kumar",
+    "name": "M. V. Shreyams Kumar",
+    "role": "Vice chairman of the PTI board and former Rajya Sabha member",
+    "groupIds": ["press-trust-of-india"],
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiShreyamsParliament2022", "mediaPtiShreyamsPrs2022"]
+  }
+]

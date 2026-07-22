@@ -15,6 +15,7 @@ export const MARKUP_PARTS = [
   "routes/methodology.html",
   "routes/about.html",
   "routes/voices.html",
+  "routes/media-map.html",
   "routes/faq.html",
   "routes/support.html",
   "routes/partner.html",
@@ -45,6 +46,12 @@ export function writeRuntimeMarkup(workspace) {
     const destination = path.join(workspace, relativePath);
     fs.mkdirSync(path.dirname(destination), { recursive: true });
     fs.writeFileSync(destination, markup, "utf8");
+  }
+  for (const relativeDirectory of ["routes", "shell", "scripts/app", "styles", "gallery"]) {
+    fs.cpSync(path.join(workspace, relativeDirectory), path.join(workspace, "public", relativeDirectory), { recursive: true });
+  }
+  for (const relativePath of ["styles.css", "data/sources.json", "data/media-groups.json", "data/media-outlets.json", "data/media-people.json", "data/media-connections.json"]) {
+    fs.copyFileSync(path.join(workspace, relativePath), path.join(workspace, "public", relativePath));
   }
   return markup;
 }

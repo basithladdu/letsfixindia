@@ -1,0 +1,298 @@
+[
+  {
+    "id": "ndtv-network",
+    "name": "New Delhi Television Limited (NDTV)",
+    "ownership": {
+      "operatingCompany": "New Delhi Television Limited",
+      "parentCompany": "AMG Media Networks Limited",
+      "ultimateParent": "Adani Enterprises Limited",
+      "percentage": "69.02% promoter-group holding after the October 2025 rights issue",
+      "summary": "NDTV describes itself as a subsidiary of AMG Media Networks Limited, an Adani Group company. Its 2025 rights-issue statement reported promoter ownership of 69.02%."
+    },
+    "stake": {
+      "status": "verified-current",
+      "asOf": "2026-06-30",
+      "label": "69.02% promoter-group holding",
+      "sourceIds": ["mediaNdtvShareholding2026", "mediaNdtvRightsIssue2025"],
+      "segments": [
+        { "label": "Promoter group", "percentage": 69.02, "displayValue": "69.02%", "kind": "known" },
+        { "label": "Other shareholders", "percentage": 30.98, "displayValue": "30.98%", "kind": "not-detailed" }
+      ]
+    },
+    "controllerIds": [],
+    "businessInterests": [
+      "Ports and logistics",
+      "Power and renewable energy",
+      "Gas and infrastructure"
+    ],
+    "ownershipHistory": [
+      {
+        "date": "2022-08-23",
+        "title": "AMG Media Networks announced an indirect acquisition and open offer",
+        "summary": "AMG subsidiary VCPL exercised rights to acquire control of RRPR Holding, which held 29.18% of NDTV, and announced an open offer.",
+        "sourceIds": ["mediaAdaniNdtvAcquisition2022"]
+      },
+      {
+        "date": "2025-10-11",
+        "title": "Promoter holding increased after NDTV's rights issue",
+        "summary": "NDTV reported that promoter-group ownership increased from 64.71% to 69.02% after allotment under the rights issue.",
+        "sourceIds": ["mediaNdtvRightsIssue2025"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": [
+      "mediaNdtvCompany2026",
+      "mediaNdtvShareholding2026",
+      "mediaNdtvRightsIssue2025",
+      "mediaAdaniNdtvAcquisition2022",
+      "mediaAdaniBusinesses2021"
+    ]
+  },
+  {
+    "id": "republic-media-network",
+    "name": "Republic Media Network",
+    "ownership": {
+      "operatingCompany": "ARG Outlier Media Private Limited",
+      "parentCompany": "Republic Media Network",
+      "ultimateParent": "Journalist-controlled private group",
+      "percentage": "Over 82% held by Arnab Goswami in the network's February 2020 disclosure",
+      "summary": "Republic currently describes the network as wholly editor-controlled and led by founder Arnab Goswami. Its latest located numerical promoter disclosure, from February 2020, said Goswami held over 82% of ARG Outlier Media."
+    },
+    "stake": {
+      "status": "historical",
+      "asOf": "2020-02-19",
+      "label": "Over 82% held by Arnab Goswami in the latest located numerical disclosure",
+      "sourceIds": ["mediaRepublicOwnership2020", "mediaRepublicOwnershipPti2020"],
+      "segments": [
+        { "label": "Arnab Goswami", "percentage": 82, "displayValue": "More than 82%", "kind": "known-minimum" },
+        { "label": "Other or not detailed", "percentage": 18, "displayValue": "Less than 18%", "kind": "unknown-maximum" }
+      ]
+    },
+    "controllerIds": ["arnab-goswami"],
+    "businessInterests": ["Broadcast news", "Digital news publishing"],
+    "ownershipHistory": [
+      {
+        "date": "2018-04-02",
+        "title": "Rajeev Chandrasekhar resigned from the Republic TV board",
+        "summary": "Chandrasekhar resigned after becoming a BJP member; reporting at the time said his 16.82% indirect holding through Asianet remained unchanged.",
+        "sourceIds": ["mediaRepublicRajeevBoard2018"]
+      },
+      {
+        "date": "2019-05-06",
+        "title": "Asianet reduced its Republic holding through a buyback",
+        "summary": "Asianet reduced its stake as Arnab Goswami bought back shares, leaving Asianet as a minority investor and increasing editor control.",
+        "sourceIds": ["mediaRepublicAsianetStake2019", "mediaRepublicOwnershipPti2020"]
+      },
+      {
+        "date": "2020-02-19",
+        "title": "Republic disclosed Arnab Goswami's controlling stake",
+        "summary": "The network said Goswami held more than 82% of ARG Outlier Media and was its sole promoter and board chairman.",
+        "sourceIds": ["mediaRepublicOwnership2020", "mediaRepublicOwnershipPti2020"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": ["mediaRepublicAbout2026", "mediaRepublicOwnership2020", "mediaRepublicOwnershipPti2020"]
+  },
+  {
+    "id": "network18",
+    "name": "Network18 Media & Investments Limited",
+    "ownership": {
+      "operatingCompany": "Network18 Media & Investments Limited",
+      "parentCompany": "Independent Media Trust and other promoter-group entities",
+      "ultimateParent": "Reliance Industries Limited",
+      "percentage": "56.89% held by Reliance Industries through Independent Media Trust and other entities",
+      "summary": "Network18's current corporate disclosure says Reliance Industries holds 56.89% of the company through Independent Media Trust and other entities. Reliance is the sole beneficiary of Independent Media Trust."
+    },
+    "stake": {
+      "status": "verified-current",
+      "asOf": "2026-07-22",
+      "label": "56.89% held by Reliance Industries through Independent Media Trust and other entities",
+      "sourceIds": ["mediaNetwork18Corporate2026"],
+      "segments": [
+        { "label": "Reliance-linked promoter holding", "percentage": 56.89, "displayValue": "56.89%", "kind": "known" },
+        { "label": "Other shareholders", "percentage": 43.11, "displayValue": "43.11%", "kind": "not-detailed" }
+      ]
+    },
+    "controllerIds": [],
+    "businessInterests": [
+      "Energy, oil and gas",
+      "Petrochemicals and materials",
+      "Retail",
+      "Digital services and telecommunications",
+      "New energy",
+      "Media and entertainment"
+    ],
+    "ownershipHistory": [
+      {
+        "date": "2014-07-07",
+        "title": "Independent Media Trust acquired control of Network18",
+        "summary": "Independent Media Trust, of which Reliance Industries is the sole beneficiary, completed its acquisition of control of Network18 and TV18.",
+        "sourceIds": ["mediaRelianceNetwork18Acquisition2014"]
+      },
+      {
+        "date": "2024-10-03",
+        "title": "TV18 and e-Eighteen merged into Network18",
+        "summary": "The court-approved merger became effective, bringing Network18's television news and digital news businesses into one listed entity.",
+        "sourceIds": ["mediaNetwork18Merger2024", "mediaNetwork18AnnualReport2025"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": [
+      "mediaNetwork18Corporate2026",
+      "mediaNetwork18Portfolio2026",
+      "mediaNetwork18AnnualReport2025",
+      "mediaRelianceBusinesses2026"
+    ]
+  },
+  {
+    "id": "ani-media",
+    "name": "Asian News International (ANI)",
+    "ownership": {
+      "operatingCompany": "ANI Media Private Limited",
+      "parentCompany": "No separate parent company identified",
+      "ultimateParent": "Prakash family and Thomson Reuters",
+      "percentage": "51% Prakash family and 49% Reuters in the latest public shareholding statement located, filed in 2020 litigation",
+      "summary": "ANI is operated by ANI Media Private Limited. The latest public shareholding statement located is in 2020 court proceedings and describes the Prakash family as holding 51% and Reuters as holding 49%; current corporate records list Sanjiv Prakash as managing director."
+    },
+    "stake": {
+      "status": "historical",
+      "asOf": "2020-12",
+      "label": "51% Prakash family and 49% Reuters in the latest public shareholding statement located",
+      "sourceIds": ["mediaAniSupremeCourt2021"],
+      "segments": [
+        { "label": "Prakash family", "percentage": 51, "displayValue": "51%", "kind": "known" },
+        { "label": "Reuters", "percentage": 49, "displayValue": "49%", "kind": "known" }
+      ]
+    },
+    "controllerIds": [],
+    "businessInterests": ["Text and multimedia newswire services", "Syndicated video news"],
+    "ownershipHistory": [
+      {
+        "date": "1971-12-09",
+        "title": "Prem Prakash incorporated the company that became ANI Media",
+        "summary": "The company was incorporated as Asian Films Laboratories Private Limited and renamed ANI Media Private Limited in 1997.",
+        "sourceIds": ["mediaAniSupremeCourt2021"]
+      },
+      {
+        "date": "1996-04-12",
+        "title": "Reuters acquired 49% of the company",
+        "summary": "The Prakash family retained 51% while Reuters acquired 49%, according to the share purchase and shareholder arrangements recorded by the Supreme Court.",
+        "sourceIds": ["mediaAniSupremeCourt2021"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": ["mediaAniOana2026", "mediaAniSupremeCourt2021", "mediaAniCorporateRecord2024"]
+  },
+  {
+    "id": "press-trust-of-india",
+    "name": "Press Trust of India (PTI)",
+    "ownership": {
+      "operatingCompany": "The Press Trust of India Limited",
+      "parentCompany": "No parent company disclosed",
+      "ultimateParent": "Board-governed news agency with directors drawn largely from Indian newspaper publishers",
+      "percentage": "No single controlling percentage disclosed on PTI's current public pages",
+      "summary": "PTI publishes its board rather than identifying a single controlling owner. The current board is composed largely of leaders from major Indian newspaper groups, alongside independent directors."
+    },
+    "stake": {
+      "status": "no-single-owner",
+      "asOf": "2026-07-22",
+      "label": "No single controlling percentage is disclosed on PTI's current public pages",
+      "sourceIds": ["mediaPtiAbout2026"],
+      "segments": []
+    },
+    "controllerIds": [],
+    "businessInterests": ["English and Hindi newswire services", "Photo, graphics and video feeds", "Fact-checking and specialist news feeds"],
+    "ownershipHistory": [
+      {
+        "date": "1947",
+        "title": "Press Trust of India was registered",
+        "summary": "PTI says it was registered in 1947 and began operating in 1949.",
+        "sourceIds": ["mediaPtiAbout2026"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiProducts2026"]
+  },
+  {
+    "id": "ians-india",
+    "name": "IANS India Private Limited",
+    "ownership": {
+      "operatingCompany": "IANS India Private Limited",
+      "parentCompany": "AMG Media Networks Limited",
+      "ultimateParent": "Adani Enterprises Limited",
+      "percentage": "Wholly owned by AMG Media Networks following completion of the balance-stake acquisition in March 2026",
+      "summary": "IANS is a wholly owned subsidiary of AMG Media Networks, the media subsidiary of Adani Enterprises, following completion of the remaining-share acquisition in March 2026."
+    },
+    "stake": {
+      "status": "verified-current",
+      "asOf": "2026-03-25",
+      "label": "Wholly owned by AMG Media Networks",
+      "sourceIds": ["mediaIansFullAcquisition2026"],
+      "segments": [
+        { "label": "AMG Media Networks", "percentage": 100, "displayValue": "100%", "kind": "known" }
+      ]
+    },
+    "controllerIds": [],
+    "businessInterests": ["English and Hindi newswire services", "Multimedia and publishing", "Media consultancy, software and mobile services"],
+    "ownershipHistory": [
+      {
+        "date": "2023-12-15",
+        "title": "AMG Media Networks acquired a majority stake in IANS",
+        "summary": "AMG Media Networks acquired 50.50% of IANS, making it a subsidiary.",
+        "sourceIds": ["mediaIansAcquisition2023"]
+      },
+      {
+        "date": "2026-03-25",
+        "title": "AMG Media Networks completed its acquisition of IANS",
+        "summary": "Adani Enterprises announced completion of the balance-stake acquisition, making IANS a wholly owned step-down subsidiary.",
+        "sourceIds": ["mediaIansFullAcquisition2026"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": ["mediaIansAbout2026", "mediaIansAcquisition2023", "mediaIansFullAcquisition2026", "mediaAdaniBusinesses2021"]
+  },
+  {
+    "id": "united-news-of-india",
+    "name": "United News of India (UNI)",
+    "ownership": {
+      "operatingCompany": "United News of India",
+      "parentCompany": "The Statesman Limited",
+      "ultimateParent": "The Statesman Limited",
+      "percentage": "The Statesman acquired 100% after its insolvency resolution plan was approved and implemented in 2025",
+      "summary": "UNI was historically owned by a group of newspaper shareholders. That structure changed after insolvency proceedings: The Statesman's resolution plan was approved in February 2025 and the takeover was subsequently implemented."
+    },
+    "stake": {
+      "status": "verified-current",
+      "asOf": "2025-06",
+      "label": "100% acquired by The Statesman after the approved insolvency resolution",
+      "sourceIds": ["mediaUniTakeoverCourt2026", "mediaUniTakeoverReporting2026"],
+      "segments": [
+        { "label": "The Statesman", "percentage": 100, "displayValue": "100%", "kind": "known" }
+      ]
+    },
+    "controllerIds": [],
+    "businessInterests": ["English, Hindi, Urdu and Kannada newswire services", "Photo and multimedia news services", "Newspaper publishing through The Statesman"],
+    "ownershipHistory": [
+      {
+        "date": "2022-03-31",
+        "title": "UNI remained owned by multiple newspaper shareholders",
+        "summary": "UNI's published 2022 accounts listed ABP, The Statesman, Express Publications, HT Media, Bennett Coleman and other newspaper interests among its principal shareholders.",
+        "sourceIds": ["mediaUniShareholding2022"]
+      },
+      {
+        "date": "2025-02-12",
+        "title": "NCLT approved The Statesman's resolution plan",
+        "summary": "The National Company Law Tribunal approved The Statesman's plan for UNI; the approval was later upheld on appeal.",
+        "sourceIds": ["mediaUniResolutionPlan2025", "mediaUniTakeoverCourt2026"]
+      },
+      {
+        "date": "2025-06",
+        "title": "The Statesman completed its takeover of UNI",
+        "summary": "The Statesman acquired 100% of UNI after the insolvency resolution, replacing the previous multi-newspaper shareholder structure.",
+        "sourceIds": ["mediaUniTakeoverCourt2026", "mediaUniTakeoverReporting2026"]
+      }
+    ],
+    "lastVerified": "2026-07-22",
+    "sourceIds": ["mediaUniAbout2026", "mediaUniResolutionPlan2025", "mediaUniTakeoverCourt2026", "mediaUniTakeoverReporting2026"]
+  }
+]
