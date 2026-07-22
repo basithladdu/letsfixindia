@@ -2,6 +2,17 @@
 
 All notable user-facing changes to the site.
 
+## 2026-07-22
+
+### Added
+- **Complete state governance histories** — source-backed Chief Minister, government, caretaker, constitutional-gap, Leader of the Opposition, and vacancy records for all 36 Indian states and union territories from 2014 through 22 July 2026.
+- **Accuracy qualifications** — unresolved constitutional boundaries, disputed office recognition, suspended Assembly status, dated party snapshots, and voice-vote results are labelled instead of being presented as invented precision.
+- **About-page release note** — the latest research checkpoint is now visible on the public About page.
+
+### Verification
+- 1,152 registered sources, 266 government intervals, and 233 opposition/vacancy intervals validated.
+- JSON, shell, mirror, gallery, submission, and moderation checks passed.
+
 ## 2026-07-18
 
 ### Added
