@@ -6101,5 +6101,287 @@
     "publisher": "Amar Ujala",
     "url": "https://www.amarujala.com/amp/chandigarh/former-cm-hooda-granted-official-recognition-as-leader-of-the-opposition-haryana-legislative-assembly-secreta-2025-10-03",
     "type": "Assembly-notification report"
+  },
+  "delhiArticle239aaJudgment2018": {
+    "title": "Government of NCT of Delhi v. Union of India, Constitution Bench judgment",
+    "publisher": "Supreme Court of India",
+    "url": "https://api.sci.gov.in/supremecourt/2016/29357/29357_2016_Judgement_04-Jul-2018.pdf",
+    "type": "Official constitutional judgment"
+  },
+  "delhiCurrentLg2026": {
+    "title": "Taranjit Singh Sandhu takes over as Lieutenant Governor of Delhi",
+    "publisher": "Lieutenant Governor Secretariat, Delhi",
+    "url": "https://lg.delhi.gov.in/media/press-release/sardar-taranjit-singh-sandhu-takes-over-new-lt-governor-delhi",
+    "type": "Official administrator oath record"
+  },
+  "delhiKejriwalResignation2014": {
+    "title": "Statement on the 2014 Delhi ministry resignation and Article 239AB action",
+    "publisher": "Ministry of Home Affairs / Press Information Bureau",
+    "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=103767",
+    "type": "Official constitutional statement"
+  },
+  "delhiCeo2013": {
+    "title": "Delhi Legislative Assembly election 2013",
+    "publisher": "Chief Electoral Officer, Delhi",
+    "url": "https://ceodelhi.gov.in/DelhiAssemblyElection2013.aspx",
+    "type": "Official election record"
+  },
+  "delhiMhaDissolution2014": {
+    "title": "Dissolution of the fifth Delhi Legislative Assembly on 4 November 2014",
+    "publisher": "Ministry of Home Affairs",
+    "url": "https://www.mha.gov.in/sites/default/files/SNO_46_762_07032018.PDF",
+    "type": "Official constitutional order"
+  },
+  "delhiMhaRevocation2015": {
+    "title": "Revocation of the Article 239AB order and appointment of the Delhi Chief Minister in 2015",
+    "publisher": "Ministry of Home Affairs",
+    "url": "https://www.mha.gov.in/sites/default/files/SNO_47_763_07032018.PDF",
+    "type": "Official Gazette orders"
+  },
+  "delhiCeo2015": {
+    "title": "Delhi Legislative Assembly election 2015",
+    "publisher": "Chief Electoral Officer, Delhi",
+    "url": "https://ceodelhi.gov.in/DelhiAssemblyElection2015.aspx",
+    "type": "Official election record"
+  },
+  "delhiKejriwalCaretaker2020": {
+    "title": "President continues outgoing Kejriwal ministry until the 2020 successor oath",
+    "publisher": "Business Standard / PTI",
+    "url": "https://www.business-standard.com/article/pti-stories/prez-appoints-kejriwal-as-next-delhi-cm-6-ministers-to-take-oath-120021401713_1.html",
+    "type": "Gazette-order report"
+  },
+  "delhiCeo2020": {
+    "title": "Delhi Legislative Assembly election 2020",
+    "publisher": "Chief Electoral Officer, Delhi",
+    "url": "https://ceodelhi.gov.in/DelhiAssemblyElection2020.aspx",
+    "type": "Official election record"
+  },
+  "delhiKejriwalResignation2024": {
+    "title": "Arvind Kejriwal tenders resignation and Atishi stakes claim",
+    "publisher": "ThePrint / PTI",
+    "url": "https://theprint.in/india/kejriwal-resigns-as-delhi-cm-atishi-stakes-claim-to-form-govt/2271557/",
+    "type": "Contemporaneous constitutional report"
+  },
+  "delhiKejriwalContinuation2024": {
+    "title": "President accepts Kejriwal's resignation and continues him until Atishi's oath",
+    "publisher": "Business Standard / PTI",
+    "url": "https://www.business-standard.com/india-news/president-murmu-appoints-atishi-as-delhi-cm-accepts-kejriwal-s-resignation-124092100025_1.html",
+    "type": "Presidential-order report"
+  },
+  "delhiAtishiOath2024": {
+    "title": "Atishi takes oath as Chief Minister of Delhi",
+    "publisher": "Akashvani / News on AIR",
+    "url": "https://www.newsonair.gov.in/mr/aap-leader-atishi-takes-oath-as-delhi-chief-minister/",
+    "type": "Public-broadcaster oath record"
+  },
+  "delhiAtishiCaretaker2025": {
+    "title": "Acceptance of Atishi ministry's resignation and continuation until successor oath",
+    "publisher": "Gazette of India",
+    "url": "https://egazette.gov.in/WriteReadData/2025/260958.pdf",
+    "type": "Official Gazette notification"
+  },
+  "delhiRekhaAppointment2025": {
+    "title": "Home Ministry monthly record citing Rekha Gupta's presidential appointment",
+    "publisher": "Ministry of Home Affairs",
+    "url": "https://www.mha.gov.in/sites/default/files/2025-03/AchievMonthlyFeb_28032025.pdf",
+    "type": "Official appointment record"
+  },
+  "pibRekhaOath2025": {
+    "title": "Rekha Gupta takes oath as Chief Minister of Delhi",
+    "publisher": "Prime Minister's Office / Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2104935&lang=2&reg=3",
+    "type": "Official oath record"
+  },
+  "delhiCurrentCm2026": {
+    "title": "Current Chief Minister of Delhi",
+    "publisher": "Government of NCT of Delhi",
+    "url": "https://delhi.gov.in/cmo",
+    "type": "Official current-office record"
+  },
+  "delhiCeo2025": {
+    "title": "Delhi Legislative Assembly election 2025",
+    "publisher": "Chief Electoral Officer, Delhi",
+    "url": "https://ceodelhi.gov.in/DelhiLegislativeAssemblyElection2025.aspx",
+    "type": "Official election record"
+  },
+  "delhiAssemblyLopDefinition": {
+    "title": "Delhi Legislative Assembly institutional history and opposition-office description",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/sites/default/files/dlas/pdf/aboutdelhiassembly_1.pdf",
+    "type": "Official legislature institutional record"
+  },
+  "delhiHarshLop2014": {
+    "title": "Delhi Assembly rulings identifying Harsh Vardhan as Leader of the Opposition in 2014",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/sites/default/files/dlas/generic_multiple_files/direction_20230628new.pdf",
+    "type": "Official legislature rulings digest"
+  },
+  "delhiHarshResignation2014": {
+    "title": "Three BJP MLAs, including Harsh Vardhan, resign from the Delhi Assembly",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/3-bjp-mlas-resign-from-assembly/",
+    "type": "Contemporaneous legislature report"
+  },
+  "delhiVijenderLop2015": {
+    "title": "Speaker recognizes Vijender Gupta as Leader of the Opposition from 16 April 2015",
+    "publisher": "Business Standard / IANS",
+    "url": "https://www.business-standard.com/article/news-ians/bjp-s-vijender-gupta-appointed-leader-of-opposition-in-delhi-115041601332_1.html",
+    "type": "Assembly-notification report"
+  },
+  "delhiAssemblyGazetteIndex": {
+    "title": "Delhi Legislative Assembly Gazette notifications",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/dlas-gazette-notifications",
+    "type": "Official legislature notification index"
+  },
+  "delhiBidhuriWhoIsWho": {
+    "title": "Who's Who of the seventh Delhi Legislative Assembly",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/sites/default/files/2023-06/7thassemblywhoswho.pdf",
+    "type": "Official legislature office-holder record"
+  },
+  "delhiBidhuriResignation2024": {
+    "title": "Assembly bulletin recording Ramvir Singh Bidhuri's resignation and Vijender Gupta's appointment",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/sites/default/files/dlas/bulletin/b171.pdf",
+    "type": "Official legislature bulletin"
+  },
+  "delhiCurrentLop2026": {
+    "title": "Delhi Legislative Assembly institutional biography recording Atishi as opposition leader",
+    "publisher": "Delhi Legislative Assembly",
+    "url": "https://delhiassembly.delhi.gov.in/sites/default/files/2025-03/biography_delhi_legislative_assembly.pdf",
+    "type": "Official current-office record"
+  },
+  "ukCmHistory": {
+    "title": "Former Chief Ministers of Uttarakhand",
+    "publisher": "Chief Minister Office, Government of Uttarakhand",
+    "url": "https://cm.uk.gov.in/former-chief-ministers/",
+    "type": "Official office-holder history"
+  },
+  "ukEciAssemblyReports": {
+    "title": "Uttarakhand Legislative Assembly election statistical reports",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/general-election-to-state-legislative-assembly",
+    "type": "Official election results repository"
+  },
+  "ukBahugunaResignation2014": {
+    "title": "Vijay Bahuguna resigns and Harish Rawat is chosen to succeed him",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/india-others/bahuguna-resigns-rawat-set-to-take-over/",
+    "type": "Contemporaneous constitutional report"
+  },
+  "ukHarishOath2014": {
+    "title": "Harish Rawat takes oath as Uttarakhand Chief Minister",
+    "publisher": "Business Standard",
+    "url": "https://www.business-standard.com/article/politics/rawat-becomes-new-cm-of-uttarakhand-114020100810_1.html",
+    "type": "Contemporaneous oath report"
+  },
+  "ukHighCourt2016": {
+    "title": "Harish Chandra Singh Rawat v. Union of India",
+    "publisher": "Uttarakhand High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/140189361/",
+    "type": "High Court judgment mirror"
+  },
+  "ukPresidentRuleGazette2016": {
+    "title": "Parliamentary record of Uttarakhand President's Rule and G.S.R. 499(E) revocation",
+    "publisher": "Lok Sabha Secretariat",
+    "url": "https://eparlib.sansad.in/bitstream/123456789/799407/1/lsb_16_09.pdf",
+    "type": "Official parliamentary and Gazette record"
+  },
+  "ukSupremeCourtFloorTest2016": {
+    "title": "Supreme Court order designing the Uttarakhand confidence vote",
+    "publisher": "Supreme Court Cases Online mirror",
+    "url": "https://www.supremecourtcases.com/union-of-india-v-sh-harish-chandra-singh-rawat-and-anr-4/",
+    "type": "Supreme Court order mirror"
+  },
+  "ukSupremeCourtResult2016": {
+    "title": "Supreme Court order recording the 33-28 Uttarakhand confidence-vote result",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/80989092/",
+    "type": "Supreme Court order mirror"
+  },
+  "ukTrivendraCaretaker2021": {
+    "title": "Governor accepts Trivendra Singh Rawat's resignation and directs continuation",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/10-03-2021-chief-minister-trivendra-singh-rawat-handed-over-resignation-letter-from-chief-minister-after-meeting-with-governor/",
+    "type": "Official constitutional record"
+  },
+  "ukTirathOath2021": {
+    "title": "Tirath Singh Rawat sworn in as Uttarakhand Chief Minister",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/10-03-2021-governor-administered-oath-of-chief-minister-to-shri-tirath-singh-rawat-at-raj-bhavan/",
+    "type": "Official oath record"
+  },
+  "ukTirathResignation2021": {
+    "title": "Tirath Singh Rawat submits his resignation",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/02-07-2021chief-minister-tirath-singh-rawat-submitted-his-resignation-letter-after-meeting-the-governor/",
+    "type": "Official constitutional record"
+  },
+  "ukDhamiOath2021": {
+    "title": "Pushkar Singh Dhami sworn in as Uttarakhand Chief Minister in 2021",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/gallery/04-07-2021governor-administered-oath-of-office-to-shri-pushkar-singh-dhami-as-chief-minister/",
+    "type": "Official oath record"
+  },
+  "ukDhamiResignation2022": {
+    "title": "Pushkar Singh Dhami submits the ministry's resignation after the 2022 election",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/11-03-2022cm-shri-pushkar-singh-dhami-submitted-his-resignation-letter-after-meeting-the-governor/",
+    "type": "Official constitutional record"
+  },
+  "ukDhamiChoice2022": {
+    "title": "BJP legislature party chooses Pushkar Singh Dhami in 2022",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/21-03-2022shri-pushkar-singh-dhami-has-been-elected-as-the-new-leader-of-the-legislature/",
+    "type": "Official government-formation record"
+  },
+  "ukDhamiOath2022": {
+    "title": "Pushkar Singh Dhami takes oath for a second term",
+    "publisher": "Raj Bhavan Uttarakhand",
+    "url": "https://governoruk.gov.in/event/23-03-2022governor-administered-the-oath-of-office-and-secrecy-to-chief-minister-pushkar-singh-dhami/",
+    "type": "Official oath record"
+  },
+  "ukCurrentCm2026": {
+    "title": "Current Chief Minister of Uttarakhand",
+    "publisher": "Chief Minister Office, Government of Uttarakhand",
+    "url": "https://cm.uk.gov.in/about-chief-minister/",
+    "type": "Official current-office record"
+  },
+  "ukAjayBhattLop2012": {
+    "title": "Ajay Bhatt selected as Uttarakhand Leader of the Opposition",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/india/north/story/setback-for-pokhriyal-in-uttarakhand-assembly-102633-2012-05-17",
+    "type": "Contemporaneous legislature report"
+  },
+  "ukIndiraLop2017": {
+    "title": "Indira Hridayesh chosen as Uttarakhand opposition leader",
+    "publisher": "The Tribune",
+    "url": "https://www.tribuneindia.com/news/archive/politics/hridayesh-is-leader-of-opposition-382627/",
+    "type": "Contemporaneous legislature report"
+  },
+  "ukIndiraMemberRecord": {
+    "title": "Indira Hridayesh member record",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/mlatrack/indira-hridayesh",
+    "type": "Legislator record"
+  },
+  "ukPritamLop2021": {
+    "title": "Uttarakhand Congress leadership reorganization naming Pritam Singh legislature-party leader",
+    "publisher": "Outlook",
+    "url": "https://www.outlookindia.com/national/india-news-congress-bets-on-harish-rawat-to-wrest-poll-bound-uttarakhand-from-bjp-news-389115",
+    "type": "Contemporaneous party and legislature report"
+  },
+  "ukCurrentAssembly2026": {
+    "title": "Current Uttarakhand Legislative Assembly leadership",
+    "publisher": "Uttarakhand Legislative Assembly",
+    "url": "https://ukvidhansabha.uk.gov.in/",
+    "type": "Official current-office record"
+  },
+  "ukYashpalLop2022": {
+    "title": "Congress names Yashpal Arya legislature-party leader in April 2022",
+    "publisher": "ThePrint / PTI",
+    "url": "https://theprint.in/india/congress-appoints-karan-mahara-as-uttarakhand-unit-president/910996/",
+    "type": "Contemporaneous party and legislature report"
   }
 }

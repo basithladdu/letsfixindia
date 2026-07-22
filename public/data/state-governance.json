@@ -4622,6 +4622,491 @@
           "sources": ["hrHoodaRecognition2025", "hrCurrentLop2026"]
         }
       ]
+    },
+    "Delhi": {
+      "kind": "union territory",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; minority ministry began 28 December 2013",
+          "to": "2014-02-14",
+          "leader": "Arvind Kejriwal",
+          "office": "Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "AAP minority ministry with outside Congress support",
+          "basis": "AAP had won 28 of 70 seats in the hung 2013 election and formed a minority government with outside support from Congress's eight MLAs. The Council tendered its resignation on 14 February.",
+          "confidence": "High",
+          "sources": ["delhiCeo2013", "delhiKejriwalResignation2014"]
+        },
+        {
+          "from": "2014-02-14",
+          "to": "2014-02-16",
+          "leader": "No replacement elected ministry established",
+          "office": "Resignation-to-proclamation transition",
+          "party": null,
+          "coalition": null,
+          "basis": "The Council tendered resignation on 14 February, the Union Cabinet acted on 15 February, and the Article 239AB order is dated 16 February. No instrument safely establishing a formal caretaker direction for the interval was located.",
+          "confidence": "High sequence; unresolved caretaker instrument",
+          "sources": ["delhiKejriwalResignation2014"]
+        },
+        {
+          "from": "2014-02-16",
+          "to": "2015-02-14",
+          "leader": "Union administration through the Lieutenant Governor",
+          "office": "President's Rule under Article 239AB",
+          "party": null,
+          "coalition": null,
+          "basis": "Delhi had no elected Council of Ministers. The fifth Assembly was initially suspended, dissolved on 4 November 2014, and the Article 239AB order was revoked with effect from 14 February 2015.",
+          "confidence": "High",
+          "sources": ["delhiKejriwalResignation2014", "delhiMhaDissolution2014", "delhiMhaRevocation2015"]
+        },
+        {
+          "from": "2015-02-14",
+          "to": "2020-02-14",
+          "leader": "Arvind Kejriwal",
+          "office": "Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "AAP single-party majority ministry",
+          "basis": "The President appointed Kejriwal with effect from his oath after AAP won 67 of 70 seats.",
+          "confidence": "High",
+          "sources": ["delhiMhaRevocation2015", "delhiCeo2015"]
+        },
+        {
+          "from": "2020-02-14",
+          "to": "2020-02-16",
+          "leader": "Arvind Kejriwal",
+          "office": "Caretaker Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "Outgoing AAP ministry",
+          "basis": "The President accepted the outgoing ministry's resignation and expressly directed Kejriwal to continue until the successor oath.",
+          "confidence": "High",
+          "sources": ["delhiKejriwalCaretaker2020"]
+        },
+        {
+          "from": "2020-02-16",
+          "to": "2024-09-17",
+          "leader": "Arvind Kejriwal",
+          "office": "Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "AAP single-party majority ministry",
+          "basis": "AAP won 62 of 70 seats and Kejriwal took a fresh oath. His March 2024 arrest did not itself remove him from office; he tendered resignation on 17 September.",
+          "confidence": "High",
+          "sources": ["delhiCeo2020", "delhiKejriwalResignation2024"]
+        },
+        {
+          "from": "2024-09-17",
+          "to": "2024-09-21",
+          "leader": "Arvind Kejriwal",
+          "office": "Caretaker Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "Outgoing AAP ministry",
+          "basis": "The President's acceptance of Kejriwal's resignation expressly continued him until Atishi took oath.",
+          "confidence": "High",
+          "sources": ["delhiKejriwalResignation2024", "delhiKejriwalContinuation2024"]
+        },
+        {
+          "from": "2024-09-21",
+          "to": "2025-02-12",
+          "leader": "Atishi",
+          "office": "Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "Existing AAP single-party majority",
+          "basis": "Atishi and five ministers took oath on 21 September within the same Assembly. Her resignation after the 2025 election was accepted on 12 February.",
+          "confidence": "High",
+          "sources": ["delhiAtishiOath2024", "delhiAtishiCaretaker2025"]
+        },
+        {
+          "from": "2025-02-12",
+          "to": "2025-02-20",
+          "leader": "Atishi",
+          "office": "Caretaker Chief Minister",
+          "party": "Aam Aadmi Party",
+          "coalition": "Outgoing AAP ministry",
+          "basis": "The official Gazette accepted the ministry's resignation with immediate effect and ordered Atishi to continue until the new Chief Minister was sworn.",
+          "confidence": "High",
+          "sources": ["delhiAtishiCaretaker2025", "delhiRekhaAppointment2025"]
+        },
+        {
+          "from": "2025-02-20",
+          "to": null,
+          "leader": "Rekha Gupta",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP single-party majority ministry",
+          "basis": "BJP won 48 of 70 seats and Gupta's presidential appointment and oath took effect on 20 February. Delhi remains an NCT under Article 239AA: current Lieutenant Governor and Administrator Taranjit Singh Sandhu, in office from 11 March 2026, is constitutionally distinct from the elected ministry.",
+          "confidence": "High",
+          "sources": ["delhiCeo2025", "delhiRekhaAppointment2025", "pibRekhaOath2025", "delhiCurrentCm2026", "delhiArticle239aaJudgment2018", "delhiCurrentLg2026"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; exact original recognition predates scope",
+          "to": "2014-05-29",
+          "toLabel": "By 29 May 2014; exact resignation-acceptance day unresolved",
+          "leader": "Harsh Vardhan",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "Official Assembly rulings identify Vardhan as LoP in January and February 2014. He became an MP and was among three BJP MLAs reported as having resigned by 29 May, but the exact Secretariat cessation notice was not recovered.",
+          "confidence": "High holder; moderate exact endpoint",
+          "sources": ["delhiHarshLop2014", "delhiHarshResignation2014"]
+        },
+        {
+          "from": "2014-05-30",
+          "fromLabel": "After Harsh Vardhan's resignation; exact first vacant day unresolved",
+          "to": "2014-11-04",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party remained the largest opposition party",
+          "status": "No formally recognized successor located in the suspended fifth Assembly",
+          "basis": "Harsh Vardhan had ceased to be an MLA. No Speaker notification recognizing Jagdish Mukhi as LoP was recovered, so party-political descriptions are not backfilled into the formal office.",
+          "confidence": "High vacancy; moderate opening boundary",
+          "sources": ["delhiHarshResignation2014", "delhiAssemblyLopDefinition", "delhiMhaDissolution2014"]
+        },
+        {
+          "from": "2014-11-05",
+          "to": "2015-02-11",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "Not applicable: no Legislative Assembly",
+          "basis": "The President dissolved the fifth Assembly on 4 November. A new elected House was not constituted until February 2015.",
+          "confidence": "High",
+          "sources": ["delhiMhaDissolution2014", "delhiCeo2015"]
+        },
+        {
+          "from": "2015-02-12",
+          "to": "2015-04-15",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "status": "Formal office vacant in the sixth-Assembly transition",
+          "basis": "BJP held three seats, but the Speaker's formal recognition of Vijender Gupta took effect only on 16 April.",
+          "confidence": "High endpoint; moderate exact House-constitution boundary",
+          "sources": ["delhiCeo2015", "delhiVijenderLop2015"]
+        },
+        {
+          "from": "2015-04-16",
+          "to": "2020-02-11",
+          "leader": "Vijender Gupta",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "The Speaker recognized Gupta with immediate effect despite BJP holding only three of 70 seats. Dissolution of the sixth Assembly ended the tenure.",
+          "confidence": "High",
+          "sources": ["delhiVijenderLop2015", "delhiAssemblyGazetteIndex"]
+        },
+        {
+          "from": "2020-02-12",
+          "to": "2020-02-27",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "status": "Formal office vacant during the seventh-Assembly transition",
+          "basis": "BJP held eight seats, but Ramvir Singh Bidhuri's formal recognition followed only on 28 February.",
+          "confidence": "High",
+          "sources": ["delhiCeo2020", "delhiAssemblyGazetteIndex"]
+        },
+        {
+          "from": "2020-02-28",
+          "to": "2024-06-18",
+          "leader": "Ramvir Singh Bidhuri",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "The Assembly Secretariat notification formally recognized Bidhuri on 28 February 2020. His MLA resignation took effect on 18 June 2024 after his Lok Sabha election.",
+          "confidence": "High",
+          "sources": ["delhiAssemblyGazetteIndex", "delhiBidhuriWhoIsWho", "delhiBidhuriResignation2024"]
+        },
+        {
+          "from": "2024-06-19",
+          "to": "2024-08-06",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "status": "Formal office vacant after Bidhuri's Assembly resignation",
+          "basis": "No successor recognition took effect until the Assembly notification dated 7 August.",
+          "confidence": "High",
+          "sources": ["delhiBidhuriResignation2024", "delhiAssemblyGazetteIndex"]
+        },
+        {
+          "from": "2024-08-07",
+          "to": "2025-02-07",
+          "leader": "Vijender Gupta",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "The official Gazette index records Gupta's recognition notification dated 7 August 2024. Dissolution of the seventh Assembly on 7 February 2025 ended the tenure.",
+          "confidence": "High",
+          "sources": ["delhiAssemblyGazetteIndex", "delhiBidhuriResignation2024"]
+        },
+        {
+          "from": "2025-02-08",
+          "to": "2025-02-26",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Aam Aadmi Party",
+          "status": "No formally recognized holder during the eighth-Assembly transition",
+          "basis": "AAP became the only represented opposition party after the result, but party selection of Atishi was not backdated before the formal notification.",
+          "confidence": "High",
+          "sources": ["delhiCeo2025", "delhiAssemblyGazetteIndex", "delhiCurrentLop2026"]
+        },
+        {
+          "from": "2025-02-27",
+          "to": null,
+          "leader": "Atishi",
+          "office": "Leader of the Opposition",
+          "party": "Aam Aadmi Party",
+          "coalition": null,
+          "basis": "The Assembly Gazette notification dated 27 February 2025 records formal recognition, and the Assembly's current institutional biography continues to identify Atishi as LoP.",
+          "confidence": "High",
+          "sources": ["delhiAssemblyGazetteIndex", "delhiCurrentLop2026"]
+        }
+      ]
+    },
+    "Uttarakhand": {
+      "kind": "state",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; ministry began after the 2012 election",
+          "to": "2014-01-31",
+          "leader": "Vijay Bahuguna",
+          "office": "Chief Minister",
+          "party": "Indian National Congress",
+          "coalition": "INC-led post-poll government supported by smaller parties and Independents",
+          "basis": "The 2012 result was INC 32, BJP 31, BSP three, UKD(P) one and Independents three. Bahuguna resigned during an internal Congress succession on 31 January.",
+          "confidence": "High dates and arithmetic; moderate exact support-bloc composition",
+          "sources": ["ukCmHistory", "ukEciAssemblyReports", "ukBahugunaResignation2014"]
+        },
+        {
+          "from": "2014-02-01",
+          "to": "2016-03-27",
+          "leader": "Harish Singh Rawat",
+          "office": "Chief Minister",
+          "party": "Indian National Congress",
+          "coalition": "INC-led post-poll government",
+          "basis": "Rawat was sworn on 1 February 2014 and remained in office until the Article 356 proclamation displaced his ministry on 27 March 2016.",
+          "confidence": "High",
+          "sources": ["ukHarishOath2014", "ukCmHistory", "ukHighCourt2016"]
+        },
+        {
+          "from": "2016-03-27",
+          "to": "2016-04-20",
+          "leader": "Union administration through the Governor",
+          "office": "President's Rule",
+          "party": null,
+          "coalition": null,
+          "basis": "The President issued the Article 356 proclamation one day before the Governor-directed floor test and kept the Assembly in suspended animation.",
+          "confidence": "High",
+          "sources": ["ukHighCourt2016", "ukPresidentRuleGazette2016"]
+        },
+        {
+          "from": "2016-04-21",
+          "to": "2016-04-22",
+          "leader": "Harish Singh Rawat",
+          "office": "Chief Minister, judicially restored",
+          "party": "Indian National Congress",
+          "coalition": "INC-led government restored by Uttarakhand High Court",
+          "basis": "The High Court quashed the proclamation on 21 April and restored the ministry. The Supreme Court put that judgment in abeyance on 22 April.",
+          "confidence": "High",
+          "sources": ["ukHighCourt2016", "ukCmHistory", "ukSupremeCourtFloorTest2016"]
+        },
+        {
+          "from": "2016-04-22",
+          "to": "2016-05-09",
+          "leader": "Union administration through the Governor",
+          "office": "President's Rule under Supreme Court interim arrangement",
+          "party": null,
+          "coalition": null,
+          "basis": "The Supreme Court kept the High Court restoration in abeyance, so President's Rule became operative again pending the judicially supervised confidence process.",
+          "confidence": "High",
+          "sources": ["ukSupremeCourtFloorTest2016", "ukPresidentRuleGazette2016"]
+        },
+        {
+          "from": "2016-05-10",
+          "to": "2016-05-10",
+          "leader": "Governor remained in charge",
+          "office": "Special Assembly floor-test window",
+          "party": null,
+          "coalition": null,
+          "basis": "The Supreme Court held the proclamation in abeyance only from 10:30 a.m. to 1 p.m. for the confidence vote and expressly left the Governor in charge. Rawat was not temporarily installed as Chief Minister during this window.",
+          "confidence": "High",
+          "sources": ["ukSupremeCourtFloorTest2016"]
+        },
+        {
+          "from": "2016-05-11",
+          "to": "2017-03-18",
+          "leader": "Harish Singh Rawat",
+          "office": "Chief Minister",
+          "party": "Indian National Congress",
+          "coalition": "INC-led government restored after confidence vote and revocation",
+          "basis": "The Supreme Court recorded 33 votes for Rawat and 28 against, and the President revoked the proclamation by G.S.R. 499(E). Only that revocation enabled Rawat to resume office.",
+          "confidence": "High",
+          "sources": ["ukSupremeCourtResult2016", "ukPresidentRuleGazette2016", "ukCmHistory"]
+        },
+        {
+          "from": "2017-03-18",
+          "to": "2021-03-09",
+          "leader": "Trivendra Singh Rawat",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP single-party majority ministry",
+          "basis": "BJP won 57 of 70 seats in 2017 and did not depend on a coalition partner for confidence.",
+          "confidence": "High",
+          "sources": ["ukCmHistory", "ukEciAssemblyReports", "ukTrivendraCaretaker2021"]
+        },
+        {
+          "from": "2021-03-09",
+          "to": "2021-03-10",
+          "leader": "Trivendra Singh Rawat",
+          "office": "Caretaker Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Outgoing BJP ministry",
+          "basis": "The Governor accepted Trivendra's resignation and expressly asked him to continue until his successor assumed office.",
+          "confidence": "High",
+          "sources": ["ukTrivendraCaretaker2021", "ukTirathOath2021"]
+        },
+        {
+          "from": "2021-03-10",
+          "to": "2021-07-02",
+          "leader": "Tirath Singh Rawat",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Existing BJP single-party majority",
+          "basis": "Tirath was sworn during an in-party succession and tendered resignation on 2 July.",
+          "confidence": "High",
+          "sources": ["ukTirathOath2021", "ukTirathResignation2021", "ukCmHistory"]
+        },
+        {
+          "from": "2021-07-02",
+          "to": "2021-07-04",
+          "leader": "Tirath Singh Rawat",
+          "office": "Outgoing Chief Minister / transition continuity",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Outgoing BJP ministry",
+          "basis": "The resignation and successor-oath dates establish continuity through 4 July, but a text-readable Governor direction expressly using caretaker wording was not recovered.",
+          "confidence": "High endpoints; moderate caretaker classification",
+          "sources": ["ukTirathResignation2021", "ukDhamiOath2021", "ukCmHistory"]
+        },
+        {
+          "from": "2021-07-04",
+          "to": "2022-03-11",
+          "leader": "Pushkar Singh Dhami",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Existing BJP single-party majority",
+          "basis": "Dhami was sworn during an in-party succession and led the government into the 2022 election.",
+          "confidence": "High",
+          "sources": ["ukDhamiOath2021", "ukCurrentCm2026", "ukDhamiResignation2022"]
+        },
+        {
+          "from": "2022-03-11",
+          "to": "2022-03-23",
+          "leader": "Pushkar Singh Dhami",
+          "office": "Outgoing Chief Minister / transition continuity",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Outgoing BJP ministry pending renewed formation",
+          "basis": "Dhami resigned after BJP retained its majority and remained in the official tenure chronology until his second oath. The precise continuation attachment was not text-readable, so formal caretaker wording remains qualified.",
+          "confidence": "High sequence; moderate caretaker classification",
+          "sources": ["ukDhamiResignation2022", "ukDhamiChoice2022", "ukDhamiOath2022", "ukCurrentCm2026"]
+        },
+        {
+          "from": "2022-03-23",
+          "to": null,
+          "leader": "Pushkar Singh Dhami",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP single-party majority government",
+          "basis": "The 2022 result was BJP 47, INC 19, BSP two and Independents two. Dhami was sworn for a second tenure on 23 March and remains the current Chief Minister.",
+          "confidence": "High",
+          "sources": ["ukEciAssemblyReports", "ukDhamiOath2022", "ukCurrentCm2026"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; tenure began in 2012",
+          "to": "2017-03-14",
+          "toLabel": "Best-supported close of the third Assembly; exact cessation bulletin not recovered",
+          "leader": "Ajay Bhatt",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "Bhatt was opposition leader through the third Assembly. Suspension during the 2016 President's Rule intervals did not itself dissolve the House or prove de-recognition.",
+          "confidence": "High holder and 2016 continuity; moderate exact endpoint",
+          "sources": ["ukAjayBhattLop2012", "ukHighCourt2016"]
+        },
+        {
+          "from": "2017-03-15",
+          "to": "2017-03-26",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "status": "No formally recognized holder established during the Assembly transition",
+          "basis": "Congress was the largest opposition party, but no recognition before the reported 27 March change was retrieved.",
+          "confidence": "Moderate",
+          "sources": ["ukIndiraLop2017"]
+        },
+        {
+          "from": "2017-03-27",
+          "to": "2021-06-13",
+          "leader": "Indira Hridayesh",
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "coalition": null,
+          "basis": "Contemporaneous reporting identifies Hridayesh as opposition leader after the 2017 defeat. She remained the recognized opposition face until her death, although the exact Speaker recognition bulletin was not recovered.",
+          "confidence": "High holder and endpoint; moderate-high exact start",
+          "sources": ["ukIndiraLop2017", "ukIndiraMemberRecord"]
+        },
+        {
+          "from": "2021-06-14",
+          "to": "2021-07-22",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "status": "Formal office vacant after Indira Hridayesh's death",
+          "basis": "An internal party debate or interim floor role did not establish a formally recognized holder before the later reorganization.",
+          "confidence": "High vacancy cause; moderate-high endpoint",
+          "sources": ["ukIndiraMemberRecord", "ukPritamLop2021"]
+        },
+        {
+          "from": "2021-07-23",
+          "to": "2022-03-11",
+          "leader": "Pritam Singh",
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "coalition": null,
+          "basis": "Congress designated Pritam Singh legislature-party leader and contemporaneous reporting treated him as LoP. The exact Speaker instrument was not recovered, so both day-level boundaries remain qualified.",
+          "confidence": "High holder; moderate exact dates",
+          "sources": ["ukPritamLop2021"]
+        },
+        {
+          "from": "2022-03-12",
+          "to": "2022-04-09",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "status": "No formal recognition demonstrated during the fifth-Assembly transition",
+          "basis": "The new Assembly transition preceded Congress's 10 April announcement. Largest-party status is not backdated into the office.",
+          "confidence": "Moderate",
+          "sources": ["ukYashpalLop2022", "ukCurrentAssembly2026"]
+        },
+        {
+          "from": "2022-04-10",
+          "to": null,
+          "leader": "Yashpal Arya",
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "coalition": null,
+          "basis": "Congress announced Arya as legislature-party leader on 10 April 2022, and the current official Assembly homepage expressly recognizes him as LoP. The missing Speaker bulletin leaves the exact start moderately rather than fully established.",
+          "confidence": "High current formal status; moderate exact start",
+          "sources": ["ukYashpalLop2022", "ukCurrentAssembly2026"]
+        }
+      ]
     }
   }
 }
