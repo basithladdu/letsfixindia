@@ -4,6 +4,9 @@ const eventsPath = './data/events.json';
 const sourcesPath = './data/sources.json';
 const voicesPath = './data/voices.json';
 const indicatorsPath = './data/indicators.json';
+const jurisdictionsPath = './data/event-jurisdictions.json';
+const governancePath = './data/state-governance.json';
+const boundariesPath = './data/india-states.geojson';
 
 let hasErrors = false;
 
@@ -22,6 +25,9 @@ try {
   const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf8'));
   const voices = JSON.parse(fs.readFileSync(voicesPath, 'utf8'));
   const indicators = JSON.parse(fs.readFileSync(indicatorsPath, 'utf8'));
+  const jurisdictions = JSON.parse(fs.readFileSync(jurisdictionsPath, 'utf8'));
+  const governance = JSON.parse(fs.readFileSync(governancePath, 'utf8'));
+  const boundaries = JSON.parse(fs.readFileSync(boundariesPath, 'utf8'));
 
   logSuccess('Successfully parsed all JSON databases.');
 
@@ -71,6 +77,70 @@ try {
     }
   });
   logSuccess(`Validated ${events.length} events successfully.`);
+
+  const boundaryNames = new Set((boundaries.features || []).map((feature) => feature?.properties?.name).filter(Boolean));
+  const eventStates = jurisdictions?.eventStates;
+  if (!eventStates || typeof eventStates !== 'object' || Array.isArray(eventStates)) {
+    logError('event-jurisdictions.json must contain an "eventStates" object.');
+  } else {
+    for (const [eventId, states] of Object.entries(eventStates)) {
+      if (!eventIds.has(eventId)) logError(`Jurisdiction index references unknown event "${eventId}".`);
+      if (!Array.isArray(states) || states.length === 0) {
+        logError(`Jurisdiction index for "${eventId}" must be a non-empty array.`);
+        continue;
+      }
+      for (const state of states) {
+        if (!boundaryNames.has(state)) logError(`Jurisdiction index for "${eventId}" references unknown boundary "${state}".`);
+      }
+    }
+    logSuccess(`Validated ${Object.keys(eventStates).length} state-tagged event mappings successfully.`);
+  }
+
+  const governanceJurisdictions = governance?.jurisdictions;
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  const termDate = /^\d{4}(?:-\d{2}(?:-\d{2})?)?$/;
+  if (!governanceJurisdictions || typeof governanceJurisdictions !== 'object' || Array.isArray(governanceJurisdictions)) {
+    logError('state-governance.json must contain a "jurisdictions" object.');
+  } else {
+    for (const [stateName, record] of Object.entries(governanceJurisdictions)) {
+      const label = `State governance record "${stateName}"`;
+      if (!boundaryNames.has(stateName)) logError(`${label} does not match a map boundary name.`);
+      if (record.kind !== 'state' && record.kind !== 'union territory') logError(`${label} has invalid kind "${record.kind}".`);
+      if (!isoDate.test(record.verifiedAsOf || '')) logError(`${label} requires an ISO verifiedAsOf date.`);
+      for (const [field, allowMissingLeader] of [['governmentTerms', false], ['oppositionTerms', true]]) {
+        const terms = record[field];
+        if (!Array.isArray(terms) || terms.length === 0) {
+          logError(`${label} requires a non-empty ${field} array.`);
+          continue;
+        }
+        if (terms.filter((term) => term.to === null).length !== 1) {
+          logError(`${label} ${field} must contain exactly one current term with to: null.`);
+        }
+        if (terms[0]?.from > '2014-12-31') {
+          logError(`${label} ${field} does not cover the start of the 2014-present period.`);
+        }
+        terms.forEach((term, index) => {
+          const termLabel = `${label} ${field}[${index}]`;
+          if (!termDate.test(term.from || '')) logError(`${termLabel} requires a YYYY, YYYY-MM, or YYYY-MM-DD from value.`);
+          if (term.to !== null && !termDate.test(term.to || '')) logError(`${termLabel} to must be YYYY, YYYY-MM, YYYY-MM-DD, or null.`);
+          if (term.to && term.from && term.to < term.from) logError(`${termLabel} ends before it begins.`);
+          if (!term.office) logError(`${termLabel} is missing office.`);
+          if (!allowMissingLeader && !term.leader) logError(`${termLabel} is missing leader.`);
+          if (allowMissingLeader && !term.leader && !term.status) logError(`${termLabel} requires a leader or an explicit opposition status.`);
+          if (!term.basis) logError(`${termLabel} is missing basis.`);
+          if (!Array.isArray(term.sources) || term.sources.length === 0) {
+            logError(`${termLabel} requires at least one source.`);
+          } else {
+            term.sources.forEach((sourceId) => {
+              if (!sources[sourceId]) logError(`${termLabel} references undefined source ID "${sourceId}".`);
+              else if (!sources[sourceId].url) logError(`${termLabel} source "${sourceId}" has no URL.`);
+            });
+          }
+        });
+      }
+    }
+    logSuccess(`Validated ${Object.keys(governanceJurisdictions).length} state government and opposition records successfully.`);
+  }
 
   // Validate Voices
   const voiceIds = new Set();

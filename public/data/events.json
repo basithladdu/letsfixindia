@@ -4034,5 +4034,1261 @@
       "ndtvModiPressConf2019",
       "scrollModiPressConf2024"
     ]
+  },
+  {
+    "id": "kerala-assembly-vandalism-2015",
+    "year": 2015,
+    "date": "13 March 2015-28 July 2021",
+    "title": "Supreme Court rejects withdrawal of Kerala Assembly vandalism prosecution",
+    "category": "Institutional integrity and political accountability",
+    "actors": [
+      "Kerala legislators",
+      "Government of Kerala",
+      "Kerala Legislative Assembly",
+      "Supreme Court of India"
+    ],
+    "status": "Court-tested",
+    "severity": "Medium",
+    "summary": "During the Kerala Assembly sitting on 13 March 2015, legislators damaged microphones and other House property amid disruption of the budget presentation. The state later sought to withdraw the criminal prosecution, invoking legislative privilege and public interest. In 2021, the Supreme Court held that privileges and immunities do not place alleged destruction of public property outside ordinary criminal law and rejected the withdrawal effort.",
+    "outcome": "The Supreme Court dismissed the appeals on 28 July 2021, leaving the prosecution to proceed on its merits. The judgment did not itself convict the accused legislators.",
+    "sources": [
+      "scKeralaAssemblyAjith2021"
+    ]
+  },
+  {
+    "id": "puttingal-fireworks-disaster-2016",
+    "year": 2016,
+    "date": "10 April 2016",
+    "title": "Puttingal temple fireworks disaster kills 110 people",
+    "category": "Public safety and regulatory failure",
+    "actors": [
+      "Puttingal Devi Temple organisers",
+      "District administration",
+      "Explosives regulators",
+      "Kerala government"
+    ],
+    "status": "Officially investigated",
+    "severity": "Severe",
+    "summary": "An explosion during an unauthorised competitive fireworks display at Puttingal Devi Temple in Kollam district killed 110 people and injured 461, according to the Petroleum and Explosives Safety Organisation's 2016-17 annual report. The disaster exposed failures in licensing, explosives control, crowd safety and enforcement despite restrictions on the display.",
+    "outcome": "PESO investigated the explosives-safety failures and the NHRC issued notice to the Kerala government. The casualty figures use the later PESO record rather than early, changing news totals.",
+    "sources": [
+      "pesoPuttingal2016",
+      "nhrcPuttingal2016"
+    ]
+  },
+  {
+    "id": "kerala-floods-2018",
+    "year": 2018,
+    "date": "August 2018",
+    "title": "Kerala floods trigger statewide recovery and preparedness audit",
+    "category": "Climate disasters and public safety",
+    "actors": [
+      "Kerala government",
+      "State disaster-management authorities",
+      "Local governments",
+      "Affected communities"
+    ],
+    "status": "Officially assessed and audited",
+    "severity": "Severe",
+    "summary": "Exceptionally heavy monsoon rainfall, flooding and landslides caused a statewide humanitarian and infrastructure disaster in August 2018. The post-disaster needs assessment documented extensive damage and recovery requirements across housing, infrastructure, livelihoods and public services. A later CAG performance audit examined preparedness and response and identified material weaknesses in flood-risk planning and institutional readiness.",
+    "outcome": "The disaster produced a formal post-disaster needs assessment, reconstruction programme and CAG audit. The record does not reduce the disaster to a single cause or characterize the flooding as wholly man-made.",
+    "sources": [
+      "undpKeralaFloods2018",
+      "cagKeralaFloods2021"
+    ]
+  },
+  {
+    "id": "wayanad-landslides-2024",
+    "year": 2024,
+    "date": "30 July 2024",
+    "title": "Mundakkai-Chooralmala landslides devastate Wayanad communities",
+    "category": "Climate disasters and public safety",
+    "actors": [
+      "Kerala government",
+      "National and state disaster-response forces",
+      "Local authorities",
+      "Affected communities"
+    ],
+    "status": "Official disaster and recovery process",
+    "severity": "Severe",
+    "summary": "Multiple landslides struck the Mundakkai-Chooralmala area of Meppadi in Wayanad district on 30 July 2024, destroying settlements and triggering a large rescue, relief and recovery operation. Official state and Union reports document mass casualties, displacement, infrastructure loss and the scale of rehabilitation needs, but the public record contains changing counts across reporting dates.",
+    "outcome": "Authorities declared the affected area a disaster zone and began a long-term rehabilitation and township process. This entry avoids combining bodies, body parts and missing-person reports into a false definitive death total.",
+    "sources": [
+      "mhaWayanad2024",
+      "ksdmaWayanadMemo2024"
+    ]
+  },
+  {
+    "id": "larji-barrage-beas-drowning-2014",
+    "year": 2014,
+    "date": "8 June 2014",
+    "title": "Larji barrage release washes away 24 students and a tour conductor",
+    "category": "Infrastructure and public safety",
+    "actors": [
+      "Himachal Pradesh power authorities",
+      "State police",
+      "Tour group faculty",
+      "Himachal Pradesh High Court"
+    ],
+    "status": "Fatal incident; criminal proceedings instituted",
+    "severity": "Severe",
+    "summary": "Twenty-four engineering students and one tour conductor were washed away in the Beas River near Thalout after discharge from the Larji barrage rose rapidly on 8 June 2014. A Union Home Ministry parliamentary answer records the gate opening and flow increase, recovery of the students' bodies and relief measures. The incident exposed failures in dam-release warnings, riverbed access control and public safety.",
+    "outcome": "Police filed a charge-sheet against six power-project officials and three accompanying faculty members. In 2017, the Himachal Pradesh High Court refused to quash proceedings against the faculty members and left the merits for trial; this record does not claim a final conviction.",
+    "sources": [
+      "mhaLarji2014",
+      "hpHighCourtLarji2017"
+    ]
+  },
+  {
+    "id": "kotkhai-custodial-death-2017-2025",
+    "year": 2017,
+    "date": "18 July 2017-18 January 2025",
+    "title": "Kotkhai custodial death leads to convictions of eight police personnel",
+    "category": "Institutional integrity and public safety",
+    "actors": [
+      "Himachal Pradesh Police",
+      "Central Bureau of Investigation",
+      "Himachal Pradesh High Court",
+      "Special CBI Court"
+    ],
+    "status": "Trial convictions; appellate process continuing",
+    "severity": "Severe",
+    "summary": "After police detained suspects in the investigation of a minor's rape and murder in Kotkhai, one detainee, Suraj Singh, died in custody during the night of 18-19 July 2017. The Himachal Pradesh High Court transferred the rape-murder and custodial-death investigations to the CBI. The custodial-death case concerned senior police officers, alleged torture and alleged fabrication of the initial account.",
+    "outcome": "A Special CBI Court in Chandigarh convicted Inspector General Zahur Haider Zaidi and seven other police personnel on 18 January 2025 and acquitted former superintendent of police D. W. Negi. The entry states the trial result without treating it as immune from appeal.",
+    "sources": [
+      "hpHighCourtKotkhai2017",
+      "ieKotkhaiConviction2025"
+    ]
+  },
+  {
+    "id": "hpssc-paper-leak-2022-2023",
+    "year": 2022,
+    "date": "25 December 2022-21 February 2023",
+    "title": "Recruitment paper leak leads Himachal government to abolish HPSSC",
+    "category": "Education governance and public examinations",
+    "actors": [
+      "Himachal Pradesh Staff Selection Commission",
+      "State Vigilance and Anti-Corruption Bureau",
+      "Himachal Pradesh government",
+      "Recruitment candidates"
+    ],
+    "status": "Investigated; commission abolished",
+    "severity": "High",
+    "summary": "A Vigilance investigation uncovered an alleged leak of the Junior Office Assistant (IT) recruitment examination paper scheduled for 25 December 2022. The new state government suspended HPSSC functioning on 26 December. It later said an inquiry found prima facie involvement of officials in multiple leaks, that two Vigilance FIRs had been registered and that an initial charge-sheet had been filed.",
+    "outcome": "On 21 February 2023, the government dissolved HPSSC with immediate effect and transferred pending recruitment functions initially to the Himachal Pradesh Public Service Commission. Investigative allegations are not presented as blanket convictions of commission personnel.",
+    "sources": [
+      "ndtvHpsscLeak2022",
+      "hpGovHpsscAbolition2023"
+    ]
+  },
+  {
+    "id": "himachal-monsoon-disaster-2023",
+    "year": 2023,
+    "date": "1 June-15 September 2023",
+    "title": "Himachal monsoon disaster prompts statewide damage and recovery assessment",
+    "category": "Climate disasters and public safety",
+    "actors": [
+      "Himachal Pradesh government",
+      "State Disaster Management Authority",
+      "District administrations",
+      "Affected communities"
+    ],
+    "status": "Official post-disaster assessment",
+    "severity": "Severe",
+    "summary": "Repeated heavy rainfall, floods, cloudbursts and landslides caused statewide loss of life and extensive damage during the 2023 monsoon. The state disaster authority's post-disaster needs assessment covered social, infrastructure and productive sectors. Its satellite assessment mapped 5,748 landslides across 45.44 square kilometres during the 1 June-15 September study window.",
+    "outcome": "The state published a formal Post-Disaster Needs Assessment to structure recovery, reconstruction and financing. The season-wide record is not presented as a single landslide or a single-day casualty event.",
+    "sources": [
+      "hpsdmaMonsoonPdna2023"
+    ]
+  },
+  {
+    "id": "arunachal-constitutional-crisis-2016",
+    "year": 2016,
+    "date": "9 December 2015-13 July 2016",
+    "title": "Supreme Court reverses Arunachal Pradesh constitutional intervention",
+    "category": "Institutions and constitutional governance",
+    "actors": [
+      "Governor of Arunachal Pradesh",
+      "Arunachal Pradesh Legislative Assembly",
+      "State political parties",
+      "Supreme Court of India"
+    ],
+    "status": "Constitutional actions quashed by Supreme Court",
+    "severity": "High",
+    "summary": "A political and constitutional crisis followed the Governor's 9 December 2015 decision to advance an Assembly session and set its agenda, the removal of the Speaker, imposition of President's Rule and installation of a rival ministry. The dispute reached a Constitution Bench of the Supreme Court.",
+    "outcome": "On 13 July 2016, the Supreme Court quashed the Governor's order and message, set aside consequential steps and restored the status quo ante as it existed before the unconstitutional intervention. Nabam Tuki was briefly restored before resigning on 16 July.",
+    "sources": [
+      "scNabamRebia2016",
+      "arunachalPresidentRule2016"
+    ]
+  },
+  {
+    "id": "tirong-aboh-assassination-2019",
+    "year": 2019,
+    "date": "21 May 2019",
+    "title": "Khonsa ambush kills MLA Tirong Aboh and ten others",
+    "category": "Political violence and public safety",
+    "actors": [
+      "Tirong Aboh",
+      "National Investigation Agency",
+      "Arunachal Pradesh government",
+      "Armed assailants"
+    ],
+    "status": "NIA investigation",
+    "severity": "Severe",
+    "summary": "Arunachal Pradesh MLA Tirong Aboh and ten other people were killed in an armed ambush near Khonsa in Tirap district on 21 May 2019. The attack occurred during the Assembly election period and was treated as a major insurgency-linked political assassination.",
+    "outcome": "The National Investigation Agency registered RC-03/2019/NIA/GUW and took over the investigation. This entry uses the NIA's eleven-person total and does not assign criminal responsibility beyond the agency's public case record.",
+    "sources": [
+      "niaTirongAboh2019",
+      "arunachalGovernorTirong2019"
+    ]
+  },
+  {
+    "id": "appsc-paper-leak-2022",
+    "year": 2022,
+    "date": "26 August 2022-28 August 2025",
+    "title": "APPSC examination paper leak triggers cancellation and CBI investigation",
+    "category": "Education governance and public examinations",
+    "actors": [
+      "Arunachal Pradesh Public Service Commission",
+      "Arunachal Pradesh Police",
+      "Central Bureau of Investigation",
+      "Examination candidates"
+    ],
+    "status": "Investigated; later Supreme Court disciplinary ruling",
+    "severity": "High",
+    "summary": "Questions from the Arunachal Pradesh Public Service Commission's Assistant Engineer examination held on 26-27 August 2022 were allegedly leaked before the examination. A complaint led to a police case, cancellation of the examination and transfer of the investigation to the CBI in October 2022. The scandal raised systemic concerns about recruitment integrity, but liability must be assessed person by person.",
+    "outcome": "In August 2025, the Supreme Court set aside disciplinary action against APPSC member Mepung Tadar Bage because the record did not establish her involvement in the leak. That ruling concerned one official and did not erase the underlying leak investigation.",
+    "sources": [
+      "scAppscLeak2025"
+    ]
+  },
+  {
+    "id": "arunachal-public-works-cbi-inquiry-2026",
+    "year": 2026,
+    "date": "6 April 2026",
+    "title": "Supreme Court orders CBI preliminary enquiry into Arunachal public works",
+    "category": "Procurement and corruption allegations",
+    "actors": [
+      "Arunachal Pradesh government",
+      "Central Bureau of Investigation",
+      "Public-works departments",
+      "Supreme Court of India"
+    ],
+    "status": "Court-ordered preliminary enquiry; no merits finding",
+    "severity": "High",
+    "summary": "The Supreme Court directed the CBI to conduct a preliminary enquiry into allegations concerning the award and execution of public works and contracts in Arunachal Pradesh during the period from 1 January 2015 to 31 December 2025. The order required access to state records and set a reporting timetable.",
+    "outcome": "The Court directed a preliminary-enquiry report within sixteen weeks and expressly avoided deciding the allegations on their merits. The order is therefore recorded as an accountability process, not as a corruption conviction or factual finding against named political figures.",
+    "sources": [
+      "scArunachalContracts2026"
+    ]
+  },
+  {
+    "id": "andaman-aqua-marine-2014",
+    "year": 2014,
+    "date": "26 January 2014",
+    "title": "Aqua Marine tourist-boat sinking kills 22 near Port Blair",
+    "category": "Public safety and transport disaster",
+    "actors": [
+      "Andaman and Nicobar Administration",
+      "Tourist-boat operator",
+      "State police",
+      "Tourists"
+    ],
+    "status": "Fatal incident; investigation and safety audit ordered",
+    "severity": "Severe",
+    "summary": "The private tourist boat MV Aqua Marine sank on the Ross Island-North Bay route near Port Blair while carrying 48 passengers and two crew members. A later Rajya Sabha record reconciled the casualty count at 22 deaths, with 26 passengers and both crew rescued, and reported that the boat was overloaded.",
+    "outcome": "The Administration ordered a magisterial inquiry and safety audit of tourist boats; police registered an FIR and made arrests. The entry uses the later official 22-death count instead of early reports of 21 and does not claim a final conviction.",
+    "sources": [
+      "rajyaSabhaAquaMarine2014"
+    ]
+  },
+  {
+    "id": "andaman-north-sentinel-intrusion-2018",
+    "year": 2018,
+    "date": "November-December 2018",
+    "title": "North Sentinel intrusion prompts tribal-protection review",
+    "category": "Indigenous rights and institutional accountability",
+    "actors": [
+      "Sentinelese community",
+      "Andaman and Nicobar Administration",
+      "Ministry of Home Affairs",
+      "National Commission for Scheduled Tribes"
+    ],
+    "status": "Reported fatal intrusion; official protection review",
+    "severity": "High",
+    "summary": "A US national illegally entered the prohibited North Sentinel tribal reserve and was reported killed. The Ministry of Home Affairs confirmed the reported killing in a parliamentary answer and restated that the island and five kilometres of surrounding coastal sea were closed to outsiders under the territory's tribal-protection regulation.",
+    "outcome": "The National Commission for Scheduled Tribes reviewed how the landing occurred and recommended stronger patrols, public warnings and restoration of permit safeguards for islands inhabited by Particularly Vulnerable Tribal Groups. The body was not recovered in the cited record, so the manner of death is not presented as forensically established.",
+    "sources": [
+      "mhaNorthSentinel2018",
+      "ncstNorthSentinel2018"
+    ]
+  },
+  {
+    "id": "great-nicobar-clearance-ngt-2022-2026",
+    "year": 2022,
+    "date": "27 October 2022-16 February 2026",
+    "title": "NGT leaves Great Nicobar project clearances in place under strict conditions",
+    "category": "Environment, tribal safeguards and strategic infrastructure",
+    "actors": [
+      "ANIIDCO",
+      "Ministry of Environment, Forest and Climate Change",
+      "National Green Tribunal",
+      "Great Nicobar communities"
+    ],
+    "status": "Clearances operative; NGT applications disposed with compliance direction",
+    "severity": "High",
+    "summary": "The integrated Great Nicobar proposal covers a transshipment terminal, township development and a power project. In April 2023, the National Green Tribunal created a high-powered committee to revisit coral impacts, baseline data and coastal-regulation issues and restricted irreversible work while that review occurred.",
+    "outcome": "On 16 February 2026, the NGT held that the committee had addressed the referred issues, found no ground to interfere, disposed of the applications and directed strict compliance with clearance conditions. The order does not establish zero environmental or tribal risk, and applicants' allegations are not treated as proved violations.",
+    "sources": [
+      "ngtGreatNicobar2026"
+    ]
+  },
+  {
+    "id": "andaman-shipping-cag-2024",
+    "year": 2024,
+    "date": "7 June 2024",
+    "title": "CAG finds Rs 22.14 crore revenue loss in Andaman shipping charges",
+    "category": "Institutional accountability, shipping and public finance",
+    "actors": [
+      "Directorate of Shipping Services",
+      "Andaman and Nicobar Administration",
+      "Ministry of Home Affairs",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final CAG audit finding; corrective status not established",
+    "severity": "High",
+    "summary": "CAG concluded that the Directorate of Shipping Services' failure to revise container-freight and related charges caused Rs 22.14 crore in lost revenue. A rate-revision proposal submitted in 2014 went undecided for six years, and a renewed 2021 proposal was still unapproved as of October 2022. The audit also identified non-realisation of auction deposits.",
+    "outcome": "The report recorded that departmental or Ministry replies remained awaited at its cut-off. These are constitutional-auditor findings, not proof of bribery, fraud or personal criminal guilt, and no recovery or disciplinary outcome is inferred.",
+    "sources": [
+      "cagAndamanShipping2024"
+    ]
+  },
+  {
+    "id": "chandigarh-solid-waste-cag-2016",
+    "year": 2016,
+    "date": "12 August 2016",
+    "title": "CAG finds waste-rule failures and unused landfill assets in Chandigarh",
+    "category": "Environment, public health and municipal accountability",
+    "actors": [
+      "Municipal Corporation Chandigarh",
+      "Chandigarh Pollution Control Committee",
+      "Chandigarh Administration",
+      "Comptroller and Auditor General"
+    ],
+    "status": "CAG compliance findings; current remediation not established",
+    "severity": "High",
+    "summary": "CAG found failures to segregate waste, unscientific disposal of biodegradable waste and inadequate monitoring of ambient air and groundwater. It also classified Rs 2.99 crore spent on an unused sanitary landfill and leachate tank as infructuous expenditure and identified contract-supervision failures involving refuse-derived fuel.",
+    "outcome": "The municipal corporation reported in 2016 that air and groundwater testing had begun, but CAG said that did not explain the long prior failure. The historical audit finding is not described as theft, corruption or proof that every defect persisted to 2026.",
+    "sources": [
+      "cagChandigarh2016"
+    ]
+  },
+  {
+    "id": "chandigarh-police-recruitment-accounts-cag-2016",
+    "year": 2016,
+    "date": "October 2013-May 2016",
+    "title": "CAG finds Chandigarh Police recruitment money kept outside government accounts",
+    "category": "Financial governance and institutional accountability",
+    "actors": [
+      "Chandigarh Police",
+      "Chandigarh Administration",
+      "Ministry of Home Affairs",
+      "Comptroller and Auditor General"
+    ],
+    "status": "CAG constitutional and financial-rule finding",
+    "severity": "High",
+    "summary": "CAG found that Chandigarh Police conducted five recruitment exercises without submitting detailed grant demands to Parliament. Application fees were deposited in bank savings accounts and recruitment expenses were paid from them; the audit recorded receipts of about Rs 10.24 crore and expenditure of about Rs 1.25 crore through May 2016.",
+    "outcome": "CAG held that the arrangement bypassed Article 266, parliamentary appropriation and financial rules. The record establishes unauthorized retention and expenditure as an audit finding, not embezzlement, personal enrichment or a criminal conviction.",
+    "sources": [
+      "cagChandigarh2016"
+    ]
+  },
+  {
+    "id": "chandigarh-apartmentalisation-judgment-2023",
+    "year": 2023,
+    "date": "10 January 2023",
+    "title": "Supreme Court restricts Phase I apartmentalisation in Chandigarh",
+    "category": "Urban governance, housing and architectural heritage",
+    "actors": [
+      "Chandigarh Administration",
+      "Chandigarh Heritage Conservation Committee",
+      "Union government",
+      "Supreme Court of India"
+    ],
+    "status": "Binding Supreme Court judgment and interim planning directions",
+    "severity": "High",
+    "summary": "The Supreme Court held that the applicable rules prohibited fragmentation, division, bifurcation or apartmentalisation of residential units in Chandigarh's Phase I. It criticized authorities for sanctioning plans that effectively divided one dwelling into three apartments without adequately addressing heritage, traffic and parking consequences.",
+    "outcome": "The Court required heritage and redensification review, Central approval for relevant planning changes and interim restrictions on disguised floor-wise division and plan sanction. The holding is limited to Phase I and is not presented as a ban on every apartment or co-ownership arrangement across Chandigarh.",
+    "sources": [
+      "scChandigarhApartment2023"
+    ]
+  },
+  {
+    "id": "chandigarh-mayoral-ballot-tampering-2024",
+    "year": 2024,
+    "date": "30 January-20 February 2024",
+    "title": "Supreme Court reverses tampered Chandigarh mayoral result",
+    "category": "Local democracy and institutional integrity",
+    "actors": [
+      "Chandigarh Municipal Corporation",
+      "Presiding Officer Anil Masih",
+      "Kuldeep Kumar",
+      "Supreme Court of India"
+    ],
+    "status": "Declared result quashed and corrected by Supreme Court",
+    "severity": "High",
+    "summary": "After the 30 January 2024 mayoral vote, the presiding officer declared eight ballots invalid. Inspecting the ballots and video, the Supreme Court found that all eight were valid votes for Kuldeep Kumar and that the presiding officer had added marks to create a ground for rejection, altering the declared result.",
+    "outcome": "The Court quashed the result, counted the eight ballots, produced a 20-16 tally and declared Kuldeep Kumar elected Mayor. It also ordered a Section 340 show-cause notice; that notice was not a criminal conviction. This was a municipal election, not a territorial Assembly contest.",
+    "sources": [
+      "scChandigarhMayor2024"
+    ]
+  },
+  {
+    "id": "dnhdd-merger-2020",
+    "year": 2020,
+    "date": "26 January 2020",
+    "title": "Dadra and Nagar Haveli and Daman and Diu merge into one Union Territory",
+    "category": "Merger governance and institutional reorganisation",
+    "actors": [
+      "Parliament of India",
+      "Ministry of Home Affairs",
+      "Dadra and Nagar Haveli Administration",
+      "Daman and Diu Administration"
+    ],
+    "status": "Implemented by Act 44 of 2019",
+    "severity": "Medium",
+    "summary": "Parliament combined the two adjacent Union Territories through Act 44 of 2019. The law provided for continuity and transfer of laws, public employees, assets, liabilities and proceedings while preserving two Lok Sabha seats and Bombay High Court jurisdiction; Daman was designated headquarters through the related administrative process.",
+    "outcome": "The two predecessor territories ceased separately and the merged Union Territory came into existence on 26 January 2020, with Praful Patel appointed Administrator from that date. The merger did not create statehood, a territorial legislature, a Chief Minister or a legislative opposition.",
+    "sources": [
+      "mhaDnhddMergerAct2019",
+      "mhaDnhddPatelAppointment2020"
+    ]
+  },
+  {
+    "id": "dnhdd-road-transport-cag-2026",
+    "year": 2026,
+    "date": "30 March 2026",
+    "title": "CAG identifies transport-enforcement and digital-control gaps in DNHDD",
+    "category": "Road safety, regulatory enforcement and institutional accountability",
+    "actors": [
+      "DNHDD Transport Department",
+      "RTO Daman",
+      "RTO Silvassa",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final CAG audit finding; corrective completion not established",
+    "severity": "High",
+    "summary": "A CAG audit covering 2019-20 through 2023-24 found enforcement and control gaps involving registrations, permits, fitness certificates, fees, motor-vehicle tax, national permits, e-challans, pollution certificates and the VAHAN and SARATHI systems. The report also documented delays in public services and weaknesses in data-led monitoring.",
+    "outcome": "The Department accepted several observations or promised corrective action, but the cited report did not establish complete post-audit closure. The findings are not evidence of corruption, criminal wrongdoing or particular road deaths.",
+    "sources": [
+      "cagDnhdd2025"
+    ]
+  },
+  {
+    "id": "daman-hospital-electricity-penalty-cag-2026",
+    "year": 2026,
+    "date": "March 2018-March 2024; report tabled 30 March 2026",
+    "title": "CAG finds Rs 95.24 lakh avoidable electricity penalties at Daman hospital",
+    "category": "Public-health administration and financial accountability",
+    "actors": [
+      "Government Hospital Daman",
+      "DNHDD Administration",
+      "Ministry of Home Affairs",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final CAG audit finding; official reply awaited at audit cut-off",
+    "severity": "Medium",
+    "summary": "CAG found that Government Hospital, Daman paid Rs 95.24 lakh in avoidable penalties because electricity demand repeatedly exceeded the contracted level and the hospital did not revise that demand in time. The hospital said additional specialists, equipment and patient footfall had increased consumption and that it had begun seeking an enhancement.",
+    "outcome": "CAG maintained that timely contract revision could have avoided the penalties. The audit does not establish embezzlement, bribery, deliberate loss, later recovery or disciplinary action.",
+    "sources": [
+      "cagDnhdd2025"
+    ]
+  },
+  {
+    "id": "damanganga-polluted-river-2025",
+    "year": 2025,
+    "date": "2025 assessment using 2022-2023 monitoring",
+    "title": "CPCB classifies Damanganga stretch as Priority II polluted river",
+    "category": "Environment, river pollution and regulatory performance",
+    "actors": [
+      "Central Pollution Control Board",
+      "DNHDD Administration",
+      "Industrial and municipal dischargers",
+      "River-dependent communities"
+    ],
+    "status": "Official polluted-river classification",
+    "severity": "High",
+    "summary": "CPCB reported monitoring the Damanganga at ten locations across Daman-Diu and Dadra and Nagar Haveli and found that six did not meet the prescribed biochemical-oxygen-demand criterion. It classified the stretch from Vapi Weir to Daman Jetty as a polluted river stretch in Priority Class II.",
+    "outcome": "The assessment establishes non-compliant BOD at monitored locations and the official priority classification. It does not by itself identify a particular polluter, prove a specific health outcome or establish that cleanup was later completed.",
+    "sources": [
+      "cpcbPollutedRivers2025",
+      "pibCpcbPollutedRivers2026"
+    ]
+  },
+  {
+    "id": "meghalaya-coal-mining-judgment-2019",
+    "year": 2019,
+    "date": "17 April 2014-3 July 2019",
+    "title": "Supreme Court clarifies Meghalaya coal-mining law after NGT prohibition",
+    "category": "Environment, mining and public finance",
+    "actors": [
+      "Government of Meghalaya",
+      "National Green Tribunal",
+      "Supreme Court of India",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Legal regime clarified; restoration and enforcement remained continuing issues",
+    "severity": "High",
+    "summary": "After the NGT directed that rat-hole and illegal coal mining stop, the Supreme Court held in 2019 that the central mining law applies in Meghalaya's Sixth Schedule areas. It preserved the prohibition on illegal and unregulated extraction while clarifying that lawful MMDR-compliant leases were not categorically barred.",
+    "outcome": "The Court also directed transfer of Rs 100 crore for environmental restoration. CAG separately found that no coal-mining leases or licences had been issued during 2013-14 to 2017-18 and reported Rs 313.75 crore in unrealised royalty on coal stocks. These are judicial and audit findings, not personal criminal convictions.",
+    "sources": [
+      "scMegCoal2019",
+      "cagMegCoal2019"
+    ]
+  },
+  {
+    "id": "ksan-mine-disaster-2018",
+    "year": 2018,
+    "date": "13 December 2018",
+    "title": "Flooding at illegal Ksan coal mine traps 15 workers",
+    "category": "Worker safety, illegal mining and disaster response",
+    "actors": [
+      "Mine workers",
+      "East Jaintia Hills district authorities",
+      "Government of Meghalaya",
+      "Supreme Court of India"
+    ],
+    "status": "Fatal illegal-mining incident established; complete recovery not established",
+    "severity": "High",
+    "summary": "Water entered a coal mine at Ksan in East Jaintia Hills and trapped 15 workers. The Supreme Court later treated the episode, using committee, FIR and magisterial material, as evidence that illegal coal mining continued after the NGT prohibition.",
+    "outcome": "State and Union records later described all 15 workers as dead. This record does not claim that all bodies were recovered or assign personal criminal guilt beyond the findings of competent proceedings.",
+    "sources": [
+      "scMegCoal2019",
+      "megKsanGov2019"
+    ]
+  },
+  {
+    "id": "mukroh-firing-2022",
+    "year": 2022,
+    "date": "22 November 2022",
+    "title": "Mukroh border-area firing kills six",
+    "category": "Interstate boundary, policing and public safety",
+    "actors": [
+      "Meghalaya residents",
+      "Assam forest personnel",
+      "Government of Meghalaya",
+      "Government of Assam"
+    ],
+    "status": "Six deaths confirmed; responsibility and final boundary position unresolved",
+    "severity": "High",
+    "summary": "A confrontation at Mukroh in the Assam-Meghalaya border area killed five Meghalaya civilians and one Assam forest guard. Meghalaya announced compensation and proposed a central-agency investigation; a judicial commission was also constituted.",
+    "outcome": "The reviewed public record does not finally establish who initiated the confrontation or resolve the competing claims about the exact boundary location. Those questions are not converted into settled findings here.",
+    "sources": [
+      "megMukroh2022"
+    ]
+  },
+  {
+    "id": "meghalaya-illegal-mine-blast-2026",
+    "year": 2026,
+    "date": "5 February 2026",
+    "title": "Mynsngat-Thangsko illegal-mine explosion kills 27",
+    "category": "Illegal mining, worker safety and enforcement",
+    "actors": [
+      "Mine workers",
+      "East Jaintia Hills district authorities",
+      "Government of Meghalaya",
+      "Judicial Commission of Inquiry"
+    ],
+    "status": "State-reported toll; judicial inquiry ongoing at the research cut-off",
+    "severity": "High",
+    "summary": "The Meghalaya government's 9 February operational release reported that an explosion at an illegal coal mine in the Mynsngat-Thangsko area killed 27 people and injured nine. Earlier preliminary figures were lower; the later direct state count controls this entry.",
+    "outcome": "A judicial inquiry headed by retired Justice R. S. Chauhan was still scheduling sittings and a site visit in July 2026. No final cause, individual liability or completed commission finding is asserted.",
+    "sources": [
+      "megMineBlast2026",
+      "megMineInquiry2026"
+    ]
+  },
+  {
+    "id": "mizoram-lottery-cag-2016",
+    "year": 2016,
+    "date": "8 December 2016",
+    "title": "CAG finds exceptionally low state return from Mizoram lotteries",
+    "category": "Public finance, state enterprises and institutional accountability",
+    "actors": [
+      "Government of Mizoram",
+      "Lottery distributors",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final CAG performance-audit findings",
+    "severity": "High",
+    "summary": "For 2012-13 to 2014-15, CAG reported gross ticket sales of Rs 11,834.22 crore. Distributors deposited Rs 25.45 crore as minimum guaranteed revenue and administrative expenses; CAG calculated distributor accrual of Rs 2,182.79 crore while the state received 0.22% of gross sales.",
+    "outcome": "CAG characterized the arrangement as revenue loss and undue benefit to distributors. Those are constitutional-auditor findings and are not relabelled as theft, bribery or a criminal conviction of a named person.",
+    "sources": [
+      "cagMizLottery2016"
+    ]
+  },
+  {
+    "id": "bru-agreements-2018-2020",
+    "year": 2020,
+    "date": "3 July 2018-16 January 2020",
+    "title": "Bru policy shifts from limited repatriation to permanent Tripura settlement",
+    "category": "Displacement, interstate relations and rehabilitation",
+    "actors": [
+      "Government of India",
+      "Government of Mizoram",
+      "Government of Tripura",
+      "Mizoram Bru Displaced People's Forum"
+    ],
+    "status": "Successive agreements signed; later implementation used revised beneficiary totals",
+    "severity": "High",
+    "summary": "A 2018 four-party agreement aimed to repatriate 5,407 Bru families, comprising 32,876 people, from Tripura to Mizoram. After only limited return, a new agreement signed on 16 January 2020 provided permanent settlement in Tripura with land, housing and subsistence support.",
+    "outcome": "The original announcement figures, later verified-beneficiary counts and final eligible-family totals are different dated snapshots. They are not merged into a false single number, and the 2018 plan is not described as fully implemented.",
+    "sources": [
+      "mhaBru2018",
+      "mhaBru2020"
+    ]
+  },
+  {
+    "id": "assam-mizoram-border-clash-2021",
+    "year": 2021,
+    "date": "26 July 2021",
+    "title": "Fatal Assam-Mizoram boundary clash leaves seven dead",
+    "category": "Interstate boundary, policing and federal relations",
+    "actors": [
+      "Assam Police",
+      "Mizoram Police",
+      "Government of Assam",
+      "Government of Mizoram",
+      "Ministry of Home Affairs"
+    ],
+    "status": "Deaths and Union review established; responsibility and boundary claim unresolved",
+    "severity": "High",
+    "summary": "A violent confrontation near the Lailapur-Vairengte sector killed six Assam Police personnel and one civilian and injured more than 50 people. The Union Home Secretary reviewed the situation with both states on 28 July.",
+    "outcome": "The state governments advanced conflicting accounts of first fire and the governing historical boundary. A 2024 joint statement recommitted both to peace and further talks, confirming that the wider dispute was not finally resolved.",
+    "sources": [
+      "mhaMizBorder2021",
+      "mizBorderJoint2024"
+    ]
+  },
+  {
+    "id": "mizoram-disaster-preparedness-cag-2025",
+    "year": 2025,
+    "date": "27 August 2025",
+    "title": "CAG finds major gaps in Mizoram disaster preparedness",
+    "category": "Disaster governance and institutional accountability",
+    "actors": [
+      "Government of Mizoram",
+      "State Disaster Management Authority",
+      "State Executive Committee",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final performance-audit findings tabled; later remediation not established",
+    "severity": "High",
+    "summary": "CAG reported institutional and operational deficiencies including absent development-plan review for risk reduction, no State Advisory Committee meetings from 2017-18 through 2021-22, missing hazard-specific procedures, no automated landslide-monitoring system and no dedicated State Disaster Response Force battalion.",
+    "outcome": "The audit covers historical periods spanning more than one ministry; it is not attributed solely to the government that tabled the report. The findings do not themselves establish personal criminal misconduct or that every deficiency persisted in July 2026.",
+    "sources": [
+      "cagMizDisaster2025"
+    ]
+  },
+  {
+    "id": "nagaland-ulb-women-reservation-2024",
+    "year": 2024,
+    "date": "26 June-23 July 2024",
+    "title": "Nagaland completes urban local-body election with women's reservation",
+    "category": "Local democracy, women's representation and constitutional compliance",
+    "actors": [
+      "Government of Nagaland",
+      "Nagaland State Election Commission",
+      "Urban local bodies",
+      "Supreme Court of India"
+    ],
+    "status": "Election completed in participating bodies; 14 Eastern Nagaland councils did not participate",
+    "severity": "High",
+    "summary": "After prolonged litigation and roughly two decades without urban local-body elections, Nagaland filled 278 wards in 25 participating bodies. The state compliance record accepted by the Supreme Court reported 103 women elected from 198 women candidates.",
+    "outcome": "Fourteen town councils in Eastern Nagaland did not participate. The completed election therefore did not cover every urban local body and did not by itself resolve the political dispute behind the non-participation.",
+    "sources": [
+      "scNagUlb2024",
+      "nagGovernorUlb2025"
+    ]
+  },
+  {
+    "id": "oting-mon-killings-2021",
+    "year": 2021,
+    "date": "4-5 December 2021",
+    "title": "Oting and Mon security operation kills 14 civilians",
+    "category": "Civilian deaths, security operations and accountability",
+    "actors": [
+      "Civilian residents",
+      "Indian Army personnel",
+      "Nagaland Police Special Investigation Team",
+      "Union government",
+      "Supreme Court of India"
+    ],
+    "status": "State criminal proceedings closed for want of AFSPA sanction, subject to possible revival",
+    "severity": "High",
+    "summary": "An Army operation and its aftermath near Oting and Tiru killed 13 civilians on 4 December; another civilian died in Mon town on 5 December. Nagaland's Assembly also recorded 35 civilians injured. The state SIT later charge-sheeted 30 personnel and awaited central prosecution sanction.",
+    "outcome": "The Supreme Court recorded that sanction had been rejected and closed the proceedings arising from the FIRs, while permitting revival if sanction is later granted. The judgment did not decide the truth of the allegations or acquit personnel on the criminal merits.",
+    "sources": [
+      "nagAssemblyOting2021",
+      "nagDgpOting2022",
+      "scOting2024"
+    ]
+  },
+  {
+    "id": "nagaland-afspa-coverage-2022-2026",
+    "year": 2026,
+    "date": "1 April 2022-1 April 2026",
+    "title": "AFSPA coverage is reduced in phases but remains in specified Nagaland areas",
+    "category": "Security law and civil administration",
+    "actors": [
+      "Ministry of Home Affairs",
+      "Government of Nagaland",
+      "Police-station and district administrations"
+    ],
+    "status": "Partial territorial withdrawal; specified coverage continued at the research cut-off",
+    "severity": "High",
+    "summary": "The Union government withdrew disturbed-area coverage from 15 police-station areas effective April 2022 and three more effective April 2023. The March 2026 notification continued AFSPA for six months from 1 April across specified whole districts and named police-station jurisdictions.",
+    "outcome": "The policy is accurately described as phased territorial reduction, not statewide repeal. Nor did the 2026 notice apply to every part of Nagaland; its listed geographic scope controls.",
+    "sources": [
+      "pibNagAfspa2022",
+      "pibNagAfspa2023",
+      "mhaNagAfspa2026"
+    ]
+  },
+  {
+    "id": "nagaland-first-women-mlas-2023",
+    "year": 2023,
+    "date": "2-20 March 2023",
+    "title": "Nagaland elects its first women MLAs",
+    "category": "Political representation and gender",
+    "actors": [
+      "Salhoutuonuo Kruse",
+      "Hekani Jakhalu",
+      "Nagaland Legislative Assembly",
+      "Government of Nagaland"
+    ],
+    "status": "Historic representation milestone completed",
+    "severity": "Medium",
+    "summary": "Salhoutuonuo Kruse and Hekani Jakhalu became the first women elected to the Nagaland Legislative Assembly and took the oath on 20 March 2023. Kruse also entered the Council of Ministers as the state's first woman minister.",
+    "outcome": "The record is limited to these Assembly and ministerial firsts. It does not erase earlier public or parliamentary service by Nagaland women or prove broader gender parity in state institutions.",
+    "sources": [
+      "nagWomenOath2023"
+    ]
+  },
+  {
+    "id": "sikkim-organic-state-2016",
+    "year": 2016,
+    "date": "2015-18 January 2016",
+    "title": "Sikkim becomes India's first fully organic state",
+    "category": "Agriculture, environment and state policy",
+    "actors": [
+      "Government of Sikkim",
+      "Sikkim farmers",
+      "Government of India"
+    ],
+    "status": "Statewide agricultural certification transition implemented and officially recognized",
+    "severity": "Medium",
+    "summary": "A Government of India account states that Sikkim's entire agricultural area had been converted to certified organic in 2015 and that the state was formally declared India's first 100% organic state in 2016. The milestone was publicly marked at the Sikkim Organic Festival on 18 January.",
+    "outcome": "The claim concerns certified agricultural area and the state policy transition. It does not mean that every product sold in Sikkim was organic or that certification eliminated every compliance problem.",
+    "sources": [
+      "pibSikOrganic2023",
+      "pibSikOrganic2016"
+    ]
+  },
+  {
+    "id": "pakyong-airport-2018",
+    "year": 2018,
+    "date": "24 September 2018",
+    "title": "Pakyong opens as Sikkim's first airport",
+    "category": "Transport and regional connectivity",
+    "actors": [
+      "Airports Authority of India",
+      "Government of Sikkim",
+      "Ministry of Civil Aviation"
+    ],
+    "status": "Infrastructure inaugurated",
+    "severity": "Medium",
+    "summary": "The Prime Minister inaugurated Pakyong Airport, identified in the official release as Sikkim's first airport and India's 100th airport under the UDAN regional-connectivity programme.",
+    "outcome": "The inauguration created aviation infrastructure within Sikkim. It is not represented as proof of continuously uninterrupted commercial service, which later depended on weather and operating conditions.",
+    "sources": [
+      "pibPakyong2018"
+    ]
+  },
+  {
+    "id": "sikkim-tax-identity-judgment-2023",
+    "year": 2023,
+    "date": "13 January-8 February 2023",
+    "title": "Supreme Court expands Sikkim tax exemption and deletes disputed identity remarks",
+    "category": "Rights, identity, taxation and constitutional law",
+    "actors": [
+      "Supreme Court of India",
+      "Old Indian settlers in Sikkim",
+      "Sikkimese women",
+      "Union government"
+    ],
+    "status": "Final judgment as corrected on review",
+    "severity": "High",
+    "summary": "The Court held that excluding old Indian settlers domiciled in Sikkim before the 1975 merger from the Section 10(26AAA) exemption was discriminatory. It also struck down the proviso denying the exemption to a Sikkimese woman who married a non-Sikkimese after 1 April 2008.",
+    "outcome": "After objections to language describing Sikkimese Nepalis, the Court deleted the disputed sentence and phrases on 8 February and clarified that Article 371F's validity or interpretation was not before it. The corrected record governs this entry.",
+    "sources": [
+      "scSikTax2023",
+      "scSikTaxCorrected2023"
+    ]
+  },
+  {
+    "id": "south-lhonak-glof-2023",
+    "year": 2023,
+    "date": "Night of 3-4 October 2023",
+    "title": "South Lhonak glacial-lake outburst devastates the Teesta valley",
+    "category": "Disaster, climate risk and critical infrastructure",
+    "actors": [
+      "Sikkim residents",
+      "Government of Sikkim",
+      "Central Water Commission",
+      "Disaster-response agencies"
+    ],
+    "status": "Disaster established; reconstruction and GLOF mitigation continuing",
+    "severity": "High",
+    "summary": "A glacial-lake outburst at South Lhonak sent a destructive flood down the Teesta, causing deaths and disappearances and damaging homes, roads, bridges and hydropower infrastructure, including the Teesta-III dam at Chungthang.",
+    "outcome": "Official casualty snapshots changed rapidly during rescue operations, so this entry does not manufacture a single final death-and-missing total. Later official records consistently identify a South Lhonak GLOF rather than treating early cloudburst wording as the settled cause.",
+    "sources": [
+      "pibSikGlof2023",
+      "cwcSik2024"
+    ]
+  },
+  {
+    "id": "tripura-teacher-selection-2014-2020",
+    "year": 2014,
+    "date": "7 May 2014-5 August 2020",
+    "title": "Courts invalidate Tripura's 10,323-teacher selection process",
+    "category": "Public employment, education and judicial accountability",
+    "actors": [
+      "Government of Tripura",
+      "Affected teachers",
+      "Tripura High Court",
+      "Supreme Court of India"
+    ],
+    "status": "Appointments judicially invalidated; later employment consequences litigated",
+    "severity": "High",
+    "summary": "The Tripura High Court set aside the challenged employment-policy provisions and the teacher selection, finding the process neither fair nor transparent. Later Supreme Court litigation recorded that the appointments of about 10,323 teachers had already been decided and that 8,882 ad hoc teachers remained at the end of the 2019-20 academic session before termination.",
+    "outcome": "The Supreme Court preserved age relaxation for specified later recruitment exercises. The judgments address the policy and selection process; they do not establish that every affected teacher committed fraud, was personally culpable or was individually unqualified.",
+    "sources": [
+      "triHighCourtTeachers2014",
+      "scTriTeachers2020"
+    ]
+  },
+  {
+    "id": "tripura-public-hospitals-cag-2022",
+    "year": 2022,
+    "date": "17 March 2022",
+    "title": "CAG finds systemic gaps in selected Tripura public hospitals",
+    "category": "Public health and institutional accountability",
+    "actors": [
+      "Health and Family Welfare Department, Tripura",
+      "GB Pant Hospital",
+      "Dhalai District Hospital",
+      "Unakoti District Hospital",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final performance-audit findings tabled; later remediation not established",
+    "severity": "High",
+    "summary": "For 2014-15 to 2018-19, CAG reported low availability of essential medicines, 139% bed occupancy at GB Pant Hospital, referral and leave-against-medical-advice pressures at sampled district hospitals, open biomedical-waste disposal and ambulances lacking basic life-support equipment.",
+    "outcome": "CAG concluded that the audited district hospitals could not provide quality care for serious or major diseases, pushing patients toward the state hospital. The findings describe the audited period and sample; they are not criminal-guilt findings or a July 2026 snapshot of every facility.",
+    "sources": [
+      "cagTriHealth2021"
+    ]
+  },
+  {
+    "id": "tripura-floods-2024",
+    "year": 2024,
+    "date": "August 2024-19 February 2025",
+    "title": "Statewide Tripura floods and landslides kill 36",
+    "category": "Disaster, agriculture, housing and relief finance",
+    "actors": [
+      "Tripura residents",
+      "Government of Tripura",
+      "Ministry of Home Affairs",
+      "Disaster-response agencies"
+    ],
+    "status": "Later official scale established; additional central assistance approved",
+    "severity": "High",
+    "summary": "After the entire state was declared a natural-calamity affected area, the later Union parliamentary assessment recorded 36 deaths, 3,584 cattle lost, 34,773 houses affected and 0.59 lakh hectares of cropped area affected.",
+    "outcome": "Tripura sought Rs 7,080.55 crore, while the Union High-Level Committee later approved Rs 288.93 crore in additional NDRF assistance subject to the stated SDRF-balance adjustment. The request, assessed losses and approved assistance are not the same figure.",
+    "sources": [
+      "triFlood2024",
+      "mhaTriFlood2024",
+      "pibTriRelief2025"
+    ]
+  },
+  {
+    "id": "lakshadweep-waste-ngt-2019",
+    "year": 2019,
+    "date": "14 May 2019",
+    "title": "NGT finds major gaps in Lakshadweep waste compliance",
+    "category": "Environment, waste management and institutional compliance",
+    "actors": [
+      "Lakshadweep Administration",
+      "National Green Tribunal",
+      "Island local administrations"
+    ],
+    "status": "Tribunal findings and remedial directions; later complete compliance not established",
+    "severity": "High",
+    "summary": "In the Lakshadweep portion of the national solid-waste proceeding, the NGT found that required Solid Waste Management Rules steps were incomplete and that action on plastic and biomedical waste was inadequate, leaving a major gap between the measures taken and legal requirements.",
+    "outcome": "The Tribunal directed personal monthly monitoring, a six-month compliance effort, periodic reporting, environmental-restoration valuation, performance audit and a monitoring cell. Continued filings prove ongoing oversight, not that every deficiency either persisted unchanged or was fully cured.",
+    "sources": [
+      "ngtLakWaste2019"
+    ]
+  },
+  {
+    "id": "lakshadweep-panchayat-special-officers-2022-2026",
+    "year": 2022,
+    "date": "2022-18 July 2026",
+    "title": "New Lakshadweep panchayat regime operates through Special Officers",
+    "category": "Local democracy, panchayats and litigation",
+    "actors": [
+      "Lakshadweep Administration",
+      "Dweep Panchayats",
+      "District Panchayat",
+      "Kerala High Court"
+    ],
+    "status": "New regulation in force; general election blocked and bodies administered by appointed officers at cut-off",
+    "severity": "High",
+    "summary": "The Lakshadweep Panchayat Regulation, 2022 replaced the 1994 regime and ten Dweep Panchayats plus one District Panchayat were notified. The Administration's July 2026 page says a pending Kerala High Court case prevented a general election and that Special Officers were administering the bodies.",
+    "outcome": "This is the Administration's official current explanation and operating status. It does not establish that elections were permanently abolished or adjudicate the merits and responsibility in the pending litigation.",
+    "sources": [
+      "lakPanchayat2026"
+    ]
+  },
+  {
+    "id": "lakshadweep-desalination-expansion-2022-2026",
+    "year": 2026,
+    "date": "21 July 2022-6 March 2026",
+    "title": "Low-temperature thermal desalination expands to eight Lakshadweep islands",
+    "category": "Drinking water, island infrastructure and technology",
+    "actors": [
+      "Lakshadweep Administration",
+      "Ministry of Earth Sciences",
+      "National Institute of Ocean Technology",
+      "Island residents"
+    ],
+    "status": "Eight named island plants reported operational by March 2026",
+    "severity": "Medium",
+    "summary": "Union records traced expansion from demonstration plants at Kavaratti, Agatti and Minicoy to additional systems. By March 2026, operational plants were reported on Kavaratti, Minicoy, Agatti, Amini, Kalpeni, Kadmat, Chetlat and Kiltan.",
+    "outcome": "The record supports eight operational islands, not all ten inhabited islands. Androth was not in the cited operational list, and proposed ocean-thermal-energy projects are not counted as commissioned desalination capacity.",
+    "sources": [
+      "pibLakLttd2026"
+    ]
+  },
+  {
+    "id": "lakshadweep-ofc-solar-2024",
+    "year": 2024,
+    "date": "3 January 2024",
+    "title": "Submarine fibre and solar-storage systems are dedicated in Lakshadweep",
+    "category": "Digital connectivity, energy and island infrastructure",
+    "actors": [
+      "Department of Telecommunications",
+      "Lakshadweep Administration",
+      "Energy authorities",
+      "Island residents"
+    ],
+    "status": "Commissioned infrastructure with later telecom status reporting",
+    "severity": "Medium",
+    "summary": "The Kochi-Lakshadweep Islands submarine optical-fibre project connected 11 islands and official material reported bandwidth increasing from 1.7 Gbps to 200 Gbps. Kavaratti and Agatti solar-storage installations together were reported at 1.7 MW of solar capacity and 1.4 MWh of battery storage.",
+    "outcome": "The project assets were dedicated on 3 January 2024. Conflicting official estimates of the fibre route length are omitted, and forecast diesel, financial and emissions savings are not presented as measured outcomes.",
+    "sources": [
+      "pibLakOfc2024",
+      "dotLakOfc2024",
+      "pibLakSolar2024"
+    ]
+  },
+  {
+    "id": "puducherry-nominated-mlas-judgment-2018",
+    "year": 2018,
+    "date": "6 December 2018",
+    "title": "Supreme Court upholds central nomination power and full voting rights",
+    "category": "Constitutional governance and legislative representation",
+    "actors": [
+      "Union government",
+      "Government of Puducherry",
+      "Nominated Assembly members",
+      "Supreme Court of India"
+    ],
+    "status": "Binding Supreme Court judgment",
+    "severity": "High",
+    "summary": "The Supreme Court held that nomination of Puducherry Assembly members under the Government of Union Territories Act is Central Government business and did not legally require consultation with the local Council of Ministers. It also held that nominated members may vote on all Assembly questions.",
+    "outcome": "The ruling covers budget and no-confidence votes as well as ordinary questions. Nominated members remain nominated, not elected, and the Court's legal-authority ruling did not make a finding about the political neutrality of the selections.",
+    "sources": [
+      "scPudNominations2018"
+    ]
+  },
+  {
+    "id": "puducherry-president-rule-2021",
+    "year": 2021,
+    "date": "22 February-7 May 2021",
+    "title": "Puducherry ministry falls, central rule follows, and elected government returns",
+    "category": "Constitutional governance, confidence and elections",
+    "actors": [
+      "V. Narayanasamy ministry",
+      "Puducherry Legislative Assembly",
+      "President of India",
+      "N. Rangasamy ministry"
+    ],
+    "status": "Constitutional transition completed",
+    "severity": "High",
+    "summary": "After resignations and a prior disqualification reduced the government side, the Speaker declared the 22 February confidence motion lost and Narayanasamy's resignation was accepted effective that day. President's Rule began on 25 February, followed by an election and Rangasamy's oath on 7 May.",
+    "outcome": "AINRC won ten elected seats and BJP six, giving the incoming coalition a 16-of-30 elected majority. The three nominated members were appointed on 10 May, after the ministry formed, and are not used to manufacture the initial majority.",
+    "sources": [
+      "pudGazetteFeb2021",
+      "pudGazetteMay2021",
+      "pudCeoReports"
+    ]
+  },
+  {
+    "id": "puducherry-water-cag-2023",
+    "year": 2023,
+    "date": "23 March 2023",
+    "title": "CAG finds systemic deficiencies in Puducherry urban water supply",
+    "category": "Drinking water, urban services and institutional accountability",
+    "actors": [
+      "Public Works Department, Puducherry",
+      "Local planning authorities",
+      "Water consumers",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final compliance-audit findings tabled; later remediation not established",
+    "severity": "High",
+    "summary": "CAG found no comprehensive water-supply plan, avoidable delay across all 14 sampled works, inadequate rainwater-harvesting enforcement, non-cleaning and non-chlorination concerns, high TDS and chloride, and Rs 49.44 crore in water-charge arrears whose age profile was not known to the department.",
+    "outcome": "The audit also recorded an undue benefit to a purified-water contractor. That phrase is CAG's audit conclusion; it is not converted into a judicial corruption finding or criminal conviction.",
+    "sources": [
+      "cagPudWater2022"
+    ]
+  },
+  {
+    "id": "puducherry-cyclone-fengal-2024",
+    "year": 2024,
+    "date": "30 November-1 December 2024",
+    "title": "Cyclone Fengal makes landfall near Puducherry amid record rainfall",
+    "category": "Cyclone, extreme rainfall and urban flooding",
+    "actors": [
+      "Puducherry residents",
+      "Government of Puducherry",
+      "India Meteorological Department",
+      "Ministry of Home Affairs"
+    ],
+    "status": "Landfall and extreme rainfall established; final impact total not asserted",
+    "severity": "High",
+    "summary": "Cyclone Fengal crossed the north Tamil Nadu-Puducherry coast close to Puducherry late on 30 November. MHA recorded 490 mm of rain in 24 hours at Puducherry, while IMD's monsoon report lists 49 cm on 1 December and categorizes it as torrential.",
+    "outcome": "A central team was deployed to assess damage. Early situation reports were evolving operational snapshots, so this entry does not manufacture a single final death, displacement or loss total without a reconciled final memorandum.",
+    "sources": [
+      "mhaPudFengal2024",
+      "imdPudFengal2024"
+    ]
+  },
+  {
+    "id": "ladakh-five-new-districts-2026",
+    "year": 2026,
+    "date": "27-28 April 2026",
+    "title": "Ladakh forms and begins staffing five new districts",
+    "category": "Administrative reorganisation and local governance",
+    "actors": [
+      "Union Territory Administration of Ladakh",
+      "Lieutenant Governor Vinai Kumar Saxena",
+      "District administrations",
+      "Residents of Nubra, Sham, Changthang, Zanskar and Drass"
+    ],
+    "status": "Districts formed and initial district officers appointed",
+    "severity": "Medium",
+    "summary": "The Ladakh administration formed five new districts—Nubra, Sham, Changthang, Zanskar and Drass—on 27 April 2026. The next day the Lieutenant Governor approved assignments of Deputy Commissioners and Superintendents of Police so the new administrative structures could begin functioning.",
+    "outcome": "The appointments establish initial operationalisation of the five districts. They do not by themselves prove that every department, office, budget or public service was fully transferred and functioning on the formation date.",
+    "sources": [
+      "ladakhNewDistricts2026"
+    ]
+  },
+  {
+    "id": "andhra-hudhud-cyclone-2014",
+    "year": 2014,
+    "date": "12 October 2014",
+    "title": "Cyclone Hudhud crosses Visakhapatnam as a very severe cyclonic storm",
+    "category": "Cyclone, infrastructure damage and disaster response",
+    "actors": [
+      "Residents of coastal Andhra Pradesh",
+      "India Meteorological Department",
+      "Government of Andhra Pradesh",
+      "Disaster-response agencies"
+    ],
+    "status": "Landfall and meteorological intensity established; recovery followed",
+    "severity": "High",
+    "summary": "IMD recorded Hudhud crossing the north Andhra Pradesh coast over Visakhapatnam on 12 October with maximum sustained winds of about 185 km/h, severe damage to structures, trees, communications and electricity systems, and a storm surge of about 1.4 metres.",
+    "outcome": "This entry uses the reconciled meteorological record and omits casualty and monetary-loss totals that vary across later assessments. It does not treat forecast warnings, immediate estimates and final loss accounting as interchangeable.",
+    "sources": [
+      "imdHudhud2014"
+    ]
+  },
+  {
+    "id": "andhra-lg-polymers-gas-leak-2020",
+    "year": 2020,
+    "date": "7 May 2020",
+    "title": "LG Polymers styrene leak kills residents around Visakhapatnam plant",
+    "category": "Industrial safety, environment and corporate accountability",
+    "actors": [
+      "LG Polymers India",
+      "Residents of R. R. Venkatapuram and surrounding communities",
+      "Environment authorities",
+      "National Green Tribunal"
+    ],
+    "status": "Industrial disaster occurred; compensation and legal proceedings followed",
+    "severity": "High",
+    "summary": "A styrene leak from LG Polymers' Visakhapatnam facility affected surrounding communities. The Environment Ministry report filed before the NGT recorded 12 reported deaths and about 4,000 affected people at that stage.",
+    "outcome": "The NGT applied strict environmental-liability principles, required an interim Rs 50 crore deposit and directed restoration and compensation processes. Those directions and dated impact figures are not converted into a final criminal conviction of every officer or executive.",
+    "sources": [
+      "ngtLgPolymers2020",
+      "moefLgPolymers2020"
+    ]
+  },
+  {
+    "id": "goa-mopa-airport-opening-2022-2023",
+    "year": 2022,
+    "date": "26 October 2022-5 January 2023",
+    "title": "Manohar International Airport opens as Goa's second airport",
+    "category": "Aviation, public infrastructure and transport capacity",
+    "actors": [
+      "Government of Goa",
+      "Airports Authority of India",
+      "Airport operator",
+      "Air passengers"
+    ],
+    "status": "Licensed, inaugurated and opened for commercial operations",
+    "severity": "Medium",
+    "summary": "The Mopa aerodrome was licensed on 26 October 2022, inaugurated as Manohar International Airport on 11 December and received its first commercial flight on 5 January 2023. Phase I was designed for about 4.4 million passengers annually.",
+    "outcome": "The official record establishes a two-airport system for Goa and distinguishes licensing, inauguration and commercial opening. Design capacity is not presented as achieved annual traffic, and the stated project benefits are not treated as measured outcomes.",
+    "sources": [
+      "pibGoaMopa2022",
+      "aaiGoaMopa2023"
+    ]
+  },
+  {
+    "id": "goa-public-health-cag-2024",
+    "year": 2024,
+    "date": "7 August 2024",
+    "title": "CAG identifies staffing, ICU, procurement and infrastructure gaps in Goa health services",
+    "category": "Public health, staffing, procurement and audit accountability",
+    "actors": [
+      "Government of Goa",
+      "Goa Medical College and Hospital",
+      "District hospitals",
+      "Comptroller and Auditor General"
+    ],
+    "status": "Final performance-audit findings tabled; later remediation not inferred",
+    "severity": "High",
+    "summary": "For the audited period 2016-17 to 2021-22, CAG reported 753 vacancies across doctors, nurses, paramedics and other staff at Goa Medical College and Hospital as of 31 March 2022, no ICU services in either district hospital during the period, and procurement and infrastructure deficiencies.",
+    "outcome": "The report also recorded that a first Rs 8.40 crore trauma-care instalment released in March 2018 remained untransferred after more than four years. These are attributed audit findings across several administrations, not criminal convictions or proof that every deficiency persisted unchanged through 2026.",
+    "sources": [
+      "cagGoaHealth2024"
+    ]
+  },
+  {
+    "id": "odisha-cyclone-fani-2019",
+    "year": 2019,
+    "date": "3 May 2019",
+    "title": "Extremely severe Cyclone Fani crosses Odisha near Puri",
+    "category": "Cyclone, housing, infrastructure and disaster recovery",
+    "actors": [
+      "Residents of Odisha",
+      "Government of Odisha",
+      "India Meteorological Department",
+      "Disaster-response agencies"
+    ],
+    "status": "Landfall and state damage assessment established; reconstruction followed",
+    "severity": "High",
+    "summary": "IMD recorded Extremely Severe Cyclonic Storm Fani crossing the Odisha coast near Puri on 3 May 2019. The state later reported about 5.6 lakh damaged houses and extensive damage to power, water, roads, schools, health facilities, crops and livelihoods.",
+    "outcome": "Odisha's official assessment placed public-property losses and prompt relief needs at about Rs 9,336 crore and requested about Rs 5,228 crore from the NDRF under the applicable norms. The assessed loss, state request and any later sanctioned assistance are kept as different figures.",
+    "sources": [
+      "imdFani2019",
+      "odishaFaniReview2019"
+    ]
+  },
+  {
+    "id": "punjab-floods-2025",
+    "year": 2025,
+    "date": "From 27 August 2025",
+    "title": "Punjab floods affect all 23 districts and more than 2,400 villages",
+    "category": "Flood, agriculture, housing and disaster response",
+    "actors": [
+      "Residents of Punjab",
+      "Government of Punjab",
+      "Ministry of Home Affairs",
+      "Army, Air Force and disaster-response agencies"
+    ],
+    "status": "Official situation-report scale established; relief and reconstruction continued",
+    "severity": "High",
+    "summary": "An MHA disaster situation report recorded floods across all 23 Punjab districts after heavy rain, rising Ravi and Beas levels and dam releases. It listed 2,431 affected villages, 389,042 affected people, 23,340 rescues or evacuations and 10,216 damaged houses at that reporting point.",
+    "outcome": "The same operational report recorded 58 deaths, five missing people and about 198,596 hectares of affected agricultural land. Later official summaries used different dates, definitions and totals, so this entry keeps the situation report's snapshot rather than manufacturing a single final toll.",
+    "sources": [
+      "mhaPunjabFloods2025"
+    ]
+  },
+  {
+    "id": "madhya-pradesh-harda-fireworks-blast-2024",
+    "year": 2024,
+    "date": "6 February 2024",
+    "title": "Harda fireworks-factory explosions kill 13 and damage nearby homes",
+    "category": "Industrial safety, explosives regulation and compensation",
+    "actors": [
+      "Fireworks-factory owners and workers",
+      "Residents of Bairagarh area, Harda",
+      "Government of Madhya Pradesh",
+      "National Green Tribunal and National Human Rights Commission"
+    ],
+    "status": "Disaster and official impact record established; compensation oversight continued",
+    "severity": "High",
+    "summary": "A series of explosions at a fireworks factory near Harda affected workers and surrounding residents. The district administration's status, later recorded by the NGT, listed 13 deaths, 64 grievous injuries, 156 simple injuries, 39 burned or damaged houses and 201 evacuated houses.",
+    "outcome": "NHRC sought a state report on responsibility and recurrence prevention, while NGT proceedings tracked victims, damage and compensation. Commission notices and tribunal supervision are not converted into final criminal convictions or personal culpability findings.",
+    "sources": [
+      "nhrcHarda2024",
+      "ngtHarda2025"
+    ]
+  },
+  {
+    "id": "bihar-acute-encephalitis-emergency-2019",
+    "year": 2019,
+    "date": "June 2019",
+    "title": "Acute Encephalitis Syndrome emergency kills children in Muzaffarpur",
+    "category": "Public health, child mortality, surveillance and health-system response",
+    "actors": [
+      "Children and families in Muzaffarpur district",
+      "Government of Bihar",
+      "Ministry of Health and Family Welfare",
+      "National Human Rights Commission"
+    ],
+    "status": "Dated official response and reported toll snapshots established; single final causal account not asserted",
+    "severity": "High",
+    "summary": "During the June 2019 Acute Encephalitis Syndrome emergency, NHRC's 17 June notice cited reports of 100 child deaths by that date. As the reported toll evolved, official agencies deployed pediatric teams, ambulances and surveillance measures and reviewed clinical, nutritional and epidemiological evidence.",
+    "outcome": "The Union Health Ministry documented active case finding, daily surveillance and multidisciplinary investigation. A dated reported toll is not presented as a final reconciled total, and the evidence does not support reducing every case to one food, one cause or one administrative act.",
+    "sources": [
+      "nhrcBiharAes2019",
+      "pibBiharAes2019"
+    ]
+  },
+  {
+    "id": "jharkhand-tabrez-ansari-killing-convictions-2019-2023",
+    "year": 2019,
+    "date": "17 June 2019-5 July 2023",
+    "title": "Tabrez Ansari killing leads to ten trial-court convictions",
+    "category": "Mob violence, criminal justice and appellate accountability",
+    "actors": [
+      "Tabrez Ansari and his family",
+      "Accused persons",
+      "Jharkhand Police and prosecution",
+      "Saraikela trial court"
+    ],
+    "status": "Ten trial-court convictions and sentences established; current appellate finality not asserted",
+    "severity": "High",
+    "summary": "Tabrez Ansari was assaulted by a mob in Saraikela-Kharsawan district in June 2019 and later died. In June 2023 a trial court convicted ten accused under IPC section 304 and related provisions; on 5 July it imposed ten-year rigorous-imprisonment sentences.",
+    "outcome": "The entry records the trial-court disposition, not a finally affirmed appellate result. It does not assign guilt to acquitted or untried people, and no claim is made about the current status of any appeal without a later court order.",
+    "sources": [
+      "ieTabrezAnsariConvictions2023",
+      "livelawTabrezAnsari2023"
+    ]
   }
 ]

@@ -12,17 +12,24 @@ function ensureStateExplorerData() {
     stateExplorerDataTask = Promise.all([
       fetch("/data/india-states.geojson"),
       fetch("/data/event-jurisdictions.json"),
+      fetch("/data/state-governance.json"),
     ])
-      .then(async ([boundariesResponse, jurisdictionsResponse]) => {
-        if (!boundariesResponse.ok || !jurisdictionsResponse.ok) throw new Error("State map data did not load.");
-        const [boundaries, jurisdictions] = await Promise.all([boundariesResponse.json(), jurisdictionsResponse.json()]);
+      .then(async ([boundariesResponse, jurisdictionsResponse, governanceResponse]) => {
+        if (!boundariesResponse.ok || !jurisdictionsResponse.ok || !governanceResponse.ok) throw new Error("State map data did not load.");
+        const [boundaries, jurisdictions, governance] = await Promise.all([
+          boundariesResponse.json(),
+          jurisdictionsResponse.json(),
+          governanceResponse.json(),
+        ]);
         stateBoundaries = boundaries;
         eventJurisdictions = jurisdictions?.eventStates || {};
+        stateGovernanceData = governance?.jurisdictions || {};
         return boundaries;
       })
       .catch((error) => {
         stateBoundaries = null;
         eventJurisdictions = {};
+        stateGovernanceData = {};
         console.warn(error.message);
         return null;
       });
@@ -49,6 +56,95 @@ function stateEvents(name) {
   return events
     .filter((event) => (eventJurisdictions[event.id] || []).includes(name))
     .sort(byTimeline);
+}
+
+function stateGovernanceFor(name) {
+  return stateGovernanceData?.[name] || null;
+}
+
+function formatStateDate(value) {
+  if (!value) return "Present";
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return value;
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  return date.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+function formatStateTermBoundary(term, field) {
+  return term?.[`${field}Label`] || formatStateDate(term?.[field]);
+}
+
+function stateSourceLinks(sourceIds) {
+  const linked = (sourceIds || []).map((id) => ({ id, source: sources[id] })).filter((item) => item.source?.url);
+  if (!linked.length) return `<span class="state-governance-source-missing">No linked source</span>`;
+  return linked.map(({ id, source }) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer" title="${esc(source.title)}">${esc(source.publisher || id)}</a>`).join("");
+}
+
+function stateGovernmentTerm(term, type) {
+  const leader = term.leader || term.status || "Not recorded";
+  const affiliation = [term.party, term.coalition].filter(Boolean).join(" · ");
+  return `
+    <article class="state-governance-term">
+      <div class="state-governance-term-head"><span>${esc(formatStateTermBoundary(term, "from"))} – ${esc(formatStateTermBoundary(term, "to"))}</span><strong>${esc(type)}</strong></div>
+      <h5>${esc(leader)}</h5>
+      ${affiliation ? `<p class="state-governance-affiliation">${esc(affiliation)}</p>` : ""}
+      <p>${esc(term.basis || term.status || "Term documented in the linked source.")}</p>
+      <div class="state-governance-sources">${stateSourceLinks(term.sources)}</div>
+    </article>
+  `;
+}
+
+function renderStateGovernment(name) {
+  if (!stateGovernment) return;
+  if (!name) {
+    stateGovernment.innerHTML = "";
+    return;
+  }
+  const record = stateGovernanceFor(name);
+  if (!record) {
+    stateGovernment.innerHTML = `
+      <section class="state-governance-empty">
+        <strong>Government history under research</strong>
+        <p>No verified government and opposition ledger has been published for this jurisdiction yet.</p>
+      </section>
+    `;
+    return;
+  }
+  const governmentTerms = Array.isArray(record.governmentTerms) ? record.governmentTerms : [];
+  const oppositionTerms = Array.isArray(record.oppositionTerms) ? record.oppositionTerms : [];
+  const currentGovernment = governmentTerms.find((term) => !term.to) || governmentTerms[governmentTerms.length - 1];
+  const currentOpposition = oppositionTerms.find((term) => !term.to) || oppositionTerms[oppositionTerms.length - 1];
+  const currentGovernmentAffiliation = [currentGovernment?.party, currentGovernment?.coalition].filter(Boolean).join(" · ");
+  const currentOppositionAffiliation = [currentOpposition?.party, currentOpposition?.coalition].filter(Boolean).join(" · ");
+  stateGovernment.innerHTML = `
+    <section class="state-governance-current" aria-label="Current government and opposition">
+      <div class="state-governance-heading">
+        <span class="state-map-kicker">Government record</span>
+        <h4>Government and opposition since 2014</h4>
+        <p>Verified through ${esc(formatStateDate(record.verifiedAsOf))}. Term dates reflect the linked official or primary records.</p>
+      </div>
+      <div class="state-governance-current-grid">
+        <article>
+          <span>Current ${esc(currentGovernment?.office || "government")}</span>
+          <strong>${esc(currentGovernment?.leader || "Not verified")}</strong>
+          <p>${esc(currentGovernmentAffiliation || currentGovernment?.status || "Affiliation not recorded")}</p>
+        </article>
+        <article>
+          <span>Current opposition</span>
+          <strong>${esc(currentOpposition?.leader || currentOpposition?.status || "Not verified")}</strong>
+          <p>${esc(currentOppositionAffiliation || currentOpposition?.basis || "Opposition status not recorded")}</p>
+        </article>
+      </div>
+    </section>
+    <section class="state-governance-history" aria-label="Government term history">
+      <h4>Government terms</h4>
+      ${governmentTerms.map((term) => stateGovernmentTerm(term, term.office || "Government")).join("")}
+    </section>
+    <section class="state-governance-history" aria-label="Opposition term history">
+      <h4>Opposition terms</h4>
+      ${oppositionTerms.map((term) => stateGovernmentTerm(term, term.office || "Opposition")).join("")}
+    </section>
+  `;
 }
 
 function stateFeatures() {
@@ -120,6 +216,7 @@ function renderStateSelection(name) {
   const mapped = mappedRecordCount();
   const jurisdictions = stateFeatures().length;
   if (!name) {
+    renderStateGovernment("");
     stateMapSelection.innerHTML = `
       <span class="state-map-kicker">India overview</span>
       <h3>Choose a state or union territory</h3>
@@ -139,6 +236,7 @@ function renderStateSelection(name) {
     <h3>${esc(displayName)}</h3>
     <p><strong>${matching.length}</strong> mapped record${matching.length === 1 ? "" : "s"}${years.length ? ` across ${years[0]}-${years[years.length - 1]}` : ""}. ${categories.length ? `${categories.length} categories represented.` : "No category is currently represented."}</p>
   `;
+  renderStateGovernment(name);
   stateMapSummary.textContent = `${displayName} · ${matching.length} mapped record${matching.length === 1 ? "" : "s"}`;
   if (!matching.length) {
     stateTimeline.innerHTML = `<div class="state-timeline-empty"><strong>No tagged records yet</strong><p>This is a coverage gap, not evidence that no relevant events occurred. India-wide records may still affect this jurisdiction.</p></div>`;

@@ -41,7 +41,7 @@
     try {
       const [appMarkup, scriptsMarkup, progressMarkup] = await Promise.all([
         readText("/shell/app-markup.html?v=20260722-3"),
-        readText("/shell/scripts.html?v=20260722-2"),
+        readText("/shell/scripts.html?v=20260722-3"),
         readText("/shell/mobile-progress.html?v=20260721-1")
       ]);
       appendMarkup(appMarkup);

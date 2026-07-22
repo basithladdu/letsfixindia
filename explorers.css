@@ -96,6 +96,31 @@
 .state-map-kicker { color: #a54b1a; font-size: 9px; font-weight: 900; letter-spacing: .095em; text-transform: uppercase; }
 .state-map-selection h3 { margin: 4px 0 5px; font-size: 25px; line-height: 1.06; }
 .state-map-selection p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.state-government { border-bottom: 1px solid var(--line); }
+.state-governance-current { padding: 16px 18px; background: #f8f6f0; }
+.state-governance-heading h4 { margin: 4px 0 4px; font-size: 15px; }
+.state-governance-heading p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.state-governance-current-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; margin-top: 11px; }
+.state-governance-current-grid article { min-width: 0; padding: 10px; background: #fff; border: 1px solid #ded9cf; border-radius: 7px; }
+.state-governance-current-grid span { display: block; color: var(--muted); font-size: 8px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.state-governance-current-grid strong { display: block; margin-top: 4px; font-size: 12px; line-height: 1.25; }
+.state-governance-current-grid p { margin: 3px 0 0; color: var(--muted); font-size: 9px; line-height: 1.35; }
+.state-governance-history { padding: 13px 18px 4px; }
+.state-governance-history + .state-governance-history { padding-top: 8px; }
+.state-governance-history > h4 { margin: 0 0 7px; font-size: 11px; letter-spacing: .03em; text-transform: uppercase; }
+.state-governance-term { padding: 10px 0; border-top: 1px solid var(--line); }
+.state-governance-term-head { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 8px; font-weight: 800; }
+.state-governance-term-head strong { color: #a54b1a; text-align: right; }
+.state-governance-term h5 { margin: 5px 0 2px; font-size: 13px; }
+.state-governance-term p { margin: 4px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.state-governance-term .state-governance-affiliation { margin-top: 0; color: var(--ink); font-weight: 700; }
+.state-governance-sources { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.state-governance-sources a,
+.state-governance-source-missing { padding: 3px 6px; color: #0d5d35; background: #edf7ed; border: 1px solid #c9dfca; border-radius: 99px; font-size: 8px; font-weight: 800; text-decoration: none; }
+.state-governance-source-missing { color: var(--muted); background: #f1efe9; border-color: #ded9cf; }
+.state-governance-empty { padding: 18px; background: #fff7e8; }
+.state-governance-empty strong { display: block; font-size: 12px; }
+.state-governance-empty p { margin: 4px 0 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
 .state-timeline { display: grid; gap: 0; }
 .state-timeline-item { padding: 15px 18px; border-bottom: 1px solid var(--line); }
 .state-timeline-item:last-child { border-bottom: 0; }
@@ -161,6 +186,7 @@
   .state-map-summary { grid-column: 1 / -1; }
   .state-map-canvas { height: 440px; }
   .state-map-panel { max-height: none; }
+  .state-governance-current-grid { grid-template-columns: 1fr; }
   .state-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .state-directory-head { align-items: flex-start; flex-direction: column; gap: 3px; }
   .voice-issue-spotlight-head { align-items: flex-start; flex-direction: column; gap: 2px; }
