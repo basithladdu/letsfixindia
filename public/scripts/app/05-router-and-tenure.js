@@ -5,6 +5,10 @@ function updatePageMeta(route) {
     const voice = route.person ? voices.find((item) => item.id === route.person) : null;
     title = voice ? `${voice.name} - Public Voice Record | LetsFixIndia` : "Public Voices | LetsFixIndia";
     description = voice ? `Source-linked public statements and documented research gaps for ${voice.name}.` : "Documented public statements, silence, and institutional responses to major Modi-era controversies.";
+  } else if (route.page === "media-map") {
+    const profile = route.kind === "groups" ? mediaGroups.find((item) => item.id === route.id) : mediaOutlets.find((item) => item.id === route.id);
+    title = profile ? `${profile.name} | MediaMap India` : "MediaMap India | LetsFixIndia";
+    description = "A source-led directory of Indian media ownership, material business interests, and documented political connections.";
   } else if (route.page === "gallery") {
     title = route.galleryStatus ? "Submission Status | LetsFixIndia" : route.gallerySubmit ? "Submit Protest Media | LetsFixIndia" : "Public Evidence Gallery | LetsFixIndia";
     description = route.galleryStatus
@@ -74,6 +78,7 @@ function updatePageMeta(route) {
     map: "/map",
     statistics: "/statistics",
     voices: route.person ? `/voices/${encodeURIComponent(route.person)}` : "/voices",
+    "media-map": route.kind ? `/media-map/${route.kind}/${encodeURIComponent(route.id || "")}` : "/media-map",
     sources: "/sources",
     submit: "/submit",
     contact: "/contact",
@@ -110,6 +115,9 @@ function routeFromPath(pathname) {
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
   if (path.startsWith("/voices/")) return { page: "voices", person: decodeURIComponent(path.slice("/voices/".length)) };
   if (path === "/voices") return { page: "voices" };
+  if (path.startsWith("/media-map/groups/")) return { page: "media-map", kind: "groups", id: decodeURIComponent(path.slice("/media-map/groups/".length)) };
+  if (path.startsWith("/media-map/outlets/")) return { page: "media-map", kind: "outlets", id: decodeURIComponent(path.slice("/media-map/outlets/".length)) };
+  if (path === "/media-map") return { page: "media-map" };
   if (path === "/sources") return { page: "sources" };
   if (path === "/submit" || path === "/submissions") return { page: "submit" };
   if (path === "/contact") return { page: "contact" };
@@ -189,6 +197,7 @@ function ensureRouteContent(route) {
         void activateGalleryRoute(route);
       }
       if (route.page === "voices") renderVoices();
+      if (route.page === "media-map") renderMediaMap();
       return;
     }
 
@@ -196,7 +205,12 @@ function ensureRouteContent(route) {
   if (route.page === "map") prepareStateExplorer();
   if (route.page === "statistics") renderIndicators();
   if (route.page === "voices") renderVoices();
+<<<<<<< Updated upstream
   if (route.page === "gallery") void activateGalleryRoute(route);
+=======
+  if (route.page === "media-map") renderMediaMap();
+  if (route.page === "gallery") window.LetsFixIndiaGallery?.renderRoute();
+>>>>>>> Stashed changes
   if (route.page === "sources") renderSources();
   if (route.page === "submit") renderSubmissions();
   renderedPages.add(route.page);
