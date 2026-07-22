@@ -147,6 +147,11 @@
   margin-top: 16px;
 }
 
+/* Keep the research checkpoint as a compact link rather than a standalone card. */
+.about-section > .about-note-row:first-of-type {
+  display: none;
+}
+
 .about-note-row .about-support-note {
   margin: 0;
   max-width: none;
