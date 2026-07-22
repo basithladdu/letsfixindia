@@ -5476,6 +5476,174 @@
           "sources": ["wbLopCourt2026", "wbCurrentLop2026", "wbLopAppeal2026"]
         }
       ]
+    },
+    "Manipur": {
+      "kind": "state",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; third ministry began 14 March 2012",
+          "to": "2017-03-14",
+          "leader": "Okram Ibobi Singh",
+          "office": "Chief Minister",
+          "party": "Indian National Congress",
+          "coalition": "INC single-party majority government",
+          "basis": "Ibobi's third ministry entered 2014 with Congress holding 42 of 60 seats. All five Manipur State Congress Party MLAs merged into Congress on 4 April 2014, increasing its House strength to 47 without creating a new ministry. Ibobi tendered his resignation during the March 2017 government-formation process; the formal acceptance instrument was not retrieved.",
+          "confidence": "High office and majority basis; high-moderate precise transition boundary",
+          "sources": ["mnIbobiProfile", "mnCeo2012Report", "mnMscpMerger2014", "mnIbobiTransition2017"]
+        },
+        {
+          "from": "2017-03-14",
+          "to": "2017-03-15",
+          "leader": "Executive office-holder not separately evidenced",
+          "office": "Government-formation transition",
+          "party": null,
+          "coalition": null,
+          "basis": "Ibobi had tendered his resignation and N. Biren Singh took oath on 15 March. No gubernatorial instrument expressly establishing a caretaker appointment for this interval was located, so none is invented.",
+          "confidence": "Moderate from adjacent resignation and oath records",
+          "sources": ["mnIbobiTransition2017", "mnBirenOath2017"]
+        },
+        {
+          "from": "2017-03-15",
+          "to": "2022-03-11",
+          "leader": "N. Biren Singh",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP-led multi-party coalition initially including NPP, NPF and LJP, with additional individual support",
+          "basis": "Congress won 28 seats and BJP 21 in the hung 2017 verdict, but BJP assembled a governing coalition and Biren was sworn on 15 March. The ministry won the 20 March floor test 32-27. Its serious 2020 support crisis did not install another ministry or trigger President's Rule.",
+          "confidence": "High",
+          "sources": ["mnCeo2017Report", "mnBirenOath2017", "mnFloorTest2017"]
+        },
+        {
+          "from": "2022-03-11",
+          "to": "2022-03-21",
+          "leader": "N. Biren Singh",
+          "office": "Caretaker Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Outgoing BJP-led ministry",
+          "basis": "The Governor accepted the outgoing ministry's resignation on 11 March and expressly requested Biren to continue as caretaker until formation of the new government. He took the next oath on 21 March.",
+          "confidence": "High",
+          "sources": ["mnBirenCaretaker2022", "mnBirenOath2022"]
+        },
+        {
+          "from": "2022-03-21",
+          "to": "2025-02-09",
+          "leader": "N. Biren Singh",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP-majority government with NPF participation in the ministry",
+          "basis": "BJP won 32 of 60 seats in 2022, independently exceeding the 31-seat majority threshold; NPF nevertheless participated in the Council. Five of six JD(U) members merged into BJP in September 2022, raising BJP's later House strength to 37 rather than rewriting its election result. KPA withdrew support in August 2023 and NPP in November 2024, but neither displaced the BJP majority.",
+          "confidence": "High",
+          "sources": ["mnCeo2022Report", "mnBirenOath2022", "mnJduMerger2022", "mnKpaWithdrawal2023", "mnNppWithdrawal2024"]
+        },
+        {
+          "from": "2025-02-09",
+          "to": "2025-02-13",
+          "leader": "N. Biren Singh",
+          "office": "Caretaker Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "Resigned ministry continuing pending alternative arrangements",
+          "basis": "Governor Ajay Kumar Bhalla accepted Biren's and the Council's resignations on 9 February and asked them to continue until alternative arrangements were made. This four-day caretaker interval preceded, and must not be collapsed into, President's Rule.",
+          "confidence": "High",
+          "sources": ["mnBirenCaretaker2025", "mnPresidentRule2025"]
+        },
+        {
+          "from": "2025-02-13",
+          "to": "2026-02-04",
+          "leader": "Union administration through Governor Ajay Kumar Bhalla",
+          "office": "President's Rule under Article 356",
+          "party": null,
+          "coalition": null,
+          "basis": "G.S.R. 134(E) imposed President's Rule on 13 February 2025. The Twelfth Assembly was kept in suspended animation, not dissolved. Parliament approved the proclamation and later a six-month extension. S.O. 509(E) revoked the proclamation with effect from 4 February 2026.",
+          "confidence": "High",
+          "sources": ["mnPresidentRule2025", "mnPresidentRuleApproval2025", "mnPresidentRuleExtension2025", "mnPresidentRuleRevocation2026"]
+        },
+        {
+          "from": "2026-02-04",
+          "to": null,
+          "leader": "Yumnam Khemchand Singh",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP-led ministry with NPF and NPP participation",
+          "basis": "Khemchand was sworn on 4 February in the continuing Twelfth Assembly with BJP, NPF and NPP members in the five-member Council. The Assembly carried his confidence motion by voice vote on 5 February; the official bulletin records no numeric tally. BJP's official dated strength of 37 independently exceeded the 31-seat full-House majority threshold, but the dated party-position page is not misrepresented as the vote tally.",
+          "confidence": "High current holder, oath and voice-vote result; current party arithmetic is a dated 11 September 2025 snapshot",
+          "sources": ["mnPresidentRuleRevocation2026", "mnKhemchandOath2026", "mnKhemchandConfidence2026", "mnCurrentCouncil2026", "mnCurrentAssembly2026", "mnPartyPosition2025"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "Formally reported incumbent when 2014 began; original recognition predates scope",
+          "to": "2016-09-18",
+          "toLabel": "No later than his 18 September 2016 move into the ruling Congress; exact cessation date unknown",
+          "leader": "I. Ibohalbi Singh",
+          "office": "Leader of the Opposition",
+          "party": "All India Trinamool Congress",
+          "coalition": null,
+          "basis": "Contemporaneous Assembly reporting identifies Ibohalbi as opposition leader. He and three other AITC MLAs joined the ruling Congress on 18 September 2016, making continued opposition-office tenure untenable, but the Speaker's exact cessation instrument was not retrieved; 18 September is an outer boundary, not an invented notification date.",
+          "confidence": "High holder at the start; exact formal cessation date unknown",
+          "sources": ["mnIbohalbiLop", "mnIbohalbiCongress2016"]
+        },
+        {
+          "from": "2016-09",
+          "fromLabel": "After Ibohalbi's unresolved cessation, no later than 18 September 2016",
+          "to": "2017-03",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "Formal holder not securely established; likely vacancy or unrecovered short tenure",
+          "basis": "No retrieved Speaker notification or reliable Assembly record establishes a successor for the remaining months of the Tenth Assembly. The record is left as an evidence gap rather than assigning a party leader to the formal office.",
+          "confidence": "Moderate evidence-gap treatment; exact boundaries unknown",
+          "sources": ["mnIbohalbiCongress2016"]
+        },
+        {
+          "from": "2017-03",
+          "fromLabel": "During formation of the Eleventh Assembly; exact recognition day not retrieved",
+          "to": "2022-03-13",
+          "toLabel": "End of the Eleventh Assembly; exact cessation instrument not retrieved",
+          "leader": "Okram Ibobi Singh",
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "coalition": null,
+          "basis": "The official Assembly profile places the LoP office under Ibobi's 2017 record, and contemporaneous Eleventh Assembly records identify him in the office. The original Speaker recognition and cessation notifications were not retrieved, so false day-level precision is avoided.",
+          "confidence": "High holder and Assembly; exact start and cessation dates unknown",
+          "sources": ["mnIbobiProfile"]
+        },
+        {
+          "from": "2022-03-14",
+          "to": "2025-02-13",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress held five of 60 seats",
+          "status": "No formally recognized Leader of the Opposition evidenced in the Twelfth Assembly",
+          "basis": "Official 2022 and 2024 proceedings style Okram Ibobi Singh as an MLA, not LoP, and no Speaker recognition was retrieved. Congress held five seats, below the six-seat one-tenth convention. Political or legislature-party leadership is not backfilled as formal recognition.",
+          "confidence": "High that Ibobi must not be assigned the formal office; moderate-high explicit-vacancy treatment",
+          "sources": ["mnAssemblyBulletin2022", "mnAssemblyBulletin2024", "mnCeo2022Report"]
+        },
+        {
+          "from": "2025-02-13",
+          "to": "2026-02-04",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "Office remained unfilled while the Assembly was in suspended animation",
+          "basis": "President's Rule suspended the existing Assembly; it did not dissolve the House, create an opposition leader, or establish a new tenure.",
+          "confidence": "High",
+          "sources": ["mnPresidentRule2025", "mnPresidentRuleRevocation2026"]
+        },
+        {
+          "from": "2026-02-04",
+          "to": null,
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress holds five seats in the dated official position",
+          "status": "No formally recognized current holder evidenced",
+          "basis": "The 5 February confidence bulletin calls Ibobi and the other Congress participants MLAs, while the current Assembly page identifies the Governor, Speaker and Chief Minister but no LoP. The official party page's 37-6-5-5-3-2-1 plus one vacancy arithmetic is expressly dated 11 September 2025 and is not silently presented as a fresh 2026 roll.",
+          "confidence": "High no-current-holder treatment; party arithmetic is a dated snapshot",
+          "sources": ["mnKhemchandConfidence2026", "mnCurrentAssembly2026", "mnPartyPosition2025"]
+        }
+      ]
     }
   }
 }
