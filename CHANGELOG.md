@@ -2,6 +2,14 @@
 
 All notable user-facing changes to the site.
 
+## 2026-07-23
+
+### Added
+- **Eight source-backed events** — Chandrayaan-3's lunar landing, the New Delhi G20 Leaders' Declaration, Arunachal Pradesh and Uttarakhand constitutional crises, Delhi services ruling, Odisha's 2024 government change, Goa's 2019 confidence vote, and Punjab's 2021 ministry transition.
+
+### Verification
+- Event database now contains 271 records and 1,154 registered sources; JSON and data validation passed.
+
 ## 2026-07-22
 
 ### Added
