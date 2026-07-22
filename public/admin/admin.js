@@ -79,6 +79,93 @@
     return ["approved", "rejected"].includes(item?.data?.reviewStatus) ? item.data.reviewStatus : "pending";
   }
 
+  function detailRow(label, value) {
+    if (value === undefined || value === null || value === "") return "";
+    const displayed = typeof value === "boolean" ? (value ? "Yes" : "No") : String(value);
+    return `<div class="detail-row"><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(displayed)}</dd></div>`;
+  }
+
+  function linkRow(label, value) {
+    if (!value) return "";
+    let url;
+    try {
+      url = new URL(String(value));
+      if (!["http:", "https:"].includes(url.protocol)) return detailRow(label, value);
+    } catch {
+      return detailRow(label, value);
+    }
+    return `<div class="detail-row detail-row-link"><dt>${escapeHtml(label)}</dt><dd><a href="${escapeHtml(url.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url.href)}</a><button type="button" class="copy-value" data-copy-value="${escapeHtml(url.href)}">Copy</button></dd></div>`;
+  }
+
+  function formatBytes(value) {
+    const bytes = Number(value);
+    if (!Number.isFinite(bytes) || bytes < 0) return value;
+    if (bytes < 1024) return `${bytes} bytes`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB (${bytes} bytes)`;
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB (${bytes} bytes)`;
+  }
+
+  function submissionDetails(item, data) {
+    const sourceUrls = Array.isArray(data.sourceUrls)
+      ? data.sourceUrls
+      : String(data.sourceUrl || "").split(/\r?\n/).filter(Boolean);
+    const dimensions = data.width || data.height ? `${data.width || "?"} × ${data.height || "?"}` : "";
+    const cloudinary = data.submissionKind === "original-media" || data.privateOriginal || data.secureUrl
+      ? `<div class="record-group" role="group" aria-label="Cloudinary asset details"><h4>Cloudinary asset</h4><dl>
+          ${linkRow("Delivery URL", data.secureUrl)}
+          ${linkRow("Private original URL", data.privateOriginal?.secureUrl)}
+          ${detailRow("Public ID", data.privateOriginal?.publicId || data.publicId)}
+          ${detailRow("Resource type", data.privateOriginal?.resourceType || data.resourceType)}
+          ${detailRow("Delivery type", data.privateOriginal?.deliveryType)}
+          ${detailRow("Format", data.privateOriginal?.format || data.format)}
+          ${detailRow("Version", data.privateOriginal?.version)}
+          ${detailRow("File size", data.bytes !== undefined ? formatBytes(data.bytes) : "")}
+          ${detailRow("Dimensions", dimensions)}
+          ${detailRow("Duration", data.duration !== undefined && data.duration !== null ? `${data.duration} seconds` : "")}
+        </dl><p class="record-note">These are the exact stored Cloudinary references. A private URL may return 401 outside an authorized Cloudinary delivery flow; use the public ID to locate the asset in Cloudinary.</p></div>`
+      : "";
+    const rawRecord = JSON.stringify({ id: item.id, created_at: item.created_at, data }, null, 2);
+    return `<div class="submission-record">
+      <div class="record-group" role="group" aria-label="Submitter-provided details"><h4>Submitted details</h4><dl>
+        ${detailRow("Submission ID", item.id)}
+        ${detailRow("Reference", data.reference)}
+        ${detailRow("Database created", item.created_at)}
+        ${detailRow("Submitted", data.submittedAt)}
+        ${detailRow("Submission kind", data.submissionKind)}
+        ${detailRow("Date recorded", data.recordedDate)}
+        ${detailRow("State / union territory", data.state)}
+        ${detailRow("Incident type", data.incidentType)}
+        ${detailRow("Place", data.location)}
+        ${detailRow("What happened", data.caption)}
+        ${detailRow("Public credit", data.credit)}
+        ${detailRow("Social handle", data.socialHandle)}
+        ${detailRow("Contact phone", data.contactPhone)}
+        ${detailRow("Rights confirmed", data.rightsConfirmed)}
+        ${linkRow("Social post", data.externalUrl)}
+        ${sourceUrls.map((url, index) => linkRow(sourceUrls.length > 1 ? `Source link ${index + 1}` : "Source link", url)).join("")}
+      </dl></div>
+      ${cloudinary}
+      <details class="raw-record"><summary>Raw stored record — all fields</summary><button type="button" class="copy-record" data-copy-record="${Number(item.id)}">Copy raw JSON</button><pre>${escapeHtml(rawRecord)}</pre></details>
+    </div>`;
+  }
+
+  async function copyText(value) {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const textarea = document.createElement("textarea");
+    textarea.value = value;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    const copied = document.execCommand("copy");
+    textarea.remove();
+    if (!copied) throw new Error("Copy failed.");
+  }
+
   function mediaPreview(item, data) {
     const media = trustedMedia(data.secureUrl, data.mediaType);
     if (media?.resourceType === "image") {
@@ -143,7 +230,7 @@
       const rejectCurrent = status === "rejected";
       const hasValidPreview = Boolean(trustedMedia(data.secureUrl, data.mediaType) || window.LetsFixIndiaEmbeds?.parse(data.externalUrl));
       const approveLocked = !approveCurrent && (!hasValidPreview || ["image", "video"].includes(data.mediaType));
-      return `<article class="submission" data-review-status="${status}"><div class="submission-main"><strong>${escapeHtml(data.eventTitle || data.caption || "Untitled submission")}</strong><span>${escapeHtml(data.state || "State unknown")} &middot; ${escapeHtml(data.mediaType || "media")} &middot; ${escapeHtml(status)}</span><p>${escapeHtml(data.caption || "")}</p>${mediaPreview(item, data)}</div><div class="actions"><button data-action="moderate" data-id="${Number(item.id)}" data-status="${approveCurrent ? "pending" : "approved"}" class="${approveCurrent ? "is-current" : ""}"${approveLocked ? ' disabled title="A valid preview must load before approval"' : ""}>${approveCurrent ? "Undo approval" : "Approve"}</button><button data-action="moderate" data-id="${Number(item.id)}" data-status="${rejectCurrent ? "pending" : "rejected"}" class="reject${rejectCurrent ? " is-current" : ""}">${rejectCurrent ? "Undo rejection" : "Reject"}</button><button data-action="delete" data-id="${Number(item.id)}" class="delete">Delete</button></div></article>`;
+      return `<article class="submission" data-review-status="${status}"><div class="submission-main"><strong>${escapeHtml(data.eventTitle || data.caption || "Untitled submission")}</strong><span>${escapeHtml(data.state || "State unknown")} &middot; ${escapeHtml(data.mediaType || "media")} &middot; ${escapeHtml(status)}</span><p>${escapeHtml(data.caption || "")}</p>${submissionDetails(item, data)}${mediaPreview(item, data)}</div><div class="actions"><button data-action="moderate" data-id="${Number(item.id)}" data-status="${approveCurrent ? "pending" : "approved"}" class="${approveCurrent ? "is-current" : ""}"${approveLocked ? ' disabled title="A valid preview must load before approval"' : ""}>${approveCurrent ? "Undo approval" : "Approve"}</button><button data-action="moderate" data-id="${Number(item.id)}" data-status="${rejectCurrent ? "pending" : "rejected"}" class="reject${rejectCurrent ? " is-current" : ""}">${rejectCurrent ? "Undo rejection" : "Reject"}</button><button data-action="delete" data-id="${Number(item.id)}" class="delete">Delete</button></div></article>`;
     }).join("") : "<p>No submissions found for this filter.</p>";
     bindPreviewGuards();
   }
@@ -194,6 +281,22 @@
     render();
   });
   queue.addEventListener("click", async (event) => {
+    const copyValueButton = event.target.closest("button[data-copy-value]");
+    const copyRecordButton = event.target.closest("button[data-copy-record]");
+    if (copyValueButton || copyRecordButton) {
+      let value = copyValueButton?.dataset.copyValue || "";
+      if (copyRecordButton) {
+        const item = submissions.find((entry) => Number(entry.id) === Number(copyRecordButton.dataset.copyRecord));
+        if (item) value = JSON.stringify({ id: item.id, created_at: item.created_at, data: item.data || {} }, null, 2);
+      }
+      try {
+        await copyText(value);
+        showToast(copyRecordButton ? "Raw submission JSON copied." : "Link copied.");
+      } catch {
+        showToast("Could not copy automatically. Select the value manually.", "error");
+      }
+      return;
+    }
     const button = event.target.closest("button[data-id]");
     if (!button || button.disabled) return;
     const nextStatus = button.dataset.status;

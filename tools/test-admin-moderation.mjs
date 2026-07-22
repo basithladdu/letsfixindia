@@ -58,11 +58,17 @@ try {
   const adminSource = fs.readFileSync(new URL("../public/admin/admin.js", import.meta.url), "utf8");
   assert.match(adminSource, /controlslist="nodownload noremoteplayback"/);
   assert.doesNotMatch(adminSource, /download=/i);
-  assert.doesNotMatch(adminSource, />Open media</i);
+  assert.match(adminSource, /Cloudinary asset/);
+  assert.match(adminSource, /Private original URL/);
+  assert.match(adminSource, /Public ID/);
+  assert.match(adminSource, /Submitted details/);
+  assert.match(adminSource, /Raw stored record/);
+  assert.match(adminSource, /data-copy-value/);
+  assert.match(adminSource, /data-copy-record/);
   assert.match(adminSource, /Undo approval/);
   assert.match(adminSource, /Undo rejection/);
   assert.match(adminSource, /data-action="delete"/);
-  console.log("Admin moderation tests passed: safe previews, reversible statuses, filters, and Cloudinary-backed deletion.");
+  console.log("Admin moderation tests passed: complete record details, Cloudinary references, reversible statuses, filters, and deletion.");
 } finally {
   globalThis.fetch = originalFetch;
 }
