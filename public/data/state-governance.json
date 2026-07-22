@@ -5644,6 +5644,271 @@
           "sources": ["mnKhemchandConfidence2026", "mnCurrentAssembly2026", "mnPartyPosition2025"]
         }
       ]
+    },
+    "Tamil Nadu": {
+      "kind": "state",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; ministry began in 2011",
+          "to": "2014-09-27",
+          "leader": "J. Jayalalithaa",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK single-party majority government",
+          "basis": "Jayalalithaa entered 2014 as Chief Minister under the 2011 AIADMK mandate. A trial-court conviction on 27 September 2014 triggered her Assembly disqualification and the Srirangam vacancy from that date.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview14", "tnJayalalithaaDisqualification2014"]
+        },
+        {
+          "from": "2014-09-27",
+          "to": "2014-09-29",
+          "toLabel": "Until the successor ministry took effect in the afternoon of 29 September",
+          "leader": "Executive office-holder unresolved",
+          "office": "Unresolved formal executive interval",
+          "party": "All India Anna Dravida Munnetra Kazhagam retained its Assembly majority",
+          "coalition": null,
+          "basis": "Jayalalithaa could not continue after conviction and disqualification, while the official appointment makes O. Panneerselvam's ministry effective only in the afternoon of 29 September. No caretaker or continuation instrument was located; Panneerselvam is not backdated to 28 September.",
+          "confidence": "High legal endpoints; unknown interim executive arrangement",
+          "sources": ["tnJayalalithaaDisqualification2014", "tnPanneerselvamAppointment2014"]
+        },
+        {
+          "from": "2014-09-29",
+          "fromLabel": "Effective in the afternoon of 29 September 2014",
+          "to": "2015-05-22",
+          "toLabel": "Resignation effective in the forenoon of 22 May 2015",
+          "leader": "O. Panneerselvam",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK single-party majority government",
+          "basis": "The Governor appointed Panneerselvam and his Council effective in the afternoon of 29 September. Jayalalithaa's 11 May 2015 acquittal did not itself end his tenure; the operative resignation acceptance came on 22 May.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview14", "tnPanneerselvamAppointment2014", "tnPanneerselvamResignation2015", "tnSupremeCourtAssets2017"]
+        },
+        {
+          "from": "2015-05-22",
+          "fromLabel": "Effective in the forenoon of 22 May 2015",
+          "to": "2015-05-23",
+          "toLabel": "Until the successor Council took effect in the forenoon of 23 May",
+          "leader": "O. Panneerselvam",
+          "office": "Caretaker Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "Outgoing AIADMK ministry",
+          "basis": "The Governor accepted the ministry's resignation and expressly requested it to function until alternative arrangements were made. Jayalalithaa's new Council took effect the next forenoon.",
+          "confidence": "High",
+          "sources": ["tnPanneerselvamResignation2015", "tnPanneerselvamCaretaker2015", "tnJayalalithaaAppointment2015"]
+        },
+        {
+          "from": "2015-05-23",
+          "fromLabel": "Effective in the forenoon of 23 May 2015",
+          "to": "2016-05-21",
+          "leader": "J. Jayalalithaa",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK single-party majority government",
+          "basis": "The Gazette appointed Jayalalithaa's fifth ministry from the forenoon of 23 May 2015. The outgoing Council's resignation after the 2016 election took effect on 21 May 2016.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview14", "tnJayalalithaaAppointment2015", "tnOutgoingCouncil2016"]
+        },
+        {
+          "from": "2016-05-21",
+          "to": "2016-05-23",
+          "leader": "Executive office-holder unresolved",
+          "office": "Inter-ministry status not proved",
+          "party": "All India Anna Dravida Munnetra Kazhagam had won the election",
+          "coalition": null,
+          "basis": "The outgoing Council's resignation took effect on 21 May and the post-election ministry's appointment on 23 May. No separate continuation direction was located, so conventional caretaker status is not asserted as documented fact.",
+          "confidence": "High endpoints; unknown formal designation",
+          "sources": ["tnOutgoingCouncil2016", "tnJayalalithaaAppointment2016"]
+        },
+        {
+          "from": "2016-05-23",
+          "to": "2016-12-05",
+          "toLabel": "Jayalalithaa died at 11:30 p.m. on 5 December 2016",
+          "leader": "J. Jayalalithaa",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK single-party majority government",
+          "basis": "AIADMK won 134 of the 232 seats initially returned in 2016 and later both deferred constituencies, completing a 136-of-234 majority. During Jayalalithaa's hospitalization, the 11 October notification transferred portfolios and Cabinet-chairing duties to Panneerselvam but continued to identify her as Chief Minister; it did not appoint an acting CM. She died at 11:30 p.m. on 5 December.",
+          "confidence": "High",
+          "sources": ["tnJayalalithaaAppointment2016", "tnPortfolioAllocation2016", "tnJayalalithaaDeath2016", "tnAssemblyReview15"]
+        },
+        {
+          "from": "2016-12-05",
+          "fromLabel": "After Jayalalithaa's death at 11:30 p.m.",
+          "to": "2016-12-06",
+          "leader": "Chief Minister vacancy pending successor appointment",
+          "office": "Brief executive vacancy",
+          "party": null,
+          "coalition": null,
+          "basis": "Jayalalithaa's death ended her office. Panneerselvam's successor Council took effect on 6 December; no acting or caretaker Chief Minister is assigned to the intervening hours.",
+          "confidence": "High endpoints",
+          "sources": ["tnJayalalithaaDeath2016", "tnPanneerselvamAppointment2016"]
+        },
+        {
+          "from": "2016-12-06",
+          "to": "2017-02-06",
+          "leader": "O. Panneerselvam",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK single-party majority government",
+          "basis": "The Governor appointed Panneerselvam's Council effective 6 December. His later resignation was accepted on 6 February 2017.",
+          "confidence": "High",
+          "sources": ["tnPanneerselvamAppointment2016", "tnPanneerselvamCaretaker2017"]
+        },
+        {
+          "from": "2017-02-06",
+          "to": "2017-02-16",
+          "leader": "O. Panneerselvam",
+          "office": "Caretaker Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "Outgoing AIADMK ministry",
+          "basis": "On accepting the resignation, the Governor asked Panneerselvam and his Council to continue until alternative arrangements. V. K. Sasikala was chosen AIADMK legislature-party leader but was never appointed or sworn as Chief Minister; the Supreme Court restored her conviction on 14 February. Palaniswami was appointed on 16 February.",
+          "confidence": "High",
+          "sources": ["tnPanneerselvamCaretaker2017", "tnSupremeCourtAssets2017", "tnPalaniswamiAppointment2017"]
+        },
+        {
+          "from": "2017-02-16",
+          "to": "2021-05-03",
+          "toLabel": "Resignation effective in the afternoon of 3 May 2021",
+          "leader": "Edappadi K. Palaniswami",
+          "office": "Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "AIADMK government",
+          "basis": "Palaniswami was appointed on 16 February 2017 and won the 18 February confidence division by 122 ayes to 11 noes. Panneerselvam became Deputy Chief Minister in August 2017; that changed the ministry's composition, not the Chief Minister.",
+          "confidence": "High",
+          "sources": ["tnPalaniswamiAppointment2017", "tnAssemblyReview15", "tnPalaniswamiCaretaker2021"]
+        },
+        {
+          "from": "2021-05-03",
+          "fromLabel": "Effective in the afternoon of 3 May 2021",
+          "to": "2021-05-07",
+          "leader": "Edappadi K. Palaniswami",
+          "office": "Caretaker Chief Minister",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": "Outgoing AIADMK ministry",
+          "basis": "The Governor accepted the Palaniswami ministry's resignation and expressly requested it to continue until alternative arrangements. Stalin's Council was sworn on 7 May.",
+          "confidence": "High",
+          "sources": ["tnPalaniswamiCaretaker2021", "tnStalinAppointment2021"]
+        },
+        {
+          "from": "2021-05-07",
+          "to": "2026-05-05",
+          "leader": "M. K. Stalin",
+          "office": "Chief Minister",
+          "party": "Dravida Munnetra Kazhagam",
+          "coalition": "DMK single-party majority government within a pre-poll alliance",
+          "basis": "Stalin's Council was sworn on 7 May 2021. DMK itself held 133 of 234 seats, above the 118-seat majority threshold; the wider DMK-led alliance held 159. The government was not arithmetically dependent on allies for a majority.",
+          "confidence": "High",
+          "sources": ["tnStalinAppointment2021", "tnAssembly16Overview", "tnAssembly16PartyPosition", "tnStalinCaretaker2026"]
+        },
+        {
+          "from": "2026-05-05",
+          "to": "2026-05-10",
+          "leader": "M. K. Stalin",
+          "office": "Caretaker Chief Minister",
+          "party": "Dravida Munnetra Kazhagam",
+          "coalition": "Outgoing DMK ministry",
+          "basis": "The Governor accepted Stalin's and the Council's resignations on 5 May and expressly asked them to continue until alternative arrangements. The Sixteenth Assembly was dissolved effective the same date. Vijay took oath on 10 May.",
+          "confidence": "High",
+          "sources": ["tnStalinCaretaker2026", "tnDissolution2026", "tnVijayOath2026"]
+        },
+        {
+          "from": "2026-05-10",
+          "to": null,
+          "leader": "C. Joseph Vijay",
+          "office": "Chief Minister",
+          "party": "Tamilaga Vettri Kazhagam",
+          "coalition": "TVK-led formation supported by INC, CPI, CPI(M), VCK and IUML",
+          "basis": "TVK won 108 constituencies, but Vijay won two seats and then vacated Tiruchirappalli East, leaving 107 distinct TVK legislators. The formation claim was therefore 107 TVK plus 13 supporters, or 120 people, not 121. The 13 May confidence division passed 144-22; the 144 ayes included votes beyond the formation bloc and are not presented as durable coalition strength. The current Assembly page lists Vijay as Chief Minister and 107 TVK members among 227 sitting members, with seven vacancies against the 234-seat constitutional strength.",
+          "confidence": "High current office, result and confidence vote; formation support is an attributed contemporaneous claim",
+          "sources": ["tnEci2026Result", "tnEci2026Detailed", "tnFormationSupport2026", "tnVijayVacancy2026", "tnVijayOath2026", "tnConfidence2026", "tnCurrentAssembly2026"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; Speaker recognition began 27 May 2011",
+          "to": "2016-02-21",
+          "toLabel": "Ceased with effect from 21 February 2016",
+          "leader": "Vijaykant",
+          "office": "Leader of the Opposition",
+          "party": "Desiya Murpokku Dravida Kazhagam",
+          "coalition": null,
+          "basis": "The Speaker had recognized Vijaykant in 2011. After eight DMDK members resigned and the party fell from 28 to 20 members, the official Fourteenth Assembly review records that he ceased to be LoP with effect from 21 February 2016.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview14"]
+        },
+        {
+          "from": "2016-02-21",
+          "to": "2016-06-04",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "No formally recognized holder",
+          "basis": "The Fourteenth Assembly review records Vijaykant's cessation and no replacement before dissolution. The new Assembly did not formally recognize M. K. Stalin until 4 June; DMK's earlier internal choice is not backdated into the statutory office.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview14", "tnAssemblyReview15"]
+        },
+        {
+          "from": "2016-06-04",
+          "to": "2021-05-03",
+          "leader": "M. K. Stalin",
+          "office": "Leader of the Opposition",
+          "party": "Dravida Munnetra Kazhagam",
+          "coalition": null,
+          "basis": "The official Fifteenth Assembly review records the Speaker's recognition of Stalin on 4 June 2016. The office ended with dissolution of that Assembly on 3 May 2021.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview15"]
+        },
+        {
+          "from": "2021-05-04",
+          "to": "2021-05-11",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "status": "No formally recognized holder during new-Assembly transition",
+          "basis": "The prior Assembly had dissolved and the official Palaniswami LoP tenure began only on 11 May. Party leadership is not substituted for Speaker recognition.",
+          "confidence": "High",
+          "sources": ["tnAssemblyReview15", "tnPalaniswamiLop2021"]
+        },
+        {
+          "from": "2021-05-11",
+          "to": "2026-05-05",
+          "leader": "Edappadi K. Palaniswami",
+          "office": "Leader of the Opposition",
+          "party": "All India Anna Dravida Munnetra Kazhagam",
+          "coalition": null,
+          "basis": "The official Assembly profile records Palaniswami as Leader of the Opposition from 11 May 2021. The tenure ended when the Sixteenth Assembly was dissolved effective 5 May 2026.",
+          "confidence": "High",
+          "sources": ["tnPalaniswamiLop2021", "tnDissolution2026"]
+        },
+        {
+          "from": "2026-05-06",
+          "to": "2026-05-12",
+          "toLabel": "Udhayanidhi Stalin officially evidenced in office by 12 May; exact recognition date was 11 or 12 May",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Dravida Munnetra Kazhagam",
+          "status": "No Assembly LoP after dissolution; exact new recognition boundary unresolved",
+          "basis": "The Sixteenth Assembly had been dissolved. DMK selected Udhayanidhi Stalin as floor leader on 10 May and the Seventeenth Assembly first met on 11 May, but the Speaker's recognition order was not located. Official Assembly material identifies him as LoP by 12 May, so 10 May is not misrepresented as the formal start.",
+          "confidence": "High transition status; exact recognition date unknown",
+          "sources": ["tnDissolution2026", "tnUdhayanidhiSelection2026", "tnCurrentAssembly2026"]
+        },
+        {
+          "from": "2026-05-12",
+          "fromLabel": "Officially evidenced in office by 12 May 2026; exact recognition date on 11 or 12 May not located",
+          "to": null,
+          "leader": "Udhayanidhi Stalin",
+          "office": "Leader of the Opposition",
+          "party": "Dravida Munnetra Kazhagam",
+          "coalition": null,
+          "basis": "The current NeVA Assembly page lists Udhayanidhi as LoP, and official 12 May material identifies him in that office while escorting the newly elected Speaker. The exact Speaker-recognition instrument remains unlocated.",
+          "confidence": "High current holder by 12 May; exact formal start unknown",
+          "sources": ["tnCurrentAssembly2026", "tnUdhayanidhiSelection2026"]
+        }
+      ]
     }
   }
 }

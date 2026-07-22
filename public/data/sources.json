@@ -6827,5 +6827,185 @@
     "publisher": "Manipur Legislative Assembly",
     "url": "https://assembly.mn.gov.in/members/party-position",
     "type": "Official dated legislature snapshot"
+  },
+  "tnJayalalithaaDisqualification2014": {
+    "title": "Tamil Nadu Gazette recording Jayalalithaa's disqualification from 27 September 2014",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://tniuscbe.org/download/gg14/gg2/14egg219.pdf",
+    "type": "Official Gazette notification"
+  },
+  "tnPanneerselvamAppointment2014": {
+    "title": "Tamil Nadu Gazette appointing the Panneerselvam Council from the afternoon of 29 September 2014",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg14/gg1/14egg195.pdf",
+    "type": "Official appointment notification"
+  },
+  "tnPanneerselvamResignation2015": {
+    "title": "Tamil Nadu Gazette accepting the Panneerselvam Council's resignation effective 22 May 2015",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg15/gg1/15egg108.pdf",
+    "type": "Official resignation notification"
+  },
+  "tnJayalalithaaAppointment2015": {
+    "title": "Tamil Nadu Gazette appointing the Jayalalithaa Council from 23 May 2015",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg15/gg1/15egg111.pdf",
+    "type": "Official appointment notification"
+  },
+  "tnPanneerselvamCaretaker2015": {
+    "title": "Raj Bhavan account requesting the outgoing Panneerselvam Council to continue in May 2015",
+    "publisher": "The Economic Times",
+    "url": "https://economictimes.indiatimes.com/news/politics-and-nation/aiadmk-chief-jayalalithaa-invited-to-form-government-o-panneerselvams-resignation-accepted/articleshow/47380530.cms?from=mdr",
+    "type": "Contemporaneous constitutional report"
+  },
+  "tnOutgoingCouncil2016": {
+    "title": "Tamil Nadu Gazette accepting the outgoing Council's resignation effective 21 May 2016",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg16/gg2/16egg108.pdf",
+    "type": "Official resignation notification"
+  },
+  "tnJayalalithaaAppointment2016": {
+    "title": "Tamil Nadu Gazette appointing the post-election Jayalalithaa Council from 23 May 2016",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg16/gg1/16egg109.pdf",
+    "type": "Official appointment notification"
+  },
+  "tnPortfolioAllocation2016": {
+    "title": "Tamil Nadu Gazette allocating Jayalalithaa's portfolios without appointing an acting Chief Minister",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg16/gg1/16egg230.pdf",
+    "type": "Official portfolio notification"
+  },
+  "tnJayalalithaaDeath2016": {
+    "title": "Tamil Nadu Gazette recording Jayalalithaa's death at 11:30 p.m. on 5 December 2016",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg16/gg2/16egg272.pdf",
+    "type": "Official Gazette notification"
+  },
+  "tnPanneerselvamAppointment2016": {
+    "title": "Tamil Nadu Gazette appointing the Panneerselvam Council from 6 December 2016",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg16/gg1/16egg273.pdf",
+    "type": "Official appointment notification"
+  },
+  "tnPanneerselvamCaretaker2017": {
+    "title": "Governor accepts Panneerselvam's resignation and requests continuation pending alternatives",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/tamil-nadu-guv-vidyasagar-rao-accepts-o-panneerselvams-resignation-as-chief-minister-of-state-4510172/lite/",
+    "type": "Contemporaneous constitutional report"
+  },
+  "tnPalaniswamiAppointment2017": {
+    "title": "Tamil Nadu Gazette appointing the Palaniswami Council on 16 February 2017",
+    "publisher": "Tamil Nadu Gazette",
+    "url": "https://www.tniuscbe.org/download/gg17/gg1/17egg37.pdf",
+    "type": "Official appointment notification"
+  },
+  "tnSupremeCourtAssets2017": {
+    "title": "Supreme Court judgment in the disproportionate-assets case",
+    "publisher": "Supreme Court of India",
+    "url": "https://api.sci.gov.in/jonew/judis/44563.pdf",
+    "type": "Official judicial record"
+  },
+  "tnAssemblyReview14": {
+    "title": "Review of the Fourteenth Tamil Nadu Legislative Assembly",
+    "publisher": "Tamil Nadu Legislative Assembly",
+    "url": "https://assembly.tn.gov.in/archive/14th_2011/14threview.pdf",
+    "type": "Official legislature review"
+  },
+  "tnAssemblyReview15": {
+    "title": "Review of the Fifteenth Tamil Nadu Legislative Assembly",
+    "publisher": "Tamil Nadu Legislative Assembly",
+    "url": "https://assembly.tn.gov.in/archive/15th_2016/15threview.pdf",
+    "type": "Official legislature review"
+  },
+  "tnAssembly16Overview": {
+    "title": "Overview of the Sixteenth Tamil Nadu Legislative Assembly",
+    "publisher": "Tamil Nadu Legislative Assembly",
+    "url": "https://assembly.tn.gov.in/archive/16thassembly/overview.php",
+    "type": "Official legislature record"
+  },
+  "tnAssembly16PartyPosition": {
+    "title": "Party position in the Sixteenth Tamil Nadu Legislative Assembly",
+    "publisher": "Tamil Nadu Legislative Assembly",
+    "url": "https://assembly.tn.gov.in/archive/16thassembly/partyposition.php",
+    "type": "Official legislature record"
+  },
+  "tnPalaniswamiCaretaker2021": {
+    "title": "Governor accepts Palaniswami ministry resignation and requests continuation pending alternatives",
+    "publisher": "India Today / Press Trust of India",
+    "url": "https://www.indiatoday.in/elections/tamil-nadu-assembly-polls-2021/story/tn-cm-palaniswami-resigns-guv-accepts-it-dissolves-assembly-1798464-2021-05-03",
+    "type": "Contemporaneous constitutional report"
+  },
+  "tnStalinAppointment2021": {
+    "title": "Raj Bhavan appoints M. K. Stalin and schedules the Council's oath",
+    "publisher": "Raj Bhavan, Tamil Nadu",
+    "url": "https://tnrajbhavantour.tn.gov.in/tnrb-website-archive/Archives/Website1621/PressReleases/2021/PR050521-1.pdf",
+    "type": "Official appointment record"
+  },
+  "tnPalaniswamiLop2021": {
+    "title": "Official Palaniswami profile recording Leader of the Opposition from 11 May 2021",
+    "publisher": "Tamil Nadu Legislative Assembly",
+    "url": "https://assembly.tn.gov.in/16thassembly/lop.php",
+    "type": "Official legislature profile"
+  },
+  "tnStalinCaretaker2026": {
+    "title": "Lok Bhavan accepts Stalin ministry resignation and requests continuation",
+    "publisher": "Lok Bhavan, Tamil Nadu",
+    "url": "https://cdnbbsr.s3waas.gov.in/s30d73a25092e5c1c9769a9f3255caa65a/uploads/2026/05/202605052029462530.pdf",
+    "type": "Official constitutional record"
+  },
+  "tnDissolution2026": {
+    "title": "Lok Bhavan dissolves the Sixteenth Tamil Nadu Assembly effective 5 May 2026",
+    "publisher": "Lok Bhavan, Tamil Nadu",
+    "url": "https://cdnbbsr.s3waas.gov.in/s30d73a25092e5c1c9769a9f3255caa65a/uploads/2026/05/202605061735224838.pdf",
+    "type": "Official dissolution record"
+  },
+  "tnVijayOath2026": {
+    "title": "C. Joseph Vijay sworn in as Chief Minister on 10 May 2026",
+    "publisher": "Lok Bhavan, Tamil Nadu",
+    "url": "https://lokbhavan.tn.gov.in/gallery/thiru-c-joseph-vijay-was-sworn-in-as-chief-minister-of-tamil-nadu-thiru-rajendra-vishwanath-arlekar-honble-governor-of-tn-administered-the-oath-of-office-to-thiru-c-joseph-vijay-10-05-2026/",
+    "type": "Official oath record"
+  },
+  "tnEci2026Result": {
+    "title": "Tamil Nadu 2026 Assembly party-wise result",
+    "publisher": "Election Commission of India",
+    "url": "https://results.eci.gov.in/ResultAcGenMay2026/chartwiseresult-S22.htm",
+    "type": "Official election result"
+  },
+  "tnEci2026Detailed": {
+    "title": "Detailed Tamil Nadu 2026 Assembly constituency results",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/eci-backend/public/all_files/election_report/General_Election_to_the_Legislative_Assembly_of_Tamil_Nadu_2026_2026/10-Detailed_Results_1778165153.pdf",
+    "type": "Official election report"
+  },
+  "tnFormationSupport2026": {
+    "title": "Vijay-led formation claims support of 120 distinct MLAs",
+    "publisher": "Akashvani News",
+    "url": "https://newsonair.gov.in/c-joseph-vijay-led-tvk-claims-support-of-120-mlas-to-form-govt-in-tamil-nadu/",
+    "type": "Public-broadcaster government-formation report"
+  },
+  "tnVijayVacancy2026": {
+    "title": "Vijay vacates Tiruchirappalli East after winning two constituencies",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/states/tamil-nadu/2026/May/10/vijay-resigns-as-member-of-trichy-east-assembly-constituency",
+    "type": "Contemporaneous vacancy report"
+  },
+  "tnConfidence2026": {
+    "title": "Vijay government wins the 13 May 2026 confidence vote 144-22",
+    "publisher": "Akashvani News",
+    "url": "https://newsonair.gov.in/tvk-government-wins-floor-test-in-tamil-nadu-assembly/",
+    "type": "Public-broadcaster Assembly report"
+  },
+  "tnCurrentAssembly2026": {
+    "title": "Current Seventeenth Tamil Nadu Assembly office-holders and party representation",
+    "publisher": "Tamil Nadu Legislative Assembly, National eVidhan Application",
+    "url": "https://tnla.neva.gov.in/",
+    "type": "Official current-office record"
+  },
+  "tnUdhayanidhiSelection2026": {
+    "title": "DMK legislators select Udhayanidhi Stalin as floor leader",
+    "publisher": "DT Next",
+    "url": "https://www.dtnext.in/news/tamilnadu/udhayanidhi-stalin-elected-dmk-floor-leader",
+    "type": "Contemporaneous party-selection report"
   }
 }
