@@ -50,7 +50,7 @@ export function writeRuntimeMarkup(workspace) {
   for (const relativeDirectory of ["routes", "shell", "scripts/app", "styles", "gallery"]) {
     fs.cpSync(path.join(workspace, relativeDirectory), path.join(workspace, "public", relativeDirectory), { recursive: true });
   }
-  for (const relativePath of ["styles.css", "data/media-groups.json", "data/media-outlets.json", "data/media-people.json", "data/media-connections.json"]) {
+  for (const relativePath of ["styles.css", "data/sources.json", "data/media-groups.json", "data/media-outlets.json", "data/media-people.json", "data/media-connections.json"]) {
     fs.copyFileSync(path.join(workspace, relativePath), path.join(workspace, "public", relativePath));
   }
   return markup;

@@ -17,23 +17,13 @@ async function init() {
     }
     let voicesData;
     let backlogData;
-<<<<<<< Updated upstream
-    [sources, indicators, events, voicesData, backlogData] = await Promise.all([
-=======
     let boundariesData;
     let jurisdictionData, groupsData, outletsData, peopleData, connectionsData;
     [sources, indicators, events, voicesData, backlogData, boundariesData, jurisdictionData, groupsData, outletsData, peopleData, connectionsData] = await Promise.all([
->>>>>>> Stashed changes
       loadJson("data/sources.json"),
       loadJson("data/indicators.json"),
       loadJson("data/events.json"),
       loadJson("data/voices.json").catch(() => []),
-<<<<<<< Updated upstream
-      loadJson("data/research_backlog.json").catch(() => [])
-    ]);
-    voices = voicesData || [];
-    researchBacklog = backlogData || [];
-=======
       loadJson("data/research_backlog.json").catch(() => []),
       loadJson("data/india-states.geojson").catch(() => null),
       loadJson("data/event-jurisdictions.json").catch(() => null),
@@ -45,7 +35,6 @@ async function init() {
     stateBoundaries = boundariesData;
     eventJurisdictions = jurisdictionData?.eventStates || {};
     mediaGroups = groupsData; mediaOutlets = outletsData; mediaPeople = peopleData; mediaConnections = connectionsData;
->>>>>>> Stashed changes
     renderOptions();
     populateIndicatorTopics();
     renderStatsOverview();

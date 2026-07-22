@@ -62,14 +62,27 @@ try {
   const groupIds = validateIdList(mediaGroups, 'media group', ['name', 'ownership', 'lastVerified'], (item) => {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(item.lastVerified)) logError(`Media group "${item.id}" lastVerified must be YYYY-MM-DD.`);
     (item.controllerIds || []).forEach((id) => { if (!mediaPeople.some((person) => person.id === id)) logError(`Media group "${item.id}" references unknown person "${id}".`); });
+    if (!item.stake || !['verified-current', 'historical', 'not-disclosed', 'no-single-owner', 'unknown'].includes(item.stake.status)) logError(`Media group "${item.id}" must have a valid stake status.`);
+    if (item.stake?.asOf && !/^\d{4}-\d{2}(?:-\d{2})?$/.test(item.stake.asOf)) logError(`Media group "${item.id}" stake asOf must be YYYY-MM or YYYY-MM-DD.`);
+    if (!Array.isArray(item.stake?.sourceIds) || !item.stake.sourceIds.length) logError(`Media group "${item.id}" stake must cite at least one source.`);
+    (item.stake?.sourceIds || []).forEach((id) => { if (!sources[id] || sources[id].status === 'pending') logError(`Media group "${item.id}" stake references a missing or pending source "${id}".`); });
+    const stakeTotal = (item.stake?.segments || []).reduce((sum, segment) => sum + Number(segment.percentage || 0), 0);
+    (item.stake?.segments || []).forEach((segment) => {
+      if (!segment.label || !segment.displayValue || !Number.isFinite(segment.percentage) || segment.percentage < 0 || segment.percentage > 100) logError(`Media group "${item.id}" has an invalid stake segment.`);
+    });
+    if (item.stake?.segments?.length && Math.abs(stakeTotal - 100) > 0.01) logError(`Media group "${item.id}" stake segments must total 100.`);
   });
-  validateIdList(mediaPeople, 'media person', ['name', 'role']);
+  const personIds = validateIdList(mediaPeople, 'media person', ['name', 'role'], (item) => {
+    (item.groupIds || []).forEach((id) => { if (!groupIds.has(id)) logError(`Media person "${item.id}" references unknown group "${id}".`); });
+  });
   validateIdList(mediaOutlets, 'media outlet', ['name', 'type', 'groupId', 'languages'], (item) => { if (!groupIds.has(item.groupId)) logError(`Media outlet "${item.id}" references unknown group "${item.groupId}".`); });
-  const connectionTypes = new Set(['elected-office', 'party-membership', 'party-position', 'election-candidacy', 'political-donation', 'political-ownership', 'government-control']);
+  const connectionTypes = new Set(['elected-office', 'party-membership', 'party-position', 'election-candidacy', 'political-donation', 'political-ownership', 'government-control', 'government-appointment']);
   validateIdList(mediaConnections, 'media connection', ['subjectId', 'subjectType', 'connectionType', 'description'], (item) => {
     if (!connectionTypes.has(item.connectionType)) logError(`Media connection "${item.id}" has invalid connectionType.`);
     if (item.subjectType === 'group' && !groupIds.has(item.subjectId)) logError(`Media connection "${item.id}" has unknown group subject.`);
-    if (item.subjectType === 'person' && !mediaPeople.some((person) => person.id === item.subjectId)) logError(`Media connection "${item.id}" has unknown person subject.`);
+    if (!['group', 'person'].includes(item.subjectType)) logError(`Media connection "${item.id}" has invalid subjectType.`);
+    if (item.subjectType === 'person' && !personIds.has(item.subjectId)) logError(`Media connection "${item.id}" has unknown person subject.`);
+    for (const field of ['startDate', 'endDate']) if (item[field] && !/^\d{4}-\d{2}(?:-\d{2})?$/.test(item[field])) logError(`Media connection "${item.id}" ${field} must be YYYY-MM or YYYY-MM-DD.`);
   });
   logSuccess(`Validated ${mediaGroups.length} media groups and ${mediaOutlets.length} media outlets successfully.`);
 

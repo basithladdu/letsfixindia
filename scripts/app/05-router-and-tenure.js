@@ -8,7 +8,7 @@ function updatePageMeta(route) {
   } else if (route.page === "media-map") {
     const profile = route.kind === "groups" ? mediaGroups.find((item) => item.id === route.id) : mediaOutlets.find((item) => item.id === route.id);
     title = profile ? `${profile.name} | MediaMap India` : "MediaMap India | LetsFixIndia";
-    description = "A source-led directory of Indian media ownership, material business interests, and documented political connections.";
+    description = "Explore Indian news outlets and their source-backed ownership groups, business interests, and documented political connections.";
   } else if (route.page === "gallery") {
     title = route.galleryStatus ? "Submission Status | LetsFixIndia" : route.gallerySubmit ? "Submit Protest Media | LetsFixIndia" : "Public Evidence Gallery | LetsFixIndia";
     description = route.galleryStatus

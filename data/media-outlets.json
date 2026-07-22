@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "ndtv-24x7",
+    "name": "NDTV 24x7",
+    "type": "Television",
+    "languages": ["English"],
+    "groupId": "ndtv-network",
+    "status": "active",
+    "sourceIds": ["mediaNdtvCompany2026"]
+  },
+  {
+    "id": "republic-tv",
+    "name": "Republic TV",
+    "type": "Television",
+    "languages": ["English"],
+    "groupId": "republic-media-network",
+    "status": "active",
+    "sourceIds": ["mediaRepublicAbout2026"]
+  },
+  {
+    "id": "cnn-news18",
+    "name": "CNN-News18",
+    "type": "Television",
+    "languages": ["English"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "news18-india",
+    "name": "News18 India",
+    "type": "Television",
+    "languages": ["Hindi"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "cnbc-tv18",
+    "name": "CNBC-TV18",
+    "type": "Television",
+    "languages": ["English"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "cnbc-awaaz",
+    "name": "CNBC Awaaz",
+    "type": "Television",
+    "languages": ["Hindi"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "moneycontrol",
+    "name": "Moneycontrol",
+    "type": "Digital",
+    "languages": ["English", "Hindi"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "firstpost",
+    "name": "Firstpost",
+    "type": "Digital",
+    "languages": ["English"],
+    "groupId": "network18",
+    "status": "active",
+    "sourceIds": ["mediaNetwork18Corporate2026", "mediaNetwork18Portfolio2026"]
+  },
+  {
+    "id": "ani-news-service",
+    "name": "Asian News International (ANI)",
+    "type": "News agency",
+    "languages": ["English"],
+    "groupId": "ani-media",
+    "status": "active",
+    "sourceIds": ["mediaAniOana2026", "mediaAniCorporateRecord2024"]
+  },
+  {
+    "id": "pti-news-service",
+    "name": "Press Trust of India (PTI)",
+    "type": "News agency",
+    "languages": ["English", "Hindi"],
+    "groupId": "press-trust-of-india",
+    "status": "active",
+    "sourceIds": ["mediaPtiAbout2026", "mediaPtiProducts2026"]
+  },
+  {
+    "id": "ians-news-service",
+    "name": "IANS News Service",
+    "type": "News agency",
+    "languages": ["English", "Hindi"],
+    "groupId": "ians-india",
+    "status": "active",
+    "sourceIds": ["mediaIansAbout2026"]
+  },
+  {
+    "id": "uni-news-service",
+    "name": "United News of India (UNI)",
+    "type": "News agency",
+    "languages": ["English", "Hindi", "Urdu", "Kannada"],
+    "groupId": "united-news-of-india",
+    "status": "active",
+    "sourceIds": ["mediaUniAbout2026"]
+  }
+]

@@ -16,7 +16,7 @@ const references = [
   ...events.flatMap((item) => item.sources || []),
   ...indicators.flatMap((item) => item.sources || []),
   ...voices.flatMap((item) => (item.stances || []).flatMap((stance) => stance.sources || []))
-  , ...mediaGroups.flatMap((item) => [...(item.sourceIds || []), ...(item.ownershipHistory || []).flatMap((change) => change.sourceIds || [])])
+  , ...mediaGroups.flatMap((item) => [...(item.sourceIds || []), ...(item.stake?.sourceIds || []), ...(item.ownershipHistory || []).flatMap((change) => change.sourceIds || [])])
   , ...mediaOutlets.flatMap((item) => item.sourceIds || [])
   , ...mediaPeople.flatMap((item) => item.sourceIds || [])
   , ...mediaConnections.flatMap((item) => item.sourceIds || [])

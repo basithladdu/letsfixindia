@@ -8,7 +8,7 @@ function updatePageMeta(route) {
   } else if (route.page === "media-map") {
     const profile = route.kind === "groups" ? mediaGroups.find((item) => item.id === route.id) : mediaOutlets.find((item) => item.id === route.id);
     title = profile ? `${profile.name} | MediaMap India` : "MediaMap India | LetsFixIndia";
-    description = "A source-led directory of Indian media ownership, material business interests, and documented political connections.";
+    description = "Explore Indian news outlets and their source-backed ownership groups, business interests, and documented political connections.";
   } else if (route.page === "gallery") {
     title = route.galleryStatus ? "Submission Status | LetsFixIndia" : route.gallerySubmit ? "Submit Protest Media | LetsFixIndia" : "Public Evidence Gallery | LetsFixIndia";
     description = route.galleryStatus
@@ -205,12 +205,8 @@ function ensureRouteContent(route) {
   if (route.page === "map") prepareStateExplorer();
   if (route.page === "statistics") renderIndicators();
   if (route.page === "voices") renderVoices();
-<<<<<<< Updated upstream
-  if (route.page === "gallery") void activateGalleryRoute(route);
-=======
   if (route.page === "media-map") renderMediaMap();
-  if (route.page === "gallery") window.LetsFixIndiaGallery?.renderRoute();
->>>>>>> Stashed changes
+  if (route.page === "gallery") void activateGalleryRoute(route);
   if (route.page === "sources") renderSources();
   if (route.page === "submit") renderSubmissions();
   renderedPages.add(route.page);
