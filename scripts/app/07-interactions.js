@@ -320,7 +320,7 @@ function bindEvents() {
     eventDropdownList.style.display = "none";
   });
 
-  submissionForm?.addEventListener("submit", (event) => {
+  submissionForm?.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formData = new FormData(submissionForm);
     const draft = Object.fromEntries(formData.entries());
@@ -356,23 +356,24 @@ function bindEvents() {
     
     setSubmitFeedback("Sending submission to editor review queue...");
     
-    // Direct persistence to Supabase
-    if (db) {
-      db.from("letsfixindia_submissions").insert([{ data: draft }])
-        .then(({ error }) => {
-          if (error) throw error;
-          setSubmitFeedback("Submission sent directly to the editor's queue! Thank you.");
-          window.setTimeout(() => setSubmitFeedback(""), 6000);
-        })
-        .catch((error) => {
-          console.warn("Supabase submission failed; draft saved locally:", error);
-          setSubmitFeedback("Saved locally in this browser. Cloud submission is offline: " + error.message);
-          window.setTimeout(() => setSubmitFeedback(""), 6000);
-        });
-    } else {
+    // Load the database client only when a visitor actually submits this form.
+    const submissionDb = await ensureSubmissionDatabase();
+    if (!submissionDb) {
       setSubmitFeedback("Saved locally in this browser (Cloud offline).");
       window.setTimeout(() => setSubmitFeedback(""), 6000);
+      return;
     }
+    submissionDb.from("letsfixindia_submissions").insert([{ data: draft }])
+      .then(({ error }) => {
+        if (error) throw error;
+        setSubmitFeedback("Submission sent directly to the editor's queue! Thank you.");
+        window.setTimeout(() => setSubmitFeedback(""), 6000);
+      })
+      .catch((error) => {
+        console.warn("Supabase submission failed; draft saved locally:", error);
+        setSubmitFeedback("Saved locally in this browser. Cloud submission is offline: " + error.message);
+        window.setTimeout(() => setSubmitFeedback(""), 6000);
+      });
   });
 
   stateMapSelect?.addEventListener("change", (event) => {

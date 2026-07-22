@@ -8,23 +8,24 @@ async function loadJson(path) {
 
 async function init() {
   try {
+    const initialRoute = resolveRoute();
+    if (initialRoute.page === "map") {
+      void ensureStateExplorerData();
+      void ensureStateMapAssets().catch(() => {});
+    } else if (initialRoute.page === "gallery") {
+      void ensureGalleryAssets().catch(() => {});
+    }
     let voicesData;
     let backlogData;
-    let boundariesData;
-    let jurisdictionData;
-    [sources, indicators, events, voicesData, backlogData, boundariesData, jurisdictionData] = await Promise.all([
+    [sources, indicators, events, voicesData, backlogData] = await Promise.all([
       loadJson("data/sources.json"),
       loadJson("data/indicators.json"),
       loadJson("data/events.json"),
       loadJson("data/voices.json").catch(() => []),
-      loadJson("data/research_backlog.json").catch(() => []),
-      loadJson("data/india-states.geojson").catch(() => null),
-      loadJson("data/event-jurisdictions.json").catch(() => null)
+      loadJson("data/research_backlog.json").catch(() => [])
     ]);
     voices = voicesData || [];
     researchBacklog = backlogData || [];
-    stateBoundaries = boundariesData;
-    eventJurisdictions = jurisdictionData?.eventStates || {};
     renderOptions();
     populateIndicatorTopics();
     renderStatsOverview();
@@ -32,7 +33,6 @@ async function init() {
     calculateTenure();
     bindEvents();
     window.LetsFixIndiaStatistics?.init({ indicators, getTopic: indicatorTopic, getTone: indicatorTone, render: renderIndicators });
-    await window.LetsFixIndiaGallery?.init({ db });
     if (!history.state) {
       history.replaceState({ restoreTimeline: false }, "", `${window.location.pathname}${window.location.search}${window.location.hash}`);
     }
@@ -118,4 +118,3 @@ document.addEventListener("DOMContentLoaded", initSplash);
 if (document.readyState === "interactive" || document.readyState === "complete") {
   initSplash();
 }
-

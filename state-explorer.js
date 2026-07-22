@@ -4,6 +4,41 @@ const STATE_DISPLAY_NAMES = {
   "Andaman And Nicobar Islands": "Andaman and Nicobar Islands",
   "The Dadra And Nagar Haveli And Daman And Diu": "Dadra and Nagar Haveli and Daman and Diu"
 };
+let stateExplorerDataTask;
+let stateMapAssetsTask;
+
+function ensureStateExplorerData() {
+  if (!stateExplorerDataTask) {
+    stateExplorerDataTask = Promise.all([
+      fetch("/data/india-states.geojson"),
+      fetch("/data/event-jurisdictions.json"),
+    ])
+      .then(async ([boundariesResponse, jurisdictionsResponse]) => {
+        if (!boundariesResponse.ok || !jurisdictionsResponse.ok) throw new Error("State map data did not load.");
+        const [boundaries, jurisdictions] = await Promise.all([boundariesResponse.json(), jurisdictionsResponse.json()]);
+        stateBoundaries = boundaries;
+        eventJurisdictions = jurisdictions?.eventStates || {};
+        return boundaries;
+      })
+      .catch((error) => {
+        stateBoundaries = null;
+        eventJurisdictions = {};
+        console.warn(error.message);
+        return null;
+      });
+  }
+  return stateExplorerDataTask;
+}
+
+function ensureStateMapAssets() {
+  if (!stateMapAssetsTask) {
+    stateMapAssetsTask = Promise.all([
+      loadStylesheetOnce("/vendor/maplibre/maplibre-gl.css"),
+      loadScriptOnce("/vendor/maplibre/maplibre-gl.js"),
+    ]);
+  }
+  return stateMapAssetsTask;
+}
 
 function stateDisplayName(name) {
   return STATE_DISPLAY_NAMES[name] || name;
@@ -143,7 +178,8 @@ function updateMapSelection(name, fit = true) {
   if (bounds) stateMapInstance.fitBounds(bounds, { padding: 52, maxZoom: 6.4, duration: 600 });
 }
 
-function prepareStateExplorer() {
+async function prepareStateExplorer() {
+  await ensureStateExplorerData();
   if (!stateFeatures().length) {
     if (stateMapSummary) stateMapSummary.textContent = "State boundary data is unavailable.";
     if (indiaStateMap) indiaStateMap.innerHTML = `<div class="state-map-error">The boundary file could not be loaded.</div>`;
@@ -153,7 +189,15 @@ function prepareStateExplorer() {
   renderStateSelection(selectedStateName);
 }
 
-function initStateMap() {
+async function initStateMap() {
+  await prepareStateExplorer();
+  try {
+    await ensureStateMapAssets();
+  } catch (error) {
+    if (indiaStateMap) indiaStateMap.innerHTML = `<div class="state-map-error">Interactive map rendering is unavailable. Use the state selector or directory.</div>`;
+    console.error("State map assets failed:", error);
+    return;
+  }
   if (!indiaStateMap || !stateFeatures().length) return;
   if (stateMapInstance) {
     stateMapInstance.resize();
