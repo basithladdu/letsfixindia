@@ -11,26 +11,31 @@ async function init() {
     let voicesData;
     let backlogData;
     let boundariesData;
-    let jurisdictionData;
-    [sources, indicators, events, voicesData, backlogData, boundariesData, jurisdictionData] = await Promise.all([
+    let jurisdictionData, groupsData, outletsData, peopleData, connectionsData;
+    [sources, indicators, events, voicesData, backlogData, boundariesData, jurisdictionData, groupsData, outletsData, peopleData, connectionsData] = await Promise.all([
       loadJson("data/sources.json"),
       loadJson("data/indicators.json"),
       loadJson("data/events.json"),
       loadJson("data/voices.json").catch(() => []),
       loadJson("data/research_backlog.json").catch(() => []),
       loadJson("data/india-states.geojson").catch(() => null),
-      loadJson("data/event-jurisdictions.json").catch(() => null)
+      loadJson("data/event-jurisdictions.json").catch(() => null),
+      loadJson("data/media-groups.json").catch(() => []), loadJson("data/media-outlets.json").catch(() => []),
+      loadJson("data/media-people.json").catch(() => []), loadJson("data/media-connections.json").catch(() => [])
     ]);
     voices = voicesData || [];
     researchBacklog = backlogData || [];
     stateBoundaries = boundariesData;
     eventJurisdictions = jurisdictionData?.eventStates || {};
+    mediaGroups = groupsData; mediaOutlets = outletsData; mediaPeople = peopleData; mediaConnections = connectionsData;
     renderOptions();
     populateIndicatorTopics();
     renderStatsOverview();
     populateVoiceIssues();
+    populateMediaFilters();
     calculateTenure();
     bindEvents();
+    bindMediaMapEvents();
     window.LetsFixIndiaStatistics?.init({ indicators, getTopic: indicatorTopic, getTone: indicatorTone, render: renderIndicators });
     await window.LetsFixIndiaGallery?.init({ db });
     if (!history.state) {
@@ -118,4 +123,3 @@ document.addEventListener("DOMContentLoaded", initSplash);
 if (document.readyState === "interactive" || document.readyState === "complete") {
   initSplash();
 }
-

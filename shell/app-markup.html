@@ -25,6 +25,10 @@
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
           Voices
         </a>
+        <a href="/media-map" data-link>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg>
+          MediaMap
+        </a>
         <a href="/submit" data-link>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
           Submit
@@ -73,6 +77,10 @@
       <a href="/voices" data-link>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
         Voices
+      </a>
+      <a href="/media-map" data-link>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg>
+        MediaMap India
       </a>
       <a href="/submit" data-link>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
@@ -586,6 +594,7 @@
             </div>
           </div>
         </div>
+        <aside class="media-map-method" aria-label="MediaMap India submissions"><strong>MediaMap India:</strong> for ownership or political-connection corrections, include the outlet or group name, the exact proposed change, a verification date, and primary filings or attributable reporting. We publish documented formal connections, never claims of editorial or party support.</aside>
 
         <form id="submissionForm" class="submission-form" style="display: none;">
           <!-- Hidden radio selector for form state -->
@@ -684,7 +693,6 @@
         </form>
         <div id="submissionQueue" class="submission-queue"></div>
       </section>
-
       <section id="contact" class="section route-page" data-page="contact">
         <div class="section-head">
           <p class="eyebrow">Get in touch</p>
@@ -778,6 +786,10 @@
         </div>
         <div class="method-grid">
           <article>
+            <span>MediaMap India</span>
+            <h3>Ownership and political-connection entries require named, verified sources. Formal roles, memberships, candidacies, disclosed donations, political ownership, and government control may be recorded; editorial loyalty is not scored or inferred.</h3>
+          </article>
+          <article>
             <span>Official</span>
             <h3>Government, court, regulator, or statutory body record.</h3>
           </article>
@@ -815,7 +827,6 @@
           </article>
         </div>
       </section>
-
       <section id="about" class="section about-section route-page" data-page="about">
         <blockquote class="about-quote">
           <p>"Aerodynamically, the bumble bee shouldn't be able to fly, but the bumble bee doesn't know it so it goes on flying anyway."</p>
@@ -932,6 +943,24 @@
           <p style="margin: 0 0 0.75rem 0; font-size: 0.9rem; color: var(--muted);">Missing a public statement, silence record, or wish to report something else?</p>
           <a href="/submit" data-link class="text-button" style="display: inline-block; padding: 8px 16px; font-size: 0.85rem; font-weight: 750;">Report another voice / statement</a>
         </div>
+      </section>
+      <section id="media-map" class="section media-map-section route-page" data-page="media-map">
+        <a class="voice-profile-back" href="/media-map" data-link><span aria-hidden="true">&larr;</span> All media groups</a>
+        <div class="section-head">
+          <p class="eyebrow">MediaMap India</p>
+          <h2>Who owns India’s news media?</h2>
+          <p>A source-led public directory of major media groups, their outlets, ownership changes, material business interests, and documented political connections.</p>
+        </div>
+        <div class="media-map-method"><strong>What this is:</strong> documented ownership and formal connections. <strong>What it is not:</strong> a political-support or editorial-bias score. Every published claim links to a source and a last-verification date.</div>
+        <div class="media-map-toolbar">
+          <label><span>Search groups or outlets</span><input id="mediaMapSearch" type="search" placeholder="e.g. television, Hindi, company name"></label>
+          <label><span>Media type</span><select id="mediaMapTypeFilter"><option value="all">All media types</option></select></label>
+          <label><span>Language</span><select id="mediaMapLanguageFilter"><option value="all">All languages</option></select></label>
+          <button id="clearMediaMapFiltersButton" class="clear-filters-button" type="button">Clear filters</button>
+        </div>
+        <p id="mediaMapSummary" class="media-map-summary" aria-live="polite"></p>
+        <div id="mediaMapGrid" class="media-map-grid" aria-live="polite"></div>
+        <p class="media-map-contribute">Found an error or a stronger primary source? <a href="/submit" data-link>Submit a MediaMap correction</a>.</p>
       </section>
       <section id="faq" class="section faq-section route-page" data-page="faq">
         <div class="section-head">

@@ -1,6 +1,8 @@
 ---
 import SpaShell from "../components/SpaShell.astro";
 import voices from "../../data/voices.json";
+import groups from "../../data/media-groups.json";
+import outlets from "../../data/media-outlets.json";
 
 export function getStaticPaths() {
   const namedRoutes = [
@@ -13,6 +15,7 @@ export function getStaticPaths() {
     "statistics",
     "indicators",
     "voices",
+    "media-map",
     "sources",
     "submit",
     "submissions",
@@ -25,8 +28,9 @@ export function getStaticPaths() {
     "about"
   ].map((route) => ({ params: { route } }));
   const voiceRoutes = voices.map((voice) => ({ params: { route: `voices/${voice.id}` } }));
+  const mediaRoutes = [...groups.map((item) => ({ params: { route: `media-map/groups/${item.id}` } })), ...outlets.map((item) => ({ params: { route: `media-map/outlets/${item.id}` } }))];
 
-  return [{ params: { route: undefined } }, ...namedRoutes, ...voiceRoutes];
+  return [{ params: { route: undefined } }, ...namedRoutes, ...voiceRoutes, ...mediaRoutes];
 }
 ---
 <SpaShell />

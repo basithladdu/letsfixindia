@@ -4,6 +4,10 @@ const eventsPath = './data/events.json';
 const sourcesPath = './data/sources.json';
 const voicesPath = './data/voices.json';
 const indicatorsPath = './data/indicators.json';
+const mediaGroupsPath = './data/media-groups.json';
+const mediaOutletsPath = './data/media-outlets.json';
+const mediaPeoplePath = './data/media-people.json';
+const mediaConnectionsPath = './data/media-connections.json';
 
 let hasErrors = false;
 
@@ -22,6 +26,10 @@ try {
   const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf8'));
   const voices = JSON.parse(fs.readFileSync(voicesPath, 'utf8'));
   const indicators = JSON.parse(fs.readFileSync(indicatorsPath, 'utf8'));
+  const mediaGroups = JSON.parse(fs.readFileSync(mediaGroupsPath, 'utf8'));
+  const mediaOutlets = JSON.parse(fs.readFileSync(mediaOutletsPath, 'utf8'));
+  const mediaPeople = JSON.parse(fs.readFileSync(mediaPeoplePath, 'utf8'));
+  const mediaConnections = JSON.parse(fs.readFileSync(mediaConnectionsPath, 'utf8'));
 
   logSuccess('Successfully parsed all JSON databases.');
 
@@ -36,6 +44,34 @@ try {
       logError(`Source "${id}" has unknown status "${src.status}".`);
     }
   }
+
+  const validateIdList = (items, label, required, extra = () => {}) => {
+    const ids = new Set();
+    if (!Array.isArray(items)) return logError(`${label} must contain an array.`);
+    items.forEach((item, index) => {
+      if (!item.id || typeof item.id !== 'string') return logError(`${label}[${index}] is missing an id.`);
+      if (ids.has(item.id)) logError(`Duplicate ${label} id: "${item.id}".`);
+      ids.add(item.id);
+      required.forEach((field) => { if (item[field] === undefined || item[field] === null || item[field] === '') logError(`${label} "${item.id}" is missing ${field}.`); });
+      if (!Array.isArray(item.sourceIds) || !item.sourceIds.length) logError(`${label} "${item.id}" needs at least one sourceId.`);
+      else item.sourceIds.forEach((id) => { if (!sources[id] || sources[id].status === 'pending') logError(`${label} "${item.id}" references a missing or pending source "${id}".`); });
+      extra(item);
+    });
+    return ids;
+  };
+  const groupIds = validateIdList(mediaGroups, 'media group', ['name', 'ownership', 'lastVerified'], (item) => {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(item.lastVerified)) logError(`Media group "${item.id}" lastVerified must be YYYY-MM-DD.`);
+    (item.controllerIds || []).forEach((id) => { if (!mediaPeople.some((person) => person.id === id)) logError(`Media group "${item.id}" references unknown person "${id}".`); });
+  });
+  validateIdList(mediaPeople, 'media person', ['name', 'role']);
+  validateIdList(mediaOutlets, 'media outlet', ['name', 'type', 'groupId', 'languages'], (item) => { if (!groupIds.has(item.groupId)) logError(`Media outlet "${item.id}" references unknown group "${item.groupId}".`); });
+  const connectionTypes = new Set(['elected-office', 'party-membership', 'party-position', 'election-candidacy', 'political-donation', 'political-ownership', 'government-control']);
+  validateIdList(mediaConnections, 'media connection', ['subjectId', 'subjectType', 'connectionType', 'description'], (item) => {
+    if (!connectionTypes.has(item.connectionType)) logError(`Media connection "${item.id}" has invalid connectionType.`);
+    if (item.subjectType === 'group' && !groupIds.has(item.subjectId)) logError(`Media connection "${item.id}" has unknown group subject.`);
+    if (item.subjectType === 'person' && !mediaPeople.some((person) => person.id === item.subjectId)) logError(`Media connection "${item.id}" has unknown person subject.`);
+  });
+  logSuccess(`Validated ${mediaGroups.length} media groups and ${mediaOutlets.length} media outlets successfully.`);
 
   // Validate Events
   const eventIds = new Set();

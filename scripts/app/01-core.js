@@ -15,6 +15,7 @@ let events = [];
 let sources = {};
 let indicators = [];
 let voices = [];
+let mediaGroups = [], mediaOutlets = [], mediaPeople = [], mediaConnections = [];
 let researchBacklog = [];
 let stateBoundaries = null;
 let eventJurisdictions = {};
@@ -171,9 +172,16 @@ const voiceSearchInput = document.querySelector("#voiceSearchInput");
 const voiceSortFilter = document.querySelector("#voiceSortFilter");
 const voiceIssueSpotlight = document.querySelector("#voiceIssueSpotlight");
 const clearVoiceFiltersButton = document.querySelector("#clearVoiceFiltersButton");
+const mediaMapGrid = document.querySelector("#mediaMapGrid");
+const mediaMapSearch = document.querySelector("#mediaMapSearch");
+const mediaMapTypeFilter = document.querySelector("#mediaMapTypeFilter");
+const mediaMapLanguageFilter = document.querySelector("#mediaMapLanguageFilter");
+const clearMediaMapFiltersButton = document.querySelector("#clearMediaMapFiltersButton");
+const mediaMapSummary = document.querySelector("#mediaMapSummary");
 
 const voiceState = { query: "", field: "all", stance: "all", issue: "all", sort: "editorial" };
 const sourceState = { query: "", status: "all" };
+const mediaMapState = { query: "", type: "all", language: "all" };
 const renderedPages = new Set();
 
 const sourceFilterStatus = (id, source, usage) => {

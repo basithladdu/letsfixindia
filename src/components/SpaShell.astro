@@ -1,6 +1,8 @@
 ---
 import { composeShell } from "../../tools/compose-shell.mjs";
 import voices from "../../data/voices.json";
+import mediaGroups from "../../data/media-groups.json";
+import mediaOutlets from "../../data/media-outlets.json";
 
 const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 const routeMeta = {
@@ -14,6 +16,7 @@ const routeMeta = {
   "/statistics": ["Statistics | LetsFixIndia", "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.", "/statistics"],
   "/indicators": ["Statistics | LetsFixIndia", "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.", "/statistics"],
   "/voices": ["Public Voices | LetsFixIndia", "Documented public statements, silence, and institutional responses to major Modi-era controversies.", "/voices"],
+  "/media-map": ["MediaMap India | LetsFixIndia", "A source-led directory of Indian media ownership, material business interests, and documented political connections.", "/media-map"],
   "/sources": ["Source Ledger | LetsFixIndia", "Search the public source ledger and inspect linked, pending, and placeholder evidence records.", "/sources"],
   "/submit": ["Submit a Record | LetsFixIndia", "Propose a sourced public-record entry for editorial review.", "/submit"],
   "/submissions": ["Submit a Record | LetsFixIndia", "Propose a sourced public-record entry for editorial review.", "/submit"],
@@ -27,10 +30,13 @@ const routeMeta = {
 };
 const voiceId = pathname.startsWith("/voices/") ? decodeURIComponent(pathname.slice("/voices/".length)) : "";
 const voice = voiceId ? voices.find((item) => item.id === voiceId) : null;
+const mediaMatch = pathname.match(/^\/media-map\/(groups|outlets)\/([^/]+)$/);
+const mediaItem = mediaMatch ? (mediaMatch[1] === "groups" ? mediaGroups : mediaOutlets).find((item) => item.id === decodeURIComponent(mediaMatch[2])) : null;
 const dynamicMeta = voice
   ? [`${voice.name} - Public Voice Record | LetsFixIndia`, `Source-linked public statements and documented research gaps for ${voice.name}.`, `/voices/${voice.id}`]
   : null;
-const [title, description, canonicalPath, indexable = true] = routeMeta[pathname] || dynamicMeta || ["Page Not Found | LetsFixIndia", "This address is not part of the current LetsFixIndia site.", pathname, false];
+const mediaMeta = mediaItem ? [`${mediaItem.name} | MediaMap India`, `Source-linked ownership information for ${mediaItem.name}.`, pathname] : null;
+const [title, description, canonicalPath, indexable = true] = routeMeta[pathname] || dynamicMeta || mediaMeta || ["Page Not Found | LetsFixIndia", "This address is not part of the current LetsFixIndia site.", pathname, false];
 const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const canonicalUrl = new URL(canonicalPath, Astro.site).href;
 let shellHtml = composeShell(process.cwd());
