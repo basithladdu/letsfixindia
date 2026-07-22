@@ -6533,5 +6533,137 @@
     "publisher": "Jammu and Kashmir Legislative Assembly, National eVidhan Application",
     "url": "https://jkla.neva.gov.in/",
     "type": "Official current-office record"
+  },
+  "wbAssemblyOverview": {
+    "title": "West Bengal Legislative Assembly historical overview",
+    "publisher": "West Bengal Legislative Assembly Library",
+    "url": "https://lalib.wb.gov.in/showOverview",
+    "type": "Official legislature history"
+  },
+  "wbEciAssemblyReports": {
+    "title": "West Bengal Legislative Assembly election statistical reports",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/statistical-reports",
+    "type": "Official election-results repository"
+  },
+  "wbAitc2011Seats": {
+    "title": "Contemporaneous report recording AITC's 184-seat strength after the 2011 election",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/congress-ministers-resign-from-west-bengal-government-set-sights-at-cabinet-berths-499943",
+    "type": "Contemporaneous government-composition report"
+  },
+  "wbCongressWithdrawal2012": {
+    "title": "Congress withdraws support from the West Bengal ministry in September 2012",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/india/2012/Sep/22/congress-withdraws-support-from-mamata-government-quits-ministry-408651.html",
+    "type": "Contemporaneous coalition-change report"
+  },
+  "wbMamataCaretaker2016": {
+    "title": "Governor accepts Mamata Banerjee ministry's resignation and requests continuation in 2016",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/india/mamata-resigns-ahead-of-being-sworn-in-as-new-cm/articleshow/52438865.cms",
+    "type": "Contemporaneous constitutional report"
+  },
+  "wbMamataOath2016": {
+    "title": "Mamata Banerjee and second ministry take oath on 27 May 2016",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/india-news-india/team-mamata-takes-oath-in-name-of-ishwar-and-allah-2822719/",
+    "type": "Contemporaneous oath report"
+  },
+  "wbMamataCaretaker2021": {
+    "title": "Governor accepts Mamata Banerjee ministry's resignation and requests continuation in 2021",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/west-bengal-assembly-election-results-2021-mamata-banerjee-to-take-oath-as-west-bengal-chief-minister-for-third-time-on-may-5-2427307",
+    "type": "Contemporaneous constitutional report"
+  },
+  "wbMamataOath2021": {
+    "title": "Mamata Banerjee takes oath as West Bengal Chief Minister on 5 May 2021",
+    "publisher": "Press Information Bureau",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1716105",
+    "type": "Official oath record"
+  },
+  "wbDissolution2026": {
+    "title": "Governor dissolves the Seventeenth West Bengal Assembly effective 7 May 2026",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/kolkata/governor-dissolves-west-bengal-assembly-amid-mamata-refusing-to-resign-as-cm-10678469/",
+    "type": "Contemporaneous report quoting gubernatorial order"
+  },
+  "wbTransition2026": {
+    "title": "Raj Bhavan position on the May 2026 cessation of the outgoing West Bengal ministry",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/india-news/mamata-banerjee-no-longer-bengal-cm-governor-dissolves-cabinet-101778162349319.html",
+    "type": "Contemporaneous constitutional report"
+  },
+  "wbSuvenduOath2026": {
+    "title": "Suvendu Adhikari and first members of the new West Bengal ministry take oath",
+    "publisher": "Press Information Bureau, Prime Minister's Office",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2259319&lang=1&reg=6",
+    "type": "Official contemporaneous oath record"
+  },
+  "wbCurrentCm2026": {
+    "title": "Meet the Chief Minister: Suvendu Adhikari",
+    "publisher": "Government of West Bengal",
+    "url": "https://wb.gov.in/government-meet-the-chief-minister.aspx",
+    "type": "Official current-office record"
+  },
+  "wbCurrentAssembly2026": {
+    "title": "Current West Bengal Legislative Assembly",
+    "publisher": "West Bengal Legislative Assembly",
+    "url": "https://assembly.wb.gov.in/",
+    "type": "Official current-office record"
+  },
+  "wbEci2026Initial": {
+    "title": "West Bengal 2026 party-wise Assembly result for 293 initially declared constituencies",
+    "publisher": "Election Commission of India",
+    "url": "https://results.eci.gov.in/ResultAcGenMay2026/partywiseresult-S25.htm",
+    "type": "Official election result"
+  },
+  "wbEciFalta2026": {
+    "title": "Falta Assembly constituency rerun result, 2026",
+    "publisher": "Election Commission of India",
+    "url": "https://results.eci.gov.in/ResultAcGenMay2026/ConstituencywiseS25144.htm",
+    "type": "Official election result"
+  },
+  "wbGovernorAppointment2026": {
+    "title": "Appointment of R. N. Ravi as Governor of West Bengal",
+    "publisher": "President of India",
+    "url": "https://presidentofindia.nic.in/press_releases/press-communique-32",
+    "type": "Official appointment record"
+  },
+  "wbMannanLop2016": {
+    "title": "Congress selects Abdul Mannan as West Bengal opposition leader",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/abdul-mannan-to-be-new-leader-of-opposition-in-west-bengal-assembly-1413659",
+    "type": "Contemporaneous legislature report"
+  },
+  "wbSuvenduLop2021": {
+    "title": "BJP legislature party selects Suvendu Adhikari as opposition leader",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/suvendu-adhikari-west-bengal-assembly-leader-of-opposition-mamata-banerjee-7310108/",
+    "type": "Contemporaneous party and legislature report"
+  },
+  "wbAssemblyLopDocument": {
+    "title": "West Bengal Assembly member document identifying the Seventeenth Assembly opposition leader",
+    "publisher": "West Bengal Legislative Assembly",
+    "url": "https://assembly.wb.gov.in/OtherPDF/LMLA.pdf",
+    "type": "Official legislature record"
+  },
+  "wbLopCourt2026": {
+    "title": "Sobhandeb Chattopadhyay v. Speaker, order refusing interim relief in the 2026 LoP dispute",
+    "publisher": "Calcutta High Court (document mirror)",
+    "url": "https://www.livelaw.in/pdf_upload/2026/06/18/display-680942.pdf",
+    "type": "High Court order mirror"
+  },
+  "wbCurrentLop2026": {
+    "title": "Lok Sabha Secretariat event identifying Ritabrata Banerjee as West Bengal Leader of the Opposition",
+    "publisher": "Press Information Bureau, Lok Sabha Secretariat",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2280729&lang=1&reg=48",
+    "type": "Official current-office record"
+  },
+  "wbLopAppeal2026": {
+    "title": "Calcutta High Court Division Bench reserves order on interim appeal in West Bengal LoP dispute",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/kolkata/calcutta-hc-reserves-order-on-plea-seeking-interim-stay-on-lop-appointment/articleshow/132461856.cms",
+    "type": "Contemporaneous court report"
   }
 }

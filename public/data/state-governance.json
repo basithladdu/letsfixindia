@@ -5319,6 +5319,163 @@
           "sources": ["jkSunilLop2024", "jkCurrentAssembly2026"]
         }
       ]
+    },
+    "West Bengal": {
+      "kind": "state",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; first ministry began 20 May 2011",
+          "to": "2016-05-25",
+          "leader": "Mamata Banerjee",
+          "office": "Chief Minister",
+          "party": "All India Trinamool Congress",
+          "coalition": "AITC single-party majority government",
+          "basis": "Continuation of Banerjee's first ministry. Congress had withdrawn from the ministry in September 2012, before this record begins, but AITC's own 184 seats still exceeded the 148-seat majority threshold.",
+          "confidence": "High",
+          "sources": ["wbAssemblyOverview", "wbAitc2011Seats", "wbCongressWithdrawal2012"]
+        },
+        {
+          "from": "2016-05-25",
+          "to": "2016-05-27",
+          "leader": "Mamata Banerjee",
+          "office": "Caretaker Chief Minister",
+          "party": "All India Trinamool Congress",
+          "coalition": "Outgoing AITC ministry",
+          "basis": "The Governor accepted the ministry's resignation, dissolved the outgoing Assembly and expressly requested Banerjee and her colleagues to continue until alternate arrangements. The new ministry was sworn on 27 May.",
+          "confidence": "High",
+          "sources": ["wbMamataCaretaker2016", "wbMamataOath2016"]
+        },
+        {
+          "from": "2016-05-27",
+          "to": "2021-05-03",
+          "leader": "Mamata Banerjee",
+          "office": "Chief Minister",
+          "party": "All India Trinamool Congress",
+          "coalition": "AITC single-party majority government",
+          "basis": "Banerjee's second ministry was sworn after AITC won 211 of 294 seats in 2016. She tendered the Council's resignation after the 2021 result.",
+          "confidence": "High",
+          "sources": ["wbAssemblyOverview", "wbEciAssemblyReports", "wbMamataOath2016", "wbMamataCaretaker2021"]
+        },
+        {
+          "from": "2021-05-03",
+          "to": "2021-05-05",
+          "leader": "Mamata Banerjee",
+          "office": "Caretaker Chief Minister",
+          "party": "All India Trinamool Congress",
+          "coalition": "Outgoing AITC ministry",
+          "basis": "The Governor accepted the outgoing Council's resignation and requested it to continue until the new government was formed. Banerjee took the next oath on 5 May.",
+          "confidence": "High",
+          "sources": ["wbMamataCaretaker2021", "wbMamataOath2021"]
+        },
+        {
+          "from": "2021-05-05",
+          "to": "2026-05-07",
+          "leader": "Mamata Banerjee",
+          "office": "Chief Minister",
+          "party": "All India Trinamool Congress",
+          "coalition": "AITC single-party majority government",
+          "basis": "Banerjee's third ministry followed AITC's 213 wins among the 292 seats initially decided in 2021; victories in the two deferred constituencies later made the completed result 215 of 294. Raj Bhavan treated the ministry as ceasing when the outgoing Assembly was dissolved effective 7 May 2026, although no separately published dismissal Gazette was located.",
+          "confidence": "High ministry and electoral basis; moderate precise cessation mechanism",
+          "sources": ["wbMamataOath2021", "wbEciAssemblyReports", "wbDissolution2026", "wbTransition2026"]
+        },
+        {
+          "from": "2026-05-07",
+          "to": "2026-05-09",
+          "leader": "Executive office-holder unresolved",
+          "office": "Executive status disputed or unresolved",
+          "party": null,
+          "coalition": null,
+          "status": "Raj Bhavan reportedly treated the outgoing ministry as having ceased, but the retrieved public record does not conclusively establish a vacancy",
+          "basis": "Governor R. N. Ravi dissolved the Seventeenth Assembly under Article 174(2)(b), effective 7 May, after Banerjee did not tender the customary post-defeat resignation. Contemporaneous reporting attributed to Raj Bhavan the position that the Council had ceased and the Governor would administer the interval. Dissolution alone does not prove ministerial cessation, and no separate Article 164 dismissal or cessation instrument, accepted resignation, caretaker direction, or Article 356 proclamation was located. The legal executive status therefore remains unresolved rather than being encoded as a proved vacancy, caretaker ministry, Governor's Rule or President's Rule.",
+          "confidence": "High on dissolution and absence of a located Article 356 proclamation; moderate on executive status; unknown whether a separate unpublished or unlocated cessation instrument exists",
+          "sources": ["wbDissolution2026", "wbTransition2026", "wbSuvenduOath2026"]
+        },
+        {
+          "from": "2026-05-09",
+          "to": null,
+          "leader": "Suvendu Adhikari",
+          "office": "Chief Minister",
+          "party": "Bharatiya Janata Party",
+          "coalition": "BJP single-party majority government",
+          "basis": "Adhikari was sworn in on 9 May after BJP had won 207 of the 293 seats then declared. BJP won the subsequent Falta rerun, making the completed election result 208 of 294. The official state and Assembly pages identify Adhikari as current Chief Minister; R. N. Ravi remains the separately appointed Governor.",
+          "confidence": "High",
+          "sources": ["wbEci2026Initial", "wbEciFalta2026", "wbSuvenduOath2026", "wbCurrentCm2026", "wbCurrentAssembly2026", "wbGovernorAppointment2026"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; recognition began in the 15th Assembly",
+          "to": "2016-05-25",
+          "leader": "Surjya Kanta Mishra",
+          "office": "Leader of the Opposition",
+          "party": "Communist Party of India (Marxist)",
+          "coalition": "Left Front",
+          "basis": "Mishra was the formal opposition leader in the Fifteenth Assembly. The in-scope endpoint is the Assembly's dissolution on 25 May 2016; the original pre-2014 recognition instrument was not required for the opening boundary.",
+          "confidence": "High holder and endpoint",
+          "sources": ["wbAssemblyOverview", "wbMamataCaretaker2016"]
+        },
+        {
+          "from": "2016-05",
+          "fromLabel": "Congress legislators selected Mannan on 29 May 2016; exact Speaker-recognition date not verified",
+          "to": "2021-05",
+          "toLabel": "Close of the Sixteenth Assembly; exact cessation notification not located",
+          "leader": "Abdul Mannan",
+          "office": "Leader of the Opposition",
+          "party": "Indian National Congress",
+          "coalition": null,
+          "basis": "Congress won 44 seats and selected Mannan as its legislature-party and opposition leader. Assembly records establish that he held the formal LoP office during the Sixteenth Assembly, but the original Speaker-recognition instrument and exact start date were not located; the 29 May selection date is not misrepresented as formal recognition.",
+          "confidence": "High holder; exact formal recognition and cessation dates unknown",
+          "sources": ["wbMannanLop2016", "wbAssemblyLopDocument"]
+        },
+        {
+          "from": "2021-05",
+          "fromLabel": "BJP legislators selected Adhikari on 10 May 2021; exact Speaker-recognition date not verified",
+          "to": "2026-05-07",
+          "leader": "Suvendu Adhikari",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "BJP won 77 seats and its legislature party selected Adhikari on 10 May. Assembly records establish that he held the LoP office in the Seventeenth Assembly, which ended when that Assembly was dissolved effective 7 May 2026. The party-selection date is recorded without inventing the exact date of the Speaker's formal recognition.",
+          "confidence": "High holder and endpoint; exact formal recognition start unknown",
+          "sources": ["wbSuvenduLop2021", "wbAssemblyLopDocument", "wbDissolution2026"]
+        },
+        {
+          "from": "2026-05-08",
+          "to": "2026-05-14",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "All India Trinamool Congress",
+          "status": "New-Assembly transition before any operative recognition",
+          "basis": "AITC was the largest opposition party, but the new House had not yet produced an operative LoP recognition.",
+          "confidence": "High",
+          "sources": ["wbEci2026Initial", "wbLopCourt2026"]
+        },
+        {
+          "from": "2026-05-15",
+          "to": "2026-06-02",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "All India Trinamool Congress",
+          "status": "Disputed and provisional: Sobhandeb Chattopadhyay claimed oral recognition, but no settled written certification was located",
+          "basis": "AITC initially nominated Chattopadhyay and he performed the customary escort after the Speaker's election. The later High Court record shows a signature dispute, further verification and no safe basis to present this interval as a completed, uncontested statutory tenure.",
+          "confidence": "High that status was disputed; low as a settled formal tenure",
+          "sources": ["wbLopCourt2026"]
+        },
+        {
+          "from": "2026-06-03",
+          "to": null,
+          "leader": "Ritabrata Banerjee",
+          "office": "Leader of the Opposition",
+          "party": "Elected on an All India Trinamool Congress ticket; party-membership dispute pending",
+          "coalition": null,
+          "basis": "The Speaker issued a written recognition order after 58 of the 80 AITC-elected MLAs supported Banerjee's request and 56 appeared personally. The High Court refused interim relief on 18 June; a Division Bench reserved its order on the interim appeal on 17 July. No superseding decision was located by the 22 July cutoff, and a 3 July official parliamentary release identifies him as LoP.",
+          "confidence": "High that the recognition was operative at the cutoff; merits and interim appeal pending",
+          "sources": ["wbLopCourt2026", "wbCurrentLop2026", "wbLopAppeal2026"]
+        }
+      ]
     }
   }
 }
