@@ -1,14 +1,71 @@
-// Initialize Supabase using the credentials provided
 const supabaseUrl = 'https://pjonynkzgsfwojwboixi.supabase.co';
 const supabaseKey = 'sb_publishable_YH3S94knvXqBI3a960u01w_fqgmz0LC';
 let db;
+let submissionDbTask;
+let galleryAssetsTask;
+const runtimeAssetLoads = new Map();
 
-try {
-  if (typeof window !== 'undefined' && window.supabase) {
-    db = window.supabase.createClient(supabaseUrl, supabaseKey);
+function loadScriptOnce(src) {
+  const url = new URL(src, document.baseURI).href;
+  const existing = Array.from(document.scripts).find((script) => script.src === url);
+  if (existing) return Promise.resolve(existing);
+  if (runtimeAssetLoads.has(url)) return runtimeAssetLoads.get(url);
+  const task = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = url;
+    script.async = true;
+    script.addEventListener("load", () => resolve(script), { once: true });
+    script.addEventListener("error", () => reject(new Error(`Unable to load ${src}`)), { once: true });
+    document.body.append(script);
+  });
+  runtimeAssetLoads.set(url, task);
+  return task;
+}
+
+function loadStylesheetOnce(href) {
+  const url = new URL(href, document.baseURI).href;
+  const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).find((link) => link.href === url);
+  if (existing) return Promise.resolve(existing);
+  if (runtimeAssetLoads.has(url)) return runtimeAssetLoads.get(url);
+  const task = new Promise((resolve, reject) => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = url;
+    link.addEventListener("load", () => resolve(link), { once: true });
+    link.addEventListener("error", () => reject(new Error(`Unable to load ${href}`)), { once: true });
+    document.head.append(link);
+  });
+  runtimeAssetLoads.set(url, task);
+  return task;
+}
+
+function ensureGalleryAssets() {
+  if (!galleryAssetsTask) {
+    galleryAssetsTask = Promise.all([
+      loadScriptOnce("/gallery-embeds.js?v=20260721-2"),
+      loadScriptOnce("/vendor/blockhash/blockhash-core.js?v=0.1.0"),
+    ])
+      .then(() => loadScriptOnce("/gallery-deduplication.js?v=1"))
+      .then(() => loadScriptOnce("/gallery.js?v=20260722-1"));
   }
-} catch (error) {
-  console.error("Supabase init failed:", error);
+  return galleryAssetsTask;
+}
+
+function ensureSubmissionDatabase() {
+  if (db) return Promise.resolve(db);
+  if (!submissionDbTask) {
+    submissionDbTask = loadScriptOnce("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2")
+      .then(() => {
+        if (!window.supabase) throw new Error("Supabase did not initialize.");
+        db = window.supabase.createClient(supabaseUrl, supabaseKey);
+        return db;
+      })
+      .catch((error) => {
+        console.warn("Supabase init failed:", error);
+        return null;
+      });
+  }
+  return submissionDbTask;
 }
 
 let events = [];

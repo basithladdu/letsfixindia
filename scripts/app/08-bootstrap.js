@@ -8,6 +8,13 @@ async function loadJson(path) {
 
 async function init() {
   try {
+    const initialRoute = resolveRoute();
+    if (initialRoute.page === "map") {
+      void ensureStateExplorerData();
+      void ensureStateMapAssets().catch(() => {});
+    } else if (initialRoute.page === "gallery") {
+      void ensureGalleryAssets().catch(() => {});
+    }
     let voicesData;
     let backlogData;
     let boundariesData;
@@ -37,7 +44,6 @@ async function init() {
     bindEvents();
     bindMediaMapEvents();
     window.LetsFixIndiaStatistics?.init({ indicators, getTopic: indicatorTopic, getTone: indicatorTone, render: renderIndicators });
-    await window.LetsFixIndiaGallery?.init({ db });
     if (!history.state) {
       history.replaceState({ restoreTimeline: false }, "", `${window.location.pathname}${window.location.search}${window.location.hash}`);
     }

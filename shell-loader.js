@@ -40,17 +40,15 @@
     const status = document.getElementById("shellLoaderStatus");
     try {
       const [appMarkup, scriptsMarkup, progressMarkup] = await Promise.all([
-        readText("/shell/app-markup.html?v=20260721-2"),
-        readText("/shell/scripts.html?v=20260721-1"),
+        readText("/shell/app-markup.html?v=20260722-3"),
+        readText("/shell/scripts.html?v=20260722-2"),
         readText("/shell/mobile-progress.html?v=20260721-1")
       ]);
       appendMarkup(appMarkup);
 
       const scriptsTemplate = document.createElement("template");
       scriptsTemplate.innerHTML = scriptsMarkup;
-      for (const sourceScript of scriptsTemplate.content.querySelectorAll("script")) {
-        await runScript(sourceScript);
-      }
+      await Promise.all(Array.from(scriptsTemplate.content.querySelectorAll("script"), runScript));
       appendMarkup(progressMarkup);
       status?.remove();
     } catch (error) {

@@ -169,6 +169,24 @@ function setActiveNav(page) {
   });
 }
 
+async function activateGalleryRoute(route) {
+  try {
+    await ensureGalleryAssets();
+    await window.LetsFixIndiaGallery?.init();
+    if (resolveRoute().page !== "gallery") return;
+    await window.LetsFixIndiaGallery?.renderRoute();
+    requestAnimationFrame(() => {
+      if (route.galleryStatus) window.LetsFixIndiaGallery?.openStatus(route.reference);
+      else if (route.gallerySubmit) window.LetsFixIndiaGallery?.openUpload();
+      else window.LetsFixIndiaGallery?.closeUpload();
+    });
+  } catch (error) {
+    const grid = document.getElementById("galleryGrid");
+    if (grid) grid.innerHTML = `<p class="empty-state">The gallery did not load. Refresh and try again.</p>`;
+    console.error("Gallery initialization failed:", error);
+  }
+}
+
 function ensureRouteContent(route) {
   if (route.page === "record") {
     renderRecord(route.id);
@@ -176,12 +194,7 @@ function ensureRouteContent(route) {
   }
     if (renderedPages.has(route.page)) {
       if (route.page === "gallery") {
-        window.LetsFixIndiaGallery?.refresh();
-        requestAnimationFrame(() => {
-          if (route.galleryStatus) window.LetsFixIndiaGallery?.openStatus(route.reference);
-          else if (route.gallerySubmit) window.LetsFixIndiaGallery?.openUpload();
-          else window.LetsFixIndiaGallery?.closeUpload();
-        });
+        void activateGalleryRoute(route);
       }
       if (route.page === "voices") renderVoices();
       if (route.page === "media-map") renderMediaMap();
@@ -193,16 +206,10 @@ function ensureRouteContent(route) {
   if (route.page === "statistics") renderIndicators();
   if (route.page === "voices") renderVoices();
   if (route.page === "media-map") renderMediaMap();
-  if (route.page === "gallery") window.LetsFixIndiaGallery?.renderRoute();
+  if (route.page === "gallery") void activateGalleryRoute(route);
   if (route.page === "sources") renderSources();
   if (route.page === "submit") renderSubmissions();
-
-
   renderedPages.add(route.page);
-  if (route.page === "gallery") {
-    if (route.galleryStatus) requestAnimationFrame(() => window.LetsFixIndiaGallery?.openStatus(route.reference));
-    else if (route.gallerySubmit) requestAnimationFrame(() => window.LetsFixIndiaGallery?.openUpload());
-  }
 }
 
 function renderRoute(options = {}) {
@@ -214,8 +221,7 @@ function renderRoute(options = {}) {
   routePages.forEach((section) => section.classList.toggle("is-active", section.dataset.page === route.page));
   if (route.page === "map") {
     requestAnimationFrame(() => {
-      initStateMap();
-      stateMapInstance?.resize();
+      void initStateMap().then(() => stateMapInstance?.resize());
     });
   }
   triggerRouteMotion(route.page);
