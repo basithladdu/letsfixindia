@@ -6383,5 +6383,155 @@
     "publisher": "ThePrint / PTI",
     "url": "https://theprint.in/india/congress-appoints-karan-mahara-as-uttarakhand-unit-president/910996/",
     "type": "Contemporaneous party and legislature report"
+  },
+  "jkEciAssemblyReports": {
+    "title": "Jammu and Kashmir Legislative Assembly election statistical reports, 2014 and 2024",
+    "publisher": "Election Commission of India",
+    "url": "https://www.eci.gov.in/statistical-reports",
+    "type": "Official election-results repository"
+  },
+  "jkGadOfficeArchive": {
+    "title": "Chief Ministers, Governors and Lieutenant Governors of Jammu and Kashmir",
+    "publisher": "General Administration Department, Government of Jammu and Kashmir",
+    "url": "https://www.jkgad.nic.in/PDF/cmarchive.PDF",
+    "type": "Official office-holder chronology"
+  },
+  "jkOmarCaretaker2014": {
+    "title": "Omar Abdullah steps down as caretaker Chief Minister after the hung 2014 result",
+    "publisher": "NDTV",
+    "url": "https://www.ndtv.com/india-news/omar-abdullah-decides-to-step-down-as-caretaker-chief-minister-jammu-and-kashmir-headed-for-governor-724647",
+    "type": "Contemporaneous constitutional report"
+  },
+  "jkGovernorRuleGazette2015": {
+    "title": "Proclamation P-1/15 imposing Governor's Rule from 8 January 2015",
+    "publisher": "Jammu and Kashmir Government Gazette",
+    "url": "https://jkgad.nic.in/common/showOrder.aspx?actCode=N11698",
+    "type": "Official constitutional proclamation"
+  },
+  "jkGovernorRuleGazette2016": {
+    "title": "Proclamation P-1/16 recording the PDP-BJP ministry, Mufti Mohammad Sayeed's death and Governor's Rule",
+    "publisher": "Jammu and Kashmir Government Gazette",
+    "url": "https://rgp.jk.gov.in/pdf/GAZETTE%202014/2015/Gazette%20No.%2043%20%2821-1-2016%29.pdf",
+    "type": "Official constitutional proclamation"
+  },
+  "jkMuftiDeath2016": {
+    "title": "Government condolence record for Chief Minister Mufti Mohammad Sayeed",
+    "publisher": "Press Information Bureau, Ministry of Home Affairs",
+    "url": "https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=134273",
+    "type": "Official contemporaneous record"
+  },
+  "jkMehboobaProfile": {
+    "title": "Mehbooba Mufti leadership profile and office chronology",
+    "publisher": "Jammu and Kashmir Peoples Democratic Party",
+    "url": "https://jkpdp.in/leadership/ms-mehbooba-mufti",
+    "type": "Official party biography"
+  },
+  "jkGovernorRuleGazette2018": {
+    "title": "Proclamation P-1/18 recording BJP withdrawal, Mehbooba Mufti's resignation and Governor's Rule",
+    "publisher": "Jammu and Kashmir Government Gazette",
+    "url": "https://www.jkgad.nic.in/common/showOrder.aspx?actCode=N25034",
+    "type": "Official constitutional proclamation"
+  },
+  "jkAssemblyDissolution2018": {
+    "title": "Proclamation and order dissolving the Jammu and Kashmir Legislative Assembly on 21 November 2018",
+    "publisher": "Jammu and Kashmir Government Gazette",
+    "url": "https://rgp.jk.gov.in/pdf/GAZETTE%202014/2018/Gazette%20No.34%20%2822-11-2018%29.pdf",
+    "type": "Official constitutional and legislature record"
+  },
+  "jkPresidentRule2019": {
+    "title": "Cabinet record explaining 2018 President's Rule and its extension from 3 July 2019",
+    "publisher": "Press Information Bureau, Ministry of Home Affairs",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1574074&lang=2&reg=48",
+    "type": "Official constitutional record"
+  },
+  "jkReorganisationAct2019": {
+    "title": "Jammu and Kashmir Reorganisation Act, 2019",
+    "publisher": "India Code, Legislative Department",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/15242/1/re-organisation_act%2C2019.pdf",
+    "type": "Official statute"
+  },
+  "jkUtPresidentRule2019": {
+    "title": "Cabinet record of Article 356 revocation and section 73 direct rule in the new union territory",
+    "publisher": "Press Information Bureau, Ministry of Home Affairs",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1592559&lang=2&reg=48",
+    "type": "Official constitutional record"
+  },
+  "jkMurmuOath2019": {
+    "title": "Girish Chandra Murmu sworn in as the first Lieutenant Governor of Jammu and Kashmir",
+    "publisher": "Press Information Bureau, Ministry of Home Affairs",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1589780&lang=2&reg=48",
+    "type": "Official oath record"
+  },
+  "jkSinhaAppointment2020": {
+    "title": "Appointment of Manoj Sinha as Lieutenant Governor after acceptance of Girish Chandra Murmu's resignation",
+    "publisher": "Press Information Bureau, President's Secretariat",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1643648&lang=2&reg=48",
+    "type": "Official appointment record"
+  },
+  "jkSinhaProfile": {
+    "title": "About the Lieutenant Governor of Jammu and Kashmir",
+    "publisher": "Lok Bhavan Jammu and Kashmir",
+    "url": "https://jklokbhavan.nic.in/about-department/introduction/",
+    "type": "Official office-holder profile"
+  },
+  "jkSection73Revocation2024": {
+    "title": "S.O. 4484(E), revoking the section 73 order immediately before appointment of the Chief Minister",
+    "publisher": "Gazette of India (document mirror)",
+    "url": "https://getapi.indiatvnews.com/doc/257821-241013-232039-241013-233144.pdf",
+    "type": "Official Gazette notification mirror"
+  },
+  "jkGovernmentFormation2024": {
+    "title": "Omar Abdullah elected NC legislature-party leader and elected-member list submitted",
+    "publisher": "Akashvani News, Prasar Bharati",
+    "url": "https://newsonair.gov.in/omar-abdullah-unanimously-elected-as-legislature-party-leader-in-jk/",
+    "type": "Official public-broadcaster government-formation record"
+  },
+  "jkCongressOutsideSupport2024": {
+    "title": "Congress confirms outside support rather than cabinet participation in the Omar Abdullah government",
+    "publisher": "India Today",
+    "url": "https://www.indiatoday.in/amp/india/story/congress-support-jk-government-outside-omar-abdullah-chief-minister-restoration-statehood-2617953-2024-10-16",
+    "type": "Contemporaneous coalition report"
+  },
+  "jkOmarOath2024": {
+    "title": "Omar Abdullah takes oath as Chief Minister of Jammu and Kashmir on 16 October 2024",
+    "publisher": "Press Information Bureau, Prime Minister's Office",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2065281&lang=2&reg=48",
+    "type": "Official contemporaneous oath record"
+  },
+  "jkMehboobaLop2014": {
+    "title": "Mehbooba Mufti identified as opposition leader in the Jammu and Kashmir Assembly",
+    "publisher": "Business Standard / PTI",
+    "url": "https://www.business-standard.com/article/pti-stories/opposition-disrupts-jk-assembly-over-several-issues-114030400694_1.html",
+    "type": "Contemporaneous legislature report"
+  },
+  "jkOmarLegislatureLeader2015": {
+    "title": "Omar Abdullah elected leader of the NC legislature party",
+    "publisher": "Business Standard / PTI",
+    "url": "https://www.business-standard.com/article/pti-stories/omar-elected-leader-of-the-nc-legislative-party-115020601091_1.html",
+    "type": "Contemporaneous party and legislature report"
+  },
+  "jkOmarLop2015": {
+    "title": "Contemporaneous report identifying Omar Abdullah as Leader of the Opposition by 7 April 2015",
+    "publisher": "Early Times",
+    "url": "https://www.earlytimes.in/newsdet.aspx?q=146747",
+    "type": "Contemporaneous legislature report"
+  },
+  "jkOmarLop2018": {
+    "title": "Omar Abdullah identified as Leader of the Opposition in February 2018",
+    "publisher": "Kashmir Life",
+    "url": "https://kashmirlife.net/dont-bargain-with-your-political-soul-for-power-omar-to-pdp-164049/",
+    "type": "Contemporaneous legislature report"
+  },
+  "jkSunilLop2024": {
+    "title": "J&K Assembly Speaker recognizes Sunil Kumar Sharma as Leader of the Opposition",
+    "publisher": "Daily Excelsior",
+    "url": "https://www.dailyexcelsior.com/jk-assembly-speaker-recognises-sunil-sharma-as-lop/",
+    "type": "Contemporaneous Speaker-recognition report"
+  },
+  "jkCurrentAssembly2026": {
+    "title": "Current Jammu and Kashmir Legislative Assembly leadership and party representation",
+    "publisher": "Jammu and Kashmir Legislative Assembly, National eVidhan Application",
+    "url": "https://jkla.neva.gov.in/",
+    "type": "Official current-office record"
   }
 }

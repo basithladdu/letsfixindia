@@ -5107,6 +5107,218 @@
           "sources": ["ukYashpalLop2022", "ukCurrentAssembly2026"]
         }
       ]
+    },
+    "Jammu And Kashmir": {
+      "kind": "union territory",
+      "verifiedAsOf": "2026-07-22",
+      "governmentTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start; ministry formed 5 January 2009",
+          "to": "2014-12-24",
+          "leader": "Omar Abdullah",
+          "office": "Chief Minister",
+          "party": "Jammu and Kashmir National Conference",
+          "coalition": "National Conference–Indian National Congress coalition",
+          "basis": "Continuation of the elected 2009 ministry. Abdullah resigned after the hung 2014 Assembly result and was asked to continue as caretaker.",
+          "confidence": "High",
+          "sources": ["jkGadOfficeArchive", "jkOmarCaretaker2014"]
+        },
+        {
+          "from": "2014-12-24",
+          "to": "2015-01-08",
+          "leader": "Omar Abdullah",
+          "office": "Caretaker Chief Minister",
+          "party": "Jammu and Kashmir National Conference",
+          "coalition": "Outgoing ministry pending government formation",
+          "basis": "The outgoing Chief Minister continued after resigning until he informed the Governor on 7 January that he was stepping down with immediate effect; the Governor's proclamation took effect on 8 January.",
+          "confidence": "High",
+          "sources": ["jkOmarCaretaker2014", "jkGovernorRuleGazette2015"]
+        },
+        {
+          "from": "2015-01-08",
+          "to": "2015-03-01",
+          "leader": "N. N. Vohra",
+          "office": "Governor exercising direct rule under section 92 of the former J&K Constitution",
+          "party": null,
+          "coalition": null,
+          "basis": "The official proclamation states that no party or combination had formed a stable government, assumed the functions of government and kept the Assembly in suspended animation from 8 January.",
+          "confidence": "High",
+          "sources": ["jkGovernorRuleGazette2015", "jkGovernorRuleGazette2016"]
+        },
+        {
+          "from": "2015-03-01",
+          "to": "2016-01-08",
+          "leader": "Mufti Mohammad Sayeed",
+          "office": "Chief Minister",
+          "party": "Jammu and Kashmir Peoples Democratic Party",
+          "coalition": "PDP–BJP coalition",
+          "basis": "The 2016 Raj Bhavan proclamation records that the PDP–BJP coalition was sworn in on 1 March 2015. Sayeed died on 7 January 2016 and direct rule began the next day.",
+          "confidence": "High",
+          "sources": ["jkGovernorRuleGazette2016", "jkMuftiDeath2016", "jkEciAssemblyReports"]
+        },
+        {
+          "from": "2016-01-08",
+          "to": "2016-04-04",
+          "leader": "N. N. Vohra",
+          "office": "Governor exercising direct rule under section 92 of the former J&K Constitution",
+          "party": null,
+          "coalition": null,
+          "basis": "After Sayeed's death the coalition did not immediately supply a new leader. The Governor's proclamation took effect on 8 January and the interregnum ended when Mehbooba Mufti was sworn in on 4 April.",
+          "confidence": "High",
+          "sources": ["jkGovernorRuleGazette2016", "jkMehboobaProfile"]
+        },
+        {
+          "from": "2016-04-04",
+          "to": "2018-06-20",
+          "leader": "Mehbooba Mufti",
+          "office": "Chief Minister",
+          "party": "Jammu and Kashmir Peoples Democratic Party",
+          "coalition": "PDP–BJP coalition",
+          "basis": "Mufti was sworn in on 4 April 2016. BJP withdrew support and her resignation was accepted on 19 June 2018; the direct-rule proclamation came into force on 20 June.",
+          "confidence": "High",
+          "sources": ["jkMehboobaProfile", "jkGovernorRuleGazette2018"]
+        },
+        {
+          "from": "2018-06-20",
+          "to": "2018-08-23",
+          "leader": "N. N. Vohra",
+          "office": "Governor exercising direct rule under section 92 of the former J&K Constitution",
+          "party": null,
+          "coalition": null,
+          "basis": "The 20 June proclamation assumed the functions of government and placed the Assembly in suspended animation. Vohra remained Governor until Satya Pal Malik assumed office on 23 August.",
+          "confidence": "High",
+          "sources": ["jkGovernorRuleGazette2018", "jkGadOfficeArchive"]
+        },
+        {
+          "from": "2018-08-23",
+          "to": "2018-12-20",
+          "leader": "Satya Pal Malik",
+          "office": "Governor exercising direct rule under section 92 of the former J&K Constitution",
+          "party": null,
+          "coalition": null,
+          "basis": "Malik succeeded Vohra during Governor's Rule. He dissolved the suspended Assembly on 21 November; section 92 rule expired on 19 December and Article 356 rule operated from midnight into 20 December.",
+          "confidence": "High",
+          "sources": ["jkGadOfficeArchive", "jkAssemblyDissolution2018", "jkPresidentRule2019"]
+        },
+        {
+          "from": "2018-12-20",
+          "to": "2019-10-31",
+          "leader": "Satya Pal Malik",
+          "office": "Governor administering the state under President's Rule, Article 356",
+          "party": null,
+          "coalition": null,
+          "basis": "President's Rule followed the six-month constitutional limit on Governor's Rule and was extended from 3 July 2019. It was revoked when the former state was reorganised on 31 October.",
+          "confidence": "High",
+          "sources": ["jkPresidentRule2019", "jkUtPresidentRule2019", "jkReorganisationAct2019"]
+        },
+        {
+          "from": "2019-10-31",
+          "to": "2020-08-07",
+          "leader": "Girish Chandra Murmu",
+          "office": "Lieutenant Governor under direct rule, section 73 of the J&K Reorganisation Act",
+          "party": null,
+          "coalition": null,
+          "basis": "The former state became the union territories of Jammu and Kashmir and Ladakh on 31 October. Article 356 rule ended, a section 73 Presidential order governed the new J&K union territory, and Murmu was sworn as its first Lieutenant Governor.",
+          "confidence": "High",
+          "sources": ["jkReorganisationAct2019", "jkUtPresidentRule2019", "jkMurmuOath2019", "jkSinhaAppointment2020"]
+        },
+        {
+          "from": "2020-08-07",
+          "to": "2024-10-16",
+          "toLabel": "Section 73 order revoked immediately before the Chief Minister's appointment",
+          "leader": "Manoj Sinha",
+          "office": "Lieutenant Governor under direct rule, section 73 of the J&K Reorganisation Act",
+          "party": null,
+          "coalition": null,
+          "basis": "Sinha took charge as Lieutenant Governor on 7 August 2020. The 2024 revocation order deliberately did not assign an earlier calendar endpoint: it revoked the section 73 order immediately before appointment of the Chief Minister.",
+          "confidence": "High",
+          "sources": ["jkSinhaProfile", "jkSection73Revocation2024", "jkOmarOath2024"]
+        },
+        {
+          "from": "2024-10-16",
+          "to": null,
+          "leader": "Omar Abdullah",
+          "office": "Chief Minister",
+          "party": "Jammu and Kashmir National Conference",
+          "coalition": "National Conference ministry with Congress outside support",
+          "basis": "NC won 42 of 90 elected seats in 2024; Congress, its pre-poll ally, won six but chose outside rather than cabinet participation. Abdullah was sworn in on 16 October. The current Assembly identifies Manoj Sinha as Lieutenant Governor, Abdullah as Chief Minister and Sunil Kumar Sharma as opposition leader; the Lieutenant Governor remains a constitutionally separate office in the union territory.",
+          "confidence": "High",
+          "sources": ["jkEciAssemblyReports", "jkGovernmentFormation2024", "jkCongressOutsideSupport2024", "jkOmarOath2024", "jkCurrentAssembly2026"]
+        }
+      ],
+      "oppositionTerms": [
+        {
+          "from": "2014-01-01",
+          "fromLabel": "At 2014 research start",
+          "to": "2014-05",
+          "toLabel": "Ceased after election to the Lok Sabha in 2014; exact Assembly and recognition endpoint not retrieved",
+          "leader": "Mehbooba Mufti",
+          "office": "Leader of the Opposition",
+          "party": "Jammu and Kashmir Peoples Democratic Party",
+          "coalition": null,
+          "basis": "Contemporaneous Assembly reporting identifies Mufti as opposition leader, and her party biography records her 2014 election to the Lok Sabha. A Speaker cessation notice was not located, so no day is invented.",
+          "confidence": "High opening holder; moderate exact endpoint",
+          "sources": ["jkMehboobaLop2014", "jkMehboobaProfile"]
+        },
+        {
+          "from": "2014-05",
+          "fromLabel": "After Mehbooba Mufti's 2014 Lok Sabha election; exact day unresolved",
+          "to": "2015-04-06",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "No Speaker-recognized holder established by the sources retrieved",
+          "basis": "Party leadership and later election as a legislature-party leader are not backfilled as formal Leader of the Opposition recognition. Omar Abdullah is first expressly evidenced in the office by contemporaneous reporting on 7 April 2015.",
+          "confidence": "Unresolved opening boundary; high non-backfill policy",
+          "sources": ["jkMehboobaProfile", "jkOmarLegislatureLeader2015", "jkOmarLop2015"]
+        },
+        {
+          "from": "2015-04-07",
+          "fromLabel": "Formally evidenced in the office by 7 April 2015; exact Speaker-recognition date not retrieved",
+          "to": "2018-11-21",
+          "leader": "Omar Abdullah",
+          "office": "Leader of the Opposition",
+          "party": "Jammu and Kashmir National Conference",
+          "coalition": null,
+          "basis": "Multiple contemporaneous reports identify Abdullah as Leader of the Opposition. The House remained in suspended animation during Governor's Rule and was dissolved on 21 November 2018; no separate de-recognition instrument was located.",
+          "confidence": "High holder and dissolution endpoint; moderate exact start and suspended-House continuity",
+          "sources": ["jkOmarLop2015", "jkOmarLop2018", "jkAssemblyDissolution2018"]
+        },
+        {
+          "from": "2018-11-22",
+          "to": "2024-10-09",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": null,
+          "status": "No Legislative Assembly and therefore no formal Leader of the Opposition",
+          "basis": "The state Assembly had been dissolved and the first elected-member list for the new union-territory Assembly was submitted only on 10 October 2024.",
+          "confidence": "High",
+          "sources": ["jkAssemblyDissolution2018", "jkGovernmentFormation2024"]
+        },
+        {
+          "from": "2024-10-10",
+          "to": "2024-11-03",
+          "leader": null,
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "status": "New-Assembly transition before formal Speaker recognition",
+          "basis": "BJP was the largest opposition party with 29 seats, but electoral arithmetic is not silently converted into formal office. The Speaker's recognition was reported on 4 November.",
+          "confidence": "High seat position; moderate formal transition boundary",
+          "sources": ["jkEciAssemblyReports", "jkGovernmentFormation2024", "jkSunilLop2024"]
+        },
+        {
+          "from": "2024-11-04",
+          "to": null,
+          "leader": "Sunil Kumar Sharma",
+          "office": "Leader of the Opposition",
+          "party": "Bharatiya Janata Party",
+          "coalition": null,
+          "basis": "The Speaker recognized Sharma on 4 November 2024. The current official Assembly homepage continues to identify him as Leader of the Opposition.",
+          "confidence": "High",
+          "sources": ["jkSunilLop2024", "jkCurrentAssembly2026"]
+        }
+      ]
     }
   }
 }
