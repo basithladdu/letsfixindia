@@ -108,6 +108,21 @@
   gap: 14px;
 }
 
+.donor-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.donor-footnote {
+  max-width: 70ch;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .support-card {
   padding: 18px;
   background: var(--panel);
@@ -196,6 +211,32 @@
 @media (min-width: 720px) {
   .support-options {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 719px) {
+  .donor-quick-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .donor-quick-actions .text-button {
+    justify-content: center;
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .donor-options {
+    gap: 10px;
+  }
+
+  .donor-options .support-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .donor-options .support-card h3 {
+    font-size: 18px;
   }
 }
 
@@ -608,4 +649,3 @@
   padding-bottom: 12px !important;
   align-self: end !important;
 }
-
