@@ -7019,5 +7019,53 @@
     "publisher": "DT Next",
     "url": "https://www.dtnext.in/news/tamilnadu/udhayanidhi-stalin-elected-dmk-floor-leader",
     "type": "Contemporaneous party-selection report"
+  },
+  "pibGstLaunch2017": {
+    "title": "Goods and Services Tax launched with effect from 1 July 2017",
+    "publisher": "Press Information Bureau, Ministry of Finance",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1492926",
+    "type": "Official government release"
+  },
+  "ibbiIbcAct2016": {
+    "title": "The Insolvency and Bankruptcy Code, 2016",
+    "publisher": "Insolvency and Bankruptcy Board of India",
+    "url": "https://ibbi.gov.in/webadmin/pdf/legalframwork/2017/Jul/IBC%202016.pdf",
+    "type": "Official statute"
+  },
+  "educationNep2020": {
+    "title": "National Education Policy 2020",
+    "publisher": "Ministry of Education, Government of India",
+    "url": "https://www.education.gov.in/national-education-policy-2020-0",
+    "type": "Official policy document"
+  },
+  "pibArticle370Orders2019": {
+    "title": "Constitutional Orders on Jammu and Kashmir issued in August 2019",
+    "publisher": "Ministry of Home Affairs, Government of India",
+    "url": "https://www.mha.gov.in/sites/default/files/PressReleaseJammuKashmir_05082019.pdf",
+    "type": "Official constitutional order record"
+  },
+  "mhaCovidLockdown2020": {
+    "title": "MHA order on nationwide COVID-19 lockdown, 24 March 2020",
+    "publisher": "Ministry of Home Affairs, Government of India",
+    "url": "https://www.mha.gov.in/sites/default/files/PR_NationalLockdown_24032020.pdf",
+    "type": "Official disaster-management order"
+  },
+  "pibFarmLawsRepeal2021": {
+    "title": "Farm Laws Repeal Act, 2021 receives presidential assent",
+    "publisher": "Press Information Bureau, Government of India",
+    "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1777511",
+    "type": "Official legislative release"
+  },
+  "prsWomenReservationAct2023": {
+    "title": "Constitution (One Hundred and Twenty-Eighth Amendment) Act, 2023",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-constitution-one-hundred-and-twenty-eighth-amendment-bill-2023",
+    "type": "Legislative research record"
+  },
+  "isroMangalyaan2014": {
+    "title": "Mars Orbiter Mission enters Mars orbit",
+    "publisher": "Indian Space Research Organisation",
+    "url": "https://www.isro.gov.in/MarsOrbiterMissionSpacecraft.html",
+    "type": "Official mission record"
   }
 }
