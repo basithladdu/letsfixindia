@@ -7067,5 +7067,11 @@
     "publisher": "Indian Space Research Organisation",
     "url": "https://www.isro.gov.in/MarsOrbiterMissionSpacecraft.html",
     "type": "Official mission record"
-  }
+  },
+  "modAgnipath2022": {"title":"Ministry of Defence announces Agnipath scheme","publisher":"Ministry of Defence, Government of India","url":"https://pib.gov.in/PressReleasePage.aspx?PRID=1833765","type":"Official press release"},
+  "egazetteDpdpAct2023": {"title":"Digital Personal Data Protection Act, 2023","publisher":"Gazette of India","url":"https://www.meity.gov.in/static/uploads/2024/02/Digital-Personal-Data-Protection-Act-2023.pdf","type":"Official Act text"},
+  "egazetteCriminalCodes2023": {"title":"Bharatiya Nyaya Sanhita, Bharatiya Nagarik Suraksha Sanhita and Bharatiya Sakshya Adhiniyam","publisher":"India Code / Gazette of India","url":"https://www.indiacode.nic.in/","type":"Official Act text"},
+  "pibNationalLogisticsPolicy2022": {"title":"Prime Minister launches National Logistics Policy","publisher":"Press Information Bureau","url":"https://pib.gov.in/PressReleasePage.aspx?PRID=1865285","type":"Official press release"},
+  "pibSemiconductorProgramme2021": {"title":"Cabinet approves programme for development of semiconductor and display manufacturing ecosystem","publisher":"Press Information Bureau","url":"https://pib.gov.in/PressReleasePage.aspx?PRID=1780902","type":"Official cabinet release"},
+  "pibNep2020Cabinet": {"title":"Cabinet approves National Education Policy 2020","publisher":"Press Information Bureau","url":"https://pib.gov.in/PressReleasePage.aspx?PRID=1642049","type":"Official cabinet release"}
 }

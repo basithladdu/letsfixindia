@@ -61,10 +61,24 @@
   }
 
   .side-nav {
-    width: 80vw;
+    /* Give thumb-sized menu rows enough room without making the drawer feel
+       cramped on narrow phones. Keep a hard cap so tablets remain compact. */
+    width: min(86vw, 360px);
     max-width: 360px;
     overflow-y: auto;
     overscroll-behavior: contain;
+    padding-top: max(14px, env(safe-area-inset-top));
     padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .side-nav a {
+    min-height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .side-nav .menu-close {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
