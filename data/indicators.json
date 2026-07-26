@@ -1940,5 +1940,28 @@
       { "label": "2024 rank", "value": 126 },
       { "label": "2025 rank", "value": 118 }
     ]
+  },
+  {
+    "title": "Reported student suicide deaths — daily average",
+    "value": "22.1 per day in 2014 to 38.1 per day in 2023",
+    "detail": "This converts NCRB-reported student suicide deaths into a simple calendar-day average: 8,068 in 2014, 13,044 in 2022, and 13,892 in 2023. India does not publish a complete daily series attributing suicides to JEE, NEET, coaching, or exam pressure, so this is a student-status measure—not a count of exam-caused deaths and not a claim about any individual case.",
+    "direction": "Higher reported volume, not causal attribution",
+    "sources": ["pibSuicides2014", "pibStudentSuicides2022", "sansadStudentSuicides2023"],
+    "chart": [
+      { "label": "2014 avg/day", "value": 22.1 },
+      { "label": "2022 avg/day", "value": 35.7 },
+      { "label": "2023 avg/day", "value": 38.1 }
+    ]
+  },
+  {
+    "title": "All reported suicide deaths — daily average",
+    "value": "360.7 per day in 2014 to 449.4 per day in 2021",
+    "detail": "This converts NCRB-reported total suicide deaths into a calendar-day average: 131,666 in 2014 and 164,033 in 2021. It is a police- and registration-based series, not a complete count of every death, and it does not identify exam pressure or JEE/NEET as a cause.",
+    "direction": "Higher reported volume, not causal attribution",
+    "sources": ["pibSuicides2014", "cbhiNationalHealthProfile2023Suicides"],
+    "chart": [
+      { "label": "2014 avg/day", "value": 360.7 },
+      { "label": "2021 avg/day", "value": 449.4 }
+    ]
   }
 ]
