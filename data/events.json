@@ -1,5 +1,44 @@
 [
   {
+    "id": "vajpayee-government-1998-1999",
+    "year": 1998,
+    "date": "19 March 1998 – 13 October 1999",
+    "title": "Atal Bihari Vajpayee government takes office",
+    "category": "Government and elections",
+    "actors": ["Union government", "Atal Bihari Vajpayee"],
+    "status": "Official term",
+    "severity": "Medium",
+    "summary": "Atal Bihari Vajpayee took oath as Prime Minister on 19 March 1998 and led the Union government until the next coalition government took office in October 1999.",
+    "outcome": "This term marker extends national governance context before the 1999-2004 NDA term. It is not an exhaustive event record for 1998-1999.",
+    "sources": ["cabsecVajpayee1998", "pmIndiaVajpayee"]
+  },
+  {
+    "id": "nda-vajpayee-government-1999-2004",
+    "year": 1999,
+    "date": "13 October 1999 – 22 May 2004",
+    "title": "NDA government takes office under Atal Bihari Vajpayee",
+    "category": "Government and elections",
+    "actors": ["Union government", "National Democratic Alliance", "Atal Bihari Vajpayee"],
+    "status": "Official term",
+    "severity": "Medium",
+    "summary": "Atal Bihari Vajpayee took charge on 13 October 1999 at the head of a new National Democratic Alliance coalition government and served until 22 May 2004.",
+    "outcome": "This term marker preserves the immediately preceding national government before UPA-I; detailed event coverage remains concentrated from 2014 onward.",
+    "sources": ["pmIndiaVajpayee"]
+  },
+  {
+    "id": "upa-i-government-2004-2009",
+    "year": 2004,
+    "date": "22 May 2004 – 22 May 2009",
+    "title": "United Progressive Alliance I government takes office under Manmohan Singh",
+    "category": "Government and elections",
+    "actors": ["Union government", "Indian National Congress", "United Progressive Alliance"],
+    "status": "Official term",
+    "severity": "Medium",
+    "summary": "Manmohan Singh formed the first United Progressive Alliance Union government after the 2004 Lok Sabha election and served as Prime Minister until the second UPA ministry took office on 22 May 2009.",
+    "outcome": "This term marker extends the national governance context before the 2009-2014 UPA-II record. It is historical context, not a claim of exhaustive event coverage for 2004-2009.",
+    "sources": ["pmIndiaManmohanSingh"]
+  },
+  {
     "id": "upa-ii-government-2009-2014",
     "year": 2009,
     "date": "22 May 2009 – 26 May 2014",
