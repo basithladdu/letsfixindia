@@ -1,7 +1,7 @@
 {
   "name": "LetsFixIndia Public Record",
   "short_name": "LetsFixIndia",
-  "description": "A source-led public record of India from 2014 to 2026.",
+  "description": "A source-led public record concentrated on India from 2014 to 2026, with preceding-term context.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fbfaf5",

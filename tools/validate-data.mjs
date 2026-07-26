@@ -116,8 +116,12 @@ try {
         if (terms.filter((term) => term.to === null).length !== 1) {
           logError(`${label} ${field} must contain exactly one current term with to: null.`);
         }
-        if (terms[0]?.from > '2014-12-31') {
-          logError(`${label} ${field} does not cover the start of the 2014-present period.`);
+        const requiredStartBoundary = field === 'governmentTerms' ? '2013-12-31' : '2014-12-31';
+        if (terms[0]?.from > requiredStartBoundary) {
+          const scope = field === 'governmentTerms'
+            ? 'the government term spanning the 2014 boundary'
+            : 'the start of the 2014-present opposition period';
+          logError(`${label} ${field} does not cover ${scope}.`);
         }
         terms.forEach((term, index) => {
           const termLabel = `${label} ${field}[${index}]`;

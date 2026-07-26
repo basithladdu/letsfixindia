@@ -120,8 +120,8 @@ function renderStateGovernment(name) {
     <section class="state-governance-current" aria-label="Current government and opposition">
       <div class="state-governance-heading">
         <span class="state-map-kicker">Government record</span>
-        <h4>Government and opposition since 2014</h4>
-        <p>Verified through ${esc(formatStateDate(record.verifiedAsOf))}. Term dates reflect the linked official or primary records.</p>
+        <h4>Government context before 2014 · opposition since 2014</h4>
+        <p>The government list includes the term spanning the 2014 boundary. Verified through ${esc(formatStateDate(record.verifiedAsOf))}; term dates reflect the linked official or primary records.</p>
       </div>
       <div class="state-governance-current-grid">
         <article>

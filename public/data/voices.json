@@ -3150,7 +3150,806 @@
     ]
   },
   {
-    "id": "umar-khalid",
+    "id": "lata-mangeshkar",
+    "name": "Lata Mangeshkar",
+    "field": "Music",
+    "description": "Playback singer and Bharat Ratna recipient",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined the coordinated #IndiaTogether response after Rihanna highlighted the protests, saying India could resolve its own issues amicably.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "ektaa-kapoor",
+    "name": "Ektaa Kapoor",
+    "field": "Television / Digital media",
+    "description": "Producer and head of Balaji Telefilms and ALTBalaji",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Was reported among public figures who used the #IndiaTogether and #IndiaAgainstPropaganda response after Rihanna's post about the farmers' protest.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "ajinkya-rahane",
+    "name": "Ajinkya Rahane",
+    "field": "Cricket",
+    "description": "India Test cricketer and former national-team vice-captain",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined the public #IndiaTogether response after Rihanna's post, calling for India's internal issues to be resolved domestically.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "shikhar-dhawan",
+    "name": "Shikhar Dhawan",
+    "field": "Cricket",
+    "description": "India international cricketer and former national-team vice-captain",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined the #IndiaTogether response after Rihanna's post, which said India could handle its internal matters amicably.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "rp-singh",
+    "name": "R. P. Singh",
+    "field": "Cricket",
+    "description": "Former India fast bowler and 2007 T20 World Cup winner",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Was reported among former and current cricketers amplifying the #IndiaTogether response to international commentary on the farmers' protest.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "suresh-raina",
+    "name": "Suresh Raina",
+    "field": "Cricket",
+    "description": "Former India cricketer and 2011 World Cup winner",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined the public #IndiaTogether response after Rihanna's post, saying India could resolve internal issues amicably.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "anil-kumble",
+    "name": "Anil Kumble",
+    "field": "Cricket",
+    "description": "Former India captain, coach and leading Test wicket-taker",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Was reported among former and current cricketers amplifying the #IndiaTogether response to international commentary on the farmers' protest.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "suniel-shetty",
+    "name": "Suniel Shetty",
+    "field": "Bollywood",
+    "description": "Actor and entrepreneur",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined public messaging against Rihanna's intervention in the farmers' protest debate.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "kailash-kher",
+    "name": "Kailash Kher",
+    "field": "Music",
+    "description": "Singer-songwriter and Padma Shri recipient",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"supported-govt","summary":"Joined public messaging against Rihanna's intervention in the farmers' protest debate.","quote":null,"date":"2021-02-03","sources":["ieCelebsFarmers2021"]}]
+  },
+  {
+    "id": "sania-mirza",
+    "name": "Sania Mirza",
+    "field": "Sports",
+    "description": "Former world No. 1 doubles tennis player and multiple Grand Slam winner",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Expressed solidarity with the wrestlers seeking action on sexual-harassment allegations and called the situation difficult to watch.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "shiva-keshavan",
+    "name": "Shiva Keshavan",
+    "field": "Sports",
+    "description": "Six-time Winter Olympian in luge",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Called the unresolved public protest a reminder that sporting institutions need systems to protect athletes and backed demands for swift action.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "nikhat-zareen",
+    "name": "Nikhat Zareen",
+    "field": "Sports",
+    "description": "Two-time world champion boxer",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Expressed concern for the protesting medal winners and said she hoped justice would be served quickly.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "jwala-gutta",
+    "name": "Jwala Gutta",
+    "field": "Sports",
+    "description": "Former Indian badminton player and Commonwealth Games gold medallist",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Publicly amplified a call for a fair response to the wrestlers' protest.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "bhaichung-bhutia",
+    "name": "Bhaichung Bhutia",
+    "field": "Sports",
+    "description": "Former India football captain",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Stated solidarity with Vinesh Phogat, Sakshi Malik and other wrestlers seeking justice.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "harbhajan-singh",
+    "name": "Harbhajan Singh",
+    "field": "Cricket",
+    "description": "Former India cricketer and Rajya Sabha member",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Said Sakshi Malik and Vinesh Phogat were India's pride and that he hoped they would receive justice.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "rani-rampal",
+    "name": "Rani Rampal",
+    "field": "Sports",
+    "description": "Former captain of the Indian women's hockey team",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among athletes supporting the wrestlers' call for justice.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "viren-rasquinha",
+    "name": "Viren Rasquinha",
+    "field": "Sports",
+    "description": "Former India hockey captain and Olympic Gold Quest chief executive",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Praised the wrestlers for pursuing a safer sporting environment for younger athletes and urged support for them.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "shikha-pandey",
+    "name": "Shikha Pandey",
+    "field": "Cricket",
+    "description": "India women's international cricketer",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Said it takes courage to speak up and hoped justice would be served at the earliest.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "karun-chandhok",
+    "name": "Karun Chandhok",
+    "field": "Sports",
+    "description": "Former Formula One driver and motorsport commentator",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among athletes publicly supporting the wrestlers' demand for justice.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
+  },
+  {
+    "id": "vinesh-phogat",
+    "name": "Vinesh Phogat",
+    "field": "Sports",
+    "description": "World-championship and Commonwealth Games wrestler",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Co-led the public sit-in demanding action over allegations against the Wrestling Federation of India leadership; the allegation and demand are recorded as the wrestlers' claims, not as a finding of fact.","quote":null,"date":"2023-04","sources":["scrollWrestlersCore2023"]}]
+  },
+  {
+    "id": "sakshi-malik",
+    "name": "Sakshi Malik",
+    "field": "Sports",
+    "description": "Olympic bronze-medal wrestler",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Co-led the public sit-in demanding action over allegations against the Wrestling Federation of India leadership; the allegation and demand are recorded as the wrestlers' claims, not as a finding of fact.","quote":null,"date":"2023-04","sources":["scrollWrestlersCore2023"]}]
+  },
+  {
+    "id": "bajrang-punia",
+    "name": "Bajrang Punia",
+    "field": "Sports",
+    "description": "Olympic bronze-medal wrestler",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Co-led the public sit-in demanding action over allegations against the Wrestling Federation of India leadership; the allegation and demand are recorded as the wrestlers' claims, not as a finding of fact.","quote":null,"date":"2023-04","sources":["scrollWrestlersCore2023"]}]
+  },
+  {
+    "id": "sangeeta-phogat",
+    "name": "Sangeeta Phogat",
+    "field": "Sports",
+    "description": "International wrestler",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Participated in the wrestlers' public protest demanding action over allegations against the Wrestling Federation of India leadership; the allegation and demand are recorded as the wrestlers' claims, not as a finding of fact.","quote":null,"date":"2023-05","sources":["scrollWrestlersCore2023"]}]
+  },
+  {
+    "id": "somvir-rathee",
+    "name": "Somvir Rathee",
+    "field": "Sports",
+    "description": "International wrestler",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Participated in the wrestlers' public protest demanding action over allegations against the Wrestling Federation of India leadership; the allegation and demand are recorded as the wrestlers' claims, not as a finding of fact.","quote":null,"date":"2023-05","sources":["scrollWrestlersCore2023"]}]
+  },
+  {
+    "id": "mahesh-bhatt",
+    "name": "Mahesh Bhatt",
+    "field": "Film",
+    "description": "Film director and producer",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "aparna-sen",
+    "name": "Aparna Sen",
+    "field": "Film",
+    "description": "Filmmaker and actor",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "ratna-pathak-shah",
+    "name": "Ratna Pathak Shah",
+    "field": "Film / Theatre",
+    "description": "Actor and theatre performer",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "vishal-bhardwaj",
+    "name": "Vishal Bhardwaj",
+    "field": "Film / Music",
+    "description": "Filmmaker, screenwriter and composer",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "nandita-das",
+    "name": "Nandita Das",
+    "field": "Film",
+    "description": "Actor and filmmaker",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "onir",
+    "name": "Onir",
+    "field": "Film",
+    "description": "Filmmaker and producer",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "sushant-singh-actor",
+    "name": "Sushant Singh",
+    "field": "Film / Television",
+    "description": "Actor and television presenter",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "mohammed-zeeshan-ayyub",
+    "name": "Mohammed Zeeshan Ayyub",
+    "field": "Film",
+    "description": "Actor",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "neeraj-ghaywan",
+    "name": "Neeraj Ghaywan",
+    "field": "Film",
+    "description": "Film director",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "ashwini-chaudhary",
+    "name": "Ashwini Chaudhary",
+    "field": "Film",
+    "description": "Film director and writer",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "ankur-tewari",
+    "name": "Ankur Tewari",
+    "field": "Music / Film",
+    "description": "Singer-songwriter and music director",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "abish-mathew",
+    "name": "Abish Mathew",
+    "field": "Digital creator / Comedy",
+    "description": "Comedian, host and online creator",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "andre-borges",
+    "name": "Andre Borges",
+    "field": "Digital media / Journalism",
+    "description": "Digital journalist and video host",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "mallika-dua",
+    "name": "Mallika Dua",
+    "field": "Digital creator / Comedy",
+    "description": "Comedian, actor and digital creator",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "saba-azad",
+    "name": "Saba Azad",
+    "field": "Film / Music",
+    "description": "Actor, musician and theatre artist",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "sohail-tatari",
+    "name": "Sohail Tatari",
+    "field": "Film",
+    "description": "Film and television director",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "kushan-nandy",
+    "name": "Kushan Nandy",
+    "field": "Film",
+    "description": "Film director and screenwriter",
+    "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
+  },
+  {
+    "id": "vikramaditya-motwane",
+    "name": "Vikramaditya Motwane",
+    "field": "Film",
+    "description": "Filmmaker and producer",
+    "stances": [{"issue":"CAA protests and policing in Uttar Pradesh (2020)","position":"spoke-out","summary":"Signed a statement supporting peaceful protest and raising concerns about reported state excesses in Uttar Pradesh during the CAA protests.","quote":null,"date":"2020-01","sources":["wireActorsCAAUttarPradesh2020"]}]
+  },
+  {
+    "id": "alankrita-shrivastava",
+    "name": "Alankrita Shrivastava",
+    "field": "Film",
+    "description": "Filmmaker and screenwriter",
+    "stances": [{"issue":"CAA protests and policing in Uttar Pradesh (2020)","position":"spoke-out","summary":"Signed a statement supporting peaceful protest and raising concerns about reported state excesses in Uttar Pradesh during the CAA protests.","quote":null,"date":"2020-01","sources":["wireActorsCAAUttarPradesh2020"]}]
+  },
+  {
+    "id": "kubbra-sait",
+    "name": "Kubbra Sait",
+    "field": "Film / Digital media",
+    "description": "Actor and presenter",
+    "stances": [{"issue":"CAA protests and policing in Uttar Pradesh (2020)","position":"spoke-out","summary":"Signed a statement supporting peaceful protest and raising concerns about reported state excesses in Uttar Pradesh during the CAA protests.","quote":null,"date":"2020-01","sources":["wireActorsCAAUttarPradesh2020"]}]
+  },
+  {
+    "id": "arundhati-roy",
+    "name": "Arundhati Roy",
+    "field": "Literature / Civil society",
+    "description": "Author and public intellectual",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "amitav-ghosh",
+    "name": "Amitav Ghosh",
+    "field": "Literature",
+    "description": "Novelist and public intellectual",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "ramachandra-guha",
+    "name": "Ramachandra Guha",
+    "field": "History / Public affairs",
+    "description": "Historian and public intellectual",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "mira-nair",
+    "name": "Mira Nair",
+    "field": "Film / International",
+    "description": "Indian-American filmmaker",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "anand-patwardhan",
+    "name": "Anand Patwardhan",
+    "field": "Film / Civil society",
+    "description": "Documentary filmmaker",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "romila-thapar",
+    "name": "Romila Thapar",
+    "field": "History / Academia",
+    "description": "Historian and professor emerita",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "irfan-habib",
+    "name": "Irfan Habib",
+    "field": "History / Academia",
+    "description": "Historian and professor emeritus",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "medha-patkar",
+    "name": "Medha Patkar",
+    "field": "Civil society",
+    "description": "Social activist associated with the National Alliance of People's Movements",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "aruna-roy",
+    "name": "Aruna Roy",
+    "field": "Civil society",
+    "description": "Right-to-information campaigner and former civil servant",
+    "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
+  },
+  {
+    "id": "kg-subramanyan",
+    "name": "K. G. Subramanyan",
+    "field": "Art",
+    "description": "Modern artist and art educator",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "krishen-khanna",
+    "name": "Krishen Khanna",
+    "field": "Art",
+    "description": "Modern painter and Padma Shri recipient",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "arpita-singh",
+    "name": "Arpita Singh",
+    "field": "Art",
+    "description": "Modern painter and Padma Bhushan recipient",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "anjolie-ela-menon",
+    "name": "Anjolie Ela Menon",
+    "field": "Art",
+    "description": "Painter and Padma Shri recipient",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "gulammohammed-sheikh",
+    "name": "Gulammohammed Sheikh",
+    "field": "Art",
+    "description": "Painter, poet and art historian",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "anish-kapoor",
+    "name": "Anish Kapoor",
+    "field": "Art / International",
+    "description": "Indian-born British sculptor",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "vivan-sundaram",
+    "name": "Vivan Sundaram",
+    "field": "Art",
+    "description": "Artist and installation maker",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "jatin-das",
+    "name": "Jatin Das",
+    "field": "Art",
+    "description": "Painter and sculptor",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "nalini-malani",
+    "name": "Nalini Malani",
+    "field": "Art",
+    "description": "Visual artist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "sudhir-patwardhan",
+    "name": "Sudhir Patwardhan",
+    "field": "Art",
+    "description": "Painter and medical practitioner",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "pushpamala-n",
+    "name": "Pushpamala N.",
+    "field": "Art",
+    "description": "Visual and performance artist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "atul-dodiya",
+    "name": "Atul Dodiya",
+    "field": "Art",
+    "description": "Contemporary painter",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "ranjit-hoskote",
+    "name": "Ranjit Hoskote",
+    "field": "Literature / Art",
+    "description": "Poet, curator and cultural critic",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "subodh-gupta",
+    "name": "Subodh Gupta",
+    "field": "Art",
+    "description": "Contemporary visual artist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "mallika-sarabhai",
+    "name": "Mallika Sarabhai",
+    "field": "Dance / Civil society",
+    "description": "Dancer, actor and activist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "astad-deboo",
+    "name": "Astad Deboo",
+    "field": "Dance",
+    "description": "Contemporary dancer and Padma Shri recipient",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "aditi-mangaldas",
+    "name": "Aditi Mangaldas",
+    "field": "Dance",
+    "description": "Kathak dancer and choreographer",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "navtej-johar",
+    "name": "Navtej Johar",
+    "field": "Dance / Civil society",
+    "description": "Dancer and LGBTQ+ rights activist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "saeed-akhtar-mirza",
+    "name": "Saeed Akhtar Mirza",
+    "field": "Film",
+    "description": "Filmmaker and screenwriter",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "shonali-bose",
+    "name": "Shonali Bose",
+    "field": "Film",
+    "description": "Filmmaker and writer",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "kiran-rao",
+    "name": "Kiran Rao",
+    "field": "Film",
+    "description": "Filmmaker and producer",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "kabir-khan",
+    "name": "Kabir Khan",
+    "field": "Film",
+    "description": "Filmmaker and screenwriter",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "zubeen-garg",
+    "name": "Zubeen Garg",
+    "field": "Music / Assam cinema",
+    "description": "Singer, composer and actor",
+    "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"At the launch of an anti-CAA information platform, said that speaking against a law regarded as unjust could not be treated as sedition.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
+  },
+  {
+    "id": "barasha-rani-bishaya",
+    "name": "Barasha Rani Bishaya",
+    "field": "Assam cinema",
+    "description": "Actor in Assamese cinema and television",
+    "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"Joined the launch of an anti-CAA information platform by Assam artistes.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
+  },
+  {
+    "id": "ravi-sarma",
+    "name": "Ravi Sarma",
+    "field": "Assam cinema",
+    "description": "Actor and filmmaker",
+    "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"Joined the launch of an anti-CAA information platform by Assam artistes.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
+  },
+  {
+    "id": "manash-robin",
+    "name": "Manash Robin",
+    "field": "Music / Assam cinema",
+    "description": "Singer and composer",
+    "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"Joined the launch of an anti-CAA information platform by Assam artistes.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
+  },
+  {
+    "id": "garima-saikia-garg",
+    "name": "Garima Saikia Garg",
+    "field": "Assam cinema",
+    "description": "Producer and actor",
+    "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"Joined the launch of an anti-CAA information platform by Assam artistes.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
+  },
+  {
+    "id": "kulwinder-billa",
+    "name": "Kulwinder Billa",
+    "field": "Music",
+    "description": "Punjabi singer and actor",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Was reported among Punjabi artistes who demonstrated in support of the farmers' movement and helped bring younger audiences into it.","quote":null,"date":"2020-09","sources":["iePunjabiMusicFarmers2021"]}]
+  },
+  {
+    "id": "rajvir-jawanda",
+    "name": "Rajvir Jawanda",
+    "field": "Music",
+    "description": "Punjabi singer and actor",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Was reported among Punjabi artistes who demonstrated in support of the farmers' movement and helped bring younger audiences into it.","quote":null,"date":"2020-09","sources":["iePunjabiMusicFarmers2021"]}]
+  },
+  {
+    "id": "kanwar-grewal",
+    "name": "Kanwar Grewal",
+    "field": "Music",
+    "description": "Punjabi singer-songwriter",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Performed and released protest-related music during the farmers' movement.","quote":null,"date":"2020-2021","sources":["iePunjabiMusicFarmers2021"]}]
+  },
+  {
+    "id": "gippy-grewal",
+    "name": "Gippy Grewal",
+    "field": "Music / Punjabi cinema",
+    "description": "Singer, actor and producer",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Was reported as criticising the Hindi film industry for not speaking up for the farmers' protest.","quote":null,"date":"2021-02","sources":["ieInternationalCelebsFarmers2021"]}]
+  },
+  {
+    "id": "lilly-singh",
+    "name": "Lilly Singh",
+    "field": "Digital creator / International",
+    "description": "Canadian YouTuber, host and actor of Indian origin",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Thanked Rihanna for raising the issue and called the farmers' protest a matter of humanity.","quote":null,"date":"2021-02-02","sources":["ieInternationalCelebsFarmers2021"]}]
+  },
+  {
+    "id": "jay-sean",
+    "name": "Jay Sean",
+    "field": "Music / International",
+    "description": "British singer of Indian Punjabi origin",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Shared material about the protest, called it one of the largest in history and asked for greater awareness.","quote":null,"date":"2021-02","sources":["ieInternationalCelebsFarmers2021"]}]
+  },
+  {
+    "id": "amanda-cerny",
+    "name": "Amanda Cerny",
+    "field": "Digital creator / International",
+    "description": "American digital creator and actor",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Shared an image of women farmers and called for attention to freedom of speech, press and workers' dignity.","quote":null,"date":"2021-02","sources":["ieInternationalCelebsFarmers2021"]}]
+  },
+  {
+    "id": "vanessa-nakate",
+    "name": "Vanessa Nakate",
+    "field": "Climate activism / International",
+    "description": "Ugandan climate activist",
+    "stances": [{"issue":"Farmers' protests (2020-2021)","position":"spoke-out","summary":"Expressed support for Indian farmers amid the international attention to the protest.","quote":null,"date":"2021-02","sources":["ieInternationalCelebsFarmers2021"]}]
+  },
+  {
+    "id": "pooja-bhatt",
+    "name": "Pooja Bhatt",
+    "field": "Film",
+    "description": "Actor and filmmaker",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among film personalities expressing support for wrestlers seeking action over allegations against the Wrestling Federation of India leadership.","quote":null,"date":"2023-04","sources":["ieFilmWrestlers2023"]}]
+  },
+  {
+    "id": "tovino-thomas",
+    "name": "Tovino Thomas",
+    "field": "Malayalam cinema",
+    "description": "Actor and producer",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among film personalities expressing support for wrestlers seeking action over allegations against the Wrestling Federation of India leadership.","quote":null,"date":"2023-05","sources":["ieFilmWrestlers2023"]}]
+  },
+  {
+    "id": "ritika-singh",
+    "name": "Ritika Singh",
+    "field": "Film / Sports",
+    "description": "Actor and former mixed martial artist",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among film personalities expressing support for wrestlers seeking action over allegations against the Wrestling Federation of India leadership.","quote":null,"date":"2023-05","sources":["ieFilmWrestlers2023"]}]
+  },
+  {
+    "id": "pa-ranjith",
+    "name": "Pa. Ranjith",
+    "field": "Tamil cinema",
+    "description": "Filmmaker and producer",
+    "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Was reported among film personalities expressing support for wrestlers seeking action over allegations against the Wrestling Federation of India leadership.","quote":null,"date":"2023-05","sources":["ieFilmWrestlers2023"]}]
+  },
+  {
+    "id": "dhruv-rathee",
+    "name": "Dhruv Rathee",
+    "field": "Digital creator / Public affairs",
+    "description": "YouTube educator and political commentator",
+    "stances": [{"issue":"Government accountability and democratic institutions (2014-present)","position":"spoke-out","summary":"Built a large public-affairs YouTube channel after criticising the BJP's record against its promises; reporting describes his work as critical of government institutions and calls for voter participation.","quote":null,"date":"2014-present","sources":["scrollPoliticalYoutube2019","lemondeYoutubeDissent2024"]}]
+  },
+  {
+    "id": "akash-banerjee",
+    "name": "Akash Banerjee",
+    "field": "Digital creator / Public affairs",
+    "description": "YouTube political commentator and comedian",
+    "stances": [{"issue":"Government accountability and political commentary (2014-present)","position":"spoke-out","summary":"Was reported among creators who started political YouTube channels after becoming disillusioned with the BJP and perceived mainstream-media propaganda.","quote":null,"date":"2019","sources":["scrollPoliticalYoutube2019"]}]
+  },
+  {
+    "id": "wali-rahmani",
+    "name": "Wali Rahmani",
+    "field": "Digital creator / Public affairs",
+    "description": "YouTube political commentator",
+    "stances": [{"issue":"Government accountability and political commentary (2014-present)","position":"spoke-out","summary":"Was reported among creators who started political YouTube channels after becoming disillusioned with the BJP and perceived mainstream-media propaganda.","quote":null,"date":"2019","sources":["scrollPoliticalYoutube2019"]}]
+  },
+  {
+    "id": "kumar-shyam",
+    "name": "Kumar Shyam",
+    "field": "Digital creator / Public affairs",
+    "description": "YouTube political commentator",
+    "stances": [{"issue":"Government accountability and political commentary (2014-present)","position":"spoke-out","summary":"Was reported among creators who started political YouTube channels after becoming disillusioned with the BJP and perceived mainstream-media propaganda.","quote":null,"date":"2019","sources":["scrollPoliticalYoutube2019"]}]
+  },
+  {
+    "id": "chitra-palekar",
+    "name": "Chitra Palekar",
+    "field": "Film / Theatre",
+    "description": "Actor and filmmaker",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "anjum-rajabali",
+    "name": "Anjum Rajabali",
+    "field": "Film",
+    "description": "Screenwriter and film educator",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "vinay-shukla",
+    "name": "Vinay Shukla",
+    "field": "Film",
+    "description": "Filmmaker and writer",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "shama-zaidi",
+    "name": "Shama Zaidi",
+    "field": "Film / Theatre",
+    "description": "Screenwriter and theatre artist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "neela-bhagwat",
+    "name": "Neela Bhagwat",
+    "field": "Music",
+    "description": "Hindustani classical vocalist",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "rahul-ram",
+    "name": "Rahul Ram",
+    "field": "Music",
+    "description": "Musician and member of Indian Ocean",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id": "vidya-rao",
+    "name": "Vidya Rao",
+    "field": "Music",
+    "description": "Hindustani classical vocalist and writer",
+    "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
+  },
+  {
+    "id":"tm-krishna","name":"T. M. Krishna","field":"Music","description":"Carnatic vocalist and public commentator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"dayanita-singh","name":"Dayanita Singh","field":"Photography","description":"Photographer and visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sudharak-olwe","name":"Sudharak Olwe","field":"Photography","description":"Documentary photographer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ranbir-kaleka","name":"Ranbir Kaleka","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"venkat-raman-singh-shyam","name":"Venkat Raman Singh Shyam","field":"Art","description":"Gond artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"geeta-kapur","name":"Geeta Kapur","field":"Art / Academia","description":"Art critic and historian","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"vishwanadhan","name":"Vishwanadhan","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"jyotindra-jain","name":"Jyotindra Jain","field":"Art / Academia","description":"Art historian and curator","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"balan-nambiar","name":"Balan Nambiar","field":"Art","description":"Sculptor and painter","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sadanand-menon","name":"Sadanand Menon","field":"Photography / Criticism","description":"Photographer and cultural critic","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ram-rahman","name":"Ram Rahman","field":"Photography","description":"Photographer and curator","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"k-sivakumar","name":"K. Sivakumar","field":"Art / Academia","description":"Artist and art historian","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"vasudha-thozhur","name":"Vasudha Thozhur","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sheela-gowda","name":"Sheela Gowda","field":"Art","description":"Contemporary artist","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anita-dube","name":"Anita Dube","field":"Art","description":"Artist and curator","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"jahangir-asgar-jani","name":"Jahangir Asgar Jani","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"shireen-gandhi","name":"Shireen Gandhi","field":"Art","description":"Gallerist","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"kirtana-thangavelu","name":"Kirtana Thangavelu","field":"Art / Academia","description":"Art historian","stances":[{"issue":"Intolerance and cultural freedoms (2015)","position":"spoke-out","summary":"Signed a SAHMAT statement condemning rising intolerance and demanding constitutional freedoms and the right to dissent.","quote":null,"date":"2015-10","sources":["wireArtistsUnite2018"]}]},
+  {"id":"a-mangai","name":"A. Mangai","field":"Theatre","description":"Theatre practitioner and scholar","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"achyut-vaze","name":"Achyut Vaze","field":"Theatre","description":"Playwright and director","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"adil-jussawalla","name":"Adil Jussawalla","field":"Literature","description":"Poet and critic","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"akhil-katyal","name":"Akhil Katyal","field":"Literature","description":"Poet and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"akshaya-mukul","name":"Akshaya Mukul","field":"Literature / Journalism","description":"Author and journalist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amar-kanwar","name":"Amar Kanwar","field":"Art / Film","description":"Artist and filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amarjit-chandan","name":"Amarjit Chandan","field":"Literature","description":"Poet and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anamika-haksar","name":"Anamika Haksar","field":"Theatre / Film","description":"Theatre director and filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ananya-vajpeyi","name":"Ananya Vajpeyi","field":"Academia / Literature","description":"Political theorist and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anuradha-kapur","name":"Anuradha Kapur","field":"Theatre","description":"Theatre director and educator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"arpana-caur","name":"Arpana Caur","field":"Art","description":"Painter","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"atul-bhalla","name":"Atul Bhalla","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"bharati-kapadia","name":"Bharati Kapadia","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"bharti-kher","name":"Bharti Kher","field":"Art","description":"Contemporary artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"bina-sarkar-elias","name":"Bina Sarkar Elias","field":"Literature / Publishing","description":"Editor and publisher","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"chitra-ganesh","name":"Chitra Ganesh","field":"Art / International","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"deepa-mahajan","name":"Deepa Mahajan","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"dhruvi-acharya","name":"Dhruvi Acharya","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"gauri-gill","name":"Gauri Gill","field":"Photography","description":"Photographer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"gieve-patel","name":"Gieve Patel","field":"Art / Literature","description":"Poet, playwright and painter","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"gigi-scaria","name":"Gigi Scaria","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"hema-upadhyay","name":"Hema Upadhyay","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"indrapramit-roy","name":"Indrapramit Roy","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"jitish-kallat","name":"Jitish Kallat","field":"Art","description":"Artist and curator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"justin-ponmany","name":"Justin Ponmany","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"kirti-jain","name":"Kirti Jain","field":"Theatre","description":"Theatre director","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ln-tallur","name":"L. N. Tallur","field":"Art","description":"Contemporary artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"madhusree-dutta","name":"Madhusree Dutta","field":"Film / Art","description":"Filmmaker and artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"mithu-sen","name":"Mithu Sen","field":"Art","description":"Conceptual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ns-harsha","name":"N. S. Harsha","field":"Art","description":"Contemporary artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"navjot-altaf","name":"Navjot Altaf","field":"Art","description":"Artist and educator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"nancy-adajania","name":"Nancy Adajania","field":"Art / Criticism","description":"Cultural theorist and curator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"naman-ahuja","name":"Naman Ahuja","field":"Art / Academia","description":"Art historian and curator","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"parvati-nayar","name":"Parvati Nayar","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"prabhavati-meppayil","name":"Prabhavati Meppayil","field":"Art","description":"Sculptor and visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"saba-hasan","name":"Saba Hasan","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sajitha-madathil","name":"Sajitha Madathil","field":"Theatre / Film","description":"Actor and theatre practitioner","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"samit-das","name":"Samit Das","field":"Art / Academia","description":"Artist and art historian","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sahej-rahal","name":"Sahej Rahal","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sanchayan-ghosh","name":"Sanchayan Ghosh","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"sandeep-biswas","name":"Sandeep Biswas","field":"Photography","description":"Photographer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"gopika-chowfla","name":"Gopika Chowfla","field":"Design","description":"Graphic designer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"gopika-nath","name":"Gopika Nath","field":"Art / Literature","description":"Artist and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anjali-monteiro","name":"Anjali Monteiro","field":"Film","description":"Documentary filmmaker and academic","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amudhan-rp","name":"Amudhan R. P.","field":"Film","description":"Documentary filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amrita-patil","name":"Amrita Patil","field":"Film","description":"Filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amrita-gupta-singh","name":"Amrita Gupta Singh","field":"Art / Academia","description":"Art historian and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anita-cherian","name":"Anita Cherian","field":"Art / Criticism","description":"Art critic","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"anil-abraham","name":"Anil Abraham","field":"Theatre / Literature","description":"Actor and writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aayush-chandrawanshi","name":"Aayush Chandrawanshi","field":"Photography","description":"Photographer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aastha-gandhi","name":"Aastha Gandhi","field":"Dance / Academia","description":"Dancer and researcher","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aastha-chauhan","name":"Aastha Chauhan","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aban-raza","name":"Aban Raza","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aaradhana-kohli","name":"Aaradhana Kohli","field":"Film","description":"Filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ajay-raina","name":"Ajay Raina","field":"Film","description":"Documentary filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ajay-noronha","name":"Ajay Noronha","field":"Film","description":"Filmmaker","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"aditya-kapoor","name":"Aditya Kapoor","field":"Film / Photography","description":"Filmmaker and photographer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"ajayan-adat","name":"Ajayan Adat","field":"Film","description":"Film sound designer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"akhilesh-artist","name":"Akhilesh","field":"Art","description":"Visual artist","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"amandeep-sandhu","name":"Amandeep Sandhu","field":"Literature","description":"Writer","stances":[{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Signed the Artists Unite declaration defending democracy, equality and cultural freedom against hate.","quote":null,"date":"2018","sources":["wireArtistsUnite2018"]}]},
+  {"id":"umar-khalid",
     "name": "Umar Khalid",
     "field": "Student activist / civil liberties",
     "description": "Student activist and former Jawaharlal Nehru University scholar whose UAPA prosecution and prolonged pre-trial detention became a major civil-liberties case.",

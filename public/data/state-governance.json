@@ -1,7 +1,8 @@
 {
   "_meta": {
-    "description": "Verified government and opposition terms for state and union-territory context. This ledger is separate from the adverse-event record and grows jurisdiction by jurisdiction.",
+    "description": "Verified government and opposition terms for state and union-territory context. Government histories include the term spanning the 2014 boundary; opposition histories begin at the 2014 research boundary. This ledger is separate from the adverse-event record and grows jurisdiction by jurisdiction.",
     "periodStart": "2014-01-01",
+    "governmentContext": "Immediately preceding government term included where the jurisdiction existed before 2014",
     "verifiedAsOf": "2026-07-22",
     "sourcePolicy": "Term-level citations must resolve to URL-backed entries in data/sources.json; official government, legislature, election, court, or other primary records are preferred."
   },
@@ -11,8 +12,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start",
+          "from": "2011-05-18",
+          "fromLabel": "Second Oommen Chandy ministry began 18 May 2011",
           "to": "2016-05-20",
           "leader": "Oommen Chandy",
           "office": "Chief Minister",
@@ -114,8 +115,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; full term began 25 December 2012",
+          "from": "2012-12-25",
+          "fromLabel": "Full term began 25 December 2012",
           "to": "2017-12-27",
           "leader": "Virbhadra Singh",
           "office": "Chief Minister",
@@ -212,14 +213,25 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; new elected ministry sworn 18 May 2014",
+          "from": "2011-11-01",
+          "to": "2014-05-17",
+          "leader": "Nabam Tuki",
+          "office": "Chief Minister",
+          "party": "Indian National Congress",
+          "coalition": "Single-party government",
+          "basis": "Tuki was appointed Chief Minister in November 2011 and remained the incumbent through the 2014 Assembly election.",
+          "confidence": "High identity; day-level start supported by the constitutional-case chronology",
+          "sources": ["scNabamRebia2016"]
+        },
+        {
+          "from": "2014-05-18",
+          "fromLabel": "New elected ministry sworn 18 May 2014",
           "to": "2016-01-25",
           "leader": "Nabam Tuki",
           "office": "Chief Minister",
           "party": "Indian National Congress",
           "coalition": "Single-party government",
-          "basis": "Incumbent at the start of the period and sworn in for a new ministry after the 2014 Assembly election.",
+          "basis": "Tuki was sworn in for a new ministry after the 2014 Assembly election.",
           "confidence": "High",
           "sources": ["ndtvTukiOath2014", "scNabamRebia2016"]
         },
@@ -379,8 +391,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; assumed office 8 July 2013",
+          "from": "2013-07-08",
+          "fromLabel": "Assumed office 8 July 2013",
           "to": "2016-08-17",
           "toLabel": "Replacement announced 17 August 2016; precise demitting date unresolved",
           "leader": "A. K. Singh",
@@ -433,8 +445,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; Chandigarh tenure began 22 January 2010",
+          "from": "2010-01-22",
+          "fromLabel": "Chandigarh tenure began 22 January 2010",
           "to": "2015-01-21",
           "leader": "Shivraj V. Patil",
           "office": "Administrator",
@@ -509,14 +521,14 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start",
+          "from": "2012-08-28",
+          "fromLabel": "Administrator tenure began 28 August 2012",
           "to": "2014-08-17",
           "leader": "B. S. Bhalla",
           "office": "Administrator of the former Union Territories",
           "party": null,
           "coalition": "Administrator of Daman and Diu and Dadra and Nagar Haveli",
-          "basis": "The two territories were then separate but shared an Administrator; the official record places the transition to the successor on 18 August 2014.",
+          "basis": "The two territories were then separate but shared an Administrator; the official record places Bhalla's tenure from 28 August 2012 through 17 August 2014.",
           "confidence": "High",
           "sources": ["dnhddAdministratorHistory", "mhaUtFramework2026"]
         },
@@ -617,8 +629,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 5 March 2013",
+          "from": "2013-03-05",
+          "fromLabel": "Second Mukul Sangma ministry began 5 March 2013",
           "to": "2018-03-05",
           "leader": "Mukul M. Sangma",
           "office": "Chief Minister",
@@ -740,8 +752,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; fifth ministry began 14 December 2013",
+          "from": "2013-12-14",
+          "fromLabel": "Fifth ministry began 14 December 2013",
           "to": "2018-12-14",
           "leader": "Lal Thanhawla",
           "office": "Chief Minister",
@@ -804,14 +816,14 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start",
+          "from": "2013-03-05",
+          "fromLabel": "Third consecutive Rio ministry began 5 March 2013",
           "to": "2014-05-23",
           "leader": "Neiphiu Rio",
           "office": "Chief Minister",
           "party": "Naga People's Front",
           "coalition": "NPF-led Democratic Alliance of Nagaland",
-          "basis": "Continuation of the post-2013 ministry; Rio resigned after election to the Lok Sabha.",
+          "basis": "The official Assembly biography records Rio's third consecutive appointment on 5 March 2013; he resigned after election to the Lok Sabha.",
           "confidence": "High",
           "sources": ["nagRioBio", "nagBasicFacts2024"]
         },
@@ -949,14 +961,14 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start",
+          "from": "2009-05-22",
+          "fromLabel": "Eighth Assembly government constituted 22 May 2009",
           "to": "2014-05-20",
           "leader": "Pawan Kumar Chamling",
           "office": "Chief Minister",
           "party": "Sikkim Democratic Front",
           "coalition": "Single-party government",
-          "basis": "Continuation of the ministry in office since 2009, when SDF won all 32 Assembly seats.",
+          "basis": "The official Assembly history records the eighth Assembly as constituted on 22 May 2009 and an SDF government under Chamling after the party won all 32 seats.",
           "confidence": "High",
           "sources": ["sikAssemblyHistory"]
         },
@@ -1081,8 +1093,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; fourth ministry began 6 March 2013",
+          "from": "2013-03-06",
+          "fromLabel": "Fourth ministry began 6 March 2013",
           "to": "2018-03-08",
           "leader": "Manik Sarkar",
           "office": "Chief Minister",
@@ -1213,16 +1225,16 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "Incumbent at the research start",
+          "from": "2012-11-07",
+          "fromLabel": "Administrator tenure began 7 November 2012",
           "to": "2015-10",
           "toLabel": "Public chronologies place handover in late October; exact primary order not located",
           "leader": "H. Rajesh Prasad",
           "office": "Administrator",
           "party": null,
           "coalition": "Presidentially appointed Union Territory administration",
-          "basis": "Prasad was the appointed constitutional executive at the opening of 2014. The exact October 2015 handover day remains moderately evidenced.",
-          "confidence": "High opening incumbency; moderate exact endpoint",
+          "basis": "Contemporaneous central-government and Lakshadweep records identify Prasad as Administrator from November 2012. The exact October 2015 handover day remains moderately evidenced.",
+          "confidence": "High identity and start; moderate exact endpoint",
           "sources": ["mhaUtFramework2026", "lakAdminSetup", "lakVijay2015"]
         },
         {
@@ -1305,8 +1317,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 16 May 2011",
+          "from": "2011-05-16",
+          "fromLabel": "Ministry began 16 May 2011",
           "to": "2016-06-05",
           "leader": "N. Rangasamy",
           "office": "Chief Minister",
@@ -1462,7 +1474,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
+          "from": "2009-01-01",
+          "fromLabel": "Historical context before the Union Territory was created",
           "to": "2019-10-30",
           "leader": "No separate Ladakh Union Territory administration",
           "office": "Pre-Union-Territory status",
@@ -1547,7 +1560,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
+          "from": "2009-01-01",
+          "fromLabel": "Historical context before the successor state was created",
           "to": "2014-06-01",
           "leader": "Undivided Andhra Pradesh; outside this successor-state ledger",
           "office": "Pre-bifurcation boundary",
@@ -1709,8 +1723,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 9 March 2012",
+          "from": "2012-03-09",
+          "fromLabel": "Ministry began 9 March 2012",
           "to": "2014-11-08",
           "leader": "Manohar Parrikar",
           "office": "Chief Minister",
@@ -1895,7 +1909,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
+          "from": "2009-01-01",
+          "fromLabel": "Historical context before state formation",
           "to": "2014-06-01",
           "leader": "Telangana not yet a separate state",
           "office": "Pre-statehood boundary",
@@ -2036,8 +2051,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; elected term began in May 2009",
+          "from": "2009-05-22",
+          "fromLabel": "Third elected Patnaik ministry began 22 May 2009",
           "to": "2014-05-20",
           "leader": "Naveen Patnaik",
           "office": "Chief Minister",
@@ -2178,8 +2193,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 14 March 2012",
+          "from": "2012-03-14",
+          "fromLabel": "Second consecutive Badal ministry began 14 March 2012",
           "to": "2017-03-15",
           "leader": "Parkash Singh Badal",
           "office": "Chief Minister",
@@ -2342,8 +2357,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; elected term began 14 December 2013",
+          "from": "2013-12-14",
+          "fromLabel": "Elected term began 14 December 2013",
           "to": "2018-12-12",
           "leader": "Shivraj Singh Chouhan",
           "office": "Chief Minister",
@@ -2549,14 +2564,14 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; full term began 24 November 2005",
+          "from": "2005-11-24",
+          "fromLabel": "Continuous Nitish Kumar tenure began 24 November 2005",
           "to": "2014-05-20",
           "leader": "Nitish Kumar",
           "office": "Chief Minister",
           "party": "Janata Dal (United)",
-          "coalition": "JD(U)-led minority government after BJP left the alliance in 2013",
-          "basis": "Continuation of the 2010 Assembly ministry. The official directory fixes the endpoint; the minority/support configuration is not mislabeled as a formal RJD-JD(U) coalition cabinet.",
+          "coalition": "JD(U)-BJP coalition through 16 June 2013; JD(U)-led minority government thereafter",
+          "basis": "The official history records Nitish Kumar's continuous tenure from 24 November 2005 to 20 May 2014. The coalition label preserves BJP's June 2013 exit instead of backdating the later minority arrangement across the whole term.",
           "confidence": "High office-holder and endpoint; moderate-high support configuration",
           "sources": ["biharCmHistory"]
         },
@@ -2779,8 +2794,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start",
+          "from": "2010-11-11",
+          "fromLabel": "Ministry began 11 November 2010",
           "to": "2014-09-26",
           "leader": "Prithviraj Chavan",
           "office": "Chief Minister",
@@ -3133,8 +3148,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; transition completed 22 May 2014",
+          "from": "2012-12-26",
+          "fromLabel": "Fourth Modi ministry began after the 2012 election",
           "to": "2014-05-22",
           "leader": "Narendra Modi",
           "office": "Chief Minister",
@@ -3331,8 +3346,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; third ministry began 12 December 2013",
+          "from": "2013-12-12",
+          "fromLabel": "Third ministry began 12 December 2013",
           "to": "2018-12-17",
           "leader": "Raman Singh",
           "office": "Chief Minister",
@@ -3450,8 +3465,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry followed the December 2013 election",
+          "from": "2013-12",
+          "fromLabel": "Ministry followed the December 2013 election; month-level boundary retained",
           "to": "2018-12-17",
           "leader": "Vasundhara Raje",
           "office": "Chief Minister",
@@ -3583,8 +3598,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began after the 2013 election",
+          "from": "2013-05-13",
+          "fromLabel": "Ministry began 13 May 2013",
           "to": "2018-05-15",
           "leader": "Siddaramaiah",
           "office": "Chief Minister",
@@ -3824,8 +3839,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 13 July 2013",
+          "from": "2013-07-13",
+          "fromLabel": "Ministry began 13 July 2013",
           "to": "2014-12-23",
           "leader": "Hemant Soren",
           "office": "Chief Minister",
@@ -4035,8 +4050,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; third Gogoi ministry began in 2011",
+          "from": "2011-05-18",
+          "fromLabel": "Third Gogoi ministry began 18 May 2011",
           "to": "2014-06-26",
           "leader": "Tarun Gogoi",
           "office": "Chief Minister",
@@ -4255,8 +4270,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began 15 March 2012",
+          "from": "2012-03-15",
+          "fromLabel": "Ministry began 15 March 2012",
           "to": "2017-03-10",
           "leader": "Akhilesh Yadav",
           "office": "Chief Minister",
@@ -4431,8 +4446,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; second Hooda ministry began in 2009",
+          "from": "2009-10",
+          "fromLabel": "Second Hooda ministry began after the October 2009 election; month-level boundary retained",
           "to": "2014-10-20",
           "leader": "Bhupinder Singh Hooda",
           "office": "Chief Minister",
@@ -4628,8 +4643,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; minority ministry began 28 December 2013",
+          "from": "2013-12-28",
+          "fromLabel": "Minority ministry began 28 December 2013",
           "to": "2014-02-14",
           "leader": "Arvind Kejriwal",
           "office": "Chief Minister",
@@ -4871,8 +4886,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began after the 2012 election",
+          "from": "2012-03-13",
+          "fromLabel": "Ministry began 13 March 2012",
           "to": "2014-01-31",
           "leader": "Vijay Bahuguna",
           "office": "Chief Minister",
@@ -5113,8 +5128,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry formed 5 January 2009",
+          "from": "2009-01-05",
+          "fromLabel": "Ministry formed 5 January 2009",
           "to": "2014-12-24",
           "leader": "Omar Abdullah",
           "office": "Chief Minister",
@@ -5325,8 +5340,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; first ministry began 20 May 2011",
+          "from": "2011-05-20",
+          "fromLabel": "First ministry began 20 May 2011",
           "to": "2016-05-25",
           "leader": "Mamata Banerjee",
           "office": "Chief Minister",
@@ -5482,8 +5497,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; third ministry began 14 March 2012",
+          "from": "2012-03-14",
+          "fromLabel": "Third ministry began 14 March 2012",
           "to": "2017-03-14",
           "leader": "Okram Ibobi Singh",
           "office": "Chief Minister",
@@ -5650,8 +5665,8 @@
       "verifiedAsOf": "2026-07-22",
       "governmentTerms": [
         {
-          "from": "2014-01-01",
-          "fromLabel": "At 2014 research start; ministry began in 2011",
+          "from": "2011-05-16",
+          "fromLabel": "Ministry began 16 May 2011",
           "to": "2014-09-27",
           "leader": "J. Jayalalithaa",
           "office": "Chief Minister",

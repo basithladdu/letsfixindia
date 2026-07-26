@@ -1,5 +1,18 @@
 [
   {
+    "id": "upa-ii-government-2009-2014",
+    "year": 2009,
+    "date": "22 May 2009 – 26 May 2014",
+    "title": "United Progressive Alliance II government takes office under Manmohan Singh",
+    "category": "Government and elections",
+    "actors": ["Union government", "Indian National Congress", "United Progressive Alliance"],
+    "status": "Official term",
+    "severity": "Medium",
+    "summary": "Manmohan Singh formed the Union government after the 2009 Lok Sabha election and served as Prime Minister through the second United Progressive Alliance ministry until Narendra Modi took office on 26 May 2014.",
+    "outcome": "This establishes the immediately preceding Union-government term as historical context for the record beginning in 2014. It is a term marker, not a claim that every policy or event during the period is covered here.",
+    "sources": ["pmIndiaManmohanSingh"]
+  },
+  {
     "id": "hijab-ban-2022",
     "year": 2022,
     "date": "February-March 2022",
