@@ -186,6 +186,11 @@ const timelineList = document.querySelector("#timelineList");
 const resultCount = document.querySelector("#resultCount");
 const evidenceSummary = document.querySelector("#evidenceSummary");
 const yearRail = document.querySelector("#yearRail");
+const categoryQuickFilters = document.querySelector("#categoryQuickFilters");
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character]);
+}
 const indicatorGrid = document.querySelector("#indicatorGrid");
 const indicatorSearchInput = document.querySelector("#indicatorSearchInput");
 const indicatorTopicFilter = document.querySelector("#indicatorTopicFilter");
@@ -739,4 +744,14 @@ function renderOptions() {
     `<button type="button" class="year-pill${state.year === "all" ? " active" : ""}" data-year="all" aria-pressed="${state.year === "all"}">All years</button>`,
     ...years.map((year) => `<button type="button" class="year-pill${state.year === String(year) ? " active" : ""}" data-year="${year}" aria-pressed="${state.year === String(year)}">${year}</button>`)
   ].join("");
+  if (categoryQuickFilters) {
+    const popularCategories = categories
+      .map((category) => ({ category, count: events.filter((event) => event.category === category).length }))
+      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category))
+      .slice(0, 6);
+    categoryQuickFilters.innerHTML = [
+      `<button type="button" class="category-chip${state.category === "all" ? " active" : ""}" data-category="all" aria-pressed="${state.category === "all"}">All topics</button>`,
+      ...popularCategories.map(({ category }) => `<button type="button" class="category-chip${state.category === category ? " active" : ""}" data-category="${escapeHtml(category)}" aria-pressed="${state.category === category}">${escapeHtml(category)}</button>`)
+    ].join("");
+  }
 }

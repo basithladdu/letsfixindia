@@ -207,6 +207,21 @@ function bindEvents() {
     updateScrollDock();
   });
 
+  categoryQuickFilters?.addEventListener("click", (event) => {
+    const button = closestFromEvent(event, "button[data-category]");
+    if (!button) return;
+    state.category = button.dataset.category;
+    if (categoryFilter) categoryFilter.value = state.category;
+    categoryQuickFilters.querySelectorAll(".category-chip").forEach((chip) => {
+      const active = chip === button;
+      chip.classList.toggle("active", active);
+      chip.setAttribute("aria-pressed", String(active));
+    });
+    playUiSound("filter");
+    renderTimeline();
+    updateScrollDock();
+  });
+
   // Handle big buttons mode selector
   const submitModeSelector = document.getElementById("submitModeSelector");
 

@@ -15,17 +15,13 @@ async function init() {
     } else if (initialRoute.page === "gallery") {
       void ensureGalleryAssets().catch(() => {});
     }
-    let voicesData;
-    let backlogData;
-    [sources, indicators, events, voicesData, backlogData] = await Promise.all([
+    [sources, indicators, events] = await Promise.all([
       loadJson("data/sources.json"),
       loadJson("data/indicators.json"),
-      loadJson("data/events.json"),
-      loadJson("data/voices.json").catch(() => []),
-      loadJson("data/research_backlog.json").catch(() => [])
+      loadJson("data/events.json")
     ]);
-    voices = voicesData || [];
-    researchBacklog = backlogData || [];
+    voices = [];
+    researchBacklog = [];
     renderOptions();
     populateIndicatorTopics();
     renderStatsOverview();
@@ -40,6 +36,17 @@ async function init() {
     setSoundEnabled(soundEnabled);
     ensureScrollProgress();
     renderRoute();
+
+    // Keep the first paint focused on the timeline. Voices and backlog are
+    // only needed on their own routes, so fetch them after the main shell is usable.
+    void Promise.all([
+      loadJson("data/voices.json").catch(() => []),
+      loadJson("data/research_backlog.json").catch(() => [])
+    ]).then(([voicesData, backlogData]) => {
+      voices = voicesData || [];
+      researchBacklog = backlogData || [];
+      if (resolveRoute().page === "voices") renderVoices();
+    });
   } catch (error) {
     if (timelineList) {
       timelineList.innerHTML = `<div class="empty-state">The JSON data files did not load. Run this folder through a local web server, then reload.</div>`;
