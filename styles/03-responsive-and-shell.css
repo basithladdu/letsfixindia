@@ -136,7 +136,7 @@
 
   .scroll-dock {
     right: 10px;
-    bottom: max(12px, env(safe-area-inset-bottom));
+    bottom: calc(70px + env(safe-area-inset-bottom));
     flex-direction: row;
     max-width: calc(100vw - 20px);
     gap: 4px;
@@ -144,8 +144,8 @@
   }
 
   .scroll-dock button {
-    width: 40px;
-    min-height: 40px;
+    width: 44px;
+    min-height: 44px;
   }
 
   .timeline-list {
