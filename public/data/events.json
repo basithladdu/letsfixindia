@@ -5815,5 +5815,18 @@
     "summary": "The Union Cabinet approved a ₹76,000 crore programme to develop semiconductor and display manufacturing ecosystems in India, including incentives for fabrication and packaging.",
     "outcome": "This records the cabinet approval and announced financial outlay, not the completion of individual facilities.",
     "sources": ["pibSemiconductorProgramme2021"]
+  },
+  {
+    "id": "it-rules-digital-media-2021",
+    "year": 2021,
+    "date": "25 February 2021",
+    "title": "New IT Rules impose expanded intermediary and digital-media obligations",
+    "category": "Digital rights and free expression",
+    "actors": ["Ministry of Electronics and Information Technology", "Ministry of Information and Broadcasting", "Social-media intermediaries", "Digital news publishers", "OTT platforms"],
+    "status": "Rules in force; constitutional challenges and amendments followed",
+    "severity": "High",
+    "summary": "The government notified the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, replacing the 2011 intermediary rules. The framework created additional compliance and grievance obligations for significant social-media intermediaries, including India-based officers and response duties, and established an oversight structure for digital news and OTT publishers.",
+    "outcome": "The government said the rules addressed online abuse, user grievance redress, and accountability of large platforms. Digital-rights organisations and publishers raised concerns about traceability, short takedown timelines, executive oversight, and possible chilling effects on speech. Courts heard multiple challenges and parts of the framework were later amended; this record does not treat every takedown or prosecution as caused by the rules alone.",
+    "sources": ["meityItRules2021", "prsItRules2021", "pibItRules2021"]
   }
 ]

@@ -1047,8 +1047,8 @@ textarea:focus-visible {
 .toolbar-band { margin: 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
 .toolbar { grid-template-columns: minmax(220px, 0.75fr) minmax(0, 2.25fr); gap: 12px; align-items: start; }
 .toolbar label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
-.toolbar input, .toolbar select { min-height: 42px; width: 100%; padding: 8px 10px; background: #fff; border: 1px solid #bcc6cc; border-radius: 6px; color: var(--ink); }
-.clear-filters-button { justify-self: start; min-height: 40px; margin-top: 1px; padding: 8px 12px; border: 1px solid #c8d0d4; border-radius: 5px; background: transparent; color: var(--muted); font: inherit; font-size: 11px; font-weight: 850; cursor: pointer; }
+.toolbar input, .toolbar select { min-height: 44px; width: 100%; padding: 8px 10px; background: #fff; border: 1px solid #bcc6cc; border-radius: 6px; color: var(--ink); }
+.clear-filters-button { justify-self: start; min-height: 44px; margin-top: 1px; padding: 8px 12px; border: 1px solid #c8d0d4; border-radius: 5px; background: transparent; color: var(--muted); font: inherit; font-size: 11px; font-weight: 850; cursor: pointer; }
 .clear-filters-button:hover, .clear-filters-button:focus-visible { border-color: var(--saffron); background: #fff8ef; color: var(--ink); }
 .clear-filters-button:disabled { cursor: default; opacity: .45; }
 .clear-filters-button:disabled:hover { border-color: #c8d0d4; background: transparent; color: var(--muted); }
@@ -1099,4 +1099,3 @@ textarea:focus-visible {
   .source-links { display: grid; }
   .source-links a, .source-pending { overflow-wrap: anywhere; }
 }
-

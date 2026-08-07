@@ -86,7 +86,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 42px;
+  min-height: 44px;
   text-decoration: none;
   font-weight: 800;
   letter-spacing: 0;
@@ -381,7 +381,7 @@ h2 {
 .text-button {
   display: inline-flex;
   align-items: center;
-  min-height: 42px;
+  min-height: 44px;
   padding: 8px 12px;
   background: var(--ink);
   border: 1px solid var(--ink);
@@ -559,7 +559,7 @@ textarea:focus {
 .year-pill {
   flex: 0 0 auto;
   min-width: 52px;
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 12px;
   background: transparent;
   border: 1px solid #b7c0c8;
@@ -590,7 +590,7 @@ textarea:focus {
   cursor: pointer;
   font: inherit;
   font-size: .78rem;
-  min-height: 34px;
+  min-height: 44px;
   padding: 5px 12px;
   transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
