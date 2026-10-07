@@ -30,6 +30,9 @@ function updatePageMeta(route) {
   } else if (route.page === "statistics") {
     title = "Statistics | LetsFixIndia";
     description = "Source-backed indicators showing where India improved, worsened, or remained broadly flat during the period.";
+  } else if (route.page === "who-runs-india") {
+    title = "Who Runs India? Cabinet Affidavit Comparison | LetsFixIndia";
+    description = "Compare a selected cohort of eight serving Union Cabinet members using current PMO roles and candidate-declared Lok Sabha 2024 affidavit data.";
   } else if (route.page === "map") {
     title = "State Map | LetsFixIndia";
     description = "Explore explicitly state-tagged public records across all 36 Indian states and union territories.";
@@ -73,6 +76,7 @@ function updatePageMeta(route) {
     gallery: route.galleryStatus ? `/gallery/submission/${encodeURIComponent(route.reference || "")}` : route.gallerySubmit ? "/gallery/submit" : "/gallery",
     map: "/map",
     statistics: "/statistics",
+    "who-runs-india": "/who-runs-india",
     voices: route.person ? `/voices/${encodeURIComponent(route.person)}` : "/voices",
     sources: "/sources",
     submit: "/submit",
@@ -108,6 +112,7 @@ function routeFromPath(pathname) {
   if (path === "/gallery") return { page: "gallery", gallerySubmit: false };
   if (path === "/map" || path === "/states") return { page: "map" };
   if (path === "/statistics" || path === "/indicators") return { page: "statistics" };
+  if (path === "/who-runs-india") return { page: "who-runs-india" };
   if (path.startsWith("/voices/")) return { page: "voices", person: decodeURIComponent(path.slice("/voices/".length)) };
   if (path === "/voices") return { page: "voices" };
   if (path === "/sources") return { page: "sources" };
@@ -195,6 +200,7 @@ function ensureRouteContent(route) {
   if (route.page === "timeline") renderTimeline();
   if (route.page === "map") prepareStateExplorer();
   if (route.page === "statistics") renderIndicators();
+  if (route.page === "who-runs-india") void renderWhoRunsIndia();
   if (route.page === "voices") renderVoices();
   if (route.page === "gallery") void activateGalleryRoute(route);
   if (route.page === "sources") renderSources();

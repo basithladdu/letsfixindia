@@ -5828,5 +5828,18 @@
     "summary": "The government notified the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, replacing the 2011 intermediary rules. The framework created additional compliance and grievance obligations for significant social-media intermediaries, including India-based officers and response duties, and established an oversight structure for digital news and OTT publishers.",
     "outcome": "The government said the rules addressed online abuse, user grievance redress, and accountability of large platforms. Digital-rights organisations and publishers raised concerns about traceability, short takedown timelines, executive oversight, and possible chilling effects on speech. Courts heard multiple challenges and parts of the framework were later amended; this record does not treat every takedown or prosecution as caused by the rules alone.",
     "sources": ["meityItRules2021", "prsItRules2021", "pibItRules2021"]
+  },
+  {
+    "id": "pmla-vijay-madanlal-judgment-2022",
+    "year": 2022,
+    "date": "27 July 2022",
+    "title": "Supreme Court upholds challenged core PMLA provisions",
+    "category": "Financial investigations and civil liberties",
+    "actors": ["Supreme Court of India", "Enforcement Directorate", "Union government", "Accused persons and undertrials"],
+    "status": "Supreme Court judgment",
+    "severity": "High",
+    "summary": "In Vijay Madanlal Choudhary v. Union of India, a three-judge Supreme Court bench upheld the challenged statutory framework for the Prevention of Money-Laundering Act, including the Enforcement Directorate's investigation and arrest powers and the post-amendment twin conditions for bail.",
+    "outcome": "The judgment accepted stringent PMLA procedures while holding that the undertrial-release protection in Section 436A of the Code of Criminal Procedure could be invoked in PMLA cases. Later decisions addressed issues including written grounds of arrest and prolonged incarceration; this record does not treat the 2022 ruling as proof that any particular later arrest was lawful or politically motivated.",
+    "sources": ["scVijayMadanlalPmla2022", "iePmlaMadanlal2024"]
   }
 ]

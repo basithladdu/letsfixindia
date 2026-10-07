@@ -1,0 +1,279 @@
+/* Small, final layout corrections for the public archive. */
+
+.search-wrap {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.search-wrap > label {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.search-control-row {
+  display: flex;
+  min-width: 0;
+  gap: 8px;
+}
+
+.search-control-row input {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.search-control-row .clear-filters-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 104px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.clear-filter-icon {
+  display: none;
+  flex: 0 0 auto;
+}
+
+/* Keep the issue index useful without making the voices route begin with a wall
+   of chips on a narrow screen. */
+.voice-issue-spotlight {
+  margin-bottom: 12px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.voice-issue-spotlight-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.voice-issue-spotlight-head span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.voice-issue-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.voice-issue-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 1 auto;
+  min-height: 36px;
+  max-width: 100%;
+  gap: 7px;
+  padding: 6px 7px 6px 10px;
+  border: 1px solid #e0d8ca;
+  border-radius: 999px;
+  background: #f8f5ee;
+  color: var(--ink);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.voice-issue-chip span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.voice-issue-chip img {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin-left: -3px;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: #e6e0d6;
+  object-fit: cover;
+}
+
+.voice-avatar {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.voice-avatar-linked {
+  cursor: zoom-in;
+}
+
+.voice-avatar-linked:focus-visible {
+  outline: 2px solid var(--bjp);
+  outline-offset: 2px;
+}
+
+.voice-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.voice-issue-chip strong {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #6b7680;
+  color: #fff;
+  font-size: 10px;
+}
+
+.voice-issue-chip:hover,
+.voice-issue-chip:focus-visible,
+.voice-issue-chip.is-active {
+  border-color: var(--bjp);
+  background: #fff2e8;
+}
+
+.voice-issue-chip:focus-visible {
+  outline: 2px solid rgba(255, 103, 31, .55);
+  outline-offset: 2px;
+}
+
+.voices-filter-bar > .clear-filters-button {
+  align-self: end;
+  height: 46px !important;
+  min-height: 46px !important;
+  margin: 0;
+}
+
+@media (max-width: 559px) {
+  .record-share .share-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .record-share .share-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .voice-issue-spotlight-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .voice-issue-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 18px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 18px), transparent);
+  }
+
+  .voice-issue-chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .voice-issue-chip {
+    flex: 0 0 auto;
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 720px) {
+  .toolbar {
+    grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.9fr) minmax(180px, 0.55fr);
+  }
+
+  .search-control-row .clear-filters-button:disabled {
+    width: 0;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+    border-width: 0;
+    border-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 1040px) {
+  .toolbar {
+    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 2fr) minmax(200px, 0.6fr);
+  }
+}
+
+/* The axis is a shared coordinate: every year node, event node, and line uses
+   its centre instead of relying on separate left offsets. */
+.timeline-list {
+  --timeline-axis: 9px;
+}
+
+.year-heading::before {
+  left: calc(var(--timeline-axis) - 6.5px);
+}
+
+.year-heading::after,
+.year-records::before {
+  left: calc(var(--timeline-axis) - 1px);
+}
+
+.event-card::before {
+  left: calc(var(--timeline-axis) - 32.5px);
+}
+
+@media (max-width: 719px) {
+  .search-control-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 46px;
+    gap: 7px;
+  }
+
+  .search-control-row .clear-filters-button {
+    width: 46px;
+    min-width: 46px;
+    padding: 8px;
+  }
+
+  .clear-filter-icon {
+    display: block;
+  }
+
+  .clear-filter-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}

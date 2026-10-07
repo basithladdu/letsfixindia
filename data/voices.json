@@ -4,6 +4,7 @@
     "name": "Shah Rukh Khan",
     "field": "Bollywood",
     "description": "Actor, producer — among India's most recognised global figures",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shahrukh%20Khan%202004.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Shahrukh_Khan_2004.jpg", "alt": "Shah Rukh Khan portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -62,6 +63,7 @@
     "name": "Virat Kohli",
     "field": "Cricket",
     "description": "Former India cricket captain — one of the most followed Indians globally",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Virat%20Kohli.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Virat_Kohli.jpg", "alt": "Virat Kohli portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -120,6 +122,7 @@
     "name": "Sachin Tendulkar",
     "field": "Cricket",
     "description": "Former cricketer, Rajya Sabha MP (nominated), Bharat Ratna recipient",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sachin%20Tendulkar.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Sachin_Tendulkar.jpg", "alt": "Sachin Tendulkar portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -172,6 +175,7 @@
     "name": "Aamir Khan",
     "field": "Bollywood",
     "description": "Actor, filmmaker — known for socially conscious cinema and Satyamev Jayate",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/AamirKhan.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:AamirKhan.jpg", "alt": "Aamir Khan portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -222,6 +226,7 @@
     "name": "Amitabh Bachchan",
     "field": "Bollywood",
     "description": "Actor — among the most influential figures in Indian cinema history",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amitabh%20Bachchan.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Amitabh_Bachchan.jpg", "alt": "Amitabh Bachchan portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -280,6 +285,7 @@
     "name": "Akshay Kumar",
     "field": "Bollywood",
     "description": "Actor — conducted a non-political interview with PM Modi before 2019 elections",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/AkshayKumar.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:AkshayKumar.jpg", "alt": "Akshay Kumar portrait"},
     "stances": [
       {
         "issue": "Modi interview (2019)",
@@ -342,6 +348,7 @@
     "name": "Kangana Ranaut",
     "field": "Bollywood / Politics",
     "description": "Actor turned BJP MP — elected to Lok Sabha from Mandi, Himachal Pradesh in 2024",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kangana%20Ranaut.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Kangana_Ranaut.jpg", "alt": "Kangana Ranaut portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -406,6 +413,7 @@
     "name": "Deepika Padukone",
     "field": "Bollywood",
     "description": "Actor — one of the highest-paid actors in Indian cinema",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/DeepikaPadukone.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:DeepikaPadukone.jpg", "alt": "Deepika Padukone portrait"},
     "stances": [
       {
         "issue": "CAA-NRC / JNU attack (2020)",
@@ -464,6 +472,7 @@
     "name": "Priyanka Chopra Jonas",
     "field": "Bollywood / International",
     "description": "Actor, UN Goodwill Ambassador — one of India's most globally recognised figures",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Priyanka%20Chopra.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Priyanka_Chopra.jpg", "alt": "Priyanka Chopra Jonas portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -506,6 +515,7 @@
     "name": "Salman Khan",
     "field": "Bollywood",
     "description": "Actor — one of the highest-grossing Hindi film stars",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salman%20Khan%20%288197611674%29.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Salman_Khan_%288197611674%29.jpg", "alt": "Salman Khan portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -562,6 +572,7 @@
     "name": "Ajay Devgn",
     "field": "Bollywood",
     "description": "Actor, filmmaker",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/AjayDevgn.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:AjayDevgn.jpg", "alt": "Ajay Devgn portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -604,6 +615,7 @@
     "name": "Anupam Kher",
     "field": "Bollywood",
     "description": "Actor — outspoken supporter of BJP and PM Modi",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anupam%20Kher.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Anupam_Kher.jpg", "alt": "Anupam Kher portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -666,6 +678,7 @@
     "name": "Swara Bhasker",
     "field": "Bollywood",
     "description": "Actor — one of the most consistently vocal critics of BJP policies",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swara%20Bhaskar.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Swara_Bhaskar.jpg", "alt": "Swara Bhasker portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -742,6 +755,7 @@
     "name": "Naseeruddin Shah",
     "field": "Bollywood",
     "description": "Veteran actor — National Award winner and Padma Bhushan recipient",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naseeruddin%20Shah.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Naseeruddin_Shah.jpg", "alt": "Naseeruddin Shah portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -798,6 +812,7 @@
     "name": "Javed Akhtar",
     "field": "Bollywood",
     "description": "Poet, lyricist, screenwriter — Padma Shri, Padma Bhushan recipient",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Javed%20Akhtar.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Javed_Akhtar.jpg", "alt": "Javed Akhtar portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -852,6 +867,7 @@
     "name": "Anurag Kashyap",
     "field": "Bollywood",
     "description": "Filmmaker — returned his National Award in protest against intolerance",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anurag%20kashyap.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Anurag_kashyap.jpg", "alt": "Anurag Kashyap portrait"},
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -1194,6 +1210,7 @@
     "name": "Richa Chadha",
     "field": "Bollywood",
     "description": "Actor — vocal on social issues",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/RichaChadda.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:RichaChadda.jpg", "alt": "Richa Chadha portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -1238,6 +1255,7 @@
     "name": "Vivek Agnihotri",
     "field": "Bollywood",
     "description": "Filmmaker — directed The Kashmir Files, a government-endorsed film on Kashmiri Pandits",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vivek%20Agnihotri.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Vivek_Agnihotri.jpg", "alt": "Vivek Agnihotri portrait"},
     "stances": [
       {
         "issue": "Kashmir / Kashmiri Pandits",
@@ -1290,6 +1308,7 @@
     "name": "Sonam Kapoor",
     "field": "Bollywood",
     "description": "Actor",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sonam-Kapoor-attends-Cond%C3%A9-Nast-Traveller-India-event.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Sonam-Kapoor-attends-Cond%C3%A9-Nast-Traveller-India-event.jpg", "alt": "Sonam Kapoor portrait"},
     "stances": [
       {
         "issue": "CAA-NRC / JNU (2020)",
@@ -1332,6 +1351,7 @@
     "name": "MS Dhoni",
     "field": "Cricket",
     "description": "Former India cricket captain — among the most popular Indian sportspeople",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/MS%20Dhoni%203.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:MS_Dhoni_3.jpg", "alt": "MS Dhoni portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -1380,6 +1400,7 @@
     "name": "Rohit Sharma",
     "field": "Cricket",
     "description": "Current India cricket captain",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rohit%20Sharma.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Rohit_Sharma.jpg", "alt": "Rohit Sharma portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -1428,6 +1449,7 @@
     "name": "Mukesh Ambani",
     "field": "Business",
     "description": "Chairman of Reliance Industries — India's richest person",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mukesh%20Ambani.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Mukesh_Ambani.jpg", "alt": "Mukesh Ambani portrait"},
     "stances": [
       {
         "issue": "Demonetisation (2016)",
@@ -1478,6 +1500,7 @@
     "name": "Gautam Adani",
     "field": "Business",
     "description": "Chairman of Adani Group — business ties with government extensively documented",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gautam%20Adani.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Gautam_Adani.jpg", "alt": "Gautam Adani portrait"},
     "stances": [
       {
         "issue": "Hindenburg Report (2023)",
@@ -1528,6 +1551,7 @@
     "name": "Ratan Tata",
     "field": "Business",
     "description": "Chairman Emeritus of Tata Sons (d. 2024) — India's most respected industrialist",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/RatanTata.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:RatanTata.jpg", "alt": "Ratan Tata portrait"},
     "stances": [
       {
         "issue": "Demonetisation (2016)",
@@ -1580,6 +1604,7 @@
     "name": "Rihanna",
     "field": "International",
     "description": "Singer, businesswoman — one of the world's most followed people on social media",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rihanna%20face.png?width=320", "source": "https://commons.wikimedia.org/wiki/File:Rihanna_face.png", "alt": "Rihanna portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -1614,6 +1639,7 @@
     "name": "Greta Thunberg",
     "field": "International",
     "description": "Climate activist",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Greta%20Thunberg%2001.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Greta_Thunberg_01.jpg", "alt": "Greta Thunberg portrait"},
     "stances": [
       {
         "issue": "Farmers' protests (2020-2021)",
@@ -1682,6 +1708,11 @@
     "name": "Shabana Azmi",
     "field": "Bollywood",
     "description": "Actor, activist — five-time National Award winner, former Rajya Sabha MP",
+    "portrait": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shabana%20Azmi.jpg?width=320",
+      "source": "https://commons.wikimedia.org/wiki/File:Shabana_Azmi.jpg",
+      "alt": "Shabana Azmi portrait"
+    },
     "stances": [
       {
         "issue": "Intolerance debate (2015)",
@@ -1992,6 +2023,7 @@
     "name": "Sundar Pichai",
     "field": "Business / Tech",
     "description": "CEO of Alphabet and Google — international-Indian tech leader",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sundar%20Pichai%20%282023%29.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Sundar_Pichai_%282023%29.jpg", "alt": "Sundar Pichai portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -2040,6 +2072,7 @@
     "name": "Satya Nadella",
     "field": "Business / Tech",
     "description": "CEO of Microsoft — international-Indian tech leader",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Satya%20Nadella.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Satya_Nadella.jpg", "alt": "Satya Nadella portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -2090,6 +2123,7 @@
     "name": "Neeraj Chopra",
     "field": "Sports",
     "description": "Olympic gold medallist in javelin throw — India's premier track and field athlete",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Neeraj%20Chopra.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Neeraj_Chopra.jpg", "alt": "Neeraj Chopra portrait"},
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -2244,6 +2278,7 @@
     "name": "Rajinikanth",
     "field": "South Cinema",
     "description": "Actor and cultural icon in South Indian cinema",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rajinikanth%20cropped.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Rajinikanth_cropped.jpg", "alt": "Rajinikanth portrait"},
     "stances": [
       {
         "issue": "Demonetisation (2016)",
@@ -2304,6 +2339,11 @@
     "name": "Kamal Haasan",
     "field": "South Cinema / Politics",
     "description": "Actor, filmmaker, and founder-president of Makkal Needhi Maiam (MNM)",
+    "portrait": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/With%20Kamal%20Hasan.jpg?width=320",
+      "source": "https://commons.wikimedia.org/wiki/File:With_Kamal_Hasan.jpg",
+      "alt": "Kamal Haasan portrait"
+    },
     "stances": [
       {
         "issue": "CAA-NRC protests (2019-2020)",
@@ -3020,6 +3060,7 @@
     "name": "D. Y. Chandrachud",
     "field": "Judiciary",
     "description": "Former Chief Justice of India who presided over the NEET-UG 2024 hearings",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Justice%20D.Y.%20Chandrachud.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Justice_D.Y._Chandrachud.jpg", "alt": "D. Y. Chandrachud portrait"},
     "stances": [
       {
         "issue": "NEET-UG 2024 exam integrity",
@@ -3138,6 +3179,7 @@
     "name": "Sonam Wangchuk",
     "field": "Climate activist / Ladakh statehood movement",
     "description": "Educator and climate activist associated with peaceful demands for Ladakh statehood and constitutional protections for land, jobs, and local representation.",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sonam%20Wangchuk%2C%202017%20%28cropped%29.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Sonam_Wangchuk%2C_2017_%28cropped%29.jpg", "alt": "Sonam Wangchuk portrait"},
     "stances": [
       {
         "issue": "Ladakh statehood and September 2025 protests",
@@ -3217,6 +3259,7 @@
     "name": "Sania Mirza",
     "field": "Sports",
     "description": "Former world No. 1 doubles tennis player and multiple Grand Slam winner",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sania%20Mirza.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Sania_Mirza.jpg", "alt": "Sania Mirza portrait"},
     "stances": [{"issue":"Wrestlers' protest (2023)","position":"spoke-out","summary":"Expressed solidarity with the wrestlers seeking action on sexual-harassment allegations and called the situation difficult to watch.","quote":null,"date":"2023-04","sources":["scrollAthletesWrestlers2023"]}]
   },
   {
@@ -3322,6 +3365,7 @@
     "name": "Mahesh Bhatt",
     "field": "Film",
     "description": "Film director and producer",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahesh%20Bhatt.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Mahesh_Bhatt.jpg", "alt": "Mahesh Bhatt portrait"},
     "stances": [{"issue":"CAA-NRC-NPR protests (2020)","position":"spoke-out","summary":"Signed the public statement saying that protesting against the CAA was not a crime and objecting to what signatories described as a witch-hunt of protesters.","quote":null,"date":"2020-04","sources":["quintArtistesCAA2020"]}]
   },
   {
@@ -3441,6 +3485,7 @@
     "name": "Vikramaditya Motwane",
     "field": "Film",
     "description": "Filmmaker and producer",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vikramaditya%20Motwane.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Vikramaditya_Motwane.jpg", "alt": "Vikramaditya Motwane portrait"},
     "stances": [{"issue":"CAA protests and policing in Uttar Pradesh (2020)","position":"spoke-out","summary":"Signed a statement supporting peaceful protest and raising concerns about reported state excesses in Uttar Pradesh during the CAA protests.","quote":null,"date":"2020-01","sources":["wireActorsCAAUttarPradesh2020"]}]
   },
   {
@@ -3462,6 +3507,7 @@
     "name": "Arundhati Roy",
     "field": "Literature / Civil society",
     "description": "Author and public intellectual",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arundhati%20Roy.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Arundhati_Roy.jpg", "alt": "Arundhati Roy portrait"},
     "stances": [{"issue":"CAA-NRC and Umar Khalid prosecution (2020)","position":"spoke-out","summary":"Signed a statement calling for Umar Khalid and others arrested in connection with anti-CAA protests to be freed, describing the investigation as a witch-hunt; this records the signatories' stated view, not a legal finding.","quote":null,"date":"2020-09","sources":["ieUmarKhalidSolidarity2020"]}]
   },
   {
@@ -3532,6 +3578,7 @@
     "name": "Krishen Khanna",
     "field": "Art",
     "description": "Modern painter and Padma Shri recipient",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krishen%20Khanna.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Krishen_Khanna.jpg", "alt": "Krishen Khanna portrait"},
     "stances": [{"issue":"Intolerance and cultural freedoms (2018)","position":"spoke-out","summary":"Was named among signatories to the Artists Unite declaration defending equality, dignity and cultural freedoms amid what the declaration described as hate and division.","quote":null,"date":"2018-09","sources":["wireArtistsUnite2018"]}]
   },
   {
@@ -3679,6 +3726,7 @@
     "name": "Zubeen Garg",
     "field": "Music / Assam cinema",
     "description": "Singer, composer and actor",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zubeen%20Garg.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Zubeen_Garg.jpg", "alt": "Zubeen Garg portrait"},
     "stances": [{"issue":"CAA protests in Assam (2020)","position":"spoke-out","summary":"At the launch of an anti-CAA information platform, said that speaking against a law regarded as unjust could not be treated as sedition.","quote":null,"date":"2020-01","sources":["wireAssamArtistesCAA2020"]}]
   },
   {
@@ -3798,6 +3846,7 @@
     "name": "Dhruv Rathee",
     "field": "Digital creator / Public affairs",
     "description": "YouTube educator and political commentator",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dhruv%20Rathee.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Dhruv_Rathee.jpg", "alt": "Dhruv Rathee portrait"},
     "stances": [{"issue":"Government accountability and democratic institutions (2014-present)","position":"spoke-out","summary":"Built a large public-affairs YouTube channel after criticising the BJP's record against its promises; reporting describes his work as critical of government institutions and calls for voter participation.","quote":null,"date":"2014-present","sources":["scrollPoliticalYoutube2019","lemondeYoutubeDissent2024"]}]
   },
   {
@@ -3805,6 +3854,7 @@
     "name": "Akash Banerjee",
     "field": "Digital creator / Public affairs",
     "description": "YouTube political commentator and comedian",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akash%20Banerjee.png?width=320", "source": "https://commons.wikimedia.org/wiki/File:Akash_Banerjee.png", "alt": "Akash Banerjee portrait"},
     "stances": [{"issue":"Government accountability and political commentary (2014-present)","position":"spoke-out","summary":"Was reported among creators who started political YouTube channels after becoming disillusioned with the BJP and perceived mainstream-media propaganda.","quote":null,"date":"2019","sources":["scrollPoliticalYoutube2019"]}]
   },
   {
@@ -3953,6 +4003,7 @@
     "name": "Umar Khalid",
     "field": "Student activist / civil liberties",
     "description": "Student activist and former Jawaharlal Nehru University scholar whose UAPA prosecution and prolonged pre-trial detention became a major civil-liberties case.",
+    "portrait": {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Umar%20khalid%20%28cropped%29.jpg?width=320", "source": "https://commons.wikimedia.org/wiki/File:Umar_khalid_%28cropped%29.jpg", "alt": "Umar Khalid portrait"},
     "stances": [
       {
         "issue": "2020 Delhi violence case and pre-trial detention",

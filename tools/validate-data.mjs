@@ -150,6 +150,7 @@ try {
   const voiceIds = new Set();
   const validStances = new Set(['spoke-out', 'supported-govt', 'silent', 'ambiguous']);
 
+  let portraitCount = 0;
   voices.forEach((voice, index) => {
     const loc = `voices.json[${index}] (${voice.id || 'missing ID'})`;
 
@@ -169,6 +170,25 @@ try {
         logError(`Voice "${voice.id}" is missing required field "${field}".`);
       }
     });
+
+    if (voice.portrait !== undefined) {
+      const portraitFields = ['url', 'source', 'alt'];
+      if (!voice.portrait || typeof voice.portrait !== 'object') {
+        logError(`${loc} portrait must be an object.`);
+      } else {
+        portraitCount += 1;
+        portraitFields.forEach(field => {
+          if (typeof voice.portrait[field] !== 'string' || !voice.portrait[field].trim()) {
+            logError(`${loc} portrait is missing a non-empty "${field}".`);
+          }
+        });
+        ['url', 'source'].forEach(field => {
+          if (typeof voice.portrait[field] === 'string' && !/^https:\/\//.test(voice.portrait[field])) {
+            logError(`${loc} portrait ${field} must use https.`);
+          }
+        });
+      }
+    }
 
     if (Array.isArray(voice.stances)) {
       voice.stances.forEach((stance, sIndex) => {
@@ -192,7 +212,7 @@ try {
       logError(`Voice "${voice.id}" stances is not an array.`);
     }
   });
-  logSuccess(`Validated ${voices.length} public figures successfully.`);
+  logSuccess(`Validated ${voices.length} public figures successfully (${portraitCount} reviewed portraits).`);
 
   // Validate statistics cards and their chart points.
   if (!Array.isArray(indicators)) {

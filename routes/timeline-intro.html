@@ -25,11 +25,16 @@
 
       <section id="filters" class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
         <div class="toolbar">
-          <label class="search-wrap">
-            <span>Search records</span>
-            <input id="searchInput" type="search" placeholder="Search records, names, places">
-            <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters">Clear filters</button>
-          </label>
+          <div class="search-wrap">
+            <label for="searchInput">Search records</label>
+            <div class="search-control-row">
+              <input id="searchInput" type="search" placeholder="Search records, names, places">
+              <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters" aria-label="Reset all timeline filters">
+                <svg class="clear-filter-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+                <span class="clear-filter-text">Clear filters</span>
+              </button>
+            </div>
+          </div>
           <details id="advancedFilters" class="advanced-filters">
             <summary>Filters <span id="advancedFilterBadge" class="filter-summary-badge" hidden>0 active</span></summary>
             <div class="advanced-filter-grid">

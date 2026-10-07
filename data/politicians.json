@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "route": "/who-runs-india",
+  "title": "Who runs India?",
+  "scope": "A selected comparison of eight serving Union Cabinet members who contested the 2024 Lok Sabha election. This is not a complete list of Indian politicians or ministers.",
+  "roleSnapshot": {
+    "asOf": "2026-07-25",
+    "publisher": "Prime Minister's Office, Government of India",
+    "title": "Portfolios of the Union Council of Ministers",
+    "url": "https://www.pmindia.gov.in/en/news_updates/portfolios-of-the-union-council-of-ministers-2/?comment=disable"
+  },
+  "affidavitSnapshot": {
+    "election": "Lok Sabha 2024",
+    "publisher": "MyNeta / Association for Democratic Reforms",
+    "note": "Age, education, profession, assets, liabilities and case counts are transcribed from each candidate's self-declared 2024 election affidavit as published by MyNeta. Case counts are declarations of pending cases, not convictions. Values may have changed since filing."
+  },
+  "bodyDataPolicy": "Height and weight are not inferred from photographs. BMI is calculated only when both measurements are published by a cited source; otherwise all three fields remain unavailable.",
+  "profiles": [
+    {
+      "id": "narendra-modi",
+      "cabinetOrder": 0,
+      "name": "Narendra Modi",
+      "role": "Prime Minister",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Varanasi",
+      "state": "Uttar Pradesh",
+      "affidavitAge": 73,
+      "educationCategory": "Post Graduate",
+      "educationDetail": "M.A., Gujarat University (1983); B.A., Delhi University (1978); SSC (1967)",
+      "selfProfession": "Public life; political activity",
+      "declaredAssetsInr": 30206889,
+      "declaredLiabilitiesInr": 0,
+      "declaredCriminalCases": 0,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8974",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/narendra-modi.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_official_portrait_of_Shri_Narendra_Modi,_the_Prime_Minister_of_the_Republic_of_India.jpg",
+        "author": "Prime Minister's Office",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "raj-nath-singh",
+      "cabinetOrder": 1,
+      "name": "Raj Nath Singh",
+      "role": "Minister of Defence",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Lucknow",
+      "state": "Uttar Pradesh",
+      "affidavitAge": 72,
+      "educationCategory": "Post Graduate",
+      "educationDetail": "Postgraduate Science, Gorakhpur University (1971); Graduate Science (1969)",
+      "selfProfession": "Minister salary; pension; agriculture",
+      "declaredAssetsInr": 73684617,
+      "declaredLiabilitiesInr": 0,
+      "declaredCriminalCases": 0,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7169",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/raj-nath-singh.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Rajnath_Singh,_in_New_Delhi_on_May_09,_2023_(cropped).jpg",
+        "author": "Ministry of Defence",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "amit-shah",
+      "cabinetOrder": 2,
+      "name": "Amit Shah",
+      "role": "Minister of Home Affairs; Minister of Cooperation",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Gandhinagar",
+      "state": "Gujarat",
+      "affidavitAge": 59,
+      "educationCategory": "12th Pass",
+      "educationDetail": "12th Pass",
+      "selfProfession": "Social work; agriculture",
+      "declaredAssetsInr": 656712498,
+      "declaredLiabilitiesInr": 4209587,
+      "declaredCriminalCases": 3,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4427",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/amit-shah.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Amit_Shah_in_Raigad.jpg",
+        "author": "Ministry of Home Affairs",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "nitin-gadkari",
+      "cabinetOrder": 3,
+      "name": "Nitin Jairam Gadkari",
+      "role": "Minister of Road Transport and Highways",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Nagpur",
+      "state": "Maharashtra",
+      "affidavitAge": 67,
+      "educationCategory": "Doctorate",
+      "educationDetail": "Honorary Ph.D., Galgotias University (2023); honorary D.Litt., SRM Institute of Science and Technology (2023)",
+      "selfProfession": "Agriculture",
+      "declaredAssetsInr": 280317321,
+      "declaredLiabilitiesInr": 62230174,
+      "declaredCriminalCases": 10,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=329",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/nitin-gadkari.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nitin_Gadkari_nagpur.jpg",
+        "author": "Ministry of Water Resources, River Development and Ganga Rejuvenation",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "shivraj-singh-chouhan",
+      "cabinetOrder": 5,
+      "name": "Shivraj Singh Chouhan",
+      "role": "Minister of Agriculture and Farmers Welfare; Minister of Rural Development",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Vidisha",
+      "state": "Madhya Pradesh",
+      "affidavitAge": 65,
+      "educationCategory": "Post Graduate",
+      "educationDetail": "M.A. Philosophy, Bhopal University (1982-83)",
+      "selfProfession": "MLA salary; agriculture; horticulture",
+      "declaredAssetsInr": 89852874,
+      "declaredLiabilitiesInr": 6411905,
+      "declaredCriminalCases": 1,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=4448",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/shivraj-singh-chouhan.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Shivraj_Singh_Chouhan.jpg",
+        "author": "Ministry of Agriculture and Farmers Welfare",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "manohar-lal",
+      "cabinetOrder": 8,
+      "name": "Manohar Lal",
+      "role": "Minister of Housing and Urban Affairs; Minister of Power",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Karnal",
+      "state": "Haryana",
+      "affidavitAge": 70,
+      "educationCategory": "Graduate",
+      "educationDetail": "Graduate, Delhi University (1975)",
+      "selfProfession": "Former Chief Minister of Haryana",
+      "declaredAssetsInr": 25442914,
+      "declaredLiabilitiesInr": 0,
+      "declaredCriminalCases": 0,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8552",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/manohar-lal.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manohar_Lal_Khattar_in_2015.jpg",
+        "author": "Maryland GovPics",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    },
+    {
+      "id": "hd-kumaraswamy",
+      "cabinetOrder": 9,
+      "name": "H. D. Kumaraswamy",
+      "role": "Minister of Heavy Industries; Minister of Steel",
+      "party": "Janata Dal (Secular)",
+      "partyCode": "JD(S)",
+      "constituency": "Mandya",
+      "state": "Karnataka",
+      "affidavitAge": 65,
+      "educationCategory": "Graduate",
+      "educationDetail": "B.Sc., National College Jayanagar, Bangalore University (1978-79)",
+      "selfProfession": "Social worker; politician; agriculturist",
+      "declaredAssetsInr": 2172328789,
+      "declaredLiabilitiesInr": 821883134,
+      "declaredCriminalCases": 3,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2651",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/hd-kumaraswamy.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:H._D._Kumaraswamy.jpg",
+        "author": "Prime Minister's Office",
+        "license": "GODL-India",
+        "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+      }
+    },
+    {
+      "id": "piyush-goyal",
+      "cabinetOrder": 10,
+      "name": "Piyush Goyal",
+      "role": "Minister of Commerce and Industry",
+      "party": "Bharatiya Janata Party",
+      "partyCode": "BJP",
+      "constituency": "Mumbai North",
+      "state": "Maharashtra",
+      "affidavitAge": 59,
+      "educationCategory": "Graduate Professional",
+      "educationDetail": "Chartered Accountant, ICAI (1987); LL.B., University of Mumbai (1987)",
+      "selfProfession": "Chartered accountant; Cabinet minister",
+      "declaredAssetsInr": 1109514447,
+      "declaredLiabilitiesInr": 142265061,
+      "declaredCriminalCases": 0,
+      "affidavitUrl": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7093",
+      "bodyMeasurements": {
+        "heightCm": null,
+        "weightKg": null,
+        "bmi": null,
+        "status": "not-publicly-documented",
+        "sourceUrl": null
+      },
+      "photo": {
+        "path": "/assets/politicians/piyush-goyal.jpg",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Piyush_Goyal.jpg",
+        "author": "U.S. Department of State",
+        "license": "Public domain (U.S. Government work)",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-DOS"
+      }
+    }
+  ]
+}

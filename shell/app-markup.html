@@ -21,6 +21,10 @@
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
           Stats
         </a>
+        <a href="/who-runs-india" data-link>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10h14v11M3 10l9-6 9 6M9 14v3M15 14v3"></path></svg>
+          Cabinet
+        </a>
         <a href="/voices" data-link>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
           Voices
@@ -73,6 +77,10 @@
       <a href="/statistics" data-link>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
         Stats
+      </a>
+      <a href="/who-runs-india" data-link>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10h14v11M3 10l9-6 9 6M9 14v3M15 14v3"></path></svg>
+        Cabinet
       </a>
       <a href="/voices" data-link>
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
@@ -143,11 +151,16 @@
 
       <section id="filters" class="toolbar-band route-page" data-page="timeline" aria-label="Timeline controls">
         <div class="toolbar">
-          <label class="search-wrap">
-            <span>Search records</span>
-            <input id="searchInput" type="search" placeholder="Search records, names, places">
-            <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters">Clear filters</button>
-          </label>
+          <div class="search-wrap">
+            <label for="searchInput">Search records</label>
+            <div class="search-control-row">
+              <input id="searchInput" type="search" placeholder="Search records, names, places">
+              <button id="clearFiltersButton" class="clear-filters-button" type="button" title="Reset all timeline filters" aria-label="Reset all timeline filters">
+                <svg class="clear-filter-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+                <span class="clear-filter-text">Clear filters</span>
+              </button>
+            </div>
+          </div>
           <details id="advancedFilters" class="advanced-filters">
             <summary>Filters <span id="advancedFilterBadge" class="filter-summary-badge" hidden>0 active</span></summary>
             <div class="advanced-filter-grid">
@@ -254,6 +267,65 @@
           <button id="statsLoadMore" type="button">Show more</button>
           <button id="statsShowAll" type="button">Show all</button>
         </div>
+      </section>
+      <section id="who-runs-india" class="section power-section route-page" data-page="who-runs-india">
+        <div class="power-hero">
+          <div class="section-head power-heading">
+            <p class="eyebrow">Who runs India?</p>
+            <h2>Power, affidavit by affidavit</h2>
+            <p>Eight serving Union Cabinet members who contested Lok Sabha 2024. Roles are current to 25 July 2026; affidavit figures are self-declared election snapshots.</p>
+          </div>
+          <div class="power-source-strip" aria-label="Primary sources">
+            <a href="https://www.pmindia.gov.in/en/news_updates/portfolios-of-the-union-council-of-ministers-2/?comment=disable" target="_blank" rel="noopener">PMO roles</a>
+            <span>2024 affidavits via MyNeta</span>
+            <span>Photos via Wikimedia Commons</span>
+          </div>
+        </div>
+
+        <div id="powerSummary" class="power-summary" aria-label="Cohort summary"></div>
+
+        <div class="power-toolbar" aria-label="Politician comparison controls">
+          <label>
+            <span>Rank by</span>
+            <select id="powerSort">
+              <option value="assets">Declared assets</option>
+              <option value="liabilities">Declared liabilities</option>
+              <option value="cases">Declared cases</option>
+              <option value="age">Age at affidavit</option>
+              <option value="education">Education category</option>
+              <option value="bmi">BMI</option>
+              <option value="cabinet">Cabinet order</option>
+            </select>
+          </label>
+          <label>
+            <span>Party</span>
+            <select id="powerParty">
+              <option value="all">All parties</option>
+            </select>
+          </label>
+          <button id="powerDirection" type="button" data-direction="desc" aria-label="Change to ascending order">Descending</button>
+          <span id="powerResultCount" class="power-result-count" aria-live="polite"></span>
+        </div>
+
+        <div id="powerBmiNotice" class="power-bmi-notice" role="note">
+          <strong>BMI unavailable for this cohort.</strong>
+          <span>No cited source publishes both height and weight. Photographs are not measurements.</span>
+        </div>
+
+        <p id="powerMetricCaption" class="power-metric-caption" aria-live="polite"></p>
+        <div id="powerGrid" class="power-grid" aria-busy="true">
+          <div class="empty-state">Loading source-backed profiles...</div>
+        </div>
+
+        <details class="power-method">
+          <summary>Source definitions</summary>
+          <div>
+            <p><strong>Role:</strong> Prime Minister's Office portfolio list dated 25 July 2026.</p>
+            <p><strong>Affidavit:</strong> candidate-declared age, education, profession, assets, liabilities and pending-case count published by MyNeta for Lok Sabha 2024. A declared case is not a conviction.</p>
+            <p><strong>Body data:</strong> height, weight and BMI stay unavailable unless both measurements have a cited publication. No estimate is made from an image.</p>
+            <p><strong>Coverage:</strong> this eight-person Cabinet comparison is deliberately finite, not a directory of every office-holder.</p>
+          </div>
+        </details>
       </section>
       <section id="state-map" class="section state-map-section route-page" data-page="map">
         <div class="section-head state-map-head">
@@ -858,7 +930,7 @@
         <div class="section-head">
           <p class="eyebrow">Public figures &amp; celebrities</p>
           <h2>Who spoke, who backed power, and where no statement was found</h2>
-          <p>Tracking source-linked public statements by influential figures across major controversies. "No statement found" describes the current research result; it is not proof of support, intent, or permanent silence.</p>
+          <p>Tracking source-linked public statements by influential figures across major controversies. "No statement found" describes the current research result; it is not proof of support, intent, or permanent silence. Portrait links open their Wikimedia Commons file page; people without a reviewed portrait remain initials.</p>
         </div>
         <div class="voices-toolbar">
           <div class="voices-summary" id="voicesSummary" role="status" aria-live="polite" aria-atomic="true"></div>

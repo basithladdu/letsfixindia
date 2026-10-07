@@ -121,8 +121,8 @@ function renderVoiceIssueSpotlight() {
     if (active) visible.push(active);
   }
   voiceIssueSpotlight.innerHTML = visible.map(([issue, stats]) => `
-    <button type="button" class="voice-issue-chip${voiceState.issue === issue ? " is-active" : ""}" data-voice-issue="${esc(issue)}" aria-pressed="${voiceState.issue === issue}">
-      <span>${esc(issue)}</span><strong>${stats.people.size}</strong>
+    <button type="button" class="voice-issue-chip${voiceState.issue === issue ? " is-active" : ""}" data-voice-issue="${esc(issue)}" aria-pressed="${voiceState.issue === issue}" aria-label="${esc(issue)}: ${stats.people.size} figures tracked">
+      <span>${esc(issue)}</span>${[...voices].filter((voice) => voice.portrait?.url && voice.stances.some((stance) => stance.issue === issue)).slice(0, 3).map((voice) => `<img src="${esc(voice.portrait.url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`).join("")}<strong>${stats.people.size}</strong>
     </button>
   `).join("");
 }
@@ -179,6 +179,7 @@ function renderVoices() {
   if (voicesSummary) {
     voicesSummary.innerHTML = `
       <div class="voice-stat"><strong>${totalPeople}</strong><span>figures tracked</span></div>
+      <div class="voice-stat"><strong>${voices.filter((voice) => voice.portrait?.url).length}</strong><span>portraits linked</span></div>
       <div class="voice-stat spoke-out"><strong>${spokeOutCount}</strong><span>spoke out on \u2265 1 issue</span></div>
       <div class="voice-stat silent"><strong>${silentCount}</strong><span>no statement found on all issues</span></div>
       <div class="voice-stat supported-govt"><strong>${proGovtCount}</strong><span>supported govt (never spoke out)</span></div>
@@ -236,6 +237,9 @@ function renderVoices() {
     const dominantLabel = dominantClass === "voice-spoke" ? "Spoke out" : dominantClass === "voice-govt" ? "Supported government" : dominantClass === "voice-silent" ? "No statement found" : "Mixed record";
 
     const initials = voice.name.split(" ").map((part) => part.charAt(0)).slice(0, 2).join("");
+    const portraitHtml = voice.portrait?.url
+      ? `<a class="voice-avatar voice-avatar-linked" href="${esc(voice.portrait.source)}" target="_blank" rel="noreferrer" aria-label="Open ${esc(voice.name)} portrait source"><span aria-hidden="true">${esc(initials)}</span><img src="${esc(voice.portrait.url)}" alt="${esc(voice.portrait.alt || `${voice.name} portrait`)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a>`
+      : `<div class="voice-avatar"><span aria-hidden="true">${esc(initials)}</span></div>`;
     const ratioSeg = (count, cls, label) => count
       ? `<span class="ratio-seg ${cls}" style="flex-grow:${count}" title="${label}: ${count} of ${total}"></span>`
       : "";
@@ -249,7 +253,7 @@ function renderVoices() {
     return `
       <article class="voice-card ${dominantClass}" style="--i:${voiceIndex++ % 9}">
         <div class="voice-header">
-          <div class="voice-avatar">${esc(initials)}</div>
+          ${portraitHtml}
           <div class="voice-id">
             <h3 class="voice-name"><a href="/voices/${encodeURIComponent(voice.id)}" data-link${isProfileRoute ? ' aria-current="page"' : ""}>${esc(voice.name)}</a></h3>
             <div class="voice-fields">${fieldChips}</div>

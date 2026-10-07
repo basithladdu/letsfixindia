@@ -8,3 +8,20 @@
 @import url("/styles/07-contact-and-interactions.css?v=2");
 @import url("/styles/08-submit-and-filter-fixes.css");
 @import url("/styles/09-mobile-bottom-nav.css");
+@import url("/styles/10-archive-ui-polish.css");
+
+/* Standalone Astro record pages inline this manifest after the imported files. */
+@media (max-width: 559px) {
+  .record-share .share-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .record-share .share-button {
+    width: 100%;
+    min-width: 0;
+  }
+}

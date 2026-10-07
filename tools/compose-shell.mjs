@@ -6,6 +6,7 @@ export const MARKUP_PARTS = [
   "shell/navigation.html",
   "routes/timeline-intro.html",
   "routes/statistics.html",
+  "routes/who-runs-india.html",
   "routes/map.html",
   "routes/sources.html",
   "routes/gallery.html",

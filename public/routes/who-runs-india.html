@@ -1,0 +1,59 @@
+      <section id="who-runs-india" class="section power-section route-page" data-page="who-runs-india">
+        <div class="power-hero">
+          <div class="section-head power-heading">
+            <p class="eyebrow">Who runs India?</p>
+            <h2>Power, affidavit by affidavit</h2>
+            <p>Eight serving Union Cabinet members who contested Lok Sabha 2024. Roles are current to 25 July 2026; affidavit figures are self-declared election snapshots.</p>
+          </div>
+          <div class="power-source-strip" aria-label="Primary sources">
+            <a href="https://www.pmindia.gov.in/en/news_updates/portfolios-of-the-union-council-of-ministers-2/?comment=disable" target="_blank" rel="noopener">PMO roles</a>
+            <span>2024 affidavits via MyNeta</span>
+            <span>Photos via Wikimedia Commons</span>
+          </div>
+        </div>
+
+        <div id="powerSummary" class="power-summary" aria-label="Cohort summary"></div>
+
+        <div class="power-toolbar" aria-label="Politician comparison controls">
+          <label>
+            <span>Rank by</span>
+            <select id="powerSort">
+              <option value="assets">Declared assets</option>
+              <option value="liabilities">Declared liabilities</option>
+              <option value="cases">Declared cases</option>
+              <option value="age">Age at affidavit</option>
+              <option value="education">Education category</option>
+              <option value="bmi">BMI</option>
+              <option value="cabinet">Cabinet order</option>
+            </select>
+          </label>
+          <label>
+            <span>Party</span>
+            <select id="powerParty">
+              <option value="all">All parties</option>
+            </select>
+          </label>
+          <button id="powerDirection" type="button" data-direction="desc" aria-label="Change to ascending order">Descending</button>
+          <span id="powerResultCount" class="power-result-count" aria-live="polite"></span>
+        </div>
+
+        <div id="powerBmiNotice" class="power-bmi-notice" role="note">
+          <strong>BMI unavailable for this cohort.</strong>
+          <span>No cited source publishes both height and weight. Photographs are not measurements.</span>
+        </div>
+
+        <p id="powerMetricCaption" class="power-metric-caption" aria-live="polite"></p>
+        <div id="powerGrid" class="power-grid" aria-busy="true">
+          <div class="empty-state">Loading source-backed profiles...</div>
+        </div>
+
+        <details class="power-method">
+          <summary>Source definitions</summary>
+          <div>
+            <p><strong>Role:</strong> Prime Minister's Office portfolio list dated 25 July 2026.</p>
+            <p><strong>Affidavit:</strong> candidate-declared age, education, profession, assets, liabilities and pending-case count published by MyNeta for Lok Sabha 2024. A declared case is not a conviction.</p>
+            <p><strong>Body data:</strong> height, weight and BMI stay unavailable unless both measurements have a cited publication. No estimate is made from an image.</p>
+            <p><strong>Coverage:</strong> this eight-person Cabinet comparison is deliberately finite, not a directory of every office-holder.</p>
+          </div>
+        </details>
+      </section>

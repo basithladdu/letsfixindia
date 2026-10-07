@@ -53,6 +53,7 @@ function ensureGalleryAssets() {
 
 function ensureSubmissionDatabase() {
   if (db) return Promise.resolve(db);
+  if (/^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)) return Promise.resolve(null);
   if (!submissionDbTask) {
     submissionDbTask = loadScriptOnce("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2")
       .then(() => {

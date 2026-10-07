@@ -1091,10 +1091,11 @@
 
   async function initialize(options = {}) {
     dbClient = options.db;
+    const localOnly = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
     const [configData, galleryData, liveGalleryData] = await Promise.all([
       loadJson("/data/gallery-config.json", {}),
       loadJson("/data/gallery.json", { items: [] }),
-      loadJson("/api/gallery", { items: [] }),
+      localOnly ? Promise.resolve({ items: [] }) : loadJson("/api/gallery", { items: [] }),
     ]);
     config = { ...DEFAULT_CONFIG, ...(configData || {}) };
     staticApprovedItems = Array.isArray(galleryData) ? galleryData : Array.isArray(galleryData?.items) ? galleryData.items : [];
