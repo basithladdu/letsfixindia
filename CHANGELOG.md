@@ -2,6 +2,28 @@
 
 All notable user-facing changes to the site.
 
+## 2026-10-11
+
+### Added
+
+- 39 source-backed records from a further review of 1 July–10 October 2026: 436 events, 1,387 sources and 240 explicitly state-tagged records in total.
+- Protest injuries and detentions, journalist bail and speech cases, election-roll safeguards, parliamentary scrutiny, Manipur and Ladakh developments, floods and health-service failures, rural employment, RBI policy and CAG audit findings.
+- 83 source entries and 22 state/UT mappings. Sources distinguish primary documents, archived reports, news accounts and advocacy statements; publication dates are included only where established.
+
+### Updated
+
+- Delhi Metro's late-10-October reopening announcement and the transport contempt petition, without treating a petition as a judicial finding or Metro reopening as internet restoration.
+- The 20 July protest record now distinguishes police and hospital injury snapshots and attributes subsequent pellet-firing reporting. Conflicting crowd estimates and weakly supported shutdown-radius precision are not presented as settled facts.
+- Corrected the demolition-guidelines date to 13 November 2024 and the rural-employment law's assent/commencement distinction.
+- About and footer now show the 11 October review checkpoint. State-government histories retain their separate 22 July checkpoint.
+
+### Verification and limits
+
+- Data, shell, gallery, submission and moderation checks passed; Astro built 707 pages.
+- All 44 new or revised record pages checked at 1440px and 375px: 88 checks of page loading, displayed outcomes, citation links and overflow. Search, ordering, empty-state recovery, reload, source-ledger lookup and state mapping also checked at 1440px and 390px.
+- Ten bounded web-research assignments informed this update. Coverage remains curated, not exhaustive; operator-level internet restoration and final detention/release totals are not independently reconciled.
+- Existing backlog warnings remain unchanged: 67 pending source URLs and 463 unreferenced sources. Some external sources require an archive or intermittently block retrieval; rendering a citation is not proof of continuing source availability.
+
 ## 2026-10-10
 
 ### Added

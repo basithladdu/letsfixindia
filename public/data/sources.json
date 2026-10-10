@@ -1,4 +1,640 @@
 {
+  "ieJulyProtestInjuries2026": {
+    "title": "July protest aftermath: distinct police and hospital injury figures",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/cjp-protest-jantar-mantar-delhi-police-neet-paper-leak-abhijeet-dipke-10795976/",
+    "type": "Contemporaneous report with police and hospital accounts",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieJulyPelletReview2026": {
+    "title": "CRPF review of pellet firing during CJP's Parliament march",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/cjp-parliament-march-student-protest-crpf-raf-pellet-gun-injury-probe-10804898/",
+    "type": "Report citing unnamed review sources and the CRPF Director General",
+    "publishedOn": "2026-07-27",
+    "retrievedOn": "2026-10-11"
+  },
+  "rbiMpcOctober7_2026": {
+    "title": "Monetary Policy Statement, 2026–27: MPC resolution, 5–7 October 2026",
+    "publisher": "Reserve Bank of India",
+    "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742",
+    "type": "Official monetary-policy resolution",
+    "publishedOn": "2026-10-07",
+    "retrievedOn": "2026-10-11"
+  },
+  "ptiBharatnetAuditAugust14_2026": {
+    "title": "BharatNet falls short of digital-divide goal: CAG audit",
+    "publisher": "PTI via ETTelecom",
+    "url": "https://telecom.economictimes.indiatimes.com/amp/news/policy/bharatnet-falls-short-of-goal-to-bridge-digital-divide-due-to-deficiency-in-planning-rollout-cag/133227455",
+    "type": "Report on performance audit",
+    "publishedOn": "2026-08-14",
+    "retrievedOn": "2026-10-11"
+  },
+  "cagFameReport10_2026": {
+    "title": "Report 10 of 2026: performance audit of the FAME schemes",
+    "publisher": "Comptroller and Auditor General of India via Down To Earth",
+    "url": "https://images.assettype.com/downtoearth/2026-08-18/jdyic4ms/CAG_Report_no__10_of_2026_English_06a7d48d05c4f65_94316820.pdf",
+    "type": "Performance audit, report mirror",
+    "retrievedOn": "2026-10-11"
+  },
+  "dteFameAuditAugust18_2026": {
+    "title": "CAG flags incentives to EV makers violating localisation norms",
+    "publisher": "Down To Earth",
+    "url": "https://www.downtoearth.org.in/amp/story/energy/cag-flags-rs-468-crore-in-fame-incentives-to-ev-makers-violating-localisation-norms",
+    "type": "Report on performance audit",
+    "publishedOn": "2026-08-18",
+    "retrievedOn": "2026-10-11"
+  },
+  "autoEvFameTablingAugust19_2026": {
+    "title": "FAME audit tabled on 12 August: incentive irregularities and recoveries",
+    "publisher": "AutoEV Times",
+    "url": "https://autoevtimes.com/cag-flags-%E2%82%B9468-crore-fame-ev-incentive-irregularities-in-india/",
+    "type": "Industry report",
+    "publishedOn": "2026-08-19",
+    "retrievedOn": "2026-10-11"
+  },
+  "cagPensionReportListing2026": {
+    "title": "Report 15 of 2026: Key Entities and Schemes in Pension Sector; tabling metadata",
+    "publisher": "Comptroller and Auditor General of India",
+    "url": "https://cag.gov.in/cen/new-delhi-iv/en/audit-report/details/125970",
+    "type": "Official audit-report listing, indexed metadata; live URL unavailable at review",
+    "retrievedOn": "2026-10-11"
+  },
+  "cagPensionReport15_2026": {
+    "title": "Report 15 of 2026: Key Entities and Schemes in Pension Sector",
+    "publisher": "Comptroller and Auditor General of India via Internet Archive",
+    "url": "https://web.archive.org/web/20260824061938if_/https://cag.gov.in/webroot/uploads/download_audit_report/2026/CAG--Report-No.-15-of-2026_(English)-06a7d57ab831c62.45914606.pdf",
+    "type": "Performance audit, archived official report",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieMaharashtraPublicationsAugust8_2026": {
+    "title": "Maharashtra bans 114 literature items allegedly linked to terror outfits",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/mumbai/maharashtra-bans-114-literature-items-linked-to-terror-outfits-10823215/",
+    "type": "Report on notification and government response",
+    "publishedOn": "2026-08-08",
+    "retrievedOn": "2026-10-11"
+  },
+  "pudrMaharashtraPublicationsAugust23_2026": {
+    "title": "Oppose the Maharashtra ban on radical literature",
+    "publisher": "People's Union for Democratic Rights",
+    "url": "https://www.pudr.org/press-statements/oppose-the-maharashtra-ban-on-radical-literature/",
+    "type": "Civil-liberties organisation statement",
+    "publishedOn": "2026-08-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "lawfinderProtestPleaOctober9_2026": {
+    "title": "Supreme Court rejects plea for independent probe into CJP's July protest",
+    "publisher": "LawFinder News",
+    "url": "https://lawfinder.news/articles/sc-rejects-plea-for-independent-probe-into-cjps-july-protest",
+    "type": "Court report",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-11"
+  },
+  "ptiProtestPleaOctober9_2026": {
+    "title": "Supreme Court rejects July protest investigation petition",
+    "publisher": "PTI via OrissaPOST",
+    "url": "https://www.orissapost.com/sc-rejects-plea-for-independent-probe-into-cjps-july-protest/",
+    "type": "Court report",
+    "retrievedOn": "2026-10-11"
+  },
+  "ptiMetroReopeningOctober10_2026": {
+    "title": "Delhi Metro reopens 45 stations after protest-related access restrictions",
+    "publisher": "PTI via ThePrint",
+    "url": "https://theprint.in/india/delhi-metro-reopens-45-stations-after-25-hour-closure-amid-cjps-anti-cec-protest/3068027/",
+    "type": "Report quoting DMRC restoration announcement",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-11"
+  },
+  "ptiTransportContemptOctober10_2026": {
+    "title": "Supreme Court to hear contempt plea over protest-day transport curbs",
+    "publisher": "PTI via The Patriot",
+    "url": "https://thepatriot.in/delhi-ncr/cjp-protest-sc-to-hear-on-sunday-plea-seeking-contempt-action-against-authorities-90954",
+    "type": "Court-filing and listing report",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoDelhiSirSeptember22_2026": {
+    "title": "Supreme Court questions clarity of Delhi SIR logical-discrepancy notices",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/reports/delhi-sir-sc-asks-eci-to-make-logical-discrepancy-notices-clearer/",
+    "type": "Court report",
+    "publishedOn": "2026-09-22",
+    "retrievedOn": "2026-10-11"
+  },
+  "eciSirDecisionsSeptember26_2026": {
+    "title": "ECI/PN/120/2026: full-Commission SIR decisions, 26 September 2026",
+    "publisher": "Election Commission of India via CEO Lakshadweep",
+    "url": "https://ceolakshadweep.gov.in/Users/download_pdf_draft_roll_2024/UW96eFFmVHppUy5wZGY=",
+    "type": "Official press note",
+    "retrievedOn": "2026-10-11"
+  },
+  "newslaundrySirSeptember26_2026": {
+    "title": "ECI changes SIR notice procedures and orders an ECINET review",
+    "publisher": "Newslaundry",
+    "url": "https://www.newslaundry.com/amp/story/2026%2F09%2F26%2Feci-revises-sir-notices-after-indian-express-report-and-puts-out-a-unity-photo",
+    "type": "News report",
+    "publishedOn": "2026-09-26",
+    "retrievedOn": "2026-10-11"
+  },
+  "airFormSixOctober5_2026": {
+    "title": "Supreme Court clarification concerning changes to Form 6",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/supreme-court-clarifies-it-did-not-approve-any-changes-to-form-6-used-in-sir/",
+    "type": "Public broadcaster court report",
+    "publishedOn": "2026-10-05",
+    "retrievedOn": "2026-10-11"
+  },
+  "federalFormSixOctober5_2026": {
+    "title": "Court seeks ECI records and declines immediate interim suspension",
+    "publisher": "The Federal",
+    "url": "https://thefederal.com/category/news/cec-suspension-plea-supreme-court-no-interim-relief-ec-records-258605",
+    "type": "Court report",
+    "publishedOn": "2026-10-05",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieBengalTribunalOctober6_2026": {
+    "title": "August tribunal minutes record gaps in Bengal voter-appeal portal",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/bengal-sir-tribunals-election-commission-portal-issues-deleted-voters-10908185/lite/",
+    "type": "Document-based investigation",
+    "publishedOn": "2026-10-06",
+    "retrievedOn": "2026-10-11"
+  },
+  "tnieKarnatakaSirAugust13_2026": {
+    "title": "Karnataka CEO reports net reduction in flagged SIR classifications",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/states/karnataka/2026/Aug/13/karnataka-sir-241-lakh-rollbacks-recorded-as-asddo-voter-list-shrinks-to-109-crore",
+    "type": "News report",
+    "publishedOn": "2026-08-13",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieKarnatakaSirAugust12_2026": {
+    "title": "Karnataka SIR verification and correction process",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/bangalore/karnataka-sir-4-lakh-voters-removed-from-deletion-list-10830375/lite/",
+    "type": "News report",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-11"
+  },
+  "dhcCjpAccountJuly7_2026": {
+    "title": "Abhijeet Dipke v Union of India: X-account blocking order, 7 July 2026",
+    "publisher": "Delhi High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/199310884/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieCjpAccountJuly7_2026": {
+    "title": "Delhi High Court directs CJP X-account unblocking",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/cockroach-janta-party-x-account-unblocked-delhi-high-court-neet-dharmendra-pradhan-abhijeet-dipke-10775347/lite/",
+    "type": "Court report",
+    "publishedOn": "2026-07-07",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieRaviNairBailSeptember24_2026": {
+    "title": "Ravi Nair granted bail in Adani defamation proceedings",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/ahmedabad/journalist-ravi-nair-bail-adani-defamation-case-jail-10892472/",
+    "type": "Court report",
+    "publishedOn": "2026-09-24",
+    "retrievedOn": "2026-10-11"
+  },
+  "ghcRaviNairSeptember30_2026": {
+    "title": "Ravi Nair v State of Gujarat: warrant challenge disposed of on 30 September 2026",
+    "publisher": "Gujarat High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/20840386/",
+    "type": "Court judgment",
+    "retrievedOn": "2026-10-11"
+  },
+  "altNewsSaketSeptember7_2026": {
+    "title": "Shaheen Khan's account of alleged assault at Saket police station",
+    "publisher": "Alt News",
+    "url": "https://www.altnews.in/they-dragged-us-hit-us-with-batons-i-could-not-breathe-journalist-shaheen-khan-recounts-assault-at-saket-ps/",
+    "type": "Interview report",
+    "publishedOn": "2026-09-07",
+    "retrievedOn": "2026-10-11"
+  },
+  "tnieSaketSeptember4_2026": {
+    "title": "Saket journalists' allegations and Delhi Police denial",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/cities/delhi/2026/Sep/04/two-women-journalists-allege-assault-inside-delhis-saket-police-station-police-deny-charges",
+    "type": "News report",
+    "publishedOn": "2026-09-04",
+    "retrievedOn": "2026-10-11"
+  },
+  "scUpadhyayAugust25_2026": {
+    "title": "Abhishek Upadhyay: Supreme Court interim order dated 25 August 2026",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/docfragment/84154083/?formInput=ghaziabad++++++++doctypes%3A+scorders+sortby%3A+mostrecent",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scUpadhyaySeptember7_2026": {
+    "title": "Abhishek Upadhyay: account-information directions dated 7 September 2026",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/122070731/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "barBenchUpadhyaySeptember1_2026": {
+    "title": "Journalist challenges police demand for account information and source-related data",
+    "publisher": "Bar & Bench",
+    "url": "https://www.barandbench.com/amp/story/news/journalist-who-reported-on-ram-mandir-donation-theft-moves-supreme-court-against-police-request-for-digital-footprint",
+    "type": "Court report",
+    "publishedOn": "2026-09-01",
+    "retrievedOn": "2026-10-11"
+  },
+  "dhcParvezMehrajJuly21_2026": {
+    "title": "Delhi High Court bail conditions for Khurram Parvez and Irfan Mehraj, 21 July 2026",
+    "publisher": "Delhi High Court via LiveLaw",
+    "url": "https://www.livelaw.in/pdf_upload/2026/07/21/pms21072026crla6632026203350-688406.pdf",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "apParvezMehrajJuly23_2026": {
+    "title": "Kashmiri activist and journalist released on bail",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/d3b9361c029fcd28266d341155f73694",
+    "type": "News report",
+    "publishedOn": "2026-07-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "omctParvezMehrajJuly23_2026": {
+    "title": "OMCT and FIDH confirm Khurram Parvez and Irfan Mehraj's release on bail",
+    "publisher": "OMCT / FIDH",
+    "url": "https://www.omct.org/en/resources/statements/india-khurram-parvez-and-irfan-mehraj-released-on-bail",
+    "type": "Rights organisation statement",
+    "publishedOn": "2026-07-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "scIndustryAugust20_2026": {
+    "title": "State of Uttar Pradesh v Jai Bir Singh: nine-judge decision dated 20 August 2026",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=90992001&type=j&order_date=2026-08-20&from=latest_judgements_order",
+    "type": "Court judgment",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoIndustryAugust21_2026": {
+    "title": "Industry-definition judgment: effect on pending disputes and separate opinions",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/reports/definition-of-industry-judgement-summary-2/",
+    "type": "Legal analysis",
+    "publishedOn": "2026-08-21",
+    "retrievedOn": "2026-10-11"
+  },
+  "scTransgenderCardsAugust17_2026": {
+    "title": "Laxmi Narayan Tripathi v Union of India: order dated 17 August 2026",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=200542026&type=o&order_date=2026-08-17&from=latest_judgements_order",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scTransgenderCardsMirrorAugust17_2026": {
+    "title": "Court-order mirror: assurance concerning existing transgender identity-card benefits",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/136387852/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "pibRuralJobsCommencementJune30_2026": {
+    "title": "Rural-employment replacement law to commence on 1 July 2026",
+    "publisher": "Ministry of Rural Development / PIB",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2279446&lang=1&reg=3",
+    "type": "Government statement",
+    "publishedOn": "2026-06-30",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieRuralJobsAugust10_2026": {
+    "title": "July rural-employment dashboard figures and the ministry's response",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/vb-g-ram-g-rural-jobs-decline-minimum-wages-10825474/",
+    "type": "Data report",
+    "publishedOn": "2026-08-10",
+    "retrievedOn": "2026-10-11"
+  },
+  "reportersAssamFloodsAugust24_2026": {
+    "title": "Assam flood field reporting: warning, preparedness and community impact",
+    "publisher": "101Reporters",
+    "url": "https://101reporters.com/article/environment/2026_Assam_floods_A_disaster_that_came_too_fast_for_communities_to_prepare",
+    "type": "Field report",
+    "publishedOn": "2026-08-24",
+    "retrievedOn": "2026-10-11"
+  },
+  "iansAssamFloodsSeptember3_2026": {
+    "title": "Assam flood situation and annual death-count snapshot on 3 September",
+    "publisher": "IANS via Education Post",
+    "url": "https://educationpost.in/news/national/assam-floods-affect-over-25000-as-fresh-spell-pushes-2026-death-toll-to-108",
+    "type": "News report",
+    "publishedOn": "2026-09-03",
+    "retrievedOn": "2026-10-11"
+  },
+  "apSatyaNiketanSeptember7_2026": {
+    "title": "Seven deaths reported after Delhi accommodation building collapses",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/7cb4420ce1808209044300131cb1de45",
+    "type": "News report",
+    "publishedOn": "2026-09-07",
+    "retrievedOn": "2026-10-11"
+  },
+  "sccSatyaNiketanSeptember8_2026": {
+    "title": "Delhi High Court directions after Satya Niketan building collapse",
+    "publisher": "SCC Times",
+    "url": "https://www.scconline.com/blog/post/2026/09/08/del-hc-satya-niketan-pg-hostel-building-collapse-case/",
+    "type": "Court report",
+    "publishedOn": "2026-09-08",
+    "retrievedOn": "2026-10-11"
+  },
+  "hansSatyaNiketanSeptember26_2026": {
+    "title": "MCD affidavit describes property enforcement after Satya Niketan collapse",
+    "publisher": "The Hans India",
+    "url": "https://www.thehansindia.com/news/cities/new-delhi/satya-niketan-collapse-543-properties-demolished-1125770",
+    "type": "News report",
+    "publishedOn": "2026-09-26",
+    "retrievedOn": "2026-10-11"
+  },
+  "scrollBalaghatSeptember10_2026": {
+    "title": "Field investigation into Adivasi child deaths and access to care in Balaghat",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/article/1095636/behind-deaths-of-adivasi-children-in-madhya-pradesh-appalling-vaccination-levels-widespread-hunger",
+    "type": "Field investigation",
+    "publishedOn": "2026-09-10",
+    "retrievedOn": "2026-10-11"
+  },
+  "mphcBalaghatSeptember9_2026": {
+    "title": "Anshul Tiwari v State of Madhya Pradesh: order dated 9 September 2026",
+    "publisher": "Madhya Pradesh High Court via LiveLaw",
+    "url": "https://www.livelaw.in/pdf_upload/2026/09/11/anshul-tiwari-v-state-of-madhya-pradesh-699621.pdf",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "airBalaghatSeptember13_2026": {
+    "title": "Madhya Pradesh announces health response following Balaghat child deaths",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/mp-deputy-cm-rajendra-shukla-reviews-health-situation-in-balaghat-after-child-deaths/",
+    "type": "Public broadcaster report",
+    "publishedOn": "2026-09-13",
+    "retrievedOn": "2026-10-11"
+  },
+  "toiUpRainSeptember28_2026": {
+    "title": "Uttar Pradesh rain damage and Relief Commissioner casualty snapshot",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/lucknow/toll-rises-to-81-over-2254-houses-damaged-as-retreating-monsoon-ravages-up/articleshow/134525984.cms",
+    "type": "News report",
+    "retrievedOn": "2026-10-11"
+  },
+  "airUpRainSeptember28_2026": {
+    "title": "Uttar Pradesh rain response and separately reported casualty count",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/heavy-rain-continues-in-uttar-pradesh-56-killed-in-rain-related-incidents/",
+    "type": "Public broadcaster report",
+    "publishedOn": "2026-09-28",
+    "retrievedOn": "2026-10-11"
+  },
+  "scYamunaAugust22_2026": {
+    "title": "Vyakti Vikas Kendra India v Manoj Misra: 22 August 2026 judgment",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=1352018&type=j&order_date=2026-08-22&from=latest_judgements_order",
+    "type": "Court judgment",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoYamunaAugust27_2026": {
+    "title": "Yamuna floodplain judgment: causation, evidence and continuing DDA duties",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/journal/proving-the-polluter-what-the-yamuna-floodplain-verdict-demands-of-environmental-liability/",
+    "type": "Legal analysis",
+    "publishedOn": "2026-08-27",
+    "retrievedOn": "2026-10-11"
+  },
+  "scManipurTrialsJuly24_2026": {
+    "title": "Connected Manipur proceedings: Supreme Court order dated 24 July 2026",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/191698442/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scManipurCampDeathsSeptember17_2026": {
+    "title": "Manipur relief-camp deaths: Supreme Court order dated 17 September 2026",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/18790782/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "ladakhCompensationSeptember14_2026": {
+    "title": "Ladakh sanctions compensation for families affected by September 2025 violence",
+    "publisher": "Administration of the Union Territory of Ladakh",
+    "url": "https://ladakh.gov.in/l-g-vk-saxena-sanctions-%E2%82%B91-52-crore-compensation-for-families-of-deceased-and-persons-injured-in-september-2025-violence/",
+    "type": "Government statement",
+    "publishedOn": "2026-09-14",
+    "retrievedOn": "2026-10-11"
+  },
+  "tnieLadakhWithdrawalsSeptember23_2026": {
+    "title": "Ladakh approves withdrawal of cases against twenty people after Leh violence",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/india/2026/Sep/23/ladakh-lg-announces-withdrawal-of-cases-against-20-people-including-four-deceased-in-leh-violence",
+    "type": "News report",
+    "retrievedOn": "2026-10-11"
+  },
+  "etLadakhMarchSeptember23_2026": {
+    "title": "Sonam Wangchuk leads anniversary march in Leh",
+    "publisher": "The Economic Times",
+    "url": "https://economictimes.indiatimes.com/news/india/sonam-wangchuk-leads-march-in-leh/articleshow/134444223.cms",
+    "type": "News report",
+    "publishedOn": "2026-09-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "mhaManipurAfspaSeptember25_2026": {
+    "title": "S.O. 5299(E): Manipur disturbed-area declaration effective 1 October 2026",
+    "publisher": "Ministry of Home Affairs",
+    "url": "https://www.mha.gov.in/sites/default/files/Noti_24926_AFSPA_Manipur_01102026.pdf",
+    "type": "Gazette notification",
+    "publishedOn": "2026-09-25",
+    "retrievedOn": "2026-10-11"
+  },
+  "ptiNortheastAfspaSeptember25_2026": {
+    "title": "AFSPA declarations renewed in specified Manipur, Nagaland and Arunachal areas",
+    "publisher": "PTI via ThePrint",
+    "url": "https://theprint.in/india/centre-extends-afspa-in-disturbed-areas-of-manipur-nagaland-arunachal-pradesh/3053625/",
+    "type": "News report",
+    "publishedOn": "2026-09-25",
+    "retrievedOn": "2026-10-11"
+  },
+  "scEciAppointmentsSeptember23_2026": {
+    "title": "Dr Jaya Thakur v Union of India, 2026 INSC 1040: opinions and joint order",
+    "publisher": "Supreme Court of India",
+    "url": "https://api.sci.gov.in/supremecourt/2024/146/146_2024_7_1501_74714_Judgement_23-Sep-2026.pdf",
+    "type": "Court judgment and order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoEciAppointmentsSeptember23_2026": {
+    "title": "Election Commissioner appointment-law challenge: divided opinions and joint referral",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/reports/sc-delivers-split-verdict-sends-eci-appointments-law-challenge-to-larger-bench/amp/",
+    "type": "Court report",
+    "publishedOn": "2026-09-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "scNalsarSeptember3_2026": {
+    "title": "Mihira Sood v Bar Council of India: final order dated 3 September 2026",
+    "publisher": "Supreme Court of India via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/119820557/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoNalsarAugust23_2026": {
+    "title": "NALSAR protest and Bar Council response: contemporaneous account",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/journal/speaking-out/",
+    "type": "Legal analysis",
+    "publishedOn": "2026-08-23",
+    "retrievedOn": "2026-10-11"
+  },
+  "scDemolitionTransferJuly16_2026": {
+    "title": "Demolition-safeguard proceedings: Supreme Court order dated 16 July 2026",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=122392022&type=o&order_date=2026-07-16&from=latest_judgements_order",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scDemolitionTransferMirrorJuly16_2026": {
+    "title": "Court-copy mirror: demolition-contempt transfer and interim protection",
+    "publisher": "Supreme Court of India via LiveLaw",
+    "url": "https://www.livelaw.in/pdf_upload/2026/07/23/1223920222026-07-16-688952.pdf",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "scoVarmaReportAugust12_2026": {
+    "title": "Analysis of the statutory Justice Yashwant Varma inquiry report",
+    "publisher": "Supreme Court Observer",
+    "url": "https://www.scobserver.in/journal/the-justice-yashwant-varma-report-answers-its-absent-judge/",
+    "type": "Legal analysis",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieVarmaReportAugust12_2026": {
+    "title": "Justice Yashwant Varma inquiry: findings and procedural context",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/explained/explained-law/justice-yashwant-varma-inquiry-report-charges-what-next-10830379/lite/",
+    "type": "News analysis",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-11"
+  },
+  "gazettePublicExamsJuly31_2026": {
+    "title": "Public Examinations Amendment Act, 2026: Gazette text",
+    "publisher": "Ministry of Law and Justice via PRS Legislative Research",
+    "url": "https://prsindia.org/files/bills_acts/bills_parliament/2026/Public_Examinations_(Prevention_of_Unfair_Means)_Act_2026.pdf",
+    "type": "Act of Parliament",
+    "publishedOn": "2026-07-31",
+    "retrievedOn": "2026-10-11"
+  },
+  "gazetteNationalHonourAugust6_2026": {
+    "title": "Prevention of Insults to National Honour Amendment Act, 2026",
+    "publisher": "Ministry of Law and Justice via PRS Legislative Research",
+    "url": "https://prsindia.org/files/bills_acts/bills_parliament/2026/Prevention_of_Insults_to_National_Honour_(A)Act_2026.pdf",
+    "type": "Act of Parliament",
+    "publishedOn": "2026-08-06",
+    "retrievedOn": "2026-10-11"
+  },
+  "scKrishnaSeptember22_2026": {
+    "title": "T. M. Krishna v Union of India: order dated 22 September 2026",
+    "publisher": "Supreme Court of India via LiveLaw",
+    "url": "https://www.livelaw.in/pdf_upload/2026/09/23/5285120262026-09-22-702032.pdf",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "livelawKrishnaSeptember22_2026": {
+    "title": "Supreme Court hears challenge concerning National Song requirements",
+    "publisher": "LiveLaw",
+    "url": "https://www.livelaw.in/top-stories/we-expect-no-criminal-consequences-on-person-not-singing-vande-mataram-for-religious-reasons-supreme-court-to-centre-551183",
+    "type": "Court report",
+    "publishedOn": "2026-09-22",
+    "retrievedOn": "2026-10-11"
+  },
+  "prsMonsoonVitalStats2026": {
+    "title": "Functioning of Parliament during Monsoon Session 2026",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/sessiontrack/monsoon-session-2026/vital-stats",
+    "type": "Parliamentary data analysis",
+    "retrievedOn": "2026-10-11"
+  },
+  "pibMonsoonCloseAugust13_2026": {
+    "title": "Government summary of the concluded Monsoon Session",
+    "publisher": "Ministry of Parliamentary Affairs / PIB",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298901&lang=1&reg=48",
+    "type": "Government statement",
+    "publishedOn": "2026-08-13",
+    "retrievedOn": "2026-10-11"
+  },
+  "minesCommencementAugust22_2026": {
+    "title": "S.O. 4642(E): commencement of the mining-law amendment",
+    "publisher": "Ministry of Mines",
+    "url": "https://mines.gov.in/admin/download/6a895d4d514c81787387213.pdf",
+    "type": "Gazette notification",
+    "publishedOn": "2026-08-22",
+    "retrievedOn": "2026-10-11"
+  },
+  "pibMineralTaxAugust19_2026": {
+    "title": "Government explanation of amended mineral-tax provisions",
+    "publisher": "Ministry of Mines / PIB",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2301248&lang=1&reg=48",
+    "type": "Government statement",
+    "publishedOn": "2026-08-19",
+    "retrievedOn": "2026-10-11"
+  },
+  "prsMineralTax2026": {
+    "title": "Mining-law amendment: provisions and constitutional questions",
+    "publisher": "PRS Legislative Research",
+    "url": "https://prsindia.org/billtrack/the-mines-and-minerals-development-and-regulation-amendment-bill-2026",
+    "type": "Legislative analysis",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieSiwanInjuriesJuly27_2026": {
+    "title": "Siwan protest injuries and dated internet restrictions",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/bihar-bandh-siwan-police-firing-student-protests-neet-paper-leak-10804861/",
+    "type": "News report",
+    "publishedOn": "2026-07-27",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieSiwanSuspensionJuly27_2026": {
+    "title": "Siwan constable suspended and FIRs registered after protest firing",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/patna/siwan-bandh-violence-constable-suspension-bihar-police-fir-firing-10806117/",
+    "type": "News report",
+    "publishedOn": "2026-07-27",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieGuwahatiArrestsJuly25_2026": {
+    "title": "Guwahati solidarity protesters face sovereignty-related charges",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/guwahati-protest-sfi-jantar-mantar-dispur-police-arrests-bns-charges-10803645/",
+    "type": "News report",
+    "publishedOn": "2026-07-25",
+    "retrievedOn": "2026-10-11"
+  },
+  "ieDoleyNsaJuly31_2026": {
+    "title": "Pranab Doley detained under NSA after bail in Kaziranga protest case",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/pranab-doley-nsa-assam-kaziranga-protest-bail-10812439/",
+    "type": "News report",
+    "publishedOn": "2026-07-31",
+    "retrievedOn": "2026-10-11"
+  },
+  "ghcDoleyAccessAugust7_2026": {
+    "title": "Lakhi Doley v State of Assam: family and legal access order, 7 August 2026",
+    "publisher": "Gauhati High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/156219148/",
+    "type": "Court order",
+    "retrievedOn": "2026-10-11"
+  },
+  "amnestyCjpInvestigationAugust24_2026": {
+    "title": "Digital investigation into force used against CJP-led protests",
+    "publisher": "Amnesty International",
+    "url": "https://www.amnesty.org/en/latest/news/2026/08/india-new-investigation-documents-unlawful-and-deadly-force-against-cjp-led-protests-amid-ongoing-police-impunity/",
+    "type": "Rights organisation investigation",
+    "publishedOn": "2026-08-24",
+    "retrievedOn": "2026-10-11"
+  },
   "reutersJharkhandAugust10_2026": {
     "title": "Thousands march on Jharkhand legislature over alleged exam wrongdoing",
     "publisher": "Reuters via Internazionale",
