@@ -1,5 +1,187 @@
 [
   {
+    "id": "ohchr-delhi-detentions-india-response-october-2026",
+    "year": 2026,
+    "date": "10 October 2026",
+    "title": "UN rights office raises Delhi detention concerns; India rejects intervention",
+    "category": "Civil liberties",
+    "actors": ["Office of the UN High Commissioner for Human Rights", "Permanent Mission of India in Geneva", "Delhi protesters and authorities"],
+    "status": "Public statements reported; no judicial determination",
+    "severity": "High",
+    "summary": "OHCHR expressed concern about reported mass detentions before and during Delhi's demonstrations, urging protection of peaceful assembly, police restraint, dialogue and release of anyone arbitrarily detained. India's Permanent Mission in Geneva rejected the intervention, defending constitutional safeguards, public-order restrictions and access to courts.",
+    "outcome": "PTI and Indian Express reproduced both positions. These statements were not a court ruling establishing that particular detentions were lawful or unlawful, and OHCHR did not supply a verified detention count. The original OHCHR page and mission post could not be directly retrieved for this entry; the accessible reporting is cited.",
+    "sources": ["ptiOhchrIndiaOctober10_2026", "ieOhchrIndiaOctober11_2026"]
+  },
+  {
+    "id": "sharjeel-imam-interim-bail-cancellation-plea-2026",
+    "year": 2026,
+    "date": "10 October 2026",
+    "title": "Sharjeel Imam's interim-bail hearing draws conflicting cancellation reports",
+    "category": "Civil liberties",
+    "actors": ["Delhi court", "Delhi Police", "Sharjeel Imam"],
+    "status": "Conflicting reports; primary order and surrender not independently verified",
+    "severity": "High",
+    "summary": "On the final day of Imam's 4–10 October wedding-related interim bail, detailed ANI and later TOI/PTI reports said the court found an apparent breach of the media-contact condition but declined cancellation, noting that surrender was due that evening and counsel said he was returning to Delhi.",
+    "outcome": "An earlier ThePrint/PTI report instead said the bail was cancelled. The primary order and confirmation of actual surrender were not retrieved, so this record preserves the reporting conflict rather than asserting a verified current custody status. The temporary relief was not regular bail or an acquittal in the Delhi riots conspiracy case.",
+    "sources": ["aniSharjeelBailOctober10_2026", "toiSharjeelBailOctober10_2026", "printSharjeelBailConflictOctober10_2026"]
+  },
+  {
+    "id": "itarsi-pune-protest-detainees-return-release-2026",
+    "year": 2026,
+    "date": "9–10 October 2026",
+    "title": "Delhi-bound activists returned to Pune after habeas proceedings",
+    "category": "Protest and policing",
+    "actors": ["Madhya Pradesh Police", "Madhya Pradesh High Court", "Pune activists", "All India Students Federation"],
+    "status": "Return and release reported; primary court order not retrieved",
+    "severity": "High",
+    "summary": "Fourteen people intercepted at Itarsi while travelling from Pune towards the Delhi protest were returned and released in Pune around 6 pm on 10 October, according to Indian Express reporting and activist Shrawani Buwa's account. Police had said the travellers were counselled to return home.",
+    "outcome": "Reporting linked the return to habeas proceedings permitting safe return to family or court production on 13 October. The primary order was not retrieved; this does not establish a judicial finding that all fourteen detentions were unlawful. This group is separate from the Lal Mahal protesters detained by Pune police the same day.",
+    "sources": ["ieItarsiPuneReleaseOctober10_2026", "iansMpHabeasOctober9_2026"]
+  },
+  {
+    "id": "pune-lal-mahal-protest-detentions-release-2026",
+    "year": 2026,
+    "date": "10 October 2026",
+    "title": "Pune protest detentions followed by reported evening releases",
+    "category": "Protest and policing",
+    "actors": ["Pune Police", "Lal Mahal protesters", "Cockroach Janta Party supporters"],
+    "status": "Police report releases; detention counts differ by snapshot",
+    "severity": "High",
+    "summary": "Police detained people gathering near Lal Mahal for a protest over the Chief Election Commissioner and electoral-roll revision. Indian Express reported 88 detained; a later Free Press Journal report quoted police saying 102 people at Lashkar police station were released around 7:25 pm.",
+    "outcome": "These are different reporting snapshots, not figures to add together or combine with the fourteen people returned from Itarsi. Police described preventive action after permission was denied; some protesters alleged physical force. The release report is not an independent reconciliation of everyone detained or a judicial finding on those allegations.",
+    "sources": ["ieItarsiPuneReleaseOctober10_2026", "fpjPuneReleaseOctober10_2026"]
+  },
+  {
+    "id": "delhi-lawyers-detention-cji-intervention-2026",
+    "year": 2026,
+    "date": "10 October 2026",
+    "title": "Chief Justice's intervention followed by reported releases of detained lawyers",
+    "category": "Civil liberties",
+    "actors": ["Chief Justice of India", "Supreme Court Bar Association", "Delhi High Court Bar Association", "Delhi Police", "Protesting advocates"],
+    "status": "Intervention and group releases reported",
+    "severity": "High",
+    "summary": "ANI reported that Chief Justice Surya Kant said detained advocates were being released after his verbal intervention following representations about lawyers held amid the Delhi protest. The Delhi High Court Bar Association later condemned the detentions and alleged excessive force.",
+    "outcome": "Lawyers' accounts and the bar association's objections are attributed allegations, not written judicial findings that every police action was unlawful. The reported intervention and group releases do not establish the eventual custody status of every lawyer; a fully reconciled detainee list was not available for this review.",
+    "sources": ["aniCjiLawyersOctober10_2026", "ieDhcbaDetentionsOctober10_2026"]
+  },
+  {
+    "id": "ratna-singh-detention-plea-dismissal-2026",
+    "year": 2026,
+    "date": "10 October 2026",
+    "title": "Ratna Singh's detention-related pleas dismissed; release later reported",
+    "category": "Justice and constitutional law",
+    "actors": ["Saket court", "Ratna Singh", "Delhi Police"],
+    "status": "Procedural dismissal and subsequent release reported",
+    "severity": "High",
+    "summary": "LiveLaw reported that a Saket court rejected CJP legal-affairs head Ratna Singh's request for an FIR against police and treated her release application as not maintainable. The report cited missing jurisdictional particulars, identification of public servants and a supporting affidavit. Singh alleged that police had confined her outside her home.",
+    "outcome": "ANI subsequently reported her release that evening. The primary order was not independently retrieved, and procedural dismissal is not a finding that the misconduct allegations were false. The later release was not established as court-ordered, an acquittal or the closure of any other proceeding.",
+    "sources": ["llRatnaSinghOctober10_2026", "toiRatnaSinghReleaseOctober10_2026"]
+  },
+  {
+    "id": "epfo-wage-ceiling-increase-september-2026",
+    "year": 2026,
+    "date": "17 September 2026",
+    "title": "Government raises mandatory EPFO coverage wage ceiling to ₹25,000",
+    "category": "Economic policy and institutions",
+    "actors": ["Ministry of Labour and Employment", "Employees' Provident Fund Organisation", "Employers and workers"],
+    "status": "Government-announced revision in effect",
+    "severity": "High",
+    "summary": "The Labour Ministry announced that the monthly wage ceiling for mandatory EPFO coverage had risen from ₹15,000 to ₹25,000, effective 17 September. It projected that about 51 lakh additional employees would come within coverage.",
+    "outcome": "An EPFO Goa advisory on 23 September directed establishments to update payroll and enrol eligible previously excluded workers. The projected expansion is not a verified enrolment count. The statutory wage ceiling should not be confused with gross take-home pay, and this entry does not establish every employer's compliance or each worker's contribution and pension entitlement.",
+    "sources": ["pibEpfoCeilingSeptember17_2026", "pibEpfoImplementationSeptember23_2026"]
+  },
+  {
+    "id": "upi-merchant-fee-framework-september-2026",
+    "year": 2026,
+    "date": "15 September 2026",
+    "title": "UPI merchant-fee framework announced for selected payments",
+    "category": "Economic policy and institutions",
+    "actors": ["Department of Financial Services", "National Payments Corporation of India", "Banks and payment providers", "Merchants and consumers"],
+    "status": "Announced; scheduled to start 15 October 2026",
+    "severity": "High",
+    "summary": "An official FAQ dated 15 September set out a 0.4% merchant discount rate for eligible bank-account UPI payments to merchants above ₹2,000, capped at ₹300. It retains exemptions for qualifying small merchants and specified transactions, with separate rates for some sectors.",
+    "outcome": "The framework was scheduled to begin on 15 October, after this review's cutoff. The FAQ says consumers and person-to-person transfers remain free and merchants may not pass the charge to customers. This is not a universal consumer UPI fee or a claim that the framework had already taken effect on 10 October.",
+    "sources": ["dfsUpiMdrFaqSeptember15_2026"]
+  },
+  {
+    "id": "ecommerce-consumer-protection-amendments-2026",
+    "year": 2026,
+    "date": "10 September 2026",
+    "title": "E-commerce amendments target misleading discounts and search results",
+    "category": "Economic policy and institutions",
+    "actors": ["Department of Consumer Affairs", "E-commerce platforms", "Sellers and consumers"],
+    "status": "Rules announced; commencement scheduled for 1 January 2027",
+    "severity": "High",
+    "summary": "The Consumer Affairs Ministry announced amended e-commerce rules requiring clear sponsored-listing disclosures, prohibiting misleading search manipulation and requiring announced discounts to show the lowest price offered in the preceding 30 days. The amendments also require annual dark-pattern self-audits and integration with the National Consumer Helpline.",
+    "outcome": "The ministry set commencement for 1 January 2027. The new duties include giving consumers a copy of their recorded complaint; existing grievance deadlines should not be presented as newly created. Notification is not evidence that platforms have implemented the rules or that compliance has been audited.",
+    "sources": ["pibEcommerceAmendmentsSeptember10_2026"]
+  },
+  {
+    "id": "malda-newborn-deaths-inquiry-august-2026",
+    "year": 2026,
+    "date": "28–29 August 2026",
+    "title": "Malda newborn deaths prompt NHRC notice and state inquiry",
+    "category": "Public health and institutional accountability",
+    "actors": ["National Human Rights Commission", "West Bengal government", "Malda Medical College and Hospital", "Infants and families"],
+    "status": "Notice issued; inquiry reported",
+    "severity": "High",
+    "summary": "On 28 August, NHRC sought a state report after accounts of at least 60 newborn deaths at Malda Medical College during August's first three weeks. On 29 August, the state inquiry chair reported 89 deaths since 1 August while reviewing neonatal services. These are different dated snapshots, not additive totals.",
+    "outcome": "NHRC requested a response within two weeks. Authorities examined referrals and newborn-care arrangements. Many of the earlier cases were critically ill referrals; the numbers alone do not establish negligence or a mortality rate. An initial malnutrition hypothesis was not a final causation finding, and the completed inquiry outcome has not been verified here.",
+    "sources": ["nhrcMaldaNewbornsAugust28_2026", "tnieMaldaInquiryAugust29_2026"]
+  },
+  {
+    "id": "healthcare-affordability-parliament-report-2026",
+    "year": 2026,
+    "date": "7 August 2026",
+    "title": "Parliamentary panel calls for stronger protection against healthcare costs",
+    "category": "Parliament and institutional accountability",
+    "actors": ["Parliamentary Standing Committee on Health and Family Welfare", "Health Ministry", "Public and private hospitals", "Patients and families"],
+    "status": "Committee recommendations published",
+    "severity": "High",
+    "summary": "According to PRS's summary, the Health and Family Welfare Committee's report identified inadequate public financing, gaps in outpatient coverage, rural specialist shortages and high private-sector costs. It recommended a binding framework for common private-hospital rates and extending Ayushman Bharat coverage to outpatient consultations, tests and medicines.",
+    "outcome": "The committee also proposed raising annual family coverage to ₹10 lakh. These are parliamentary recommendations, not an adopted insurance entitlement or evidence that hospital prices changed. The report's historical spending and workforce statistics are not fresh measurements of August conditions.",
+    "sources": ["prsHealthcareAffordabilitySeptember1_2026", "rajyaSabhaHealthcareReport176_2026"]
+  },
+  {
+    "id": "supreme-court-rearrest-safeguards-september-2026",
+    "year": 2026,
+    "date": "21 September 2026",
+    "title": "Supreme Court requires judicial approval for re-arrest after constitutional violations",
+    "category": "Civil liberties",
+    "actors": ["Supreme Court of India", "Police and investigating agencies", "Magistrates", "Arrested persons"],
+    "status": "Supreme Court judgment",
+    "severity": "High",
+    "summary": "In Jaskaran Jeet Singh Deol v. State of Punjab, the Supreme Court strengthened safeguards where a person is released because arrest violated Article 22. Before seeking re-arrest, investigators must supply written grounds and apply to a magistrate, explaining the earlier failure and need for custody, with a superior officer's endorsement.",
+    "outcome": "The court required judicial scrutiny, reassignment of the investigation and a departmental inquiry; disciplinary action follows an adverse inquiry finding, not automatically. It applied the re-arrest safeguards to breaches of both the grounds-of-arrest and timely-production guarantees. Release from unconstitutional detention is not an acquittal or immunity from a lawfully authorised investigation.",
+    "sources": ["scDeolRearrestSeptember21_2026"]
+  },
+  {
+    "id": "mulla-afroz-nsa-detention-quashed-2026",
+    "year": 2026,
+    "date": "29 September 2026",
+    "title": "Supreme Court quashes Mulla Afroz's NSA detention and orders ₹10 lakh costs",
+    "category": "Civil liberties",
+    "actors": ["Supreme Court of India", "Uttar Pradesh government", "Mulla Afroz"],
+    "status": "Detention quashed; conditional release ordered",
+    "severity": "High",
+    "summary": "The Supreme Court set aside Mulla Afroz's preventive detention under the National Security Act and the High Court decision upholding it. The court found the necessary connection between the material relied on and the detention decision absent, and criticised using preventive detention to prolong custody over the same incident despite criminal-court bail orders.",
+    "outcome": "It ordered release unless custody was required in another case, and directed Uttar Pradesh to pay him ₹10 lakh in costs within a month. The judgment expressly left the merits of the criminal cases open. This records the court's directions, not independently confirmed physical release, payment or acquittal.",
+    "sources": ["scMullaAfrozSeptember29_2026"]
+  },
+  {
+    "id": "supreme-court-vehicle-repossession-safeguards-2026",
+    "year": 2026,
+    "date": "16 September 2026",
+    "title": "Supreme Court orders RBI to enforce safeguards against unlawful vehicle repossession",
+    "category": "Financial governance and institutional accountability",
+    "actors": ["Supreme Court of India", "Reserve Bank of India", "Cholamandalam Investment and Finance Company", "Hari Dutta Sharma", "Banks and non-bank lenders"],
+    "status": "Supreme Court judgment; compliance not independently verified",
+    "severity": "High",
+    "summary": "In Hari Dutta Sharma v. State of Uttar Pradesh, the Supreme Court found that a lender had seized a truck at night without the required notice or lawful procedure. It directed RBI to secure genuine compliance with existing repossession safeguards by banks and non-bank lenders.",
+    "outcome": "The court left the completed vehicle sale intact but ordered closure of Sharma's two loan accounts, refund of ₹4.5 lakh sale proceeds with 6% annual interest, ₹10 lakh compensation and ₹50,000 costs. These are case-specific remedies, not an automatic debt waiver for all borrowers or a ban on lawful repossession. Subsequent payment and regulatory compliance are not established here.",
+    "sources": ["scVehicleRepossessionSeptember16_2026"]
+  },
+  {
     "id": "rbi-repo-rate-hike-october-2026",
     "year": 2026,
     "date": "7 October 2026",
@@ -666,14 +848,15 @@
       "Students",
       "Punjab and Haryana High Court"
     ],
-    "status": "Reported restrictions; underlying allegation unverified",
+    "status": "Internet restoration reported; underlying allegation unverified",
     "severity": "High",
     "summary": "Unrest began overnight on 26–27 September at Lovely Professional University in Phagwara following a circulated sexual-assault allegation, escalating into property damage, fires and an NH-44 blockade. Classes were suspended for ten days and examinations postponed. Mobile internet was suspended within three kilometres of campus.",
-    "outcome": "Police registered an FIR and formed an SIT; the university denied the allegation. Police said preliminary inquiries had not substantiated it. The High Court sought a police report on 30 September. Neither a proved assault nor a final finding that the allegation was fabricated is established here.",
+    "outcome": "The Tribune reported that internet service was restored at 10 pm on 28 September, while police deployment continued. Police registered an FIR and formed an SIT; the university denied the allegation and police said preliminary inquiries had not substantiated it. The High Court sought a report on 30 September. Connectivity restoration does not resolve the investigation: neither a proved assault nor a final finding of fabrication is established here.",
     "sources": [
       "ieLpuUnrestSeptember28_2026",
       "htLpuInternetSeptember28_2026",
-      "htLpuCourtSeptember30_2026"
+      "htLpuCourtSeptember30_2026",
+      "tribuneLpuRestorationSeptember29_2026"
     ]
   },
   {
@@ -807,13 +990,14 @@
       "Opposition leaders",
       "Student protesters"
     ],
-    "status": "Reported detentions; final total unresolved",
+    "status": "Police-source release reports; organisers still held in that snapshot",
     "severity": "High",
     "summary": "Police detained CJP organisers Abhijeet Dipke, Saurav Das and Ashutosh Ranka after their flight reached Delhi, and intercepted protesters and opposition leaders at multiple locations. The planned demonstration demanded Chief Election Commissioner Gyanesh Kumar's resignation over alleged electoral-roll irregularities.",
-    "outcome": "Police said permission had been denied, citing security and notice requirements. Protest organisers challenged the restrictions. Reports gave changing detention counts; no reconciled final total is established here. Detention is not a conviction, and the electoral allegations are not judicial findings.",
+    "outcome": "Police cited security and notice requirements for denying permission; organisers disputed the restrictions. Late-evening police-source reporting said detainees at detention centres had been released except CJP leaders, identifying Dipke, Das and Ranka as still held. That is a dated police account, not independently verified release of every person or a reconciled final total. Detention is not a conviction; electoral allegations remain distinct from judicial findings.",
     "sources": [
       "apDelhiCjpOctober10_2026",
-      "outlookDelhiCjpOctober10_2026"
+      "outlookDelhiCjpOctober10_2026",
+      "fpjDelhiReleaseOctober10_2026"
     ]
   },
   {
@@ -849,13 +1033,14 @@
       "Tushar Gandhi",
       "Solidarity protesters"
     ],
-    "status": "Reported",
+    "status": "Police report releases; legal proceedings continue",
     "severity": "High",
     "summary": "Police closed access to August Kranti Maidan ahead of a solidarity gathering for the CJP's Delhi protest. The Indian Express reported hundreds detained near Nana Chowk; Tushar Gandhi was stopped in Bandra while travelling to the gathering.",
-    "outcome": "Barricades also diverted traffic and restricted access for residents and passersby. The reported crowd and detention figures are not a verified final tally, and the report does not establish the eventual release or case status of every person detained.",
+    "outcome": "Barricades also diverted traffic and restricted residents' access. In a late-evening Free Press Journal report, police said all those detained had subsequently been released and further legal proceedings were underway. The approximately 600 citywide and 400 Nana Chowk figures are overlapping police estimates, not additive or independently reconciled totals. Release does not mean that proceedings ended.",
     "sources": [
       "ieMumbaiCjpOctober10_2026",
-      "toiMumbaiCjpOctober10_2026"
+      "toiMumbaiCjpOctober10_2026",
+      "fpjMumbaiReleaseOctober10_2026"
     ]
   },
   {
@@ -893,12 +1078,13 @@
       "Mobile network operators",
       "Delhi residents and protesters"
     ],
-    "status": "Reported suspension order",
+    "status": "Suspension ordered; restoration reported on 10 October",
     "severity": "High",
     "summary": "Authorities ordered mobile internet services suspended within a four-kilometre radius of the Janpath–Kartavya Path crossing, from 10 pm on 9 October to 10 pm on 10 October. The direction preceded the planned Jantar Mantar protest and cited preventive security arrangements.",
-    "outcome": "The reported scope was mobile data in the specified zone, not all internet services throughout Delhi. The stated end time is the order's duration, not independently verified restoration on every operator. The source does not establish that fixed broadband or ordinary voice calls were suspended.",
+    "outcome": "Late on 10 October, ABP Live reported that internet service had been restored in central Delhi. This is dated restoration reporting, not an inference from the order's expiry or Metro reopening; operator-by-operator restoration times were not independently verified. The restriction concerned mobile data in the specified zone, not all Delhi internet, fixed broadband or ordinary voice calls.",
     "sources": [
-      "toiDelhiInternetOctober9_2026"
+      "toiDelhiInternetOctober9_2026",
+      "abpDelhiInternetRestorationOctober10_2026"
     ]
   },
   {

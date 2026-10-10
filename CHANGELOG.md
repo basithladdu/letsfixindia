@@ -4,6 +4,14 @@ All notable user-facing changes to the site.
 
 ## 2026-10-11
 
+### Follow-up: restoration, releases and 14 further records
+
+- Added 14 records, 27 sources and eight state/UT mappings: 450 events, 1,414 sources and 248 mapped records in total. New coverage includes detention/release proceedings, UN and India statements, September arrest and repossession judgments, EPFO coverage, UPI and e-commerce policy announcements, and healthcare accountability.
+- Updated four existing records with dated Delhi/LPU internet-restoration reporting and Delhi/Mumbai police-source release reports. Exact operator coverage and individual custody reconciliation remain unverified; release does not imply that proceedings ended.
+- Preserved conflicting Sharjeel Imam bail reports and marked the missing primary order/surrender confirmation. Future policy start dates, projected enrolment and parliamentary recommendations are not presented as completed implementation or new entitlements already available.
+- Primary-source and secondary-report distinctions are explicit. The healthcare committee entry relies on the read PRS summary; its linked primary report could not be substantively retrieved. Existing source entries and all earlier records remain preserved.
+- Data/shell and gallery/submission/moderation checks passed; Astro built 721 pages. All 18 new/revised pages passed 36 desktop/mobile record checks. Search, ordering, empty-state recovery, reload, source lookup, state mapping and About were also checked at desktop/mobile widths; screenshots inspected. Existing backlog warnings remain unchanged.
+
 ### Added
 
 - 39 source-backed records from a further review of 1 July–10 October 2026: 436 events, 1,387 sources and 240 explicitly state-tagged records in total.
