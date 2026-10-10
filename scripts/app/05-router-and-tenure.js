@@ -381,10 +381,6 @@ function calculateTenure() {
   if (tenureSubtitle) {
     tenureSubtitle.textContent = `From 26 May 2014 to ${fmt.format(now)}`;
   }
-  const footerDate = document.getElementById("footerDate");
-  if (footerDate) {
-    footerDate.textContent = `Updated ${fmt.format(now)}`;
-  }
   const tenureLeft = document.getElementById("tenureLeftValue");
   if (tenureLeft) {
     tenureLeft.textContent = now < termEnd

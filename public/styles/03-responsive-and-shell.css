@@ -573,6 +573,7 @@ button,
 .record-section-heading h2 { margin:0; font-family:Inter, Aptos, sans-serif; font-size:16px; line-height:1.25; }
 .record-evidence-card .source-links { display:grid; gap:8px; }
 .record-evidence-card .source-links a, .record-evidence-card .source-pending { min-height:44px; padding:12px 13px; background:#fbfaf5; border:1px solid var(--line); border-radius:6px; font-size:13px; line-height:1.4; }
+.record-evidence-card .source-links a { min-width:0; white-space:normal; overflow-wrap:anywhere; }
 .record-evidence-card .source-links a:hover { border-color:var(--bjp); background:#fff8ef; }
 .record-hero-meta { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px; }
 .record-hero-meta span { padding:5px 8px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:10px; font-weight:900; letter-spacing:.05em; text-transform:uppercase; }

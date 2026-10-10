@@ -476,11 +476,13 @@
     "years": "2026",
     "sourcePage": "Bharatiya Janata Party controversies",
     "bjpRelevance": "indirect",
-    "includeInTimeline": false,
-    "status": "research_backlog",
-    "nextStep": "Live protest-politics lead; needs stable sourcing.",
+    "includeInTimeline": true,
+    "status": "partially_covered",
+    "nextStep": "July settlement, court follow-ups and October protests covered through 10 October 2026. Continue tracking the inquiry, detention outcomes and publication of shutdown orders; coverage is not an exhaustive CJP history.",
     "sourceKeys": [
-      "wikipediaBjpControversies"
+      "airCjpAgreementJuly26_2026",
+      "scProtestFirsSeptember1_2026",
+      "apDelhiCjpOctober10_2026"
     ]
   },
   {

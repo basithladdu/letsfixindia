@@ -1,5 +1,17 @@
 # Agent Log - LetsFixIndia
 
+## Session 280 - Research update through 10 October 2026
+
+- Recovered the relocated authoritative checkout at `D:\CODE\modi-era-record`, clean `master` at `c043739` matching `origin/master`. The former C: checkout path no longer exists. Preserved every pre-existing event, source, mapping and route.
+- Added 27 events, 49 sources and 20 mappings for 26 July–10 October: July protest agreement and judicial follow-ups; October detentions, journalist accounts, Metro/rail restrictions and the four-kilometre mobile-data order; digital-speech measures; and eight state-level/institutional developments. New source entries carry publication and retrieval dates.
+- Legal review retained the limited 2,873-person investigation exception as a police allegation, the suicide-bereaved-family scope of the compensation direction, the inquiry's actual priorities, and the distinction between an announced release and a verified completed release. The Akriti Chaudhary entry includes the subsequent Supreme Court stay and compensation reversal.
+- The Metro record distinguishes the 57-to-45 revision, station gate access from network closure, the later 10 pm extension, and the absence of independent restoration confirmation. October detention totals remain unresolved rather than fabricated. These records are not live travel advice.
+- Updated About/footer freshness and the inactive splash; preserved the separate 22 July state-government checkpoint and 21 July jurisdiction-index review metadata. Reused existing topic categories and kept nuanced evidence statuses. Synchronized root/public mirrors and generated shell markup.
+- Strengthened mirror/source-date/source-list validation. Baseline plus six in-memory negative fixtures passed without modifying data. Existing 67 pending URLs and 463 unreferenced sources are unchanged, outside this release's scope.
+- `check:local` and `check` passed, including gallery/submission/moderation regressions and an Astro build of 668 pages. All 27 new standalone records passed desktop/mobile checks (54 checks, no route, source-link, overflow, broken-image or console/page errors); timeline search/order/reset and citation copy were exercised. Local evidence is under ignored `output/playwright/`.
+- Visual review found clipped source titles on narrow standalone records; a scoped wrapping rule fixes them. Browser observations are desktop/mobile viewport evidence, not physical-device testing. No independent hosting deployment command was issued.
+- Final 1440px/375px checks passed for home, About and the revised Metro record, including untruncated source labels and the fixed research date after midnight. The source-ledger filter returns the new shutdown source, and Delhi's state timeline includes the new mapped records. State selection still resets on full reload (pre-existing behaviour; no persistence change was made).
+
 ## Session 275 - IT Rules and Digital Media Oversight
 
 - Added the 2021 IT Rules record covering intermediary compliance, grievance obligations, and digital-news/OTT oversight.

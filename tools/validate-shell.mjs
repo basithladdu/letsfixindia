@@ -77,7 +77,9 @@ for (const relativePath of [
   assertMirror(relativePath);
 }
 
-assertMirror("data/state-governance.json");
+for (const dataPath of ["data/state-governance.json", "data/events.json", "data/sources.json", "data/event-jurisdictions.json", "data/research_backlog.json"]) {
+  assertMirror(dataPath);
+}
 
 for (const manifestPath of ["styles.css", "gallery.css"]) {
   for (const match of read(manifestPath).matchAll(/@import\s+url\(["']?([^"')]+)["']?\)/gi)) {

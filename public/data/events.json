@@ -1,4 +1,559 @@
 [
+  {
+    "year": 2026,
+    "id": "jharkhand-exam-protest-bandh-august-2026",
+    "date": "10 August 2026",
+    "title": "Jharkhand exam protest meets police force; opposition calls bandh",
+    "category": "Protest and policing",
+    "actors": [
+      "Jharkhand Police",
+      "Job aspirants",
+      "Jharkhand government",
+      "Bharatiya Janata Party"
+    ],
+    "status": "Reported; exam allegations disputed",
+    "severity": "High",
+    "summary": "Thousands marched toward the Jharkhand legislature over alleged recruitment and civil-service examination irregularities. Following clashes at barricades, police used tear gas, water cannon and batons. Injuries to protesters and police were reported; the BJP called a statewide bandh for 11 August, exempting essential services.",
+    "outcome": "Police said force followed violence, while the state government said most demands had been accepted. The protest and policing are documented events; allegations of examination manipulation are not treated as proved.",
+    "sources": [
+      "reutersJharkhandAugust10_2026",
+      "ptiJharkhandBandhAugust10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "mumbai-ghatkopar-landslide-august-2026",
+    "date": "12 August 2026",
+    "title": "Seven die in Mumbai landslide at a previously identified risk site",
+    "category": "Natural disaster and public administration",
+    "actors": [
+      "Brihanmumbai Municipal Corporation",
+      "Maharashtra authorities",
+      "Ghatkopar residents"
+    ],
+    "status": "Reported casualties; responsibility unresolved",
+    "severity": "High",
+    "summary": "A hillside collapsed onto homes near the Kurla–Ghatkopar border. Later reporting put the toll at seven dead and seven injured. The municipal corporation had identified the area as landslide-prone and issued notices before the monsoon.",
+    "outcome": "The BMC said the land fell under the collector and it lacked eviction authority. The known hazard and competing administrative responsibilities raised safety questions, but these reports do not establish a final finding of legal liability.",
+    "sources": [
+      "apMumbaiLandslideAugust12_2026",
+      "ieMumbaiLandslideAugust12_2026",
+      "airMumbaiLandslideAugust12_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "chamoli-hydropower-tunnel-disaster-2026",
+    "date": "13–19 August 2026",
+    "title": "Chamoli hydropower-tunnel inundation kills eleven workers",
+    "category": "Infrastructure",
+    "actors": [
+      "THDC India",
+      "Uttarakhand government",
+      "Tunnel workers",
+      "Rescue agencies"
+    ],
+    "status": "Reported deaths; inquiry ordered",
+    "severity": "High",
+    "summary": "Water and debris entered an under-construction tunnel at the Vishnugad–Pipalkoti hydropower project in Chamoli on 13 August. Rescue operations followed. By 19 August, eleven workers were reported dead, including an injured worker who later died.",
+    "outcome": "A magisterial inquiry was ordered into the incident and safety arrangements. A final technical cause or finding of negligence is not established by these sources.",
+    "sources": [
+      "governorChamoliAugust13_2026",
+      "htChamoliTollAugust19_2026",
+      "htChamoliInquiryAugust19_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "sikh-prisoner-protest-punjab-bandh-2026",
+    "date": "15–21 August 2026",
+    "title": "Police disperse Sikh-prisoner march; Punjab bandh follows",
+    "category": "Protest and policing",
+    "actors": [
+      "Chandigarh Police",
+      "Prisoner-release campaigners",
+      "Qaumi Insaaf Morcha"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "On 15 August, Chandigarh Police used water cannon and tear gas as demonstrators seeking Sikh prisoners' release attempted to cross barricades at the Chandigarh–Mohali border. Stone-throwing was also reported. A seven-hour Punjab bandh on 21 August affected markets, schools and transport in several districts.",
+    "outcome": "Organisers exempted essential services from the bandh. Their claims about individual prisoners having completed sentences or qualifying for release are not treated as judicial determinations of eligibility.",
+    "sources": [
+      "nieSikhPrisonerMarchAugust15_2026",
+      "toiPunjabBandhAugust21_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "patna-recruitment-protest-august-2026",
+    "date": "25 August 2026",
+    "title": "Patna job aspirants face water cannon and temporary detention",
+    "category": "Protest and policing",
+    "actors": [
+      "Bihar Police",
+      "Bihar Public Service Commission",
+      "Job aspirants",
+      "Student organisations"
+    ],
+    "status": "Reported detentions and releases; exam claims unresolved",
+    "severity": "High",
+    "summary": "Job aspirants marched in Patna over the proposed TRE-4 examination format, negative marking, vacancies and alleged irregularities in other BPSC examinations. Police used water cannon and batons to disperse the protest.",
+    "outcome": "The Indian Express reported about 25 people detained and later released without formal charges, and two police personnel injured. BPSC rejected the paper-leak and related examination-irregularity allegations. Objections to exam policy and unproven paper-leak allegations are distinct issues.",
+    "sources": [
+      "reutersPatnaAugust25_2026",
+      "iePatnaDetentionsAugust25_2026",
+      "iePatnaExamBackgroundAugust25_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "akriti-chaudhary-nsa-court-orders-2026",
+    "date": "2–23 September 2026",
+    "title": "High Court quashes activist's NSA detention; Supreme Court stays ruling",
+    "category": "Civil liberties",
+    "actors": [
+      "Allahabad High Court",
+      "Supreme Court of India",
+      "Uttar Pradesh government",
+      "Akriti Chaudhary"
+    ],
+    "status": "High Court ruling stayed pending appeal",
+    "severity": "High",
+    "summary": "On 2 September, the Allahabad High Court quashed Noida labour activist Akriti Chaudhary's National Security Act detention, finding no material demonstrating incitement, and awarded compensation. She remained in judicial custody in separate criminal proceedings.",
+    "outcome": "On 23 September, the Supreme Court stayed the High Court order, separately set aside the ₹5 lakh compensation direction and stayed paragraphs 27–33 concerning the district magistrate. The earlier ruling therefore cannot be presented as an operative release or final acquittal; the separate criminal allegations remained unresolved.",
+    "sources": [
+      "hcAkritiChaudharySeptember2_2026",
+      "scrollAkritiStaySeptember23_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "election-commission-internal-objections-2026",
+    "date": "23 September 2026",
+    "title": "Election Commission responds to reported internal objections on electoral procedures",
+    "category": "Elections and institutions",
+    "actors": [
+      "Election Commission of India",
+      "Chief Election Commissioner",
+      "Election Commissioners"
+    ],
+    "status": "Document-based reporting and official response",
+    "severity": "High",
+    "summary": "The Indian Express reported internal notes recording at least 14 objections or concerns by two Election Commissioners over ten months, including electoral-roll software, Form 6 changes, appeal procedures in West Bengal and work allocation.",
+    "outcome": "The Commission acknowledged the notes as part of deliberation and said its decisions over the preceding year had been unanimous. These sources document reported internal disagreement and the Commission's response; they do not by themselves establish electoral fraud or an unlawful election result.",
+    "sources": [
+      "ieEciObjectionsSeptember23_2026",
+      "ieEciResponseSeptember24_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "lpu-campus-unrest-internet-suspension-2026",
+    "date": "26–30 September 2026",
+    "title": "LPU unrest leads to class suspension and a local mobile-data shutdown",
+    "category": "Protest and policing",
+    "actors": [
+      "Lovely Professional University",
+      "Punjab Police",
+      "Punjab government",
+      "Students",
+      "Punjab and Haryana High Court"
+    ],
+    "status": "Reported restrictions; underlying allegation unverified",
+    "severity": "High",
+    "summary": "Unrest began overnight on 26–27 September at Lovely Professional University in Phagwara following a circulated sexual-assault allegation, escalating into property damage, fires and an NH-44 blockade. Classes were suspended for ten days and examinations postponed. Mobile internet was suspended within three kilometres of campus.",
+    "outcome": "Police registered an FIR and formed an SIT; the university denied the allegation. Police said preliminary inquiries had not substantiated it. The High Court sought a police report on 30 September. Neither a proved assault nor a final finding that the allegation was fabricated is established here.",
+    "sources": [
+      "ieLpuUnrestSeptember28_2026",
+      "htLpuInternetSeptember28_2026",
+      "htLpuCourtSeptember30_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "cjp-government-agreement-july-2026",
+    "date": "26 July 2026",
+    "title": "CJP withdraws July agitation after government agreement",
+    "category": "Protest and policing",
+    "actors": [
+      "Union government",
+      "Cockroach Janta Party",
+      "Student protesters"
+    ],
+    "status": "Announced agreement",
+    "severity": "High",
+    "summary": "After talks with CJP representatives, Union ministers publicly committed that no new action or FIRs would be taken against protesters, existing FIRs would be withdrawn and copies supplied. CJP then announced withdrawal of its agitation.",
+    "outcome": "The agreement was an executive commitment. It did not itself quash criminal cases or demonstrate that every detained person had been released. Subsequent state directions and Supreme Court orders are recorded as separate developments.",
+    "sources": [
+      "airCjpAgreementJuly26_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "bihar-assam-protest-case-withdrawals-2026",
+    "date": "28 July 2026",
+    "title": "Bihar and Assam announce withdrawal of July protest cases",
+    "category": "Protest and policing",
+    "actors": [
+      "Bihar government",
+      "Assam government",
+      "NEET protesters"
+    ],
+    "status": "Government directions; completion not established",
+    "severity": "Medium",
+    "summary": "Bihar directed withdrawal of FIRs, complaints and show-cause notices concerning the protests registered before 6 pm on 26 July, and immediate release of people held in those matters. Assam announced withdrawal of related protest cases and no further adverse action.",
+    "outcome": "These were official announcements and directions, not a verified person-by-person account of completed releases or withdrawals. The later Supreme Court settlement addressed FIRs connected with the 20–25 July protests.",
+    "sources": [
+      "airBiharAssamWithdrawalsJuly28_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "supreme-court-july-protest-protections-2026",
+    "date": "28 July–3 August 2026",
+    "title": "Supreme Court protects student protesters and orders evidence preservation",
+    "category": "Civil liberties",
+    "actors": [
+      "Supreme Court of India",
+      "Union and state governments",
+      "Police",
+      "Student protesters"
+    ],
+    "status": "Interim court orders",
+    "severity": "High",
+    "summary": "The Court directed preservation of CCTV, drone, body-camera and other police records; barred coercive measures against protesting students subject to an antecedents exception later narrowed to grave and heinous offences; and temporarily prohibited public disclosure of protesters' collected personal and digital data. It ordered release of detained children under 18 without relevant criminal antecedents.",
+    "outcome": "On 3 August, the Court clarified that the antecedents exception concerned grave and heinous offences and left governments free to close or withdraw FIRs according to law. The release direction was not an unconditional release order for every adult. Competing accounts of police excess and protester violence remained allegations.",
+    "sources": [
+      "scProtestProtectionJuly28_2026",
+      "scProtestClarificationAugust3_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "supreme-court-protest-inquiry-august-2026",
+    "date": "18 August 2026",
+    "title": "Supreme Court establishes independent inquiry into July protest violence",
+    "category": "Civil liberties",
+    "actors": [
+      "Supreme Court of India",
+      "High-Powered Enquiry Committee",
+      "Police",
+      "Protesters"
+    ],
+    "status": "Inquiry constituted; no findings in this order",
+    "severity": "High",
+    "summary": "The Court formed a five-member High-Powered Enquiry Committee chaired by retired Supreme Court judge R. Subhash Reddy. Its remit included alleged excessive force, alleged violence against police, property damage, command responsibility and compensation.",
+    "outcome": "The committee was directed to prioritise alleged targeted violence and harassment against women protesters and alleged grievous harm to protesters caused by police or security personnel. It could examine interim compensation for injured protesters and police personnel; agencies had to provide preserved evidence. These were inquiry directions, not findings that allegations were proved.",
+    "sources": [
+      "scProtestInquiryAugust18_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "supreme-court-july-protest-firs-quashed-2026",
+    "date": "1 September 2026",
+    "title": "Supreme Court quashes July-protest FIRs with a limited investigation exception",
+    "category": "Civil liberties",
+    "actors": [
+      "Supreme Court of India",
+      "Delhi Police",
+      "State governments",
+      "Student protesters"
+    ],
+    "status": "Article 142 settlement order",
+    "severity": "High",
+    "summary": "The Court quashed the listed FIRs concerning the 20–25 July protests, directed that other FIRs about the same incidents be treated as closed and barred fresh cases for them. It permitted one narrowly scoped fresh Delhi FIR concerning 2,873 people whom police alleged had serious criminal antecedents and were present, limited to bodily harm and property destruction.",
+    "outcome": "The Court directed the Union, consulting states and Union Territories, to formulate within 90 days a pan-India compensation arrangement for families of students who died by suicide in connection with NEET-UG 2026, with payment without delay. CJP withdrew its proposed 5 September march. The settlement order was expressly non-precedential: it neither found those 2,873 people guilty nor resolved the violence allegations, and it does not cover the October protests.",
+    "sources": [
+      "scProtestFirsSeptember1_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "supreme-court-protest-inquiry-safeguards-2026",
+    "date": "10 September 2026",
+    "title": "Court adds evidence and witness-protection safeguards to protest inquiry",
+    "category": "Civil liberties",
+    "actors": [
+      "Supreme Court of India",
+      "High-Powered Enquiry Committee",
+      "Police",
+      "Witnesses"
+    ],
+    "status": "Court directions; inquiry ongoing",
+    "severity": "Medium",
+    "summary": "The Court kept the inquiry committee unchanged, sought confidentiality and protection for vulnerable witnesses, and said a separate evidence-submission portal may be created. Priority issues included alleged pellet-gun use, targeted violence against women protesters, and alleged excessive violence or property destruction on either side. It also directed a threat assessment, protection and investigation concerning a minor protester's allegations.",
+    "outcome": "The committee was asked to provide its first report as soon as possible. This order did not announce an inquiry finding, a completed compensation programme or a conclusion on the minor's allegations.",
+    "sources": [
+      "scProtestSafeguardsSeptember10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "delhi-cjp-detentions-october-10-2026",
+    "date": "10 October 2026",
+    "title": "Delhi police detain CJP organisers and protesters ahead of Jantar Mantar march",
+    "category": "Protest and policing",
+    "actors": [
+      "Delhi Police",
+      "Cockroach Janta Party",
+      "Opposition leaders",
+      "Student protesters"
+    ],
+    "status": "Reported detentions; final total unresolved",
+    "severity": "High",
+    "summary": "Police detained CJP organisers Abhijeet Dipke, Saurav Das and Ashutosh Ranka after their flight reached Delhi, and intercepted protesters and opposition leaders at multiple locations. The planned demonstration demanded Chief Election Commissioner Gyanesh Kumar's resignation over alleged electoral-roll irregularities.",
+    "outcome": "Police said permission had been denied, citing security and notice requirements. Protest organisers challenged the restrictions. Reports gave changing detention counts; no reconciled final total is established here. Detention is not a conviction, and the electoral allegations are not judicial findings.",
+    "sources": [
+      "apDelhiCjpOctober10_2026",
+      "outlookDelhiCjpOctober10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "journalist-detentions-delhi-pune-october-2026",
+    "date": "10 October 2026",
+    "title": "Journalists report detention while covering protests in Delhi and Pune",
+    "category": "Press freedom",
+    "actors": [
+      "Delhi Police",
+      "Pune Police",
+      "Scroll journalists",
+      "Other news organisations"
+    ],
+    "status": "Newsroom reports and first-person accounts",
+    "severity": "High",
+    "summary": "Scroll reported that Ayush Tiwari and Shoaib Daniyal were detained in Delhi and Divya Aslesha in Pune. Tiwari and Aslesha described being detained despite identifying themselves as reporters. The newsroom also reported detentions of journalists from other outlets.",
+    "outcome": "Tiwari and Aslesha's accounts describe their subsequent release. Aslesha said a senior police officer called her detention a mistake. These are attributed accounts of interference with reporting, not a court determination of the legality of each detention; they do not establish a complete national count.",
+    "sources": [
+      "scrollJournalistsOctober10_2026",
+      "scrollTiwariOctober10_2026",
+      "scrollAsleshaOctober10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "mumbai-cjp-solidarity-detentions-october-2026",
+    "date": "10 October 2026",
+    "title": "Mumbai police block August Kranti Maidan gathering and detain protesters",
+    "category": "Protest and policing",
+    "actors": [
+      "Mumbai Police",
+      "Tushar Gandhi",
+      "Solidarity protesters"
+    ],
+    "status": "Reported",
+    "severity": "High",
+    "summary": "Police closed access to August Kranti Maidan ahead of a solidarity gathering for the CJP's Delhi protest. The Indian Express reported hundreds detained near Nana Chowk; Tushar Gandhi was stopped in Bandra while travelling to the gathering.",
+    "outcome": "Barricades also diverted traffic and restricted access for residents and passersby. The reported crowd and detention figures are not a verified final tally, and the report does not establish the eventual release or case status of every person detained.",
+    "sources": [
+      "ieMumbaiCjpOctober10_2026",
+      "toiMumbaiCjpOctober10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "delhi-metro-rail-restrictions-october-2026",
+    "date": "9–10 October 2026",
+    "title": "Delhi Metro gate closures and rail cancellations restrict protest-day travel",
+    "category": "Protest and policing",
+    "actors": [
+      "Delhi Metro Rail Corporation",
+      "Delhi Police",
+      "Indian Railways",
+      "Passengers"
+    ],
+    "status": "Reported service advisories; dated restrictions",
+    "severity": "High",
+    "summary": "Ahead of the 10 October protest, DMRC reduced a proposed 57-station gate-closure list to 45 stations, effective from 9 pm on 9 October. Entry and exit were restricted, while interchange was retained except at New Delhi. Rail cancellations and road diversions also affected travel to the capital.",
+    "outcome": "An initial 6 pm reopening deadline on 10 October was extended to 10 pm in a later DMRC advisory reported by The Times of India. These were station-access restrictions, not a shutdown of the entire Metro network. The cited advisories do not by themselves confirm when every gate reopened; this is a historical record, not live travel advice.",
+    "sources": [
+      "ieDelhiTransportOctober10_2026",
+      "toiMetroRevisionOctober9_2026",
+      "toiMetroExtensionOctober10_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "delhi-mobile-internet-shutdown-october-2026",
+    "date": "9–10 October 2026",
+    "title": "Mobile internet suspension ordered within a 4-km central Delhi zone",
+    "category": "Digital rights and free expression",
+    "actors": [
+      "Department of Telecommunications",
+      "Delhi Police",
+      "Mobile network operators",
+      "Delhi residents and protesters"
+    ],
+    "status": "Reported suspension order",
+    "severity": "High",
+    "summary": "Authorities ordered mobile internet services suspended within a four-kilometre radius of the Janpath–Kartavya Path crossing, from 10 pm on 9 October to 10 pm on 10 October. The direction preceded the planned Jantar Mantar protest and cited preventive security arrangements.",
+    "outcome": "The reported scope was mobile data in the specified zone, not all internet services throughout Delhi. The stated end time is the order's duration, not independently verified restoration on every operator. The source does not establish that fixed broadband or ordinary voice calls were suspended.",
+    "sources": [
+      "toiDelhiInternetOctober9_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "supreme-court-delhi-transport-curbs-october-2026",
+    "date": "9 October 2026",
+    "title": "Supreme Court asks authorities to reassess sweeping Delhi transport curbs",
+    "category": "Civil liberties",
+    "actors": [
+      "Supreme Court of India",
+      "Delhi Police",
+      "Union government",
+      "Transport authorities"
+    ],
+    "status": "Reported court directions",
+    "severity": "High",
+    "summary": "The Supreme Court questioned the breadth of Metro and rail restrictions proposed for the 10 October protest and directed authorities to reassess them. Reporting of the hearing describes an emphasis on proportionate regulation and a traffic advisory instead of indiscriminate restrictions on commuters.",
+    "outcome": "The Solicitor General said the measures would be reconsidered. This was not a blanket judicial permission for the protest, nor a finding that all later restrictions complied with the Court's directions. Subsequent service advisories are recorded separately.",
+    "sources": [
+      "ieScTransportOctober9_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "meity-enhanced-diligence-advisory-october-2026",
+    "date": "8 October 2026",
+    "title": "MeitY asks social platforms for enhanced diligence during public events",
+    "category": "Digital rights and free expression",
+    "actors": [
+      "Ministry of Electronics and Information Technology",
+      "Social-media platforms",
+      "Internet Freedom Foundation"
+    ],
+    "status": "Reported advisory; rights-group objection",
+    "severity": "Medium",
+    "summary": "MeitY issued an advisory urging platforms to address false, manipulated and out-of-context content, prioritise authorised government complaints and strengthen monitoring and grievance handling. Reporting noted that the text referred to current public events without naming the CJP protest.",
+    "outcome": "The government framed the measures around public order and lawful expression. On 9 October, the Internet Freedom Foundation called for withdrawal, arguing the advisory pressured platforms to police protest speech. That is the organisation's legal criticism, not a judicial ruling or proof of a specific number of removals.",
+    "sources": [
+      "btMeityAdvisoryOctober8_2026",
+      "iffMeityAdvisoryOctober9_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "rahul-gandhi-delhi-protest-detention-october-2026",
+    "date": "7 October 2026",
+    "title": "Rahul Gandhi briefly detained as electoral-roll protests continue",
+    "category": "Protest and policing",
+    "actors": [
+      "Rahul Gandhi",
+      "Delhi Police",
+      "Opposition lawmakers",
+      "Election Commission of India"
+    ],
+    "status": "Reported detention and release",
+    "severity": "Medium",
+    "summary": "Rahul Gandhi and other opposition lawmakers were briefly detained while attempting to march toward Jantar Mantar. Associated Press reported that Gandhi was released later that day, following another brief detention the previous day.",
+    "outcome": "The demonstrations challenged the Special Intensive Revision of voter rolls. Opposition claims of manipulation remained contested; the Election Commission and government denied wrongdoing. This record does not treat a protest demand as proof of electoral fraud.",
+    "sources": [
+      "apRahulDetentionOctober7_2026",
+      "apElectionProtestsOctober6_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "maharashtra-preventive-protest-notices-october-2026",
+    "date": "6–9 October 2026",
+    "title": "Maharashtra activists receive police notices ahead of Delhi protest",
+    "category": "Protest and policing",
+    "actors": [
+      "Maharashtra Police",
+      "Prospective protesters",
+      "Civil-society activists"
+    ],
+    "status": "Documented notices; detention allegations disputed",
+    "severity": "High",
+    "summary": "The Indian Express documented preventive notices, including one dated 6 October in Nagpur, seeking travel details and undertakings not to attend the Delhi protest. Activists in several Maharashtra cities described summons, monitoring and alleged detentions.",
+    "outcome": "The Director General of Police's office acknowledged some notices but denied that people had been detained in the state at the time of the 9 October report. Those competing accounts are retained; subsequent 10 October detentions are a separate record.",
+    "sources": [
+      "ieMaharashtraNoticesOctober9_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "rejinagar-bypoll-access-allegations-october-2026",
+    "date": "6 October 2026",
+    "title": "Rejinagar bypoll prompts allegations of voter obstruction",
+    "category": "Elections and institutions",
+    "actors": [
+      "Election Commission of India",
+      "West Bengal Police",
+      "Rejinagar voters",
+      "Opposition parties"
+    ],
+    "status": "Reported allegations; election observer disputes them",
+    "severity": "High",
+    "summary": "During the Rejinagar Assembly by-election in West Bengal, Scroll reported voters being turned away at some polling booths and opposition allegations of intimidation and restrictions on reporting.",
+    "outcome": "Election observer Harshal Pancholi described the poll as free and fair, said video had been reviewed and offered to examine specific instances raised by the reporter. The report concerns particular observed incidents and allegations, not a court finding that the entire election was rigged.",
+    "sources": [
+      "scrollRejinagarOctober7_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "bitchat-india-app-store-removal-2026",
+    "date": "3 October 2026",
+    "title": "Apple removes Bitchat from India's App Store after government demand",
+    "category": "Digital rights and free expression",
+    "actors": [
+      "Ministry of Electronics and Information Technology",
+      "Apple",
+      "Bitchat developer Jack Dorsey",
+      "Internet Freedom Foundation"
+    ],
+    "status": "Reported removal and published developer notice",
+    "severity": "High",
+    "summary": "Apple removed the Bluetooth-based Bitchat messaging app from the India App Store after a government demand under Section 69A of the IT Act, according to a notice shared by developer Jack Dorsey. The service had attracted attention because it can exchange messages without internet access.",
+    "outcome": "The Internet Freedom Foundation challenged the legal basis and asked for the blocking order to be published. App Store removal is distinct from deletion of copies already installed on devices; this record does not establish a court ruling on the government's demand.",
+    "sources": [
+      "scrollBitchatOctober4_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "delhi-protest-repeat-detentions-october-3-2026",
+    "date": "3 October 2026",
+    "title": "Fresh detentions follow renewed attempt to reach Jantar Mantar",
+    "category": "Protest and policing",
+    "actors": [
+      "Delhi Police",
+      "Student groups",
+      "Yogendra Yadav",
+      "Prashant Bhushan"
+    ],
+    "status": "Reported detentions and FIR registration",
+    "severity": "Medium",
+    "summary": "Police detained protesters attempting to reach Jantar Mantar for a second day of demonstrations against the Chief Election Commissioner. The Indian Express reported about 150 detentions, including student representatives, Yogendra Yadav and Prashant Bhushan.",
+    "outcome": "Police said those detained were subsequently released. Three FIRs concerning the previous day's protests were reported against unidentified people. FIR registration and allegations of police misconduct are not findings of guilt; this record does not merge them with the July cases addressed by the Supreme Court.",
+    "sources": [
+      "ieDelhiDetentionsOctober3_2026"
+    ]
+  },
+  {
+    "year": 2026,
+    "id": "delhi-cec-protest-detentions-october-2-2026",
+    "date": "2 October 2026",
+    "title": "Gandhi Jayanti protest meets detentions, internet disruption and Metro gate closures",
+    "category": "Protest and policing",
+    "actors": [
+      "Delhi Police",
+      "Student groups",
+      "Opposition parties",
+      "Delhi Metro Rail Corporation"
+    ],
+    "status": "Reported; Metro reopening confirmed by broadcaster",
+    "severity": "High",
+    "summary": "Demonstrators calling for the Chief Election Commissioner's resignation were detained in central Delhi under restrictions on unauthorised gatherings. The Tribune reported more than 1,000 detentions, citing personnel on the ground, alongside internet disruption around Connaught Place and Jantar Mantar.",
+    "outcome": "Detention figures differed between reports and are not a reconciled final total. Metro entry and exit restrictions expanded to 12 stations during the day; Akashvani reported all station gates and the New Delhi interchange open again that evening. This reopening relates to 2 October, not the later 10 October restrictions.",
+    "sources": [
+      "tribuneDelhiOctober2_2026",
+      "airMetroReopenedOctober2_2026"
+    ]
+  },
   {"id":"india-economic-crisis-1981","year":1981,"date":"1981","title":"India faces a major economic crisis year","category":"Economic policy and institutions","actors":["Union government","Reserve Bank of India","Indian households and businesses"],"status":"Official economic-history record","severity":"High","summary":"Government economic histories identify 1981 as one of India’s major post-independence economic crisis years.","outcome":"The period fed into later debates over macroeconomic management, banking and structural reform.","sources":["indiaEconomicCrisis1981"]},
   {"id":"asian-financial-crisis-1997","year":1997,"date":"July 1997 onward","title":"The Asian financial crisis tests India’s economy","category":"Economic policy and institutions","actors":["Union government","Reserve Bank of India","Indian financial markets","East Asian economies"],"status":"Official economic survey","severity":"High","summary":"The East Asian currency crisis spread through regional financial markets in 1997. Official Indian economic surveys recorded spillover pressure on capital flows, exports and the rupee while noting that India avoided the worst direct disruption.","outcome":"The crisis strengthened the case for prudential regulation and more resilient external-sector management.","sources":["economicSurveyAsianCrisis1997"]},
   {"id":"bandung-conference-1955","year":1955,"date":"18–24 April 1955","title":"India takes part in the Bandung Conference","category":"Foreign policy and decolonisation","actors":["Government of India","Asian and African states","Jawaharlal Nehru"],"status":"Official foreign-policy history","severity":"High","summary":"India participated in the Afro-Asian Conference at Bandung, a major meeting of newly independent and anti-colonial states.","outcome":"The conference helped shape the diplomatic ideas that later fed into the Non-Aligned Movement.","sources":["bandungConference1955"]},

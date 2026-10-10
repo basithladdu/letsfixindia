@@ -41,6 +41,17 @@ try {
     if (src.status !== undefined && src.status !== 'verified' && src.status !== 'pending') {
       logError(`Source "${id}" has unknown status "${src.status}".`);
     }
+    for (const field of ['publishedOn', 'retrievedOn']) {
+      if (src[field] === undefined) continue;
+      const value = src[field];
+      const timestamp = Date.parse(`${value}T00:00:00Z`);
+      if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || !Number.isFinite(timestamp) || new Date(timestamp).toISOString().slice(0, 10) !== value) {
+        logError(`Source "${id}" has invalid ${field}; expected an ISO calendar date.`);
+      }
+    }
+    if (src.publishedOn && src.retrievedOn && src.publishedOn > src.retrievedOn) {
+      logError(`Source "${id}" was published after its retrieval date.`);
+    }
   }
 
   // Validate Events
@@ -67,6 +78,7 @@ try {
     });
 
     if (Array.isArray(event.sources)) {
+      if (event.sources.length === 0) logError(`Event "${event.id}" has no source references.`);
       event.sources.forEach(srcId => {
         if (!sources[srcId]) {
           logError(`Event "${event.id}" references undefined source ID "${srcId}".`);

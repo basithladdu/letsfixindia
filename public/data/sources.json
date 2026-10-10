@@ -1,4 +1,396 @@
 {
+  "reutersJharkhandAugust10_2026": {
+    "title": "Thousands march on Jharkhand legislature over alleged exam wrongdoing",
+    "publisher": "Reuters via Internazionale",
+    "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/08/10/thousands-of-youth-march-on-legislature-in-india-to-protest-alleged-job-exams-wrongdoing",
+    "type": "News report",
+    "publishedOn": "2026-08-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "ptiJharkhandBandhAugust10_2026": {
+    "title": "BJP calls Jharkhand bandh after police action on students",
+    "publisher": "PTI via NDTV",
+    "url": "https://www.ndtv.com/india-news/bjp-calls-for-jharkhand-bandh-tomorrow-over-lathi-charge-on-students-11891731",
+    "type": "News report",
+    "publishedOn": "2026-08-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "apMumbaiLandslideAugust12_2026": {
+    "title": "Mumbai landslide kills residents after heavy rain",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/413691a4ef81319fe2487d77edfb8c81",
+    "type": "News report",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieMumbaiLandslideAugust12_2026": {
+    "title": "Ghatkopar landslide: prior risk warnings and municipal response",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/mumbai/kurla-landslide-gaushiya-chawl-chirag-nagar-2-dead-trapped-bmc-rescue-10829149/lite/",
+    "type": "News report",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-10"
+  },
+  "airMumbaiLandslideAugust12_2026": {
+    "title": "Seven killed and seven injured in Ghatkopar chawl landslide",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/mumbai-seven-killed-another-seven-injured-in-landslide-in-ghatkopar-chawl/",
+    "type": "Public broadcaster report",
+    "publishedOn": "2026-08-12",
+    "retrievedOn": "2026-10-10"
+  },
+  "governorChamoliAugust13_2026": {
+    "title": "Governor's statement on water and debris entering Chamoli THDC tunnel",
+    "publisher": "Governor of Uttarakhand",
+    "url": "https://governoruk.gov.in/13-08-2026governor-has-expressed-concern-over-the-incident-involving-the-inflow-of-debris-and-water-into-a-thdc-tunnel-at-pipalkoti-in-chamoli-district/",
+    "type": "Official statement",
+    "publishedOn": "2026-08-13",
+    "retrievedOn": "2026-10-10"
+  },
+  "htChamoliTollAugust19_2026": {
+    "title": "Chamoli tunnel death toll: eleven",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/india-news/chamoli-tunnel-incident-death-toll-rises-to-11-as-rescue-operations-end-101787130708801-amp.html",
+    "type": "News report",
+    "publishedOn": "2026-08-19",
+    "retrievedOn": "2026-10-10"
+  },
+  "htChamoliInquiryAugust19_2026": {
+    "title": "Magisterial inquiry ordered into THDC tunnel accident",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/india-news/magisterial-inquiries-ordered-into-thdc-tunnel-accident-in-chamoli-official-101787145540521-amp.html",
+    "type": "Official inquiry reporting",
+    "publishedOn": "2026-08-19",
+    "retrievedOn": "2026-10-10"
+  },
+  "nieSikhPrisonerMarchAugust15_2026": {
+    "title": "Chandigarh police use tear gas and water cannon at prisoner-release march",
+    "publisher": "The New Indian Express",
+    "url": "https://www.newindianexpress.com/india/2026/Aug/15/chandigarh-police-use-tear-gas-water-cannons-as-protesters-march-for-release-of-sikh-prisoners",
+    "type": "News report",
+    "publishedOn": "2026-08-15",
+    "retrievedOn": "2026-10-10"
+  },
+  "toiPunjabBandhAugust21_2026": {
+    "title": "Seven-hour Punjab bandh affects markets, schools and traffic",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/chandigarh/7-hour-punjab-bandh-shuts-markets-schools-hits-traffic/articleshow/133413220.cms",
+    "type": "News report",
+    "publishedOn": "2026-08-22",
+    "retrievedOn": "2026-10-10"
+  },
+  "reutersPatnaAugust25_2026": {
+    "title": "Indian police use water cannon at new exam-related protest",
+    "publisher": "Reuters via ThePrint",
+    "url": "https://theprint.in/world/indian-police-use-water-cannon-at-new-protest-over-test-paper-leaks/3024341/",
+    "type": "News report",
+    "publishedOn": "2026-08-25",
+    "retrievedOn": "2026-10-10"
+  },
+  "iePatnaDetentionsAugust25_2026": {
+    "title": "Patna TRE-4 protest: water cannon, police action and temporary detentions",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/patna/bpsc-tre-4-protest-patna-water-cannons-lathicharge-two-tier-format-rajesh-singh-10849195/lite/",
+    "type": "News report",
+    "publishedOn": "2026-08-25",
+    "retrievedOn": "2026-10-10"
+  },
+  "iePatnaExamBackgroundAugust25_2026": {
+    "title": "Why job aspirants protested the TRE-4 examination format",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/explained/bihar-student-protest-patna-tre-4-bpsc-10848693/",
+    "type": "Explainer including BPSC response",
+    "publishedOn": "2026-08-25",
+    "retrievedOn": "2026-10-10"
+  },
+  "hcAkritiChaudharySeptember2_2026": {
+    "title": "Allahabad High Court judgment on Akriti Chaudhary's NSA detention",
+    "publisher": "Allahabad High Court via Indian Kanoon",
+    "url": "https://indiankanoon.org/doc/134187496/",
+    "type": "Court judgment mirror; later stayed",
+    "publishedOn": "2026-09-02",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollAkritiStaySeptember23_2026": {
+    "title": "Supreme Court stays ruling quashing activist's NSA detention",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/latest/1095953/noida-workers-protest-sc-stays-allahabad-hc-order-quashing-nsa-detention-of-activist",
+    "type": "Court reporting",
+    "publishedOn": "2026-09-23",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieEciObjectionsSeptember23_2026": {
+    "title": "Election Commissioners' internal objections on SIR and electoral procedures",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/express-exclusive/election-commission-sir-14-objections-gyanesh-kumar-sukhbir-singh-sandhu-vivek-joshi-10889737/",
+    "type": "Document-based investigation",
+    "publishedOn": "2026-09-23",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieEciResponseSeptember24_2026": {
+    "title": "Election Commission says decisions unanimous in response to investigation",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/decisions-unanimous-election-commission-response-sir-vote-express-investigation-gyanesh-kumar-10890491/",
+    "type": "Official-response reporting",
+    "publishedOn": "2026-09-23",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieLpuUnrestSeptember28_2026": {
+    "title": "LPU unrest over sexual-assault claim; university denies incident",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/chandigarh/lpu-students-protest-rape-violence-property-damange-10896683/lite/",
+    "type": "News report including police and university response",
+    "publishedOn": "2026-09-28",
+    "retrievedOn": "2026-10-10"
+  },
+  "htLpuInternetSeptember28_2026": {
+    "title": "Mobile internet suspended near LPU after campus unrest",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/cities/chandigarh-news/lovely-professional-university-lpu-uneasy-calm-on-campus-amid-heavy-police-presence-internet-suspended-students-leave-101790624774094.html",
+    "type": "Internet-restriction reporting",
+    "publishedOn": "2026-09-29",
+    "retrievedOn": "2026-10-10"
+  },
+  "htLpuCourtSeptember30_2026": {
+    "title": "High Court seeks police report after LPU unrest",
+    "publisher": "Hindustan Times",
+    "url": "https://www.hindustantimes.com/cities/chandigarh-news/lpu-rape-rumour-hc-seeks-punjab-police-report-on-fake-post-that-sparked-violence-101790759258420-amp.html",
+    "type": "Court reporting",
+    "publishedOn": "2026-09-30",
+    "retrievedOn": "2026-10-10"
+  },
+  "airCjpAgreementJuly26_2026": {
+    "title": "CJP withdraws agitation after government accepts its demands",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/third-round-of-talks-between-centre-and-cjp-delegation-underway-in-new-delhi/",
+    "type": "Public broadcaster reporting government and CJP statements",
+    "publishedOn": "2026-07-26",
+    "retrievedOn": "2026-10-10"
+  },
+  "airBiharAssamWithdrawalsJuly28_2026": {
+    "title": "Bihar and Assam announce withdrawal of cases linked to NEET protests",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/bihar-and-assam-announce-withdrawal-of-cases-linked-to-neet-protests/",
+    "type": "Public broadcaster reporting state directions",
+    "publishedOn": "2026-07-28",
+    "retrievedOn": "2026-10-10"
+  },
+  "scProtestProtectionJuly28_2026": {
+    "title": "Shailendra Mani Tripathi v. Union of India: Interim protections and evidence preservation",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=440782026&type=o&order_date=2026-07-28&from=latest_judgements_order",
+    "type": "Official court order",
+    "publishedOn": "2026-07-28",
+    "retrievedOn": "2026-10-10"
+  },
+  "scProtestClarificationAugust3_2026": {
+    "title": "Shailendra Mani Tripathi v. Union of India: Clarification of protester protection and antecedents exception",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=440782026&type=o&order_date=2026-08-03&from=latest_judgements_order",
+    "type": "Official court order",
+    "publishedOn": "2026-08-03",
+    "retrievedOn": "2026-10-10"
+  },
+  "scProtestInquiryAugust18_2026": {
+    "title": "Shailendra Mani Tripathi v. Union of India: Constitution of High-Powered Enquiry Committee",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=440782026&type=o&order_date=2026-08-18&from=latest_judgements_order",
+    "type": "Official court order",
+    "publishedOn": "2026-08-18",
+    "retrievedOn": "2026-10-10"
+  },
+  "scProtestFirsSeptember1_2026": {
+    "title": "Shailendra Mani Tripathi v. Union of India: July-protest FIR quashing, limited exception and compensation directions",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=440782026&type=o&order_date=2026-09-01&from=latest_judgements_order",
+    "type": "Official court order",
+    "publishedOn": "2026-09-01",
+    "retrievedOn": "2026-10-10"
+  },
+  "scProtestSafeguardsSeptember10_2026": {
+    "title": "Shailendra Mani Tripathi v. Union of India: Inquiry procedure and witness-protection directions",
+    "publisher": "Supreme Court of India",
+    "url": "https://www.sci.gov.in/sci-get-pdf/?diary_no=440782026&type=o&order_date=2026-09-10&from=latest_judgements_order",
+    "type": "Official court order",
+    "publishedOn": "2026-09-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "apDelhiCjpOctober10_2026": {
+    "title": "India cracks down on youth protests as anger grows over voter-list revision",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/030b35e23279c75394b7654233c99d6b",
+    "type": "News report",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "outlookDelhiCjpOctober10_2026": {
+    "title": "CJP protest: detentions and security restrictions in Delhi",
+    "publisher": "Outlook",
+    "url": "https://www.outlookindia.com/national/cjp-protest-live-updates-abhijeet-dipke-delhi-india-bloc-cec-row-latest-updates-october-10",
+    "type": "Live reporting",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollJournalistsOctober10_2026": {
+    "title": "Scroll journalists detained in Delhi and Pune during CEC protests",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/latest/1096299/scrolls-ayush-tiwari-detained-ahead-of-cjp-protest-against-cec",
+    "type": "Newsroom reporting",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollTiwariOctober10_2026": {
+    "title": "Ayush Tiwari's account of detention in Delhi",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/article/1096301/everybody-claims-to-be-a-journalist-these-days-scrolls-ayush-tiwari-on-being-detained-in-delhi",
+    "type": "First-person reporter account",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollAsleshaOctober10_2026": {
+    "title": "Divya Aslesha's account of detention by Pune Police",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/article/1096306/i-screamed-and-screamed-that-i-am-a-reporter-scrolls-divya-aslesha-detained-by-pune-police",
+    "type": "First-person reporter account",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieMumbaiCjpOctober10_2026": {
+    "title": "Police shut August Kranti Maidan and detain protesters backing CJP",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/mumbai/cjp-protest-mumbai-august-kranti-maidan-10915743/",
+    "type": "On-ground reporting",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "toiMumbaiCjpOctober10_2026": {
+    "title": "Mumbai detentions near Nana Chowk during CJP solidarity protest",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/mumbai/actor-imran-khan-among-several-detained-in-support-of-cjp-stir-in-mumbai/amp_articleshow/134854059.cms",
+    "type": "News report",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieDelhiTransportOctober10_2026": {
+    "title": "Jantar Mantar CJP protest: Metro gate closures, rail cancellations and traffic curbs",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/cities/delhi/jantar-mantar-cjp-protest-metro-stations-shut-traffic-curbs-10914750/",
+    "type": "Transport-advisory reporting",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "toiMetroRevisionOctober9_2026": {
+    "title": "Delhi Metro scales down closures from 57 to 45 stations",
+    "publisher": "The Times of India / PTI",
+    "url": "https://timesofindia.indiatimes.com/city/delhi/delhi-metro-scales-down-closures-from-57-to-45-stations-ahead-of-cjp-protest/amp_articleshow/134839117.cms",
+    "type": "DMRC advisory reporting",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-10"
+  },
+  "toiMetroExtensionOctober10_2026": {
+    "title": "Entry and exit restrictions at 45 Metro stations extended until 10 pm",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/city/delhi/cjp-protest-entry-exit-gates-at-45-delhi-metro-stations-to-remain-shut-till-10pm/articleshow/134855033.cms",
+    "type": "DMRC advisory reporting",
+    "publishedOn": "2026-10-10",
+    "retrievedOn": "2026-10-10"
+  },
+  "toiDelhiInternetOctober9_2026": {
+    "title": "Mobile internet shutdown ordered within four kilometres of Janpath–Kartavya Path",
+    "publisher": "The Times of India",
+    "url": "https://timesofindia.indiatimes.com/india/govt-orders-internet-shutdown-within-4-kilometer-radius-of-janpathkartavya-path-ahead-of-anti-cec-protest/articleshow/134835311.cms",
+    "type": "Suspension-order reporting",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieScTransportOctober9_2026": {
+    "title": "Supreme Court questions sweeping Delhi transport restrictions before protest",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/legal-news/supreme-court-delhi-metro-closure-for-ec-cjp-protest-10914010/",
+    "type": "Court reporting",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-10"
+  },
+  "btMeityAdvisoryOctober8_2026": {
+    "title": "Government issues social-platform advisory during public events",
+    "publisher": "Business Today",
+    "url": "https://www.businesstoday.in/india/story/govt-issues-advisory-to-social-media-platforms-amid-cjp-protest-in-capital-flags-misinformation-560520-2026-10-08",
+    "type": "Advisory reporting",
+    "publishedOn": "2026-10-08",
+    "retrievedOn": "2026-10-10"
+  },
+  "iffMeityAdvisoryOctober9_2026": {
+    "title": "IFF objects to MeitY's enhanced-diligence advisory",
+    "publisher": "Internet Freedom Foundation",
+    "url": "https://internetfreedom.in/meitys-enhanced-diligence-advisory-pressures-platforms-to-police-protest-speech-it-must-be-withdrawn/",
+    "type": "Civil-society statement",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-10"
+  },
+  "apRahulDetentionOctober7_2026": {
+    "title": "Rahul Gandhi briefly detained as protests grow over voter-list revision",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/45e94c3dc0c4570f1e6f59bc60a118cc",
+    "type": "News report",
+    "publishedOn": "2026-10-07",
+    "retrievedOn": "2026-10-10"
+  },
+  "apElectionProtestsOctober6_2026": {
+    "title": "Opposition and student protests over India's voter-list revision",
+    "publisher": "Associated Press",
+    "url": "https://apnews.com/article/6d3dd66ebaa9bb1e2c6b688ffc576842",
+    "type": "News report including official response",
+    "publishedOn": "2026-10-06",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieMaharashtraNoticesOctober9_2026": {
+    "title": "Maharashtra police notices to would-be Delhi protesters",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/india/sign-a-bond-skip-delhi-maharashtra-police-warn-would-be-protesters-against-oct-10-agitation-10913139/",
+    "type": "Document-based reporting and police response",
+    "publishedOn": "2026-10-09",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollRejinagarOctober7_2026": {
+    "title": "Rejinagar bypoll: allegations of obstruction and election observer's response",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/article/1096225/police-acting-like-bjp-agent-bengal-bye-election-was-rigged-allege-opposition-workers",
+    "type": "On-ground reporting",
+    "publishedOn": "2026-10-07",
+    "retrievedOn": "2026-10-10"
+  },
+  "scrollBitchatOctober4_2026": {
+    "title": "Apple removes Bitchat from India App Store after government demand",
+    "publisher": "Scroll",
+    "url": "https://scroll.in/latest/1096173/apple-removes-messaging-platform-that-works-without-internet-from-india-app-store-devel",
+    "type": "Developer-notice and policy reporting",
+    "publishedOn": "2026-10-04",
+    "retrievedOn": "2026-10-10"
+  },
+  "ieDelhiDetentionsOctober3_2026": {
+    "title": "Fresh detentions and FIRs following Jantar Mantar protests",
+    "publisher": "The Indian Express",
+    "url": "https://indianexpress.com/article/delhi/jantar-mantar-protest-cec-gyanesh-kumar-detentions-rahul-gandhi-amit-shah-delhi-police-10905800/",
+    "type": "News report including police response",
+    "publishedOn": "2026-10-04",
+    "retrievedOn": "2026-10-10"
+  },
+  "tribuneDelhiOctober2_2026": {
+    "title": "Over 1,000 reported detained as protesters demand CEC's exit",
+    "publisher": "The Tribune",
+    "url": "https://www.tribuneindia.com/news/delhi/over-1k-detained-in-delhi-as-protesters-demand-cecs-exit/amp",
+    "type": "On-ground reporting",
+    "publishedOn": "2026-10-03",
+    "retrievedOn": "2026-10-10"
+  },
+  "airMetroReopenedOctober2_2026": {
+    "title": "Entry and exit gates of all Metro stations now open: DMRC",
+    "publisher": "Akashvani / News On AIR",
+    "url": "https://newsonair.gov.in/entry-and-exit-gates-of-all-metro-stations-now-open-dmrc/",
+    "type": "Public broadcaster reporting DMRC statement",
+    "publishedOn": "2026-10-02",
+    "retrievedOn": "2026-10-10"
+  },
   "hrw2026": {
     "title": "Human Rights Watch - World Report 2026: India",
     "publisher": "Human Rights Watch",

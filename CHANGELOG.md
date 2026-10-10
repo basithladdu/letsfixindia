@@ -2,6 +2,25 @@
 
 All notable user-facing changes to the site.
 
+## 2026-10-10
+
+### Added
+- 27 source-backed records covering selected major developments from 26 July through 10 October 2026, bringing the archive to 397 events and 1,304 sources.
+- July protest settlement and Supreme Court follow-ups; October Delhi and Mumbai detentions; journalist accounts; dated Metro, rail and mobile-internet restrictions; and the MeitY advisory and Bitchat removal.
+- Significant state-level exam protests, public-safety incidents, preventive-detention litigation, electoral-procedure disputes and LPU unrest. Unverified allegations and official responses remain explicitly separated.
+- 49 source entries with publication/retrieval dates and 20 state/UT mappings. Court orders are linked directly where available; an inquiry, an announced release direction and a completed release are not interchangeable.
+
+### Changed
+- Research freshness now reflects the 10 October checkpoint, not the viewer's clock. The separate state-government history checkpoint remains 22 July.
+- Updated About and the inactive latest-record splash; fixed the About fragment's unmatched closing tag.
+- Source titles wrap on standalone record pages instead of being clipped on narrow screens.
+- Validation now checks timeline/source/jurisdiction/backlog mirrors, optional source dates and non-empty event source lists.
+
+### Verification
+- Data, shell, gallery, submission and moderation checks passed; Astro generated 668 pages.
+- New record pages checked at 1440px and 390px; search, date ordering, empty-state reset and citation-copy interactions exercised locally.
+- Existing backlog warnings remain: 67 sources awaiting URLs and 463 unreferenced source records. This release does not claim exhaustive news coverage, independently reconciled detention totals or live transport status.
+
 ## 2026-07-23
 
 ### Added
