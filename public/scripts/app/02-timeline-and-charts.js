@@ -3,6 +3,7 @@ function matches(event) {
   const searchText = [event.title, event.summary, event.outcome, event.category, event.status, event.actors.join(" "), event.year, event.date].join(" ").toLowerCase();
   return (
     (!query || searchText.includes(query)) &&
+    (state.topic === "all" || timelineTopic(event.category).id === state.topic) &&
     (state.category === "all" || event.category === state.category) &&
     (state.actor === "all" || event.actors.includes(state.actor)) &&
     (state.status === "all" || event.status === state.status) &&
@@ -14,10 +15,11 @@ function matches(event) {
 function renderTimeline() {
   if (!timelineList) return;
   renderOptions();
+  saveTimelineFilters();
   const filtered = events.filter(matches).sort(state.sort === "asc" ? byTimelineAsc : byTimeline);
   const activeTotal = events.length;
   const activeAdvancedFilters = [
-    state.category !== "all",
+    state.category !== "all", state.topic !== "all",
     state.actor !== "all",
     state.status !== "all",
     state.evidence !== "all",
@@ -37,7 +39,7 @@ function renderTimeline() {
       : `Every entry links to its sources`;
   }
   if (clearFiltersButton) {
-    clearFiltersButton.disabled = !state.query && state.category === "all" && state.actor === "all" && state.status === "all" && state.evidence === "all" && state.year === "all" && state.sort === "desc";
+    clearFiltersButton.disabled = !state.query && state.topic === "all" && state.category === "all" && state.actor === "all" && state.status === "all" && state.evidence === "all" && state.year === "all" && state.sort === "desc";
   }
   pulseResultCount();
   markTimelineRefreshing();
@@ -51,7 +53,7 @@ function renderTimeline() {
   }
 
   const grouped = filtered.reduce((map, event) => {
-    const year = String(event.year);
+    const year = timelinePeriod(event);
     if (!map.has(year)) map.set(year, []);
     map.get(year).push(event);
     return map;
@@ -60,30 +62,34 @@ function renderTimeline() {
   timelineList.innerHTML = Array.from(grouped.entries()).map(([year, yearEvents]) => `
     <section class="year-group" aria-label="${year} records">
       <div class="year-heading">
-        <span>${year} <b class="year-timeline-label" style="font-family: sans-serif; font-size: 14px; font-weight: 900; letter-spacing: 0.05em; margin-left: 6px; vertical-align: middle; color: var(--muted); text-transform: uppercase;">TIMELINE</b></span>
+        <h3>${year}</h3>
         <b>${yearEvents.length} records</b>
       </div>
       <div class="year-records">
         ${yearEvents.map((event, index) => `
-          <article class="event-card ${String(event.severity || "").toLowerCase()}" style="--i:${index}">
+          <article class="event-card topic-${timelineTopic(event.category).id} ${String(event.severity || "").toLowerCase()}" style="--i:${index}" data-event-id="${esc(event.id)}">
             <div class="event-body">
               ${(() => { const evidence = sourceStatus(event.sources); return evidence.className === "linked" ? "" : `<span class="evidence-status ${evidence.className}" title="Evidence link status">${esc(evidence.label)}</span>`; })()}
               <div class="event-meta">
-                <span>${esc(event.date)}</span>
-                <span class="${statusClass(event.status)}">${esc(event.status)}</span>
+                <span class="event-date">${esc(event.date)}</span>
+                <span class="topic-label">${timelineTopic(event.category).label}</span>
               </div>
               <div class="event-title-row">
-                <a class="event-title-link" href="${eventUrl(event)}" data-link>${esc(event.title)}</a>
+                <h4><a class="event-title-link" href="${eventUrl(event)}" data-link>${esc(event.title)}</a></h4>
               </div>
               <div class="chips">
-                <span class="${chipClass(event.category)}">${esc(event.category)}</span>
+                <span class="chip category-detail">${esc(event.category)}</span>
                 ${event.actors.map((actor) => `<span class="${chipClass(actor)}">${esc(actor)}</span>`).join("")}
               </div>
-              <p>${esc(event.summary)}</p>
-              <p class="outcome">${esc(event.outcome)}</p>
-              <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed rgba(0,0,0,0.08); padding-top: 12px; flex-wrap: wrap; gap: 12px;">
-                <div class="source-links source-inline" aria-label="Sources for ${esc(event.title)}" style="margin-top: 0; background: none; border: none; padding: 0; display: inline-flex; align-items: center; gap: 6px;">
-                  <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--muted); margin-right: 4px; letter-spacing: 0.05em;">Sources</span>
+              <p class="event-summary">${esc(event.summary)}</p>
+              <div class="event-outcome">
+                <span class="outcome-label">Outcome & follow-up</span>
+                <span class="${statusClass(event.status)}">${esc(event.status)}</span>
+                <p class="outcome">${esc(event.outcome)}</p>
+              </div>
+              <div class="event-footer">
+                <div class="source-links source-inline" aria-label="Sources for ${esc(event.title)}">
+                  <span class="source-label">Sources</span>
                   ${sourceLinks(event.sources)}
                 </div>
                 <a href="/submit?correct=${event.id}" data-link class="correction-link">Suggest a correction or update</a>

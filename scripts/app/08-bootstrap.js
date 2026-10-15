@@ -22,6 +22,7 @@ async function init() {
     ]);
     voices = [];
     researchBacklog = [];
+    restoreTimelineFilters();
     renderOptions();
     populateIndicatorTopics();
     renderStatsOverview();

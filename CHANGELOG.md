@@ -2,6 +2,29 @@
 
 All notable user-facing changes to the site.
 
+## 2026-10-15
+
+### Research and follow-ups
+
+- Added eight records and 13 sources, bringing the ledger to 458 events and 1,427 sources. Seven new geographic tags bring the explicit state/UT mappings to 255. All earlier IDs, sources and mappings remain; four earlier entries receive targeted follow-ups or time-qualified wording.
+- Separated the 11 October release of three CJP leaders from the new 13 October detentions and reported 14 October custody of Das and Ranka. A 15 October custody update is attributed to reporting of Dipke's statement, not an independently reconciled detainee register.
+- Added the Jantar Mantar venue change, the Supreme Court's 11 October safeguards and notices, and the government's 14–15 October contempt response. Restoration assurances, an apology, requested relief and judicial findings remain distinct. Primary documents not retrieved are marked explicitly.
+- Added ADR's reported immunity-case notice and the SFI/Ila Kazmi digital-rights proceedings. The SFI order was read through a court-text mirror; IFF's reporting date is not substituted for the September order date. No unverified account restoration or later merits ruling is implied.
+
+### Timeline and cloud continuation
+
+- Nine labelled, colour-coded topic groups with counts; full detailed category/actor/status/evidence/year filters remain. Records are grouped by month where the date permits, with clearer headings and an explicit outcome/follow-up block.
+- Filters persist across reload and record-page return within the same tab session. Empty search results no longer erase selected filters. Keyboard focus, visible selection and 44px mobile topic controls are retained; colour is not the only topic cue.
+- A compact share disclosure keeps every existing sharing action available. The mobile introduction is shorter, with no record text or citation data removed.
+- README now includes a public-safe cloud continuation guide, exact commands, ownership of files, evidence gaps and release boundaries. No research API key was used and no nightly research schedule was activated; the unrelated existing gallery-retention schedule is unchanged.
+- Fixed shell composition when the checkout is reached through a junction/symlink. Reconciled the previously stale lockfile with the existing package manifest so a fresh `npm ci` succeeds: two missing transitive entries added and obsolete Next/React-only entries removed. No retained package version or direct application dependency changed.
+
+### Verification
+
+- Clean dependency install, `check:local`, `check`, preservation assertions and diff whitespace checks passed. Astro built 729 pages; inherited audit warnings remain 67 pending URLs and 463 unreferenced sources.
+- All 12 new/revised built record pages passed 24 checks at 1440px and 375px: titles, complete outcomes, citations, images and horizontal overflow, with no captured page/console errors.
+- Timeline interactions passed at 1440px, 390px and 375px, including combined filters, sorting, reload, back navigation and no-result recovery. Keyboard activation, share disclosure, new source-ledger entry, Delhi mapping and About passed at desktop/mobile widths. Topic-button text contrast measured at least 6.56:1 in the checked states. Screenshots were inspected; this is browser viewport evidence, not physical-device or operator-level network testing.
+
 ## 2026-10-11
 
 ### Follow-up: restoration, releases and 14 further records

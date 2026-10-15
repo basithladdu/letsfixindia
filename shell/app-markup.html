@@ -128,14 +128,17 @@
         <div class="hero-copy">
           <p class="eyebrow">1947-2026 archive · detailed coverage from 2014</p>
           <h1>LetsFixIndia 1947-2026</h1>
-          <p class="lede">A sourced public record of governance, rights, protests, institutional disputes, and political cases in India. The archive runs from 1947, with its most detailed coverage from 2014 onward. Each entry lists sources and an evidence status.</p>
+          <p class="lede">India's public record, with sources and follow-ups. Browse governance, rights, protests and political cases from 1947, with detailed coverage from 2014.</p>
           <div class="hero-actions" aria-label="Primary actions">
             <a href="/#timeline" data-link>Explore records</a>
             <a href="/map" data-link>Explore states</a>
             <a href="/statistics" data-link>View statistics</a>
             <a href="/submit" data-link>Submit evidence</a>
           </div>
-          <div class="share-bar hero-share" data-share-context="site"></div>
+          <details class="timeline-share">
+            <summary>Share this timeline</summary>
+            <div class="share-bar hero-share" data-share-context="site"></div>
+          </details>
         </div>
 
       </section>
@@ -202,7 +205,8 @@
           </label>
         </div>
         <div id="yearRail" class="year-rail" aria-label="Filter by year"></div>
-        <div id="categoryQuickFilters" class="category-quick-filters" role="group" aria-label="Popular topic filters"></div>
+        <div class="topic-filter-heading">Browse by topic <span>Colours identify topics, not guilt or evidence strength.</span></div>
+        <div id="categoryQuickFilters" class="category-quick-filters" role="group" aria-label="Topic filters"></div>
         <div class="tag-legend" aria-label="Actor tag legend">
           <span><i class="legend-swatch legend-bjp" aria-hidden="true"></i>BJP-linked / BJP-led</span>
           <span><i class="legend-swatch legend-rss" aria-hidden="true"></i>RSS / ABVP / Hindutva-linked</span>
@@ -591,7 +595,7 @@
       <section id="timeline" class="section timeline-section route-page" data-page="timeline">
         <div class="section-head">
           <p class="eyebrow">Timeline</p>
-          <h2>Major public-record entries</h2>
+          <h2>The public record</h2>
           <p id="resultCount" class="result-count" aria-live="polite" aria-atomic="true">Loading records</p>
           <p id="evidenceSummary" class="evidence-summary" aria-live="polite"></p>
         </div>
@@ -881,7 +885,7 @@
           <p class="eyebrow">About / Support</p>
           <h2>Who maintains this record</h2>
           <p>LetsFixIndia is maintained by <a href="https://basith.wedevit.in" target="_blank" rel="noopener" class="author-link">Basith<span class="link-icon">↗</span></a> as a sourced public record. Each entry states what happened, cites who reported it, and notes what remains unresolved.</p>
-          <p><a class="text-button" href="https://github.com/basithladdu/letsfixindia/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Changelog · 11 October 2026</a></p>
+          <p><a class="text-button" href="https://github.com/basithladdu/letsfixindia/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Changelog · 15 October 2026</a></p>
         </div>
         <div class="support-grid">
           <article>
@@ -905,8 +909,8 @@
         <div class="about-note-row">
           <div class="about-support-note">
             <p class="eyebrow">Record history</p>
-            <h3>Latest research checkpoint — 11 October 2026</h3>
-            <p>The latest follow-up adds 14 records to the 1 July–10 October review, covering court safeguards, protest releases, public policy and healthcare accountability. Delhi and LPU internet restoration and Delhi/Mumbai release reports now have dated updates. Operator-level restoration and individual detention totals remain unresolved; conflicting bail reports are marked. This is a curated record, not a complete news feed or live travel advisory.</p>
+            <h3>Latest research checkpoint — 15 October 2026</h3>
+            <p>Eight new records cover CJP releases and fresh custody proceedings, Delhi's protest-venue change, court safeguards, the government's contempt response and digital-rights cases. The 15 October custody update is attributed to reporting, not treated as a complete detainee register. Internet-restoration assurances remain distinct from operator-level verification. Coverage is curated, not a complete news feed or live travel advisory.</p>
             <p>The separate government and opposition histories for all 36 states and union territories retain their 22 July 2026 checkpoint. Government histories include the term spanning the 2014 boundary; opposition records begin in 2014. Caretaker periods, constitutional gaps, vacancies and uncertain boundaries remain explicit.</p>
             <p><a class="text-button" href="https://github.com/basithladdu/letsfixindia/blob/master/CHANGELOG.md" target="_blank" rel="noopener">Read the full changelog on GitHub</a></p>
           </div>
@@ -1252,7 +1256,7 @@
     <footer class="footer">
       <div class="footer-left">
         <span>LetsFixIndia</span>
-        <span id="footerDate">Research updated 11 October 2026</span>
+        <span id="footerDate">Research updated 15 October 2026</span>
       </div>
       <div class="footer-links">
         <a href="/sources" data-link>Sources</a>

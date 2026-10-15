@@ -204,13 +204,15 @@ function bindEvents() {
       pill.setAttribute("aria-pressed", String(isActive));
     });
     renderTimeline();
+    yearRail.querySelector(`[data-year="${state.year}"]`)?.focus({ preventScroll: true });
     updateScrollDock();
   });
 
   categoryQuickFilters?.addEventListener("click", (event) => {
-    const button = closestFromEvent(event, "button[data-category]");
+    const button = closestFromEvent(event, "button[data-topic]");
     if (!button) return;
-    state.category = button.dataset.category;
+    state.topic = button.dataset.topic;
+    state.category = "all";
     if (categoryFilter) categoryFilter.value = state.category;
     categoryQuickFilters.querySelectorAll(".category-chip").forEach((chip) => {
       const active = chip === button;
@@ -219,6 +221,7 @@ function bindEvents() {
     });
     playUiSound("filter");
     renderTimeline();
+    categoryQuickFilters.querySelector(`[data-topic="${state.topic}"]`)?.focus({ preventScroll: true });
     updateScrollDock();
   });
 

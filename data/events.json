@@ -1,5 +1,109 @@
 [
   {
+    "id": "centre-delhi-shutdown-contempt-response-october-2026",
+    "year": 2026,
+    "date": "14–15 October 2026",
+    "title": "Centre responds to contempt notice, defending shutdown while offering apology",
+    "category": "Justice and constitutional law",
+    "actors": ["Union Home Secretary", "Supreme Court of India", "Delhi Police"],
+    "status": "Government response reported; requested relief not established",
+    "severity": "High",
+    "summary": "Moneycontrol reported a Union counter-affidavit filed on 14 October defending the limited central Delhi mobile-data suspension as necessary for public order and denying wilful disobedience. ANI's 15 October report says Home Secretary Govind Mohan tendered an unconditional apology in response to the contempt notice while maintaining that position.",
+    "outcome": "The government sought discharge of the contempt notice and modification of the 11 October internet direction to allow necessary suspensions subject to legal safeguards. These are submissions and requests, not a finding that the shutdown was lawful, acceptance of the apology or permission already granted for another shutdown. The primary affidavit and a subsequent ruling were not independently retrieved. This development does not establish operator-level restoration or the status of individual detainees.",
+    "sources": ["mcDelhiShutdownAffidavitOctober15_2026", "aniHomeSecretaryApologyOctober15_2026"]
+  },
+  {
+    "id": "cjp-das-ranka-renewed-custody-october-2026",
+    "year": 2026,
+    "date": "13–14 October 2026",
+    "title": "Das and Ranka sent to five-day custody after fresh Jantar Mantar detentions",
+    "category": "Protest and policing",
+    "actors": ["Delhi Police", "Special Executive Magistrate", "Cockroach Janta Party"],
+    "status": "Fresh custody reported; later release not verified",
+    "severity": "High",
+    "summary": "The New Indian Express reported that police detained 14 CJP members on 13 October after allegedly entering the restricted Jantar Mantar site. Citing police sources and DCP Sachin Sharma, it reported that Saurav Das and Ashutosh Ranka were sent to five days of judicial custody on 14 October. CJP disputed the justification for their detention.",
+    "outcome": "The report says Ajinkya Shinde was bound over for six months on a personal bond and ₹5,000 surety. Moneycontrol's 15 October report quotes Dipke describing Das and Ranka as still jailed; that is an attributed update, not an independently reconciled custody register. This episode follows their separate 11 October release. The primary magistrate's order and a subsequent release were not verified. Alleged offences and remand are not convictions; the final status of all 14 people remains unresolved.",
+    "sources": ["tnieCjpCustodyOctober14_2026", "mcCjpCustodyUpdateOctober15_2026"]
+  },
+  {
+    "id": "adr-election-commissioner-immunity-notice-2026",
+    "year": 2026,
+    "date": "13 October 2026",
+    "title": "Supreme Court issues notice on ADR challenge to election commissioners' immunity",
+    "category": "Elections and institutions",
+    "actors": ["Supreme Court of India", "Association for Democratic Reforms", "Election Commission of India", "Union government"],
+    "status": "Notice reported by petitioner; merits unresolved",
+    "severity": "High",
+    "summary": "ADR's litigation record says the Supreme Court issued notice to the Union and Election Commission on 13 October in W.P.(C) 1337/2026. Its 10 October petition challenges Section 16 of the 2023 election-commissioner appointment law, concerning protection from civil or criminal proceedings for acts or words in official duty.",
+    "outcome": "ADR argues that the protection is excessively broad and seeks its invalidation, an interim stay and revival of affected proceedings. Those are the petitioner's arguments and requested remedies, not reliefs shown to have been granted. The status comes from ADR's own case page; the primary notice order was not independently retrieved. No final constitutional ruling or removal of a commissioner is established by this entry.",
+    "sources": ["adrImmunityPetitionStatusOctober2026"]
+  },
+  {
+    "id": "jantar-mantar-protest-venue-denotification-2026",
+    "year": 2026,
+    "date": "11 October 2026",
+    "title": "Delhi Police replaces Jantar Mantar with three designated protest venues",
+    "category": "Protest and policing",
+    "actors": ["Delhi Police", "Ministry of Home Affairs", "Protest organisers"],
+    "status": "Standing order reported; revised venue procedures awaited in report",
+    "severity": "High",
+    "summary": "Reporting published on 12 October says the Delhi Police Commissioner's 11 October standing order removed Jantar Mantar's designation as a protest site and named Ramlila Ground, Burari Ground and CBD Ground in east Delhi instead. The report attributes the change to recommendations from a Home Ministry committee.",
+    "outcome": "The reported order says revised procedures for demonstrations at the three venues would be issued separately. CJP and opposition representatives criticised the loss of a central protest location. The primary standing order was not independently retrieved. This entry records the reported venue change, not a nationwide ban on protest, a finding on its legality or confirmation that any particular gathering has permission.",
+    "sources": ["tnieJantarMantarVenuesOctober12_2026"]
+  },
+  {
+    "id": "supreme-court-delhi-internet-detention-directions-october-11-2026",
+    "year": 2026,
+    "date": "11 October 2026",
+    "title": "Supreme Court directs unhindered internet and safeguards against illegal detention",
+    "category": "Justice and constitutional law",
+    "actors": ["Supreme Court of India", "Union government", "Delhi Police", "Delhi commuters and protesters"],
+    "status": "Interim directions and notices; no final contempt finding",
+    "severity": "High",
+    "summary": "SCC Times reports that the Supreme Court issued notices in contempt and habeas proceedings after the Delhi protests. Its interim directions covered normal Metro and rail operation subject to lawful regulation, review of barricades, unhindered internet, protection against illegal detention and unobstructed work by journalists, lawyers and other professionals.",
+    "outcome": "The Union told the Court that internet had been restored and Metro stations had reopened the previous night. Those submissions do not independently prove service availability or reconcile every detainee's status. The Court sought responses and compliance reporting, not a final finding of contempt or illegality against every officer. This account relies on SCC's court report and IFF's statement; the primary order was not independently retrieved and later hearing outcomes remain to be checked.",
+    "sources": ["sccDelhiDirectionsOctober11_2026", "iffDelhiInternetOrderOctober11_2026"]
+  },
+  {
+    "id": "cjp-leaders-release-october-11-2026",
+    "year": 2026,
+    "date": "11 October 2026",
+    "title": "Dipke, Das and Ranka released after preventive arrest on peace bonds",
+    "category": "Protest and policing",
+    "actors": ["Special Executive Magistrate", "Delhi Police", "Cockroach Janta Party"],
+    "status": "Release reported on 11 October; later custody recorded separately",
+    "severity": "High",
+    "summary": "Bar & Bench and The New Indian Express reported the release of Abhijeet Dipke, Saurav Das and Ashutosh Ranka after their 10 October preventive arrest. They were produced before a Special Executive Magistrate and released on bonds to maintain peace for one year; CJP legal-affairs head Ratna Singh also confirmed their release in the reporting.",
+    "outcome": "The primary bond order was not independently retrieved. This dated release is not an acquittal or proof that every protest detainee was freed. Das and Ranka were subsequently detained in a separate 13 October episode and reportedly remanded on 14 October, covered by the later custody record. The 11 October release must not be read as their current custody status.",
+    "sources": ["bbCjpReleaseOctober11_2026", "tnieCjpReleaseOctober11_2026", "tnieCjpCustodyOctober14_2026"]
+  },
+  {
+    "id": "ila-kazmi-instagram-block-court-disclosure-2026",
+    "year": 2026,
+    "date": "9 October 2026",
+    "title": "Delhi High Court seeks takedown orders behind journalist Ila Kazmi's Instagram block",
+    "category": "Digital rights and free expression",
+    "actors": ["Delhi High Court", "Ila Kazmi", "Meta", "Union government", "Delhi Police"],
+    "status": "Notice and disclosure direction reported; restoration not established",
+    "severity": "High",
+    "summary": "IFF, which is providing legal support to journalist Ila Kazmi, reported that the Delhi High Court issued notice on 9 October and directed production of Sahyog takedown orders concerning her July reel and Instagram account. IFF says the account was withheld in India on 9 September following reporting about police facial recognition at protests.",
+    "outcome": "IFF's 12 October update lists the next hearing for 17 November. Disclosure of the underlying orders is not account restoration or a final ruling that the restrictions were unlawful. The linked court PDF could not be substantively retrieved in this review, so the direction and the account history remain explicitly attributed to the organisation assisting the petitioner. The later hearing and any restoration require separate verification.",
+    "sources": ["iffIlaKazmiDisclosureOctober12_2026"]
+  },
+  {
+    "id": "sfi-delhi-instagram-gac-court-order-2026",
+    "year": 2026,
+    "date": "24 September 2026",
+    "title": "Delhi High Court expects a decision on SFI Delhi's pending Instagram appeal",
+    "category": "Digital rights and free expression",
+    "actors": ["Delhi High Court", "Grievance Appellate Committee", "Students' Federation of India", "Meta"],
+    "status": "Petition disposed of with appeal-decision expectation",
+    "severity": "High",
+    "summary": "In W.P.(C) 14084/2026, the Delhi High Court recorded that an appeal had been pending before the Grievance Appellate Committee since 12 August. It disposed of the petition expecting a decision within three weeks. IFF's later update identifies the dispute as Instagram's July disabling of SFI Delhi's account.",
+    "outcome": "The order, read through Indian Kanoon's court-text mirror, addresses delay in deciding the appeal and preserves further legal remedies. It does not direct restoration of the account or decide the merits of its removal. IFF published its account on 12 October, but the judicial event occurred on 24 September. Expiry of the three-week period does not prove that the committee decided the appeal; no subsequent decision or restoration was verified in this review.",
+    "sources": ["dhcSfiGacSeptember24_2026", "iffSfiGacOctober12_2026"]
+  },
+  {
     "id": "ohchr-delhi-detentions-india-response-october-2026",
     "year": 2026,
     "date": "10 October 2026",
@@ -100,7 +204,7 @@
     "status": "Announced; scheduled to start 15 October 2026",
     "severity": "High",
     "summary": "An official FAQ dated 15 September set out a 0.4% merchant discount rate for eligible bank-account UPI payments to merchants above ₹2,000, capped at ₹300. It retains exemptions for qualifying small merchants and specified transactions, with separate rates for some sectors.",
-    "outcome": "The framework was scheduled to begin on 15 October, after this review's cutoff. The FAQ says consumers and person-to-person transfers remain free and merchants may not pass the charge to customers. This is not a universal consumer UPI fee or a claim that the framework had already taken effect on 10 October.",
+    "outcome": "The FAQ scheduled commencement for 15 October. It says consumers and person-to-person transfers remain free and merchants may not pass the charge to customers. This entry records the September announcement, not a universal consumer UPI fee or independently verified implementation by payment providers; the scheduled date alone does not prove rollout.",
     "sources": ["dfsUpiMdrFaqSeptember15_2026"]
   },
   {
@@ -990,14 +1094,16 @@
       "Opposition leaders",
       "Student protesters"
     ],
-    "status": "Police-source release reports; organisers still held in that snapshot",
+    "status": "10 October detentions; subsequent releases and fresh custody recorded",
     "severity": "High",
     "summary": "Police detained CJP organisers Abhijeet Dipke, Saurav Das and Ashutosh Ranka after their flight reached Delhi, and intercepted protesters and opposition leaders at multiple locations. The planned demonstration demanded Chief Election Commissioner Gyanesh Kumar's resignation over alleged electoral-roll irregularities.",
-    "outcome": "Police cited security and notice requirements for denying permission; organisers disputed the restrictions. Late-evening police-source reporting said detainees at detention centres had been released except CJP leaders, identifying Dipke, Das and Ranka as still held. That is a dated police account, not independently verified release of every person or a reconciled final total. Detention is not a conviction; electoral allegations remain distinct from judicial findings.",
+    "outcome": "Police cited security and notice requirements; organisers disputed the restrictions. Late-10-October reporting excepted Dipke, Das and Ranka from police-reported releases. Their release on peace bonds was reported on 11 October; Das and Ranka were detained again on 13 October and reportedly remanded on 14 October. These are separate dated episodes, not a reconciled final total or proof that every detainee was freed. Detention is not a conviction and electoral allegations are not judicial findings.",
     "sources": [
       "apDelhiCjpOctober10_2026",
       "outlookDelhiCjpOctober10_2026",
-      "fpjDelhiReleaseOctober10_2026"
+      "fpjDelhiReleaseOctober10_2026",
+      "tnieCjpReleaseOctober11_2026",
+      "tnieCjpCustodyOctober14_2026"
     ]
   },
   {
@@ -1078,13 +1184,15 @@
       "Mobile network operators",
       "Delhi residents and protesters"
     ],
-    "status": "Suspension ordered; restoration reported on 10 October",
+    "status": "Restoration reported; Union assurance and court direction on 11 October",
     "severity": "High",
     "summary": "Authorities ordered mobile internet services suspended within a four-kilometre radius of the Janpath–Kartavya Path crossing, from 10 pm on 9 October to 10 pm on 10 October. The direction preceded the planned Jantar Mantar protest and cited preventive security arrangements.",
-    "outcome": "Late on 10 October, ABP Live reported that internet service had been restored in central Delhi. This is dated restoration reporting, not an inference from the order's expiry or Metro reopening; operator-by-operator restoration times were not independently verified. The restriction concerned mobile data in the specified zone, not all Delhi internet, fixed broadband or ordinary voice calls.",
+    "outcome": "ABP Live reported restoration late on 10 October. At the 11 October hearing, the Union said connectivity had been restored and the Supreme Court directed that internet remain unhindered, according to SCC and IFF. Neither the assurance nor the direction independently verifies operator-level restoration times; restoration is not inferred from order expiry or Metro reopening. The restriction concerned mobile data in the specified zone, not all Delhi internet, fixed broadband or ordinary voice calls.",
     "sources": [
       "toiDelhiInternetOctober9_2026",
-      "abpDelhiInternetRestorationOctober10_2026"
+      "abpDelhiInternetRestorationOctober10_2026",
+      "sccDelhiDirectionsOctober11_2026",
+      "iffDelhiInternetOrderOctober11_2026"
     ]
   },
   {
@@ -1099,13 +1207,14 @@
       "Union government",
       "Transport authorities"
     ],
-    "status": "Court directions reported; contempt petition filed",
+    "status": "Court directions followed by contempt notice and interim safeguards",
     "severity": "High",
     "summary": "The Supreme Court questioned the breadth of Metro and rail restrictions proposed for the 10 October protest and directed authorities to reassess them. Reporting of the hearing describes an emphasis on proportionate regulation and a traffic advisory instead of indiscriminate restrictions on commuters.",
-    "outcome": "The Solicitor General said the measures would be reconsidered. On 10 October, advocate Shailendra Mani Tripathi filed a contempt petition alleging continued Metro and rail restrictions breached the directions; PTI reported its listing for 11 October. Filing and listing are not a contempt finding. The original directions were not blanket permission for the protest or proof of subsequent compliance. Service advisories are recorded separately.",
+    "outcome": "The Solicitor General said the measures would be reconsidered. Shailendra Mani Tripathi filed a contempt petition on 10 October alleging continued restrictions. SCC reports that the Court issued notice and interim transport, internet and detention safeguards on 11 October, recorded separately in this timeline. A notice is not a final contempt finding, blanket protest permission or proof of compliance. Later hearing outcomes and operator-level service availability remain to be verified.",
     "sources": [
       "ieScTransportOctober9_2026",
-      "ptiTransportContemptOctober10_2026"
+      "ptiTransportContemptOctober10_2026",
+      "sccDelhiDirectionsOctober11_2026"
     ]
   },
   {

@@ -50,8 +50,15 @@ export function writeRuntimeMarkup(workspace) {
   return markup;
 }
 
-const invokedPath = process.argv[1] ? path.resolve(process.argv[1]) : "";
-if (invokedPath === fileURLToPath(import.meta.url)) {
+// The checkout may be reached through a junction or symlink; Node resolves the
+// module URL to its real location, while argv can retain the alias path.
+const invokedPath = process.argv[1] && fs.existsSync(process.argv[1]) ? fs.realpathSync(process.argv[1]) : "";
+const modulePath = fileURLToPath(import.meta.url);
+// Node can canonicalise the Windows drive-letter case differently from argv.
+const isMain = process.platform === "win32"
+  ? invokedPath.toLowerCase() === modulePath.toLowerCase()
+  : invokedPath === modulePath;
+if (isMain) {
   const workspace = process.cwd();
   const markup = writeRuntimeMarkup(workspace);
   console.log(`Composed ${MARKUP_PARTS.length} route fragments into ${markup.split(/\r\n|\n|\r/).length} runtime markup lines.`);

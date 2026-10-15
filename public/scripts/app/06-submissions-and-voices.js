@@ -23,6 +23,7 @@ function saveDrafts(drafts) {
 
 function clearTimelineFilters() {
   state.query = "";
+  state.topic = "all";
   state.category = "all";
   state.actor = "all";
   state.status = "all";

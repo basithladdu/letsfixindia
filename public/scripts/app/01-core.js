@@ -168,6 +168,7 @@ function startLiveTrackers() {
 
 const state = {
   query: "",
+  topic: "all",
   category: "all",
   actor: "all",
   status: "all",
@@ -444,6 +445,55 @@ function uniqueSorted(values) {
 
 const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
 
+// Broad reading groups; the original, more specific categories stay intact.
+const TIMELINE_TOPICS = [
+  { id: "protest", label: "Protests & policing", match: /protest|police brutality|civil liberties and police response/i },
+  { id: "digital", label: "Press & digital rights", match: /press|digital rights|free expression/i },
+  { id: "health", label: "Health & education", match: /health|education|exam|medical|child mortality/i },
+  { id: "safety", label: "Safety & environment", match: /safety|disaster|environment|climate|cyclone|flood|infrastructure|drinking water|transport|railway/i },
+  { id: "economy", label: "Economy & public money", match: /econom|financ|taxation|corruption|procurement|corporate|labour|agriculture/i },
+  { id: "rights", label: "Rights & society", match: /rights|libert|sexual|communal|caste|discrimin|crimes|gender|women|displacement|social policy|political violence/i },
+  { id: "justice", label: "Courts & law", match: /justice|constitutional law|judicial|litigation/i },
+  { id: "security", label: "Security & foreign affairs", match: /security|terror|foreign|defence|insurgen|sovereignty|decoloni/i },
+  { id: "governance", label: "Politics & institutions", match: /./ }
+];
+
+function timelineTopic(category) {
+  return TIMELINE_TOPICS.find((topic) => topic.match.test(String(category || ""))) || TIMELINE_TOPICS[TIMELINE_TOPICS.length - 1];
+}
+
+function timelinePeriod(event) {
+  const month = Math.floor(dateSortKey(event) / 100);
+  return month >= 1 && month <= 12
+    ? `${MONTHS[month - 1][0].toUpperCase()}${MONTHS[month - 1].slice(1)} ${event.year}`
+    : String(event.year);
+}
+
+const TIMELINE_FILTER_KEY = "letsfixindia.timeline-filters.v1";
+function saveTimelineFilters() {
+  try { sessionStorage.setItem(TIMELINE_FILTER_KEY, JSON.stringify(state)); } catch { /* Storage may be disabled. */ }
+}
+
+function restoreTimelineFilters() {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(TIMELINE_FILTER_KEY) || "null");
+    if (!saved || typeof saved !== "object") return;
+    for (const key of Object.keys(state)) {
+      if (typeof saved[key] === "string") state[key] = saved[key];
+    }
+    if (!TIMELINE_TOPICS.some((topic) => topic.id === state.topic)) state.topic = "all";
+    if (!["asc", "desc"].includes(state.sort)) state.sort = "desc";
+    if (!["all", "linked", "pending", "missing"].includes(state.evidence)) state.evidence = "all";
+    if (state.year !== "all" && !events.some((event) => String(event.year) === state.year)) state.year = "all";
+    if (state.category !== "all" && !events.some((event) => event.category === state.category)) state.category = "all";
+    if (state.actor !== "all" && !events.some((event) => event.actors.includes(state.actor))) state.actor = "all";
+    if (state.status !== "all" && !events.some((event) => event.status === state.status)) state.status = "all";
+    if (searchInput) searchInput.value = state.query;
+    if (sortFilter) sortFilter.value = state.sort;
+    if (evidenceFilter) evidenceFilter.value = state.evidence;
+  } catch { /* Invalid saved filters must not prevent loading the record. */ }
+}
+
 // Turn a free-text date ("20 July 2026", "May-July 2026", "6 February 2026",
 // "December 2014", "2026-07-20", "2026") into a sortable number within its year.
 // Ranges sort by their latest month; missing month/day sort to the start of the year.
@@ -713,7 +763,8 @@ function matchesExcept(event, skip) {
   const searchText = [event.title, event.summary, event.outcome, event.category, event.status, event.actors.join(" "), event.year, event.date].join(" ").toLowerCase();
   return (
     (!query || searchText.includes(query)) &&
-    (skip === "category" || state.category === "all" || event.category === state.category) &&
+    (skip === "topic" || state.topic === "all" || timelineTopic(event.category).id === state.topic) &&
+    (skip === "topic" || skip === "category" || state.category === "all" || event.category === state.category) &&
     (skip === "actor" || state.actor === "all" || event.actors.includes(state.actor)) &&
     (skip === "status" || state.status === "all" || event.status === state.status) &&
     (state.evidence === "all" || sourceStatus(event.sources).className === state.evidence) &&
@@ -722,9 +773,11 @@ function matchesExcept(event, skip) {
 }
 
 function fillSelect(select, allLabel, values, current) {
+  // A zero-result search must not silently erase the reader's selected filter.
+  const options = current === "all" || values.includes(current) ? values : uniqueSorted([...values, current]);
   select.innerHTML = `<option value="all">${allLabel}</option>` +
-    values.map((value) => `<option value="${esc(value)}">${esc(value)}</option>`).join("");
-  select.value = values.includes(current) ? current : "all";
+    options.map((value) => `<option value="${esc(value)}">${esc(value)}</option>`).join("");
+  select.value = current;
 }
 
 function renderOptions() {
@@ -736,23 +789,22 @@ function renderOptions() {
   fillSelect(categoryFilter, "All categories", categories, state.category);
   fillSelect(actorFilter, "All actors", actors, state.actor);
   fillSelect(statusFilter, "All statuses", statuses, state.status);
-  if (categoryFilter.value !== state.category) state.category = categoryFilter.value;
-  if (actorFilter.value !== state.actor) state.actor = actorFilter.value;
-  if (statusFilter.value !== state.status) state.status = statusFilter.value;
-
-  const years = uniqueSorted(pool("year").map((e) => e.year)).sort((a, b) => b - a);
+  const years = uniqueSorted([
+    ...pool("year").map((e) => e.year),
+    ...(state.year === "all" ? [] : [Number(state.year)])
+  ]).sort((a, b) => b - a);
   yearRail.innerHTML = [
     `<button type="button" class="year-pill${state.year === "all" ? " active" : ""}" data-year="all" aria-pressed="${state.year === "all"}">All years</button>`,
     ...years.map((year) => `<button type="button" class="year-pill${state.year === String(year) ? " active" : ""}" data-year="${year}" aria-pressed="${state.year === String(year)}">${year}</button>`)
   ].join("");
   if (categoryQuickFilters) {
-    const popularCategories = categories
-      .map((category) => ({ category, count: events.filter((event) => event.category === category).length }))
-      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category))
-      .slice(0, 6);
+    const topicPool = pool("topic");
     categoryQuickFilters.innerHTML = [
-      `<button type="button" class="category-chip${state.category === "all" ? " active" : ""}" data-category="all" aria-pressed="${state.category === "all"}">All topics</button>`,
-      ...popularCategories.map(({ category }) => `<button type="button" class="category-chip${state.category === category ? " active" : ""}" data-category="${escapeHtml(category)}" aria-pressed="${state.category === category}">${escapeHtml(category)}</button>`)
+      `<button type="button" class="category-chip${state.topic === "all" && state.category === "all" ? " active" : ""}" data-topic="all" aria-pressed="${state.topic === "all" && state.category === "all"}">All topics <span>${topicPool.length}</span></button>`,
+      ...TIMELINE_TOPICS.map((topic) => {
+        const count = topicPool.filter((event) => timelineTopic(event.category).id === topic.id).length;
+        return `<button type="button" class="category-chip topic-${topic.id}${state.topic === topic.id ? " active" : ""}" data-topic="${topic.id}" aria-pressed="${state.topic === topic.id}"><i aria-hidden="true"></i>${topic.label} <span>${count}</span></button>`;
+      })
     ].join("");
   }
 }
